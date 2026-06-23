@@ -1,0 +1,1 @@
+Hoje confirmei que o n8n consegue criar arquivos Markdown automaticamente no repositório FabioOS do GitHub. Isso prova que a ponte n8n → GitHub → Obsidian está funcionando.
