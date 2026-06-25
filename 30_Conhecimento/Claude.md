@@ -81,10 +81,57 @@ Claude é um LLM (modelo de linguagem grande) criado pela [[Anthropic]].
 
 ## Próximos passos
 
-- [ ] Testar [[RAG]] com Obsidian
-- [ ] Criar prompts padrão por projeto
-- [ ] Integrar com [[n8n]]
+### HOJE
+- [ ] Usar Claude para 3 tarefas diferentes
+- [ ] Documentar prompts usados
+- [ ] Salvar respostas boas em Obsidian
+
+### Esta semana
+- [ ] Testar Claude para Escola (gerar prova)
+- [ ] Testar Claude para Trading (análise)
+- [ ] Testar Claude para IA (código)
+- [ ] Criar 5 prompts padrão
+
+### Este mês
+- [ ] Implementar [[RAG]] com Obsidian
+- [ ] Criar agente de processamento
+- [ ] Integrar com [[n8n]] webhook
+- [ ] Testar com 10 queries reais
+- [ ] Medir tempo economizado
+
+### Próximos meses
+- [ ] 4+ agentes automáticos
+- [ ] Processamento de 100+ itens/mês
+- [ ] Qualidade otimizada
+- [ ] Feedback loop fechado
+
+---
+
+## Prompts padrão a criar
+
+**Escola:**
+- [ ] Gerador de provas
+- [ ] Criador de gabaritos
+- [ ] Resumidor de tópicos
+
+**Trading:**
+- [ ] Análise de gráfico
+- [ ] Review de trade journal
+- [ ] Sugestão de entrada
+
+**Geral:**
+- [ ] Processador de nota
+- [ ] Conector de conceitos
+- [ ] Sugestor de tags
+
+---
+
+**Amostragem de ROI:**
+- 1 prova: 2h → 20min (90% economia)
+- 1 análise: 1h → 10min (83% economia)
+- 50 notas: 10h → 1h (90% economia)
 
 ---
 
 **Status:** 🟢 Operacional
+**Prioridade:** 🔴 Crítica (multiplicador)

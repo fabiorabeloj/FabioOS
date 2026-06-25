@@ -97,11 +97,93 @@ criado_em: 2026-06-25
 
 ## Próximas ações
 
-- [ ] Mapas específicos por tópico
-- [ ] Dados atualizados (população, PIB)
-- [ ] Casos de estudo
-- [ ] Exercícios progressivos
+### HOJE
+- [ ] Criar pasta `Geografia/Tópicos/`
+- [ ] Criar 5 notas sobre conceitos fundamentais (escala, mapa, projeção, etc)
+
+### Esta semana
+- [ ] Notas sobre Cartografia (10 notas detalhadas)
+- [ ] Notas sobre Conceitos de Geografia Humana (15 notas)
+- [ ] Documentar métodos de análise geográfica
+- [ ] Criar resumos de períodos históricos
+
+### Este mês
+- [ ] 40+ notas estruturando tópicos principais
+- [ ] Dados atualizados (população 2024, PIB, etc)
+- [ ] Criar 10 casos de estudo (Brasil, América, Europa, Ásia, África)
+- [ ] 20 exercícios progressivos com gabaritos
+- [ ] Templates de leitura de mapas/gráficos
+
+### Próximos meses
+- [ ] 80+ notas cobrindo toda a disciplina
+- [ ] Mapas temáticos criados (população, clima, economia)
+- [ ] 50+ exercícios e questões de prova
+- [ ] Relações entre tópicos (conexão de conceitos)
+- [ ] Dashboard Dataview por região/tema
+
+---
+
+## Material específico a criar
+
+**Cartografia (15 notas):**
+- [ ] Escala numérica (definição + exemplos)
+- [ ] Escala gráfica (como ler)
+- [ ] Projeção Mercator (características, distorções)
+- [ ] Projeção Peters (características, equidade)
+- [ ] Coordenadas geográficas (latitude, longitude)
+- [ ] Fusos horários
+- [ ] Orientação (bússola, pontos cardeais)
+- [ ] ... (continuar)
+
+**Geografia Humana (30 notas):**
+- [ ] População (conceitos, estrutura etária)
+- [ ] Demografia (natalidade, mortalidade, crescimento)
+- [ ] Migrações (causas, tipos, consequências)
+- [ ] Urbanização (processo, problemas, cidades)
+- [ ] Megalópoles (definição, exemplos)
+- [ ] Globalização (características, efeitos)
+- [ ] Economia global (setores, divisão internacional)
+- [ ] ... (continuar)
+
+**Regiões (40 notas):**
+- [ ] Brasil (20 notas):
+  - [ ] Regiões (5 notas)
+  - [ ] População (2 notas)
+  - [ ] Economia (3 notas)
+  - [ ] Formação do povo (5 notas)
+  - [ ] Problemas atuais (5 notas)
+- [ ] América Latina (8 notas)
+- [ ] Europa (8 notas)
+- [ ] Ásia (8 notas)
+- [ ] África (8 notas)
+
+**Materiais para alunos (25 notas):**
+- [ ] 5 resumos de bimestres
+- [ ] 10 guias de leitura de mapas
+- [ ] 10 exercícios com gabaritos comentados
+
+---
+
+## Dados a coletar/atualizar
+
+- [ ] População mundial 2024
+- [ ] PIB por país
+- [ ] Índices de desenvolvimento (IDH, IDHM)
+- [ ] Clima por região
+- [ ] Dados de urbanização atual
+- [ ] Fluxos migratórios contemporâneos
+
+---
+
+## Casos de estudo a criar
+
+- [ ] Megalópole São Paulo
+- [ ] Dinâmica populacional da China
+- [ ] Globalização e indústria (Nike, Apple)
+- [ ] Mudanças climáticas em região específica
+- [ ] Conflitos geopolíticos atuais
 
 ---
 
 **Status:** 🟢 Ativo e ensinando
+**Prioridade:** 🟠 Alta (disciplina principal)

@@ -81,22 +81,54 @@ Finais de semana: Academia, estudo, PRIMUS
 
 ---
 
+## Próximas Ações
+
+### HOJE
+- [ ] Definir 3 valores não-negociáveis
+- [ ] Descrever imagem pública desejada
+- [ ] Listar 3 metas (curto, médio, longo)
+
+### Esta semana
+- [ ] Documentar rotina atual
+- [ ] Mapear autonomia atual vs desejada
+- [ ] Planejar desenvolvimento de carreira
+- [ ] Visão de 5 anos (escrever)
+
+### Este mês
+- [ ] 20+ notas estruturando identidade
+- [ ] Documentar strengths pessoais
+- [ ] Definir trajetória de carreira
+- [ ] Dashboard de progresso (5 pilares)
+- [ ] Plano trimestral de ações
+
+### Próximos 3 meses
+- [ ] Consolidação de identidade
+- [ ] Execução de plano
+- [ ] Primeira grande decisão alinhada
+- [ ] Revisão de andamento
+- [ ] Ajustes de rumo
+
+---
+
 ## Próximas Fases de Vida
 
 ### 2026-2027: Consolidação
 - Consolidar docência em Pietra
 - Implementar automações (n8n, IA)
 - TraderOS estruturado
+- **Ação:** Documentar plano mensal + fazer revisão semanal
 
 ### 2027-2028: Transição
 - Considerar [[Engenharia de IA]]
 - Ampliar aulas particulares
 - Independência financeira parcial
+- **Ação:** Estudar 10h/semana em IA
 
 ### 2028+: Liberdade
 - Autonomia total
 - Trabalho + Criatividade
 - Vida design próprio
+- **Ação:** [[Meta de 50 mil]] atingida
 
 ---
 
@@ -108,6 +140,12 @@ Finais de semana: Academia, estudo, PRIMUS
 - Regras pessoais = Autonomia maior
 - Constrains = Criatividade
 
+**Implementação:**
+- [ ] Criar rotina semanal fixo
+- [ ] Definir regras pessoais não-negociáveis
+- [ ] Revisar aderência semanal
+
 ---
 
 **Status:** 🟢 Ativo e evoluindo
+**Prioridade:** 🔴 Crítica (define tudo)

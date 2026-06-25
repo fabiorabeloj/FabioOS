@@ -245,20 +245,32 @@ CONTINUIDADE DA VIDA
 
 ## Próximos Passos
 
+### HOJE
+- [ ] Abrir este arquivo no Obsidian
+- [ ] Clicar em cada mapa e validar que abre
+- [ ] Verificar graph view (deve mostrar rede conectada)
+- [ ] Testar 3 links aleatórios
+
 ### Esta semana
-- [ ] Validar estrutura no Obsidian (graph view)
-- [ ] Revisar conexões entre mapas
-- [ ] Expandir mapas secundários
+- [ ] Validar estrutura no Obsidian (graph view sem erros)
+- [ ] Revisar todas as 50+ conexões entre mapas
+- [ ] Instalar plugins: Dataview, Tasks, Templater, Obsidian Git
+- [ ] Configurar sincronização com GitHub
+- [ ] Expandir 2 mapas com +5 notas cada (total 10 novas)
 
 ### Este mês
-- [ ] Preencher todos os 15 núcleos
-- [ ] Criar notas atômicas para cada tema
-- [ ] Documentar workflows principais
+- [ ] Preencher todos os 15 núcleos com pelo menos 3 notas cada
+- [ ] Criar 50+ notas atômicas (mínimo)
+- [ ] Documentar 3 workflows principais
+- [ ] Fazer primeira [[Revisão Semanal]] usando a estrutura
+- [ ] Implementar [[Changelog Pessoal]] com 4 entries
 
 ### Próximos meses
-- [ ] Integrar [[n8n]] com Obsidian
-- [ ] Criar agentes automáticos
-- [ ] Gerar relatórios de progresso
+- [ ] Integrar [[n8n]] com Obsidian (webhooks)
+- [ ] Criar 3 agentes automáticos (Conhecimento, Pedagógico, Trading)
+- [ ] Gerar dashboard executivo no [[Dataview]]
+- [ ] RAG funcionando para busca inteligente
+- [ ] Automatizar [[Revisão Semanal]]
 
 ---
 

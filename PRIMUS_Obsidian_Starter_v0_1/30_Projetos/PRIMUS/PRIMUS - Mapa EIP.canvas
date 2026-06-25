@@ -1,0 +1,86 @@
+{
+  "nodes": [
+    {
+      "id": "E",
+      "type": "text",
+      "text": "E\\nEnciclopédia Funcional\\nConteúdo tipado, rastreável e consultável",
+      "x": 0,
+      "y": 0,
+      "width": 280,
+      "height": 160
+    },
+    {
+      "id": "I",
+      "type": "text",
+      "text": "I\\nInstância Controlada\\nMissões, dungeons e encontros fechados",
+      "x": 420,
+      "y": 0,
+      "width": 280,
+      "height": 160
+    },
+    {
+      "id": "P",
+      "type": "text",
+      "text": "P\\nPersistência\\nWorldState, ΔP e histórico",
+      "x": 840,
+      "y": 0,
+      "width": 280,
+      "height": 160
+    },
+    {
+      "id": "T",
+      "type": "text",
+      "text": "Pipeline T1→T4\\nCaptura → Materialização → Integração → Instanciamento",
+      "x": 340,
+      "y": 260,
+      "width": 440,
+      "height": 140
+    },
+    {
+      "id": "V",
+      "type": "text",
+      "text": "Validação V\\nV(E): tipo/fonte/encaixe\\nV(I): contrato fechado\\nV(P): ΔP registrável",
+      "x": 340,
+      "y": -240,
+      "width": 440,
+      "height": 160
+    }
+  ],
+  "edges": [
+    {
+      "id": "E-I",
+      "fromNode": "E",
+      "fromSide": "right",
+      "toNode": "I",
+      "toSide": "left"
+    },
+    {
+      "id": "I-P",
+      "fromNode": "I",
+      "fromSide": "right",
+      "toNode": "P",
+      "toSide": "left"
+    },
+    {
+      "id": "P-E",
+      "fromNode": "P",
+      "fromSide": "bottom",
+      "toNode": "E",
+      "toSide": "bottom"
+    },
+    {
+      "id": "T-I",
+      "fromNode": "T",
+      "fromSide": "top",
+      "toNode": "I",
+      "toSide": "bottom"
+    },
+    {
+      "id": "V-I",
+      "fromNode": "V",
+      "fromSide": "bottom",
+      "toNode": "I",
+      "toSide": "top"
+    }
+  ]
+}

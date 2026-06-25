@@ -86,6 +86,63 @@ Para a semana seguinte:
 
 ---
 
+## Próximos passos
+
+### HOJE
+- [ ] Agendar [[Revisão Semanal]] (segunda 19h ou domingo 19h?)
+- [ ] Criar template em Obsidian
+- [ ] Fazer primeira revisão (mesmo que rápida)
+
+### Esta semana
+- [ ] Primeira [[Revisão Semanal]] completa
+- [ ] Registrar em [[Obsidian]]
+- [ ] Atualizar [[Changelog Pessoal]]
+- [ ] Definir próximas ações
+
+### Este mês
+- [ ] 4 revisões completas
+- [ ] Template otimizado
+- [ ] Dashboard de padrões
+- [ ] Ações reais baseadas em insights
+- [ ] Impacto mensurável
+
+### Próximos meses
+- [ ] Automação parcial (Claude auxilia)
+- [ ] Análise de padrões
+- [ ] Decisões mais rápidas
+- [ ] Ciclo de aprendizado fechado
+
+---
+
+## Ritual prático
+
+**30 minutos, todo domingo 19h:**
+
+1. **Revisar pilares (5min)**
+   - Cérebro: Aprendi algo?
+   - Trabalho: Fiz progresso?
+   - Patrimônio: Cresceu?
+   - Saúde: Mantive?
+   - Criatividade: Criei?
+   - Identidade: Boas decisões?
+
+2. **Analisar semana (10min)**
+   - O que funcionou?
+   - O que não funcionou?
+   - Padrão a mudar?
+
+3. **Registrar (5min)**
+   - Escrever nota em Obsidian
+   - Tag apropriada
+   - Link com passado
+
+4. **Próxima semana (10min)**
+   - 1 ação por pilar
+   - Prioridade clara
+   - Métrica de sucesso
+
+---
+
 ## Integração com FabioOS
 
 [[Changelog Pessoal]] resume o essencial.  
@@ -94,4 +151,13 @@ Notas semanais ficam em [[Obsidian]].
 
 ---
 
+**Benefício esperado:**
+- Detecção rápida de problemas
+- Correção de rumo semanal
+- Aprendizado acelerado
+- Motivação sustentada
+
+---
+
 **Status:** 🟢 Ritual ativo
+**Prioridade:** 🔴 Crítica (feedback loop)

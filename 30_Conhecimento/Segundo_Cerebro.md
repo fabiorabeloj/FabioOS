@@ -76,4 +76,40 @@ Refletir ([[Revisão Semanal]])
 
 ---
 
+## Próximos passos
+
+### HOJE
+- [ ] Capturar 5 ideias em [[Obsidian]]
+- [ ] Organizar com tags
+- [ ] Criar 3 links internos
+
+### Esta semana
+- [ ] Capturar diariamente (7 dias)
+- [ ] Organizar com pasta
+- [ ] Revisar o que capturou
+- [ ] Melhorar estrutura
+
+### Este mês
+- [ ] 50+ notas capturadas
+- [ ] Sistema de tags funcionando
+- [ ] Busca local funcionando
+- [ ] Revisão semanal com notas
+- [ ] Impacto visível
+
+### Próximos meses
+- [ ] 200+ notas acumuladas
+- [ ] RAG funcionando (busca semântica)
+- [ ] Conexões automáticas
+- [ ] Dashboard de aprendizados
+- [ ] Sistema auto-sustentável
+
+---
+
+**Hábito diário:** 10 minutos capturando  
+**Revisão semanal:** 30 minutos  
+**Conexão mensal:** 1 hora
+
+---
+
 **Status:** 🟢 Ativo
+**Prioridade:** 🔴 Crítica (base de tudo)

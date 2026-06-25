@@ -91,10 +91,38 @@ FabioOS é o **orquestrador** que integra todos os 6 pilares:
 
 ## Próximos passos
 
-- [ ] Validar estrutura no Obsidian
-- [ ] Implementar primeiros workflows
-- [ ] Documentar processos
+### HOJE
+- [ ] Abrir [[Mapa_Mestre_Fabio]] no Obsidian
+- [ ] Testar 5 links aleatórios
+- [ ] Verificar graph view
+
+### Esta semana
+- [ ] Validar estrutura no Obsidian (sem erros)
+- [ ] Instalar 4 plugins essenciais
+- [ ] Implementar primeiro workflow n8n
+- [ ] Documentar processo principal
+
+### Este mês
+- [ ] 3+ workflows operacionais
+- [ ] RAG funcionando
+- [ ] Dashboard executivo
+- [ ] [[Revisão Semanal]] automatizada
+- [ ] [[Changelog Pessoal]] preenchido
+
+### Próximos meses
+- [ ] Agentes autônomos operando
+- [ ] Integração total
+- [ ] Medição de impacto
+- [ ] Otimizações
+
+---
+
+**Amostragem de sucesso:**
+- Você gasta 80% menos tempo em repetitivo
+- Você usa sistema diariamente
+- Você vê resultado em vida real
 
 ---
 
 **Status:** ✅ Operacional
+**Prioridade:** 🔴 Crítica
