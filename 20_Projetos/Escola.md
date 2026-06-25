@@ -12,7 +12,7 @@ Reduzir tarefas operacionais e aumentar a qualidade do trabalho pedagógico.
 
 [[n8n]]
 
-[[30_Conhecimento/IA.md]]
+[[IA]]
 
 [[FabioOS]]
 
@@ -149,7 +149,7 @@ Responsável por:
 
 ## Sistemas Relacionados
 
-### [[30_Conhecimento/IA.md]]
+### [[IA]]
 
 Função:
 

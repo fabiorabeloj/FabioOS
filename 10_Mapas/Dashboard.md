@@ -9,13 +9,9 @@ Construir liberdade através de sistemas, conhecimento e automação.
 ## Projetos Ativos
 
 - [[FabioOS]]
-    
 - [[PRIMUS]]
-    
 - [[Escola]]
-    
-- [[30_Conhecimento/IA.md]]
-    
+- [[IA]]
 - [[Trader]]
     
 
@@ -24,15 +20,10 @@ Construir liberdade através de sistemas, conhecimento e automação.
 ## Sistemas
 
 - [[Obsidian]]
-    
 - [[GitHub]]
-    
 - [[n8n]]
-    
 - [[OpenRouter]]
-    
 - [[OpenClaw]]
-    
 - [[Claude_Code]]
     
 
@@ -41,15 +32,10 @@ Construir liberdade através de sistemas, conhecimento e automação.
 ## Conhecimento
 
 - [[Filosofia]]
-    
 - [[Geografia]]
-    
-- [[30_Conhecimento/IA.md]]
-    
+- [[IA]]
 - [[Automacao]]
-    
 - [[RPG]]
-    
 - [[Tecnologia]]
     
 
@@ -58,9 +44,7 @@ Construir liberdade através de sistemas, conhecimento e automação.
 ## Registros
 
 - [[Decisoes]]
-    
 - [[Changelog]]
-    
 - [[Aprendizado]]
     
 

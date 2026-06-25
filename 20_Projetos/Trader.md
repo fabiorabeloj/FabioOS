@@ -12,7 +12,7 @@ Construir uma operação sustentável e disciplinada.
 
 [[FabioOS]]
 
-[[30_Conhecimento/IA.md]]
+[[IA]]
 
 [[n8n]]
 
@@ -123,7 +123,7 @@ Função:
 
 Garantir continuidade do aprendizado e das decisões.
 
-### [[30_Conhecimento/IA.md]]
+### [[IA]]
 
 Função:
 

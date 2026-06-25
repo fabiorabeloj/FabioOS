@@ -66,7 +66,7 @@ Base de conhecimento reutilizável, notas conceituais e aprendizados.
 
 **Conceitos e tecnologia:**
 - [[IA]] — inteligência artificial e LLMs
-- [[Automaçao]] — princípios de automação e workflows
+- [[Automacao]] — princípios de automação e workflows
 - [[Tecnologia]] — conceitos técnicos gerais
   - [[Memoria]] — arquitetura de memória
   - [[Persistencia]] — persistência de dados

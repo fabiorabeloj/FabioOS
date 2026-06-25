@@ -1,0 +1,59 @@
+name: Auto Changelog
+
+on:
+  push:
+    branches:
+      - main
+      - master
+    paths:
+      - '**.md'
+      - '.github/workflows/changelog.yml'
+
+jobs:
+  changelog:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Get commit info
+        id: commit
+        run: |
+          COMMIT_MSG=$(git log -1 --pretty=%B)
+          COMMIT_HASH=$(git log -1 --pretty=%h)
+          COMMIT_DATE=$(git log -1 --pretty=%cd --date=short)
+          AUTHOR=$(git log -1 --pretty=%an)
+
+          echo "msg=${COMMIT_MSG}" >> $GITHUB_OUTPUT
+          echo "hash=${COMMIT_HASH}" >> $GITHUB_OUTPUT
+          echo "date=${COMMIT_DATE}" >> $GITHUB_OUTPUT
+          echo "author=${AUTHOR}" >> $GITHUB_OUTPUT
+
+      - name: Update Changelog
+        run: |
+          cat > /tmp/new_entry.txt << 'EOF'
+          ## [${{ steps.commit.outputs.date }}]
+
+          **Autor:** ${{ steps.commit.outputs.author }}
+          **Commit:** [${{ steps.commit.outputs.hash }}](https://github.com/${{ github.repository }}/commit/${{ steps.commit.outputs.hash }})
+
+          ${{ steps.commit.outputs.msg }}
+
+          EOF
+
+          cat 40_Decisoes/Changelog.md >> /tmp/new_entry.txt
+          mv /tmp/new_entry.txt 40_Decisoes/Changelog.md
+
+      - name: Commit changelog
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action Bot"
+          git add 40_Decisoes/Changelog.md
+          if git diff --cached --exit-code > /dev/null; then
+            echo "Nenhuma mudança no Changelog"
+          else
+            git commit -m "docs: atualizar changelog [skip ci]"
+            git push
+          fi

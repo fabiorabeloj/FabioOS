@@ -61,7 +61,7 @@ Nada importante deve ficar perdido em conversa, áudio, print ou PDF. Tudo deve 
 - [[30_Conhecimento]]
 - [[40_Decisoes]]
 - [[50_Fontes]]
-- [[80_Sistemas]]
+- [[60_Sistemas]]
 
 ## Execução Manual
 1. Capturar conteúdo bruto.
