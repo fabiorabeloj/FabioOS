@@ -18,7 +18,7 @@ Enciclopédia → Instância → Persistência
 
 [[FabioOS]]
 
-[[30_Conhecimento/IA.md]]
+[[IA]]
 
 [[OpenClaw]]
 
@@ -241,7 +241,7 @@ Função:
 
 Preservação do desenvolvimento do projeto.
 
-### [[30_Conhecimento/IA.md]]
+### [[IA]]
 
 Função:
 
