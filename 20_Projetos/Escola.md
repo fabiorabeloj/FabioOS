@@ -1,243 +1,105 @@
+---
+tipo: projeto
+area: educação
+status: ativo
+tags: [escola, trabalho, docência, carreira]
+criado_em: 2026-06-25
+---
+
 # Escola
 
-## Definição
+**Centro de trabalho docente e sustento profissional**
 
-Área profissional dedicada ao ensino, coordenação, produção de materiais e automação acadêmica.
+---
 
-## Objetivo
+## O que é?
 
-Reduzir tarefas operacionais e aumentar a qualidade do trabalho pedagógico.
+Você é professor de [[Geografia]] e [[Filosofia]] no [[Colégio Pietra]].
 
-## Componentes
+Escola não é apenas renda. É:
+- 💼 Sustento profissional
+- 📚 Aplicação de conhecimento
+- 👥 Impacto em vidas
+- 🎯 Carreira em evolução
 
-[[n8n]]
+---
 
-[[IA]]
+## Disciplinas
 
-[[FabioOS]]
+### [[Geografia]]
+- Cartografia, população, globalização
+- Ensino Médio
+- Provas bimestrais
+
+### [[Filosofia]]
+- História da filosofia, ética, epistemologia
+- Ensino Médio
+- Análise de textos
+
+---
 
 ## Processos
 
-- Revisões.
-    
-- Avaliações.
-    
-- Cronogramas.
-    
-- Comunicação escolar.
-    
-- Organização de documentos.
-    
+### 📋 Planejamento
+- [[Cronogramas]] — Semestral
+- Seleção de tópicos
+- Definição de objetivos
 
-## Automações Desejadas
+### ✍️ Produção
+- [[Provas]] — Bimestrais
+- [[Revisões]] — Semanais
+- [[Gabaritos]] — Comentados
+- Material de apoio
 
-- Monitoramento de e-mails.
-    
-- Registro de tarefas.
-    
-- Alertas de avaliações.
-    
-- Geração de documentos.
-    
+### 📊 Avaliação
+- Notas e feedback
+- [[Correção de Simulados]]
+- Acompanhamento individual
 
-## Estado Atual
+### 🤝 Comunicação
+- [[Comunicação Escolar]] com pais
+- [[Atendimento Inteligente Pietra]]
+- Reuniões pedagógicas
 
-Mapeamento de processos.
+---
 
-## Próximo Passo
+## Automações
 
-Automatizar fluxo de e-mails e tarefas.
+### Com [[n8n]]
+- Triagem de emails
+- Lembretes de prazos
+- Geração de estruturas
 
-# Escola
+### Com [[Claude]]
+- Criação de provas
+- Revisão de materiais
+- Gabaritos comentados
 
-## Definição
+### Com [[OpenClaw]]
+- Chatbot de atendimento
+- Respostas automáticas
+- Suporte aos pais
 
-A Escola é o principal campo de atuação profissional atual dentro do [[FabioOS]].
+---
 
-Ela representa o espaço onde conhecimento, responsabilidade, ensino e organização se transformam em impacto concreto sobre outras pessoas.
+## Impacto
 
-## Objetivo
+**Não é sobre nota. É sobre aprendizado.**
 
-Exercer a atividade docente com qualidade crescente, reduzindo carga operacional desnecessária e ampliando a capacidade de planejamento, ensino e acompanhamento.
+- Alunos entendem Geografia/Filosofia
+- Pais confiam no processo
+- Colégio cresce com qualidade
+- Você aprende ensinando
 
-## Problema Fundamental
+---
 
-O trabalho docente produz continuamente:
+## Próximas ações
 
-- Aulas.
-    
-- Avaliações.
-    
-- Revisões.
-    
-- Cronogramas.
-    
-- Comunicados.
-    
-- Correções.
-    
-- Demandas administrativas.
-    
+- [ ] Documentar cronogramas
+- [ ] Criar banco de provas
+- [ ] Implementar automações
+- [ ] Medir impacto
 
-Sem organização adequada, a energia é consumida pela operação e não pelo ensino.
+---
 
-## Missão
-
-Transformar conhecimento em aprendizagem.
-
-Transformar organização em eficiência.
-
-Transformar experiência em melhoria contínua.
-
-## Componentes
-
-### Ensino
-
-Disciplinas:
-
-- [[Filosofia]]
-    
-- [[Geografia]]
-    
-
-Objetivo:
-
-Transmitir conhecimento de forma clara, estruturada e significativa.
-
-### Planejamento
-
-Responsável por:
-
-- Cronogramas.
-    
-- Revisões.
-    
-- Avaliações.
-    
-- Recuperações.
-    
-- Projetos pedagógicos.
-    
-
-### Produção
-
-Responsável por:
-
-- Provas.
-    
-- Revisões.
-    
-- Exercícios.
-    
-- Materiais de apoio.
-    
-- Documentação.
-    
-
-### Gestão
-
-Responsável por:
-
-- Organização de informações.
-    
-- Controle de prazos.
-    
-- Comunicação.
-    
-- Acompanhamento de atividades.
-    
-
-## Sistemas Relacionados
-
-### [[IA]]
-
-Função:
-
-Auxiliar planejamento, revisão, produção de materiais e análise.
-
-### [[n8n]]
-
-Função:
-
-Automatizar tarefas repetitivas.
-
-Exemplos:
-
-- Monitoramento de e-mails.
-    
-- Lembretes.
-    
-- Organização de informações.
-    
-- Geração de documentos.
-    
-
-### [[Obsidian]]
-
-Função:
-
-Preservar conhecimento, materiais, processos e decisões.
-
-### [[FabioOS]]
-
-Função:
-
-Garantir continuidade entre semestres, anos letivos e projetos.
-
-## Automações Desejadas
-
-### Curto Prazo
-
-- Controle de avaliações.
-    
-- Controle de revisões.
-    
-- Registro de tarefas.
-    
-
-### Médio Prazo
-
-- Organização automática de e-mails.
-    
-- Geração de lembretes.
-    
-- Produção assistida de documentos.
-    
-
-### Longo Prazo
-
-- Assistente pedagógico pessoal.
-    
-- Base permanente de conhecimento.
-    
-- Sistema de continuidade acadêmica.
-    
-
-## Estado Atual
-
-Atuação como professor de Filosofia e Geografia.
-
-Grande parte dos processos ainda depende de acompanhamento manual.
-
-## Próximos Passos
-
-1. Mapear processos recorrentes.
-    
-2. Identificar gargalos operacionais.
-    
-3. Automatizar tarefas repetitivas.
-    
-4. Construir base permanente de materiais.
-    
-5. Integrar processos ao [[FabioOS]].
-    
-
-## Métrica de Sucesso
-
-Menos tempo gasto com operação.
-
-Mais tempo dedicado ao ensino, planejamento e desenvolvimento profissional.
-
-## Síntese
-
-A Escola é o principal laboratório prático do [[FabioOS]], onde conhecimento, sistemas e automação podem produzir resultados reais e mensuráveis.
+**Status:** 🟢 Ativo e crescendo

@@ -1,198 +1,113 @@
-# Trader
-
-## Definição
-
-Projeto de desenvolvimento financeiro através de operações em mercado.
-
-## Objetivo
-
-Construir uma operação sustentável e disciplinada.
-
-## Componentes
-
-[[FabioOS]]
-
-[[IA]]
-
-[[n8n]]
-
-## Problemas Principais
-
-- Controle emocional.
-- Gestão de risco.
-- Consistência operacional.
-
-## Métricas
-
-- Taxa de acerto.
-- Drawdown.
-- Risco por operação.
-- Resultado mensal.
-
-## Estado Atual
-
-Fase de reorganização.
-
-## Próximo Passo
-
-Formalizar plano operacional e métricas.
+---
+tipo: projeto
+area: negócios
+status: ativo
+tags: [trader, finanças, risco, renda-variável]
+criado_em: 2026-06-25
+---
 
 # Trader
 
-## Definição
+**Operação de trading estruturada para renda variável**
 
-Trader é o projeto de construção de competência operacional e financeira através da atuação disciplinada nos mercados.
+---
 
-## Objetivo
+## O que é?
 
-Construir uma operação sustentável, replicável e baseada em gestão de risco.
+Você opera criptos em [[BingX]] usando [[Análise Técnica]] disciplinada.
 
-O objetivo não é ganhar uma operação.
+**Não é:**
+- ❌ Especulação pura
+- ❌ "Ficar rico rápido"
+- ❌ Jogo de azar
 
-O objetivo é permanecer operacional durante anos.
+**É:**
+- ✅ Sistema estruturado
+- ✅ [[Gestão de Risco]] rigorosa
+- ✅ Acumulação gradual
+- ✅ Fonte de renda extra
 
-## Problema Fundamental
+---
 
-O mercado recompensa disciplina e pune impulsividade.
+## Filosofia
 
-Sem um sistema consistente, decisões emocionais destroem capital, confiança e continuidade.
+**Sobreviver > Lucrar**
 
-## Missão
+Se você sobreviver 30 anos operando, vai ser rico.  
+Se você tentar lucrar muito rápido, vai perder tudo.
 
-Transformar execução em processo.
+---
 
-Transformar processo em consistência.
+## Estrutura
 
-Transformar consistência em crescimento.
+### 📊 O que você opera
+- [[Cripto]] — Bitcoin, Ethereum
+- [[Alavancagem]] — Controlada (2-5x)
+- [[Futuros]] — Operações de margem
 
-## Componentes
+### ⏱️ Timeframes
+- [[M5]], [[M15]], [[H1]] — Entrada e confirmação
+- Daily — Análise semanal
 
-### Operação
+### 🎯 Padrões
+- [[Triângulos]], [[Bandeiras]], [[Pullbacks]]
+- [[VWAP]], [[Fibonacci]], [[Pivôs]]
 
-Responsável por:
+### 🛡️ Proteção
+- [[Stop Loss]] — Sempre
+- [[Risco por Operação]] — 0.5-1%
+- [[Risco Diário]] — Máx 2-3%
+- [[OCO]] — One Cancels Other
 
-- Entradas.
-    
-- Saídas.
-    
-- Gestão de posição.
-    
-- Gestão de risco.
-    
+---
 
-### Psicologia
+## Ciclo de Operação
 
-Responsável por:
+```
+Análise (H1 + Daily)
+    ↓
+Setup válido?
+    ↓
+Enter com Stop Loss
+    ↓
+Gerenciar posição
+    ↓
+Exit (target ou SL)
+    ↓
+Registrar em [[Trade Journal]]
+    ↓
+Aprender do resultado
+```
 
-- Controle emocional.
-    
-- Disciplina.
-    
-- Consistência.
-    
-- Resiliência.
-    
-
-### Gestão
-
-Responsável por:
-
-- Registro de operações.
-    
-- Análise de desempenho.
-    
-- Aprendizado contínuo.
-    
-
-### Continuidade
-
-Responsável por:
-
-- Preservação de capital.
-    
-- Sobrevivência operacional.
-    
-- Evolução gradual.
-    
-
-## Sistemas Relacionados
-
-### [[FabioOS]]
-
-Função:
-
-Garantir continuidade do aprendizado e das decisões.
-
-### [[IA]]
-
-Função:
-
-Auxiliar análise, registro e revisão.
-
-### [[Obsidian]]
-
-Função:
-
-Preservar histórico, estratégias e aprendizados.
-
-### [[n8n]]
-
-Função:
-
-Automatizar registros e monitoramentos futuros.
-
-## Princípios
-
-### Capital é prioridade
-
-Sem capital não existe operação.
-
-### Sobrevivência vem antes do lucro
-
-Permanecer no jogo é mais importante do que ganhos rápidos.
-
-### Processo vem antes do resultado
-
-Resultados individuais não definem competência.
-
-### Disciplina supera motivação
-
-A continuidade depende de processo e não de emoção.
-
-## Estado Atual
-
-Fase de reorganização operacional.
-
-Objetivo principal: reconstruir consistência e controle de risco.
-
-## Próximos Passos
-
-1. Formalizar regras operacionais.
-    
-2. Formalizar gestão de risco.
-    
-3. Registrar operações.
-    
-4. Criar métricas.
-    
-5. Automatizar acompanhamento.
-    
+---
 
 ## Métricas
 
-- Taxa de acerto.
-    
-- Relação risco-retorno.
-    
-- Drawdown.
-    
-- Resultado mensal.
-    
-- Consistência operacional.
-    
+- Taxa de acerto (%)
+- R:R (risco:retorno)
+- Drawdown máximo
+- Ganho/perda mensal
+- Consistência
 
-## Síntese
+---
 
-O Trader não existe para buscar ganhos rápidos.
+## Automação
 
-Existe para desenvolver disciplina, gestão de risco e capacidade de acumulação ao longo do tempo.
+Com [[Claude]], [[n8n]], [[OpenClaw]]:
+- Alertas de padrões
+- Trade journal automático
+- Análise de gráficos
+- Dashboard de performance
+
+---
+
+## Próximas ações
+
+- [ ] Documentar regras operacionais
+- [ ] Criar trade journal estruturado
+- [ ] Implementar alertas
+- [ ] Medir performance real
+
+---
+
+**Status:** 🟡 Operacional com melhorias
