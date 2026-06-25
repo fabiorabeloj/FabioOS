@@ -105,28 +105,56 @@ Relatórios e comunicação com pais
 
 ## Próximas Automações
 
-- [ ] Triagem de emails com n8n
-- [ ] Geração automática de estruturas de prova
-- [ ] Chatbot de atendimento aos pais
+### HOJE
+- [ ] Criar pasta `50_Fontes/Escola/` para materiais
+- [ ] Criar 5 notas sobre tópicos de Geografia
+- [ ] Criar 5 notas sobre tópicos de Filosofia
+
+### Esta semana
+- [ ] Triagem de emails com n8n (primeira automação)
+- [ ] Template de estrutura de prova em Templater
+- [ ] Organizar cronogramas bimestrais
+- [ ] Documentar processo de avaliação
+
+### Este mês
+- [ ] Geração semi-automática de provas com Claude
+- [ ] Criar 10 gabaritos comentados
+- [ ] Template de revisão para alunos
+- [ ] Banco de questões estruturado no Dataview
+
+### Próximos meses
+- [ ] Chatbot inteligente de atendimento (OpenClaw)
 - [ ] Relatórios automáticos de desempenho
-- [ ] Lembretes de prazos
+- [ ] Lembretes automáticos de prazos (n8n)
+- [ ] Dashboard de notas por turma/disciplina
+- [ ] Sistema de feedback automático
+
+### Material específico a criar
+- [ ] 30 notas sobre conceitos de Geografia
+- [ ] 30 notas sobre conceitos de Filosofia
+- [ ] 15 modelos de prova (diferentes anos/bimestres)
+- [ ] 20 gabaritos comentados
+- [ ] 10 resumos para revisão de alunos
 
 ---
 
 ## Conexões com FabioOS
 
 - **Memória**: [[Obsidian]] armazena aulas, provas, revisões
-- **IA**: [[Claude]] ajuda criação de materiais
-- **Automação**: [[n8n]] + [[OpenClaw]] reduzem carga
+- **IA**: [[Claude]] ajuda criação de materiais (começar próxima semana)
+- **Automação**: [[n8n]] + [[OpenClaw]] reduzem carga (implementar mês 1)
 - **Conhecimento**: [[Mapa de Geografia]] + [[Mapa de Filosofia]]
 - **Carreira**: Conecta com [[Formação e Carreira]]
+- **Visibilidade**: Impacto medido em [[Revisão Semanal]]
 
 ---
 
 ## Meta
-
 ✅ **Qualidade no ensino + Redução de operacional = Mais tempo criativo**
+
+**Target:** 80% da carga operacional automatizada em 3 meses
 
 ---
 
-**Status:** 🟢 Ativo
+**Status:** 🟢 Ativo e expandindo
+**Prioridade:** 🟠 Alta (sustento imediato)

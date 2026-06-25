@@ -153,21 +153,95 @@ criado_em: 2026-06-25
 
 ## Próximas Automações
 
+### HOJE
+- [ ] Criar notas para:
+  - [[Setup BingX]]
+  - [[Análise Técnica Aplicada]]
+  - [[Trade Journal Template]]
+  - [[Regras Operacionais]]
+
+### Esta semana
+- [ ] Documentar 3 setups válidos (entrada + SL + target)
+- [ ] Criar template de trade journal em Obsidian
+- [ ] Organizar timeframes M5/M15/H1
+- [ ] Listar 5 padrões principais
+
+### Este mês
 - [ ] Alertas de padrões automáticos
+  - [ ] Setup n8n webhook para BingX
+  - [ ] Monitorar 3 símbolos principais
+  - [ ] Testar com 5 alertas reais
 - [ ] Trade journal automático
-- [ ] Dashboard de performance
-- [ ] Análise de erro automática
+  - [ ] Capturar operações da API
+  - [ ] Armazenar em Obsidian
+  - [ ] Registrar resultado
+- [ ] Dashboard básico
+  - [ ] Dataview: Win rate
+  - [ ] Dataview: Drawdown
+  - [ ] Dataview: Ganho/perda mensal
+
+### Próximos 2 meses
+- [ ] Dashboard completo de performance
+  - [ ] Gráficos de equity
+  - [ ] Taxa de acerto por padrão
+  - [ ] Análise de erro
+- [ ] Análise automática de erro
+  - [ ] Claude revisa trade journal
+  - [ ] Identifica padrão de erro
+  - [ ] Sugere melhoria
+- [ ] Risk management automático
+  - [ ] Alertas de risco
+  - [ ] Stop mensal automático
+  - [ ] Proteção de capital
+
+### Próximos 3 meses
+- [ ] Sistema completo autônomo
+  - [ ] Sugestões de entrada automáticas
+  - [ ] Execução semi-automática
+  - [ ] Aprendizado contínuo
+- [ ] Dados e estatísticas
+  - [ ] 100+ operações registradas
+  - [ ] Padrões identificados
+  - [ ] Estratégia otimizada
+
+---
+
+## Material a criar
+
+- [ ] 20 notas sobre análise técnica
+- [ ] 5 documentos de setups (entrada + SL + target)
+- [ ] 10 casos de estudo (operações reais)
+- [ ] 5 guias de gestão de risco
+- [ ] 3 documentos de estratégia
+
+---
+
+## Métricas a rastrear
+
+- [ ] Win rate (%)
+- [ ] R:R médio
+- [ ] Drawdown máximo
+- [ ] Ganho/perda mensal (R$)
+- [ ] Consistência (desvio padrão)
+- [ ] Operações registradas (total)
 
 ---
 
 ## Conexão com FabioOS
 
-- **Registro**: [[Obsidian]] armazena trade journal
-- **IA**: [[Claude]] analisa gráficos e operações
-- **Automação**: [[n8n]] monitora alertas
-- **Financeiro**: Parte de [[Patrimônio]]
-- **Saúde**: Impacta [[Sono]] e [[Stress]]
+- **Registro**: [[Obsidian]] armazena trade journal + análises
+- **IA**: [[Claude]] analisa gráficos e operações (começar semana 2)
+- **Automação**: [[n8n]] monitora alertas (começar mês 1)
+- **Financeiro**: Parte de [[Patrimônio]] e [[Finanças]]
+- **Saúde**: Impacta [[Sono]] e [[Stress]] (monitorar)
+- **Disciplina**: Aprendizado via [[Revisão Semanal]]
+
+---
+
+**Target:** 50% de operações com setup válido em 1 mês
 
 ---
 
 **Status:** 🟠 Operacional com melhorias em progresso
+**Prioridade:** 🟠 Alta (renda variável importante)
+**Risco:** Alto (mercado) / Mitigado (estrutura)

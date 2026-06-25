@@ -86,11 +86,69 @@ criado_em: 2026-06-25
 
 ## Próximas ações
 
-- [ ] Expandir cada filósofo em nota separada
-- [ ] Criar comparativas (Platão vs Aristóteles, etc)
-- [ ] Materiais para alunos
-- [ ] Tópicos para provas
+### HOJE
+- [ ] Criar pasta `Filosofia/Filósofos/` 
+- [ ] Criar 5 notas sobre Filósofos principais (Platão, Aristóteles, Kant, Hegel, Sartre)
+
+### Esta semana
+- [ ] Expandir cada período histórico em 3-5 notas
+- [ ] Documentar contexto histórico de cada período
+- [ ] Criar 10 notas de comparação (Platão vs Aristóteles, etc)
+- [ ] Listar conceitos-chave de cada filósofo
+
+### Este mês
+- [ ] 30+ notas sobre filósofos/escolas
+- [ ] Criar materiais para alunos (resumos)
+- [ ] Documentar principais questões filosóficas
+- [ ] Templates de análise de texto filosófico
+- [ ] 5 tópicos para provas
+
+### Próximos meses
+- [ ] 50+ notas estruturando pensamento filosófico
+- [ ] Relações entre filósofos (influência)
+- [ ] Timeline histórica visual
+- [ ] Aplicações práticas para [[Escola]]
+- [ ] Dashboard Dataview por período/tema
+
+---
+
+## Material específico a criar
+
+**Filósofos principais (30 notas):**
+- [ ] 3 notas sobre Sócrates (método, virtude, morte)
+- [ ] 3 notas sobre Platão (mundo das ideias, república)
+- [ ] 3 notas sobre Aristóteles (ser, substância, ética)
+- [ ] 2 notas sobre Kant (crítica, imperativo categórico)
+- [ ] 2 notas sobre Hegel (dialética, espírito absoluto)
+- [ ] 2 notas sobre Sartre (existência, liberdade, má fé)
+- [ ] 2 notas sobre Popper (ciência, refutabilidade)
+- [ ] 2 notas sobre Kuhn (paradigmas científicos)
+- [ ] ... (continuar com principais)
+
+**Temas transversais (20 notas):**
+- [ ] Problema do ser (ontologia)
+- [ ] Problema do conhecimento (epistemologia)
+- [ ] Problema da ética
+- [ ] Problema da liberdade vs determinismo
+- [ ] Problema do belo (estética)
+- ... (continuar)
+
+**Para alunos (15 notas):**
+- [ ] 5 resumos de períodos históricos
+- [ ] 5 guias de leitura de textos
+- [ ] 5 listas de questões-modelo
+
+---
+
+## Comparações a criar
+
+- [ ] Platão vs Aristóteles (10 diferenças)
+- [ ] Racionalismo vs Empirismo
+- [ ] Kant vs Hegel
+- [ ] Existencialismo vs Essencialismo
+- [ ] Popper vs Kuhn (filosofia da ciência)
 
 ---
 
 **Status:** 🟡 Em desenvolvimento
+**Prioridade:** 🟠 Alta (disciplina ensinada)

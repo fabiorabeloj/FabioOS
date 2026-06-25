@@ -144,11 +144,30 @@ Trigger (evento)
 
 ## Próximos passos
 
-- [ ] Documentar cada sistema em detalhe
-- [ ] Mapear webhooks específicos
-- [ ] Criar templates de workflows
-- [ ] Testar integrações
+### Imediato (hoje)
+- [ ] Criar nota separada para cada sistema (11 notas)
+- [ ] Documentar configuração de cada um
+- [ ] Listar integrações possíveis
+
+### Esta semana
+- [ ] Mapear 3 webhooks específicos para n8n
+- [ ] Criar templates de workflows para Escola, Trading, Automação
+- [ ] Testar integração Obsidian ↔ GitHub
+- [ ] Documentar fluxo de dados completo
+
+### Este mês
+- [ ] Setup n8n local ou cloud
+- [ ] Criar primeiro workflow (ex: email triagem)
+- [ ] Testar RAG com Claude + Obsidian
+- [ ] Dashboard de sistemas no Dataview
+
+### Próximos meses
+- [ ] 5+ workflows automáticos funcionando
+- [ ] APIs integradas (BingX, etc)
+- [ ] Monitoramento automático
+- [ ] Alertas inteligentes
 
 ---
 
-**Status:** 🟡 Em desenvolvimento
+**Status:** 🟠 Em desenvolvimento
+**Prioridade:** 🔴 Alta (infraestrutura crítica)

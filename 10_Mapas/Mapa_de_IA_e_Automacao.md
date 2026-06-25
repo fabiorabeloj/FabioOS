@@ -143,20 +143,69 @@ Log e feedback
 
 ## Próximos Passos
 
-### Curto prazo
-- [ ] Documentar cada agente
-- [ ] Criar prompts padrão
-- [ ] Testar integrações
+### HOJE
+- [ ] Criar notas separadas para:
+  - [[Agente Processador de Conhecimento]]
+  - [[Agente Gerador de Materiais]]
+  - [[Agente Atendimento Inteligente]]
+  - [[Agente Análise Trading]]
 
-### Médio prazo
+### Esta semana
+- [ ] Documentar cada agente com especificações
+- [ ] Criar 10 prompts padrão (Geografia, Filosofia, Trading)
+- [ ] Testar Claude + Obsidian com 3 queries
+- [ ] Documentar fluxo RAG completo
+
+### Este mês
+- [ ] Implementar Agente 1: Processador de Conhecimento
+  - [ ] Setup n8n webhook
+  - [ ] Integração com Claude API
+  - [ ] Testar com 3 captures
 - [ ] RAG funcionando para Obsidian
-- [ ] Agente de conhecimento autônomo
-- [ ] Dashboard de automações
+  - [ ] Instalar Chroma ou alternativa
+  - [ ] Indexar 50+ notas atuais
+  - [ ] Testar 5 buscas semânticas
+- [ ] Dashboard básico de automações
 
-### Longo prazo
-- [ ] Agentes para cada projeto
-- [ ] Aprendizado contínuo
-- [ ] Otimização automática
+### Próximos 2 meses
+- [ ] Implementar Agente 2: Gerador de Materiais
+  - [ ] Gerar 5 provas automáticas
+  - [ ] Criar 10 gabaritos
+  - [ ] Testar qualidade
+- [ ] Implementar Agente 3: Atendimento Inteligente
+  - [ ] Triagem de 100 mensagens
+  - [ ] Resposta automática para 80%
+- [ ] Implementar Agente 4: Análise Trading
+  - [ ] Monitorar BingX
+  - [ ] Enviar alertas
+  - [ ] Análise de gráficos
+
+### Próximos 3 meses
+- [ ] Agentes para cada projeto (Escola, Trader, IA, PRIMUS)
+- [ ] Aprendizado contínuo (feedback loop)
+- [ ] Otimização automática (melhorar prompts)
+- [ ] Sistema de reputação (qual agente é melhor)
+
+---
+
+## Prompts a criar
+
+### Escola
+- [ ] "Gerar prova de Geografia sobre [tema]"
+- [ ] "Criar gabarito comentado para [prova]"
+- [ ] "Resumir para revisão: [tópico]"
+- [ ] "Analisar resposta do aluno"
+
+### Trading
+- [ ] "Analisar gráfico H1 de BTC"
+- [ ] "Identificar padrão no gráfico"
+- [ ] "Sugerir entrada com SL"
+- [ ] "Revisar trade journal"
+
+### Geral
+- [ ] "Processar captura em nota estruturada"
+- [ ] "Conectar nota com outras no vault"
+- [ ] "Sugerir tags e links"
 
 ---
 
@@ -165,7 +214,10 @@ Log e feedback
 - [[Mapa de Sistemas]]
 - [[Mapa de Escola]]
 - [[Mapa de TraderOS]]
+- [[RAG_IMPLEMENTATION]]
 
 ---
 
 **Status:** 🟠 Em implementação
+**Prioridade:** 🔴 Crítica (multiplica capacidade)
+**ROI estimado:** 10x redução de tempo operacional

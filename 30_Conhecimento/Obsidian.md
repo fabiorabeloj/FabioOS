@@ -68,6 +68,33 @@ Obsidian é um aplicativo de notas que armazena tudo em Markdown e permite [[Lin
 
 ---
 
+## Setup inicial
+
+### HOJE
+- [ ] Baixar e instalar Obsidian
+- [ ] Abrir pasta `FabioOS/FabioOs` como vault
+- [ ] Instalar plugins:
+  - [ ] Obsidian Git
+  - [ ] Dataview
+  - [ ] Tasks
+  - [ ] Templater
+
+### Esta semana
+- [ ] Explorar 10_Mapas
+- [ ] Ler [[Mapa_Mestre_Fabio]]
+- [ ] Testar 5 links
+- [ ] Verificar graph view
+- [ ] Ativar tema Sodalite
+
+### Este mês
+- [ ] Capturar notas diariamente
+- [ ] Usar tags consistentemente
+- [ ] Criar 3 links por dia
+- [ ] Fazer primeira [[Revisão Semanal]]
+- [ ] Criar primeira automatização
+
+---
+
 ## Para que serve no FabioOS
 
 - ✅ Armazena [[Continuidade da Vida]]
@@ -75,7 +102,18 @@ Obsidian é um aplicativo de notas que armazena tudo em Markdown e permite [[Lin
 - ✅ Versionamento com Git
 - ✅ Integra com [[n8n]]
 - ✅ Busca inteligente com [[Dataview]]
+- ✅ Rastreamento de tarefas
+- ✅ Templates automáticos
+
+---
+
+**Comandos úteis:**
+- `Ctrl+Shift+F` — Busca global
+- `Ctrl+K` — Inserir link
+- `Cmd+P` ou `Ctrl+P` — Command palette
+- Graph view — Visualizar rede
 
 ---
 
 **Status:** 🟢 Em uso
+**Prioridade:** 🔴 Crítica (infraestrutura)
