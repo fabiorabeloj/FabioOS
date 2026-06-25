@@ -1,0 +1,29 @@
+﻿# Obsidian local state
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.obsidian/cache/
+.obsidian/plugins/*/data.json
+
+# Claude local/private settings
+CLAUDE.local.md
+.claude/settings.local.json
+
+# Secrets
+.env
+.env.*
+*.key
+*.pem
+*.secret
+secrets/
+credentials/
+tokens/
+*.token
+
+# System
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs
+*.log
+logs/
