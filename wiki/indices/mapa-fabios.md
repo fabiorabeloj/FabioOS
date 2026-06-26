@@ -16,8 +16,8 @@ atualizado_em: 2026-06-26
 
 **[[60_Sistemas/FabioOS/Plano_Mestre_Implantacao_FabioOS]]** — arquitetura completa, papel de cada ferramenta, fases 0–23 e regra estratégica de decisão. Leitura obrigatória no início de sessão.
 
-**Fase atual:** 8 — Sistema Escola (concluída)
-**Próxima fase:** 8.5 — Comandos Escola + agente school-assistant
+**Fase atual:** 7.5 — Ingestão externa (concluída)
+**Próxima fase:** 9 — Sistema Pietra
 
 ---
 
