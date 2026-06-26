@@ -16,8 +16,8 @@ atualizado_em: 2026-06-26
 
 **[[60_Sistemas/FabioOS/Plano_Mestre_Implantacao_FabioOS]]** — arquitetura completa, papel de cada ferramenta, fases 0–23 e regra estratégica de decisão. Leitura obrigatória no início de sessão.
 
-**Fase atual:** 6 — Bootstrap de contexto (em execução)
-**Próxima fase:** 7 — Consolidação da Camada 1
+**Fase atual:** 7 — Consolidação da Camada 1 (concluída)
+**Próxima fase:** 8 — Escola (estruturação inicial)
 
 ---
 
@@ -25,11 +25,18 @@ atualizado_em: 2026-06-26
 
 O que o usuário vê e toca diariamente.
 
-| Sistema | Função | Wiki |
-|---|---|---|
-| **Obsidian** | Vault pessoal, interface de notas e grafos | *(a criar)* |
-| **Claude Code** | Agente principal de execução e automação | *(a criar)* |
-| **n8n** | Orquestrador de automações (localhost:5678) | *(a criar)* |
+| Sistema | Função | Status | Wiki |
+|---|---|---|---|
+| **Obsidian** | Vault pessoal, interface de notas e grafos | ativo | [[wiki/sistemas/obsidian]] |
+| **Claude Code** | Agente principal de execução e automação | ativo | [[wiki/sistemas/claude-code]] |
+| **n8n** | Orquestrador de automações (localhost:5678) | ativo | [[wiki/sistemas/n8n]] |
+| **GitHub** | Versionamento e backup do vault | ativo | [[wiki/sistemas/github]] |
+| **ChatGPT** | Consultor estratégico e planejador | manual | [[wiki/sistemas/chatgpt]] |
+| **OpenRouter** | Roteamento de IAs via API unificada | pendente | [[wiki/sistemas/openrouter]] |
+| **OpenClaw** | Gateway conversacional externo (WhatsApp/Telegram) | pendente | [[wiki/sistemas/openclaw]] |
+| **Hermes Agent** | Agência autônoma opcional | opcional | [[wiki/sistemas/hermes-agent]] |
+| **Manus** | Executor externo de pesquisa e tarefas longas | pendente | [[wiki/sistemas/manus]] |
+| **Cursor** | Oficina de desenvolvimento de software | pendente | [[wiki/sistemas/cursor]] |
 
 ---
 
@@ -118,7 +125,19 @@ Como criar novos MCPs e ferramentas para o FabioOS.
 
 ## Índice de páginas wiki existentes
 
-### sistemas/
+### sistemas/ — Camada 1 (concluída na Fase 7)
+- [[wiki/sistemas/obsidian]] — Obsidian (vault central, território do FabioOS)
+- [[wiki/sistemas/claude-code]] — Claude Code (operador técnico principal)
+- [[wiki/sistemas/n8n]] — n8n (automação, Docker, porta 5678)
+- [[wiki/sistemas/github]] — GitHub (versionamento e backup)
+- [[wiki/sistemas/chatgpt]] — ChatGPT (consultor estratégico)
+- [[wiki/sistemas/openrouter]] — OpenRouter (roteamento de IAs via API)
+- [[wiki/sistemas/openclaw]] — OpenClaw (gateway conversacional externo)
+- [[wiki/sistemas/hermes-agent]] — Hermes Agent (agência autônoma opcional)
+- [[wiki/sistemas/manus]] — Manus (executor externo de pesquisa)
+- [[wiki/sistemas/cursor]] — Cursor (oficina de desenvolvimento de software)
+
+### sistemas/ — Camada 2 e 3
 - [[wiki/sistemas/gsd-core]] — GSD Core (meta-prompting, spec-driven)
 - [[wiki/sistemas/claude-mem]] — Claude Mem (memória persistente)
 - [[wiki/sistemas/superpowers]] — Superpowers (skills de desenvolvimento)
@@ -139,17 +158,14 @@ Como criar novos MCPs e ferramentas para o FabioOS.
 
 ## Próximas páginas a criar
 
-**Alta prioridade (Camada 1):**
-- [ ] `wiki/sistemas/obsidian.md` — papel do vault, estrutura, plugins
-- [ ] `wiki/sistemas/claude-code.md` — configuração do agente no FabioOS
-- [ ] `wiki/sistemas/n8n.md` — instância local, workflows, MCPs
+**Fase 8 — Sistema Escola:**
+- [ ] `wiki/projetos/escola.md` — sistema Escola (estrutura, materiais, Pietra)
+- [ ] `wiki/projetos/trader.md` — sistema Trader (reservado)
 
-**Média prioridade:**
-- [ ] `wiki/sistemas/mcp-servers.md` — referência oficial de implementação
-- [ ] `wiki/sistemas/awesome-claude-code.md` — catálogo de padrões
+**Conceitos pendentes:**
 - [ ] `wiki/conceitos/llm-wiki.md` — conceito e arquitetura do LLM-Wiki
 - [ ] `wiki/conceitos/rag.md` — RAG e banco vetorial no FabioOS
 
-**Baixa prioridade (sistemas futuros):**
-- [ ] `wiki/projetos/escola.md` — sistema Escola
-- [ ] `wiki/projetos/trader.md` — sistema Trader
+**Extensões de sistema:**
+- [ ] `wiki/sistemas/mcp-servers.md` — referência oficial de implementação
+- [ ] `wiki/sistemas/awesome-claude-code.md` — catálogo de padrões
