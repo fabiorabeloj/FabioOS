@@ -1326,7 +1326,9 @@ Fase 7 — Consolidação da Camada 1         ✓ concluída
 Fase 7.5 — Protocolo Operacional          ✓ concluída
 Fase 8 — Sistema Escola                   ✓ concluída
 Fase 7.5 — Ingestão externa               ← PRÓXIMA (paralela à 8.5)
-Fase 8.5 — Comandos Escola + school-assistant
+Fase 8.5 — Comandos Escola + school-assistant    ✓ concluída
+Fase 7.5 — Ingestão externa                       ← PRÓXIMA
+Fase 9 — Sistema Pietra
 Fase 9 — Sistema Pietra
 Fase 10 — n8n operacional
 Fase 11 — OpenClaw
