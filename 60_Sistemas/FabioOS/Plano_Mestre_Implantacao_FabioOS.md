@@ -1257,7 +1257,22 @@ Para concluir: importar JSON no n8n UI → configurar credencial Obsidian API To
 
 ## Fase 11 — OpenClaw como porta externa
 
-Status: pendente.
+Status: **arquitetura criada — setup Evolution API pendente**.
+
+Entregáveis:
+
+```text
+60_Sistemas/OpenClaw/Sistema_OpenClaw.md
+60_Sistemas/OpenClaw/setup/EVOLUTION_API_SETUP.md
+60_Sistemas/n8n/Workflows/FabioOS_WhatsApp_Pietra.md
+60_Sistemas/n8n/Workflows/FabioOS_WhatsApp_Pietra.json  ← pronto para importar
+.claude/commands/simular-mensagem-pietra.md
+```
+
+Tecnologia base: Evolution API (open-source, Docker, porta 8080).
+Fluxo: WhatsApp → Evolution API (webhook) → n8n (classifica) → Pietra → notifica professor.
+
+Para concluir: executar EVOLUTION_API_SETUP.md → importar workflow → testar curl.
 
 Critério de sucesso:
 
@@ -1358,8 +1373,8 @@ Fase 7.5 — Ingestão externa                       ← PRÓXIMA
 Fase 9 — Sistema Pietra
 Fase 9 — Sistema Pietra                           ✓ concluída
 Fase 10 — n8n operacional                         ~ ativação pendente
-Fase 11 — OpenClaw                                 ← PRÓXIMA
-Fase 11 — OpenClaw
+Fase 11 — OpenClaw                                 ~ setup Evolution API pendente
+Fase 12 — RAG                                      ← PRÓXIMA
 Fase 12 — RAG
 Fase 13 — Grafo
 Fase 14 — MCPs prontos

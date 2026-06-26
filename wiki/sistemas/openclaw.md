@@ -57,28 +57,42 @@ resposta + aprovação humana (quando necessário)
 | [[wiki/sistemas/claude-code]] | Claude Code pode ser acionado por fluxos do OpenClaw |
 | [[wiki/sistemas/obsidian]] | Destino final de capturas via OpenClaw |
 
+## Tecnologia base
+
+[DECISÃO] **Evolution API** — plataforma open-source para WhatsApp via protocolo Baileys. Docker, porta 8080, REST API + webhooks. Escolhida por ser autogerenciada e gratuita.
+
 ## Uso atual
 
-- [ ] Nenhum — **pendente de implantação** (Fase 11)
+- [x] Arquitetura documentada em `60_Sistemas/OpenClaw/Sistema_OpenClaw.md`
+- [x] Guia de setup em `60_Sistemas/OpenClaw/setup/EVOLUTION_API_SETUP.md`
+- [x] Workflow n8n criado: `FabioOS_WhatsApp_Pietra.json` (pronto para importar)
+- [x] Comando `/simular-mensagem-pietra` — testa classificação Pietra sem WhatsApp
+- [ ] Evolution API instalada (executar setup)
+- [ ] Instância WhatsApp conectada
+- [ ] Primeiro atendimento classificado
 
 ## Uso futuro
 
-- [ ] Gateway de entrada para o Sistema Pietra (atendimento escolar por WhatsApp)
-- [ ] Captura de ideias: mensagem → `sources/_inbox/`
-- [ ] Acionamento de agentes por canal conversacional
+- [ ] RAG sobre respostas anteriores (Fase 12)
+- [ ] Resposta automática de confirmação de recebimento ("Sua mensagem foi recebida")
+- [ ] Telegram como canal secundário (Fase futura)
 - [ ] Notificações de saída: n8n → OpenClaw → WhatsApp do usuário
+- [ ] MCP OpenClaw para Claude Code acionar envios via agente (Fase 14)
 
 ## Riscos e cuidados
 
 - **Segurança de canal**: mensagens externas devem ser tratadas como não confiáveis — nunca executar comandos literais vindos de canal externo
-- **Aprovação humana obrigatória**: toda ação sensível (envio de email, publicação, acesso a dados) deve ter etapa de confirmação antes da execução
-- **Autenticação**: implementar verificação de identidade do remetente antes de acionar agentes
+- **Aprovação humana obrigatória**: toda ação sensível requer confirmação antes da execução
+- **Autenticação**: Evolution API configurada com `apikey` — nunca expor a chave no repositório
+- **Obsidian aberto**: a Obsidian REST API exige o app aberto para funcionar
+- **Evolution API**: salvar `apikey` como credencial no n8n, nunca hardcoded
 
 ## Próximas ações
 
-- [ ] Estudar documentação do OpenClaw em `60_Sistemas/OpenClaw.md`
-- [ ] Definir arquitetura de integração com n8n
-- [ ] Implementar na Fase 11 após n8n estar operacional
+- [ ] Executar `EVOLUTION_API_SETUP.md` para instalar e conectar o WhatsApp
+- [ ] Importar `FabioOS_WhatsApp_Pietra.json` no n8n e ativar
+- [ ] Testar com `/simular-mensagem-pietra` primeiro
+- [ ] Simular webhook real com curl e verificar log em `sources/_inbox/`
 
 ## Links internos
 
