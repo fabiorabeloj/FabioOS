@@ -14,9 +14,17 @@ atualizado_em: 2026-06-26
 
 Páginas geradas, organizadas ou mantidas pela IA. Aqui ficam entidades, conceitos, sínteses, índices e páginas conectadas que formam o conhecimento estruturado do FabioOS.
 
-## Status atual
+## Status atual (Fase 5 — 2026-06-26)
 
-A wiki está sendo inicializada. O conteúdo virá da camada `sources/` à medida que o conhecimento for sendo processado e organizado.
+10 páginas criadas a partir de 10 fontes em `sources/repositorios/`. Mapa navegável disponível em [[wiki/indices/mapa-fabios]].
+
+| Pasta | Páginas | Status |
+|---|---|---|
+| `sistemas/` | 9 | gsd-core, claude-mem, superpowers, playwright-mcp, n8n-mcp, fastmcp, taste-skill, huashu-design, tradingview-mcp |
+| `conceitos/` | 1 | mcp |
+| `indices/` | 1 | mapa-fabios |
+| `projetos/` | 0 | a criar |
+| `entidades/` | 0 | a criar |
 
 ## Estrutura planejada
 
