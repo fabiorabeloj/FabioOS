@@ -1232,15 +1232,26 @@ Uma mensagem simulada é classificada corretamente e recebe resposta sugerida.
 
 ## Fase 10 — n8n operacional
 
-Status: iniciado, ainda não completo.
+Status: **workflow criado — ativação pendente** (importar JSON + configurar credencial Obsidian).
 
 Objetivo: criar automações reais.
+
+Entregáveis:
+
+```text
+60_Sistemas/n8n/README.md
+60_Sistemas/n8n/Workflows/FabioOS_Webhook_Inbox.md
+60_Sistemas/n8n/Workflows/FabioOS_Webhook_Inbox.json  ← pronto para importar
+wiki/sistemas/n8n.md (atualizado)
+```
 
 Critério de sucesso:
 
 ```text
 Um webhook gera uma nota no FabioOS.
 ```
+
+Para concluir: importar JSON no n8n UI → configurar credencial Obsidian API Token → ativar → testar curl.
 
 ---
 
@@ -1346,7 +1357,8 @@ Fase 8.5 — Comandos Escola + school-assistant    ✓ concluída
 Fase 7.5 — Ingestão externa                       ← PRÓXIMA
 Fase 9 — Sistema Pietra
 Fase 9 — Sistema Pietra                           ✓ concluída
-Fase 10 — n8n operacional                         ← PRÓXIMA
+Fase 10 — n8n operacional                         ~ ativação pendente
+Fase 11 — OpenClaw                                 ← PRÓXIMA
 Fase 11 — OpenClaw
 Fase 12 — RAG
 Fase 13 — Grafo
