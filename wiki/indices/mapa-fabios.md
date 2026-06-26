@@ -16,8 +16,8 @@ atualizado_em: 2026-06-26
 
 **[[60_Sistemas/FabioOS/Plano_Mestre_Implantacao_FabioOS]]** — arquitetura completa, papel de cada ferramenta, fases 0–23 e regra estratégica de decisão. Leitura obrigatória no início de sessão.
 
-**Fase atual:** 7.5 — Ingestão externa (concluída)
-**Próxima fase:** 9 — Sistema Pietra
+**Fase atual:** 9 — Sistema Pietra (concluída)
+**Próxima fase:** 10 — n8n operacional (primeiro webhook real)
 
 ---
 
@@ -99,7 +99,7 @@ Projetos e domínios específicos em operação ou desenvolvimento.
 | Sistema | Status | Descrição | Wiki |
 |---|---|---|---|
 | **Escola** | ativo | GEO e FIL, 6º ao 9º ano — provas, revisões, gabaritos, comunicados | [[wiki/projetos/escola]] |
-| **Pietra** | pendente | Atendimento pedagógico individualizado por WhatsApp | [[wiki/projetos/pietra]] |
+| **Pietra** | ativo | Atendimento pedagógico — 11 categorias, classificação + respostas-modelo | [[wiki/projetos/pietra]] |
 | **Trader** | reservado | Análise técnica e dados de mercado (sem execução de ordens) | — |
 | **PRIMUS** | a definir | Sistema narrativo persistente | — |
 
@@ -153,6 +153,7 @@ Como criar novos MCPs e ferramentas para o FabioOS.
 
 ### projetos/
 - [[wiki/projetos/escola]] — Sistema Escola (GEO e FIL, 6º ao 9º ano)
+- [[wiki/projetos/pietra]] — Sistema Pietra (atendimento inteligente, 11 categorias)
 
 ### índices/
 - [[wiki/indices/mapa-fabios]] — este arquivo

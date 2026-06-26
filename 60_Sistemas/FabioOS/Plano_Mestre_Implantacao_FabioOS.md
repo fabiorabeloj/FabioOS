@@ -1208,9 +1208,19 @@ Teste: criar prova do zero em menos de 30 min com Claude Code.
 
 ## Fase 9 — Sistema Pietra
 
-Status: pendente.
+Status: **concluída**.
 
 Objetivo: iniciar Atendimento Inteligente Pietra.
+
+Entregáveis:
+
+```text
+60_Sistemas/Pietra/Sistema_Pietra.md
+60_Sistemas/Pietra/intents/INTENTS_CATALOGO.md   ← 11 categorias com gatilhos
+60_Sistemas/Pietra/respostas-modelo/RESPOSTAS_MODELO.md ← 12 respostas-modelo
+60_Sistemas/Pietra/regras/REGRAS_CLASSIFICACAO.md ← escalonamento e privacidade
+wiki/projetos/pietra.md
+```
 
 Critério de sucesso:
 
@@ -1335,8 +1345,8 @@ Fase 7.5 — Ingestão externa               ← PRÓXIMA (paralela à 8.5)
 Fase 8.5 — Comandos Escola + school-assistant    ✓ concluída
 Fase 7.5 — Ingestão externa                       ← PRÓXIMA
 Fase 9 — Sistema Pietra
-Fase 9 — Sistema Pietra
-Fase 10 — n8n operacional
+Fase 9 — Sistema Pietra                           ✓ concluída
+Fase 10 — n8n operacional                         ← PRÓXIMA
 Fase 11 — OpenClaw
 Fase 12 — RAG
 Fase 13 — Grafo
