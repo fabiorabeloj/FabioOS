@@ -1176,14 +1176,26 @@ Um link ou arquivo externo vira fonte preservada, Markdown normalizado e possív
 
 ## Fase 8 — Sistema Escola
 
-Status: pendente.
+Status: **concluída**.
 
 Objetivo: criar sistema de produção docente.
+
+Entregáveis:
+
+```text
+60_Sistemas/Escola/Sistema_Escola.md
+60_Sistemas/Escola/templates/TEMPLATE_PROVA.md
+60_Sistemas/Escola/templates/TEMPLATE_REVISAO.md
+60_Sistemas/Escola/templates/TEMPLATE_GABARITO.md
+60_Sistemas/Escola/templates/TEMPLATE_COMUNICADO.md
+wiki/projetos/escola.md
+```
 
 Critério de sucesso:
 
 ```text
 Produzir materiais escolares com padrão, velocidade e rastreabilidade.
+Teste: criar prova do zero em menos de 30 min com Claude Code.
 ```
 
 ---
@@ -1312,8 +1324,9 @@ Documento completo: **`60_Sistemas/FabioOS/Protocolo_Operacional_FabioOS.md`**
 Fase 6 — Bootstrap de contexto            ✓ concluída
 Fase 7 — Consolidação da Camada 1         ✓ concluída
 Fase 7.5 — Protocolo Operacional          ✓ concluída
-Fase 7.5 — Ingestão externa               ← PRÓXIMA
-Fase 8 — Sistema Escola
+Fase 8 — Sistema Escola                   ✓ concluída
+Fase 7.5 — Ingestão externa               ← PRÓXIMA (paralela à 8.5)
+Fase 8.5 — Comandos Escola + school-assistant
 Fase 9 — Sistema Pietra
 Fase 10 — n8n operacional
 Fase 11 — OpenClaw

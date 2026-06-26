@@ -16,8 +16,8 @@ atualizado_em: 2026-06-26
 
 **[[60_Sistemas/FabioOS/Plano_Mestre_Implantacao_FabioOS]]** — arquitetura completa, papel de cada ferramenta, fases 0–23 e regra estratégica de decisão. Leitura obrigatória no início de sessão.
 
-**Fase atual:** 7.5 — Protocolo Operacional (concluída)
-**Próxima fase:** 8 — Escola (estruturação inicial)
+**Fase atual:** 8 — Sistema Escola (concluída)
+**Próxima fase:** 8.5 — Comandos Escola + agente school-assistant
 
 ---
 
@@ -96,12 +96,12 @@ sources/            wiki-curator           wiki/
 
 Projetos e domínios específicos em operação ou desenvolvimento.
 
-| Sistema | Status | Descrição |
-|---|---|---|
-| **Escola** | Em estruturação | Materiais de aula, provas, revisões, planejamento pedagógico |
-| **Pietra** | Em estruturação | Atendimento pedagógico individualizado |
-| **Trader** | Reservado | Análise técnica e dados de mercado (sem execução de ordens) |
-| **PRIMUS** | A definir | — |
+| Sistema | Status | Descrição | Wiki |
+|---|---|---|---|
+| **Escola** | ativo | GEO e FIL, 6º ao 9º ano — provas, revisões, gabaritos, comunicados | [[wiki/projetos/escola]] |
+| **Pietra** | pendente | Atendimento pedagógico individualizado por WhatsApp | [[wiki/projetos/pietra]] |
+| **Trader** | reservado | Análise técnica e dados de mercado (sem execução de ordens) | — |
+| **PRIMUS** | a definir | Sistema narrativo persistente | — |
 
 **MCP futuro para Trader:** [[wiki/sistemas/tradingview-mcp]]
 
@@ -151,6 +151,9 @@ Como criar novos MCPs e ferramentas para o FabioOS.
 ### conceitos/
 - [[wiki/conceitos/mcp]] — MCP — Model Context Protocol
 
+### projetos/
+- [[wiki/projetos/escola]] — Sistema Escola (GEO e FIL, 6º ao 9º ano)
+
 ### índices/
 - [[wiki/indices/mapa-fabios]] — este arquivo
 
@@ -162,8 +165,13 @@ Como criar novos MCPs e ferramentas para o FabioOS.
 
 ## Próximas páginas a criar
 
-**Fase 8 — Sistema Escola:**
-- [ ] `wiki/projetos/escola.md` — sistema Escola (estrutura, materiais, Pietra)
+**Fase 8.5 — comandos e agente escola:**
+- [ ] Implementar `/criar-prova` e `/criar-revisao` em `.claude/commands/`
+- [ ] Expandir agente `school-assistant`
+- [ ] Criar cronograma bimestral GEO e FIL 2026
+
+**Sistemas pendentes:**
+- [ ] `wiki/projetos/pietra.md` — sistema Pietra (Fase 9)
 - [ ] `wiki/projetos/trader.md` — sistema Trader (reservado)
 
 **Conceitos pendentes:**
