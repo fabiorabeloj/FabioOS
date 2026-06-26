@@ -56,28 +56,38 @@ No FabioOS, o n8n cumpre:
 - [x] Docker ativo: contêiner `n8n`, porta 5678, volume `n8n_data`
 - [x] MCP `n8n-docs` conectado (documentação de nós)
 - [x] MCP `n8n-mcp` configurado (execução via HTTP)
-- [ ] Nenhum workflow de produção criado ainda
+- [x] Workflow `FabioOS - Webhook para Inbox` criado e pronto para importar
+- [x] Documentação de operação em `60_Sistemas/n8n/README.md`
+
+**Para ativar o primeiro workflow:**
+1. Abrir http://localhost:5678
+2. Importar `60_Sistemas/n8n/Workflows/FabioOS_Webhook_Inbox.json`
+3. Criar credencial `Obsidian API Token` (Settings → Local REST API)
+4. Ativar o workflow
 
 ## Uso futuro
 
-- [ ] Webhook → capturar aviso escolar → nota em `sources/`
+- [ ] Testar webhook → nota em `sources/_inbox/` (critério Fase 10)
 - [ ] Email recebido → rascunho de resposta → aprovação humana
-- [ ] Webhook do OpenClaw → acionar agente correto
-- [ ] Captura de link externo → `sources/_inbox/` → processamento
+- [ ] Webhook do OpenClaw → acionar agente correto (Fase 11)
+- [ ] Workflow Pietra: mensagem → classificação → log automático
 - [ ] Integração com Google Drive, Gmail e Calendar (Fase 20)
 
 ## Riscos e cuidados
 
 - **Docker parado**: se o Docker não estiver ativo, o MCP `n8n-mcp` falha — verificar `docker ps` antes de sessões de automação
+- **Obsidian fechado**: a REST API (porta 27124) só funciona com o app aberto
 - **Workflows sem aprovação**: nenhum workflow deve publicar, enviar ou apagar sem etapa de confirmação humana
-- **Credenciais no n8n**: as credenciais armazenadas no n8n ficam no volume Docker (`n8n_data`) — fazer backup antes de recriar o contêiner
+- **Credenciais no n8n**: armazenadas no volume Docker (`n8n_data`) — fazer backup antes de recriar o contêiner
 - **Porta 5678 exposta**: se o computador estiver em rede, a porta está acessível por outros dispositivos — avaliar firewall
+- **host.docker.internal**: obrigatório quando n8n (Docker) chama serviços do host (Obsidian API) — `localhost` não funciona de dentro do contêiner
 
 ## Próximas ações
 
-- [ ] Criar primeiro workflow real: webhook → nota em `sources/_inbox/`
-- [ ] Testar MCP `n8n-mcp` com execução de workflow simples via Claude Code
-- [ ] Documentar template de workflow em `60_Sistemas/` seguindo padrão do CLAUDE.md
+- [ ] Importar e ativar `FabioOS_Webhook_Inbox.json` no n8n UI
+- [ ] Configurar credencial Obsidian API Token no n8n
+- [ ] Executar teste mínimo: `curl -X POST http://localhost:5678/webhook/fabios-inbox ...`
+- [ ] Confirmar nota criada em `sources/_inbox/`
 
 ## Links internos
 
