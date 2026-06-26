@@ -1338,17 +1338,22 @@ Qualquer IA autorizada consegue consultar e operar o FabioOS por MCP.
 
 ## Fases 16–23
 
-| Fase | Assunto | Status |
-|---|---|---|
-| 16 | Manus como executor externo | Futuro |
-| 16.5 | Cursor para desenvolvimento | Futuro |
-| 17 | Hermes Agent (opcional) | Opcional |
-| 18 | Sistema Trader | Pendente |
-| 19 | Sistema PRIMUS | Pendente |
-| 20 | Integração Google (Gmail, Drive, Calendar) | Futuro |
-| 21 | Dashboards (FabioOS, Escola, Trader, PRIMUS) | Futuro |
-| 22 | Segurança e permissões (contínua) | Contínua |
-| 23 | Produção controlada | Futuro |
+> **Reordenamento (2026-06-26):** a pedido do Fabio, **Trader (18) e PRIMUS (19) foram movidos para o final** do roadmap. A **Interface única do FabioOS** foi adicionada como **capstone** — ver [[60_Sistemas/FabioOS/Visao_Interface_FabioOS]].
+
+| Fase | Assunto | Status | Trilho |
+|---|---|---|---|
+| 16 | Manus como executor externo | Futuro | Infra |
+| 16.5 | Cursor para desenvolvimento | Futuro | Infra |
+| 17 | Hermes Agent (opcional) | Opcional | Infra |
+| 20 | Integração Google (Gmail, Drive, Calendar) | Futuro | Empresarial |
+| 21 | Dashboards (FabioOS, Escola) | Futuro | Empresarial |
+| 22 | Segurança e permissões (contínua) | Contínua | Infra |
+| 23 | Produção controlada | Futuro | Empresarial |
+| **Capstone** | **Interface única (ecossistema de inteligências)** | Conceito | Capstone |
+| 18 | Sistema Trader | Final | Pessoal |
+| 19 | Sistema PRIMUS | Final | Pessoal |
+
+**Painel de controle de pendências e trilhos:** [[10_Mapas/Painel_Pendencias_FabioOS]]
 
 ---
 
@@ -1374,12 +1379,17 @@ Fase 9 — Sistema Pietra
 Fase 9 — Sistema Pietra                           ✓ concluída
 Fase 10 — n8n operacional                         ~ ativação pendente
 Fase 11 — OpenClaw                                 ~ setup Evolution API pendente
-Fase 12 — RAG                                      ← PRÓXIMA
-Fase 12 — RAG
-Fase 13 — Grafo
-Fase 14 — MCPs prontos
-Fase 15 — MCP FabioOS
+Fase 12 — RAG                                      ← PRÓXIMA (trilho pessoal/aprendizado)
+Fase 13 — Grafo                                    (trilho pessoal/aprendizado)
+Fase 14 — MCPs prontos                             (infra)
+Fase 15 — MCP FabioOS                              (infra)
+Fase 20–23 — Google, Dashboards, Produção          (trilho empresarial)
+Capstone — Interface única                         (depende de 12,13,14,15,21)
+Fase 18 — Trader                                   (final)
+Fase 19 — PRIMUS                                   (final)
 ```
+
+> Ordem de execução por trilho e pendências abertas: ver **[[10_Mapas/Painel_Pendencias_FabioOS]]**.
 
 A regra de continuidade:
 
