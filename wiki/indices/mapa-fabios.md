@@ -12,6 +12,13 @@ atualizado_em: 2026-06-26
 
 > Ponto de entrada único. Cada sistema linkado tem sua própria página wiki com função, contexto e próximas ações.
 
+## Documento de referência mestre
+
+**[[60_Sistemas/FabioOS/Plano_Mestre_Implantacao_FabioOS]]** — arquitetura completa, papel de cada ferramenta, fases 0–23 e regra estratégica de decisão. Leitura obrigatória no início de sessão.
+
+**Fase atual:** 6 — Bootstrap de contexto (em execução)
+**Próxima fase:** 7 — Consolidação da Camada 1
+
 ---
 
 ## Camada 1 — Interface e Operação

@@ -1,5 +1,22 @@
 ﻿# CLAUDE.md — FabioOS
 
+## Leitura obrigatória no início de cada sessão
+
+Antes de qualquer ação, leia estes arquivos na ordem indicada:
+
+1. **Este arquivo** (CLAUDE.md) — regras de operação do FabioOS
+2. **`60_Sistemas/FabioOS/Plano_Mestre_Implantacao_FabioOS.md`** — arquitetura completa, fases e regras estratégicas
+3. **`wiki/indices/mapa-fabios.md`** — mapa navegável de sistemas, MCPs e wiki
+
+Após a leitura, informe ao usuário:
+- fase atual do FabioOS;
+- próxima ação recomendada;
+- qualquer lacuna ou inconsistência detectada.
+
+Não inicie trabalho sem ter lido os três arquivos acima.
+
+---
+
 ## Identidade do projeto
 
 Este repositório é o FabioOS: um sistema operacional pessoal baseado em Obsidian, GitHub, n8n, Claude Code, ChatGPT, OpenRouter, MCP, RAG, banco vetorial e automações.
