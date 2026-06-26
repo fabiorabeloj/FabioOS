@@ -9,6 +9,8 @@ atualizado_em: 2026-06-25
 
 # RAG Implementation — Guia prático
 
+> ⚠️ **SUPERADO (2026-06-26).** Este é um rascunho inicial genérico. A arquitetura oficial da Fase 12 está em **[[60_Sistemas/RAG/Arquitetura_RAG_FabioOS]]** — que decide embeddings locais (privacidade/PT-BR), Chroma na v1, e modelos Claude atuais. Mantido apenas como referência histórica de código.
+
 ## O que vamos fazer?
 
 Implementar um sistema completo de RAG (Retrieval-Augmented Generation) que:
