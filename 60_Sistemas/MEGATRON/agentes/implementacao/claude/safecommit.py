@@ -7,7 +7,7 @@ não faz stage, não faz push). Ele:
   - lista arquivos modificados/novos (git status, exclui gitignored);
   - escaneia possíveis segredos (sem exibir valores);
   - sugere mensagem Conventional Commit;
-  - imprime o comando que o humano deve rodar após aprovar.
+  - orienta o humano a stagear apenas o grupo temático aprovado.
 
 Uso:
     python safecommit.py
@@ -42,8 +42,11 @@ def git(*args):
 
 
 def changed_files():
-    """Arquivos que um `git add -A` commitaria: modificados + novos, RESPEITANDO
-    o .gitignore (via git ls-files --exclude-standard). Não inclui ignorados."""
+    """Arquivos modificados + novos, respeitando o .gitignore.
+
+    Não recomenda stage automático: em fluxo multiagente, o humano deve stagear
+    apenas os caminhos do commit temático aprovado.
+    """
     out = git("ls-files", "--modified", "--others", "--exclude-standard")
     files = []
     seen = set()
@@ -117,8 +120,11 @@ def main():
     print("   ✅ Nenhum segredo de alto sinal encontrado.")
     msg = suggest_message(files)
     print(f"\n✏️  Mensagem proposta:\n   {msg}")
-    print("\n👤 APROVAÇÃO HUMANA NECESSÁRIA. Para commitar (sem push), rode:")
-    print(f'   git add -A && git commit -m "{msg}"')
+    print("\n👤 APROVAÇÃO HUMANA NECESSÁRIA.")
+    print("   Stage apenas os arquivos do grupo temático aprovado; não use `git add -A` neste fluxo.")
+    print("   Exemplo seguro:")
+    print("   git add -- <arquivo1> <arquivo2> ...")
+    print(f'   git commit -m "{msg}"')
     log_event("SafeCommit", "diagnostico", f"{len(files)} arquivo(s), scan ok, aguarda aprovacao")
     return 0
 
