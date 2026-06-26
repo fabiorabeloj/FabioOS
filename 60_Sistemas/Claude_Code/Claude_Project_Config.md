@@ -80,12 +80,63 @@ Acessados pelo Claude Code via subagentes:
 | `security-reviewer` | Detecta tokens e credenciais antes de commits |
 | `school-assistant` | Suporte a materiais escolares (esqueleto) |
 
-## Diagnóstico de Bun
+## Diagnóstico de Bun (Fase 4.5 — resolvido 2026-06-26)
 
-Auditoria realizada em 2026-06-25:
-- `gsd-ensure-canonical-path.js`: menção a "bundled" (não Bun runtime) — seguro
-- `bun-runner.js` (claude-mem): usa `#!/usr/bin/env node` — não requer Bun
-- **Conclusão: sem dependência real de Bun. Nenhuma ação necessária.**
+### Causa do erro `Bun not found`
+
+O plugin **claude-mem** (thedotmack/13.8.1) registra hooks em 5 eventos:
+`Setup`, `SessionStart`, `UserPromptSubmit`, `PreToolUse` (Read), `PostToolUse`, `Stop`.
+
+Todos os hooks chamam `node bun-runner.js worker-service.cjs <ação>`. O script
+`bun-runner.js` internamente chama `findBun()` que:
+1. Tenta `where bun` (PATH do shell)
+2. Se falhar, testa diretamente `~/.bun/bin/bun.exe`
+3. Se nenhum encontrado → emite "Error: Bun not found. Please install Bun"
+
+Bun não estava instalado → todos os hooks falhavam com esse erro.
+
+### Solução aplicada
+
+Instalação de Bun via PowerShell oficial:
+```powershell
+irm bun.sh/install.ps1 | iex
+# Instalado em: C:\Users\user\.bun\bin\bun.exe (v1.3.14)
+```
+
+`findBun()` encontra o executável via `existsSync` — independe do PATH.
+
+### Verificação
+
+```
+Worker is running  PID: 10272  Port: 37777  Version: 13.8.1  Uptime: 229s
+```
+
+O worker do claude-mem iniciou com sucesso no próximo SessionStart.
+Hooks funcionando em: SessionStart, UserPromptSubmit, PreToolUse, PostToolUse, Stop.
+
+### Hooks ativos identificados (claude-mem)
+
+| Evento | Ação | Essencial |
+|---|---|---|
+| Setup | version-check.js | Sim — valida versão do plugin |
+| SessionStart | worker-service start | Sim — inicia daemon de memória |
+| SessionStart | hook context | Sim — carrega contexto da sessão |
+| UserPromptSubmit | hook session-init | Sim — inicializa rastreamento |
+| PreToolUse (Read) | hook file-context | Útil — indexa arquivos lidos |
+| PostToolUse | hook observation | Útil — registra observações |
+| Stop | hook summarize | Útil — persiste memória ao sair |
+
+Todos os hooks são do plugin claude-mem e são **essenciais** para seu funcionamento.
+Nenhum hook redundante ou herdado encontrado.
+
+### Nota: GITHUB_TOKEN em settings.json global
+
+O arquivo `~/.claude/settings.json` (global, fora do git) contém um token GitHub
+na configuração do MCP server `github`. Este arquivo NÃO está no repositório.
+**Risco:** exposição local se a máquina for comprometida.
+**Recomendação futura:** migrar para variável de ambiente `GITHUB_TOKEN` em vez de
+hardcoded no JSON. Não é urgente, mas deve ser feito antes de qualquer compartilhamento
+da máquina ou configuração de CI.
 
 ## Como manter
 
