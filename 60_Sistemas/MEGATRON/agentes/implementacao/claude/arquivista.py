@@ -45,6 +45,15 @@ def slug(s: str) -> str:
     return s[:60] or "nota"
 
 
+def dentro_do_vault(path: Path) -> bool:
+    """Retorna True apenas se o caminho resolvido permanecer dentro do vault."""
+    try:
+        path.resolve().relative_to(ROOT.resolve())
+        return True
+    except ValueError:
+        return False
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--titulo", required=True)
@@ -60,6 +69,10 @@ def main():
 
     hoje = date.today().isoformat()
     dest_dir = ROOT / (args.dest or "00_Inbox")
+    if not dentro_do_vault(dest_dir):
+        print("🛑 Destino recusado: --dest deve permanecer dentro da raiz do vault FabioOS.")
+        log_event("Arquivista", "abortado", "destino fora do vault")
+        return 2
     dest_dir.mkdir(parents=True, exist_ok=True)
     destino = dest_dir / f"{hoje}_{slug(args.titulo)}.md"
     if destino.exists():
