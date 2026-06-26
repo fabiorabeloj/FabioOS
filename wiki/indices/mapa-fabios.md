@@ -16,8 +16,8 @@ atualizado_em: 2026-06-26
 
 **[[60_Sistemas/FabioOS/Plano_Mestre_Implantacao_FabioOS]]** — arquitetura completa, papel de cada ferramenta, fases 0–23 e regra estratégica de decisão. Leitura obrigatória no início de sessão.
 
-**Fase atual:** 10 — n8n operacional (workflow criado, ativação pendente)
-**Próxima fase:** 11 — OpenClaw (gateway conversacional)
+**Fase atual:** 11 — OpenClaw (arquitetura + workflows criados, setup Evolution API pendente)
+**Próxima fase:** 12 — RAG (recuperação inteligente de conhecimento)
 
 ---
 
