@@ -16,7 +16,7 @@ atualizado_em: 2026-06-26
 
 **[[60_Sistemas/FabioOS/Plano_Mestre_Implantacao_FabioOS]]** — arquitetura completa, papel de cada ferramenta, fases 0–23 e regra estratégica de decisão. Leitura obrigatória no início de sessão.
 
-**Fase atual:** 7 — Consolidação da Camada 1 (concluída)
+**Fase atual:** 7.5 — Protocolo Operacional (concluída)
 **Próxima fase:** 8 — Escola (estruturação inicial)
 
 ---
@@ -153,6 +153,10 @@ Como criar novos MCPs e ferramentas para o FabioOS.
 
 ### índices/
 - [[wiki/indices/mapa-fabios]] — este arquivo
+
+### documentos de sistema
+- [[60_Sistemas/FabioOS/Plano_Mestre_Implantacao_FabioOS]] — arquitetura completa, fases 0–23
+- [[60_Sistemas/FabioOS/Protocolo_Operacional_FabioOS]] — fluxo operacional, rotinas e convenções de nome
 
 ---
 
