@@ -11,6 +11,9 @@ CLAUDE.local.md
 # Skills são junctions locais (máquina-específico) — recriar conforme Claude_Project_Config.md
 .claude/skills/
 
+# Codex — config local com tokens reais (versionar só o config.toml.example)
+.codex/config.toml
+
 # Secrets
 .env
 .env.*
@@ -21,6 +24,11 @@ secrets/
 credentials/
 tokens/
 *.token
+
+# Python
+__pycache__/
+*.pyc
+.venv/
 
 # System
 .DS_Store

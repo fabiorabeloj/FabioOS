@@ -34,6 +34,7 @@ Itens já iniciados ou identificados que aguardam conclusão.
 - [ ] **[Segurança]** Migrar `GITHUB_TOKEN` hardcoded em `~/.claude/settings.json` para variável de ambiente
 - [ ] **[Ingestão]** Implementar `/ingest-drive-doc` (depende de MCP Google Drive) e `/ingest-repo`
 - [ ] **[Wiki]** Criar páginas: `conceitos/rag.md`, `conceitos/llm-wiki.md`, `sistemas/mcp-servers.md`, `projetos/trader.md`
+- [ ] **[Arquitetura]** Derivar ontologia operacional do `00_Arquitetura/01_Modelo_Formal_FabioOS_MEGATRON.md` quando iniciar Fase 13 — Grafo
 - [ ] **[Escola]** Criar cronograma bimestral GEO e FIL 2026
 - [ ] **[QA]** Testar cada comando `.claude/` com caso real
 
@@ -76,6 +77,7 @@ Ordem de execução acordada: **🧠 Pessoal/Aprendizado → 💼 Empresarial �
 ## 3. Concluído recentemente
 
 - [x] Migração da operação para Claude Desktop — [[60_Sistemas/Claude_Code/Operacao_no_Claude_Desktop]]
+- [x] Modelo Formal do FabioOS/MEGATRON — [[00_Arquitetura/01_Modelo_Formal_FabioOS_MEGATRON]]
 - [x] Fases 0–9 (fundação → Pietra) — ver `50_Registros/Changelog/`
 - [x] Visão de Interface registrada — [[60_Sistemas/FabioOS/Visao_Interface_FabioOS]]
 

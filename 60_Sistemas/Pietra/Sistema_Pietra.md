@@ -3,6 +3,7 @@ tipo: sistema
 area: 60_Sistemas
 projeto: FabioOS
 sistema: Pietra
+aliases: [PietraOS]
 status: ativo
 versao: 1.0
 tags: [pietra, atendimento, classificacao, whatsapp, escola, camada-5]

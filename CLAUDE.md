@@ -18,7 +18,11 @@ Após a leitura, informe ao usuário:
 
 Não inicie trabalho sem ter lido os arquivos acima.
 
+**Documento que governa o sistema (constituição):** `00_Arquitetura/01_Modelo_Formal_FabioOS_MEGATRON.md` — modelo formal do FabioOS/MEGATRON (arquitetura cognitiva, ontologia, epistemologia, domínios). Não é leitura linha a linha obrigatória a cada sessão, mas é a referência conceitual que governa todas as fases. Consulte-o ao tomar decisões de arquitetura, ontologia, agentes ou domínios.
+
 **Frase padrão de início de sessão:** `Leia o contexto do FabioOS e continue a partir do último changelog.`
+
+> **Nota multiagente:** este `CLAUDE.md` é a fonte única de regras. O `AGENTS.md` (lido pelo Codex e outros) é apenas um ponteiro para cá. Vocabulário canônico: **MEGATRON** (interface única), **PietraOS** (domínio institucional), **PrimusOS** (domínio narrativo) — com apelidos para os nomes antigos (Interface, Sistema Pietra, PRIMUS).
 
 ---
 

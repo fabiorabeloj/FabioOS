@@ -16,6 +16,8 @@ atualizado_em: 2026-06-26
 
 **[[60_Sistemas/FabioOS/Plano_Mestre_Implantacao_FabioOS]]** — arquitetura completa, papel de cada ferramenta, fases 0–23 e regra estratégica de decisão. Leitura obrigatória no início de sessão.
 
+**[[00_Arquitetura/01_Modelo_Formal_FabioOS_MEGATRON]]** — modelo formal do FabioOS/MEGATRON: ontologia, epistemologia, domínios, memória, agentes, governança, autoconstrução e implementação.
+
 **Fase atual:** 11 — OpenClaw (arquitetura + workflows criados, setup Evolution API pendente)
 **Próxima fase:** 12 — RAG (recuperação inteligente de conhecimento)
 
@@ -43,6 +45,8 @@ O que o usuário vê e toca diariamente.
 ## Camada 2 — Extensões do Agente (Skills e Plugins)
 
 O que aumenta as capacidades do Claude Code.
+
+**[[60_Sistemas/MEGATRON/agentes/README_Agentes]]** — especificação formal dos primeiros agentes funcionais do MEGATRON: SafeCommit, Arquivista, Inbox, RAG e Dashboard.
 
 | Sistema | Tipo | Função | Wiki |
 |---|---|---|---|
@@ -159,6 +163,7 @@ Como criar novos MCPs e ferramentas para o FabioOS.
 - [[wiki/indices/mapa-fabios]] — este arquivo
 
 ### documentos de sistema
+- [[00_Arquitetura/01_Modelo_Formal_FabioOS_MEGATRON]] — modelo formal do FabioOS/MEGATRON
 - [[60_Sistemas/FabioOS/Plano_Mestre_Implantacao_FabioOS]] — arquitetura completa, fases 0–23
 - [[60_Sistemas/FabioOS/Protocolo_Operacional_FabioOS]] — fluxo operacional, rotinas e convenções de nome
 
