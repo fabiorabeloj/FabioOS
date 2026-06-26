@@ -1138,32 +1138,38 @@ Qualquer entrada sabe onde vai e como será processada.
 
 ## Fase 7.5 — Ingestão externa
 
-Status: pendente.
+Status: **concluída**.
 
 Objetivo: fazer o FabioOS beber de links, páginas, arquivos e documentos.
 
 Entregáveis:
 
 ```text
-sources/web/
-sources/docs/
-sources/pdfs/
-sources/drive/
-sources/research/
-sources/extracted/
-sources/_inbox/
+sources/web/             ✓
+sources/docs/            ✓
+sources/pdfs/            ✓
+sources/drive/           ✓
+sources/research/        ✓
+sources/extracted/       ✓
+sources/_inbox/          ✓
+sources/README.md        ✓ (atualizado com estrutura completa)
 ```
 
-Comandos:
+Comandos implementados:
 
 ```text
-/ingest-url
-/ingest-doc
-/ingest-pdf
-/ingest-drive-doc
-/ingest-repo
-/normalize-source
-/check-source-quality
+/ingest-url              ✓
+/ingest-pdf              ✓
+/ingest-doc              ✓
+/normalize-source        ✓
+/check-source-quality    ✓
+```
+
+Comandos pendentes (Fase 14+):
+
+```text
+/ingest-drive-doc        ← depende de MCP Google Drive
+/ingest-repo             ← usar /archive-source por enquanto
 ```
 
 Critério de sucesso:
