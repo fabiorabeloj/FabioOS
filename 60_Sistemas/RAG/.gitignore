@@ -1,0 +1,7 @@
+# Banco vetorial local — contém conteúdo embedado do vault, não versionar
+fabioos_db/
+
+# Ambiente virtual e caches
+.venv/
+__pycache__/
+*.pyc

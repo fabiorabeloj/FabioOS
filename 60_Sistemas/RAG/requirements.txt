@@ -1,0 +1,6 @@
+# FabioOS — RAG Fase 12 (v1 mínima)
+# Embeddings 100% locais (bge-m3) — sem OpenAI/Voyage nesta fase.
+chromadb>=0.5
+sentence-transformers>=3.0   # puxa torch (CPU) automaticamente
+anthropic>=0.40              # passo de geração (Claude Sonnet 4.6)
+python-frontmatter>=1.1      # leitura do frontmatter YAML das notas
