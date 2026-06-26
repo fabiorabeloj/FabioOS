@@ -1082,11 +1082,11 @@ Ao abrir uma nova sessão, basta dizer:
 
 ## Fase 7 — Consolidação da Camada 1
 
-Status: pendente.
+Status: **concluída**.
 
 Objetivo: documentar as ferramentas centrais.
 
-Páginas prioritárias:
+Páginas criadas:
 
 ```text
 wiki/sistemas/obsidian.md
@@ -1105,6 +1105,33 @@ Critério de sucesso:
 
 ```text
 Toda ferramenta principal tem função definida dentro do FabioOS.
+```
+
+## Fase 7.5 — Protocolo Operacional
+
+Status: **concluída**.
+
+Objetivo: definir como o FabioOS é usado no dia a dia.
+
+Entregável:
+
+```text
+60_Sistemas/FabioOS/Protocolo_Operacional_FabioOS.md
+```
+
+Contém:
+- princípio central (5 destinos)
+- fluxo operacional (entrada → revisão)
+- destino por tipo de entrada
+- rotinas diária, semanal e mensal
+- regras de aprovação humana
+- convenções de nomenclatura
+- critérios de sucesso por fase
+
+Critério de sucesso:
+
+```text
+Qualquer entrada sabe onde vai e como será processada.
 ```
 
 ---
@@ -1271,12 +1298,21 @@ Qualquer IA autorizada consegue consultar e operar o FabioOS por MCP.
 
 ---
 
-# 9. Ordem prioritária a partir do estado atual
+# 9. Protocolo Operacional
+
+O protocolo define como o FabioOS é usado no dia a dia — fluxo de entradas, rotinas e regras de aprovação humana.
+
+Documento completo: **`60_Sistemas/FabioOS/Protocolo_Operacional_FabioOS.md`**
+
+---
+
+# 10. Ordem prioritária a partir do estado atual
 
 ```text
-Fase 6 — Bootstrap de contexto       ← AGORA
-Fase 7 — Consolidação da Camada 1
-Fase 7.5 — Ingestão externa
+Fase 6 — Bootstrap de contexto            ✓ concluída
+Fase 7 — Consolidação da Camada 1         ✓ concluída
+Fase 7.5 — Protocolo Operacional          ✓ concluída
+Fase 7.5 — Ingestão externa               ← PRÓXIMA
 Fase 8 — Sistema Escola
 Fase 9 — Sistema Pietra
 Fase 10 — n8n operacional
@@ -1287,13 +1323,11 @@ Fase 14 — MCPs prontos
 Fase 15 — MCP FabioOS
 ```
 
-Não é recomendável avançar para Hermes, RAG, grafo ou MCP customizado antes do bootstrap de contexto.
-
-A razão:
+A regra de continuidade:
 
 ```text
 Sem contexto central, cada IA vira uma conversa solta.
-Com CLAUDE.md + wiki + changelog, todas as IAs orbitam o mesmo sistema.
+Com CLAUDE.md + wiki + protocolo + changelog, todas as IAs orbitam o mesmo sistema.
 ```
 
 ---
