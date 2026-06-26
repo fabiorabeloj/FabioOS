@@ -8,6 +8,8 @@
 # Claude local/private settings
 CLAUDE.local.md
 .claude/settings.local.json
+# Skills são junctions locais (máquina-específico) — recriar conforme Claude_Project_Config.md
+.claude/skills/
 
 # Secrets
 .env
