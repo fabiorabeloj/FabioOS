@@ -8,13 +8,17 @@ Antes de qualquer ação, leia estes arquivos na ordem indicada:
 2. **`60_Sistemas/FabioOS/Plano_Mestre_Implantacao_FabioOS.md`** — arquitetura completa, fases e regras estratégicas
 3. **`wiki/indices/mapa-fabios.md`** — mapa navegável de sistemas, MCPs e wiki
 4. **`60_Sistemas/FabioOS/Protocolo_Operacional_FabioOS.md`** — fluxo operacional, rotinas, aprovação humana e convenções de nome
+5. **`10_Mapas/Painel_Pendencias_FabioOS.md`** — pendências abertas e roadmap por trilho (pessoal/aprendizado → empresarial → final)
+6. **Último arquivo em `50_Registros/Changelog/`** — estado mais recente do projeto
 
 Após a leitura, informe ao usuário:
 - fase atual do FabioOS;
 - próxima ação recomendada;
 - qualquer lacuna ou inconsistência detectada.
 
-Não inicie trabalho sem ter lido os quatro arquivos acima.
+Não inicie trabalho sem ter lido os arquivos acima.
+
+**Frase padrão de início de sessão:** `Leia o contexto do FabioOS e continue a partir do último changelog.`
 
 ---
 
