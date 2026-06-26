@@ -3,7 +3,8 @@ tipo: visao
 area: 60_Sistemas
 projeto: FabioOS
 status: conceito
-tags: [interface, ui, jarvis, friday, ecossistema-ia, conversacional, centro-de-operacoes]
+aliases: [MEGATRON]
+tags: [interface, ui, jarvis, friday, ecossistema-ia, conversacional, centro-de-operacoes, megatron]
 criado_em: 2026-06-26
 atualizado_em: 2026-06-26
 ---

@@ -2,6 +2,7 @@
 tipo: índice
 area: criatividade
 status: ativo
+aliases: [PrimusOS]
 tags: [PRIMUS, índice, roadmap, sistema]
 criado_em: 2026-06-25
 ---
