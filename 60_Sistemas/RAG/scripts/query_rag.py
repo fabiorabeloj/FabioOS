@@ -4,13 +4,14 @@ FabioOS — RAG Fase 12: consulta mínima.
 
 pergunta -> embedding local (bge-m3) -> busca no Chroma -> Claude (com fontes).
 
-Se ANTHROPIC_API_KEY estiver no ambiente, gera resposta com Claude (Sonnet 4.6).
-Caso contrário, opera em MODO RECUPERAÇÃO: mostra apenas os trechos encontrados
-(permite validar a busca sem chave de API).
+Por padrão opera em MODO RECUPERAÇÃO (só mostra os trechos encontrados). O Claude
+SÓ é chamado com a flag explícita --generate (e exige ANTHROPIC_API_KEY) — evita
+envio de contexto/custo não intencional.
 
 Uso:
-    python query_rag.py "O que é o FabioOS?"
+    python query_rag.py "O que é o FabioOS?"              # modo recuperação
     python query_rag.py "Qual a fase atual?" --k 5
+    python query_rag.py "Explique o RAG" --generate       # chama o Claude
 """
 from pathlib import Path
 import argparse
@@ -68,6 +69,8 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("question", nargs="+", help="pergunta")
     ap.add_argument("--k", type=int, default=4, help="nº de trechos (top-k)")
+    ap.add_argument("--generate", action="store_true",
+                    help="chamar o Claude para gerar resposta; sem a flag, modo recuperação")
     args = ap.parse_args()
     question = " ".join(args.question)
 
@@ -81,18 +84,29 @@ def main():
         print("Nenhum trecho relevante encontrado.")
         return 0
 
-    if os.getenv("ANTHROPIC_API_KEY"):
-        context = build_context(hits)
-        print("🤖 Resposta (Claude Sonnet 4.6):\n")
-        print(answer_with_claude(question, context))
-        print("\n📚 Fontes:")
-        for _, meta in hits:
-            print(f"   - {meta['source_path']}  [[{meta['filename']}]]")
-    else:
-        print("ℹ️  ANTHROPIC_API_KEY ausente — MODO RECUPERAÇÃO (sem geração).\n")
+    def mostrar_recuperacao():
         for i, (doc, meta) in enumerate(hits, 1):
             print(f"[{i}] {meta['source_path']}  ({meta.get('header_path', '')})")
             print(f"    {doc[:240].strip()}...\n")
+
+    # Claude SÓ é chamado com --generate explícito (evita custo/envio não intencional).
+    if not args.generate:
+        print("ℹ️  MODO RECUPERAÇÃO (use --generate para resposta do Claude).\n")
+        mostrar_recuperacao()
+        return 0
+
+    if not os.getenv("ANTHROPIC_API_KEY"):
+        print("⚠️  --generate pedido, mas ANTHROPIC_API_KEY ausente. "
+              "Caindo para MODO RECUPERAÇÃO.\n")
+        mostrar_recuperacao()
+        return 0
+
+    context = build_context(hits)
+    print("🤖 Resposta (Claude Sonnet 4.6):\n")
+    print(answer_with_claude(question, context))
+    print("\n📚 Fontes:")
+    for _, meta in hits:
+        print(f"   - {meta['source_path']}  [[{meta['filename']}]]")
     return 0
 
 
