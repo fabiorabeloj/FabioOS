@@ -3,10 +3,10 @@ tipo: sistema
 area: 60_Sistemas
 projeto: FabioOS
 sistema: OpenClaw
-status: documentado-pendente-ativacao
+status: companion-ativo-whatsapp-separado
 tags: [openclaw, gateway, whatsapp, evolution-api, n8n, pietra]
 criado_em: 2026-06-26
-atualizado_em: 2026-06-26
+atualizado_em: 2026-06-27
 ---
 
 # Sistema OpenClaw — Gateway Conversacional
@@ -43,8 +43,21 @@ WhatsApp Business (número da escola)
 ├── Sistema_OpenClaw.md         ← este arquivo
 ├── setup/
 │   └── EVOLUTION_API_SETUP.md  ← como instalar e configurar
+├── Diagnostico_OpenClaw_Local_2026-06-27.md ← estado local do app/gateway
+├── Relatorio_Ativacao_OpenClaw_Companion_2026-06-27.md ← ativação local concluída
+├── Roteiro_Ativacao_OpenClaw_Evolution_2026-06-27.md ← ordem segura de ativação
 └── logs/                       ← logs anonimizados (nunca committar)
 ```
+
+## Estado local observado
+
+Atualização de 2026-06-27: o OpenClaw Companion/Tray foi atualizado e ativado. A distro WSL `OpenClawGateway` existe, o gateway local responde em `127.0.0.1:18789`, o serviço está `running`, o Tray foi reiniciado com `EnableNodeMode: true` e o diagnóstico local registra `connection.status: Connected`.
+
+Registro detalhado: [[60_Sistemas/OpenClaw/Diagnostico_OpenClaw_Local_2026-06-27]]
+
+Relatório de ativação: [[60_Sistemas/OpenClaw/Relatorio_Ativacao_OpenClaw_Companion_2026-06-27]]
+
+Roteiro de ativação: [[60_Sistemas/OpenClaw/Roteiro_Ativacao_OpenClaw_Evolution_2026-06-27]]
 
 ## Fluxo completo de atendimento
 

@@ -2,11 +2,11 @@
 tipo: wiki
 area: sistemas
 projeto: FabioOS
-status: pendente
+status: gateway-local-ativo
 camada: camada-1
 tags: [openclaw, gateway, conversacional, whatsapp, telegram, camada-1]
 criado_em: 2026-06-26
-atualizado_em: 2026-06-26
+atualizado_em: 2026-06-27
 ---
 
 # OpenClaw
@@ -41,7 +41,7 @@ agente correto / n8n / Claude Code
 resposta + aprovação humana (quando necessário)
 ```
 
-[FATO] Status atual: **não implantado**. Mencionado no Plano Mestre e em `60_Sistemas/OpenClaw.md` do vault. Nenhuma instância ativa configurada.
+[FATO] Status atual: **gateway local ativo**. O OpenClaw Companion/Tray está rodando como nó local do Windows, com `OpenClawGateway` no WSL e gateway em `127.0.0.1:18789`. A frente WhatsApp continua separada via Evolution API + n8n.
 
 ## O que essa ferramenta não deve fazer
 
@@ -65,8 +65,12 @@ resposta + aprovação humana (quando necessário)
 
 - [x] Arquitetura documentada em `60_Sistemas/OpenClaw/Sistema_OpenClaw.md`
 - [x] Guia de setup em `60_Sistemas/OpenClaw/setup/EVOLUTION_API_SETUP.md`
+- [x] Diagnóstico local criado: `60_Sistemas/OpenClaw/Diagnostico_OpenClaw_Local_2026-06-27.md`
+- [x] Roteiro de ativação criado: `60_Sistemas/OpenClaw/Roteiro_Ativacao_OpenClaw_Evolution_2026-06-27.md`
+- [x] Relatório de ativação local criado: `60_Sistemas/OpenClaw/Relatorio_Ativacao_OpenClaw_Companion_2026-06-27.md`
 - [x] Workflow n8n criado: `FabioOS_WhatsApp_Pietra.json` (pronto para importar)
 - [x] Comando `/simular-mensagem-pietra` — testa classificação Pietra sem WhatsApp
+- [x] Gateway OpenClaw local ativo (`OpenClawGateway`/porta `18789`)
 - [ ] Evolution API instalada (executar setup)
 - [ ] Instância WhatsApp conectada
 - [ ] Primeiro atendimento classificado
