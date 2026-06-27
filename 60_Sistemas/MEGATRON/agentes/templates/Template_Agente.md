@@ -31,11 +31,11 @@ Definir em uma frase operacional o que o agente resolve.
 
 O agente pode atuar sobre:
 
-- 
+-
 
 O agente não pode atuar sobre:
 
-- 
+-
 
 ## Entradas
 
@@ -51,7 +51,7 @@ O agente não pode atuar sobre:
 
 ## Ferramentas
 
-- 
+-
 
 ## Permissões
 
@@ -67,7 +67,7 @@ O agente não pode atuar sobre:
 
 ## Limites
 
-- 
+-
 
 ## Riscos
 
@@ -77,7 +77,7 @@ O agente não pode atuar sobre:
 
 ## Critérios de aceite
 
-- [ ] 
+- [ ]
 
 ## Logs
 
@@ -103,7 +103,7 @@ Descrever a menor versão útil, preferencialmente manual ou semi-automatizada.
 
 ## Evolução futura
 
-- 
+-
 
 ## Relações
 

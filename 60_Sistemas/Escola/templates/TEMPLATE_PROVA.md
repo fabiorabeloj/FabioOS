@@ -5,7 +5,7 @@ ano: YYYY
 turma: TURMA
 disciplina: DISC
 bimestre: BX
-valor_total: 
+valor_total:
 status: rascunho
 criado_em: YYYY-MM-DD
 atualizado_em: YYYY-MM-DD

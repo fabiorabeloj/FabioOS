@@ -60,7 +60,7 @@ pip install chroma-db openai langchain python-dotenv
 ### Passo 2: Criar arquivo .env
 
 ```env
-OPENAI_API_KEY=sk-...
+OPENAI_API_KEY deve ser definida fora do repositório, em variável local ou secret.
 # ou usar local embeddings (sem custo)
 USE_LOCAL_EMBEDDINGS=true
 ```
