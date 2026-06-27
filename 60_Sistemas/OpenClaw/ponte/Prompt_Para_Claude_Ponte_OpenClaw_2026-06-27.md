@@ -29,6 +29,10 @@ O Codex configurou uma frente de apoio chamada `OPENCLAW_PONTE_VISUAL`, sem toca
 - Evento visual enviado para `agent:fabioos-ponte:status-visual`.
 - Plugin `workboard` habilitado e gateway reiniciado com sucesso.
 - Board `fabioos` criado com cinco cards de coordenacao.
+- OpenRouter autenticado nos perfis `main` e `fabioos-ponte`.
+- Teste real do agente `fabioos-ponte` concluido com resposta `FabioOS Ponte OK`.
+- Cards de auth e ponte visual marcados como `done` no Workboard, com prova.
+- Criado card `Otimizar contexto do FabioOS Ponte`.
 
 ## Hierarquia corrigida
 
@@ -39,26 +43,27 @@ O Codex configurou uma frente de apoio chamada `OPENCLAW_PONTE_VISUAL`, sem toca
 
 ## Limite atual
 
-O Workboard do OpenClaw esta operacional sem custo. O chat do agente ainda
-depende de autenticacao OpenRouter para executar respostas.
+O Workboard do OpenClaw esta operacional sem custo. O chat do agente tambem
+esta operacional via OpenRouter/free.
 
 Problemas observados:
 
-- `openclaw models status` agora indica `openrouter/free`, mas sem auth;
-- `openclaw models --agent fabioos-ponte status` tambem indica `openrouter/free`, mas sem auth;
+- `openclaw models status` agora indica `openrouter/free` com auth;
+- `openclaw models --agent fabioos-ponte status` tambem indica `openrouter/free` com auth;
 - dentro do WSL `OpenClawGateway`, nao ha `wsl.exe` nem acesso ao Claude CLI do Windows;
 - por isso a rota `claude-cli` foi descartada nesta etapa;
-- uma janela local de autenticacao OpenRouter foi aberta para Fabio colar a chave com mascara;
 - nenhuma API key foi salva no repo ou impressa no chat.
 - `workboard.cards.list` confirma os cinco cards iniciais no board `fabioos`.
+- primeiro teste do chat carregou cerca de 21k tokens de entrada; otimizar o
+  contexto antes de uso frequente.
 
 ## Pedido para voce
 
 Quando assumir essa frente, decida a rota mais segura:
 
-1. confirmar se `openrouter:manual` existe em `main` e `fabioos-ponte`;
-2. testar uma mensagem curta no Dashboard;
-3. manter OpenClaw como painel visual e usar arquivos de handoff no vault como ponte principal;
+1. usar OpenClaw manualmente por enquanto;
+2. otimizar o contexto do `fabioos-ponte`;
+3. manter Workboard como painel visual e usar arquivos de handoff no vault como ponte principal;
 4. antes de qualquer modelo pago, definir limite de custo no painel da OpenRouter.
 
 Nao habilite envio automatico de WhatsApp.
