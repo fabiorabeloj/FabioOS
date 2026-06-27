@@ -4,6 +4,7 @@
 .obsidian/graph.json
 .obsidian/cache/
 .obsidian/plugins/*/data.json
+.obsidian/*.backup-*
 
 # Claude local/private settings
 CLAUDE.local.md
