@@ -41,6 +41,8 @@ Artefatos compartilhados incluem:
 
 | INTERINATO_CODEX | Codex | `60_Sistemas/FabioOS/Interinato_Codex_2026-06-27_a_2026-06-29.md`, `STATUS.md`, `NEXT_ACTIONS.md`, OpenClaw Workboard `fabioos` | em andamento | 2026-06-27 | Coordenacao interina ate 2026-06-29 13:00 America/Sao_Paulo; Claude segue lider estrutural; nao tocar `MCP_FABIOOS`, RAG DB, Grafo data, OpenClaw auth/runtime ou push sem OK |
 
+| MEMORIA_PESSOAL_PROFISSIONAL | Codex | `60_Sistemas/FabioOS/Protocolo_Ingestao_Memoria_Pessoal_Profissional.md`, `sources/chatgpt/`, `sources/email/`, `wiki/memoria/` | em desenho | 2026-06-27 | Absorver ChatGPT e e-mails por camadas: inventario, consentimento, triagem, fonte bruta, resumo seguro e wiki/RAG; nao ler ou arquivar emails em massa sem escopo aprovado |
+
 ## Frentes observadas
 
 | Frente | Dono | Observacao |
