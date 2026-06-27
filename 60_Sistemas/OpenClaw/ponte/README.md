@@ -68,11 +68,17 @@ Leia o estado atual do FabioOS e explique quem esta trabalhando em que, sem exec
 - Gateway: local, `127.0.0.1:18789`, bind `loopback`.
 - Agente: `fabioos-ponte`, identidade `FabioOS Ponte`.
 - Modelo inicial: `openrouter/free`.
-- Estado: aguardando `openrouter:manual` no auth store local.
+- Estado: operacional com `openrouter:manual` no auth store local.
 - Workboard: plugin habilitado, board `fabioos` criado.
 
 O objetivo inicial e provar a sala visual com custo zero ou minimo. Modelos
 pagos so entram depois de limite de gasto definido no painel da OpenRouter.
+
+Teste validado:
+
+```text
+FabioOS Ponte OK
+```
 
 ## Workboard
 
@@ -85,13 +91,23 @@ Board criado:
 Cards iniciais:
 
 - `Claude lider: MCP_FABIOOS em andamento`
-- `Codex apoio: OpenClaw ponte visual`
-- `OpenRouter auth pendente no OpenClaw`
+- `Codex apoio: OpenClaw ponte visual` - done
+- `OpenRouter auth pendente no OpenClaw` - done
 - `MEGATRON v0 detectado nao versionado`
 - `Sincronizacao Git sem push`
+- `Otimizar contexto do FabioOS Ponte` - todo
 
 Essa camada nao consome tokens. Ela permite visualizar frentes, dono, status,
 prioridade e bloqueios enquanto o chat LLM ainda aguarda autenticacao.
+
+O chat do agente agora tambem funciona. O Workboard segue sendo a camada visual
+principal porque nao consome tokens.
+
+## Cuidado de contexto
+
+O primeiro teste real do agente carregou cerca de 21k tokens de entrada. Antes
+de usar o `fabioos-ponte` como rotina, reduzir o contexto injetado no workspace
+da ponte para evitar custo e latencia desnecessarios.
 
 ## Custo
 
