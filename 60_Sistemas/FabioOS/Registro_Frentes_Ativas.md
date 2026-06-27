@@ -35,6 +35,7 @@ Artefatos compartilhados incluem:
 | RAG_RESTORE | Codex | `60_Sistemas/RAG/fabioos_db/`, `60_Sistemas/RAG/ingest_run_restore.*.log` | concluida | 2026-06-27 | Reindexacao restaurada com `1795` chunks; nao reindexar novamente sem novo lock |
 | COORD_CLAUDE_CODEX | Codex | `60_Sistemas/FabioOS/Prompt_Para_Claude_Coordenacao_2026-06-27.md`, `60_Sistemas/FabioOS/Relatorio_Coordenacao_Sem_Colisao_2026-06-27.md`, `Registro_Frentes_Ativas.md` | concluida | 2026-06-27 | Prompt e relatorio criados; nao tocar em RAG DB, commits, OpenClaw runtime ou processos sem novo lock |
 | COMMITS_TEMATICOS | Claude | commits tematicos de coordenacao, retomada, RAG, higiene, OpenClaw, Obsidian e Fase 13 | concluida | 2026-06-27 | Frente encerrada sem push; stage explicito usado; `fabioos_db` preservado; checklist pre-commit registrado separadamente |
+| ROTEAMENTO_CAPACIDADES | Codex | `Protocolo_Roteamento_Capacidades_IA.md`, `CLAUDE.md`, `Inventario_Skills.md`, changelog | concluida | 2026-06-27 | Capacidades instaladas agora possuem regra de roteamento; subagentes Codex precisam reteste por falha de spawn |
 
 ## Frentes observadas
 
@@ -63,3 +64,4 @@ Ao concluir, alterar `Estado` para `concluida`, registrar resultado e apontar o 
 - 2026-06-27 - `RAG_RESTORE` concluida. Colecao `fabioos` restaurada com `1795` chunks; consultas de status validadas; incidente registrado em [[60_Sistemas/FabioOS/Incidente_Coordenacao_RAG_2026-06-27]].
 - 2026-06-27 - `COORD_CLAUDE_CODEX` concluida. Prompt para Claude e relatorio de zonas de posse criados para evitar nova colisao.
 - 2026-06-27 - `COMMITS_TEMATICOS` concluida. Commits locais de coordenacao, retomada, RAG, higiene, OpenClaw, Obsidian e Fase 13 foram criados sem push; o checklist pre-commit sem colisao ficou registrado como governanca.
+- 2026-06-27 - `ROTEAMENTO_CAPACIDADES` concluida. Protocolo criado para obrigar consulta a skills, comandos, agentes, subagentes, scripts, MCPs, RAG e grafo antes de execucao manual.

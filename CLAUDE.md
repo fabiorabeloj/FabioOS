@@ -29,6 +29,7 @@ Não inicie trabalho sem ter lido os arquivos acima.
 - **Retomada apos reinicio do PC:** usar `start_fabioos.ps1` e seguir `60_Sistemas/FabioOS/Protocolo_Retomada_Ambiente_FabioOS.md`.
 - **Transicao de contexto entre IAs:** seguir `60_Sistemas/FabioOS/Protocolo_Gestao_Contexto_IA.md` quando a conversa ficar longa, degradada ou perto de limite de uso.
 - **Limpeza segura do PC/projeto:** seguir `60_Sistemas/FabioOS/Protocolo_Limpeza_Segura_FabioOS_PC.md`; nunca deletar direto, usar quarentena e registro.
+- **Roteamento de capacidades:** antes de improvisar, verificar skills, comandos, agentes, subagentes, scripts, MCPs, RAG e grafo conforme `60_Sistemas/FabioOS/Protocolo_Roteamento_Capacidades_IA.md`.
 
 ---
 
