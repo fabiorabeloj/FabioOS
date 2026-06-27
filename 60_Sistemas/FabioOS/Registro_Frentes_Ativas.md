@@ -37,6 +37,10 @@ Artefatos compartilhados incluem:
 | COMMITS_TEMATICOS | Claude | commits tematicos de coordenacao, retomada, RAG, higiene, OpenClaw, Obsidian e Fase 13 | concluida | 2026-06-27 | Frente encerrada sem push; stage explicito usado; `fabioos_db` preservado; checklist pre-commit registrado separadamente |
 | ROTEAMENTO_CAPACIDADES | Codex | `Protocolo_Roteamento_Capacidades_IA.md`, `CLAUDE.md`, `Inventario_Skills.md`, changelog | concluida | 2026-06-27 | Capacidades instaladas agora possuem regra de roteamento; subagentes Codex precisam reteste por falha de spawn |
 
+| MCP_FABIOOS | Claude | `60_Sistemas/MCP_FabioOS/` (novo); leitura read-only de `fabioos_db` e `Grafo/data` | em andamento | 2026-06-27 | Fase 15: MCP FastMCP que CONSULTA RAG/Grafo/vault. Só leitura desses artefatos; nao reindexar/apagar; sem push sem OK |
+
+| INTERINATO_CODEX | Codex | `60_Sistemas/FabioOS/Interinato_Codex_2026-06-27_a_2026-06-29.md`, `STATUS.md`, `NEXT_ACTIONS.md`, OpenClaw Workboard `fabioos` | em andamento | 2026-06-27 | Coordenacao interina ate 2026-06-29 13:00 America/Sao_Paulo; Claude segue lider estrutural; nao tocar `MCP_FABIOOS`, RAG DB, Grafo data, OpenClaw auth/runtime ou push sem OK |
+
 ## Frentes observadas
 
 | Frente | Dono | Observacao |

@@ -10,6 +10,35 @@ atualizado_em: 2026-06-27
 
 # STATUS - FabioOS
 
+## Estado canonico atual - 2026-06-27
+
+Codex esta em **coordenacao operacional interina** ate **2026-06-29 13:00 America/Sao_Paulo**, porque Claude so retorna nesse horario. Claude continua sendo o lider estrutural quando voltar; o interinato serve para manter continuidade, registros e seguranca sem colisao.
+
+Regras ativas:
+
+- sem push sem autorizacao humana explicita;
+- sem apagar, reindexar ou recriar `60_Sistemas/RAG/fabioos_db/`;
+- sem tocar na frente `MCP_FABIOOS` do Claude sem handoff;
+- sem mexer em tokens, OpenClaw auth, WhatsApp/n8n externo ou QR Code sem aprovacao;
+- registrar lock em `Registro_Frentes_Ativas.md` antes de qualquer artefato compartilhado.
+
+Estado operacional:
+
+- Fase 12 RAG: banco vetorial restaurado com `1795` chunks e validacao em modo recuperacao registrada;
+- Fase 13 Grafo: grafo minimo local criado e validado; dados pesados tratados como regeneraveis;
+- Fase 15 MCP FabioOS: frente `MCP_FABIOOS` pertence ao Claude e segue protegida;
+- MEGATRON v0/v1: ha commits recentes de interface cognitiva e ignorancia explicita; revisar antes de promocao formal;
+- OpenClaw: gateway acessivel, Workboard `fabioos` criado e agente `fabioos-ponte` testado com sucesso; ainda precisa otimizar contexto para reduzir custo.
+
+Proxima acao recomendada:
+
+1. Registrar e commitar o interinato Codex com scan.
+2. Criar/atualizar card no OpenClaw Workboard para tornar a frente visivel.
+3. Otimizar contexto do `fabioos-ponte` antes de novos testes com modelo.
+4. Preparar handoff de retorno para Claude.
+
+Nota: as secoes abaixo permanecem como historico de continuidade anterior e podem conter estado ja superado.
+
 ## Estado atual
 
 Claude retornou e **assumiu a liderança das frentes** (decisão do Fabio por custo operacional do Codex). Os 33 commits locais (Fases 7→13, coordenação, RAG, Grafo, OpenClaw, governança) foram **sincronizados via push** no branch `claude/megatron-rag-fase12`, atualizando o **PR #1** (OPEN). `origin/main` permanece intocado.
