@@ -22,6 +22,10 @@ atualizado_em: 2026-06-26
 
 **[[60_Sistemas/FabioOS/Protocolo_Roteamento_Capacidades_IA]]** — regra para usar skills, comandos, agentes, subagentes, scripts, MCPs, RAG e grafo antes de improvisar execução manual.
 
+**[[wiki/memoria/Mapa_Memoria_Fabio]]** — ponto de entrada para a memória pessoal/profissional do FabioOS: ChatGPT, Gmail pessoal, Gmail profissional e fontes sensíveis por camadas.
+
+**[[60_Sistemas/FabioOS/Protocolo_Ingestao_Memoria_Pessoal_Profissional]]** — protocolo de consentimento, privacidade e triagem antes de absorver ChatGPT/e-mails no vault.
+
 **Fase atual:** 12 — RAG (ingestão concluída, validação parcial executada, ajuste de ranking pendente)
 **Próxima fase:** 13 — Grafo de conhecimento, após RAG estabilizar como piloto
 
@@ -38,6 +42,7 @@ O que o usuário vê e toca diariamente.
 | **n8n** | Orquestrador de automações (localhost:5678) | ativo | [[wiki/sistemas/n8n]] |
 | **GitHub** | Versionamento e backup do vault | ativo | [[wiki/sistemas/github]] |
 | **ChatGPT** | Consultor estratégico e planejador | manual | [[wiki/sistemas/chatgpt]] |
+| **Memória Fabio** | Camada de memória pessoal/profissional curada | desenho | [[wiki/memoria/Mapa_Memoria_Fabio]] |
 | **OpenRouter** | Roteamento de IAs via API unificada | pendente | [[wiki/sistemas/openrouter]] |
 | **OpenClaw** | Gateway conversacional externo (WhatsApp/Telegram) | pendente | [[wiki/sistemas/openclaw]] |
 | **Hermes Agent** | Agência autônoma opcional | opcional | [[wiki/sistemas/hermes-agent]] |
