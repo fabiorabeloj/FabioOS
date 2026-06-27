@@ -107,12 +107,22 @@ Observacao do primeiro teste: mesmo com `thinking off`, a chamada carregou cerca
 de 21k tokens de entrada por causa do contexto do agente. Antes de uso
 frequente, reduzir `AGENTS.md`/bootstrap do workspace da ponte.
 
+Atualizacao Codex em 2026-06-27:
+
+- mantido `tools.profile = coding` como padrao global do OpenClaw;
+- aplicado `tools.byProvider.openrouter.profile = minimal`;
+- gateway reiniciado via `openclaw gateway restart`;
+- novo teste em `openrouter/free` reduziu a entrada aproximada de `21121` para
+  `7340` tokens;
+- ferramentas injetadas no prompt cairam para o perfil minimal;
+- a ponte deve continuar manual por padrao, sem heartbeat automatico.
+
 ## Proximo passo
 
 Claude deve decidir a rota de runtime:
 
 1. manter o OpenClaw manual por padrao;
-2. otimizar o contexto do `fabioos-ponte` para reduzir tokens por turno;
+2. revisar a otimizacao `openrouter -> minimal` aplicada durante o interinato;
 3. manter Workboard como sala visual e arquivos de handoff como ponte principal;
 4. so depois avaliar modelos pagos, heartbeat automatico ou roteamento automatico.
 
