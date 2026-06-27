@@ -16,7 +16,7 @@ atualizado_em: 2026-06-27
 - [x] Registrar frente `INTERINATO_CODEX` no [[60_Sistemas/FabioOS/Registro_Frentes_Ativas]].
 - [x] Criar/atualizar card do interinato no Workboard `fabioos`.
 - [x] Otimizar contexto do `fabioos-ponte` antes de novas chamadas caras.
-- [ ] Revisar card/nota "MEGATRON v0 detectado nao versionado" contra o estado real do Git.
+- [x] Revisar card/nota "MEGATRON v0 detectado nao versionado" contra o estado real do Git.
 - [ ] Preparar handoff para Claude retornar em 2026-06-29 13:00.
 - [ ] Rodar scan de segredos antes de qualquer commit.
 - [ ] Fazer inventario nao destrutivo da memoria pessoal/profissional antes de qualquer ingestao em massa.
