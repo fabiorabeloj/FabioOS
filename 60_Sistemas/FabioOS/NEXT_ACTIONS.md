@@ -10,6 +10,28 @@ atualizado_em: 2026-06-27
 
 # NEXT ACTIONS - FabioOS
 
+## Agora - interinato Codex ate 2026-06-29 13:00
+
+- [x] Validar que OpenClaw responde via agente `fabioos-ponte`.
+- [x] Registrar frente `INTERINATO_CODEX` no [[60_Sistemas/FabioOS/Registro_Frentes_Ativas]].
+- [x] Criar/atualizar card do interinato no Workboard `fabioos`.
+- [ ] Otimizar contexto do `fabioos-ponte` antes de novas chamadas caras.
+- [ ] Revisar card/nota "MEGATRON v0 detectado nao versionado" contra o estado real do Git.
+- [ ] Preparar handoff para Claude retornar em 2026-06-29 13:00.
+- [ ] Rodar scan de segredos antes de qualquer commit.
+
+## Quando Claude voltar - interinato
+
+- [ ] Ler [[60_Sistemas/FabioOS/Interinato_Codex_2026-06-27_a_2026-06-29]].
+- [ ] Ler [[60_Sistemas/FabioOS/STATUS]].
+- [ ] Ler [[60_Sistemas/FabioOS/NEXT_ACTIONS]].
+- [ ] Ler [[60_Sistemas/FabioOS/Registro_Frentes_Ativas]] antes de reindexar ou commitar.
+- [ ] Verificar Git (`status`, `log`, branch e PR) antes de qualquer push.
+- [ ] Encerrar ou renovar a frente `MCP_FABIOOS`.
+- [ ] Revisar acoes do Codex durante o interinato.
+
+Nota: as secoes abaixo permanecem como historico de continuidade anterior e podem conter itens ja superados.
+
 ## Agora
 
 - [x] Ajustar `query_rag.py` para priorizar fontes canonicas em consultas de status operacional.
