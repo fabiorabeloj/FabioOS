@@ -18,6 +18,8 @@ atualizado_em: 2026-06-26
 
 **[[00_Arquitetura/01_Modelo_Formal_FabioOS_MEGATRON]]** — modelo formal do FabioOS/MEGATRON: ontologia, epistemologia, domínios, memória, agentes, governança, autoconstrução e implementação.
 
+**[[60_Sistemas/FabioOS/Protocolo_Coordenacao_Multiagente]]** — regras para Codex, Claude, MEGATRON e futuros agentes trabalharem em paralelo sem conflito.
+
 **Fase atual:** 11 — OpenClaw (arquitetura + workflows criados, setup Evolution API pendente)
 **Próxima fase:** 12 — RAG (recuperação inteligente de conhecimento)
 
@@ -93,6 +95,8 @@ sources/            wiki-curator           wiki/
 
 **Regras do fluxo:** [[schema/fluxo-wiki]]
 **Critérios de qualidade:** [[schema/qualidade-wiki]]
+**Validação RAG:** [[60_Sistemas/FabioOS/Plano_Validacao_Fase12_RAG]]
+**Roteiro RAG:** [[60_Sistemas/FabioOS/Roteiro_Execucao_Fase12_RAG]]
 
 ---
 
@@ -166,6 +170,10 @@ Como criar novos MCPs e ferramentas para o FabioOS.
 - [[00_Arquitetura/01_Modelo_Formal_FabioOS_MEGATRON]] — modelo formal do FabioOS/MEGATRON
 - [[60_Sistemas/FabioOS/Plano_Mestre_Implantacao_FabioOS]] — arquitetura completa, fases 0–23
 - [[60_Sistemas/FabioOS/Protocolo_Operacional_FabioOS]] — fluxo operacional, rotinas e convenções de nome
+- [[60_Sistemas/FabioOS/Protocolo_Coordenacao_Multiagente]] — coordenação entre Codex, Claude, MEGATRON e futuros agentes
+- [[60_Sistemas/FabioOS/Matriz_Frentes_Paralelas]] — divisão segura de frentes de trabalho multiagente
+- [[60_Sistemas/FabioOS/Plano_Validacao_Fase12_RAG]] — critérios de teste para a memória semântica
+- [[60_Sistemas/FabioOS/Roteiro_Execucao_Fase12_RAG]] — sequência operacional para executar e validar a Fase 12
 
 ---
 
