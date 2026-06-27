@@ -15,7 +15,7 @@ atualizado_em: 2026-06-27
 - [x] Validar que OpenClaw responde via agente `fabioos-ponte`.
 - [x] Registrar frente `INTERINATO_CODEX` no [[60_Sistemas/FabioOS/Registro_Frentes_Ativas]].
 - [x] Criar/atualizar card do interinato no Workboard `fabioos`.
-- [ ] Otimizar contexto do `fabioos-ponte` antes de novas chamadas caras.
+- [x] Otimizar contexto do `fabioos-ponte` antes de novas chamadas caras.
 - [ ] Revisar card/nota "MEGATRON v0 detectado nao versionado" contra o estado real do Git.
 - [ ] Preparar handoff para Claude retornar em 2026-06-29 13:00.
 - [ ] Rodar scan de segredos antes de qualquer commit.
