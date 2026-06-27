@@ -20,6 +20,8 @@ atualizado_em: 2026-06-26
 
 **[[60_Sistemas/FabioOS/Protocolo_Coordenacao_Multiagente]]** — regras para Codex, Claude, MEGATRON e futuros agentes trabalharem em paralelo sem conflito.
 
+**[[60_Sistemas/FabioOS/Protocolo_Roteamento_Capacidades_IA]]** — regra para usar skills, comandos, agentes, subagentes, scripts, MCPs, RAG e grafo antes de improvisar execução manual.
+
 **Fase atual:** 12 — RAG (ingestão concluída, validação parcial executada, ajuste de ranking pendente)
 **Próxima fase:** 13 — Grafo de conhecimento, após RAG estabilizar como piloto
 
@@ -176,6 +178,7 @@ Como criar novos MCPs e ferramentas para o FabioOS.
 - [[60_Sistemas/FabioOS/Plano_Mestre_Implantacao_FabioOS]] — arquitetura completa, fases 0–23
 - [[60_Sistemas/FabioOS/Protocolo_Operacional_FabioOS]] — fluxo operacional, rotinas e convenções de nome
 - [[60_Sistemas/FabioOS/Protocolo_Coordenacao_Multiagente]] — coordenação entre Codex, Claude, MEGATRON e futuros agentes
+- [[60_Sistemas/FabioOS/Protocolo_Roteamento_Capacidades_IA]] — roteamento obrigatório para capacidades já instaladas
 - [[60_Sistemas/FabioOS/Matriz_Frentes_Paralelas]] — divisão segura de frentes de trabalho multiagente
 - [[60_Sistemas/FabioOS/Plano_Validacao_Fase12_RAG]] — critérios de teste para a memória semântica
 - [[60_Sistemas/FabioOS/Roteiro_Execucao_Fase12_RAG]] — sequência operacional para executar e validar a Fase 12
