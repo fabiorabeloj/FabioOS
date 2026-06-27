@@ -1,8 +1,10 @@
 ---
 tipo: conceito
 area: sistemas
+projeto: FabioOS
 tags: [sistema, operacional, segundo-cérebro, arquitetura]
 criado_em: 2026-06-25
+atualizado_em: 2026-06-27
 ---
 
 # FabioOS
