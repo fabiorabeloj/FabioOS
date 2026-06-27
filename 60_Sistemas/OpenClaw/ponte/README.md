@@ -63,6 +63,36 @@ Abrir o OpenClaw Dashboard e chamar o agente `fabioos-ponte` para:
 Leia o estado atual do FabioOS e explique quem esta trabalhando em que, sem executar alteracoes.
 ```
 
+## Runtime atual
+
+- Gateway: local, `127.0.0.1:18789`, bind `loopback`.
+- Agente: `fabioos-ponte`, identidade `FabioOS Ponte`.
+- Modelo inicial: `openrouter/free`.
+- Estado: aguardando `openrouter:manual` no auth store local.
+- Workboard: plugin habilitado, board `fabioos` criado.
+
+O objetivo inicial e provar a sala visual com custo zero ou minimo. Modelos
+pagos so entram depois de limite de gasto definido no painel da OpenRouter.
+
+## Workboard
+
+O Workboard e a camada visual imediata do OpenClaw para o FabioOS.
+
+Board criado:
+
+- `fabioos` - FabioOS MEGATRON
+
+Cards iniciais:
+
+- `Claude lider: MCP_FABIOOS em andamento`
+- `Codex apoio: OpenClaw ponte visual`
+- `OpenRouter auth pendente no OpenClaw`
+- `MEGATRON v0 detectado nao versionado`
+- `Sincronizacao Git sem push`
+
+Essa camada nao consome tokens. Ela permite visualizar frentes, dono, status,
+prioridade e bloqueios enquanto o chat LLM ainda aguarda autenticacao.
+
 ## Custo
 
 Este agente deve ser manual por padrao. Nao usar heartbeat automatico ate o custo operacional estar medido.
