@@ -20,7 +20,7 @@ Fonte única e versionada de tudo que está **aberto, deixado para trás ou plan
 
 Criado após a migração da operação para o Claude Desktop (Fase 11). Reflete a decisão de organizar o trabalho futuro em **trilhos** — pessoal/aprendizado primeiro, empresarial em seguida — com Trader e PRIMUS movidos para o final.
 
-**Próximo passo de execução confirmado:** Fase 12 — RAG.
+**Próximo passo de execução confirmado:** Fase 12 — RAG (validacao parcial concluida; ranking de status mitigado; falta revalidar 10 perguntas antes de piloto).
 
 ---
 
@@ -35,7 +35,7 @@ Itens já iniciados ou identificados que aguardam conclusão.
 - [ ] **[Ingestão]** Implementar `/ingest-drive-doc` (depende de MCP Google Drive) e `/ingest-repo`
 - [ ] **[Wiki]** Criar páginas: `conceitos/rag.md`, `conceitos/llm-wiki.md`, `sistemas/mcp-servers.md`, `projetos/trader.md`
 - [ ] **[Arquitetura]** Derivar ontologia operacional do `00_Arquitetura/01_Modelo_Formal_FabioOS_MEGATRON.md` quando iniciar Fase 13 — Grafo
-- [ ] **[RAG]** Executar `60_Sistemas/FabioOS/Plano_Validacao_Fase12_RAG.md` após instalar dependências e ingerir a primeira leva
+- [ ] **[RAG]** Reexecutar as 10 perguntas do `60_Sistemas/FabioOS/Plano_Validacao_Fase12_RAG.md` apos ajuste de ranking/recencia
 - [ ] **[Escola]** Criar cronograma bimestral GEO e FIL 2026
 - [ ] **[QA]** Testar cada comando `.claude/` com caso real
 
@@ -47,7 +47,7 @@ Ordem de execução acordada: **🧠 Pessoal/Aprendizado → 💼 Empresarial �
 
 ### 🧠 Trilho Pessoal / Aprendizado — *prioridade atual*
 
-- [ ] **Fase 12 — RAG** (banco vetorial, recuperação semântica) ← **COMEÇAR AQUI**
+- [ ] **Fase 12 — RAG** (banco vetorial, recuperação semântica) ← **VALIDACAO PARCIAL; ranking mitigado; falta revalidacao**
 - [ ] **Fase 13 — Grafo de conhecimento** (relações entre entidades)
 
 ### 💼 Trilho Empresarial / Profissional
@@ -80,6 +80,7 @@ Ordem de execução acordada: **🧠 Pessoal/Aprendizado → 💼 Empresarial �
 - [x] Migração da operação para Claude Desktop — [[60_Sistemas/Claude_Code/Operacao_no_Claude_Desktop]]
 - [x] Modelo Formal do FabioOS/MEGATRON — [[00_Arquitetura/01_Modelo_Formal_FabioOS_MEGATRON]]
 - [x] Governança e revisão multiagente — [[60_Sistemas/FabioOS/Protocolo_Coordenacao_Multiagente]]
+- [x] Validação parcial RAG — ingestão restaurada com `1795` chunks e 10 perguntas testadas em modo recuperação; ver [[60_Sistemas/RAG/Relatorio_Validacao_RAG_2026-06-27]]
 - [x] Fases 0–9 (fundação → Pietra) — ver `50_Registros/Changelog/`
 - [x] Visão de Interface registrada — [[60_Sistemas/FabioOS/Visao_Interface_FabioOS]]
 
@@ -101,6 +102,6 @@ Ordem de execução acordada: **🧠 Pessoal/Aprendizado → 💼 Empresarial �
 
 ## Próximas ações
 
-- [ ] Iniciar Fase 12 — RAG seguindo [[60_Sistemas/FabioOS/Roteiro_Execucao_Fase12_RAG]]
+- [ ] Repetir validação RAG completa após ajuste de ranking seguindo [[60_Sistemas/FabioOS/Roteiro_Execucao_Fase12_RAG]]
 - [ ] Atualizar `CLAUDE.md` para incluir este painel na leitura obrigatória de início de sessão
 - [ ] Atualizar `Plano_Mestre` refletindo Trader/PRIMUS no final e a Interface como capstone

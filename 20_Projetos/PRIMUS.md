@@ -1,3 +1,14 @@
+---
+tipo: projeto
+area: 20_Projetos
+projeto: FabioOS
+sistema: PrimusOS
+status: ativo
+tags: [primus, primusos, rpg, narrativa, dnd5e]
+criado_em: 2026-06-25
+atualizado_em: 2026-06-27
+---
+
 # PRIMUS
 
 ## Definição

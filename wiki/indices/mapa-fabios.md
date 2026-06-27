@@ -20,8 +20,8 @@ atualizado_em: 2026-06-26
 
 **[[60_Sistemas/FabioOS/Protocolo_Coordenacao_Multiagente]]** — regras para Codex, Claude, MEGATRON e futuros agentes trabalharem em paralelo sem conflito.
 
-**Fase atual:** 11 — OpenClaw (arquitetura + workflows criados, setup Evolution API pendente)
-**Próxima fase:** 12 — RAG (recuperação inteligente de conhecimento)
+**Fase atual:** 12 — RAG (ingestão concluída, validação parcial executada, ajuste de ranking pendente)
+**Próxima fase:** 13 — Grafo de conhecimento, após RAG estabilizar como piloto
 
 ---
 
@@ -97,6 +97,9 @@ sources/            wiki-curator           wiki/
 **Critérios de qualidade:** [[schema/qualidade-wiki]]
 **Validação RAG:** [[60_Sistemas/FabioOS/Plano_Validacao_Fase12_RAG]]
 **Roteiro RAG:** [[60_Sistemas/FabioOS/Roteiro_Execucao_Fase12_RAG]]
+**Relatório de validação RAG:** [[60_Sistemas/RAG/Relatorio_Validacao_RAG_2026-06-27]]
+**Status operacional:** [[60_Sistemas/FabioOS/STATUS]]
+**Próximas ações:** [[60_Sistemas/FabioOS/NEXT_ACTIONS]]
 
 ---
 
@@ -158,6 +161,8 @@ Como criar novos MCPs e ferramentas para o FabioOS.
 
 ### conceitos/
 - [[wiki/conceitos/mcp]] — MCP — Model Context Protocol
+- [[wiki/conceitos/rag]] — RAG — recuperação aumentada por geração
+- [[wiki/conceitos/banco-vetorial]] — Banco vetorial — índice semântico local
 
 ### projetos/
 - [[wiki/projetos/escola]] — Sistema Escola (GEO e FIL, 6º ao 9º ano)
@@ -190,7 +195,6 @@ Como criar novos MCPs e ferramentas para o FabioOS.
 
 **Conceitos pendentes:**
 - [ ] `wiki/conceitos/llm-wiki.md` — conceito e arquitetura do LLM-Wiki
-- [ ] `wiki/conceitos/rag.md` — RAG e banco vetorial no FabioOS
 
 **Extensões de sistema:**
 - [ ] `wiki/sistemas/mcp-servers.md` — referência oficial de implementação
