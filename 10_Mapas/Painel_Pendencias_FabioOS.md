@@ -20,7 +20,7 @@ Fonte única e versionada de tudo que está **aberto, deixado para trás ou plan
 
 Criado após a migração da operação para o Claude Desktop (Fase 11). Reflete a decisão de organizar o trabalho futuro em **trilhos** — pessoal/aprendizado primeiro, empresarial em seguida — com Trader e PRIMUS movidos para o final.
 
-**Próximo passo de execução confirmado:** Fase 12 — RAG (validacao parcial concluida; ranking de status mitigado; falta revalidar 10 perguntas antes de piloto).
+**Marco (2026-06-27):** caminho crítico ao MEGATRON ligado de ponta a ponta — RAG (12) + Grafo (13) + MCP FabioOS (15) + **MEGATRON v0** (capstone). **Próximo:** MEGATRON v1 (Ignorância Explícita por limiar) → depois trilho empresarial (Pietra/n8n).
 
 ---
 
@@ -47,8 +47,8 @@ Ordem de execução acordada: **🧠 Pessoal/Aprendizado → 💼 Empresarial �
 
 ### 🧠 Trilho Pessoal / Aprendizado — *prioridade atual*
 
-- [ ] **Fase 12 — RAG** (banco vetorial, recuperação semântica) ← **VALIDACAO PARCIAL; ranking mitigado; falta revalidacao**
-- [ ] **Fase 13 — Grafo de conhecimento** (relações entre entidades)
+- [x] **Fase 12 — RAG** — validada 10/10 (modo recuperação); v1 do MEGATRON tratará ignorância por limiar
+- [x] **Fase 13 — Grafo de conhecimento** — 840 nós, 2680 arestas; ver [[60_Sistemas/Grafo/README_Grafo]]
 
 ### 💼 Trilho Empresarial / Profissional
 
@@ -60,13 +60,14 @@ Ordem de execução acordada: **🧠 Pessoal/Aprendizado → 💼 Empresarial �
 
 ### ⚙️ Infra transversal (serve aos dois trilhos)
 
-- [ ] **Fase 14 — MCPs prontos**
-- [ ] **Fase 15 — MCP customizado FabioOS** (FastMCP)
+- [~] **Fase 14 — MCPs prontos** (filesystem/github/n8n/obsidian ativos)
+- [x] **Fase 15 — MCP customizado FabioOS** (FastMCP, 5 ferramentas read-only, testado) — ver [[60_Sistemas/MCP_FabioOS/README_MCP_FabioOS]]
 - [ ] **Fase 22 — Segurança e permissões** (contínua)
 
 ### 🎯 Capstone — Interface do FabioOS
 
-- [ ] **Interface conversacional única** (centro de operações, ecossistema de inteligências) — depende de RAG, Grafo, MCPs e Dashboards. Ver [[60_Sistemas/FabioOS/Visao_Interface_FabioOS]]
+- [x] **MEGATRON v0** — interface mínima read-only/propose-only: roteia + consulta RAG/Grafo com fontes. Ver [[60_Sistemas/MEGATRON/v0/README_MEGATRON_v0]]
+- [ ] **MEGATRON v1+** — Ignorância Explícita por limiar, síntese com aprovação, ação→agentes, interface visual
 
 ### 🔚 Final (movidos a pedido do Fabio)
 
@@ -81,6 +82,8 @@ Ordem de execução acordada: **🧠 Pessoal/Aprendizado → 💼 Empresarial �
 - [x] Modelo Formal do FabioOS/MEGATRON — [[00_Arquitetura/01_Modelo_Formal_FabioOS_MEGATRON]]
 - [x] Governança e revisão multiagente — [[60_Sistemas/FabioOS/Protocolo_Coordenacao_Multiagente]]
 - [x] Validação parcial RAG — ingestão restaurada com `1795` chunks e 10 perguntas testadas em modo recuperação; ver [[60_Sistemas/RAG/Relatorio_Validacao_RAG_2026-06-27]]
+- [x] **Grafo (Fase 13)** — 840 nós, 2680 arestas; ver [[60_Sistemas/Grafo/README_Grafo]]
+- [x] **MCP FabioOS (Fase 15) + MEGATRON v0 (capstone)** — caminho crítico ligado ponta a ponta; ver [[50_Registros/Changelog/2026-06-27_capstone-megatron-v0]]
 - [x] Fases 0–9 (fundação → Pietra) — ver `50_Registros/Changelog/`
 - [x] Visão de Interface registrada — [[60_Sistemas/FabioOS/Visao_Interface_FabioOS]]
 
