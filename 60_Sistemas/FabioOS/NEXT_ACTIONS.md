@@ -19,6 +19,9 @@ atualizado_em: 2026-06-27
 - [ ] Revisar card/nota "MEGATRON v0 detectado nao versionado" contra o estado real do Git.
 - [ ] Preparar handoff para Claude retornar em 2026-06-29 13:00.
 - [ ] Rodar scan de segredos antes de qualquer commit.
+- [ ] Fazer inventario nao destrutivo da memoria pessoal/profissional antes de qualquer ingestao em massa.
+- [ ] Solicitar exportacao do ChatGPT se Fabio quiser absorver conversas antigas.
+- [ ] Verificar se existe conector/autorizacao do Gmail de trabalho.
 
 ## Quando Claude voltar - interinato
 

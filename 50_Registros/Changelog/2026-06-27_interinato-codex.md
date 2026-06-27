@@ -16,6 +16,8 @@ atualizado_em: 2026-06-27
 - Preservada a lideranca estrutural do Claude para o retorno.
 - Atualizado o estado operacional para refletir Fase 12 RAG, Fase 13 Grafo, Fase 15 MCP, MEGATRON inicial e OpenClaw.
 - Reforcadas zonas protegidas: RAG DB, Grafo data, MCP FabioOS, OpenClaw auth/runtime, WhatsApp/n8n externo e push Git.
+- Criado desenho inicial para ingestao de memoria pessoal/profissional a partir de ChatGPT e Gmail, com privacidade por camadas.
+- Registrado o e-mail profissional informado: `fabiofilosofia@colegiopietra.com.br`, ainda sem acesso/conector confirmado.
 
 ## Instalado/configurado
 
@@ -28,6 +30,9 @@ atualizado_em: 2026-06-27
 - `60_Sistemas/FabioOS/Registro_Frentes_Ativas.md`
 - `60_Sistemas/FabioOS/STATUS.md`
 - `60_Sistemas/FabioOS/NEXT_ACTIONS.md`
+- `60_Sistemas/FabioOS/Protocolo_Ingestao_Memoria_Pessoal_Profissional.md`
+- `60_Sistemas/FabioOS/Inventario_Memoria_Pessoal_Profissional_2026-06-27.md`
+- `wiki/memoria/Mapa_Memoria_Fabio.md`
 
 ## Commits realizados
 
