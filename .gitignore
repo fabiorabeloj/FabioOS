@@ -31,6 +31,11 @@ __pycache__/
 *.pyc
 .venv/
 
+# Grafo Fase 13 — dados gerados regeneráveis (build_graph.py / export_graph_csv.py)
+# Mantém auditoria_grafo.md (evidência legível); ignora json/csv pesados.
+60_Sistemas/Grafo/data/*.json
+60_Sistemas/Grafo/data/*.csv
+
 # System
 .DS_Store
 Thumbs.db
