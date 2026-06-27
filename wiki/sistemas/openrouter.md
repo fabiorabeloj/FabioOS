@@ -74,3 +74,5 @@ No FabioOS, o OpenRouter cumpre:
 - [[wiki/sistemas/n8n]]
 - [[wiki/sistemas/claude-code]]
 - [[60_Sistemas/FabioOS/Plano_Mestre_Implantacao_FabioOS]]
+- [[60_Sistemas/OpenRouter/Plano_Custos_OpenRouter_FabioOS]]
+- [[00_Arquitetura/Plano_Orcamento_FabioOS_MEGATRON_2026]]
