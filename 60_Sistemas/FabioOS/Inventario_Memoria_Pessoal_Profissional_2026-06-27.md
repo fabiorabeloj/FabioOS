@@ -35,7 +35,7 @@ Foi verificado apenas o Gmail pessoal conectado ao Codex:
 ## Fontes ainda pendentes
 
 - ChatGPT: Codex nao tem acesso direto ao historico. Caminho recomendado: exportacao oficial do ChatGPT e ingestao do `.zip` local.
-- Gmail de trabalho: conta informada como `fabiofilosofia@colegiopietra.com.br`; nao foi identificado conector/autorizacao neste momento. Precisa conectar a conta ou exportar mensagens/documentos.
+- Gmail de trabalho: conta informada como `fabiofilosofia@colegiopietra.com.br`; nao foi acessada. Antes de qualquer leitura, pedir autorizacao explicita e configurar conector/exportacao.
 - Claude/Codex/OpenClaw: ja existem changelogs e handoffs no vault; usar esses artefatos antes de logs brutos.
 
 ## Recomendacao

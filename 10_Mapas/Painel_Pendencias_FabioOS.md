@@ -36,6 +36,8 @@ Itens já iniciados ou identificados que aguardam conclusão.
 - [ ] **[Wiki]** Criar páginas: `conceitos/rag.md`, `conceitos/llm-wiki.md`, `sistemas/mcp-servers.md`, `projetos/trader.md`
 - [ ] **[Arquitetura]** Derivar ontologia operacional do `00_Arquitetura/01_Modelo_Formal_FabioOS_MEGATRON.md` quando iniciar Fase 13 — Grafo
 - [ ] **[RAG]** Reexecutar as 10 perguntas do `60_Sistemas/FabioOS/Plano_Validacao_Fase12_RAG.md` apos ajuste de ranking/recencia
+- [ ] **[Memória]** Absorver ChatGPT/e-mails por protocolo seguro: ver [[wiki/memoria/Mapa_Memoria_Fabio]] e [[60_Sistemas/FabioOS/Protocolo_Ingestao_Memoria_Pessoal_Profissional]]
+- [ ] **[Gmail profissional]** Solicitar autorização/conector antes de qualquer acesso ao e-mail `fabiofilosofia@colegiopietra.com.br`
 - [ ] **[Escola]** Criar cronograma bimestral GEO e FIL 2026
 - [ ] **[QA]** Testar cada comando `.claude/` com caso real
 
@@ -84,6 +86,7 @@ Ordem de execução acordada: **🧠 Pessoal/Aprendizado → 💼 Empresarial �
 - [x] Validação parcial RAG — ingestão restaurada com `1795` chunks e 10 perguntas testadas em modo recuperação; ver [[60_Sistemas/RAG/Relatorio_Validacao_RAG_2026-06-27]]
 - [x] **Grafo (Fase 13)** — 840 nós, 2680 arestas; ver [[60_Sistemas/Grafo/README_Grafo]]
 - [x] **MCP FabioOS (Fase 15) + MEGATRON v0 (capstone)** — caminho crítico ligado ponta a ponta; ver [[50_Registros/Changelog/2026-06-27_capstone-megatron-v0]]
+- [x] **Protocolo de memória pessoal/profissional** — estrutura criada sem leitura de corpo de e-mail profissional; ver [[60_Sistemas/FabioOS/Inventario_Memoria_Pessoal_Profissional_2026-06-27]]
 - [x] Fases 0–9 (fundação → Pietra) — ver `50_Registros/Changelog/`
 - [x] Visão de Interface registrada — [[60_Sistemas/FabioOS/Visao_Interface_FabioOS]]
 

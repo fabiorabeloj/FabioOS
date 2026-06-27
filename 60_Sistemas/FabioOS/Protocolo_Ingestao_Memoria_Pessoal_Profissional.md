@@ -31,7 +31,7 @@ A meta nao e copiar tudo cegamente. A meta e converter informacao em memoria uti
 |---|---|---|---|
 | ChatGPT | pendente | exportacao oficial em `.zip`/`.json` ou copia controlada | Codex nao tem acesso direto ao historico do ChatGPT sem exportacao/local |
 | Gmail pessoal | conectado | Gmail connector, buscas por escopo | Conta detectada: `fabiorabelo.j@gmail.com` |
-| Gmail trabalho | pendente | conectar conta `fabiofilosofia@colegiopietra.com.br` ou exportar dados | Nao assumir acesso ate existir conector/autorizacao |
+| Gmail trabalho | pendente | pedir autorizacao explicita para conectar `fabiofilosofia@colegiopietra.com.br` ou exportar dados | Nao assumir acesso; conta apenas informada, nao acessada |
 | Claude/Codex/OpenClaw | parcial | changelogs, handoffs e logs selecionados | Priorizar resumos e decisoes, nao logs brutos gigantes |
 
 ## Estrutura de pastas
@@ -165,7 +165,7 @@ So entram no RAG/Grafo:
 
 1. Gmail pessoal: inventario nao destrutivo da conta conectada.
 2. ChatGPT: usuario exporta historico e informa o caminho do `.zip`.
-3. Gmail trabalho: conectar `fabiofilosofia@colegiopietra.com.br` ou exportar antes de qualquer ingestao.
+3. Gmail trabalho: pedir autorizacao explicita antes de conectar `fabiofilosofia@colegiopietra.com.br` ou exportar dados.
 4. Criar uma nota `wiki/memoria/Mapa_Memoria_Fabio.md` so com categorias e links, sem conteudo sensivel.
 
 ## Criterios de aceite
