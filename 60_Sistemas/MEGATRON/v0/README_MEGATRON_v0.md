@@ -45,11 +45,11 @@ Log das interações: `60_Sistemas/MEGATRON/v0/logs/megatron_log.md` (gitignored
 - ✅ status → recuperou Painel/Modelo Formal/Visão com fontes
 - ✅ relação ("PietraOS") → RAG + grafo (23 nós)
 - ✅ ação ("commit/push") → propose-only, não executou
-- ⚠️ pergunta sem evidência → **não** disparou Ignorância Explícita (limitação abaixo)
+- ✅ pergunta sem evidência → **dispara Ignorância Explícita** (melhor dist > 0.5) — resolvido na v1
 
-## Limitações conhecidas (v0) → backlog v1
+## Limitações conhecidas → backlog
 
-1. **Ignorância Explícita por limiar de relevância.** O Chroma sempre retorna top-k; é preciso usar a **distância** do melhor match para declarar "não sei". Hoje `consultar_rag` não expõe distância. → expor score e cortar abaixo de um limiar.
+1. ✅ **Ignorância Explícita por limiar de relevância — RESOLVIDO (v1, 2026-06-27).** `consultar_rag` passou a expor `dist=`; o MEGATRON declara ignorância quando a melhor distância **> 0.5** (calibrado: relevantes ~0.28–0.36, sem sentido ~0.60–0.64).
 2. **Sem síntese.** v0 só recupera; a resposta sintetizada (LLM) exige `--generate` + aprovação (v1).
 3. **Sem execução de ação.** Por design; v1 conecta a SafeCommit/Arquivista com aprovação humana.
 4. **CLI apenas.** Interface visual (PWA/dashboard) é fase futura.

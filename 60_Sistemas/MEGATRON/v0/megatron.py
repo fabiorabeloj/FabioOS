@@ -17,6 +17,7 @@ Uso:
 from pathlib import Path
 from datetime import datetime
 import asyncio
+import re
 import sys
 
 for _s in (sys.stdout, sys.stderr):
@@ -47,6 +48,9 @@ STATUS = ("fase atual", "status", "pendencia", "pendência", "proximo passo",
           "próximo passo", "o que falta", "roadmap", "onde estamos")
 RELACAO = ("relaciona", "relacionado", "conectado", "relação", "relacao",
            "depende", "vizinho", "ligado a")
+# Distância cosseno (bge-m3): relevantes ~0.28-0.35; sem sentido ~0.60-0.64.
+# Acima do limiar → Ignorância Explícita (calibrado em 2026-06-27).
+LIMIAR_IGNORANCIA = 0.5
 
 
 def classificar(msg: str) -> str:
@@ -92,10 +96,18 @@ async def responder(msg: str) -> str:
     async with Client(mcp) as c:
         rag = _txt(await c.call_tool("consultar_rag", {"pergunta": msg, "k": 5}))
         partes = [f"🔎 {msg}\n"]
-        if (not rag) or ("Nenhum trecho" in rag) or len(rag.strip()) < 40:
+        m = re.search(r"dist=([0-9.]+)", rag or "")
+        melhor = float(m.group(1)) if m else None
+        sem_evidencia = (
+            (not rag) or ("Nenhum trecho" in rag) or len(rag.strip()) < 40
+            or (melhor is not None and melhor > LIMIAR_IGNORANCIA)
+        )
+        if sem_evidencia:
+            extra = (f" (melhor relevância dist={melhor:.2f} acima do limiar "
+                     f"{LIMIAR_IGNORANCIA})" if melhor is not None else "")
             partes.append("⚠️ Ignorância explícita: não há evidência suficiente no "
-                          "vault para responder com confiança. Refine a pergunta ou "
-                          "registre a lacuna.")
+                          f"vault para responder com confiança{extra}. Refine a "
+                          "pergunta ou registre a lacuna.")
         else:
             partes.append("📚 Recuperado do vault (com fontes):\n" + rag)
             if intent == "relacao":
