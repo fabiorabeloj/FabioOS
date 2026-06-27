@@ -1,10 +1,11 @@
 ---
 tipo: sistema
 area: tecnologia
+projeto: FabioOS
 status: ativo
 tags: [tecnico, IA, retrieval]
 criado_em: 2026-06-25
-atualizado_em: 2026-06-25
+atualizado_em: 2026-06-27
 ---
 
 # RAG — Retrieval-Augmented Generation
