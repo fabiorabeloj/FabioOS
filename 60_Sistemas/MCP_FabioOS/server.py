@@ -64,12 +64,15 @@ def consultar_rag(pergunta: str, k: int = 5) -> str:
     emb = model.encode([pergunta], normalize_embeddings=True).tolist()
     r = col.query(query_embeddings=emb, n_results=max(1, min(k, 20)))
     docs, metas = r["documents"][0], r["metadatas"][0]
+    dists = (r.get("distances") or [[None] * len(docs)])[0]
     if not docs:
         return "Nenhum trecho relevante encontrado."
-    return "\n\n".join(
-        f"[{m.get('source_path', '?')}] ({m.get('header_path', '')})\n{d[:400].strip()}"
-        for d, m in zip(docs, metas)
-    )
+    linhas = []
+    for d, m, dist in zip(docs, metas, dists):
+        ds = f"dist={dist:.3f} " if isinstance(dist, (int, float)) else ""
+        linhas.append(f"[{ds}{m.get('source_path', '?')}] "
+                      f"({m.get('header_path', '')})\n{d[:400].strip()}")
+    return "\n\n".join(linhas)
 
 
 @mcp.tool
