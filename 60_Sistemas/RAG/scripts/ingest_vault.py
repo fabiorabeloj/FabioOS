@@ -31,7 +31,8 @@ INCLUDE_DIRS = ["wiki", "60_Sistemas", "30_Conhecimento", "40_Decisoes", "10_Map
 
 # Exclusões de segurança/ruído (defesa em profundidade)
 EXCLUDE_SUBSTRINGS = ["_inbox", ".obsidian", ".claude", "90_Arquivo",
-                      "00_Inbox", "node_modules", ".git", "fabioos_db"]
+                      "00_Inbox", "node_modules", ".git", "fabioos_db",
+                      "/logs/", "agentes/logs", "agentes_log"]  # logs runtime
 EXCLUDE_FILENAME_RE = re.compile(r"PIETRA.*LOG", re.IGNORECASE)  # logs Pietra
 
 MAX_CHARS = 1500      # tamanho-alvo do chunk
@@ -125,8 +126,15 @@ def main():
     collection = client.create_collection(COLLECTION, metadata={"hnsw:space": "cosine"})
 
     ids, docs, metas = [], [], []
+    skipped = 0
     for f in files:
-        post = frontmatter.load(f)
+        try:
+            post = frontmatter.load(f)
+        except Exception as e:
+            skipped += 1
+            print(f"   ⚠️  pulado (frontmatter inválido): "
+                  f"{f.relative_to(VAULT_ROOT).as_posix()} — {e}")
+            continue
         rel = str(f.relative_to(VAULT_ROOT)).replace("\\", "/")
         section = rel.split("/")[0]
         base_meta = {k: clean_meta(post.get(k, "")) for k in META_KEYS}
@@ -151,6 +159,8 @@ def main():
         print(f"   {min(start + BATCH, len(docs))}/{len(docs)}")
 
     print(f"\n✅ Ingestão completa: {len(docs)} chunks em {DB_PATH}")
+    if skipped:
+        print(f"   ⚠️  {skipped} arquivo(s) pulado(s) por frontmatter inválido.")
 
 
 if __name__ == "__main__":
