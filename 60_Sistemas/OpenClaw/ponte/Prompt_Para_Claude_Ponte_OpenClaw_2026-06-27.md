@@ -23,6 +23,12 @@ O Codex configurou uma frente de apoio chamada `OPENCLAW_PONTE_VISUAL`, sem toca
 - Agente OpenClaw `fabioos-ponte` registrado.
 - Workspace do agente criado em `60_Sistemas/OpenClaw/ponte/`.
 - Dashboard abriu e o usuario conseguiu acessar a tela.
+- Identidade do agente ajustada para `FabioOS Ponte`.
+- Modelo global do OpenClaw ajustado para `openrouter/free`.
+- Modelo do agente `fabioos-ponte` ajustado para `openrouter/free`.
+- Evento visual enviado para `agent:fabioos-ponte:status-visual`.
+- Plugin `workboard` habilitado e gateway reiniciado com sucesso.
+- Board `fabioos` criado com cinco cards de coordenacao.
 
 ## Hierarquia corrigida
 
@@ -33,23 +39,27 @@ O Codex configurou uma frente de apoio chamada `OPENCLAW_PONTE_VISUAL`, sem toca
 
 ## Limite atual
 
-O OpenClaw ainda nao esta pronto para executar o agente de verdade.
+O Workboard do OpenClaw esta operacional sem custo. O chat do agente ainda
+depende de autenticacao OpenRouter para executar respostas.
 
 Problemas observados:
 
-- `openclaw models status` indica auth OpenAI ausente para o agente `main`;
-- `fabioos-ponte` configurado com `claude-cli/claude-sonnet-4-6`;
-- tentativa de rodar o agente falhou com `write EPIPE`;
-- dentro do WSL `OpenClawGateway`, `claude` nao esta no `PATH`;
-- nenhuma API key foi salva ou exposta.
+- `openclaw models status` agora indica `openrouter/free`, mas sem auth;
+- `openclaw models --agent fabioos-ponte status` tambem indica `openrouter/free`, mas sem auth;
+- dentro do WSL `OpenClawGateway`, nao ha `wsl.exe` nem acesso ao Claude CLI do Windows;
+- por isso a rota `claude-cli` foi descartada nesta etapa;
+- uma janela local de autenticacao OpenRouter foi aberta para Fabio colar a chave com mascara;
+- nenhuma API key foi salva no repo ou impressa no chat.
+- `workboard.cards.list` confirma os cinco cards iniciais no board `fabioos`.
 
 ## Pedido para voce
 
 Quando assumir essa frente, decida a rota mais segura:
 
-1. configurar Claude CLI no WSL do OpenClaw sem expor credenciais;
-2. configurar OpenRouter/OpenAI como runtime do OpenClaw com limite de custo;
-3. manter OpenClaw como painel visual e usar arquivos de handoff no vault como ponte principal.
+1. confirmar se `openrouter:manual` existe em `main` e `fabioos-ponte`;
+2. testar uma mensagem curta no Dashboard;
+3. manter OpenClaw como painel visual e usar arquivos de handoff no vault como ponte principal;
+4. antes de qualquer modelo pago, definir limite de custo no painel da OpenRouter.
 
 Nao habilite envio automatico de WhatsApp.
 Nao reindexe RAG.
