@@ -4,7 +4,7 @@
     {
       "parameters": {
         "httpMethod": "POST",
-        "path": "whatsapp-pietra",
+        "path": "whatsapp-pietra-v2",
         "responseMode": "responseNode",
         "options": {}
       },
@@ -12,18 +12,24 @@
       "name": "Webhook WhatsApp",
       "type": "n8n-nodes-base.webhook",
       "typeVersion": 2,
-      "position": [240, 300],
-      "webhookId": "whatsapp-pietra"
+      "position": [
+        240,
+        300
+      ],
+      "webhookId": "whatsapp-pietra-v2"
     },
     {
       "parameters": {
-        "jsCode": "// Extrair dados do payload da Evolution API\nconst body = $input.first().json;\nconst data = body.data || {};\nconst key = data.key || {};\nconst msg = data.message || {};\n\n// Texto da mensagem (suporta conversation ou extendedTextMessage)\nconst texto = msg.conversation \n  || msg.extendedTextMessage?.text \n  || '';\n\n// Anonimizar número: manter apenas 4 últimos dígitos\nconst jid = key.remoteJid || '';\nconst numeroCompleto = jid.replace('@s.whatsapp.net', '').replace('@g.us', '');\nconst numeroAnon = '****' + numeroCompleto.slice(-4);\n\nconst nome = data.pushName || 'Responsável';\nconst timestamp = data.messageTimestamp || Math.floor(Date.now() / 1000);\nconst dataHora = new Date(timestamp * 1000).toISOString().replace('T', ' ').substring(0, 16);\nconst hoje = new Date(timestamp * 1000).toISOString().split('T')[0];\nconst anoMes = hoje.substring(0, 7); // YYYY-MM\n\n// Ignorar mensagens enviadas pelo próprio número (fromMe)\nif (key.fromMe) {\n  return [{ json: { ignorar: true, motivo: 'mensagem_enviada_pelo_numero' } }];\n}\n\n// Ignorar se não há texto\nif (!texto.trim()) {\n  return [{ json: { ignorar: true, motivo: 'sem_texto' } }];\n}\n\nreturn [{\n  json: {\n    texto: texto.trim(),\n    numeroAnon,\n    nome,\n    dataHora,\n    hoje,\n    anoMes,\n    logFilename: `PIETRA_${anoMes}_LOG.md`,\n    ignorar: false\n  }\n}];"
+        "jsCode": "// Extrair dados do payload da Evolution API\nconst input = $input.first().json;\nlet body = input.body || input;\n\nif (typeof body === 'string') {\n  try {\n    body = JSON.parse(body);\n  } catch (error) {\n    body = {};\n  }\n}\n\nconst data = body.data || {};\nconst key = data.key || {};\nconst msg = data.message || {};\nconst instance = body.instance || data.instance || '';\nconst modoPessoal = instance === 'fabioos-pessoal';\n\n// Texto da mensagem (suporta conversation ou extendedTextMessage)\nconst texto = msg.conversation \n  || msg.extendedTextMessage?.text \n  || '';\nconst textoLimpo = texto.trim();\n\n// Anonimizar n?mero: manter apenas 4 ?ltimos d?gitos\nconst jid = key.remoteJid || '';\nconst numeroCompleto = jid.replace('@s.whatsapp.net', '').replace('@g.us', '');\nconst numeroAnon = '****' + numeroCompleto.slice(-4);\n\nconst nome = data.pushName || (modoPessoal ? 'Comando pessoal' : 'Respons?vel');\nconst timestamp = data.messageTimestamp || Math.floor(Date.now() / 1000);\nconst dataHora = new Date(timestamp * 1000).toISOString().replace('T', ' ').substring(0, 16);\nconst hoje = new Date(timestamp * 1000).toISOString().split('T')[0];\nconst anoMes = hoje.substring(0, 7); // YYYY-MM\n\n// No modo pessoal, aceitar mensagens enviadas pelo pr?prio usu?rio apenas com prefixo FabioOS.\nif (key.fromMe && !modoPessoal) {\n  return [{ json: { ignorar: true, motivo: 'mensagem_enviada_pelo_numero' } }];\n}\n\nif (key.fromMe && modoPessoal && !/^fabioos[,s:]/i.test(textoLimpo)) {\n  return [{ json: { ignorar: true, motivo: 'comando_pessoal_sem_prefixo_fabioos' } }];\n}\n\n// Ignorar se n?o h? texto\nif (!textoLimpo) {\n  return [{ json: { ignorar: true, motivo: 'sem_texto' } }];\n}\n\nreturn [{\n  json: {\n    texto: textoLimpo,\n    numeroAnon,\n    nome,\n    instance,\n    modo: modoPessoal ? 'pessoal' : 'pietra',\n    dataHora,\n    hoje,\n    anoMes,\n    logFilename: modoPessoal ? `WHATSAPP_PESSOAL_${anoMes}_LOG.md` : `PIETRA_${anoMes}_LOG.md`,\n    ignorar: false\n  }\n}];"
       },
       "id": "w2b3c4d5-e6f7-8901-bcde-222222222222",
       "name": "Extrair Dados",
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
-      "position": [460, 300]
+      "position": [
+        460,
+        300
+      ]
     },
     {
       "parameters": {
@@ -40,7 +46,10 @@
       "name": "Ignorar?",
       "type": "n8n-nodes-base.if",
       "typeVersion": 1,
-      "position": [680, 300]
+      "position": [
+        680,
+        300
+      ]
     },
     {
       "parameters": {
@@ -50,7 +59,10 @@
       "name": "Classificar Intent",
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
-      "position": [900, 300]
+      "position": [
+        900,
+        300
+      ]
     },
     {
       "parameters": {
@@ -60,7 +72,10 @@
       "name": "Montar Log e Notificação",
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
-      "position": [1120, 300]
+      "position": [
+        1120,
+        300
+      ]
     },
     {
       "parameters": {
@@ -80,7 +95,10 @@
       "name": "Salvar Log no Vault",
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.1,
-      "position": [1340, 300],
+      "position": [
+        1340,
+        300
+      ],
       "credentials": {
         "httpHeaderAuth": {
           "id": "obsidian-api",
@@ -97,7 +115,10 @@
       "name": "Responder",
       "type": "n8n-nodes-base.respondToWebhook",
       "typeVersion": 1,
-      "position": [1560, 300]
+      "position": [
+        1560,
+        300
+      ]
     },
     {
       "parameters": {
@@ -108,39 +129,84 @@
       "name": "Responder Ignorado",
       "type": "n8n-nodes-base.respondToWebhook",
       "typeVersion": 1,
-      "position": [900, 500]
+      "position": [
+        900,
+        500
+      ]
     }
   ],
   "connections": {
     "Webhook WhatsApp": {
       "main": [
-        [{ "node": "Extrair Dados", "type": "main", "index": 0 }]
+        [
+          {
+            "node": "Extrair Dados",
+            "type": "main",
+            "index": 0
+          }
+        ]
       ]
     },
     "Extrair Dados": {
       "main": [
-        [{ "node": "Ignorar?", "type": "main", "index": 0 }]
+        [
+          {
+            "node": "Ignorar?",
+            "type": "main",
+            "index": 0
+          }
+        ]
       ]
     },
     "Ignorar?": {
       "main": [
-        [{ "node": "Responder Ignorado", "type": "main", "index": 0 }],
-        [{ "node": "Classificar Intent", "type": "main", "index": 0 }]
+        [
+          {
+            "node": "Responder Ignorado",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Classificar Intent",
+            "type": "main",
+            "index": 0
+          }
+        ]
       ]
     },
     "Classificar Intent": {
       "main": [
-        [{ "node": "Montar Log e Notificação", "type": "main", "index": 0 }]
+        [
+          {
+            "node": "Montar Log e Notificação",
+            "type": "main",
+            "index": 0
+          }
+        ]
       ]
     },
     "Montar Log e Notificação": {
       "main": [
-        [{ "node": "Salvar Log no Vault", "type": "main", "index": 0 }]
+        [
+          {
+            "node": "Salvar Log no Vault",
+            "type": "main",
+            "index": 0
+          }
+        ]
       ]
     },
     "Salvar Log no Vault": {
       "main": [
-        [{ "node": "Responder", "type": "main", "index": 0 }]
+        [
+          {
+            "node": "Responder",
+            "type": "main",
+            "index": 0
+          }
+        ]
       ]
     }
   },

@@ -92,7 +92,15 @@ Entrega plano consolidado
 
 ## Status Atual
 
-Instalado.
+OpenClaw Companion/Tray ativo no Windows.
+
+Gateway local ativo via WSL: distro `OpenClawGateway`, porta `18789` em loopback, health HTTP `200`, node mode habilitado.
+
+O Companion e a Evolution API são frentes diferentes: o Companion é o nó local do computador; a Evolution API continua sendo a ponte WhatsApp/n8n.
+
+Diagnóstico detalhado: [[60_Sistemas/OpenClaw/Diagnostico_OpenClaw_Local_2026-06-27]]
+
+Relatório de ativação: [[60_Sistemas/OpenClaw/Relatorio_Ativacao_OpenClaw_Companion_2026-06-27]]
 
 Não faz parte da Fase 1 do FabioOS.
 

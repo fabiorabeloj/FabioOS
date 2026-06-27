@@ -26,7 +26,7 @@ Receber mensagens do WhatsApp via Evolution API, classificar pelo Pietra, salvar
 ## Gatilho
 
 - **Tipo:** Webhook (HTTP POST da Evolution API)
-- **Endpoint:** `http://localhost:5678/webhook/whatsapp-pietra`
+- **Endpoint:** `http://localhost:5678/webhook/whatsapp-pietra-v2`
 - **Método:** POST
 - **Content-Type:** `application/json`
 
@@ -154,7 +154,7 @@ Retorna JSON de confirmação para a Evolution API.
 
 ```powershell
 # Simular webhook da Evolution API
-curl -X POST http://localhost:5678/webhook/whatsapp-pietra `
+curl -X POST http://localhost:5678/webhook/whatsapp-pietra-v2 `
   -H "Content-Type: application/json" `
   -d '{
     "event": "messages.upsert",

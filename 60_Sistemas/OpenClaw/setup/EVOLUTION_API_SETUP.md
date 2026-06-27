@@ -32,8 +32,8 @@ docker run -d `
   --name evolution-api `
   -p 8080:8080 `
   -e AUTHENTICATION_TYPE=apikey `
-  -e AUTHENTICATION_API_KEY=fabios-evolution-key `
-  -e WEBHOOK_GLOBAL_URL=http://host.docker.internal:5678/webhook/whatsapp-pietra `
+  -e AUTHENTICATION_API_KEY=CHANGE_ME_EVOLUTION_API_KEY `
+  -e WEBHOOK_GLOBAL_URL=http://host.docker.internal:5678/webhook/whatsapp-pietra-v2 `
   -e WEBHOOK_GLOBAL_ENABLED=true `
   -e WEBHOOK_GLOBAL_WEBHOOK_BY_EVENTS=false `
   -v evolution_data:/evolution/Instances `
@@ -41,7 +41,7 @@ docker run -d `
 ```
 
 **Variáveis importantes:**
-- `AUTHENTICATION_API_KEY` — troque `fabios-evolution-key` por uma chave segura de sua escolha
+- `AUTHENTICATION_API_KEY` — troque `CHANGE_ME_EVOLUTION_API_KEY` por uma chave segura local, sem salvar no repositório
 - `WEBHOOK_GLOBAL_URL` — aponta para o workflow n8n que processará as mensagens
 
 ## Verificar se está rodando
@@ -62,13 +62,13 @@ curl http://localhost:8080/manager
 ```powershell
 # 1. Criar instância
 curl -X POST http://localhost:8080/instance/create `
-  -H "apikey: fabios-evolution-key" `
+  -H "apikey: CHANGE_ME_EVOLUTION_API_KEY" `
   -H "Content-Type: application/json" `
   -d '{"instanceName":"escola","qrcode":true}'
 
 # 2. Buscar QR Code (escanear com o WhatsApp)
 curl http://localhost:8080/instance/connect/escola `
-  -H "apikey: fabios-evolution-key"
+  -H "apikey: CHANGE_ME_EVOLUTION_API_KEY"
 
 # Copie o qrcode.base64 e abra em:
 # https://base64.guru/converter/decode/image
@@ -79,7 +79,7 @@ curl http://localhost:8080/instance/connect/escola `
 
 ```powershell
 curl http://localhost:8080/instance/connectionState/escola `
-  -H "apikey: fabios-evolution-key"
+  -H "apikey: CHANGE_ME_EVOLUTION_API_KEY"
 ```
 
 Resposta esperada: `{"state": "open"}` = conectado.
@@ -88,10 +88,10 @@ Resposta esperada: `{"state": "open"}` = conectado.
 
 ```powershell
 curl -X POST http://localhost:8080/webhook/set/escola `
-  -H "apikey: fabios-evolution-key" `
+  -H "apikey: CHANGE_ME_EVOLUTION_API_KEY" `
   -H "Content-Type: application/json" `
   -d '{
-    "url": "http://host.docker.internal:5678/webhook/whatsapp-pietra",
+    "url": "http://host.docker.internal:5678/webhook/whatsapp-pietra-v2",
     "webhook_by_events": false,
     "webhook_base64": false,
     "events": ["MESSAGES_UPSERT"]
@@ -103,7 +103,7 @@ curl -X POST http://localhost:8080/webhook/set/escola `
 ```powershell
 # Enviar mensagem de teste para um número
 curl -X POST http://localhost:8080/message/sendText/escola `
-  -H "apikey: fabios-evolution-key" `
+  -H "apikey: CHANGE_ME_EVOLUTION_API_KEY" `
   -H "Content-Type: application/json" `
   -d '{
     "number": "5511999999999",
