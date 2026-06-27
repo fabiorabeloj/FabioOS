@@ -24,6 +24,12 @@ Não inicie trabalho sem ter lido os arquivos acima.
 
 > **Nota multiagente:** este `CLAUDE.md` é a fonte única de regras. O `AGENTS.md` (lido pelo Codex e outros) é apenas um ponteiro para cá. Vocabulário canônico: **MEGATRON** (interface única), **PietraOS** (domínio institucional), **PrimusOS** (domínio narrativo) — com apelidos para os nomes antigos (Interface, Sistema Pietra, PRIMUS).
 
+## Protocolos operacionais complementares
+
+- **Retomada apos reinicio do PC:** usar `start_fabioos.ps1` e seguir `60_Sistemas/FabioOS/Protocolo_Retomada_Ambiente_FabioOS.md`.
+- **Transicao de contexto entre IAs:** seguir `60_Sistemas/FabioOS/Protocolo_Gestao_Contexto_IA.md` quando a conversa ficar longa, degradada ou perto de limite de uso.
+- **Limpeza segura do PC/projeto:** seguir `60_Sistemas/FabioOS/Protocolo_Limpeza_Segura_FabioOS_PC.md`; nunca deletar direto, usar quarentena e registro.
+
 ---
 
 ## Identidade do projeto
