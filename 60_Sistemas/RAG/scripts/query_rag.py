@@ -18,6 +18,13 @@ import argparse
 import os
 import sys
 
+# Console do Windows usa cp1252; força UTF-8 no stdout/stderr (emojis/acentos).
+for _s in (sys.stdout, sys.stderr):
+    try:
+        _s.reconfigure(encoding="utf-8")
+    except Exception:
+        pass
+
 import chromadb
 from sentence_transformers import SentenceTransformer
 
@@ -25,7 +32,24 @@ SCRIPT_DIR = Path(__file__).resolve().parent
 DB_PATH = SCRIPT_DIR.parent / "fabioos_db"
 COLLECTION = "fabioos"
 MODEL_NAME = "BAAI/bge-m3"
-CLAUDE_MODEL = "claude-sonnet-4-6"   # padrão do passo de geração (Fase 12)
+CLAUDE_MODEL = os.getenv("FABIOOS_RAG_CLAUDE_MODEL", "claude-sonnet-4-6")
+
+OPERATIONAL_TERMS = (
+    "fase atual", "status", "pendência", "pendencias", "pendências",
+    "próxima ação", "proxima acao", "próximo passo", "proximo passo",
+    "roadmap", "o que continua", "onde estamos",
+)
+OPERATIONAL_QUERY_SUFFIX = (
+    " Painel de Pendências FabioOS próximo passo de execução confirmado "
+    "roadmap por trilho fase atual pendências abertas status operacional "
+    "STATUS Estado atual prioridade atual Fase 12 validação parcial"
+)
+CANONICAL_OPERATIONAL_SOURCES = {
+    "10_Mapas/Painel_Pendencias_FabioOS.md": 0.12,
+    "wiki/indices/mapa-fabios.md": 0.07,
+    "60_Sistemas/FabioOS/STATUS.md": 0.10,
+    "60_Sistemas/FabioOS/NEXT_ACTIONS.md": 0.09,
+}
 
 SYSTEM = (
     "Você é o assistente do FabioOS. Responda APENAS com base no contexto "
@@ -34,15 +58,52 @@ SYSTEM = (
 )
 
 
+def is_operational_query(question: str) -> bool:
+    q = question.lower()
+    return any(term in q for term in OPERATIONAL_TERMS)
+
+
 def retrieve(question: str, k: int):
+    operational = is_operational_query(question)
+    retrieval_question = question + OPERATIONAL_QUERY_SUFFIX if operational else question
+    pool_k = max(k, 40) if operational else k
+
     model = SentenceTransformer(MODEL_NAME)
     client = chromadb.PersistentClient(path=str(DB_PATH))
     collection = client.get_collection(COLLECTION)
-    q_emb = model.encode([question], normalize_embeddings=True).tolist()
-    res = collection.query(query_embeddings=q_emb, n_results=k)
+    q_emb = model.encode([retrieval_question], normalize_embeddings=True).tolist()
+    res = collection.query(query_embeddings=q_emb, n_results=pool_k)
     docs = res["documents"][0]
     metas = res["metadatas"][0]
-    return list(zip(docs, metas))
+    distances = res.get("distances", [[]])[0]
+    hits = list(zip(docs, metas, distances or [0.0] * len(docs)))
+
+    if operational:
+        def score(hit):
+            doc, meta, distance = hit
+            source_path = meta.get("source_path", "")
+            header_path = meta.get("header_path", "").lower()
+            text = f"{header_path}\n{doc[:700]}".lower()
+            boost = CANONICAL_OPERATIONAL_SOURCES.get(source_path, 0.0)
+            if "trilho pessoal" in header_path or "prioridade atual" in header_path:
+                boost += 0.16
+            if "fase 12" in text:
+                boost += 0.08
+            if "validacao parcial" in text or "validação parcial" in text:
+                boost += 0.08
+            if source_path == "60_Sistemas/FabioOS/STATUS.md":
+                boost += 0.08
+            if "pendências abertas" in header_path or "pendencias abertas" in header_path:
+                boost += 0.05
+            if "próximas ações" in header_path or "proximas ações" in header_path:
+                boost += 0.04
+            if "documento de referência mestre" in header_path:
+                boost += 0.03
+            return distance - boost
+
+        hits.sort(key=score)
+
+    return [(doc, meta) for doc, meta, _ in hits[:k]]
 
 
 def build_context(hits):
@@ -102,7 +163,7 @@ def main():
         return 0
 
     context = build_context(hits)
-    print("🤖 Resposta (Claude Sonnet 4.6):\n")
+    print(f"🤖 Resposta ({CLAUDE_MODEL}):\n")
     print(answer_with_claude(question, context))
     print("\n📚 Fontes:")
     for _, meta in hits:

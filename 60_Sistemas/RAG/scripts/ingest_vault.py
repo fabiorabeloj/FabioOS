@@ -15,6 +15,13 @@ from pathlib import Path
 import re
 import sys
 
+# Console do Windows usa cp1252; força UTF-8 no stdout/stderr (emojis/acentos).
+for _s in (sys.stdout, sys.stderr):
+    try:
+        _s.reconfigure(encoding="utf-8")
+    except Exception:
+        pass
+
 import chromadb
 import frontmatter
 from sentence_transformers import SentenceTransformer
@@ -27,12 +34,13 @@ COLLECTION = "fabioos"
 MODEL_NAME = "BAAI/bge-m3"                   # multilíngue, forte em PT-BR, local
 
 # 1a leva de pastas (alto sinal, estável)
-INCLUDE_DIRS = ["wiki", "60_Sistemas", "30_Conhecimento", "40_Decisoes", "10_Mapas"]
+INCLUDE_DIRS = ["00_Arquitetura", "wiki", "60_Sistemas", "30_Conhecimento", "40_Decisoes", "10_Mapas"]
 
 # Exclusões de segurança/ruído (defesa em profundidade)
 EXCLUDE_SUBSTRINGS = ["_inbox", ".obsidian", ".claude", "90_Arquivo",
                       "00_Inbox", "node_modules", ".git", "fabioos_db",
-                      "/logs/", "agentes/logs", "agentes_log"]  # logs runtime
+                      "/logs/", "agentes/logs", "agentes_log",
+                      ".venv", "site-packages"]  # logs runtime + venv/libs
 EXCLUDE_FILENAME_RE = re.compile(r"PIETRA.*LOG", re.IGNORECASE)  # logs Pietra
 
 MAX_CHARS = 1500      # tamanho-alvo do chunk
@@ -119,6 +127,7 @@ def main():
     model = SentenceTransformer(MODEL_NAME)
 
     client = chromadb.PersistentClient(path=str(DB_PATH))
+    print(f"🧹 Reindexação limpa: a coleção anterior '{COLLECTION}' será apagada se existir.")
     try:
         client.delete_collection(COLLECTION)  # reindex limpo (v1)
     except Exception:
