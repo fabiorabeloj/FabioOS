@@ -12,7 +12,9 @@ atualizado_em: 2026-06-27
 
 ## Estado atual
 
-Claude esta indisponivel ate segunda-feira. Codex assumiu uma frente segura de continuidade, sem commit e sem push.
+Claude retornou e **assumiu a liderança das frentes** (decisão do Fabio por custo operacional do Codex). Os 33 commits locais (Fases 7→13, coordenação, RAG, Grafo, OpenClaw, governança) foram **sincronizados via push** no branch `claude/megatron-rag-fase12`, atualizando o **PR #1** (OPEN). `origin/main` permanece intocado.
+
+Codex passa a operar em **modo auxiliar/econômico** conforme `Protocolo_Lideranca_e_Economia_Multiagente.md` (frentes seguras, sem push, sem destrutivo; subagentes Codex suspensos até reteste).
 
 ## Fase atual
 
