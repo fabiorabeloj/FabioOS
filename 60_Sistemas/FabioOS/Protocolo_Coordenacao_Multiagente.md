@@ -124,10 +124,33 @@ Se o agente perceber que outro agente alterou arquivo durante a execução:
 4. continuar apenas se a mudança for compatível;
 5. se houver dúvida, pedir decisão humana.
 
+## 7.1 Regra de lock operacional
+
+Antes de operar artefatos compartilhados ou destrutivos, o agente deve registrar a frente em `60_Sistemas/FabioOS/Registro_Frentes_Ativas.md`.
+
+Artefatos que exigem lock:
+
+- banco RAG (`60_Sistemas/RAG/fabioos_db/`);
+- reindexação vetorial;
+- workflows n8n;
+- mapa/painel/status/changelog;
+- arquivos de governança;
+- `.gitignore`;
+- qualquer arquivo declarado por outro agente.
+
+Regra:
+
+```text
+Se pode apagar, recriar, reindexar, mover ou commitar trabalho de outro agente, exige lock.
+```
+
+Nenhum agente deve encerrar processo de outro agente sem confirmação humana explícita.
+
 ## 8. Checklist operacional
 
 - [ ] Li o contexto obrigatório do FabioOS.
 - [ ] Rodei `git status --short`.
+- [ ] Verifiquei `60_Sistemas/FabioOS/Registro_Frentes_Ativas.md` antes de mexer em artefatos compartilhados.
 - [ ] Sei quais arquivos pertencem à minha frente.
 - [ ] Evitei arquivos que outro agente está preparando para commit.
 - [ ] Não toquei em segredos nem credenciais.
