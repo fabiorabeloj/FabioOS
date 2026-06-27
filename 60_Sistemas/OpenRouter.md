@@ -58,3 +58,12 @@ OpenRouter é um agregador de APIs de LLM que permite usar múltiplos modelos (C
 - [ ] Documentar estratégia de custo
 - [ ] Testar latência por modelo
 - [ ] Integrar com n8n workflows
+
+## Plano de custos
+
+Planos ativos:
+
+- [[60_Sistemas/OpenRouter/Plano_Custos_OpenRouter_FabioOS]]
+- [[00_Arquitetura/Plano_Orcamento_FabioOS_MEGATRON_2026]]
+
+Regra: OpenRouter deve ser camada de API controlada, nao substituto de RAG/Grafo local nem destino de vault bruto.
