@@ -148,6 +148,40 @@ So entram no RAG/Grafo:
 4. Quando houver dados de terceiros, preferir resumo a copia integral.
 5. Anexos exigem aprovacao por tipo e por pasta.
 
+### Conversao de um e-mail especifico
+
+Quando Fabio indicar uma thread ou mensagem especifica, converter o e-mail em conhecimento seguindo:
+
+1. leitura integral da mensagem autorizada e do contexto da thread;
+2. leitura de anexos apenas quando explicitamente permitido;
+3. extracao de objetivo, resumo executivo, pessoas, instituicoes, datas, prazos, eventos, decisoes, solicitacoes, pendencias, links, arquivos citados, riscos e prioridades;
+4. geracao de tarefas com descricao, prioridade, prazo, dependencias e contexto;
+5. escolha do destino no vault, preferindo `sources/email/_restrito/` para bruto sensivel e `wiki/memoria/` para conhecimento consolidado;
+6. criacao de Markdown com frontmatter, links internos, tags e referencias cruzadas;
+7. verificacao de duplicacao antes de criar novas notas;
+8. classificacao como conhecimento permanente, documentacao, decisao, projeto, procedimento, reuniao, tarefa, referencia futura ou material temporario.
+
+Saida obrigatoria:
+
+- nome do arquivo;
+- pasta sugerida;
+- conteudo Markdown;
+- links internos;
+- tags;
+- relacoes com outras notas;
+- tarefas e proximos passos.
+
+Por padrao, e-mails convertidos ficam `nao-indexar` ate revisao humana.
+
+## Roteamento de ferramentas
+
+| Ferramenta | Uso recomendado | Limite |
+|---|---|---|
+| Gmail connector | Buscar e ler e-mail/thread autorizada | Nao enviar, arquivar, apagar ou rotular sem ordem explicita |
+| Google Drive connector | Buscar e ler Docs, Sheets, Slides e anexos no Drive | Nao mover, compartilhar ou apagar sem ordem explicita |
+| OpenClaw | Visualizar frentes, riscos, locks e progresso | Nao e autorizacao para agir em contas externas |
+| Gemini | Motor opcional para lotes Google-native ou anexos multimodais | Usar so com custo, privacidade e escopo aprovados |
+
 ## Regras especificas para ChatGPT
 
 1. Preferir exportacao oficial do ChatGPT.
