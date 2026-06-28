@@ -138,6 +138,6 @@ Se a resposta for sim, usar n8n como orquestrador e Python como worker quando fi
 
 ## Proxima acao
 
-- Criar uma matriz de automacoes candidatas e classificar cada uma como Python, n8n ou hibrida.
+- Matriz criada em [[60_Sistemas/FabioOS/Matriz_Automatizacoes_Python_n8n_2026-06-28]].
 - Priorizar scripts Python locais para tarefas de vault, RAG, grafo, auditoria e relatorios.
 - Manter n8n para Gmail, Drive, WhatsApp, webhooks e fluxos com aprovacao.
