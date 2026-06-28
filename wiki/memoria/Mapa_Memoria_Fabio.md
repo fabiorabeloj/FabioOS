@@ -34,7 +34,11 @@ Organizar a memoria pessoal e profissional absorvida pelo FabioOS sem misturar f
 
 ## Primeiro ciclo sugerido
 
-1. Ingerir uma amostra pequena de e-mails relacionados a FabioOS/MEGATRON.
-2. Criar resumos em `sources/email/pessoal/` com `status: nao-indexar`.
-3. Consolidar decisoes relevantes em `wiki/memoria/decisoes/`.
-4. So depois liberar para RAG/Grafo.
+1. [x] Ingerir uma amostra pequena de e-mails relacionados a FabioOS/MEGATRON.
+2. [x] Criar fonte restrita em `sources/email/_restrito/` com `status: nao-indexar`.
+3. [x] Consolidar decisoes relevantes em `wiki/memoria/decisoes/`.
+4. [ ] So depois liberar para RAG/Grafo.
+
+## Decisoes registradas
+
+- [[wiki/memoria/decisoes/2026-06-27_Piloto_Email_Protocolos_FabioOS]]

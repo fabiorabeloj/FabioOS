@@ -19,8 +19,10 @@ atualizado_em: 2026-06-27
 - [x] Revisar card/nota "MEGATRON v0 detectado nao versionado" contra o estado real do Git.
 - [ ] Preparar handoff para Claude retornar em 2026-06-29 13:00.
 - [ ] Rodar scan de segredos antes de qualquer commit.
-- [ ] Fazer inventario nao destrutivo da memoria pessoal/profissional antes de qualquer ingestao em massa.
+- [x] Fazer inventario nao destrutivo da memoria pessoal/profissional antes de qualquer ingestao em massa.
 - [x] Registrar decisao de roteamento para e-mails, Google, Gemini e OpenClaw.
+- [x] Executar piloto controlado de uma thread Gmail sem anexos.
+- [ ] Decidir se a memoria consolidada do piloto pode entrar no RAG/Grafo.
 - [ ] Solicitar exportacao do ChatGPT se Fabio quiser absorver conversas antigas.
 - [ ] Verificar se existe conector/autorizacao do Gmail de trabalho.
 
