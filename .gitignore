@@ -26,6 +26,12 @@ credentials/
 tokens/
 *.token
 
+# Fontes pessoais/restritas - manter locais, fora do Git
+sources/email/_restrito/*
+!sources/email/_restrito/.gitkeep
+sources/chatgpt/_restrito/*
+!sources/chatgpt/_restrito/.gitkeep
+
 # Python
 __pycache__/
 *.pyc

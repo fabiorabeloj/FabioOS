@@ -25,7 +25,14 @@ Gateway OpenClaw estabilizado com:
 - auth OpenRouter cadastrada nos perfis `main` e `fabioos-ponte`;
 - agente `fabioos-ponte` validado com resposta real via OpenRouter/free.
 
-O gateway foi revertido para `loopback` apos o usuario adiar o pareamento por QR Code. A exposicao LAN nao fica ativa por padrao.
+O gateway havia sido revertido para `loopback` apos o usuario adiar o pareamento por QR Code. Em 2026-06-27, durante o interinato Codex, o usuario pediu novo QR Code e a configuracao foi ajustada para pareamento:
+
+- `gateway.bind = lan`;
+- plugin `device-pair` habilitado;
+- `publicUrl` configurado para `http://192.168.0.20:18789`;
+- QR Code gerado em `C:\Users\user\AppData\Local\Temp\openclaw_pairing_qr.png`.
+
+Limite atual: o Windows negou `portproxy` e regra de firewall sem permissao de administrador. Assim, o QR foi gerado, mas o celular pode nao conseguir conectar pela LAN ate liberar a porta `18789` no Windows.
 
 ## Papel
 
