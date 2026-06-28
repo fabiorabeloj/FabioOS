@@ -23,6 +23,13 @@ Foi verificado apenas o Gmail pessoal conectado ao Codex:
 - acoes de escrita: nenhuma;
 - conteudo salvo do Gmail: nenhum.
 
+Atualizacao no interinato:
+
+- conector Gmail confirmado por leitura de perfil da conta conectada;
+- nenhuma mensagem foi listada ou aberta nesta checagem;
+- nenhum anexo foi lido;
+- nenhuma acao de escrita foi executada.
+
 ## Resultado inicial
 
 | Fonte/filtro | Resultado | Observacao |

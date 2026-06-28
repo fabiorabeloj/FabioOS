@@ -20,6 +20,7 @@ atualizado_em: 2026-06-27
 - [ ] Preparar handoff para Claude retornar em 2026-06-29 13:00.
 - [ ] Rodar scan de segredos antes de qualquer commit.
 - [ ] Fazer inventario nao destrutivo da memoria pessoal/profissional antes de qualquer ingestao em massa.
+- [x] Registrar decisao de roteamento para e-mails, Google, Gemini e OpenClaw.
 - [ ] Solicitar exportacao do ChatGPT se Fabio quiser absorver conversas antigas.
 - [ ] Verificar se existe conector/autorizacao do Gmail de trabalho.
 
