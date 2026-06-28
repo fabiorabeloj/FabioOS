@@ -25,6 +25,8 @@ Construir liberdade através de sistemas, conhecimento e automação.
 - [[OpenRouter]]
 - [[OpenClaw]]
 - [[Claude_Code]]
+- [[Hermes_Agent]]
+- [[Capacidades_Locais_Cursor_Hermes_2026-06-28]]
     
 
 ---
@@ -37,6 +39,7 @@ Construir liberdade através de sistemas, conhecimento e automação.
 - [[Automacao]]
 - [[RPG]]
 - [[Tecnologia]]
+- [[Painel_Memoria_FabioOS]]
     
 
 ---
@@ -46,6 +49,7 @@ Construir liberdade através de sistemas, conhecimento e automação.
 - [[Decisoes]]
 - [[Changelog]]
 - [[Aprendizado]]
+- [[Memoria_Email_FabioOS]]
     
 
 ---
@@ -61,5 +65,3 @@ Construir liberdade através de sistemas, conhecimento e automação.
 4. Integrar n8n.
     
 5. Integrar Obsidian.
-
-
