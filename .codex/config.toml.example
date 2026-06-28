@@ -21,3 +21,11 @@ url = "https://127.0.0.1:27124/mcp/"
 
 [mcp_servers.obsidian.http_headers]
 Authorization = "Bearer <COLOQUE_SEU_TOKEN_OBSIDIAN_AQUI>"
+
+[mcp_servers.fabioos]
+command = 'C:\Users\user\Desktop\FabioOs\FabioOs\60_Sistemas\RAG\.venv\Scripts\python.exe'
+args = ['C:\Users\user\Desktop\FabioOs\FabioOs\60_Sistemas\MCP_FabioOS\server.py']
+startup_timeout_sec = 120
+
+[mcp_servers.fabioos.env]
+PYTHONIOENCODING = "utf-8"
