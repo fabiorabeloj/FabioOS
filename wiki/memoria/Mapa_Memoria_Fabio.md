@@ -42,3 +42,8 @@ Organizar a memoria pessoal e profissional absorvida pelo FabioOS sem misturar f
 ## Decisoes registradas
 
 - [[wiki/memoria/decisoes/2026-06-27_Piloto_Email_Protocolos_FabioOS]]
+- [[wiki/memoria/decisoes/2026-06-27_Email_Anthropic_Privacidade_Claude]]
+
+## Projetos/tarefas registrados
+
+- [[wiki/memoria/projetos/2026-06-27_GitHub_Actions_Auto_Changelog_Falhas]]

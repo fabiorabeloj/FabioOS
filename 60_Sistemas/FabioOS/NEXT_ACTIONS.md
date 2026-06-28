@@ -22,7 +22,10 @@ atualizado_em: 2026-06-27
 - [x] Fazer inventario nao destrutivo da memoria pessoal/profissional antes de qualquer ingestao em massa.
 - [x] Registrar decisao de roteamento para e-mails, Google, Gemini e OpenClaw.
 - [x] Executar piloto controlado de uma thread Gmail sem anexos.
+- [x] Processar lote pequeno de 3 threads Gmail relacionadas a FabioOS/IA.
 - [ ] Decidir se a memoria consolidada do piloto pode entrar no RAG/Grafo.
+- [ ] Investigar falhas do GitHub Actions `Auto Changelog`.
+- [ ] Criar matriz de privacidade por provedor IA.
 - [ ] Solicitar exportacao do ChatGPT se Fabio quiser absorver conversas antigas.
 - [ ] Verificar se existe conector/autorizacao do Gmail de trabalho.
 
