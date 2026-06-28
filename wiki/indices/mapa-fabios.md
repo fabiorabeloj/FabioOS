@@ -24,6 +24,8 @@ atualizado_em: 2026-06-26
 
 **[[wiki/memoria/Mapa_Memoria_Fabio]]** — ponto de entrada para a memória pessoal/profissional do FabioOS: ChatGPT, Gmail pessoal, Gmail profissional e fontes sensíveis por camadas.
 
+**[[10_Mapas/Painel_Memoria_FabioOS]]** — painel navegável para conhecimento absorvido de e-mails, conversas e fontes pessoais/profissionais.
+
 **[[60_Sistemas/FabioOS/Protocolo_Ingestao_Memoria_Pessoal_Profissional]]** — protocolo de consentimento, privacidade e triagem antes de absorver ChatGPT/e-mails no vault.
 
 **Fase atual:** 12 — RAG (ingestão concluída, validação parcial executada, ajuste de ranking pendente)

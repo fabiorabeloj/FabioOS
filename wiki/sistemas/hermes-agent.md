@@ -2,11 +2,11 @@
 tipo: wiki
 area: sistemas
 projeto: FabioOS
-status: pendente
+status: instalado-local
 camada: camada-1
 tags: [hermes, agente, autônomo, ia, opcional, camada-1]
 criado_em: 2026-06-26
-atualizado_em: 2026-06-26
+atualizado_em: 2026-06-28
 ---
 
 # Hermes Agent
@@ -26,7 +26,13 @@ Funções possíveis no FabioOS:
 - Despachar subagentes para tarefas paralelas
 - Monitorar condições e acionar ações automaticamente
 
-[FATO] Status atual: **não implantado**. Apenas referenciado como camada opcional no Plano Mestre.
+[FATO] Status atual: **instalado localmente, nao integrado ao FabioOS**. O executavel foi localizado no PC, mas ainda nao ha fluxo aprovado de uso, CLI/API confirmada ou permissao para operacao autonoma.
+
+## Deteccao local - 2026-06-28
+
+- Executavel: `C:\Users\user\AppData\Local\hermes\hermes-agent\apps\desktop\release\win-unpacked\Hermes.exe`
+- Instalador: `C:\Users\user\Desktop\Hermes-Setup.exe`
+- Registro operacional: [[Capacidades_Locais_Cursor_Hermes_2026-06-28]]
 
 ## O que essa ferramenta não deve fazer
 
@@ -53,7 +59,7 @@ Funções possíveis no FabioOS:
 
 ## Uso atual
 
-- [ ] Nenhum — **opcional, aguardando critério de entrada** (Fase 17)
+- [ ] Instalado localmente, mas **sem integracao ativa** e sem permissao para agir sozinho (Fase 17)
 
 ## Uso futuro
 

@@ -1,0 +1,1 @@
+- [[Painel_Memoria_FabioOS]] - memoria absorvida de e-mails, conversas e fontes pessoais/profissionais.
