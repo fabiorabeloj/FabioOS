@@ -44,6 +44,7 @@ SPECS_DIR = ROOT / "60_Sistemas" / "FabioOS" / "specs"
 MOBILE_INBOX_DIR = ROOT / "00_Inbox" / "mobile"
 EMAIL_SOURCES_DIR = ROOT / "sources" / "email"
 DRIVE_SOURCES_DIR = ROOT / "sources" / "drive"
+IA_TOOLS_INVENTORY = ROOT / "60_Sistemas" / "FabioOS" / "Inventario_Ferramentas_IA_Local_2026-06-28.md"
 MCP_CODEX_CONFIG = Path.home() / ".codex" / "config.toml"
 OUTPUT = ROOT / "10_Mapas" / "Dashboard_Operacional_FabioOS.md"
 
@@ -208,6 +209,12 @@ def connector_catalog_status() -> str:
     return f"Gmail: {email_count} nota(s) locais; Drive: {drive_count} nota(s) locais"
 
 
+def ia_tools_status() -> str:
+    if not IA_TOOLS_INVENTORY.exists():
+        return "inventario ainda nao gerado"
+    return f"inventario gerado: {IA_TOOLS_INVENTORY.name}"
+
+
 def n8n_workflows() -> list[str]:
     base = ROOT / "60_Sistemas" / "n8n" / "Workflows"
     if not base.exists():
@@ -276,6 +283,7 @@ tags: [fabios, dashboard, python, automacao, status]
 | Specs FabioOS | {specs_status()} |
 | Mobile Gateway | {mobile_gateway_status()} |
 | Catalogos Google | {connector_catalog_status()} |
+| Ferramentas IA locais | {ia_tools_status()} |
 | Workflows n8n versionados | {len(workflows)} JSON |
 
 ## Workflows n8n versionados

@@ -29,6 +29,7 @@ Estado operacional:
 - Fase 15 MCP FabioOS: frente `MCP_FABIOOS` pertence ao Claude e segue protegida;
 - Mobile Gateway v0: servidor local Python implementado e rodando na porta `8787`; celular pode acessar pela LAN em `http://192.168.0.20:8787` se firewall permitir;
 - Conectores Google v0: Gmail e Google Drive catalogados em modo leitura; detalhes ficaram em `sources/*/_restrito/` fora do Git;
+- Inventario Ferramentas IA v0: OpenClaw/Cursor/Hermes detectados como instalacao/diretorio, mas CLIs nao estao no PATH; n8n nao esta ouvindo em `5678`; OpenRouter nao tem env var nesta sessao;
 - MEGATRON v0/v1: ha commits recentes de interface cognitiva e ignorancia explicita; revisar antes de promocao formal;
 - OpenClaw: gateway acessivel, Workboard `fabioos` criado e agente `fabioos-ponte` testado com sucesso; ainda precisa otimizar contexto para reduzir custo.
 
