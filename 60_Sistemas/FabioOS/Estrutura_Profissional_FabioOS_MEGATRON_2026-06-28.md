@@ -61,6 +61,10 @@ O metodo geral de extracao vive em:
 
 [[30_Conhecimento/Tecnologia/Arquiteturas_de_Mercado_Radar_Tecnologico]]
 
+O gate de dominios, dados e permissoes vive em:
+
+[[60_Sistemas/FabioOS/Matriz_Dominios_Dados_Permissoes_2026-06-28]]
+
 ## Licao real dos anuncios
 
 Os anuncios ensinam menos sobre "qual app usar" e mais sobre a direcao estrutural do mercado:
@@ -197,3 +201,5 @@ Criar uma matriz de dominios e dados para separar:
 - dados profissionais;
 - dados sensiveis;
 - dados publicaveis.
+
+Status: v0 implementada em [[60_Sistemas/FabioOS/Matriz_Dominios_Dados_Permissoes_2026-06-28]].

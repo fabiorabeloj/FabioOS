@@ -4,7 +4,7 @@ area: 10_Mapas
 projeto: FabioOS
 status: gerado
 gerado_por: dashboard_fabioos.py
-atualizado_em: 2026-06-28 22:15:00
+atualizado_em: 2026-06-28 23:21:21
 tags: [fabios, dashboard, python, automacao, status]
 ---
 
@@ -15,15 +15,16 @@ tags: [fabios, dashboard, python, automacao, status]
 
 ## Estado Git
 
-- Branch/status: `## main...origin/main [ahead 57]`
-- HEAD local: `86dc93b`
-- Arquivos modificados/untracked: `15`
-- Ultimo changelog: `2026-06-28_estrutura-profissional-fabios-megatron.md`
+- Branch/status: `## main...origin/main [ahead 58]`
+- HEAD local: `10e10d2`
+- Arquivos modificados/untracked: `10`
+- Ultimo changelog: `2026-06-28_dominios-permissoes-v0.md`
 
 ## Frentes ativas
 
 - MCP_FABIOOS (Claude): em andamento
 - INTERINATO_CODEX (Codex): em andamento
+- DOMINIOS_PERMISSOES_V0 (Codex): em andamento
 
 ## Camadas cognitivas
 
@@ -33,6 +34,7 @@ tags: [fabios, dashboard, python, automacao, status]
 | Grafo local | 840 nos, 2680 arestas, 0 arestas orfas, 0 nos isolados, 100.0% conectados |
 | MCP FabioOS | registrado no config global do Codex |
 | Radar Tecnologico | 1 analise(s), ultima: 2026-06-28_prompt-arquiteturas-de-mercado-fabioos.md |
+| Classificacao de dominios/dados | 1 classificacao(oes), ultima: 2026-06-28_radar-arquiteturas-de-mercado-fabioos.md |
 | Workflows n8n versionados | 2 JSON |
 
 ## Workflows n8n versionados
@@ -59,7 +61,7 @@ tags: [fabios, dashboard, python, automacao, status]
 ### Amostra do NEXT_ACTIONS
 
 - Preparar handoff para Claude retornar em 2026-06-29 13:00.
-- Criar matriz de dominios/dados/permissoes com base na camada profissional do FabioOS.
+- Rodar `classificar_dado_fabioos.py` antes de novas ingestoes sensiveis, RAG/Grafo ou envio a modelo externo.
 - Usar o catalogo de caminhos demonstrados para avaliar novos anuncios, ferramentas, prints e prompts antes de instalar ou assinar.
 - Aplicar o Radar Tecnologico em pelo menos 3 materiais reais antes de promover nova ferramenta ao roadmap. (`radar_tecnologico.py` implementado; falta rodar 3 casos reais)
 - Avaliar subfases candidatas 20.5, 21.5, 22.5, 23.5, 24, 25 e 26 antes de inflar o roadmap oficial.
