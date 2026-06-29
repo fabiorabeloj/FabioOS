@@ -53,6 +53,22 @@ Artefatos compartilhados incluem:
 
 | INVENTARIO_FERRAMENTAS_IA_V0 | Codex | `60_Sistemas/FabioOS/scripts/inventario_ferramentas_ia.py`, `60_Sistemas/FabioOS/Inventario_Ferramentas_IA_Local_2026-06-28.md`, dashboard e changelog | concluida | 2026-06-28 | Inventario gerado sem revelar tokens; OpenClaw/Cursor/Hermes existem mas CLIs nao estao no PATH; n8n nao esta ouvindo em 5678; OpenRouter env ausente |
 
+| MATRIZ_APTIDAO_IAS | Codex | `40_Repertorio/IA/Modelos_e_IAs/Matriz_de_Aptidao_das_IAs_FabioOS.md`, `STATUS.md`, `NEXT_ACTIONS.md`, mapa, roteamento, specs, skills, agentes e changelog | concluida | 2026-06-29 | Matriz criada e conectada ao prompt mestre, roteamento, specs, skills, agentes, STATUS/NEXT_ACTIONS e mapa; sem instalar, sem chamar API, sem mexer em tokens, RAG DB, MCP_FABIOOS, OpenClaw runtime, n8n externo ou push |
+
+| LLM_WIKI_OPERACIONAL | Codex | `50_Registros/Auditoria/Reentrada_Codex_FabioOS.md`, `30_Projetos/FabioOS/LLM_Wiki_FabioOS.md`, `60_Sistemas/Wiki/`, `10_Dashboard/`, `index.md`, `log.md`, `STATUS.md`, `NEXT_ACTIONS.md`, changelog | concluida | 2026-06-29 | LLM Wiki operacional formalizada; sem migracao em massa, sem automacao externa, sem RAG reindex, sem MCP runtime, sem OpenClaw/n8n externo e sem push |
+
+| PILOTO_LLM_WIKI_GOVERNANCA | Codex | `sources/fabios/2026-06-29_governanca-operacional-pontos-cegos.md`, `wiki/conceitos/governanca-operacional-fabios.md`, `30_Projetos/FabioOS/LLM_Wiki_FabioOS.md`, `index.md`, `log.md`, `CHANGELOG_FabioOS.md`, `NEXT_ACTIONS.md` | concluida | 2026-06-29 | Piloto pequeno executado; uma fonte preservada, uma pagina existente atualizada, uma pagina wiki criada; sem API, sem RAG reindex, sem MCP runtime, sem push |
+
+| ROADMAP_FASES_V2 | Codex | `60_Sistemas/FabioOS/Roadmap_Fases_FabioOS_v2_2026-06-29.md`, `Plano_Mestre`, `Painel_Pendencias`, `STATUS`, `NEXT_ACTIONS`, mapa e changelog | concluida | 2026-06-29 | Fases revisadas; Roadmap v2 criado com Governanca Operacional como proxima frente; sem runtime, sem API, sem push |
+
+| FASE17_GOVERNANCA_OPERACIONAL | Codex | `50_Registros/Decisoes/Constituicao_Operacional_FabioOS.md`, `60_Sistemas/Governanca/`, `60_Sistemas/Agentes/`, `60_Sistemas/Protocolos/`, `60_Sistemas/Seguranca/`, `60_Sistemas/Memoria/`, `60_Sistemas/Conhecimento/`, `60_Sistemas/Padroes/`, `60_Sistemas/Observabilidade/`, `10_Dashboard/Governanca_FabioOS.md` | concluida | 2026-06-29 | Camada documental de governanca operacional criada; sem runtime, sem API, sem alterar credenciais, sem push |
+
+| SPEC_MEGATRON_V1 | Codex | `60_Sistemas/FabioOS/specs/2026-06-29_megatron-v1-ignorancia-explicita.md`, `NEXT_ACTIONS`, changelog | concluida | 2026-06-29 | SPEC documental para MEGATRON v1 criada; sem implementar codigo, sem runtime, sem API, sem push |
+
+| NORMALIZACAO_OBSIDIAN_V2 | Codex | `60_Sistemas/FabioOS/Mapa_Canonico_Pastas_Obsidian_v2_2026-06-29.md`, `50_Registros/Auditoria/Auditoria_Pastas_Obsidian_2026-06-29.md`, `60_Sistemas/FabioOS/Plano_Normalizacao_Pastas_Obsidian_2026-06-29.md`, `10_Dashboard/Estrutura_Obsidian_FabioOS.md`, `CLAUDE.md`, mapa, status e changelog | concluida | 2026-06-29 | Taxonomia canonica v2 criada; pastas legadas marcadas; nenhuma migracao fisica em massa; sem apagar, sem mover, sem push |
+
+| ESTRUTURA_FISICA_LLM_WIKI | Codex | `05_Raw_Sources/`, `20_Areas/`, `40_Wiki/`, `70_Skills/`, `80_Specs/`, dashboards, ADR, auditoria, estrutura LLM Wiki, STATUS/NEXT_ACTIONS, mapa e changelog | concluida | 2026-06-29 | Estrutura fisica visivel no Obsidian criada com READMEs e documentos; sem mover `sources/`/`wiki/`, sem apagar, sem RAG/Grafo, commit local autorizado sem push |
+
 ## Frentes observadas
 
 | Frente | Dono | Observacao |
@@ -86,3 +102,11 @@ Ao concluir, alterar `Estado` para `concluida`, registrar resultado e apontar o 
 - 2026-06-28 - `MOBILE_GATEWAY_V0` concluida. Gateway HTTP local criado para capturas via celular em `00_Inbox/mobile/`; servidor testado por `GET /health` e `POST /api/capture` com `dry_run`.
 - 2026-06-28 - `GOOGLE_CATALOGOS_V0` concluida. Gmail e Google Drive catalogados por conectores em modo leitura; detalhes locais/restritos ficaram fora do Git.
 - 2026-06-28 - `INVENTARIO_FERRAMENTAS_IA_V0` concluida. Script local inventariou comandos, env vars sem valores, diretorios, processos, portas e papeis recomendados para Cursor, Hermes, OpenClaw, n8n, OpenRouter, RAG e Grafo.
+- 2026-06-29 - `MATRIZ_APTIDAO_IAS` concluida. Matriz formal criada para definir vocacao, limites, riscos, testes e permanencia das IAs/modelos/ferramentas do FabioOS.
+- 2026-06-29 - `LLM_WIKI_OPERACIONAL` concluida. Reentrada, ADR, documento central, schema, protocolos de ingest/query/lint, index/log e dashboards RAG/MCP + LLM Wiki criados; piloto ficou pendente de autorizacao humana.
+- 2026-06-29 - `PILOTO_LLM_WIKI_GOVERNANCA` concluida. Fonte de governanca preservada, pagina wiki criada, pagina LLM Wiki existente atualizada e index/log/changelog atualizados.
+- 2026-06-29 - `ROADMAP_FASES_V2` concluida. As fases 0-23 foram revisadas, status real corrigido e roadmap v2 proposto ate a fase 29.
+- 2026-06-29 - `FASE17_GOVERNANCA_OPERACIONAL` concluida. Constituicao, permissoes, contratos, concluido, anti-caos, seguranca, memorias, assimilacao, metadados, observabilidade, ADR e dashboard criados.
+- 2026-06-29 - `SPEC_MEGATRON_V1` concluida. SPEC de ignorancia explicita, resposta com fontes e limites read-only/propose-only criada para a proxima fase tecnica.
+- 2026-06-29 - `NORMALIZACAO_OBSIDIAN_V2` concluida. Auditoria, mapa canonico, plano de normalizacao e dashboard de estrutura criados; `CLAUDE.md`, Plano Mestre, Protocolo Operacional, STATUS/NEXT_ACTIONS, indices e changelog conectados; sem mover/apagar arquivos.
+- 2026-06-29 - `ESTRUTURA_FISICA_LLM_WIKI` concluida. Pastas fisicas `05_Raw_Sources`, `20_Areas`, `40_Wiki`, `70_Skills` e `80_Specs` criadas com READMEs; documentos de estrutura, proposta, mapa e ADR criados; `sources` e `wiki` preservados como compatibilidade.

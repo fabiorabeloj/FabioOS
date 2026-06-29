@@ -71,11 +71,20 @@ Se já existe capacidade instalada para a tarefa, use-a ou registre por que ela
 não serve neste caso.
 ```
 
+Quando a tarefa envolver escolha entre modelos, IAs, agentes ou ferramentas externas, consultar tambem:
+
+`40_Repertorio/IA/Modelos_e_IAs/Matriz_de_Aptidao_das_IAs_FabioOS.md`
+
+Quando a tarefa envolver criacao, consulta ou manutencao de conhecimento, consultar tambem:
+
+`index.md`, `log.md` e `60_Sistemas/Wiki/Schema_Wiki_FabioOS.md`
+
 ## Relações
 
 - [[60_Sistemas/MCP/Inventario_MCP]] — MCPs necessários para algumas skills (ex: Playwright para Taste)
 - [[60_Sistemas/Claude_Code/Workstation_FabioOS]] — visão geral da workstation
 - [[60_Sistemas/FabioOS/Protocolo_Roteamento_Capacidades_IA]] — regra de uso efetivo das capacidades instaladas
+- [[40_Repertorio/IA/Modelos_e_IAs/Matriz_de_Aptidao_das_IAs_FabioOS]] — vocacao, limites e criterios de teste das IAs/ferramentas
 
 ## Próximas ações
 - [ ] Testar `/taste` em um projeto com Playwright MCP ativo

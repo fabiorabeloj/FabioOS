@@ -32,6 +32,24 @@ atualizado_em: 2026-06-26
 
 **[[60_Sistemas/FabioOS/Protocolo_Roteamento_Capacidades_IA]]** — regra para usar skills, comandos, agentes, subagentes, scripts, MCPs, RAG e grafo antes de improvisar execução manual.
 
+**[[40_Repertorio/IA/Modelos_e_IAs/Matriz_de_Aptidao_das_IAs_FabioOS]]** — matriz de vocacao, limites, riscos, testes e permanencia das IAs, modelos, agentes e ferramentas do FabioOS.
+**[[30_Projetos/FabioOS/LLM_Wiki_FabioOS]]** — decisao operacional da LLM Wiki como memoria compilada do FabioOS.
+**[[10_Dashboard/RAG_MCP_Control_Plane]]** — painel de governanca de RAGs e MCPs.
+**[[10_Dashboard/LLM_Wiki_FabioOS]]** — dashboard da frente LLM Wiki.
+**[[wiki/conceitos/governanca-operacional-fabios]]** — conceito operacional de governanca, permissoes, fechamento de ciclo e anti-caos.
+**[[60_Sistemas/FabioOS/Roadmap_Fases_FabioOS_v2_2026-06-29]]** — reformulacao das fases do FabioOS a partir do estado real.
+**[[60_Sistemas/FabioOS/Mapa_Canonico_Pastas_Obsidian_v2_2026-06-29]]** — taxonomia oficial de pastas do Obsidian e destinos canonicos v2.
+**[[60_Sistemas/FabioOS/Plano_Normalizacao_Pastas_Obsidian_2026-06-29]]** — plano seguro para migrar pastas legadas sem quebrar links.
+**[[50_Registros/Auditoria/Auditoria_Pastas_Obsidian_2026-06-29]]** — auditoria das duplicacoes de nomes, numeros e funcoes no vault.
+**[[10_Dashboard/Estrutura_Obsidian_FabioOS]]** — painel rapido de destino para novos arquivos no vault.
+**[[60_Sistemas/Wiki/Estrutura_de_Pastas_LLM_Wiki_FabioOS]]** — documento principal da estrutura fisica LLM Wiki.
+**[[50_Registros/Auditoria/Proposta_de_Migracao_Estrutural_FabioOS]]** — proposta de migracao estrutural.
+**[[50_Registros/Decisoes/ADR_Estrutura_de_Pastas_LLM_Wiki_FabioOS]]** — ADR da estrutura de pastas.
+**[[10_Dashboard/Mapa_Estrutural_FabioOS]]** — mapa estrutural fisico do FabioOS.
+**[[10_Dashboard/Governanca_FabioOS]]** — painel central da Fase 17 Governanca Operacional.
+**[[50_Registros/Decisoes/Constituicao_Operacional_FabioOS]]** — leis operacionais do FabioOS.
+**[[60_Sistemas/FabioOS/specs/2026-06-29_megatron-v1-ignorancia-explicita]]** — SPEC do MEGATRON v1 com ignorancia explicita e limites read-only/propose-only.
+
 **[[wiki/memoria/Mapa_Memoria_Fabio]]** — ponto de entrada para a memória pessoal/profissional do FabioOS: ChatGPT, Gmail pessoal, Gmail profissional e fontes sensíveis por camadas.
 
 **[[10_Mapas/Painel_Memoria_FabioOS]]** — painel navegável para conhecimento absorvido de e-mails, conversas e fontes pessoais/profissionais.
@@ -198,6 +216,7 @@ Como criar novos MCPs e ferramentas para o FabioOS.
 - [[60_Sistemas/FabioOS/Matriz_Dominios_Dados_Permissoes_2026-06-28]] — classificacao de dominios, dados e permissoes
 - [[60_Sistemas/FabioOS/Protocolo_Spec_Driven_FabioOS]] — fluxo SPEC -> plano -> tarefas -> testes -> changelog
 - [[60_Sistemas/FabioOS/Catalogo_Caminhos_Ferramentas_Demonstradas_2026-06-28]] — caminhos e demonstracoes aproveitaveis no FabioOS
+- [[40_Repertorio/IA/Modelos_e_IAs/Matriz_de_Aptidao_das_IAs_FabioOS]] — criterio de escolha e permanencia de IAs/ferramentas
 - [[30_Conhecimento/Tecnologia/Arquiteturas_de_Mercado_Radar_Tecnologico]] — radar tecnologico para arquiteturas de mercado
 - [[60_Sistemas/FabioOS/Protocolo_Operacional_FabioOS]] — fluxo operacional, rotinas e convenções de nome
 - [[60_Sistemas/FabioOS/Protocolo_Coordenacao_Multiagente]] — coordenação entre Codex, Claude, MEGATRON e futuros agentes

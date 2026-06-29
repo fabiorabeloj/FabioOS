@@ -29,8 +29,30 @@ script, MCP, RAG ou grafo adequado para ela.
 Se existir, usar a capacidade nativa ou explicar por que ela nao serve naquele
 caso. Se nao existir, registrar a lacuna para evolucao do FabioOS.
 
+Antes de escolher uma IA, modelo ou ferramenta externa, consultar tambem:
+
+```text
+40_Repertorio/IA/Modelos_e_IAs/Matriz_de_Aptidao_das_IAs_FabioOS.md
+```
+
+Essa matriz define vocacao, limites, risco, teste e criterio de permanencia. Nenhum modelo deve ser acionado apenas por preferencia ou curiosidade.
+
+Antes de criar, alterar ou consolidar conhecimento no vault, consultar tambem:
+
+```text
+index.md
+log.md
+60_Sistemas/Wiki/Schema_Wiki_FabioOS.md
+```
+
+Esses arquivos definem a LLM Wiki operacional e evitam duplicacao, notas soltas e respostas que morrem no chat.
+
 ## Ordem de roteamento
 
+0. **Matriz de aptidao**: quando houver escolha entre IAs, modelos, agentes,
+   plataformas ou ferramentas.
+0.1. **LLM Wiki**: quando a tarefa criar, alterar, consultar ou consolidar
+   conhecimento persistente.
 1. **Comando/skill especifica**: quando o pedido coincide com um comando ja
    migrado (`/check-secrets`, `/source-to-wiki`, `/criar-prova`, etc.).
 2. **Agente especializado**: quando a tarefa exige papel continuo ou julgamento
@@ -195,6 +217,7 @@ Este protocolo estara funcionando quando:
 - [[60_Sistemas/Claude_Code/Workstation_FabioOS]]
 - [[60_Sistemas/Skills/Inventario_Skills]]
 - [[60_Sistemas/MCP/Inventario_MCP]]
+- [[40_Repertorio/IA/Modelos_e_IAs/Matriz_de_Aptidao_das_IAs_FabioOS]]
 - [[60_Sistemas/MEGATRON/agentes/README_Agentes]]
 - [[60_Sistemas/FabioOS/Registro_Frentes_Ativas]]
 

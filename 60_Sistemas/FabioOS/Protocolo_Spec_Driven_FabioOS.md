@@ -72,6 +72,10 @@ Toda SPEC deve responder:
 
 ## Papel das IAs
 
+Antes de escolher a IA/ferramenta para uma SPEC, consultar [[40_Repertorio/IA/Modelos_e_IAs/Matriz_de_Aptidao_das_IAs_FabioOS]].
+
+Se a SPEC criar, alterar ou consultar conhecimento persistente, consultar tambem [[30_Projetos/FabioOS/LLM_Wiki_FabioOS]], `index.md`, `log.md` e [[60_Sistemas/Wiki/Schema_Wiki_FabioOS]].
+
 | Agente/IA | Papel |
 |---|---|
 | Fabio | Decide prioridade e aprova riscos |
