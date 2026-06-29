@@ -25,6 +25,11 @@ atualizado_em: 2026-06-27
 - [ ] Aplicar o Radar Tecnologico em pelo menos 3 materiais reais antes de promover nova ferramenta ao roadmap. (`radar_tecnologico.py` implementado; falta rodar 3 casos reais)
 - [ ] Avaliar subfases candidatas 20.5, 21.5, 22.5, 23.5, 24, 25 e 26 antes de inflar o roadmap oficial.
 - [ ] Rodar scan de segredos antes de qualquer commit.
+- [x] Implementar Mobile Gateway v0 para captura via celular/navegador local.
+- [ ] Testar no celular: abrir `http://192.168.0.20:8787` na mesma rede Wi-Fi/LAN e salvar uma captura real.
+- [x] Catalogar Gmail e Google Drive em modo leitura com resumo seguro no Obsidian.
+- [ ] Processar primeiro lote tematico dos conectores Google: FabioOS/IA, escola, projetos e financeiro restrito.
+- [ ] Decidir se OpenClaw Companion vira interface visual principal ou se fica atras de n8n/WhatsApp apos estabilidade.
 - [x] Fazer inventario nao destrutivo da memoria pessoal/profissional antes de qualquer ingestao em massa.
 - [x] Registrar decisao de roteamento para e-mails, Google, Gemini e OpenClaw.
 - [x] Executar piloto controlado de uma thread Gmail sem anexos.

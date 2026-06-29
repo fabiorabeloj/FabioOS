@@ -47,6 +47,10 @@ Artefatos compartilhados incluem:
 
 | SPEC_DRIVEN_V0 | Codex | `60_Sistemas/FabioOS/Protocolo_Spec_Driven_FabioOS.md`, `60_Sistemas/FabioOS/templates/Template_SPEC_FabioOS.md`, `60_Sistemas/FabioOS/specs/`, `60_Sistemas/FabioOS/scripts/gerar_spec_fabioos.py`, dashboard, mapa e changelog | concluida | 2026-06-28 | Fluxo SPEC -> plano -> tarefas -> testes -> changelog implementado localmente; nao tocou RAG DB, Grafo data, MCP_FABIOOS, OpenClaw auth/runtime ou arquivo untracked fora da frente |
 
+| MOBILE_GATEWAY_V0 | Codex | `60_Sistemas/FabioOS/scripts/mobile_gateway_fabioos.py`, `60_Sistemas/FabioOS/Mobile_Gateway_FabioOS_v0.md`, `60_Sistemas/FabioOS/specs/`, `00_Inbox/mobile/`, dashboard e changelog | concluida | 2026-06-28 | Captura mobile local via navegador/LAN implementada e testada; gateway rodando na porta 8787; nao tocou MCP_FABIOOS, RAG DB, Grafo data, OpenClaw auth/runtime, n8n externo ou push |
+
+| GOOGLE_CATALOGOS_V0 | Codex | `60_Sistemas/FabioOS/Conectores_Google_Catalogo_v0.md`, `wiki/memoria/Mapa_Conectores_Google_FabioOS.md`, `sources/email/_restrito/`, `sources/drive/_restrito/`, `.gitignore`, dashboard e changelog | concluida | 2026-06-28 | Gmail/Drive catalogados em leitura; detalhes restritos fora do Git; sem envio, exclusao, rotulo, exportacao, API externa, RAG/Grafo ou push |
+
 ## Frentes observadas
 
 | Frente | Dono | Observacao |
@@ -77,3 +81,5 @@ Ao concluir, alterar `Estado` para `concluida`, registrar resultado e apontar o 
 - 2026-06-27 - `ROTEAMENTO_CAPACIDADES` concluida. Protocolo criado para obrigar consulta a skills, comandos, agentes, subagentes, scripts, MCPs, RAG e grafo antes de execucao manual.
 - 2026-06-28 - `DOMINIOS_PERMISSOES_V0` concluida. Matriz de dominios/dados/permissoes e classificador local v0 criados; dashboard passou a exibir classificacoes.
 - 2026-06-28 - `SPEC_DRIVEN_V0` concluida. Protocolo, template, gerador local de SPEC e primeira SPEC real criados; dashboard passou a exibir SPECs.
+- 2026-06-28 - `MOBILE_GATEWAY_V0` concluida. Gateway HTTP local criado para capturas via celular em `00_Inbox/mobile/`; servidor testado por `GET /health` e `POST /api/capture` com `dry_run`.
+- 2026-06-28 - `GOOGLE_CATALOGOS_V0` concluida. Gmail e Google Drive catalogados por conectores em modo leitura; detalhes locais/restritos ficaram fora do Git.

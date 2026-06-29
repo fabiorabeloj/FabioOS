@@ -41,6 +41,9 @@ RAG_PYTHON = ROOT / "60_Sistemas" / "RAG" / ".venv" / "Scripts" / "python.exe"
 RADAR_DIR = ROOT / "30_Conhecimento" / "Tecnologia" / "Radar"
 CLASSIFICACOES_DIR = ROOT / "60_Sistemas" / "FabioOS" / "classificacoes"
 SPECS_DIR = ROOT / "60_Sistemas" / "FabioOS" / "specs"
+MOBILE_INBOX_DIR = ROOT / "00_Inbox" / "mobile"
+EMAIL_SOURCES_DIR = ROOT / "sources" / "email"
+DRIVE_SOURCES_DIR = ROOT / "sources" / "drive"
 MCP_CODEX_CONFIG = Path.home() / ".codex" / "config.toml"
 OUTPUT = ROOT / "10_Mapas" / "Dashboard_Operacional_FabioOS.md"
 
@@ -187,6 +190,24 @@ def specs_status() -> str:
     return f"{len(arquivos)} SPEC(s), ultima: {latest}"
 
 
+def mobile_gateway_status() -> str:
+    script = ROOT / "60_Sistemas" / "FabioOS" / "scripts" / "mobile_gateway_fabioos.py"
+    if not script.exists():
+        return "nao implementado"
+    if not MOBILE_INBOX_DIR.exists():
+        return "implementado, nenhuma captura mobile ainda"
+    arquivos = sorted(MOBILE_INBOX_DIR.glob("*.md"), key=lambda p: p.stat().st_mtime, reverse=True)
+    if not arquivos:
+        return "implementado, nenhuma captura mobile ainda"
+    return f"implementado, {len(arquivos)} captura(s), ultima: {arquivos[0].name}"
+
+
+def connector_catalog_status() -> str:
+    email_count = len(list(EMAIL_SOURCES_DIR.rglob("*.md"))) if EMAIL_SOURCES_DIR.exists() else 0
+    drive_count = len(list(DRIVE_SOURCES_DIR.rglob("*.md"))) if DRIVE_SOURCES_DIR.exists() else 0
+    return f"Gmail: {email_count} nota(s) locais; Drive: {drive_count} nota(s) locais"
+
+
 def n8n_workflows() -> list[str]:
     base = ROOT / "60_Sistemas" / "n8n" / "Workflows"
     if not base.exists():
@@ -253,6 +274,8 @@ tags: [fabios, dashboard, python, automacao, status]
 | Radar Tecnologico | {radar_status()} |
 | Classificacao de dominios/dados | {classificacoes_status()} |
 | Specs FabioOS | {specs_status()} |
+| Mobile Gateway | {mobile_gateway_status()} |
+| Catalogos Google | {connector_catalog_status()} |
 | Workflows n8n versionados | {len(workflows)} JSON |
 
 ## Workflows n8n versionados
