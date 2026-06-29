@@ -16,6 +16,12 @@ atualizado_em: 2026-06-26
 
 **[[60_Sistemas/FabioOS/Plano_Mestre_Implantacao_FabioOS]]** — arquitetura completa, papel de cada ferramenta, fases 0–23 e regra estratégica de decisão. Leitura obrigatória no início de sessão.
 
+**[[60_Sistemas/FabioOS/Estrutura_Profissional_FabioOS_MEGATRON_2026-06-28]]** — camada transversal para transformar sinais de mercado em requisitos profissionais: seguranca, dados, observabilidade, deploy, custos e governanca.
+
+**[[60_Sistemas/FabioOS/Catalogo_Caminhos_Ferramentas_Demonstradas_2026-06-28]]** — catalogo para avaliar ferramentas, prints, anuncios e demonstracoes antes de incorporar ao FabioOS.
+
+**[[30_Conhecimento/Tecnologia/Arquiteturas_de_Mercado_Radar_Tecnologico]]** — metodo para extrair problema, arquitetura, tecnologias, conceitos, padroes e prioridade de materiais de mercado.
+
 **[[00_Arquitetura/01_Modelo_Formal_FabioOS_MEGATRON]]** — modelo formal do FabioOS/MEGATRON: ontologia, epistemologia, domínios, memória, agentes, governança, autoconstrução e implementação.
 
 **[[60_Sistemas/FabioOS/Protocolo_Coordenacao_Multiagente]]** — regras para Codex, Claude, MEGATRON e futuros agentes trabalharem em paralelo sem conflito.
@@ -183,6 +189,10 @@ Como criar novos MCPs e ferramentas para o FabioOS.
 ### documentos de sistema
 - [[00_Arquitetura/01_Modelo_Formal_FabioOS_MEGATRON]] — modelo formal do FabioOS/MEGATRON
 - [[60_Sistemas/FabioOS/Plano_Mestre_Implantacao_FabioOS]] — arquitetura completa, fases 0–23
+- [[60_Sistemas/FabioOS/Estrutura_Profissional_FabioOS_MEGATRON_2026-06-28]] — estrutura profissional transversal do FabioOS/MEGATRON
+- [[60_Sistemas/FabioOS/Matriz_Profissionalizacao_FabioOS_2026-06-28]] — matriz de avaliacao de tecnologias, anuncios e capacidades
+- [[60_Sistemas/FabioOS/Catalogo_Caminhos_Ferramentas_Demonstradas_2026-06-28]] — caminhos e demonstracoes aproveitaveis no FabioOS
+- [[30_Conhecimento/Tecnologia/Arquiteturas_de_Mercado_Radar_Tecnologico]] — radar tecnologico para arquiteturas de mercado
 - [[60_Sistemas/FabioOS/Protocolo_Operacional_FabioOS]] — fluxo operacional, rotinas e convenções de nome
 - [[60_Sistemas/FabioOS/Protocolo_Coordenacao_Multiagente]] — coordenação entre Codex, Claude, MEGATRON e futuros agentes
 - [[60_Sistemas/FabioOS/Protocolo_Roteamento_Capacidades_IA]] — roteamento obrigatório para capacidades já instaladas

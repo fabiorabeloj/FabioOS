@@ -18,6 +18,10 @@ atualizado_em: 2026-06-27
 - [x] Otimizar contexto do `fabioos-ponte` antes de novas chamadas caras.
 - [x] Revisar card/nota "MEGATRON v0 detectado nao versionado" contra o estado real do Git.
 - [ ] Preparar handoff para Claude retornar em 2026-06-29 13:00.
+- [ ] Criar matriz de dominios/dados/permissoes com base na camada profissional do FabioOS.
+- [ ] Usar o catalogo de caminhos demonstrados para avaliar novos anuncios, ferramentas, prints e prompts antes de instalar ou assinar.
+- [ ] Aplicar o Radar Tecnologico em pelo menos 3 materiais reais antes de promover nova ferramenta ao roadmap. (`radar_tecnologico.py` implementado; falta rodar 3 casos reais)
+- [ ] Avaliar subfases candidatas 20.5, 21.5, 22.5, 23.5, 24, 25 e 26 antes de inflar o roadmap oficial.
 - [ ] Rodar scan de segredos antes de qualquer commit.
 - [x] Fazer inventario nao destrutivo da memoria pessoal/profissional antes de qualquer ingestao em massa.
 - [x] Registrar decisao de roteamento para e-mails, Google, Gemini e OpenClaw.
