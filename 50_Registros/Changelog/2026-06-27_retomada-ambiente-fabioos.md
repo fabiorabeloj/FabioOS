@@ -1,4 +1,4 @@
-﻿---
+---
 tipo: changelog
 area: 50_Registros
 projeto: FabioOS
@@ -12,4 +12,4 @@ atualizado_em: 2026-06-27
 
 ## Eventos
 
-- 2026-06-27 10:44:30 - Script `start_fabioos.ps1` validado em modo diagnostico (`-NoOpenApps -SkipDocker -SkipBrowser`), sem abrir aplicativos, sem iniciar Docker e sem navegar.
+- 2026-06-27 10:44:30 - Script `60_Sistemas/Scripts/60_Sistemas/Scripts/start_fabioos.ps1` validado em modo diagnostico (`-NoOpenApps -SkipDocker -SkipBrowser`), sem abrir aplicativos, sem iniciar Docker e sem navegar.

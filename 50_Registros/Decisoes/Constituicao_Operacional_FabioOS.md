@@ -94,7 +94,7 @@ Uma tarefa so esta concluida quando:
 
 ## Relacoes
 
-- [[wiki/conceitos/governanca-operacional-fabios]]
+- [[40_Wiki/_compat_wiki/conceitos/governanca-operacional-fabios]]
 - [[60_Sistemas/Governanca/Matriz_de_Permissoes_FabioOS]]
 - [[60_Sistemas/Agentes/Contratos_de_Agentes_FabioOS]]
 - [[60_Sistemas/Protocolos/Definicao_de_Concluido_FabioOS]]

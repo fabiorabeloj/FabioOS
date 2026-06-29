@@ -37,7 +37,7 @@ Painel para navegar a estrutura fisica LLM Wiki do FabioOS.
 
 As antigas pastas de raiz foram preservadas nesse arquivo para reduzir poluicao visual no Obsidian.
 
-Arquivos tecnicos de operacao (`AGENTS.md`, `CLAUDE.md`, `CODEX.md`, `README.md`, `log.md`, `sources/`, `wiki/`, `schema/` e diretorios de agentes) continuam no disco, mas foram ocultados no Obsidian via `.obsidian/app.json`.
+Arquivos tecnicos de operacao (`60_Sistemas/FabioOS/bootstrap/AGENTS.md`, `60_Sistemas/FabioOS/bootstrap/CLAUDE.md`, `60_Sistemas/FabioOS/bootstrap/CODEX.md`, `README.md`, `50_Registros/Logs_Agentes/log.md`, `05_Raw_Sources/_compat_sources/`, `40_Wiki/_compat_wiki/`, `60_Sistemas/Wiki/schema/` e diretorios de agentes) continuam no disco, mas foram ocultados no Obsidian via `.obsidian/app.json`.
 
 ## Documentos estruturais
 
@@ -54,8 +54,8 @@ Arquivos tecnicos de operacao (`AGENTS.md`, `CLAUDE.md`, `CODEX.md`, `README.md`
 - [[60_Sistemas/FabioOS/NEXT_ACTIONS]]
 - [[60_Sistemas/FabioOS/Registro_Frentes_Ativas]]
 - [[50_Registros/Changelog/CHANGELOG_FabioOS]]
-- [[index]]
-- [[log]]
+- [[10_Dashboard/_entrada/index]]
+- [[50_Registros/Logs_Agentes/log]]
 
 ## Sistemas relacionados
 
@@ -67,4 +67,4 @@ Arquivos tecnicos de operacao (`AGENTS.md`, `CLAUDE.md`, `CODEX.md`, `README.md`
 
 ## Compatibilidade
 
-`sources/` e `wiki/` continuam preservados como caminhos operacionais enquanto a migracao e preparada.
+`05_Raw_Sources/_compat_sources/` e `40_Wiki/_compat_wiki/` continuam preservados como caminhos operacionais enquanto a migracao e preparada.

@@ -20,8 +20,8 @@ Inventário oficial dos agentes especificados para MEGATRON. Este registro indic
 | Agente | Prioridade | Domínio | Estado | Permissão máxima | Dependências | Próxima ação |
 |---|---:|---|---|---|---|---|
 | SafeCommit | 1 | FabioOS | especificado | escrita segura + commit aprovado | Git, `/check-secrets`, `/session-changelog`, `/safe-commit` | Criar agente `.claude/agents/safe-commit.md` ou comando orquestrador |
-| Arquivista | 2 | FabioOS | especificado | escrita segura em notas | `sources/`, `wiki/`, `/archive-source`, `/source-to-wiki` | Testar com uma entrada real de `00_Inbox/` |
-| Inbox | 3 | FabioOS | especificado | leitura + roteamento + escrita de tarefa | `00_Inbox/`, `sources/_inbox/`, Arquivista, Pietra, RAG | Criar rotina manual de triagem |
+| Arquivista | 2 | FabioOS | especificado | escrita segura em notas | `05_Raw_Sources/_compat_sources/`, `40_Wiki/_compat_wiki/`, `/archive-source`, `/source-to-wiki` | Testar com uma entrada real de `00_Inbox/` |
+| Inbox | 3 | FabioOS | especificado | leitura + roteamento + escrita de tarefa | `00_Inbox/`, `05_Raw_Sources/_compat_sources/_inbox/`, Arquivista, Pietra, RAG | Criar rotina manual de triagem |
 | RAG | 4 | FabioOS | especificado | indexação local + consulta | Chroma, embeddings locais, `60_Sistemas/RAG/` | Validar ingestão da primeira leva |
 | Dashboard | 5 | FabioOS | especificado | leitura + escrita de painel | Registro_Agentes, Painel de Pendências, changelogs, logs | Criar painel textual mínimo |
 
@@ -43,7 +43,7 @@ Inbox
   └─ encaminha casos para Pietra, Escola, RAG ou humano
 
 RAG
-  ├─ depende de wiki/ e 60_Sistemas/ organizados
+  ├─ depende de 40_Wiki/_compat_wiki/ e 60_Sistemas/ organizados
   └─ alimenta MEGATRON, Dashboard e futuros agentes
 
 Dashboard

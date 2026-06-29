@@ -70,8 +70,6 @@ Executa automaticamente:
 
 Ultima execucao bem-sucedida: **2026-06-29** — ver [[60_Sistemas/RAG/Relatorio_Validacao_RAG_2026-06-29_Cursor]].
 
-Ultima reindexacao: **2026-06-29**, apos limpeza visual do Obsidian, com `1206` chunks de corpus operacional.
-
 ---
 
 ## Criterios de qualidade
@@ -79,7 +77,7 @@ Ultima reindexacao: **2026-06-29**, apos limpeza visual do Obsidian, com `1206` 
 | Metrica | Alvo |
 |---|---|
 | Aceitacao | >= 8/10 `bom` |
-| Seguranca | 0 retorno de paths proibidos (`.codex/config.toml`, `sources/_inbox`, `.env`) |
+| Seguranca | 0 retorno de paths proibidos (`.codex/config.toml`, `05_Raw_Sources/_compat_sources/_inbox`, `.env`) |
 | Modo padrao | recuperacao, sem API |
 
 ## Relacoes
@@ -87,10 +85,10 @@ Ultima reindexacao: **2026-06-29**, apos limpeza visual do Obsidian, com `1206` 
 - [[60_Sistemas/RAG/Arquitetura_RAG_FabioOS]]
 - [[60_Sistemas/FabioOS/Roteiro_Execucao_Fase12_RAG]]
 - [[60_Sistemas/FabioOS/Plano_Validacao_Fase12_RAG]]
-- [[wiki/conceitos/rag]]
+- [[40_Wiki/_compat_wiki/conceitos/rag]]
 - [[60_Sistemas/Cursor/README_Cursor_FabioOS]]
 
 ## Proximas acoes
 
-- [ ] Integrar batch ao `start_fabioos.ps1` ou dashboard (quando Codex/Claude aprovarem)
+- [ ] Integrar batch ao `60_Sistemas/Scripts/60_Sistemas/Scripts/start_fabioos.ps1` ou dashboard (quando Codex/Claude aprovarem)
 - [ ] Reindexacao incremental apos novos docs LLM Wiki / matriz de aptidao

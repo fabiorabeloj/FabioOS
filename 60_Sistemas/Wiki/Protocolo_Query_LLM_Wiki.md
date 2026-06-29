@@ -23,7 +23,7 @@ Pergunta importante deve consultar memoria antes de virar resposta definitiva.
 ```text
 pergunta
 -> classificar dominio
--> consultar index.md
+-> consultar 10_Dashboard/_entrada/index.md
 -> consultar paginas relevantes
 -> usar RAG se busca textual nao bastar
 -> sintetizar resposta
@@ -33,7 +33,7 @@ pergunta
 
 ## Quando ler index
 
-Ler `index.md` antes de:
+Ler `10_Dashboard/_entrada/index.md` antes de:
 
 - criar pagina nova;
 - responder pergunta arquitetural;

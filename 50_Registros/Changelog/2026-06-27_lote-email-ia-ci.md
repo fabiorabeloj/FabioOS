@@ -15,13 +15,13 @@ atualizado_em: 2026-06-27
 - Processadas 3 threads Gmail do filtro FabioOS/MEGATRON/Codex/Claude.
 - Nenhum e-mail foi enviado, arquivado, apagado ou rotulado.
 - Nenhum anexo foi lido.
-- Fontes restritas locais foram criadas em `sources/email/_restrito/` e continuam fora do Git.
+- Fontes restritas locais foram criadas em `05_Raw_Sources/_compat_sources/email/_restrito/` e continuam fora do Git.
 - Conteudo seguro foi consolidado em notas de memoria.
 
 ## Notas criadas
 
-- `wiki/memoria/decisoes/2026-06-27_Email_Anthropic_Privacidade_Claude.md`
-- `wiki/memoria/projetos/2026-06-27_GitHub_Actions_Auto_Changelog_Falhas.md`
+- `40_Wiki/_compat_wiki/memoria/decisoes/2026-06-27_Email_Anthropic_Privacidade_Claude.md`
+- `40_Wiki/_compat_wiki/memoria/projetos/2026-06-27_GitHub_Actions_Auto_Changelog_Falhas.md`
 
 ## Achados
 

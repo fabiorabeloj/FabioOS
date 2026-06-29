@@ -6,7 +6,7 @@ status: ativo
 tags: [fabios, megatron, arquitetura, profissionalizacao, roadmap, seguranca]
 criado_em: 2026-06-28
 atualizado_em: 2026-06-28
-fonte: [[sources/docs/2026-06-28_anuncios-ia-roadmap-fabioos]]
+fonte: [[05_Raw_Sources/_compat_sources/docs/2026-06-28_anuncios-ia-roadmap-fabioos]]
 ---
 
 # Estrutura Profissional FabioOS / MEGATRON
@@ -94,7 +94,7 @@ Os anuncios ensinam menos sobre "qual app usar" e mais sobre a direcao estrutura
 | Seguranca | Permissoes, segredos e limites | protocolos e scans | matriz de dados, chaves fora do repo, auditoria |
 | Observabilidade | Ver o sistema trabalhando | dashboard textual | logs, metricas, custos, erros e alertas |
 | Infraestrutura | Rodar com confiabilidade | local Windows | Docker, VPS/cloud controlada, backup e restore |
-| Governanca | Decisao e continuidade | CLAUDE.md, locks, changelog | ritos de release, ambientes e revisoes multiagente |
+| Governanca | Decisao e continuidade | 60_Sistemas/FabioOS/bootstrap/CLAUDE.md, locks, changelog | ritos de release, ambientes e revisoes multiagente |
 
 ## Divisao profissional de dados
 

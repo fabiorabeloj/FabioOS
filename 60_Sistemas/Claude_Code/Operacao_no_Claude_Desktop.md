@@ -38,7 +38,7 @@ Se ainda não estiver configurado:
 1. Abra o Claude Desktop
 2. Clique em **"Add Project"** (ou equivalente na versão atual)
 3. Selecione a pasta `C:\Users\user\Desktop\FabioOs\FabioOs`
-4. O Claude lerá automaticamente o `CLAUDE.md` e registrará a configuração
+4. O Claude lerá automaticamente o `60_Sistemas/FabioOS/bootstrap/CLAUDE.md` e registrará a configuração
 
 ### Início de sessão
 
@@ -47,9 +47,9 @@ Ao abrir uma conversa neste projeto, use a frase padrão:
 > **`Leia o contexto do FabioOS e continue a partir do último changelog.`**
 
 Isso instrui o Claude a:
-1. Ler `CLAUDE.md`
+1. Ler `60_Sistemas/FabioOS/bootstrap/CLAUDE.md`
 2. Ler `60_Sistemas/FabioOS/Plano_Mestre_Implantacao_FabioOS.md`
-3. Ler `wiki/indices/mapa-fabios.md`
+3. Ler `40_Wiki/_compat_wiki/indices/mapa-fabios.md`
 4. Ler `60_Sistemas/FabioOS/Protocolo_Operacional_FabioOS.md`
 5. Ler o último arquivo em `50_Registros/Changelog/`
 6. Informar fase atual, próxima ação e lacunas detectadas
@@ -60,13 +60,13 @@ Isso instrui o Claude a:
 
 | Ordem | Arquivo | Por que |
 |---|---|---|
-| 1 | `CLAUDE.md` | Regras de operação, papel do Claude, estrutura do vault |
+| 1 | `60_Sistemas/FabioOS/bootstrap/CLAUDE.md` | Regras de operação, papel do Claude, estrutura do vault |
 | 2 | `60_Sistemas/FabioOS/Plano_Mestre_Implantacao_FabioOS.md` | Arquitetura completa e fases 0–23 |
-| 3 | `wiki/indices/mapa-fabios.md` | Mapa navegável de todos os sistemas |
+| 3 | `40_Wiki/_compat_wiki/indices/mapa-fabios.md` | Mapa navegável de todos os sistemas |
 | 4 | `60_Sistemas/FabioOS/Protocolo_Operacional_FabioOS.md` | Fluxo operacional e convenções |
 | 5 | Último arquivo em `50_Registros/Changelog/` | Estado atual do projeto |
 
-O CLAUDE.md já define essa ordem obrigatória. O Claude seguirá automaticamente se a frase padrão de início for usada.
+O 60_Sistemas/FabioOS/bootstrap/CLAUDE.md já define essa ordem obrigatória. O Claude seguirá automaticamente se a frase padrão de início for usada.
 
 ---
 
@@ -90,8 +90,8 @@ O CLAUDE.md já define essa ordem obrigatória. O Claude seguirá automaticament
 
 | Comando | Função |
 |---|---|
-| `/archive-source` | Arquiva fonte bruta em `sources/` |
-| `/source-to-wiki` | Transforma fonte em página `wiki/` |
+| `/archive-source` | Arquiva fonte bruta em `05_Raw_Sources/_compat_sources/` |
+| `/source-to-wiki` | Transforma fonte em página `40_Wiki/_compat_wiki/` |
 | `/update-index` | Atualiza índices de sources e wiki |
 | `/check-secrets` | Escaneia por credenciais antes do commit |
 | `/session-changelog` | Gera changelog da sessão |
@@ -112,7 +112,7 @@ O CLAUDE.md já define essa ordem obrigatória. O Claude seguirá automaticament
 | Agente | Quando usar |
 |---|---|
 | `vault-architect` | Auditar ou reorganizar estrutura do vault |
-| `wiki-curator` | Transformar sources/ em wiki/ com revisão humana |
+| `wiki-curator` | Transformar 05_Raw_Sources/_compat_sources/ em 40_Wiki/_compat_wiki/ com revisão humana |
 | `security-reviewer` | Detectar tokens e credenciais antes de commits |
 | `school-assistant` | Criar e organizar materiais pedagógicos (GEO/FIL) |
 
@@ -184,8 +184,8 @@ Leia o contexto do FabioOS e continue a partir do último changelog. Em seguida,
 - [[60_Sistemas/Claude_Code/Claude_Project_Config]]
 - [[60_Sistemas/FabioOS/Plano_Mestre_Implantacao_FabioOS]]
 - [[60_Sistemas/FabioOS/Protocolo_Operacional_FabioOS]]
-- [[wiki/sistemas/claude-code]]
-- [[wiki/indices/mapa-fabios]]
+- [[40_Wiki/_compat_wiki/sistemas/claude-code]]
+- [[40_Wiki/_compat_wiki/indices/mapa-fabios]]
 
 ## Próximas ações
 

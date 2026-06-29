@@ -86,7 +86,7 @@ O usuario quer visualizar agentes trabalhando. A melhor entrega e um painel onde
 ## Arquivos relevantes
 
 - `60_Sistemas/OpenClaw/ponte/README.md`
-- `60_Sistemas/OpenClaw/ponte/AGENTS.md`
+- `60_Sistemas/OpenClaw/ponte/60_Sistemas/FabioOS/bootstrap/AGENTS.md`
 - `60_Sistemas/OpenClaw/ponte/HEARTBEAT.md`
 - `60_Sistemas/OpenClaw/ponte/STATUS_PONTE.md`
 - `60_Sistemas/FabioOS/Registro_Frentes_Ativas.md`

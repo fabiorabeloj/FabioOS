@@ -24,15 +24,15 @@ atualizado_em: 2026-06-29
 
 - [[90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/30_Conhecimento/LLM_Wiki_Pattern]]
 - [[60_Sistemas/Claude_Code/project_llmwiki_architecture]]
-- [[schema/fluxo-wiki]]
-- [[schema/qualidade-wiki]]
-- [[wiki/README]]
-- [[wiki/indices/mapa-fabios]]
+- [[60_Sistemas/Wiki/schema/fluxo-wiki]]
+- [[60_Sistemas/Wiki/schema/qualidade-wiki]]
+- [[40_Wiki/_compat_wiki/README]]
+- [[40_Wiki/_compat_wiki/indices/mapa-fabios]]
 
 ## Arquivos operacionais
 
-- [[index]]
-- [[log]]
+- [[10_Dashboard/_entrada/index]]
+- [[50_Registros/Logs_Agentes/log]]
 - [[60_Sistemas/FabioOS/STATUS]]
 - [[60_Sistemas/FabioOS/NEXT_ACTIONS]]
 - [[60_Sistemas/FabioOS/Registro_Frentes_Ativas]]
@@ -40,8 +40,8 @@ atualizado_em: 2026-06-29
 ## Relacoes
 
 - MEGATRON: [[00_Arquitetura/01_Modelo_Formal_FabioOS_MEGATRON]], [[60_Sistemas/MEGATRON/v0/README_MEGATRON_v0]]
-- RAG: [[60_Sistemas/RAG/Arquitetura_RAG_FabioOS]], [[wiki/conceitos/rag]]
-- MCP: [[60_Sistemas/MCP/Inventario_MCP]], [[wiki/conceitos/mcp]]
+- RAG: [[60_Sistemas/RAG/Arquitetura_RAG_FabioOS]], [[40_Wiki/_compat_wiki/conceitos/rag]]
+- MCP: [[60_Sistemas/MCP/Inventario_MCP]], [[40_Wiki/_compat_wiki/conceitos/mcp]]
 - Skills: [[60_Sistemas/Skills/Inventario_Skills]]
 - Agentes: [[60_Sistemas/MEGATRON/agentes/README_Agentes]]
 - Aptidao de IAs: [[90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/40_Repertorio/IA/Modelos_e_IAs/Matriz_de_Aptidao_das_IAs_FabioOS]]
@@ -76,8 +76,8 @@ Motivo:
 - uma fonte preservada;
 - uma pagina existente atualizada;
 - no maximo uma pagina nova criada;
-- `index.md` atualizado;
-- `log.md` atualizado;
+- `10_Dashboard/_entrada/index.md` atualizado;
+- `50_Registros/Logs_Agentes/log.md` atualizado;
 - lacuna ou contradicao registrada;
 - changelog atualizado;
 - sem commit sem aprovacao.
@@ -86,8 +86,8 @@ Motivo:
 
 | Item | Resultado |
 |---|---|
-| Fonte | [[sources/fabios/2026-06-29_governanca-operacional-pontos-cegos]] |
-| Pagina criada | [[wiki/conceitos/governanca-operacional-fabios]] |
+| Fonte | [[05_Raw_Sources/_compat_sources/fabios/2026-06-29_governanca-operacional-pontos-cegos]] |
+| Pagina criada | [[40_Wiki/_compat_wiki/conceitos/governanca-operacional-fabios]] |
 | Pagina existente atualizada | [[30_Projetos/FabioOS/LLM_Wiki_FabioOS]] |
 | Index/log | atualizados |
 | API externa | nao usada |

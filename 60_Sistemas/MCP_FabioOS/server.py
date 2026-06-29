@@ -21,7 +21,7 @@ from fastmcp import FastMCP
 def _vault_root() -> Path:
     p = Path(__file__).resolve()
     for parent in p.parents:
-        if (parent / "CLAUDE.md").exists():
+        if (parent / "60_Sistemas/FabioOS/bootstrap/CLAUDE.md").exists():
             return parent
     return p.parents[2]
 
@@ -31,7 +31,7 @@ RAG_DB = VAULT / "60_Sistemas" / "RAG" / "fabioos_db"
 QUERY_GRAPH = VAULT / "60_Sistemas" / "Grafo" / "scripts" / "query_graph.py"
 RAG_MODEL = "BAAI/bge-m3"
 EXCLUI = ("/.venv/", "/fabioos_db/", "/node_modules/", "/.git/",
-          "/.obsidian/", "/.claude/", "/sources/_inbox/")
+          "/.obsidian/", "/.claude/", "/05_Raw_Sources/_compat_sources/_inbox/")
 
 mcp = FastMCP("FabioOS")
 
@@ -118,10 +118,10 @@ def buscar_nota(termo: str, limite: int = 15) -> str:
 
 @mcp.tool
 def consultar_wiki(termo: str, limite: int = 15) -> str:
-    """Busca páginas em wiki/ cujo nome ou conteúdo contenha o termo (read-only)."""
-    base = VAULT / "wiki"
+    """Busca páginas em 40_Wiki/_compat_wiki/ cujo nome ou conteúdo contenha o termo (read-only)."""
+    base = VAULT / "40_Wiki/_compat_wiki"
     if not base.exists():
-        return "wiki/ não existe."
+        return "40_Wiki/_compat_wiki/ não existe."
     termo_l = termo.lower()
     achados = []
     for md in base.rglob("*.md"):

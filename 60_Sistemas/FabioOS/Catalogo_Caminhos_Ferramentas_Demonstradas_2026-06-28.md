@@ -6,7 +6,7 @@ status: ativo
 tags: [fabios, megatron, arquitetura, ferramentas, assimilacao, roadmap]
 criado_em: 2026-06-28
 atualizado_em: 2026-06-28
-fonte: [[sources/docs/2026-06-28_anuncios-ia-roadmap-fabioos]]
+fonte: [[05_Raw_Sources/_compat_sources/docs/2026-06-28_anuncios-ia-roadmap-fabioos]]
 ---
 
 # Catalogo - Caminhos e Ferramentas Demonstradas
@@ -53,7 +53,7 @@ Para cada imagem, video, propaganda, artigo, demo ou ferramenta, registrar:
 
 | Caminho demonstrado | O que ensina | Encaixe no FabioOS | Teste minimo |
 |---|---|---|---|
-| IA gera notas Markdown -> Obsidian | Conteudo produzido por IA deve virar fonte estruturada, nao conversa perdida | Inbox, Arquivista, Obsidian, RAG | Capturar uma nota MD, salvar em `sources/`, gerar wiki e consultar no RAG |
+| IA gera notas Markdown -> Obsidian | Conteudo produzido por IA deve virar fonte estruturada, nao conversa perdida | Inbox, Arquivista, Obsidian, RAG | Capturar uma nota MD, salvar em `05_Raw_Sources/_compat_sources/`, gerar wiki e consultar no RAG |
 | OpenClaw/WhatsApp -> agente -> tarefa/email/banco | Canal conversacional precisa de escopo e permissao | Fase 11, n8n, agente Inbox, OpenClaw | Receber mensagem de teste, criar nota local sem envio externo |
 | MEGATRON -> MCP Gateway -> ferramentas | IAs nao devem acessar sistemas diretamente; devem passar por ferramentas padronizadas | Fases 14-15, MCP FabioOS | Consultar RAG/Grafo via MCP read-only |
 | Spec -> plano -> tarefas -> codigo -> testes -> docs | O futuro do desenvolvimento e especificacao antes da implementacao | Metodo transversal, Cursor, Claude, Codex | Criar uma SPEC pequena e gerar checklist/teste antes do codigo |

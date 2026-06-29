@@ -32,7 +32,7 @@ Criada a primeira especificação formal de agentes funcionais do MEGATRON. A en
 
 | Arquivo | Alteração |
 |---|---|
-| `wiki/indices/mapa-fabios.md` | Incluída referência à camada de agentes MEGATRON |
+| `40_Wiki/_compat_wiki/indices/mapa-fabios.md` | Incluída referência à camada de agentes MEGATRON |
 
 ## Decisões registradas
 

@@ -32,7 +32,7 @@ atualizado_em: 2026-06-27
 - `60_Sistemas/FabioOS/NEXT_ACTIONS.md`
 - `60_Sistemas/FabioOS/Protocolo_Ingestao_Memoria_Pessoal_Profissional.md`
 - `60_Sistemas/FabioOS/Inventario_Memoria_Pessoal_Profissional_2026-06-27.md`
-- `wiki/memoria/Mapa_Memoria_Fabio.md`
+- `40_Wiki/_compat_wiki/memoria/Mapa_Memoria_Fabio.md`
 
 ## Commits realizados
 

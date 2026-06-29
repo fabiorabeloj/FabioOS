@@ -77,7 +77,7 @@ Arquivos: os documentos listados na seção "Arquivos desta frente".
 - [ ] Confirmar que os quatro commits temáticos do Claude foram concluídos ou descartados.
 - [ ] Rodar SafeCommit/check-secrets.
 - [ ] Verificar se nenhum arquivo de log/runtime entrou.
-- [ ] Decidir se estes documentos devem ser linkados no `wiki/indices/mapa-fabios.md`.
+- [ ] Decidir se estes documentos devem ser linkados no `40_Wiki/_compat_wiki/indices/mapa-fabios.md`.
 - [ ] Decidir se o Protocolo de Coordenação deve ser promovido de `rascunho` para `ativo`.
 - [x] Gerar changelog da frente de governança multiagente.
 - [ ] Pedir aprovação humana antes de commit.

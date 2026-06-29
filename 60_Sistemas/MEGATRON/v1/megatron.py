@@ -30,14 +30,14 @@ for _s in (sys.stdout, sys.stderr):
 def _vault_root() -> Path:
     p = Path(__file__).resolve()
     for parent in p.parents:
-        if (parent / "CLAUDE.md").exists():
+        if (parent / "60_Sistemas/FabioOS/bootstrap/CLAUDE.md").exists():
             return parent
     return p.parents[3]
 
 
 VAULT = _vault_root()
 sys.path.insert(0, str(VAULT / "60_Sistemas" / "MCP_FabioOS"))
-LOG = VAULT / "60_Sistemas" / "MEGATRON" / "v1" / "logs" / "megatron_v1_log.md"
+LOG = VAULT / "60_Sistemas" / "MEGATRON" / "v1" / "logs" / "megatron_v1_50_Registros/Logs_Agentes/log.md"
 STATUS_FILE = VAULT / "60_Sistemas" / "FabioOS" / "STATUS.md"
 NEXT_FILE = VAULT / "60_Sistemas" / "FabioOS" / "NEXT_ACTIONS.md"
 

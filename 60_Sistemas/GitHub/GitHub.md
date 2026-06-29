@@ -36,7 +36,7 @@ GitHub é plataforma de versionamento e colaboração baseada em Git. Armazena h
 3. **Segurança**: Secrets, credenciais não comitadas
 4. **Histórico**: Changelog automático via commits
 
-## Regras de segurança (CLAUDE.md)
+## Regras de segurança (60_Sistemas/FabioOS/bootstrap/CLAUDE.md)
 
 - ✓ Ignorar `.env`, `.secret`, tokens em `.gitignore`
 - ✓ Mensagens de commit descritivas

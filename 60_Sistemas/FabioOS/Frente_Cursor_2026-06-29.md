@@ -38,7 +38,7 @@ Este arquivo e a declaracao de lock local. Codex pode fundir a linha corresponde
 ## Proibido nesta frente
 
 - Reindexar ou apagar `60_Sistemas/RAG/fabioos_db/`
-- Editar `STATUS.md`, `NEXT_ACTIONS.md`, `wiki/indices/mapa-fabios.md`, `CLAUDE.md`, `Registro_Frentes_Ativas.md`
+- Editar `STATUS.md`, `NEXT_ACTIONS.md`, `40_Wiki/_compat_wiki/indices/mapa-fabios.md`, `60_Sistemas/FabioOS/bootstrap/CLAUDE.md`, `Registro_Frentes_Ativas.md`
 - Tocar `60_Sistemas/MCP_FabioOS/`, OpenClaw runtime, n8n, credenciais
 - Commit ou push sem autorizacao humana
 - Chamar API externa (`--generate` desligado)

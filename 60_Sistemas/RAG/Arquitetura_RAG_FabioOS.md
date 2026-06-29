@@ -11,7 +11,7 @@ atualizado_em: 2026-06-29
 
 # Arquitetura RAG do FabioOS — Fase 12
 
-> **Supera** o rascunho `60_Sistemas/RAG/RAG_IMPLEMENTATION.md` (de 25/06, genérico). Este é o documento autoritativo da Fase 12.
+> **Supera** o rascunho `60_Sistemas/RAG_IMPLEMENTATION.md` (de 25/06, genérico). Este é o documento autoritativo da Fase 12.
 
 ## Função
 
@@ -69,16 +69,16 @@ Resposta fundamentada + lista de fontes (caminho + [[wikilink]])
 
 | Pasta | Conteúdo | Por quê primeiro |
 |---|---|---|
-| `wiki/` | Conhecimento curado (24 notas) | Já tratado e conectado — melhor qualidade de resposta |
-| `60_Sistemas/` (subconjunto operacional) | Documentação técnica de alto sinal | Como o FabioOS funciona |
-| `10_Dashboard/` | Navegação e painéis canônicos | Visão estrutural |
-| `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/10_Mapas/` (arquivos-chave) | Painel legado necessário | Estado e pendências |
-| `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/40_Decisoes/` | Decisões com motivo | "Por que decidimos X?" |
+| `40_Wiki/_compat_wiki/` | Conhecimento curado (24 notas) | Já tratado e conectado — melhor qualidade de resposta |
+| `60_Sistemas/` | Documentação técnica (44) | Como o FabioOS funciona |
+| `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/30_Conhecimento/` | Repertório reutilizável (16) | Conhecimento conceitual |
+| `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/40_Decisoes/` | Decisões com motivo (4) | "Por que decidimos X?" |
+| `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/10_Mapas/` | Mapas e dashboards (19) | Visão estrutural |
 
 **Segunda leva:** `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/20_Projetos/`, `50_Registros/Changelog/`.
 
 **Excluir do índice (segurança/ruído):**
-- `sources/_inbox/` — **logs Pietra (`PIETRA_YYYY-MM_LOG.md`) — NUNCA indexar** (dados pessoais)
+- `05_Raw_Sources/_compat_sources/_inbox/` — **logs Pietra (`PIETRA_YYYY-MM_LOG.md`) — NUNCA indexar** (dados pessoais)
 - `00_Inbox/` — bruto, não triado
 - `90_Arquivo/` — encerrado
 - `.obsidian/`, `.claude/` — config
@@ -94,7 +94,7 @@ Reaproveita o frontmatter já padronizado do FabioOS, somando metadados de chunk
 tipo, area, projeto, status, tags, criado_em, atualizado_em
 
 # Adicionados por chunk no banco vetorial:
-source_path:    # caminho relativo (ex.: wiki/sistemas/n8n.md)
+source_path:    # caminho relativo (ex.: 40_Wiki/_compat_wiki/sistemas/n8n.md)
 filename:       # nome do arquivo
 header_path:    # hierarquia de cabeçalhos (ex.: "Função > Como usar")
 chunk_index:    # posição do chunk no documento
@@ -102,7 +102,7 @@ vault_section:  # pasta-raiz (wiki, 60_Sistemas, ...)
 wikilinks:      # [[links]] extraídos do chunk (para navegação)
 ```
 
-O filtro por metadados permite consultas escopadas: *"buscar só em `wiki/` sobre n8n"* ou *"decisões do projeto Pietra"*.
+O filtro por metadados permite consultas escopadas: *"buscar só em `40_Wiki/_compat_wiki/` sobre n8n"* ou *"decisões do projeto Pietra"*.
 
 ---
 
@@ -172,7 +172,7 @@ resposta + lista de fontes ([caminho] + [[wikilink]] clicável)
 
 - **Tokens** (se Voyage/Claude API) → `.env` (já no `.gitignore`: `.env`, `*.key`, `tokens/`). Nunca no repositório.
 - **Embeddings locais** → nenhum dado do vault sai da máquina por padrão.
-- **Logs Pietra e `sources/_inbox/`** → excluídos da indexação.
+- **Logs Pietra e `05_Raw_Sources/_compat_sources/_inbox/`** → excluídos da indexação.
 - **Fonte externa não dá ordens:** conteúdo recuperado é dado, não instrução (princípio de ingestão do Plano Mestre).
 
 ---
@@ -187,7 +187,7 @@ Scripts em `60_Sistemas/RAG/scripts/` — guia: [[60_Sistemas/RAG/README_Scripts
 | `query_rag.py` | Consulta (modo recuperação por padrão) |
 | `batch_validate_rag.py` | 10 perguntas + 5 testes de segurança |
 
-**Última validação:** 2026-06-29 — reindex pos-limpeza Obsidian com `1206` chunks, 10/10 aceitação, 0 falhas segurança — [[60_Sistemas/RAG/Relatorio_Validacao_RAG_2026-06-29_Cursor]].
+**Última validação:** 2026-06-29 — 10/10 aceitação, 0 falhas segurança — [[60_Sistemas/RAG/Relatorio_Validacao_RAG_2026-06-29_Cursor]].
 
 **Python:** usar `60_Sistemas/RAG/.venv/Scripts/python.exe`.
 
@@ -198,7 +198,7 @@ Scripts em `60_Sistemas/RAG/scripts/` — guia: [[60_Sistemas/RAG/README_Scripts
 - [[60_Sistemas/FabioOS/Plano_Mestre_Implantacao_FabioOS]] — Fase 12
 - [[60_Sistemas/FabioOS/Visao_Interface_FabioOS]] — RAG é pré-requisito da interface
 - [[90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/10_Mapas/Painel_Pendencias_FabioOS]]
-- [[wiki/conceitos/rag]]
+- [[40_Wiki/_compat_wiki/conceitos/rag]]
 - [[60_Sistemas/RAG/README_Scripts_RAG]]
 - [[60_Sistemas/RAG/Relatorio_Validacao_RAG_2026-06-29_Cursor]]
 - [[60_Sistemas/RAG_IMPLEMENTATION]] — rascunho anterior (superado por este)
@@ -207,7 +207,7 @@ Scripts em `60_Sistemas/RAG/scripts/` — guia: [[60_Sistemas/RAG/README_Scripts
 
 - [x] Scripts `ingest_vault.py` e `query_rag.py` implementados
 - [x] Validar 10 perguntas reais — 10/10 (2026-06-29)
-- [x] `wiki/conceitos/rag.md` criada e atualizada
+- [x] `40_Wiki/_compat_wiki/conceitos/rag.md` criada e atualizada
 - [ ] Claude decidir promoção Fase 12 → piloto
-- [ ] Reindexação incremental após novos documentos relevantes
+- [ ] Reindexação incremental após novos documentos (LLM Wiki)
 - [ ] Documentar comando `/perguntar-vault` em `.claude/commands/`

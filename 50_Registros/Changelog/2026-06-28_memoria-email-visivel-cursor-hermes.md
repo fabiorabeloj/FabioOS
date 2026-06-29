@@ -33,7 +33,7 @@ atualizado_em: 2026-06-28
 - `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/10_Mapas/Dashboard.md`
 - `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/10_Mapas/Conhecimento.md`
 - `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/00_Inbox/Inbox.md`
-- `wiki/sistemas/hermes-agent.md`
+- `40_Wiki/_compat_wiki/sistemas/hermes-agent.md`
 - `60_Sistemas/Agentes/Hermes_Agent.md`
 
 ## Commits realizados

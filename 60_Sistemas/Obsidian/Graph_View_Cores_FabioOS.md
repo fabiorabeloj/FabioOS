@@ -42,7 +42,7 @@ Cor usada: `#8A8F98` (`rgb`: `9080728`).
 - `path:"00_Inbox"`
 - `path:"90_Arquivo"`
 - `path:"50_Fontes"`
-- `path:"sources"`
+- `path:"05_Raw_Sources/_compat_sources"`
 - `file:GitHub`
 - `path:"60_Sistemas/GitHub"`
 
@@ -175,7 +175,7 @@ Antes da alteracao, foi criado o backup:
 
 ## Relacoes
 
-- [[wiki/sistemas/obsidian]]
+- [[40_Wiki/_compat_wiki/sistemas/obsidian]]
 - [[60_Sistemas/FabioOS/Plano_Mestre_Implantacao_FabioOS]]
 - [[00_Arquitetura/01_Modelo_Formal_FabioOS_MEGATRON]]
 

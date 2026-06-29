@@ -57,7 +57,7 @@ Origem:
 Destino:
 
 - dashboards vivos -> `10_Dashboard/`
-- mapas de navegacao -> `40_Wiki/_MOCs/` ou compatibilidade `wiki/indices/`
+- mapas de navegacao -> `40_Wiki/_MOCs/` ou compatibilidade `40_Wiki/_compat_wiki/indices/`
 
 Observacao:
 
@@ -132,7 +132,7 @@ Destino:
 
 Regra:
 
-Fontes novas entram em `05_Raw_Sources/`; arquivos antigos de `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/50_Fontes/` podem virar indices historicos ou serem migrados para `05_Raw_Sources/` com metadados. `sources/` fica como compatibilidade operacional ate migracao de scripts/RAG/MCP.
+Fontes novas entram em `05_Raw_Sources/`; arquivos antigos de `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/50_Fontes/` podem virar indices historicos ou serem migrados para `05_Raw_Sources/` com metadados. `05_Raw_Sources/_compat_sources/` fica como compatibilidade operacional ate migracao de scripts/RAG/MCP.
 
 ## Politica de redirecionamento
 

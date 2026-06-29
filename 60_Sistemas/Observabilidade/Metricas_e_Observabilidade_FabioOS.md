@@ -19,8 +19,8 @@ Definir como o FabioOS sabe se esta funcionando.
 | Metrica | Frequencia | Fonte |
 |---|---|---|
 | notas criadas por semana | semanal | Git/Obsidian |
-| fontes preservadas | semanal | `sources/` |
-| paginas wiki criadas/atualizadas | semanal | `wiki/` |
+| fontes preservadas | semanal | `05_Raw_Sources/_compat_sources/` |
+| paginas wiki criadas/atualizadas | semanal | `40_Wiki/_compat_wiki/` |
 | decisoes registradas | semanal | `50_Registros/Decisoes/` |
 | tarefas concluidas | semanal | NEXT_ACTIONS / Tasks |
 | projetos ativos/parados | semanal | dashboards |

@@ -49,7 +49,7 @@ explica estado e ajuda Fabio a visualizar o que esta acontecendo.
 
 O agente deve consultar, nesta ordem:
 
-1. `C:/Users/user/Desktop/FabioOs/FabioOs/CLAUDE.md`
+1. `C:/Users/user/Desktop/FabioOs/FabioOs/60_Sistemas/FabioOS/bootstrap/CLAUDE.md`
 2. `C:/Users/user/Desktop/FabioOs/FabioOs/60_Sistemas/FabioOS/Registro_Frentes_Ativas.md`
 3. `C:/Users/user/Desktop/FabioOs/FabioOs/60_Sistemas/FabioOS/STATUS.md`
 4. `C:/Users/user/Desktop/FabioOs/FabioOs/60_Sistemas/FabioOS/NEXT_ACTIONS.md`

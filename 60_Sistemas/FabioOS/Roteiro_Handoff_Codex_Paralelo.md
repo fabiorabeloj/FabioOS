@@ -25,10 +25,10 @@ Leia o contexto do FabioOS e continue a partir do último changelog.
 
 Você é Codex atuando como arquiteto operacional paralelo do FabioOS/MEGATRON.
 
-Antes de qualquer ação, siga o AGENTS.md:
-1. Leia AGENTS.md.
+Antes de qualquer ação, siga o 60_Sistemas/FabioOS/bootstrap/AGENTS.md:
+1. Leia 60_Sistemas/FabioOS/bootstrap/AGENTS.md.
 2. Leia 60_Sistemas/FabioOS/Plano_Mestre_Implantacao_FabioOS.md.
-3. Leia wiki/indices/mapa-fabios.md.
+3. Leia 40_Wiki/_compat_wiki/indices/mapa-fabios.md.
 4. Leia 60_Sistemas/FabioOS/Protocolo_Operacional_FabioOS.md.
 5. Leia 90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/10_Mapas/Painel_Pendencias_FabioOS.md.
 6. Leia o último changelog em 50_Registros/Changelog/.

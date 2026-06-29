@@ -69,4 +69,4 @@ Cada lint deve gerar relatorio com:
 
 ## Piloto recomendado
 
-Executar primeiro em `wiki/sistemas/` e `wiki/conceitos/`, pois ja possuem paginas suficientes para detectar duplicacao e lacunas sem tocar dados sensiveis.
+Executar primeiro em `40_Wiki/_compat_wiki/sistemas/` e `40_Wiki/_compat_wiki/conceitos/`, pois ja possuem paginas suficientes para detectar duplicacao e lacunas sem tocar dados sensiveis.

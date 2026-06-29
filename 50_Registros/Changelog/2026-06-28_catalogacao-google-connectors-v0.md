@@ -17,8 +17,8 @@ Foi criada a primeira catalogacao real de Gmail e Google Drive usando conectores
 
 - Resumo versionavel em `60_Sistemas/FabioOS/Conectores_Google_Catalogo_v0.md`.
 - SPEC em `60_Sistemas/FabioOS/specs/2026-06-28_catalogacao-google-connectors-v0.md`.
-- Mapa Obsidian em `wiki/memoria/Mapa_Conectores_Google_FabioOS.md`.
-- Catalogos detalhados locais em `sources/email/_restrito/` e `sources/drive/_restrito/`.
+- Mapa Obsidian em `40_Wiki/_compat_wiki/memoria/Mapa_Conectores_Google_FabioOS.md`.
+- Catalogos detalhados locais em `05_Raw_Sources/_compat_sources/email/_restrito/` e `05_Raw_Sources/_compat_sources/drive/_restrito/`.
 - `.gitignore` atualizado para impedir versionamento de detalhes restritos do Drive.
 
 ## Seguranca

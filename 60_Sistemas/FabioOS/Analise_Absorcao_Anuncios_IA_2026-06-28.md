@@ -6,7 +6,7 @@ status: ativo
 tags: [fabios, roadmap, anuncios, arquitetura, megatron, fases]
 criado_em: 2026-06-28
 atualizado_em: 2026-06-28
-fonte: [[sources/docs/2026-06-28_anuncios-ia-roadmap-fabioos]]
+fonte: [[05_Raw_Sources/_compat_sources/docs/2026-06-28_anuncios-ia-roadmap-fabioos]]
 ---
 
 # Analise de Absorcao - Anuncios de IA e Roadmap FabioOS

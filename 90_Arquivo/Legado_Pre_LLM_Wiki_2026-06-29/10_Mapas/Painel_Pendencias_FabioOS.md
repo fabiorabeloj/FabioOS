@@ -41,7 +41,7 @@ Itens já iniciados ou identificados que aguardam conclusão.
 - [ ] **[Fase 17]** Criar Governanca Operacional completa: Constituicao, Matriz de Permissoes, Contratos de Agentes, Definicao de Concluido, Anti-Caos e Seguranca
 - [ ] **[Roadmap]** Revisar o Roadmap v2 com Claude/Fabio e decidir se vira roadmap oficial
 - [ ] **[Obsidian]** Executar migracao piloto pequena seguindo [[50_Registros/Auditoria/Proposta_de_Migracao_Estrutural_FabioOS]]
-- [ ] **[Memória]** Absorver ChatGPT/e-mails por protocolo seguro: ver [[wiki/memoria/Mapa_Memoria_Fabio]] e [[60_Sistemas/FabioOS/Protocolo_Ingestao_Memoria_Pessoal_Profissional]]
+- [ ] **[Memória]** Absorver ChatGPT/e-mails por protocolo seguro: ver [[40_Wiki/_compat_wiki/memoria/Mapa_Memoria_Fabio]] e [[60_Sistemas/FabioOS/Protocolo_Ingestao_Memoria_Pessoal_Profissional]]
 - [ ] **[Gmail profissional]** Solicitar autorização/conector antes de qualquer acesso ao e-mail `fabiofilosofia@colegiopietra.com.br`
 - [ ] **[Escola]** Criar cronograma bimestral GEO e FIL 2026
 - [ ] **[QA]** Testar cada comando `.claude/` com caso real
@@ -113,10 +113,10 @@ Ordem de execução acordada: **🧠 Pessoal/Aprendizado → 💼 Empresarial �
 - [[60_Sistemas/FabioOS/Roadmap_Fases_FabioOS_v2_2026-06-29]]
 - [[60_Sistemas/FabioOS/Visao_Interface_FabioOS]]
 - [[60_Sistemas/Claude_Code/Operacao_no_Claude_Desktop]]
-- [[wiki/indices/mapa-fabios]]
+- [[40_Wiki/_compat_wiki/indices/mapa-fabios]]
 
 ## Próximas ações
 
 - [ ] Repetir validação RAG completa após ajuste de ranking seguindo [[60_Sistemas/FabioOS/Roteiro_Execucao_Fase12_RAG]]
-- [ ] Atualizar `CLAUDE.md` para incluir este painel na leitura obrigatória de início de sessão
+- [ ] Atualizar `60_Sistemas/FabioOS/bootstrap/CLAUDE.md` para incluir este painel na leitura obrigatória de início de sessão
 - [ ] Atualizar `Plano_Mestre` refletindo Trader/PRIMUS no final e a Interface como capstone

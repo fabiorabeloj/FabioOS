@@ -35,7 +35,7 @@ Skills são extensões que ampliam as capacidades do Claude Code. Existem dois f
 
 ## Skills formato SKILL.md (invocação manual)
 
-Requerem `@import` no CLAUDE.md ou invocação explícita na sessão.
+Requerem `@import` no 60_Sistemas/FabioOS/bootstrap/CLAUDE.md ou invocação explícita na sessão.
 
 | Nome | Caminho local | Função | Dependência |
 |------|---------------|--------|-------------|
@@ -77,7 +77,7 @@ Quando a tarefa envolver escolha entre modelos, IAs, agentes ou ferramentas exte
 
 Quando a tarefa envolver criacao, consulta ou manutencao de conhecimento, consultar tambem:
 
-`index.md`, `log.md` e `60_Sistemas/Wiki/Schema_Wiki_FabioOS.md`
+`10_Dashboard/_entrada/index.md`, `50_Registros/Logs_Agentes/log.md` e `60_Sistemas/Wiki/Schema_Wiki_FabioOS.md`
 
 ## Relações
 

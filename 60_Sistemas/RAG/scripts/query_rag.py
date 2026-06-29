@@ -54,7 +54,7 @@ OPERATIONAL_QUERY_SUFFIX = (
 )
 CANONICAL_OPERATIONAL_SOURCES = {
     "90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/10_Mapas/Painel_Pendencias_FabioOS.md": 0.12,
-    "wiki/indices/mapa-fabios.md": 0.07,
+    "40_Wiki/_compat_wiki/indices/mapa-fabios.md": 0.07,
     "60_Sistemas/FabioOS/STATUS.md": 0.10,
     "60_Sistemas/FabioOS/NEXT_ACTIONS.md": 0.09,
 }

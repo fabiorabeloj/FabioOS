@@ -14,12 +14,12 @@ atualizado_em: 2026-06-29
 
 Entrada semantica compacta para agentes e humanos navegarem o FabioOS antes de criar, consultar ou atualizar conhecimento.
 
-Este arquivo nao substitui `wiki/README.md` nem `wiki/indices/mapa-fabios.md`. Ele e o ponto inicial da LLM Wiki operacional.
+Este arquivo nao substitui `40_Wiki/_compat_wiki/README.md` nem `40_Wiki/_compat_wiki/indices/mapa-fabios.md`. Ele e o ponto inicial da LLM Wiki operacional.
 
 ## Arquitetura e governanca
 
 - [[CLAUDE]] - regras canonicas de operacao.
-- [[AGENTS]] - ponteiro para agentes que leem AGENTS.md.
+- [[60_Sistemas/FabioOS/bootstrap/AGENTS]] - ponteiro para agentes.
 - [[00_Arquitetura/01_Modelo_Formal_FabioOS_MEGATRON]] - modelo formal.
 - [[30_Projetos/FabioOS/LLM_Wiki_FabioOS]] - decisao operacional da LLM Wiki.
 - [[60_Sistemas/FabioOS/Roadmap_Fases_FabioOS_v2_2026-06-29]] - roadmap v2 das fases do FabioOS.
@@ -38,22 +38,22 @@ Este arquivo nao substitui `wiki/README.md` nem `wiki/indices/mapa-fabios.md`. E
 - [[60_Sistemas/FabioOS/specs/2026-06-29_megatron-v1-ignorancia-explicita]] - SPEC da proxima fase tecnica do MEGATRON.
 - [[50_Registros/Decisoes/ADR_FabioOS_LLM_Wiki]] - ADR da LLM Wiki.
 - [[50_Registros/Auditoria/Reentrada_Codex_FabioOS]] - auditoria de reentrada.
-- [[wiki/conceitos/governanca-operacional-fabios]] - conceito operacional de governanca do FabioOS.
+- [[40_Wiki/_compat_wiki/conceitos/governanca-operacional-fabios]] - conceito operacional de governanca do FabioOS.
 
 ## Wiki
 
 - [[40_Wiki/README]] - camada-alvo de conhecimento processado.
-- [[wiki/README]] - indice da pasta wiki.
-- [[wiki/indices/mapa-fabios]] - mapa navegavel.
+- [[40_Wiki/_compat_wiki/README]] - indice da pasta wiki compatibilizada.
+- [[40_Wiki/_compat_wiki/indices/mapa-fabios]] - mapa navegavel.
 - [[90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/30_Conhecimento/LLM_Wiki_Pattern]] - fonte conceitual.
 - [[60_Sistemas/Claude_Code/project_llmwiki_architecture]] - memoria de arquitetura LLM Wiki.
-- [[schema/fluxo-wiki]] - fluxo minimo existente.
-- [[schema/qualidade-wiki]] - criterio de qualidade existente.
+- [[60_Sistemas/Wiki/schema/fluxo-wiki]] - fluxo minimo existente.
+- [[60_Sistemas/Wiki/schema/qualidade-wiki]] - criterio de qualidade existente.
 - [[60_Sistemas/Wiki/Schema_Wiki_FabioOS]] - schema operacional.
 - [[60_Sistemas/Wiki/Protocolo_Ingest_LLM_Wiki]] - ingest.
 - [[60_Sistemas/Wiki/Protocolo_Query_LLM_Wiki]] - query.
 - [[60_Sistemas/Wiki/Protocolo_Lint_LLM_Wiki]] - lint.
-- [[sources/fabios/2026-06-29_governanca-operacional-pontos-cegos]] - fonte do piloto LLM Wiki de governanca.
+- [[05_Raw_Sources/_compat_sources/fabios/2026-06-29_governanca-operacional-pontos-cegos]] - fonte do piloto LLM Wiki de governanca.
 
 ## RAG, MCP e agentes
 
@@ -78,9 +78,9 @@ Este arquivo nao substitui `wiki/README.md` nem `wiki/indices/mapa-fabios.md`. E
 
 Antes de criar pagina nova, ler:
 
-1. `CLAUDE.md`;
+1. `60_Sistemas/FabioOS/bootstrap/CLAUDE.md`;
 2. `index.md`;
 3. `log.md`;
-4. `wiki/README.md`;
-5. schema/protocolo aplicavel;
+4. `40_Wiki/_compat_wiki/README.md`;
+5. schema/protocolo aplicavel em `60_Sistemas/Wiki/schema/`;
 6. arquivos existentes encontrados por busca.

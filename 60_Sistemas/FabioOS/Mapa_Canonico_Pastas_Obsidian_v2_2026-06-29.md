@@ -52,7 +52,7 @@ Resumo das camadas:
 | `70_Skills/` | Skills humanas e operacionais | Habilidades reutilizaveis, capacidades e guias de uso | Codigo runtime sem documentacao |
 | `80_Specs/` | Specs executaveis | Planos, requisitos, riscos, aceite e testes | Ideias soltas sem escopo |
 | `90_Arquivo/` | Arquivo morto ou encerrado | Materiais preservados sem uso ativo | Itens pendentes ou fontes a processar |
-| `schema/` | Regras de qualidade | Schemas, criterios de qualidade, fluxos formais | Conteudo operacional diario |
+| `60_Sistemas/Wiki/schema/` | Regras de qualidade | Schemas, criterios de qualidade, fluxos formais | Conteudo operacional diario |
 | `.agents/` | Skills do Codex/FabioOS | Skills locais e comandos migrados | Documentacao humana principal |
 | `.claude/` | Configuracao Claude Code | Commands, agents, hooks e config project-level | Fontes, wiki ou decisoes |
 | `.codex/` | Configuracao Codex | Config e agentes do Codex | Segredos reais ou tokens |
@@ -69,8 +69,8 @@ Estas pastas existem e nao devem ser apagadas. Elas ficam em modo legado ate mig
 | `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/40_Decisoes/` | `50_Registros/Decisoes/` | Decisoes futuras devem virar ADR, constituicao ou registro em `50_Registros/Decisoes/`. |
 | `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/40_Repertorio/` | `40_Wiki/` | Repertorio vira subcamada/conteudo processado na wiki. |
 | `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/50_Fontes/` | `05_Raw_Sources/` | Fontes brutas novas entram em `05_Raw_Sources/`. |
-| `sources/` | `05_Raw_Sources/` | Compatibilidade operacional para scripts/RAG/MCP ate migracao. |
-| `wiki/` | `40_Wiki/` | Compatibilidade operacional para links/RAG/MCP ate migracao. |
+| `05_Raw_Sources/_compat_sources/` | `05_Raw_Sources/` | Compatibilidade operacional para scripts/RAG/MCP ate migracao. |
+| `40_Wiki/_compat_wiki/` | `40_Wiki/` | Compatibilidade operacional para links/RAG/MCP ate migracao. |
 
 ## Regra para novos arquivos
 
@@ -106,11 +106,11 @@ MEGATRON deve usar este mapa como classificador de destino.
 
 Exemplos:
 
-- pergunta conceitual -> consultar `40_Wiki/` e, durante transicao, `wiki/`;
+- pergunta conceitual -> consultar `40_Wiki/` e, durante transicao, `40_Wiki/_compat_wiki/`;
 - decisao de arquitetura -> escrever em `50_Registros/Decisoes/`;
 - automacao -> documentar em `60_Sistemas/`;
 - entrada mobile -> capturar em `00_Inbox/`;
-- fonte externa -> preservar em `05_Raw_Sources/` ou, enquanto houver compatibilidade, `sources/`;
+- fonte externa -> preservar em `05_Raw_Sources/` ou, enquanto houver compatibilidade, `05_Raw_Sources/_compat_sources/`;
 - status operacional -> atualizar `10_Dashboard/`, `STATUS` e `NEXT_ACTIONS`.
 
 ## Decisao

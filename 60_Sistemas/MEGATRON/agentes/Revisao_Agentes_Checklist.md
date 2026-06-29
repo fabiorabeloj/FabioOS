@@ -121,7 +121,7 @@ especificado -> piloto somente após triagem manual de uma inbox real.
 
 ## 2.4 RAG
 
-- [ ] Não indexa `sources/_inbox/`.
+- [ ] Não indexa `05_Raw_Sources/_compat_sources/_inbox/`.
 - [ ] Não indexa logs Pietra.
 - [ ] Não indexa `00_Inbox/` bruto.
 - [ ] Usa embeddings locais por padrão.

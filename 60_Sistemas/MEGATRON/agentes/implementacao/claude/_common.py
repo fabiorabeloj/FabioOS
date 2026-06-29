@@ -12,10 +12,10 @@ for _stream in (sys.stdout, sys.stderr):
 
 
 def vault_root() -> Path:
-    """Sobe a árvore procurando o CLAUDE.md (raiz do vault)."""
+    """Sobe a árvore procurando o 60_Sistemas/FabioOS/bootstrap/CLAUDE.md (raiz do vault)."""
     p = Path(__file__).resolve()
     for parent in p.parents:
-        if (parent / "CLAUDE.md").exists():
+        if (parent / "60_Sistemas/FabioOS/bootstrap/CLAUDE.md").exists():
             return parent
     return p.parents[5]  # fallback: agentes/implementacao/claude/ -> raiz
 

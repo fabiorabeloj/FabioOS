@@ -63,5 +63,5 @@ Implementação dos comandos slash do Sistema Escola e expansão completa do age
 ## Relações
 
 - [[60_Sistemas/Escola/Sistema_Escola]]
-- [[wiki/projetos/escola]]
+- [[40_Wiki/_compat_wiki/projetos/escola]]
 - [[50_Registros/Changelog/2026-06-26_fase8-sistema-escola]]

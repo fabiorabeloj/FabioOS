@@ -33,13 +33,13 @@ Ao ligar o PC, o usuario deve conseguir executar um unico comando ou atalho para
 Executar na raiz do vault:
 
 ```powershell
-.\start_fabioos.ps1
+.\60_Sistemas/Scripts/60_Sistemas/Scripts/start_fabioos.ps1
 ```
 
 O script fica em:
 
 ```text
-start_fabioos.ps1
+60_Sistemas/Scripts/60_Sistemas/Scripts/start_fabioos.ps1
 ```
 
 ## Variantes seguras
@@ -47,19 +47,19 @@ start_fabioos.ps1
 Abrir apenas diagnostico, sem aplicativos:
 
 ```powershell
-.\start_fabioos.ps1 -NoOpenApps -SkipBrowser
+.\60_Sistemas/Scripts/60_Sistemas/Scripts/start_fabioos.ps1 -NoOpenApps -SkipBrowser
 ```
 
 Nao tentar iniciar Docker ou containers:
 
 ```powershell
-.\start_fabioos.ps1 -SkipDocker
+.\60_Sistemas/Scripts/60_Sistemas/Scripts/start_fabioos.ps1 -SkipDocker
 ```
 
 Nao iniciar containers parados:
 
 ```powershell
-.\start_fabioos.ps1 -SkipContainers
+.\60_Sistemas/Scripts/60_Sistemas/Scripts/start_fabioos.ps1 -SkipContainers
 ```
 
 ## O que o script pode fazer

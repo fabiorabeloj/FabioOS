@@ -81,7 +81,7 @@ A Evolution API recebe a mensagem e dispara um webhook para o n8n com payload:
 1. Extrai número (anonimizado), mensagem e nome
 2. Classifica intent por palavras-gatilho (INTENTS_CATALOGO.md)
 3. Determina nível de sensibilidade (baixo / médio / alto)
-4. Salva log anonimizado em `sources/_inbox/`
+4. Salva log anonimizado em `05_Raw_Sources/_compat_sources/_inbox/`
 5. Prepara resposta-modelo do RESPOSTAS_MODELO.md
 6. Envia notificação ao professor com: mensagem original + classificação + sugestão
 
@@ -135,10 +135,10 @@ Nunca registrar: nome completo, número de telefone completo, dados de alunos id
 
 ## Relações
 
-- [[wiki/sistemas/openclaw]]
+- [[40_Wiki/_compat_wiki/sistemas/openclaw]]
 - [[60_Sistemas/Pietra/Sistema_Pietra]]
 - [[60_Sistemas/Pietra/intents/INTENTS_CATALOGO]]
 - [[60_Sistemas/Pietra/respostas-modelo/RESPOSTAS_MODELO]]
-- [[wiki/sistemas/n8n]]
+- [[40_Wiki/_compat_wiki/sistemas/n8n]]
 - [[60_Sistemas/n8n/Workflows/FabioOS_WhatsApp_Pietra]]
 - [[60_Sistemas/OpenClaw/setup/EVOLUTION_API_SETUP]]

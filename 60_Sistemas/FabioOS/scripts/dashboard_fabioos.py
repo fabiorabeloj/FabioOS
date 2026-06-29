@@ -25,9 +25,9 @@ for _stream in (sys.stdout, sys.stderr):
 def vault_root() -> Path:
     p = Path(__file__).resolve()
     for parent in p.parents:
-        if (parent / "CLAUDE.md").exists():
+        if (parent / "60_Sistemas/FabioOS/bootstrap/CLAUDE.md").exists():
             return parent
-    raise RuntimeError("Nao encontrei CLAUDE.md acima do script.")
+    raise RuntimeError("Nao encontrei 60_Sistemas/FabioOS/bootstrap/CLAUDE.md acima do script.")
 
 
 ROOT = vault_root()
@@ -42,8 +42,8 @@ RADAR_DIR = ROOT / "30_Conhecimento" / "Tecnologia" / "Radar"
 CLASSIFICACOES_DIR = ROOT / "60_Sistemas" / "FabioOS" / "classificacoes"
 SPECS_DIR = ROOT / "60_Sistemas" / "FabioOS" / "specs"
 MOBILE_INBOX_DIR = ROOT / "00_Inbox" / "mobile"
-EMAIL_SOURCES_DIR = ROOT / "sources" / "email"
-DRIVE_SOURCES_DIR = ROOT / "sources" / "drive"
+EMAIL_SOURCES_DIR = ROOT / "05_Raw_Sources/_compat_sources" / "email"
+DRIVE_SOURCES_DIR = ROOT / "05_Raw_Sources/_compat_sources" / "drive"
 IA_TOOLS_INVENTORY = ROOT / "60_Sistemas" / "FabioOS" / "Inventario_Ferramentas_IA_Local_2026-06-28.md"
 MCP_CODEX_CONFIG = Path.home() / ".codex" / "config.toml"
 OUTPUT = ROOT / "10_Mapas" / "Dashboard_Operacional_FabioOS.md"

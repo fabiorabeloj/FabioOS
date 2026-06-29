@@ -58,7 +58,7 @@ Receber uma mensagem WhatsApp de teste, classificar pelo Pietra, salvar log anon
 5. Configurar webhook para `http://host.docker.internal:5678/webhook/whatsapp-pietra-v2`.
 6. Enviar mensagem controlada de teste.
 7. Verificar resposta do webhook.
-8. Verificar log anonimizado em `sources/_inbox/PIETRA_YYYY-MM_LOG.md`.
+8. Verificar log anonimizado em `05_Raw_Sources/_compat_sources/_inbox/PIETRA_YYYY-MM_LOG.md`.
 
 ### Critérios de aceite
 

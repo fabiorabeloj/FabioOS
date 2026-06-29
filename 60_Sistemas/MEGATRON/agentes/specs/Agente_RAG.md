@@ -33,7 +33,7 @@ Ingerir conhecimento curado do vault em memória semântica local e responder co
 
 | Entrada | Origem | Formato |
 |---|---|---|
-| Notas curadas | `wiki/`, `60_Sistemas/`, `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/30_Conhecimento/`, `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/40_Decisoes/`, `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/10_Mapas/` | Markdown |
+| Notas curadas | `40_Wiki/_compat_wiki/`, `60_Sistemas/`, `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/30_Conhecimento/`, `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/40_Decisoes/`, `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/10_Mapas/` | Markdown |
 | Pergunta | usuário, MEGATRON ou agente | texto |
 | Filtro de busca | MEGATRON | pasta, domínio, tags |
 | Exclusões | Arquitetura RAG | lista de pastas |
@@ -64,13 +64,13 @@ Ingerir conhecimento curado do vault em memória semântica local e responder co
 | Escrita segura | Sim | Índice local e logs sanitizados |
 | Indexação | Sim | Excluir pastas sensíveis |
 | Escrita em wiki | Não na v1 | Encaminhar síntese ao Arquivista |
-| Dados sensíveis | Não | Excluir `sources/_inbox/` e logs Pietra |
+| Dados sensíveis | Não | Excluir `05_Raw_Sources/_compat_sources/_inbox/` e logs Pietra |
 | Envio externo | Não | Fora do escopo |
 | Commit | Não | Encaminhar para SafeCommit |
 
 ## Limites
 
-- Não indexar `sources/_inbox/`, logs Pietra, `.obsidian/`, `.claude/`, `00_Inbox/` bruto ou dados não triados.
+- Não indexar `05_Raw_Sources/_compat_sources/_inbox/`, logs Pietra, `.obsidian/`, `.claude/`, `00_Inbox/` bruto ou dados não triados.
 - Não responder além das fontes recuperadas.
 - Não tratar resultado sem fonte como certeza.
 - Não substituir wiki; apenas consultar.
@@ -115,7 +115,7 @@ MEGATRON aciona RAG para responder perguntas, buscar contexto antes de decisões
 ## Implementação mínima
 
 1. Usar Chroma local e embeddings locais conforme a arquitetura da Fase 12.
-2. Ingerir apenas `wiki/`, `60_Sistemas/`, `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/30_Conhecimento/`, `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/40_Decisoes/` e `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/10_Mapas/`.
+2. Ingerir apenas `40_Wiki/_compat_wiki/`, `60_Sistemas/`, `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/30_Conhecimento/`, `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/40_Decisoes/` e `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/10_Mapas/`.
 3. Criar consulta top-k com fontes.
 4. Validar com 10 perguntas reais.
 

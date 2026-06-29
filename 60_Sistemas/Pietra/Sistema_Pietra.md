@@ -174,10 +174,10 @@ PIETRA_2026-06_FLUXO-MATRICULA.md
 
 ## Relações
 
-- [[wiki/projetos/pietra]]
+- [[40_Wiki/_compat_wiki/projetos/pietra]]
 - [[60_Sistemas/Escola/Sistema_Escola]]
-- [[wiki/sistemas/openclaw]]
-- [[wiki/sistemas/n8n]]
+- [[40_Wiki/_compat_wiki/sistemas/openclaw]]
+- [[40_Wiki/_compat_wiki/sistemas/n8n]]
 - [[60_Sistemas/FabioOS/Protocolo_Operacional_FabioOS]]
 - [[60_Sistemas/FabioOS/Plano_Mestre_Implantacao_FabioOS]]
 

@@ -563,7 +563,7 @@ MEGATRON
 
 ### 6.1 Fontes Imutáveis
 
-Camada de preservação. Fica em `sources/`, `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/50_Fontes/` ou pastas específicas quando houver motivo histórico.
+Camada de preservação. Fica em `05_Raw_Sources/_compat_sources/`, `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/50_Fontes/` ou pastas específicas quando houver motivo histórico.
 
 ### 6.2 Digestão
 
@@ -1170,15 +1170,15 @@ Nenhum documento anterior deve ser apagado sem autorização. Documentos histór
 - [[60_Sistemas/Pietra/Sistema_Pietra]]
 - [[90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/20_Projetos/PRIMUS/01_SISTEMA_DEFINICOES]]
 - [[90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/30_Conhecimento/LLM_Wiki_Pattern]]
-- [[schema/fluxo-wiki]]
-- [[schema/qualidade-wiki]]
-- [[wiki/indices/mapa-fabios]]
+- [[60_Sistemas/Wiki/schema/fluxo-wiki]]
+- [[60_Sistemas/Wiki/schema/qualidade-wiki]]
+- [[40_Wiki/_compat_wiki/indices/mapa-fabios]]
 - [[90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/10_Mapas/Painel_Pendencias_FabioOS]]
 
 ## Próximas ações
 
 - [ ] Criar `00_Arquitetura/02_Ontologia_FabioOS.md` apenas se a implementação do grafo exigir detalhamento separado.
 - [ ] Criar `00_Arquitetura/03_Epistemologia_FabioOS.md` apenas se as regras de confiança precisarem virar schema operacional.
-- [ ] Atualizar `wiki/indices/mapa-fabios.md` para incluir `00_Arquitetura/01_Modelo_Formal_FabioOS_MEGATRON`.
+- [ ] Atualizar `40_Wiki/_compat_wiki/indices/mapa-fabios.md` para incluir `00_Arquitetura/01_Modelo_Formal_FabioOS_MEGATRON`.
 - [ ] Atualizar `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/10_Mapas/Painel_Pendencias_FabioOS.md` com a nova pendência de formalizar ontologia/grafo.
 - [ ] Criar changelog desta entrega antes de qualquer commit.

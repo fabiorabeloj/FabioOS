@@ -126,7 +126,7 @@ Foram verificados os caminhos proibidos:
 
 ```text
 00_Inbox
-sources/_inbox
+05_Raw_Sources/_compat_sources/_inbox
 .obsidian
 .claude
 .codex

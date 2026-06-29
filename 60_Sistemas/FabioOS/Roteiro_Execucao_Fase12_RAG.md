@@ -26,7 +26,7 @@ Este roteiro não substitui a [[60_Sistemas/RAG/Arquitetura_RAG_FabioOS]] nem o 
 | Agente RAG | implementação mínima criada |
 | Plano de validação | criado |
 | Dependências | instaladas em `60_Sistemas/RAG/.venv/` |
-| Primeira ingestão | concluída; reindex pos-limpeza Obsidian com `1206` chunks |
+| Primeira ingestão | concluída (1795 chunks) |
 | 10 perguntas reais | **concluídas 10/10** (2026-06-29, Cursor) |
 | Promoção para piloto | aguarda revisão Claude |
 
@@ -38,7 +38,7 @@ Este roteiro não substitui a [[60_Sistemas/RAG/Arquitetura_RAG_FabioOS]] nem o 
 - [ ] Confirmar que `.env`, tokens e credenciais não serão usados.
 - [ ] Ler [[60_Sistemas/RAG/Arquitetura_RAG_FabioOS]].
 - [ ] Ler [[60_Sistemas/FabioOS/Plano_Validacao_Fase12_RAG]].
-- [ ] Confirmar que `sources/_inbox/`, `00_Inbox/`, logs Pietra e configs locais estão excluídos.
+- [ ] Confirmar que `05_Raw_Sources/_compat_sources/_inbox/`, `00_Inbox/`, logs Pietra e configs locais estão excluídos.
 
 ## 2. Instalação controlada
 
@@ -64,11 +64,12 @@ Executar:
 
 Critério:
 
-- [x] Indexa `wiki/`.
-- [x] Indexa corpus operacional selecionado de `60_Sistemas/`.
-- [x] Indexa painel legado necessario em `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/10_Mapas/`.
-- [x] Indexa decisoes legadas em `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/40_Decisoes/`.
-- [x] Não indexa pastas proibidas.
+- [ ] Indexa `40_Wiki/_compat_wiki/`.
+- [ ] Indexa `60_Sistemas/`.
+- [ ] Indexa `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/30_Conhecimento/`.
+- [ ] Indexa `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/40_Decisoes/`.
+- [ ] Indexa `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/10_Mapas/`.
+- [ ] Não indexa pastas proibidas.
 
 ## 4. Primeira consulta
 
@@ -113,9 +114,9 @@ Após os testes:
 
 - [x] Criar relatório de validação — [[60_Sistemas/RAG/Relatorio_Validacao_RAG_2026-06-29_Cursor]]
 - [x] Registrar falhas e lacunas — ranking status corrigido; 10/10 pos-ajuste
-- [x] Atualizar STATUS/NEXT_ACTIONS e Registro de Frentes com resultado pos-reindex
-- [x] Rodar SafeCommit/check-secrets
-- [x] Commitar somente após aprovação
+- [ ] Atualizar Painel de Pendências (zona Codex/Claude)
+- [ ] Rodar SafeCommit/check-secrets
+- [ ] Commitar somente após aprovação
 
 ## 7. Critério de saída
 
@@ -138,5 +139,5 @@ A Fase 12 só pode ser considerada `piloto` se:
 ## Próximas ações
 
 - [ ] Claude decidir promoção Fase 12 → piloto
-- [x] Commitar entregas Cursor/Codex após scan de segredos
-- [ ] Reindexação incremental quando houver novos documentos relevantes
+- [ ] Commitar entregas Cursor após scan de segredos
+- [ ] Reindexação incremental quando houver novos documentos

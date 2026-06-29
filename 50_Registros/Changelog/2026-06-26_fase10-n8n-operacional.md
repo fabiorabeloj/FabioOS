@@ -22,13 +22,13 @@ Criação da infraestrutura documentada do n8n no FabioOS: estrutura de pastas, 
 | Arquivo | Descrição |
 |---|---|
 | `60_Sistemas/n8n/README.md` | Operação do n8n: Docker, import, credencial Obsidian, padrão de docs |
-| `60_Sistemas/n8n/Workflows/FabioOS_Webhook_Inbox.md` | Documentação completa do workflow (10 seções padrão CLAUDE.md) |
+| `60_Sistemas/n8n/Workflows/FabioOS_Webhook_Inbox.md` | Documentação completa do workflow (10 seções padrão 60_Sistemas/FabioOS/bootstrap/CLAUDE.md) |
 | `60_Sistemas/n8n/Workflows/FabioOS_Webhook_Inbox.json` | Workflow importável com 4 nós: Webhook → Code → HTTP Request → Responder |
 
 ## Arquivos atualizados
 
-- `wiki/sistemas/n8n.md` — uso atual atualizado, próximas ações revisadas, riscos ampliados
-- `wiki/indices/mapa-fabios.md` — fase 10 em andamento, próxima: 11
+- `40_Wiki/_compat_wiki/sistemas/n8n.md` — uso atual atualizado, próximas ações revisadas, riscos ampliados
+- `40_Wiki/_compat_wiki/indices/mapa-fabios.md` — fase 10 em andamento, próxima: 11
 
 ## Arquitetura do workflow FabioOS_Webhook_Inbox
 
@@ -40,7 +40,7 @@ POST /webhook/fabios-inbox
   · frontmatter: tipo/origem/status/tags/capturado_em
         ↓
 [HTTP Request: Salvar no Vault]
-  · PUT https://host.docker.internal:27124/vault/sources/_inbox/{filename}
+  · PUT https://host.docker.internal:27124/vault/05_Raw_Sources/_compat_sources/_inbox/{filename}
   · Auth: Bearer {OBSIDIAN_TOKEN}
   · SSL: skip (certificado auto-assinado)
         ↓
@@ -52,7 +52,7 @@ POST /webhook/fabios-inbox
 
 - **host.docker.internal** em vez de `localhost` — n8n roda em Docker, Obsidian no host
 - **Obsidian REST API** como ponte de escrita — não requer remontar o contêiner Docker
-- **`sources/_inbox/` como destino** — todas as entradas externas passam por triagem antes de integrar ao vault
+- **`05_Raw_Sources/_compat_sources/_inbox/` como destino** — todas as entradas externas passam por triagem antes de integrar ao vault
 - **SSL ignorado no nó HTTP** — certificado auto-assinado do Obsidian não impede a operação
 - **Workflow inativo por padrão** — ativação manual é obrigatória (alinhado com protocolo de aprovação)
 
@@ -71,7 +71,7 @@ POST /webhook/fabios-inbox
     curl -X POST http://localhost:5678/webhook/fabios-inbox \
       -H "Content-Type: application/json" \
       -d '{"titulo":"Teste Fase 10","conteudo":"Webhook funcionando.","tipo":"texto","origem":"webhook"}'
-[ ] Confirmar nota criada em sources/_inbox/
+[ ] Confirmar nota criada em 05_Raw_Sources/_compat_sources/_inbox/
 ```
 
 ## Próxima fase
@@ -82,7 +82,7 @@ POST /webhook/fabios-inbox
 
 - [[60_Sistemas/n8n/README]]
 - [[60_Sistemas/n8n/Workflows/FabioOS_Webhook_Inbox]]
-- [[wiki/sistemas/n8n]]
-- [[wiki/sistemas/obsidian]]
-- [[sources/README]]
+- [[40_Wiki/_compat_wiki/sistemas/n8n]]
+- [[40_Wiki/_compat_wiki/sistemas/obsidian]]
+- [[05_Raw_Sources/_compat_sources/README]]
 - [[50_Registros/Changelog/2026-06-26_fase9-sistema-pietra]]

@@ -22,7 +22,7 @@ Criação do Sistema Pietra — atendimento inteligente para mensagens escolares
 | Arquivo | Descrição |
 |---|---|
 | `60_Sistemas/Pietra/Sistema_Pietra.md` | Doc operacional: módulos, fluxo, categorias, integração futura |
-| `wiki/projetos/pietra.md` | Wiki do projeto: função, uso atual/futuro, critério de sucesso |
+| `40_Wiki/_compat_wiki/projetos/pietra.md` | Wiki do projeto: função, uso atual/futuro, critério de sucesso |
 
 ### Módulos operacionais
 
@@ -34,7 +34,7 @@ Criação do Sistema Pietra — atendimento inteligente para mensagens escolares
 
 ## Arquivos atualizados
 
-- `wiki/indices/mapa-fabios.md` — Pietra atualizado para ativo; fase 9 concluída; próxima: 10
+- `40_Wiki/_compat_wiki/indices/mapa-fabios.md` — Pietra atualizado para ativo; fase 9 concluída; próxima: 10
 - `60_Sistemas/FabioOS/Plano_Mestre_Implantacao_FabioOS.md` — fase 9 concluída com entregáveis listados
 
 ## Decisões registradas
@@ -56,12 +56,12 @@ Criação do Sistema Pietra — atendimento inteligente para mensagens escolares
 
 ## Próxima fase
 
-**Fase 10 — n8n operacional:** criar o primeiro workflow real com webhook gerando nota em `sources/_inbox/`.
+**Fase 10 — n8n operacional:** criar o primeiro workflow real com webhook gerando nota em `05_Raw_Sources/_compat_sources/_inbox/`.
 
 ## Relações
 
 - [[60_Sistemas/Pietra/Sistema_Pietra]]
-- [[wiki/projetos/pietra]]
-- [[wiki/sistemas/n8n]]
-- [[wiki/sistemas/openclaw]]
+- [[40_Wiki/_compat_wiki/projetos/pietra]]
+- [[40_Wiki/_compat_wiki/sistemas/n8n]]
+- [[40_Wiki/_compat_wiki/sistemas/openclaw]]
 - [[50_Registros/Changelog/2026-06-26_fase8-sistema-escola]]

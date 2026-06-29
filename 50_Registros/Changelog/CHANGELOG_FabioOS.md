@@ -24,8 +24,8 @@ Arquivos principais:
 - `60_Sistemas/Wiki/Protocolo_Lint_LLM_Wiki.md`
 - `10_Dashboard/RAG_MCP_Control_Plane.md`
 - `10_Dashboard/LLM_Wiki_FabioOS.md`
-- `index.md`
-- `log.md`
+- `10_Dashboard/_entrada/index.md`
+- `50_Registros/Logs_Agentes/log.md`
 
 Restricoes respeitadas:
 
@@ -43,10 +43,10 @@ Executado piloto pequeno da LLM Wiki no dominio FabioOS/Governanca.
 
 Entrega:
 
-- fonte preservada em `sources/fabios/2026-06-29_governanca-operacional-pontos-cegos.md`;
-- pagina wiki criada em `wiki/conceitos/governanca-operacional-fabios.md`;
+- fonte preservada em `05_Raw_Sources/_compat_sources/fabios/2026-06-29_governanca-operacional-pontos-cegos.md`;
+- pagina wiki criada em `40_Wiki/_compat_wiki/conceitos/governanca-operacional-fabios.md`;
 - pagina existente `30_Projetos/FabioOS/LLM_Wiki_FabioOS.md` atualizada com resultado do piloto;
-- `index.md` e `log.md` atualizados;
+- `10_Dashboard/_entrada/index.md` e `50_Registros/Logs_Agentes/log.md` atualizados;
 - dashboard LLM Wiki e NEXT_ACTIONS atualizados.
 
 Restricoes respeitadas:
@@ -179,7 +179,7 @@ Documentos principais:
 Decisao:
 
 - a estrutura nova passa a aparecer fisicamente no Obsidian;
-- `sources/` e `wiki/` continuam preservados como compatibilidade operacional;
+- `05_Raw_Sources/_compat_sources/` e `40_Wiki/_compat_wiki/` continuam preservados como compatibilidade operacional;
 - nenhuma pasta antiga foi apagada;
 - nenhum conteudo foi movido em massa;
 - migracao real deve ocorrer por lote pequeno.
@@ -187,7 +187,7 @@ Decisao:
 Restricoes respeitadas:
 
 - sem apagar arquivos;
-- sem mover `sources/` ou `wiki/`;
+- sem mover `05_Raw_Sources/_compat_sources/` ou `40_Wiki/_compat_wiki/`;
 - sem reindexar RAG;
 - sem regenerar Grafo;
 - sem push.
@@ -217,21 +217,21 @@ Arquivos soltos reorganizados:
 
 Ocultado na navegacao do Obsidian via `.obsidian/app.json`:
 
-- `AGENTS.md`
-- `CLAUDE.md`
-- `CODEX.md`
+- `60_Sistemas/FabioOS/bootstrap/AGENTS.md`
+- `60_Sistemas/FabioOS/bootstrap/CLAUDE.md`
+- `60_Sistemas/FabioOS/bootstrap/CODEX.md`
 - `README.md`
-- `log.md`
-- `start_fabioos.ps1`
-- `sources/`
-- `wiki/`
-- `schema/`
+- `50_Registros/Logs_Agentes/log.md`
+- `60_Sistemas/Scripts/60_Sistemas/Scripts/start_fabioos.ps1`
+- `05_Raw_Sources/_compat_sources/`
+- `40_Wiki/_compat_wiki/`
+- `60_Sistemas/Wiki/schema/`
 - diretorios tecnicos de agentes/configuracao
 
 Decisao:
 
 - nenhuma pasta ou arquivo foi apagado;
-- `sources/`, `wiki/` e `schema/` permanecem na raiz por compatibilidade tecnica;
+- `05_Raw_Sources/_compat_sources/`, `40_Wiki/_compat_wiki/` e `60_Sistemas/Wiki/schema/` permanecem na raiz por compatibilidade tecnica;
 - backlinks textuais foram atualizados quando apontavam para caminhos legados;
 - migracoes de conteudo util do legado devem ocorrer por lotes pequenos.
 

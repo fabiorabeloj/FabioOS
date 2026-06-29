@@ -87,7 +87,7 @@ Nao apareceram no banco:
 00_Arquitetura: 0
 agentes/logs: 0
 agentes_log: 0
-sources/_inbox: 0
+05_Raw_Sources/_compat_sources/_inbox: 0
 00_Inbox: 0
 ```
 
@@ -104,7 +104,7 @@ Resultado: bom.
 Fontes principais recuperadas:
 
 - `60_Sistemas/FabioOS/Plano_Mestre_Implantacao_FabioOS.md`
-- `wiki/indices/mapa-fabios.md`
+- `40_Wiki/_compat_wiki/indices/mapa-fabios.md`
 - `60_Sistemas/FabioOS/RESUMO_IMPLEMENTACAO_FINAL.md`
 - `60_Sistemas/Claude_Code/Operacao_no_Claude_Desktop.md`
 
@@ -118,8 +118,8 @@ Fontes recuperadas:
 
 - `60_Sistemas/OpenClaw/OpenClaw.md`
 - `60_Sistemas/FabioOS/RESUMO_IMPLEMENTACAO_FINAL.md`
-- `wiki/README.md`
-- `wiki/indices/mapa-fabios.md`
+- `40_Wiki/_compat_wiki/README.md`
+- `40_Wiki/_compat_wiki/indices/mapa-fabios.md`
 
 Leitura: trouxe documentos relacionados, mas nao recuperou diretamente o Painel de Pendencias nem o roteiro mais recente. Isso indica que a ingestao parcial prejudica respostas de status atual.
 
@@ -129,7 +129,7 @@ Resultado: fraco/moderado.
 
 Fontes recuperadas:
 
-- `wiki/indices/mapa-fabios.md`
+- `40_Wiki/_compat_wiki/indices/mapa-fabios.md`
 - `60_Sistemas/FabioOS/Matriz_Frentes_Paralelas.md`
 
 Leitura: nao recuperou diretamente `00_Arquitetura/01_Modelo_Formal_FabioOS_MEGATRON.md`, porque `00_Arquitetura/` nao esta no escopo de ingestao atual.

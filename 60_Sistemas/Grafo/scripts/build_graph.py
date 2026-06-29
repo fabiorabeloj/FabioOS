@@ -36,7 +36,7 @@ INCLUDE_DIRS = [
     "40_Decisoes",
     "50_Registros",
     "60_Sistemas",
-    "wiki",
+    "40_Wiki/_compat_wiki",
 ]
 
 EXCLUDE_PARTS = {
@@ -155,9 +155,9 @@ def infer_type(path: Path, meta: dict[str, Any]) -> str:
     p = rel_path(path).lower()
     if explicit in {"sistema", "protocolo", "plano-mestre"} or p.startswith("60_sistemas/"):
         return "Sistema" if p.count("/") <= 2 else "Nota"
-    if explicit in {"conceito", "wiki"} or p.startswith("wiki/conceitos/") or p.startswith("30_conhecimento/"):
+    if explicit in {"conceito", "40_Wiki/_compat_wiki"} or p.startswith("40_Wiki/_compat_wiki/conceitos/") or p.startswith("30_conhecimento/"):
         return "Conceito"
-    if "projeto" in explicit or p.startswith("20_projetos/") or p.startswith("wiki/projetos/"):
+    if "projeto" in explicit or p.startswith("20_projetos/") or p.startswith("40_Wiki/_compat_wiki/projetos/"):
         return "Projeto"
     if "decis" in explicit or p.startswith("40_decisoes/"):
         return "Decisao"

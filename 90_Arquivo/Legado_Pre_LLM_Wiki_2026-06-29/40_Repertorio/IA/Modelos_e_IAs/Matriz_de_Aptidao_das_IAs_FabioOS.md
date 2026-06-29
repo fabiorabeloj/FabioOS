@@ -393,7 +393,7 @@ Antes de usar qualquer IA/modelo/ferramenta, MEGATRON, Claude ou Codex deve resp
 | Tarefas proibidas/inadequadas | alterar vault diretamente, agir em contas sensiveis, executar sem fonte preservada |
 | Papel no FabioOS | executor externo de pesquisa |
 | Categoria | leitor, executor externo |
-| Integracao possivel | relatorios entram em `sources/research/` e depois LLM Wiki |
+| Integracao possivel | relatorios entram em `05_Raw_Sources/_compat_sources/research/` e depois LLM Wiki |
 | Risco | resultado nao rastreavel ou fonte nao preservada |
 | Criterio de teste | entregar relatorio com links/fontes que vire nota no FabioOS |
 | Criterio de permanencia | manter se economizar tempo em pesquisa longa com fontes confiaveis |

@@ -46,10 +46,10 @@ Criar uma catalogacao inicial segura de Gmail e Google Drive usando os conectore
 ```text
 Gmail/Drive connector
   -> inventario de metadados
-  -> detalhe local em sources/*/_restrito/
+  -> detalhe local em 05_Raw_Sources/_compat_sources/*/_restrito/
   -> resumo seguro versionavel
   -> mapa Obsidian
-  -> triagem posterior para wiki/RAG/Grafo
+  -> triagem posterior para 40_Wiki/_compat_wiki/RAG/Grafo
 ```
 
 ## 6. Plano de tarefas
@@ -76,7 +76,7 @@ Gmail/Drive connector
 - [x] `gmail.list_labels`.
 - [x] `gmail.search_email_ids` com filtro seguro.
 - [x] `google_drive.list_folder root`.
-- [x] Confirmar `.gitignore` para `sources/drive/_restrito/`.
+- [x] Confirmar `.gitignore` para `05_Raw_Sources/_compat_sources/drive/_restrito/`.
 
 ## 9. Riscos
 

@@ -158,7 +158,7 @@ ou adicionar modo `--strict` com padrões mais amplos.
 
 **Impacto:** baixo agora; pode quebrar se a implementação for movida.
 
-**Recomendação:** se `CLAUDE.md` não for encontrado, falhar explicitamente com erro claro em vez de inferir por índice fixo.
+**Recomendação:** se `60_Sistemas/FabioOS/bootstrap/CLAUDE.md` não for encontrado, falhar explicitamente com erro claro em vez de inferir por índice fixo.
 
 ---
 

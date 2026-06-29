@@ -84,7 +84,7 @@ Se `escalonar === true` → rota de escalamento direto (notifica coordenação).
 Se não → rota normal (prepara sugestão para professor).
 
 ### Nó 5: Salvar Log no Vault (HTTP Request)
-- Appenda linha ao arquivo `sources/_inbox/PIETRA_YYYY-MM_LOG.md` via Obsidian API
+- Appenda linha ao arquivo `05_Raw_Sources/_compat_sources/_inbox/PIETRA_YYYY-MM_LOG.md` via Obsidian API
 - Formato: `| data | hora | canal | categoria | nível | ação | status |`
 - Número anonimizado: apenas 4 últimos dígitos
 
@@ -170,7 +170,7 @@ curl -X POST http://localhost:5678/webhook/whatsapp-pietra-v2 `
 
 **Resultado esperado:**
 - Resposta JSON: `{status: "ok", categoria: "prova", nivel: "médio"}`
-- Log criado em `sources/_inbox/PIETRA_2026-06_LOG.md`
+- Log criado em `05_Raw_Sources/_compat_sources/_inbox/PIETRA_2026-06_LOG.md`
 
 Ou use `/simular-mensagem-pietra "Quando é a prova de geo?"` para testar sem precisar do n8n.
 
@@ -197,5 +197,5 @@ Ou use `/simular-mensagem-pietra "Quando é a prova de geo?"` para testar sem pr
 - [[60_Sistemas/Pietra/intents/INTENTS_CATALOGO]]
 - [[60_Sistemas/Pietra/respostas-modelo/RESPOSTAS_MODELO]]
 - [[60_Sistemas/n8n/Workflows/FabioOS_Webhook_Inbox]]
-- [[wiki/sistemas/n8n]]
-- [[wiki/sistemas/openclaw]]
+- [[40_Wiki/_compat_wiki/sistemas/n8n]]
+- [[40_Wiki/_compat_wiki/sistemas/openclaw]]

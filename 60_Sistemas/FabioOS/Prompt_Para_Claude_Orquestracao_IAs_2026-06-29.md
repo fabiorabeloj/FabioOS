@@ -16,13 +16,13 @@ Cole no Claude quando ele retornar:
 Leia o contexto do FabioOS e continue a partir do ultimo changelog.
 
 Antes de agir, leia:
-- CLAUDE.md
+- 60_Sistemas/FabioOS/bootstrap/CLAUDE.md
 - 60_Sistemas/FabioOS/Registro_Frentes_Ativas.md
 - 60_Sistemas/FabioOS/Quadro_Comando_IAs_Agentes_2026-06-28.md
 - 90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/40_Repertorio/IA/Modelos_e_IAs/Matriz_de_Aptidao_das_IAs_FabioOS.md
 - 30_Projetos/FabioOS/LLM_Wiki_FabioOS.md
-- index.md
-- log.md
+- 10_Dashboard/_entrada/index.md
+- 50_Registros/Logs_Agentes/log.md
 - 60_Sistemas/Wiki/Schema_Wiki_FabioOS.md
 - 60_Sistemas/FabioOS/Plano_Capacidades_Agentes_Cursor_Hermes_2026-06-28.md
 - 60_Sistemas/FabioOS/Politica_Codex_Config_Local_vs_Vault_2026-06-28.md

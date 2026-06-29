@@ -40,8 +40,8 @@ Essa matriz define vocacao, limites, risco, teste e criterio de permanencia. Nen
 Antes de criar, alterar ou consolidar conhecimento no vault, consultar tambem:
 
 ```text
-index.md
-log.md
+10_Dashboard/_entrada/index.md
+50_Registros/Logs_Agentes/log.md
 60_Sistemas/Wiki/Schema_Wiki_FabioOS.md
 ```
 
@@ -73,7 +73,7 @@ Esses arquivos definem a LLM Wiki operacional e evitam duplicacao, notas soltas 
 |---|---|---|
 | Commit, revisao antes de commit, push | `security-reviewer`, `/check-secrets`, `/safe-commit` | `.claude/agents/security-reviewer.md`, `.agents/skills/source-command-check-secrets/` |
 | Organizar vault, revisar estrutura, links, frontmatter | `vault-architect` | `.claude/agents/vault-architect.md`, `.codex/agents/vault-architect.toml` |
-| Transformar fonte em wiki | `wiki-curator`, `/source-to-wiki`, `/check-source-quality` | `.claude/agents/wiki-curator.md`, `.agents/skills/source-command-source-to-wiki/` |
+| Transformar fonte em wiki | `wiki-curator`, `/source-to-wiki`, `/check-source-quality` | `.claude/agents/wiki-curator.md`, `.agents/skills/source-command-source-to-40_Wiki/_compat_wiki/` |
 | Arquivar URL/PDF/DOC | `/ingest-url`, `/ingest-pdf`, `/ingest-doc`, `/archive-source` | `.claude/commands/`, `.agents/skills/` |
 | Criar prova, revisao, gabarito ou comunicado | `school-assistant`, `/criar-prova`, `/criar-revisao`, `/criar-gabarito`, `/criar-comunicado` | `.claude/agents/school-assistant.md`, `.agents/skills/` |
 | Consultar conhecimento do vault | RAG local | `60_Sistemas/RAG/scripts/query_rag.py` |
@@ -212,7 +212,7 @@ Este protocolo estara funcionando quando:
 
 ## Relacoes
 
-- [[CLAUDE]]
+- [[60_Sistemas/FabioOS/bootstrap/CLAUDE]]
 - [[60_Sistemas/Claude_Code/Claude_Project_Config]]
 - [[60_Sistemas/Claude_Code/Workstation_FabioOS]]
 - [[60_Sistemas/Skills/Inventario_Skills]]

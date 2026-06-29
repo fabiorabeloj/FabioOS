@@ -76,7 +76,7 @@ Pergunta do Fabio
 - [ ] Definir formato de resposta com fontes.
 - [ ] Definir formato de "nao sei ainda".
 - [ ] Criar log de consultas MEGATRON v1.
-- [ ] Integrar leitura de `index.md`, `log.md`, `STATUS.md` e `NEXT_ACTIONS.md`.
+- [ ] Integrar leitura de `10_Dashboard/_entrada/index.md`, `50_Registros/Logs_Agentes/log.md`, `STATUS.md` e `NEXT_ACTIONS.md`.
 - [ ] Integrar consulta RAG read-only.
 - [ ] Integrar consulta Grafo read-only.
 - [ ] Integrar MCP FabioOS read-only quando ferramenta nativa estiver disponivel.

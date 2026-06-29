@@ -16,7 +16,7 @@ atualizado_em: 2026-06-27
 Leia o contexto do FabioOS e continue a partir do ultimo changelog.
 
 Antes de qualquer acao, leia obrigatoriamente:
-- CLAUDE.md
+- 60_Sistemas/FabioOS/bootstrap/CLAUDE.md
 - 60_Sistemas/FabioOS/Registro_Frentes_Ativas.md
 - 60_Sistemas/FabioOS/STATUS.md
 - 60_Sistemas/FabioOS/NEXT_ACTIONS.md

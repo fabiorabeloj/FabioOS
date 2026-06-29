@@ -132,5 +132,5 @@ curl -X POST http://localhost:8080/message/sendText/escola `
 ## Relações
 
 - [[60_Sistemas/OpenClaw/Sistema_OpenClaw]]
-- [[wiki/sistemas/openclaw]]
+- [[40_Wiki/_compat_wiki/sistemas/openclaw]]
 - [[60_Sistemas/n8n/Workflows/FabioOS_WhatsApp_Pietra]]

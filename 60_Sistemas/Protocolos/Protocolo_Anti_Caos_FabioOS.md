@@ -65,4 +65,4 @@ Relatorio em `50_Registros/Auditoria/` com:
 
 - [[60_Sistemas/Wiki/Protocolo_Lint_LLM_Wiki]]
 - [[60_Sistemas/Protocolos/Definicao_de_Concluido_FabioOS]]
-- [[wiki/conceitos/governanca-operacional-fabios]]
+- [[40_Wiki/_compat_wiki/conceitos/governanca-operacional-fabios]]

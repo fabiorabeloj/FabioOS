@@ -20,7 +20,7 @@ A meta nao e copiar tudo cegamente. A meta e converter informacao em memoria uti
 
 1. **Consentimento por fonte**: cada conta, exportacao ou pasta precisa ser autorizada.
 2. **Minimizacao**: preservar o necessario; resumir quando o bruto for sensivel.
-3. **Separacao bruto/processado**: fontes em `sources/`; conhecimento consolidado em `wiki/`.
+3. **Separacao bruto/processado**: fontes em `05_Raw_Sources/_compat_sources/`; conhecimento consolidado em `40_Wiki/_compat_wiki/`.
 4. **Nao vazar segredos**: tokens, senhas, chaves, links privados e dados sensiveis nao entram no RAG sem filtro.
 5. **Rastreabilidade**: toda nota processada deve apontar para fonte, data e criterio de selecao.
 6. **Direito ao esquecimento**: qualquer fonte pode ser marcada como `restrito`, `nao-indexar` ou removida mediante decisao humana.
@@ -37,7 +37,7 @@ A meta nao e copiar tudo cegamente. A meta e converter informacao em memoria uti
 ## Estrutura de pastas
 
 ```text
-sources/
+05_Raw_Sources/_compat_sources/
   chatgpt/
     exports/
     conversas/
@@ -46,7 +46,7 @@ sources/
     pessoal/
     trabalho/
     _restrito/
-wiki/
+40_Wiki/_compat_wiki/
   memoria/
     pessoas/
     projetos/
@@ -102,7 +102,7 @@ Dados de alta sensibilidade devem ficar fora do RAG por padrao.
 
 ### Camada 3 - Fonte normalizada
 
-Criar notas em `sources/` com frontmatter:
+Criar notas em `05_Raw_Sources/_compat_sources/` com frontmatter:
 
 ```yaml
 ---
@@ -118,7 +118,7 @@ tags: []
 
 ### Camada 4 - Conhecimento consolidado
 
-Transformar fontes relevantes em notas `wiki/memoria/` com:
+Transformar fontes relevantes em notas `40_Wiki/_compat_wiki/memoria/` com:
 
 - fatos;
 - decisoes;
@@ -156,7 +156,7 @@ Quando Fabio indicar uma thread ou mensagem especifica, converter o e-mail em co
 2. leitura de anexos apenas quando explicitamente permitido;
 3. extracao de objetivo, resumo executivo, pessoas, instituicoes, datas, prazos, eventos, decisoes, solicitacoes, pendencias, links, arquivos citados, riscos e prioridades;
 4. geracao de tarefas com descricao, prioridade, prazo, dependencias e contexto;
-5. escolha do destino no vault, preferindo `sources/email/_restrito/` para bruto sensivel e `wiki/memoria/` para conhecimento consolidado;
+5. escolha do destino no vault, preferindo `05_Raw_Sources/_compat_sources/email/_restrito/` para bruto sensivel e `40_Wiki/_compat_wiki/memoria/` para conhecimento consolidado;
 6. criacao de Markdown com frontmatter, links internos, tags e referencias cruzadas;
 7. verificacao de duplicacao antes de criar novas notas;
 8. classificacao como conhecimento permanente, documentacao, decisao, projeto, procedimento, reuniao, tarefa, referencia futura ou material temporario.
@@ -185,7 +185,7 @@ Por padrao, e-mails convertidos ficam `nao-indexar` ate revisao humana.
 ## Regras especificas para ChatGPT
 
 1. Preferir exportacao oficial do ChatGPT.
-2. Preservar o arquivo bruto exportado em `sources/chatgpt/exports/` apenas se o usuario aprovar.
+2. Preservar o arquivo bruto exportado em `05_Raw_Sources/_compat_sources/chatgpt/exports/` apenas se o usuario aprovar.
 3. Processar conversas por titulo/data, nao como bloco unico.
 4. Marcar conversas sensiveis como `restrito` ou `nao-indexar`.
 5. Extrair principalmente:
@@ -200,7 +200,7 @@ Por padrao, e-mails convertidos ficam `nao-indexar` ate revisao humana.
 1. Gmail pessoal: inventario nao destrutivo da conta conectada.
 2. ChatGPT: usuario exporta historico e informa o caminho do `.zip`.
 3. Gmail trabalho: pedir autorizacao explicita antes de conectar `fabiofilosofia@colegiopietra.com.br` ou exportar dados.
-4. Criar uma nota `wiki/memoria/Mapa_Memoria_Fabio.md` so com categorias e links, sem conteudo sensivel.
+4. Criar uma nota `40_Wiki/_compat_wiki/memoria/Mapa_Memoria_Fabio.md` so com categorias e links, sem conteudo sensivel.
 
 ## Criterios de aceite
 
