@@ -55,6 +55,26 @@ Arquivos em `60_Sistemas/n8n/Workflows/`:
 | `FabioOS_Webhook_Inbox.json` | sim | 4 | 3 |
 | `FabioOS_WhatsApp_Pietra.json` | sim | 8 | 6 |
 
+## Importacao executada
+
+O workflow `FabioOS - Webhook para Inbox` foi importado no n8n com o ID estavel:
+
+```text
+fabioosWebhookInbox
+```
+
+Ele foi importado como **inativo** por seguranca.
+
+Motivo:
+
+- depende de credencial da Obsidian REST API;
+- pode criar notas reais no vault;
+- deve ser ativado manualmente apos conferencia visual.
+
+## Workflows visiveis no painel
+
+Ver `60_Sistemas/n8n/Workflows/INDEX_Workflows_n8n.md`.
+
 ## Workflows ativos segundo log do n8n
 
 O log do container registrou:
@@ -77,7 +97,7 @@ O log do container registrou:
 O n8n foi colocado online em modo local, mas nao foi alterado por dentro.
 
 Nao foram criadas credenciais.
-Nao foram importados workflows.
+Foi importado somente o workflow `FabioOS - Webhook para Inbox`, como inativo.
 Nao foram disparados webhooks com efeito.
 Nao foi ligado Evolution/OpenClaw.
 Nao houve chamada externa.
