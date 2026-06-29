@@ -105,7 +105,7 @@ Fontes principais recuperadas:
 
 - `60_Sistemas/FabioOS/Plano_Mestre_Implantacao_FabioOS.md`
 - `wiki/indices/mapa-fabios.md`
-- `60_Sistemas/RESUMO_IMPLEMENTACAO_FINAL.md`
+- `60_Sistemas/FabioOS/RESUMO_IMPLEMENTACAO_FINAL.md`
 - `60_Sistemas/Claude_Code/Operacao_no_Claude_Desktop.md`
 
 Leitura: a recuperacao trouxe a definicao geral correta.
@@ -116,8 +116,8 @@ Resultado: fraco/moderado.
 
 Fontes recuperadas:
 
-- `60_Sistemas/OpenClaw.md`
-- `60_Sistemas/RESUMO_IMPLEMENTACAO_FINAL.md`
+- `60_Sistemas/OpenClaw/OpenClaw.md`
+- `60_Sistemas/FabioOS/RESUMO_IMPLEMENTACAO_FINAL.md`
 - `wiki/README.md`
 - `wiki/indices/mapa-fabios.md`
 

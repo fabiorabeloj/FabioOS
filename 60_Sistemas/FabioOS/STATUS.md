@@ -5,7 +5,7 @@ projeto: FabioOS
 status: ativo
 tags: [fabios, status, continuidade, multiagente]
 criado_em: 2026-06-27
-atualizado_em: 2026-06-27
+atualizado_em: 2026-06-29
 ---
 
 # STATUS - FabioOS
@@ -38,6 +38,7 @@ Estado operacional:
 - Normalizacao Obsidian v2: mapa canonico de pastas criado em `60_Sistemas/FabioOS/Mapa_Canonico_Pastas_Obsidian_v2_2026-06-29.md`; pastas legadas foram identificadas e nao devem receber novos arquivos sem justificativa;
 - Estrutura fisica LLM Wiki: pastas `05_Raw_Sources/`, `20_Areas/`, `40_Wiki/`, `70_Skills/` e `80_Specs/` criadas com READMEs; `sources/` e `wiki/` continuam como compatibilidade operacional;
 - Limpeza visual da raiz: pastas legadas foram arquivadas em `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/`; placeholders `Sem titulo` foram renomeados/arquivados em `90_Arquivo/Descartes_Visuais_Obsidian_2026-06-29/`; arquivos tecnicos permanecem no disco e foram ocultados no Obsidian via `.obsidian/app.json`;
+- Estrutura canonica completa do Obsidian: proposta visual do Fabio formalizada em `60_Sistemas/FabioOS/Estrutura_Canonica_Completa_Obsidian_2026-06-29.md`; `00_Inbox/Teste/` foi eliminada como gaveta visual, notas de teste foram preservadas em `00_Inbox/Triagem/`, `Email_para_Processar_FabioOS.md` foi movido para `00_Inbox/Processar/` e `60_Sistemas/` ficou sem arquivos `.md` soltos na raiz;
 - MEGATRON v0/v1: ha commits recentes de interface cognitiva e ignorancia explicita; revisar antes de promocao formal;
 - OpenClaw: gateway acessivel, Workboard `fabioos` criado e agente `fabioos-ponte` testado com sucesso; ainda precisa otimizar contexto para reduzir custo.
 
@@ -50,8 +51,8 @@ Proxima acao recomendada:
 5. Aplicar a Matriz de Aptidao antes de escolher qualquer IA/modelo/ferramenta para nova tarefa.
 6. Revisar o Roadmap Fases v2 com Claude/Fabio.
 7. Revisar a Fase 17 Governanca Operacional e aplicar seus gates ao RAG/MCP/n8n/OpenClaw antes de novas automacoes.
-8. Revisar a normalizacao Obsidian v2 antes de mover arquivos fisicamente.
-9. Executar migracao piloto pequena somente depois de revisar `50_Registros/Auditoria/Proposta_de_Migracao_Estrutural_FabioOS.md`.
+8. Revisar a estrutura canonica completa aplicada no Obsidian e decidir se pastas operacionais adicionais de `60_Sistemas/` devem ser migradas em lotes futuros.
+9. Executar proxima migracao pequena somente depois de revisar `50_Registros/Auditoria/Proposta_de_Migracao_Estrutural_FabioOS.md`.
 10. Manter `sources/` e `wiki/` no disco ate adaptar RAG/MCP/scripts; para uso humano, eles ficam ocultos no Obsidian.
 
 Nota: as secoes abaixo permanecem como historico de continuidade anterior e podem conter estado ja superado.

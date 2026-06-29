@@ -5,7 +5,7 @@ projeto: FabioOS
 status: ativo
 tags: [fabios, multiagente, locks, coordenacao, frentes-ativas]
 criado_em: 2026-06-27
-atualizado_em: 2026-06-27
+atualizado_em: 2026-06-29
 ---
 
 # Registro de Frentes Ativas
@@ -73,6 +73,8 @@ Artefatos compartilhados incluem:
 
 | RAG_REINDEX_POS_LIMPEZA_OBSIDIAN | Codex | `60_Sistemas/RAG/scripts/ingest_vault.py`, `query_rag.py`, `batch_validate_rag.py`, `fabioos_db/`, relatorios de validacao | concluida | 2026-06-29 | Reindexacao executada para alinhar fontes RAG aos caminhos reais apos limpeza visual; `1206` chunks; validacao `10/10` e `0` falhas; sem API externa, sem `--generate`, sem push |
 
+| ESTRUTURA_CANONICA_COMPLETA_OBSIDIAN | Codex | `00_Inbox/`, `60_Sistemas/`, `60_Sistemas/FabioOS/Estrutura_Canonica_Completa_Obsidian_2026-06-29.md`, STATUS, NEXT_ACTIONS, dashboard de estrutura e changelog | concluida | 2026-06-29 | Estrutura visual proposta pelo Fabio formalizada; arquivos soltos de `60_Sistemas/` foram movidos para subpastas coerentes; notas de teste da Inbox preservadas em Triagem; sem apagar conhecimento, sem RAG/Grafo/OpenClaw/n8n/push |
+
 ## Frentes observadas
 
 | Frente | Dono | Observacao |
@@ -116,3 +118,4 @@ Ao concluir, alterar `Estado` para `concluida`, registrar resultado e apontar o 
 - 2026-06-29 - `ESTRUTURA_FISICA_LLM_WIKI` concluida. Pastas fisicas `05_Raw_Sources`, `20_Areas`, `40_Wiki`, `70_Skills` e `80_Specs` criadas com READMEs; documentos de estrutura, proposta, mapa e ADR criados; `sources` e `wiki` preservados como compatibilidade.
 - 2026-06-29 - `LIMPEZA_VISUAL_RAIZ_OBSIDIAN` concluida. Pastas historicas da raiz foram movidas para `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/`; placeholders `Sem titulo` foram renomeados e arquivados; arquivos tecnicos foram ocultados na navegacao do Obsidian; `sources`, `wiki` e `schema` permanecem no disco por compatibilidade tecnica.
 - 2026-06-29 - `RAG_REINDEX_POS_LIMPEZA_OBSIDIAN` concluida. `fabioos_db` foi reindexado com corpus operacional de alto sinal (`1206` chunks), caminhos reais pos-limpeza e validacao `10/10` em modo recuperacao, sem API externa.
+- 2026-06-29 - `ESTRUTURA_CANONICA_COMPLETA_OBSIDIAN` concluida. A arvore preferencial do Fabio foi formalizada, `00_Inbox/Teste/` foi esvaziada com preservacao em `00_Inbox/Triagem/`, `00_Inbox/Email_para_Processar_FabioOS.md` foi movido para `00_Inbox/Processar/` e `60_Sistemas/` ficou sem arquivos `.md` soltos na raiz.

@@ -38,6 +38,7 @@ atualizado_em: 2026-06-26
 **[[10_Dashboard/LLM_Wiki_FabioOS]]** — dashboard da frente LLM Wiki.
 **[[wiki/conceitos/governanca-operacional-fabios]]** — conceito operacional de governanca, permissoes, fechamento de ciclo e anti-caos.
 **[[60_Sistemas/FabioOS/Roadmap_Fases_FabioOS_v2_2026-06-29]]** — reformulacao das fases do FabioOS a partir do estado real.
+**[[60_Sistemas/FabioOS/Estrutura_Canonica_Completa_Obsidian_2026-06-29]]** — arvore visual e operacional completa do Obsidian, baseada na proposta do Fabio.
 **[[60_Sistemas/FabioOS/Mapa_Canonico_Pastas_Obsidian_v2_2026-06-29]]** — taxonomia oficial de pastas do Obsidian e destinos canonicos v2.
 **[[60_Sistemas/FabioOS/Plano_Normalizacao_Pastas_Obsidian_2026-06-29]]** — plano seguro para migrar pastas legadas sem quebrar links.
 **[[50_Registros/Auditoria/Auditoria_Pastas_Obsidian_2026-06-29]]** — auditoria das duplicacoes de nomes, numeros e funcoes no vault.
@@ -56,8 +57,8 @@ atualizado_em: 2026-06-26
 
 **[[60_Sistemas/FabioOS/Protocolo_Ingestao_Memoria_Pessoal_Profissional]]** — protocolo de consentimento, privacidade e triagem antes de absorver ChatGPT/e-mails no vault.
 
-**Fase atual:** 12 — RAG (ingestão concluída, validação parcial executada, ajuste de ranking pendente)
-**Próxima fase:** 13 — Grafo de conhecimento, após RAG estabilizar como piloto
+**Estado operacional atual:** RAG reindexado e validado em modo recuperacao, Grafo minimo local validado, Governanca Operacional e estrutura Obsidian em consolidacao.
+**Proxima decisao:** Claude/Fabio revisar promocao formal das fases e sincronizacao Git sem push automatico.
 
 ---
 

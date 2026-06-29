@@ -23,6 +23,7 @@ Este arquivo nao substitui `wiki/README.md` nem `wiki/indices/mapa-fabios.md`. E
 - [[00_Arquitetura/01_Modelo_Formal_FabioOS_MEGATRON]] - modelo formal.
 - [[30_Projetos/FabioOS/LLM_Wiki_FabioOS]] - decisao operacional da LLM Wiki.
 - [[60_Sistemas/FabioOS/Roadmap_Fases_FabioOS_v2_2026-06-29]] - roadmap v2 das fases do FabioOS.
+- [[60_Sistemas/FabioOS/Estrutura_Canonica_Completa_Obsidian_2026-06-29]] - arvore visual e operacional completa do Obsidian.
 - [[60_Sistemas/FabioOS/Mapa_Canonico_Pastas_Obsidian_v2_2026-06-29]] - taxonomia oficial de pastas do Obsidian.
 - [[60_Sistemas/FabioOS/Plano_Normalizacao_Pastas_Obsidian_2026-06-29]] - plano de migracao segura das pastas legadas.
 - [[50_Registros/Auditoria/Auditoria_Pastas_Obsidian_2026-06-29]] - auditoria das duplicacoes de nomes e numeros.

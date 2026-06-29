@@ -16,6 +16,7 @@ Painel rapido para decidir onde salvar novos arquivos no vault.
 
 Documento governante:
 
+- [[60_Sistemas/FabioOS/Estrutura_Canonica_Completa_Obsidian_2026-06-29]]
 - [[60_Sistemas/FabioOS/Mapa_Canonico_Pastas_Obsidian_v2_2026-06-29]]
 - [[60_Sistemas/Wiki/Estrutura_de_Pastas_LLM_Wiki_FabioOS]]
 
@@ -61,7 +62,7 @@ Nao criar novos arquivos nestas pastas sem justificativa:
 
 ## Proxima acao
 
-- [ ] Escolher uma migracao piloto pequena.
-- [ ] Atualizar backlinks.
-- [ ] Registrar no changelog.
+- [x] Aplicar a estrutura canonica completa proposta para a raiz visual do Obsidian.
+- [x] Remover arquivos soltos da raiz de `60_Sistemas/`.
+- [x] Atualizar backlinks conhecidos dos arquivos movidos.
 - [ ] So reindexar RAG/Grafo depois de aprovacao.

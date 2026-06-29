@@ -41,6 +41,7 @@ Arquivos tecnicos de operacao (`AGENTS.md`, `CLAUDE.md`, `CODEX.md`, `README.md`
 
 ## Documentos estruturais
 
+- [[60_Sistemas/FabioOS/Estrutura_Canonica_Completa_Obsidian_2026-06-29]]
 - [[60_Sistemas/Wiki/Estrutura_de_Pastas_LLM_Wiki_FabioOS]]
 - [[50_Registros/Auditoria/Proposta_de_Migracao_Estrutural_FabioOS]]
 - [[50_Registros/Decisoes/ADR_Estrutura_de_Pastas_LLM_Wiki_FabioOS]]

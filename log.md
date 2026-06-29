@@ -90,3 +90,11 @@ Formato:
 - Paginas atualizadas: [[10_Dashboard/Mapa_Estrutural_FabioOS]], [[90_Arquivo/README]], [[60_Sistemas/FabioOS/STATUS]], [[60_Sistemas/FabioOS/NEXT_ACTIONS]], [[50_Registros/Changelog/CHANGELOG_FabioOS]], `.obsidian/app.json`
 - Contradicoes: `sources/`, `wiki/` e `schema/` continuam no disco por compatibilidade tecnica com scripts, RAG, MCP e convencoes existentes, mas ficam ocultos na navegacao humana do Obsidian.
 - Proximas acoes: migrar conteudo legado por lotes pequenos, com backlinks e changelog por lote.
+
+## [2026-06-29] governanca | Estrutura canonica completa Obsidian
+
+- Fonte: proposta visual do Fabio para raiz, Inbox, fontes, dashboards, areas, projetos, wiki, registros, sistemas, skills, specs e arquivo.
+- Paginas criadas: [[60_Sistemas/FabioOS/Estrutura_Canonica_Completa_Obsidian_2026-06-29]]
+- Paginas atualizadas: [[60_Sistemas/FabioOS/Mapa_Canonico_Pastas_Obsidian_v2_2026-06-29]], [[10_Dashboard/Estrutura_Obsidian_FabioOS]], [[60_Sistemas/FabioOS/STATUS]], [[60_Sistemas/FabioOS/NEXT_ACTIONS]], [[60_Sistemas/FabioOS/Registro_Frentes_Ativas]]
+- Contradicoes: algumas pastas operacionais adicionais continuam existindo em `60_Sistemas/` por historico e links ativos; a regra agora e migrar somente em lotes pequenos ou documentar como excecao ativa.
+- Proximas acoes: revisar subpastas adicionais de `60_Sistemas/` e migrar apenas as que nao tiverem funcao operacional clara.
