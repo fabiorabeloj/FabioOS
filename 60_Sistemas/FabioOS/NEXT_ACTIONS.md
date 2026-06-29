@@ -31,6 +31,21 @@ atualizado_em: 2026-06-27
 - [ ] Processar primeiro lote tematico dos conectores Google: FabioOS/IA, escola, projetos e financeiro restrito.
 - [ ] Decidir se OpenClaw Companion vira interface visual principal ou se fica atras de n8n/WhatsApp apos estabilidade.
 - [x] Gerar inventario local de Cursor, Hermes, OpenClaw, n8n, OpenRouter e runtimes.
+- [x] Criar Matriz de Aptidao das IAs para impedir acumulacao sem funcao.
+- [ ] Aplicar a Matriz de Aptidao antes de qualquer uso de OpenRouter, Hermes, OpenClaw, Manus, Lovable ou modelos chineses.
+- [ ] Criar 5 testes pequenos de aptidao: documentacao longa, implementacao, PDF longo, automacao recorrente e multimodalidade.
+- [x] Formalizar LLM Wiki operacional com schema, protocolos de ingest/query/lint, index/log e RAG/MCP Control Plane.
+- [x] Executar piloto LLM Wiki em FabioOS/Governanca: uma fonte, uma pagina atualizada, no maximo uma pagina nova, index/log e changelog.
+- [x] Revisar as 23 fases e criar Roadmap Fases FabioOS v2.
+- [ ] Revisar o Roadmap v2 com Claude/Fabio e decidir se vira roadmap oficial.
+- [x] Criar a camada de governanca operacional completa: constituicao, permissoes, contratos de agentes, definicao de concluido, anti-caos, seguranca, memorias, metadados e observabilidade.
+- [ ] Revisar a Fase 17 Governanca Operacional com Claude/Fabio.
+- [ ] Aplicar a Matriz de Permissoes no RAG/MCP Control Plane, n8n e OpenClaw antes de novas automacoes.
+- [x] Criar SPEC do MEGATRON v1 com Ignorancia Explicita.
+- [ ] Implementar MEGATRON v1 somente apos revisar a SPEC e confirmar limites read-only/propose-only.
+- [x] Criar mapa canonico v2 das pastas Obsidian e plano de normalizacao sem migracao em massa.
+- [x] Criar estrutura fisica LLM Wiki v1 com `05_Raw_Sources/`, `20_Areas/`, `40_Wiki/`, `70_Skills/` e `80_Specs/`.
+- [ ] Executar uma migracao piloto de pastas: 1 mapa de `10_Mapas/` para `40_Wiki/_MOCs/` ou `10_Dashboard/`, ou 1 decisao de `40_Decisoes/` para `50_Registros/Decisoes/`.
 - [ ] Adicionar OpenRouter como variavel de ambiente local somente quando houver teto de custo definido.
 - [ ] Confirmar caminho executavel/CLI do Hermes antes de usa-lo como agente.
 - [ ] Confirmar como abrir Cursor por linha de comando ou manter Cursor como IDE humana visual.

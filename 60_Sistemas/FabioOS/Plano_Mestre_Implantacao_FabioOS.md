@@ -126,15 +126,16 @@ A estrutura recomendada do vault é:
 
 ```text
 00_Inbox/
+05_Raw_Sources/
 10_Dashboard/
 20_Areas/
 30_Projetos/
-40_Repertorio/
+40_Wiki/
 50_Registros/
 60_Sistemas/
+70_Skills/
+80_Specs/
 90_Arquivo/
-sources/
-wiki/
 schema/
 .claude/
 ```
@@ -144,17 +145,31 @@ schema/
 | Pasta            | Função                                                                  |
 | ---------------- | ----------------------------------------------------------------------- |
 | `00_Inbox/`      | Entrada rápida de ideias, textos, prints, links e capturas              |
+| `05_Raw_Sources/` | Fontes brutas e evidências originais                                   |
 | `10_Dashboard/`  | Painéis de controle e visão geral                                       |
 | `20_Areas/`      | Áreas contínuas da vida: escola, finanças, saúde, estudos, vida pessoal |
 | `30_Projetos/`   | Projetos com começo, desenvolvimento e entregáveis                      |
-| `40_Repertorio/` | Conhecimento acumulado por tema                                         |
+| `40_Wiki/`       | Conhecimento processado, conectado e navegável                          |
 | `50_Registros/`  | Decisões, changelogs, reuniões, logs e histórico                        |
 | `60_Sistemas/`   | Documentação técnica dos sistemas usados                                |
+| `70_Skills/`     | Habilidades reutilizáveis dos agentes                                   |
+| `80_Specs/`      | Especificações executáveis antes de implementações relevantes           |
 | `90_Arquivo/`    | Materiais encerrados ou preservados                                     |
-| `sources/`       | Fontes brutas preservadas                                               |
-| `wiki/`          | Conhecimento tratado, conectado e navegável                             |
 | `schema/`        | Regras, padrões e critérios de qualidade                                |
 | `.claude/`       | Configuração project-level do Claude Code                               |
+
+### 4.2 Transicao para a estrutura canonica v2
+
+Em 2026-06-29, foi formalizado o mapa canonico de pastas:
+
+- [[60_Sistemas/FabioOS/Mapa_Canonico_Pastas_Obsidian_v2_2026-06-29]]
+
+Decisao operacional:
+
+- a estrutura v2 passa a governar novos arquivos;
+- pastas antigas como `10_Mapas/`, `20_Projetos/`, `30_Conhecimento/`, `40_Decisoes`, `40_Repertorio`, `50_Fontes`, `sources` e `wiki` permanecem preservadas como legado/compatibilidade;
+- nenhuma pasta legada deve ser apagada;
+- migracoes devem ocorrer por lotes pequenos, com revisao de backlinks, changelog e aprovacao quando impactarem RAG/Grafo.
 
 ---
 
@@ -1505,3 +1520,33 @@ O classificador local v0 e `60_Sistemas/FabioOS/scripts/classificar_dado_fabioos
 Antes de implementar fase, agente, automacao, integracao externa ou capacidade com custo/risco, criar SPEC seguindo [[60_Sistemas/FabioOS/Protocolo_Spec_Driven_FabioOS]].
 
 O gerador local v0 e `60_Sistemas/FabioOS/scripts/gerar_spec_fabioos.py`.
+
+---
+
+# 13. Addendum - Roadmap v2 das fases
+
+Em 2026-06-29, as fases 0-23 foram revisadas contra o estado real do FabioOS.
+
+Documento de referencia:
+
+- [[60_Sistemas/FabioOS/Roadmap_Fases_FabioOS_v2_2026-06-29]]
+
+Decisao:
+
+- manter este Plano Mestre como historico e referencia ampla;
+- usar o Roadmap v2 como orientacao operacional atual;
+- corrigir o status de RAG, Grafo, MCP FabioOS e MEGATRON v0 como capacidades ja iniciadas;
+- promover Governanca Operacional para proxima frente urgente;
+- tratar ProductOS, hardware local e producao externa como fases posteriores a observabilidade, seguranca e controle de custos.
+
+Ordem recomendada pelo Roadmap v2:
+
+```text
+Governanca
+-> MEGATRON v1
+-> RAG/Grafo/MCP hardening
+-> Google/email dry-run
+-> Dashboard/observabilidade
+-> n8n/OpenClaw controlados
+-> dominios/produto
+```

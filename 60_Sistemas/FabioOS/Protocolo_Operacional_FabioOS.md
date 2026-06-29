@@ -29,10 +29,10 @@ Todo sistema de conhecimento morre de dois jeitos: ou ninguém alimenta, ou tudo
 
 | Destino final | O que é | Onde fica |
 |---|---|---|
-| **Fonte** | Conteúdo externo preservado, ainda bruto | `sources/` |
-| **Nota wiki** | Conhecimento tratado, conectado e navegável | `wiki/` |
-| **Tarefa** | Ação com responsável, prazo ou contexto | `30_Projetos/` ou task de sessão |
-| **Decisão** | Escolha documentada com motivo e data | `40_Decisoes/` ou `50_Registros/` |
+| **Fonte** | Conteúdo externo preservado, ainda bruto | `05_Raw_Sources/` |
+| **Nota wiki** | Conhecimento tratado, conectado e navegável | `40_Wiki/` |
+| **Tarefa** | Ação com responsável, prazo ou contexto | `30_Projetos/`, `20_Areas/` ou task de sessão |
+| **Decisão** | Escolha documentada com motivo e data | `50_Registros/Decisoes/` |
 | **Arquivo** | Material encerrado, preservado sem uso ativo | `90_Arquivo/` |
 
 Se uma informação não se encaixa em nenhuma das cinco, ela vai para `00_Inbox/` até ser triada.
@@ -88,17 +88,17 @@ Nenhuma etapa deve ser pulada. A transformação sem preservação perde a fonte
 
 | Tipo de entrada | Destino primário | Destino secundário (após triagem) |
 |---|---|---|
-| Texto bruto / pensamento | `00_Inbox/` | → `wiki/` ou `30_Projetos/` |
-| Áudio transcrito | `00_Inbox/` | → `sources/docs/` |
-| Print | `00_Inbox/` | → `sources/docs/` ou descartado |
-| PDF | `sources/pdfs/` | → `wiki/` (via extração) |
-| Link / URL | `sources/web/` | → `wiki/sistemas/` ou `wiki/conceitos/` |
-| Google Docs | `sources/drive/` | → `wiki/` ou `60_Sistemas/Escola/` |
-| Email | `00_Inbox/` | → `50_Registros/` ou `sources/` |
+| Texto bruto / pensamento | `00_Inbox/` | → `40_Wiki/` ou `30_Projetos/` |
+| Áudio transcrito | `00_Inbox/` | → `05_Raw_Sources/Conversas/` ou `05_Raw_Sources/Videos_Transcricoes/` |
+| Print | `00_Inbox/` | → `05_Raw_Sources/Prints/` ou descartado |
+| PDF | `05_Raw_Sources/PDFs/` | → `40_Wiki/` (via extração) |
+| Link / URL | `05_Raw_Sources/Radar_Tecnologico/` | → `40_Wiki/` |
+| Google Docs | `05_Raw_Sources/Conversas/` ou compatibilidade `sources/drive/` | → `40_Wiki/` ou `60_Sistemas/Escola/` |
+| Email | `00_Inbox/` | → `50_Registros/` ou `05_Raw_Sources/Conversas/` |
 | Mensagem escolar | `00_Inbox/` | → `60_Sistemas/Escola/` |
-| Ideia | `00_Inbox/` | → `30_Projetos/` ou `wiki/` |
-| Decisão operacional | `40_Decisoes/` | → `50_Registros/Changelog/` |
-| Material de aula | `sources/docs/` | → `60_Sistemas/Escola/` |
+| Ideia | `00_Inbox/` | → `30_Projetos/` ou `40_Wiki/` |
+| Decisão operacional | `50_Registros/Decisoes/` | → `50_Registros/Changelog/` |
+| Material de aula | `05_Raw_Sources/EscolaOS/` | → `60_Sistemas/Escola/` |
 
 **Regra de ouro:** nenhum arquivo deve permanecer em `00_Inbox/` por mais de uma semana sem triagem.
 
@@ -182,6 +182,16 @@ Tempo estimado: **1–2 horas** (preferencialmente início do mês).
    Registrar mudanças de arquitetura, novos sistemas, decisões estratégicas.
    Atualizar a seção "Ordem prioritária" com as próximas fases.
 ```
+
+---
+
+## 7.1 Estrutura canonica de pastas
+
+A estrutura de destino deve seguir:
+
+`60_Sistemas/FabioOS/Mapa_Canonico_Pastas_Obsidian_v2_2026-06-29.md`
+
+Pastas legadas como `10_Mapas/`, `20_Projetos/`, `30_Conhecimento/`, `40_Decisoes/`, `40_Repertorio/`, `50_Fontes/`, `sources/` e `wiki/` nao devem receber novos arquivos sem justificativa explicita. `sources/` e `wiki/` continuam como compatibilidade operacional ate migracao de links, RAG, MCP e scripts.
 
 ---
 
@@ -413,6 +423,7 @@ Exemplos:
 ## Relações
 
 - [[60_Sistemas/FabioOS/Plano_Mestre_Implantacao_FabioOS]]
+- [[60_Sistemas/FabioOS/Mapa_Canonico_Pastas_Obsidian_v2_2026-06-29]]
 - [[wiki/indices/mapa-fabios]]
 - [[schema/fluxo-wiki]]
 - [[schema/qualidade-wiki]]

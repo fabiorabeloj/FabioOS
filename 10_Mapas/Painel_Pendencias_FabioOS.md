@@ -22,6 +22,8 @@ Criado após a migração da operação para o Claude Desktop (Fase 11). Reflete
 
 **Marco (2026-06-27):** caminho crítico ao MEGATRON ligado de ponta a ponta — RAG (12) + Grafo (13) + MCP FabioOS (15) + **MEGATRON v0** (capstone). **Próximo:** MEGATRON v1 (Ignorância Explícita por limiar) → depois trilho empresarial (Pietra/n8n).
 
+**Marco (2026-06-29):** as fases 0-23 foram revisadas no [[60_Sistemas/FabioOS/Roadmap_Fases_FabioOS_v2_2026-06-29]]. A prioridade operacional passa a ser Governanca Operacional antes de escalar automacoes externas.
+
 ---
 
 ## 1. Pendências abertas (não esquecer)
@@ -36,6 +38,9 @@ Itens já iniciados ou identificados que aguardam conclusão.
 - [ ] **[Wiki]** Criar páginas: `conceitos/rag.md`, `conceitos/llm-wiki.md`, `sistemas/mcp-servers.md`, `projetos/trader.md`
 - [ ] **[Arquitetura]** Derivar ontologia operacional do `00_Arquitetura/01_Modelo_Formal_FabioOS_MEGATRON.md` quando iniciar Fase 13 — Grafo
 - [ ] **[RAG]** Reexecutar as 10 perguntas do `60_Sistemas/FabioOS/Plano_Validacao_Fase12_RAG.md` apos ajuste de ranking/recencia
+- [ ] **[Fase 17]** Criar Governanca Operacional completa: Constituicao, Matriz de Permissoes, Contratos de Agentes, Definicao de Concluido, Anti-Caos e Seguranca
+- [ ] **[Roadmap]** Revisar o Roadmap v2 com Claude/Fabio e decidir se vira roadmap oficial
+- [ ] **[Obsidian]** Executar migracao piloto pequena seguindo [[50_Registros/Auditoria/Proposta_de_Migracao_Estrutural_FabioOS]]
 - [ ] **[Memória]** Absorver ChatGPT/e-mails por protocolo seguro: ver [[wiki/memoria/Mapa_Memoria_Fabio]] e [[60_Sistemas/FabioOS/Protocolo_Ingestao_Memoria_Pessoal_Profissional]]
 - [ ] **[Gmail profissional]** Solicitar autorização/conector antes de qualquer acesso ao e-mail `fabiofilosofia@colegiopietra.com.br`
 - [ ] **[Escola]** Criar cronograma bimestral GEO e FIL 2026
@@ -64,7 +69,8 @@ Ordem de execução acordada: **🧠 Pessoal/Aprendizado → 💼 Empresarial �
 
 - [~] **Fase 14 — MCPs prontos** (filesystem/github/n8n/obsidian ativos)
 - [x] **Fase 15 — MCP customizado FabioOS** (FastMCP, 5 ferramentas read-only, testado) — ver [[60_Sistemas/MCP_FabioOS/README_MCP_FabioOS]]
-- [ ] **Fase 22 — Segurança e permissões** (contínua)
+- [ ] **Fase 17 — Governanca Operacional** (prioridade v2)
+- [ ] **Fase 22/23 — Seguranca, permissoes, dashboards e observabilidade** (continua)
 
 ### 🎯 Capstone — Interface do FabioOS
 
@@ -87,6 +93,8 @@ Ordem de execução acordada: **🧠 Pessoal/Aprendizado → 💼 Empresarial �
 - [x] **Grafo (Fase 13)** — 840 nós, 2680 arestas; ver [[60_Sistemas/Grafo/README_Grafo]]
 - [x] **MCP FabioOS (Fase 15) + MEGATRON v0 (capstone)** — caminho crítico ligado ponta a ponta; ver [[50_Registros/Changelog/2026-06-27_capstone-megatron-v0]]
 - [x] **Protocolo de memória pessoal/profissional** — estrutura criada sem leitura de corpo de e-mail profissional; ver [[60_Sistemas/FabioOS/Inventario_Memoria_Pessoal_Profissional_2026-06-27]]
+- [x] **Normalizacao Obsidian v2** — mapa canonico de pastas criado; pastas legadas preservadas; migracao fisica adiada para piloto seguro. Ver [[60_Sistemas/FabioOS/Mapa_Canonico_Pastas_Obsidian_v2_2026-06-29]]
+- [x] **Estrutura fisica LLM Wiki** — pastas `05_Raw_Sources`, `20_Areas`, `40_Wiki`, `70_Skills` e `80_Specs` criadas com READMEs; `sources` e `wiki` preservadas como compatibilidade. Ver [[10_Dashboard/Mapa_Estrutural_FabioOS]]
 - [x] Fases 0–9 (fundação → Pietra) — ver `50_Registros/Changelog/`
 - [x] Visão de Interface registrada — [[60_Sistemas/FabioOS/Visao_Interface_FabioOS]]
 
@@ -102,6 +110,7 @@ Ordem de execução acordada: **🧠 Pessoal/Aprendizado → 💼 Empresarial �
 ## Relações
 
 - [[60_Sistemas/FabioOS/Plano_Mestre_Implantacao_FabioOS]]
+- [[60_Sistemas/FabioOS/Roadmap_Fases_FabioOS_v2_2026-06-29]]
 - [[60_Sistemas/FabioOS/Visao_Interface_FabioOS]]
 - [[60_Sistemas/Claude_Code/Operacao_no_Claude_Desktop]]
 - [[wiki/indices/mapa-fabios]]

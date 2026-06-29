@@ -18,13 +18,21 @@ Definir quais inteligencias, agentes, conectores e ferramentas existem no FabioO
 
 O FabioOS nao deve virar uma colecao de IAs soltas. Cada IA deve ter papel, limite, custo e modo de acionamento.
 
+Documentos normativos complementares:
+
+- [[40_Repertorio/IA/Modelos_e_IAs/Matriz_de_Aptidao_das_IAs_FabioOS]]
+- [[30_Projetos/FabioOS/LLM_Wiki_FabioOS]]
+- [[10_Dashboard/RAG_MCP_Control_Plane]]
+
 Ordem de decisao:
 
 1. Usar contexto local: vault, RAG, Grafo e MCP FabioOS.
-2. Usar skills/agentes especializados quando o escopo for claro.
-3. Usar conectores e MCPs externos apenas com objetivo definido.
-4. Usar API/modelo pago apenas quando a camada local nao bastar.
-5. Nunca permitir acao externa sensivel sem aprovacao humana.
+2. Verificar a Matriz de Aptidao antes de escolher IA/modelo/ferramenta.
+3. Verificar `index.md`, `log.md` e schema LLM Wiki antes de criar ou alterar conhecimento.
+4. Usar skills/agentes especializados quando o escopo for claro.
+5. Usar conectores e MCPs externos apenas com objetivo definido.
+6. Usar API/modelo pago apenas quando a camada local nao bastar.
+7. Nunca permitir acao externa sensivel sem aprovacao humana.
 
 ## Inventario operacional
 

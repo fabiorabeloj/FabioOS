@@ -1,4 +1,4 @@
-﻿# CLAUDE.md — FabioOS
+# CLAUDE.md — FabioOS
 
 ## Leitura obrigatória no início de cada sessão
 
@@ -30,6 +30,9 @@ Não inicie trabalho sem ter lido os arquivos acima.
 - **Transicao de contexto entre IAs:** seguir `60_Sistemas/FabioOS/Protocolo_Gestao_Contexto_IA.md` quando a conversa ficar longa, degradada ou perto de limite de uso.
 - **Limpeza segura do PC/projeto:** seguir `60_Sistemas/FabioOS/Protocolo_Limpeza_Segura_FabioOS_PC.md`; nunca deletar direto, usar quarentena e registro.
 - **Roteamento de capacidades:** antes de improvisar, verificar skills, comandos, agentes, subagentes, scripts, MCPs, RAG e grafo conforme `60_Sistemas/FabioOS/Protocolo_Roteamento_Capacidades_IA.md`.
+- **Matriz de aptidao das IAs:** antes de escolher IA/modelo/ferramenta, consultar `40_Repertorio/IA/Modelos_e_IAs/Matriz_de_Aptidao_das_IAs_FabioOS.md`; nenhuma IA entra por acumulacao ou curiosidade.
+- **LLM Wiki operacional:** antes de criar ou alterar conhecimento, ler `index.md`, `log.md` e `60_Sistemas/Wiki/Schema_Wiki_FabioOS.md`; preferir atualizar pagina existente e registrar ingest/query/lint quando aplicavel.
+- **Mapa canonico de pastas:** antes de criar arquivo novo, consultar `60_Sistemas/FabioOS/Mapa_Canonico_Pastas_Obsidian_v2_2026-06-29.md`; pastas legadas nao devem receber conteudo novo salvo manutencao explicita.
 
 ---
 
@@ -53,16 +56,40 @@ Claude deve atuar como:
 
 Claude não deve agir como chatbot solto. Deve respeitar a estrutura do repositório.
 
-## Estrutura real atual
+## Estrutura canonica atual
 
-- `00_Inbox/` — entrada de capturas, ideias, testes e materiais brutos.
-- `10_Mapas/` — mapas, dashboards e visões gerais.
-- `20_Projetos/` — projetos ativos.
-- `30_Conhecimento/` — repertório, notas conceituais e conhecimento reutilizável.
-- `40_Decisoes/` — decisões importantes do sistema.
-- `50_Fontes/` — fontes, referências e materiais externos.
-- `60_Sistemas/` — documentação técnica, scripts, integrações e automações.
-- `90_Arquivo/` — materiais arquivados.
+Antes de criar arquivo novo, use o mapa completo em:
+
+`60_Sistemas/FabioOS/Mapa_Canonico_Pastas_Obsidian_v2_2026-06-29.md`
+
+Resumo operacional:
+
+- `00_Inbox/` - capturas temporarias e entradas sem triagem.
+- `00_Arquitetura/` - arquitetura conceitual, ontologia e modelo formal.
+- `05_Raw_Sources/` - fontes brutas, evidencias e materiais originais.
+- `10_Dashboard/` - paineis vivos, control planes e visoes executivas.
+- `20_Areas/` - areas continuas da vida e responsabilidades recorrentes.
+- `30_Projetos/` - projetos ativos com entregaveis.
+- `40_Wiki/` - conhecimento processado e interligado na mentalidade LLM Wiki.
+- `50_Registros/` - decisoes, ADRs, changelogs, auditorias, sessoes e historico.
+- `60_Sistemas/` - sistemas, agentes, scripts, protocolos, integracoes e automacoes.
+- `70_Skills/` - habilidades reutilizaveis de agentes.
+- `80_Specs/` - especificacoes executaveis antes de implementacoes relevantes.
+- `90_Arquivo/` - materiais encerrados ou preservados sem uso ativo.
+- `schema/` - schemas, criterios e padroes de qualidade.
+
+Pastas legadas preservadas:
+
+- `10_Mapas/`
+- `20_Projetos/`
+- `30_Conhecimento/`
+- `40_Decisoes/`
+- `40_Repertorio/`
+- `50_Fontes/`
+- `sources/`
+- `wiki/`
+
+Regra: nao apagar pastas legadas e nao mover em massa. `sources/` e `wiki/` continuam como compatibilidade operacional ate migracao planejada. Migrar por lotes pequenos, com backlinks, changelog e aprovacao quando houver impacto em RAG/Grafo.
 
 ## Sistemas centrais
 

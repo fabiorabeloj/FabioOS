@@ -30,6 +30,13 @@ Estado operacional:
 - Mobile Gateway v0: servidor local Python implementado e rodando na porta `8787`; celular pode acessar pela LAN em `http://192.168.0.20:8787` se firewall permitir;
 - Conectores Google v0: Gmail e Google Drive catalogados em modo leitura; detalhes ficaram em `sources/*/_restrito/` fora do Git;
 - Inventario Ferramentas IA v0: OpenClaw/Cursor/Hermes detectados como instalacao/diretorio, mas CLIs nao estao no PATH; n8n nao esta ouvindo em `5678`; OpenRouter nao tem env var nesta sessao;
+- Matriz de Aptidao das IAs: criada em `40_Repertorio/IA/Modelos_e_IAs/Matriz_de_Aptidao_das_IAs_FabioOS.md`; passa a ser gate para escolher ChatGPT, Claude, Claude Code, Codex, Cursor, OpenClaw, n8n, Hermes, Manus, modelos chineses, multimodais e ferramentas futuras;
+- LLM Wiki operacional: decisao formalizada em `30_Projetos/FabioOS/LLM_Wiki_FabioOS.md`; `index.md`, `log.md`, schema, protocolos de ingest/query/lint e RAG/MCP Control Plane foram criados como camada de memoria governada;
+- Piloto LLM Wiki/Governanca: executado com uma fonte preservada, uma pagina wiki criada, uma pagina existente atualizada e index/log/changelog atualizados;
+- Roadmap Fases v2: criado em `60_Sistemas/FabioOS/Roadmap_Fases_FabioOS_v2_2026-06-29.md`; corrige status real das fases e promove Governanca Operacional como proxima frente urgente;
+- Fase 17 Governanca Operacional: camada documental criada com constituicao, permissoes, contratos de agentes, definicao de concluido, anti-caos, seguranca, memorias, assimilacao, metadados, observabilidade, ADR e dashboard;
+- Normalizacao Obsidian v2: mapa canonico de pastas criado em `60_Sistemas/FabioOS/Mapa_Canonico_Pastas_Obsidian_v2_2026-06-29.md`; pastas legadas foram identificadas e nao devem receber novos arquivos sem justificativa;
+- Estrutura fisica LLM Wiki: pastas `05_Raw_Sources/`, `20_Areas/`, `40_Wiki/`, `70_Skills/` e `80_Specs/` criadas com READMEs; `sources/` e `wiki/` continuam como compatibilidade operacional;
 - MEGATRON v0/v1: ha commits recentes de interface cognitiva e ignorancia explicita; revisar antes de promocao formal;
 - OpenClaw: gateway acessivel, Workboard `fabioos` criado e agente `fabioos-ponte` testado com sucesso; ainda precisa otimizar contexto para reduzir custo.
 
@@ -39,6 +46,11 @@ Proxima acao recomendada:
 2. Criar/atualizar card no OpenClaw Workboard para tornar a frente visivel.
 3. Otimizar contexto do `fabioos-ponte` antes de novos testes com modelo.
 4. Preparar handoff de retorno para Claude.
+5. Aplicar a Matriz de Aptidao antes de escolher qualquer IA/modelo/ferramenta para nova tarefa.
+6. Revisar o Roadmap Fases v2 com Claude/Fabio.
+7. Revisar a Fase 17 Governanca Operacional e aplicar seus gates ao RAG/MCP/n8n/OpenClaw antes de novas automacoes.
+8. Revisar a normalizacao Obsidian v2 antes de mover arquivos fisicamente.
+9. Executar migracao piloto pequena somente depois de revisar `50_Registros/Auditoria/Proposta_de_Migracao_Estrutural_FabioOS.md`.
 
 Nota: as secoes abaixo permanecem como historico de continuidade anterior e podem conter estado ja superado.
 

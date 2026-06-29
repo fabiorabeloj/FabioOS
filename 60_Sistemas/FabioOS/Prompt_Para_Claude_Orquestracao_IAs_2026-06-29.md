@@ -19,6 +19,11 @@ Antes de agir, leia:
 - CLAUDE.md
 - 60_Sistemas/FabioOS/Registro_Frentes_Ativas.md
 - 60_Sistemas/FabioOS/Quadro_Comando_IAs_Agentes_2026-06-28.md
+- 40_Repertorio/IA/Modelos_e_IAs/Matriz_de_Aptidao_das_IAs_FabioOS.md
+- 30_Projetos/FabioOS/LLM_Wiki_FabioOS.md
+- index.md
+- log.md
+- 60_Sistemas/Wiki/Schema_Wiki_FabioOS.md
 - 60_Sistemas/FabioOS/Plano_Capacidades_Agentes_Cursor_Hermes_2026-06-28.md
 - 60_Sistemas/FabioOS/Politica_Codex_Config_Local_vs_Vault_2026-06-28.md
 - 60_Sistemas/MCP_FabioOS/README_MCP_FabioOS.md
@@ -35,10 +40,11 @@ Estado deixado pelo Codex:
 
 Sua tarefa:
 1. Revisar o quadro de comando das IAs.
-2. Decidir quais frentes ficam com Claude, Codex, n8n, OpenClaw, Cursor e Hermes.
-3. Retestar MCP FabioOS nativo se estiver disponivel.
-4. Retestar subagentes.
-5. Preparar a frente Google/n8n em modo dry-run, sem envio externo e sem ler e-mail em massa.
+2. Aplicar a Matriz de Aptidao antes de decidir quais frentes ficam com Claude, Codex, n8n, OpenClaw, Cursor, Hermes ou modelos via OpenRouter.
+3. Aplicar a LLM Wiki operacional antes de criar novas notas, fontes, specs, skills ou protocolos.
+4. Retestar MCP FabioOS nativo se estiver disponivel.
+5. Retestar subagentes.
+6. Preparar a frente Google/n8n em modo dry-run, sem envio externo e sem ler e-mail em massa.
 
 Regras:
 - Nao fazer push sem OK do Fabio.
