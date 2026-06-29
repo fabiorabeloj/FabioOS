@@ -20,6 +20,8 @@ Codex assumiu a frente `N8N_LOCAL_OPERACAO` enquanto Cursor trabalha no OpenClaw
 - Iniciado o container com `docker start n8n`.
 - Confirmado painel em `http://127.0.0.1:5678/`.
 - Validado JSON dos workflows versionados em `60_Sistemas/n8n/Workflows/`.
+- Importado `FabioOS - Webhook para Inbox` como workflow inativo no n8n local.
+- Criado indice visual em `60_Sistemas/n8n/Workflows/INDEX_Workflows_n8n.md`.
 - Registrado relatorio operacional em `60_Sistemas/n8n/Relatorio_Operacao_n8n_2026-06-29.md`.
 
 ## Nao feito
@@ -27,6 +29,7 @@ Codex assumiu a frente `N8N_LOCAL_OPERACAO` enquanto Cursor trabalha no OpenClaw
 - Nao foi feito push.
 - Nao foram criadas credenciais.
 - Nao foram disparados webhooks reais.
+- Nao foi ativado o workflow importado.
 - Nao foi ligado OpenClaw/Evolution.
 - Nao houve reindexacao RAG.
 - Nao houve alteracao em MEGATRON ou MCP.
