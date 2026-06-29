@@ -1,0 +1,27 @@
+/*
+  FabioOS - raiz limpa no File Explorer do Obsidian.
+
+  Mantem arquivos tecnicos no disco para Git/Codex/Claude/RAG,
+  mas remove esses itens da navegacao humana do vault.
+*/
+
+.nav-folder:has(> .nav-folder-title[data-path=".agents"]),
+.nav-folder:has(> .nav-folder-title[data-path=".claude"]),
+.nav-folder:has(> .nav-folder-title[data-path=".codex"]),
+.nav-folder:has(> .nav-folder-title[data-path=".github"]),
+.nav-folder:has(> .nav-folder-title[data-path=".obsidian"]),
+.nav-folder:has(> .nav-folder-title[data-path="schema"]),
+.nav-folder:has(> .nav-folder-title[data-path="sources"]),
+.nav-folder:has(> .nav-folder-title[data-path="wiki"]),
+.nav-file:has(> .nav-file-title[data-path=".gitignore"]),
+.nav-file:has(> .nav-file-title[data-path="AGENTS.md"]),
+.nav-file:has(> .nav-file-title[data-path="CLAUDE.md"]),
+.nav-file:has(> .nav-file-title[data-path="CODEX.md"]),
+.nav-file:has(> .nav-file-title[data-path="README.md"]),
+.nav-file:has(> .nav-file-title[data-path="index.md"]),
+.nav-file:has(> .nav-file-title[data-path="log.md"]),
+.nav-file:has(> .nav-file-title[data-path="start_fabioos.ps1"]),
+.nav-file:has(> .nav-file-title[data-path^="Sem titulo"]),
+.nav-file:has(> .nav-file-title[data-path^="Sem título"]) {
+  display: none !important;
+}
