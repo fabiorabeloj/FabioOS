@@ -69,7 +69,7 @@ Possiveis arquivos:
 - `60_Sistemas/RAG/scripts/query_rag.py`
 - `60_Sistemas/RAG/Relatorio_Validacao_Parcial_RAG_2026-06-26.md`
 - `60_Sistemas/RAG/Relatorio_Validacao_RAG_2026-06-27.md`
-- `60_Sistemas/RAG.md`
+- `60_Sistemas/RAG/RAG.md`
 
 Mensagem sugerida:
 
@@ -87,7 +87,7 @@ Bloqueio:
 
 Possiveis arquivos:
 
-- `60_Sistemas/OpenClaw.md`
+- `60_Sistemas/OpenClaw/OpenClaw.md`
 - `60_Sistemas/OpenClaw/Sistema_OpenClaw.md`
 - `60_Sistemas/OpenClaw/setup/EVOLUTION_API_SETUP.md`
 - `60_Sistemas/OpenClaw/Diagnostico_OpenClaw_Local_2026-06-27.md`

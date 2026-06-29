@@ -16,6 +16,10 @@ Definir a estrutura oficial de pastas do FabioOS a partir da mentalidade LLM Wik
 
 Este documento governa onde novos arquivos devem ser criados.
 
+Documento de arvore completa:
+
+- [[60_Sistemas/FabioOS/Estrutura_Canonica_Completa_Obsidian_2026-06-29]]
+
 ## Principio
 
 O FabioOS nao e apenas um vault de notas.
@@ -29,6 +33,10 @@ captura -> fonte preservada -> conhecimento compilado -> acao governada
 Por isso, cada pasta deve ter uma funcao unica.
 
 ## Estrutura canonica v2
+
+A arvore fisica detalhada esta formalizada em [[60_Sistemas/FabioOS/Estrutura_Canonica_Completa_Obsidian_2026-06-29]].
+
+Resumo das camadas:
 
 | Pasta | Papel canonico | O que entra aqui | O que nao entra aqui |
 |---|---|---|---|

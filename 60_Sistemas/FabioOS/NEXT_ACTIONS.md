@@ -5,7 +5,7 @@ projeto: FabioOS
 status: ativo
 tags: [fabios, proximas-acoes, continuidade, rag]
 criado_em: 2026-06-27
-atualizado_em: 2026-06-27
+atualizado_em: 2026-06-29
 ---
 
 # NEXT ACTIONS - FabioOS
@@ -47,6 +47,10 @@ atualizado_em: 2026-06-27
 - [x] Criar estrutura fisica LLM Wiki v1 com `05_Raw_Sources/`, `20_Areas/`, `40_Wiki/`, `70_Skills/` e `80_Specs/`.
 - [x] Limpar visualmente a raiz arquivando pastas legadas em `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/`.
 - [x] Ocultar arquivos tecnicos e compatibilidade (`AGENTS.md`, `CLAUDE.md`, `CODEX.md`, `README.md`, `log.md`, `sources/`, `wiki/`, `schema/`) da navegacao do Obsidian sem remove-los do disco.
+- [x] Formalizar a estrutura canonica completa do Obsidian proposta pelo Fabio.
+- [x] Tirar arquivos `.md` soltos da raiz de `60_Sistemas/`.
+- [x] Esvaziar a gaveta visual `00_Inbox/Teste/` preservando as notas em `00_Inbox/Triagem/`.
+- [ ] Revisar pastas operacionais adicionais de `60_Sistemas/` (`MEGATRON`, `Grafo`, `Cursor`, `OpenRouter`, etc.) e migrar somente por lotes pequenos se a arvore preferencial exigir.
 - [ ] Executar uma migracao piloto de pastas: 1 mapa de `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/10_Mapas/` para `40_Wiki/_MOCs/` ou `10_Dashboard/`, ou 1 decisao de `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/40_Decisoes/` para `50_Registros/Decisoes/`.
 - [ ] Adicionar OpenRouter como variavel de ambiente local somente quando houver teto de custo definido.
 - [ ] Confirmar caminho executavel/CLI do Hermes antes de usa-lo como agente.

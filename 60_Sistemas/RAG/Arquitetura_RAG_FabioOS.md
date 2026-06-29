@@ -11,7 +11,7 @@ atualizado_em: 2026-06-29
 
 # Arquitetura RAG do FabioOS — Fase 12
 
-> **Supera** o rascunho `60_Sistemas/RAG_IMPLEMENTATION.md` (de 25/06, genérico). Este é o documento autoritativo da Fase 12.
+> **Supera** o rascunho `60_Sistemas/RAG/RAG_IMPLEMENTATION.md` (de 25/06, genérico). Este é o documento autoritativo da Fase 12.
 
 ## Função
 

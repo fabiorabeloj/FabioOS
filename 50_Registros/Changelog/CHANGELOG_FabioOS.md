@@ -241,3 +241,26 @@ Restricoes respeitadas:
 - sem reindexar RAG;
 - sem regenerar Grafo;
 - sem push.
+
+## 2026-06-29 - Estrutura canonica completa Obsidian
+
+Formalizada e aplicada a arvore visual solicitada pelo Fabio para o vault.
+
+Criado:
+
+- `60_Sistemas/FabioOS/Estrutura_Canonica_Completa_Obsidian_2026-06-29.md`
+
+Reorganizado:
+
+- `00_Inbox/Email_para_Processar_FabioOS.md` foi movido para `00_Inbox/Processar/`;
+- `00_Inbox/Teste_MCP_Obsidian.md` e notas de teste de `00_Inbox/Teste/` foram preservadas em `00_Inbox/Triagem/`;
+- `00_Inbox/Inbox.md` foi preservado em `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/00_Inbox/`;
+- arquivos soltos de `60_Sistemas/` foram movidos para subpastas coerentes.
+
+Resultado:
+
+- `00_Inbox/` ficou alinhada as quatro gavetas canonicas;
+- `60_Sistemas/` ficou sem arquivos `.md` soltos na raiz;
+- caminhos textuais conhecidos foram atualizados;
+- nada foi apagado;
+- sem RAG/Grafo/OpenClaw/n8n/push.
