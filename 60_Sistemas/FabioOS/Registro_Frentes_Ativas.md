@@ -75,6 +75,8 @@ Artefatos compartilhados incluem:
 
 | ESTRUTURA_CANONICA_COMPLETA_OBSIDIAN | Codex | `00_Inbox/`, `60_Sistemas/`, `60_Sistemas/FabioOS/Estrutura_Canonica_Completa_Obsidian_2026-06-29.md`, STATUS, NEXT_ACTIONS, dashboard de estrutura e changelog | concluida | 2026-06-29 | Estrutura visual proposta pelo Fabio formalizada; arquivos soltos de `60_Sistemas/` foram movidos para subpastas coerentes; notas de teste da Inbox preservadas em Triagem; sem apagar conhecimento, sem RAG/Grafo/OpenClaw/n8n/push |
 
+| LINKS_POS_MIGRACAO_V1 | Codex | wikilinks `wiki/` e `sources/`, `60_Sistemas/FabioOS/Ordens_Arquiteto_Para_Codex_2026-06-29.md`, changelog | concluida | 2026-06-29 | Lote 0 concluiu auditoria; duplicata `wiki/` recriada foi preservada em `90_Arquivo`; links restantes listados para handoff por estarem em zona RAG/Cursor ja suja; sem tocar RAG, MEGATRON, MCP, runtime, db ou push |
+
 ## Frentes observadas
 
 | Frente | Dono | Observacao |
