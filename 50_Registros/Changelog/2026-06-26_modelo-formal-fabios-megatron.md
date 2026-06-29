@@ -26,7 +26,7 @@ Criação do modelo formal do FabioOS/MEGATRON como base teórica, computacional
 | Arquivo | Alteração |
 |---|---|
 | `wiki/indices/mapa-fabios.md` | Incluído o modelo formal como documento de referência mestre e item nos documentos de sistema |
-| `10_Mapas/Painel_Pendencias_FabioOS.md` | Registrada a entrega em concluídos recentemente e adicionada pendência futura de derivar ontologia operacional para a Fase 13 |
+| `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/10_Mapas/Painel_Pendencias_FabioOS.md` | Registrada a entrega em concluídos recentemente e adicionada pendência futura de derivar ontologia operacional para a Fase 13 |
 
 ## Decisões registradas
 
@@ -47,4 +47,4 @@ Retomar a Fase 12 — RAG usando o modelo formal como referência, principalment
 - [[60_Sistemas/FabioOS/Plano_Mestre_Implantacao_FabioOS]]
 - [[60_Sistemas/RAG/Arquitetura_RAG_FabioOS]]
 - [[60_Sistemas/FabioOS/Visao_Interface_FabioOS]]
-- [[10_Mapas/Painel_Pendencias_FabioOS]]
+- [[90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/10_Mapas/Painel_Pendencias_FabioOS]]

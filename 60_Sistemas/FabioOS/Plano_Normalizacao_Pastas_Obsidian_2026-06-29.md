@@ -52,7 +52,7 @@ Prioridade: alta.
 
 Origem:
 
-- `10_Mapas/`
+- `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/10_Mapas/`
 
 Destino:
 
@@ -61,7 +61,7 @@ Destino:
 
 Observacao:
 
-`10_Mapas/` tem muitos pontos de entrada humanos. Migrar com cuidado e preservar redirecionamentos.
+`90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/10_Mapas/` tem muitos pontos de entrada humanos. Migrar com cuidado e preservar redirecionamentos.
 
 ### Etapa 3 - Migrar projetos
 
@@ -69,7 +69,7 @@ Prioridade: media.
 
 Origem:
 
-- `20_Projetos/`
+- `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/20_Projetos/`
 
 Destino:
 
@@ -91,7 +91,7 @@ Prioridade: media.
 
 Origem:
 
-- `30_Conhecimento/`
+- `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/30_Conhecimento/`
 
 Destino:
 
@@ -108,7 +108,7 @@ Prioridade: alta.
 
 Origem:
 
-- `40_Decisoes/`
+- `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/40_Decisoes/`
 
 Destino:
 
@@ -124,7 +124,7 @@ Prioridade: baixa/media.
 
 Origem:
 
-- `50_Fontes/`
+- `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/50_Fontes/`
 
 Destino:
 
@@ -132,7 +132,7 @@ Destino:
 
 Regra:
 
-Fontes novas entram em `05_Raw_Sources/`; arquivos antigos de `50_Fontes/` podem virar indices historicos ou serem migrados para `05_Raw_Sources/` com metadados. `sources/` fica como compatibilidade operacional ate migracao de scripts/RAG/MCP.
+Fontes novas entram em `05_Raw_Sources/`; arquivos antigos de `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/50_Fontes/` podem virar indices historicos ou serem migrados para `05_Raw_Sources/` com metadados. `sources/` fica como compatibilidade operacional ate migracao de scripts/RAG/MCP.
 
 ## Politica de redirecionamento
 
@@ -160,9 +160,9 @@ Uma migracao esta correta quando:
 Depois de revisar este plano, executar uma migracao piloto pequena:
 
 ```text
-Migrar 1 mapa de `10_Mapas/` para `40_Wiki/_MOCs/` ou `10_Dashboard/`
+Migrar 1 mapa de `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/10_Mapas/` para `40_Wiki/_MOCs/` ou `10_Dashboard/`
 ou
-migrar 1 decisao de `40_Decisoes/` para `50_Registros/Decisoes/`
+migrar 1 decisao de `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/40_Decisoes/` para `50_Registros/Decisoes/`
 ```
 
 A migracao piloto deve ser feita antes de qualquer lote maior.

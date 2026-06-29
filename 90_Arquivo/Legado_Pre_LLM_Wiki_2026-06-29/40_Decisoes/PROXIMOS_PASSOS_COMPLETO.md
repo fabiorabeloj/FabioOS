@@ -24,7 +24,7 @@ criado_em: 2026-06-25
 ### 🔴 CRÍTICO (Fazer HOJE)
 
 **1. Validar no Obsidian**
-- [ ] Abrir `10_Mapas/Mapa_Mestre_Fabio.md`
+- [ ] Abrir `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/10_Mapas/Mapa_Mestre_Fabio.md`
 - [ ] Testar 5 links aleatórios
 - [ ] Verificar graph view (nenhum erro)
 
@@ -35,7 +35,7 @@ criado_em: 2026-06-25
 - [ ] Templater (templates)
 
 **3. Fazer primeira captura**
-- [ ] Abrir `30_Conhecimento/Segundo_Cerebro.md`
+- [ ] Abrir `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/30_Conhecimento/Segundo_Cerebro.md`
 - [ ] Capturar 5 ideias em Obsidian
 - [ ] Organizar com tags
 
@@ -49,7 +49,7 @@ criado_em: 2026-06-25
 ### 🟠 ALTA (Esta semana)
 
 **Escola**
-- [ ] Criar pasta `50_Fontes/Escola/`
+- [ ] Criar pasta `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/50_Fontes/Escola/`
 - [ ] Criar 5 notas sobre Geografia
 - [ ] Criar 5 notas sobre Filosofia
 - [ ] Setup primeiro prompt Claude
@@ -238,7 +238,7 @@ Próximos meses
 
 **Pronto?**
 
-Vá para `10_Mapas/Mapa_Mestre_Fabio.md` e comece! 🎯
+Vá para `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/10_Mapas/Mapa_Mestre_Fabio.md` e comece! 🎯
 
 ---
 

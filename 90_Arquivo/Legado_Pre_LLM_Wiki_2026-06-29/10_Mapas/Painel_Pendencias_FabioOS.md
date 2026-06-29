@@ -104,7 +104,7 @@ Ordem de execução acordada: **🧠 Pessoal/Aprendizado → 💼 Empresarial �
 
 1. No início da sessão: ler este painel + o último changelog.
 2. Ao concluir uma pendência: marcar `[x]`, mover para a seção 3 e gerar changelog.
-3. Ao descartar: remover com motivo registrado em `40_Decisoes/` ou `50_Registros/`.
+3. Ao descartar: remover com motivo registrado em `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/40_Decisoes/` ou `50_Registros/`.
 4. Ao surgir nova pendência: adicionar na seção 1 com a etiqueta `[Fase X]` ou `[Área]`.
 
 ## Relações

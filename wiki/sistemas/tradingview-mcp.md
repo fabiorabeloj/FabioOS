@@ -48,4 +48,4 @@ atualizado_em: 2026-06-26
 
 - [ ] Estudar documentação e requisitos de autenticação do TradingView
 - [ ] Definir escopo do sistema Trader antes de qualquer ativação
-- [ ] Criar nota de decisão em `40_Decisoes/` sobre o sistema Trader
+- [ ] Criar nota de decisão em `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/40_Decisoes/` sobre o sistema Trader

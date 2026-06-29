@@ -72,12 +72,12 @@ Cor usada: `#8E44AD` (`rgb`: `9323693`).
 
 - `path:"30_Projetos"`
 - `path:"20_Projetos"`
-- `path:"20_Projetos/PRIMUS"`
+- `path:"90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/20_Projetos/PRIMUS"`
 - `path:"30_Projetos/FabioOS"`
 - `path:"30_Projetos/PRIMUS"`
 - `path:"30_Projetos/Atendimento_Pietra"`
 - `path:"30_Projetos/IA"`
-- `path:"40_Repertorio/IA"`
+- `path:"90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/40_Repertorio/IA"`
 - `path:"60_Sistemas/Claude_Code"`
 - `path:"60_Sistemas/ChatGPT"`
 - `file:MEGATRON`
@@ -97,7 +97,7 @@ Cor usada: `#2ECC71` (`rgb`: `3066993`).
 
 - `path:"40_Repertorio"`
 - `path:"30_Conhecimento"`
-- `path:"40_Repertorio/Geografia"`
+- `path:"90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/40_Repertorio/Geografia"`
 - `path:"20_Areas/Financas"`
 - `path:"30_Projetos/Trader"`
 - `file:Supabase`
@@ -130,9 +130,9 @@ Cor usada: `#E74C3C` (`rgb`: `15158332`).
 - `path:"60_Sistemas/OpenClaw"`
 - `path:"60_Sistemas/Obsidian"`
 - `path:"60_Sistemas/Agentes"`
-- `path:"40_Repertorio/Automacao"`
-- `path:"40_Repertorio/Tecnologia"`
-- `path:"30_Conhecimento/Tecnologia"`
+- `path:"90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/40_Repertorio/Automacao"`
+- `path:"90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/40_Repertorio/Tecnologia"`
+- `path:"90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/30_Conhecimento/Tecnologia"`
 - `path:"20_Areas/Saude"`
 - `tag:#automacao`
 - `tag:#tecnologia`
@@ -141,7 +141,7 @@ Cor usada: `#E74C3C` (`rgb`: `15158332`).
 
 Cor usada: `#7B1E3A` (`rgb`: `8068666`).
 
-- `path:"40_Repertorio/Filosofia"`
+- `path:"90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/40_Repertorio/Filosofia"`
 - `path:"20_Areas/Vida_Pessoal"`
 - `tag:#filosofia`
 
@@ -151,9 +151,9 @@ Algumas consultas sao amplas e podem englobar consultas mais especificas. Exempl
 
 - `path:"20_Areas"` tambem inclui `path:"20_Areas/Saude"` e `path:"20_Areas/Financas"`.
 - `path:"60_Sistemas"` tambem inclui `path:"60_Sistemas/OpenRouter"`, `path:"60_Sistemas/Claude_Code"` e `path:"60_Sistemas/ChatGPT"`.
-- `path:"40_Repertorio"` tambem inclui `path:"40_Repertorio/Filosofia"`, `path:"40_Repertorio/IA"` e `path:"40_Repertorio/Tecnologia"`.
-- `path:"30_Conhecimento"` tambem inclui `path:"30_Conhecimento/Tecnologia"`.
-- `path:"20_Projetos"` tambem inclui `path:"20_Projetos/PRIMUS"`.
+- `path:"40_Repertorio"` tambem inclui `path:"90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/40_Repertorio/Filosofia"`, `path:"90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/40_Repertorio/IA"` e `path:"90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/40_Repertorio/Tecnologia"`.
+- `path:"30_Conhecimento"` tambem inclui `path:"90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/30_Conhecimento/Tecnologia"`.
+- `path:"20_Projetos"` tambem inclui `path:"90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/20_Projetos/PRIMUS"`.
 
 Por isso, as consultas mais especificas foram colocadas antes das consultas amplas no JSON. Se o Obsidian aplicar prioridade visual de forma diferente em alguma versao, ajuste manualmente a ordem dos grupos pela interface.
 

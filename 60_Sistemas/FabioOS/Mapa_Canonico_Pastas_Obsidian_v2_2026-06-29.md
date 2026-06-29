@@ -55,12 +55,12 @@ Estas pastas existem e nao devem ser apagadas. Elas ficam em modo legado ate mig
 
 | Pasta legada | Destino canonico futuro | Regra |
 |---|---|---|
-| `10_Mapas/` | `10_Dashboard/` ou `40_Wiki/_MOCs/` | Mapas vivos viram dashboards; mapas navegacionais viram MOCs. |
-| `20_Projetos/` | `30_Projetos/` ou `20_Areas/` | Projetos ativos migram para `30_Projetos/`; rotinas permanentes migram para `20_Areas/`. |
-| `30_Conhecimento/` | `40_Wiki/` | Conhecimento estruturado vira wiki processada. |
-| `40_Decisoes/` | `50_Registros/Decisoes/` | Decisoes futuras devem virar ADR, constituicao ou registro em `50_Registros/Decisoes/`. |
-| `40_Repertorio/` | `40_Wiki/` | Repertorio vira subcamada/conteudo processado na wiki. |
-| `50_Fontes/` | `05_Raw_Sources/` | Fontes brutas novas entram em `05_Raw_Sources/`. |
+| `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/10_Mapas/` | `10_Dashboard/` ou `40_Wiki/_MOCs/` | Mapas vivos viram dashboards; mapas navegacionais viram MOCs. |
+| `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/20_Projetos/` | `30_Projetos/` ou `20_Areas/` | Projetos ativos migram para `30_Projetos/`; rotinas permanentes migram para `20_Areas/`. |
+| `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/30_Conhecimento/` | `40_Wiki/` | Conhecimento estruturado vira wiki processada. |
+| `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/40_Decisoes/` | `50_Registros/Decisoes/` | Decisoes futuras devem virar ADR, constituicao ou registro em `50_Registros/Decisoes/`. |
+| `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/40_Repertorio/` | `40_Wiki/` | Repertorio vira subcamada/conteudo processado na wiki. |
+| `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/50_Fontes/` | `05_Raw_Sources/` | Fontes brutas novas entram em `05_Raw_Sources/`. |
 | `sources/` | `05_Raw_Sources/` | Compatibilidade operacional para scripts/RAG/MCP ate migracao. |
 | `wiki/` | `40_Wiki/` | Compatibilidade operacional para links/RAG/MCP ate migracao. |
 

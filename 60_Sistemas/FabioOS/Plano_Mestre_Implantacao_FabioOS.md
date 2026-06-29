@@ -167,7 +167,7 @@ Em 2026-06-29, foi formalizado o mapa canonico de pastas:
 Decisao operacional:
 
 - a estrutura v2 passa a governar novos arquivos;
-- pastas antigas como `10_Mapas/`, `20_Projetos/`, `30_Conhecimento/`, `40_Decisoes`, `40_Repertorio`, `50_Fontes`, `sources` e `wiki` permanecem preservadas como legado/compatibilidade;
+- pastas antigas como `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/10_Mapas/`, `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/20_Projetos/`, `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/30_Conhecimento/`, `40_Decisoes`, `40_Repertorio`, `50_Fontes`, `sources` e `wiki` permanecem preservadas como legado/compatibilidade;
 - nenhuma pasta legada deve ser apagada;
 - migracoes devem ocorrer por lotes pequenos, com revisao de backlinks, changelog e aprovacao quando impactarem RAG/Grafo.
 
@@ -1368,7 +1368,7 @@ Qualquer IA autorizada consegue consultar e operar o FabioOS por MCP.
 | 18 | Sistema Trader | Final | Pessoal |
 | 19 | Sistema PRIMUS | Final | Pessoal |
 
-**Painel de controle de pendências e trilhos:** [[10_Mapas/Painel_Pendencias_FabioOS]]
+**Painel de controle de pendências e trilhos:** [[90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/10_Mapas/Painel_Pendencias_FabioOS]]
 
 ---
 
@@ -1404,7 +1404,7 @@ Fase 18 — Trader                                   (final)
 Fase 19 — PRIMUS                                   (final)
 ```
 
-> Ordem de execução por trilho e pendências abertas: ver **[[10_Mapas/Painel_Pendencias_FabioOS]]**.
+> Ordem de execução por trilho e pendências abertas: ver **[[90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/10_Mapas/Painel_Pendencias_FabioOS]]**.
 
 A regra de continuidade:
 
@@ -1473,8 +1473,8 @@ Os sinais de mercado sobre agentes, MCPs, bancos, automacao, dashboards, deploy 
 
 A partir de 2026-06-28, as fases 0-23 continuam validas, mas passam a ser avaliadas tambem pela camada de profissionalizacao descrita em:
 
-- [[40_Decisoes/2026-06-28_Decisao_Camadas_Profissionais_FabioOS]]
-- [[30_Conhecimento/Tecnologia/Arquiteturas_de_Mercado_Radar_Tecnologico]]
+- [[90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/40_Decisoes/2026-06-28_Decisao_Camadas_Profissionais_FabioOS]]
+- [[90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/30_Conhecimento/Tecnologia/Arquiteturas_de_Mercado_Radar_Tecnologico]]
 - [[60_Sistemas/FabioOS/Estrutura_Profissional_FabioOS_MEGATRON_2026-06-28]]
 - [[60_Sistemas/FabioOS/Matriz_Profissionalizacao_FabioOS_2026-06-28]]
 - [[60_Sistemas/FabioOS/Matriz_Dominios_Dados_Permissoes_2026-06-28]]
@@ -1507,7 +1507,7 @@ Que caminho isso demonstra e qual camada do FabioOS melhora?
 
 So depois disso se decide se vira estudo, especificacao, subfase, piloto ou descarte.
 
-O processo formal para essa extracao e o [[30_Conhecimento/Tecnologia/Arquiteturas_de_Mercado_Radar_Tecnologico]].
+O processo formal para essa extracao e o [[90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/30_Conhecimento/Tecnologia/Arquiteturas_de_Mercado_Radar_Tecnologico]].
 
 ## Regra de dominio e permissao
 

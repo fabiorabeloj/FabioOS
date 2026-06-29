@@ -43,4 +43,4 @@ atualizado_em: 2026-06-26 20:04:36
 ## Relações
 
 - [[60_Sistemas/MEGATRON/agentes/Registro_Agentes]]
-- [[10_Mapas/Painel_Pendencias_FabioOS]]
+- [[90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/10_Mapas/Painel_Pendencias_FabioOS]]

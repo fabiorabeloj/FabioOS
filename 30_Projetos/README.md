@@ -23,4 +23,4 @@ Pastas-alvo:
 
 Compatibilidade:
 
-`20_Projetos/` permanece preservado como legado ate migracao por lote.
+`90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/20_Projetos/` permanece preservado como legado ate migracao por lote.

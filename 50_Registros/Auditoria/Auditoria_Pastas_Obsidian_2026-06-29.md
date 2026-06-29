@@ -27,13 +27,13 @@ O problema nao e perda de dados. O problema e sobreposicao de funcoes.
 
 | Par ou grupo | Situacao | Decisao recomendada |
 |---|---|---|
-| `10_Mapas/` e `10_Dashboard/` | Ambos usam numero 10, mas cumprem funcoes diferentes. | `10_Dashboard/` vira canonico para paineis operacionais; mapas navegaveis devem ir para `40_Wiki/_MOCs/`; `10_Mapas/` fica legado ate migracao assistida. |
-| `20_Projetos/` e `30_Projetos/` | `20_Projetos/` guarda projetos antigos; `30_Projetos/` nasceu como destino v2. | `30_Projetos/` vira canonico para projetos; `20_Projetos/` fica legado e deve ser migrado por lotes. |
-| `30_Conhecimento/`, `40_Repertorio/` e `40_Wiki/` | `30_Conhecimento` e `40_Repertorio` guardam conhecimento antigo; `40_Wiki` e o destino v2. | `40_Wiki/` vira canonico para conhecimento processado; as pastas antigas ficam legadas. |
-| `40_Decisoes/` e `50_Registros/Decisoes/` | Decisoes antigas e ADRs novos estao separados. | `50_Registros/Decisoes/` vira canonico para decisoes versionadas; `40_Decisoes/` fica legado. |
-| `50_Fontes/`, `sources/` e `05_Raw_Sources/` | `50_Fontes` contem indices antigos; `sources` contem fontes brutas reais; `05_Raw_Sources` e o destino v2. | `05_Raw_Sources/` vira canonico para fonte bruta; `sources/` fica compatibilidade operacional. |
+| `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/10_Mapas/` e `10_Dashboard/` | Ambos usam numero 10, mas cumprem funcoes diferentes. | `10_Dashboard/` vira canonico para paineis operacionais; mapas navegaveis devem ir para `40_Wiki/_MOCs/`; `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/10_Mapas/` fica legado ate migracao assistida. |
+| `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/20_Projetos/` e `30_Projetos/` | `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/20_Projetos/` guarda projetos antigos; `30_Projetos/` nasceu como destino v2. | `30_Projetos/` vira canonico para projetos; `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/20_Projetos/` fica legado e deve ser migrado por lotes. |
+| `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/30_Conhecimento/`, `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/40_Repertorio/` e `40_Wiki/` | `30_Conhecimento` e `40_Repertorio` guardam conhecimento antigo; `40_Wiki` e o destino v2. | `40_Wiki/` vira canonico para conhecimento processado; as pastas antigas ficam legadas. |
+| `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/40_Decisoes/` e `50_Registros/Decisoes/` | Decisoes antigas e ADRs novos estao separados. | `50_Registros/Decisoes/` vira canonico para decisoes versionadas; `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/40_Decisoes/` fica legado. |
+| `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/50_Fontes/`, `sources/` e `05_Raw_Sources/` | `50_Fontes` contem indices antigos; `sources` contem fontes brutas reais; `05_Raw_Sources` e o destino v2. | `05_Raw_Sources/` vira canonico para fonte bruta; `sources/` fica compatibilidade operacional. |
 | `60_Sistemas/Agentes/` e `60_Sistemas/MEGATRON/agentes/` | Contratos gerais e specs/implementacoes do MEGATRON podem se confundir. | `60_Sistemas/Agentes/` = contratos transversais; `60_Sistemas/MEGATRON/agentes/` = agentes especificos do MEGATRON. |
-| `wiki/`, `30_Conhecimento/` e `40_Wiki/` | Todos podem parecer conhecimento. | `40_Wiki/` = conhecimento processado alvo; `wiki/` fica compatibilidade operacional ate migracao de links/RAG/MCP. |
+| `wiki/`, `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/30_Conhecimento/` e `40_Wiki/` | Todos podem parecer conhecimento. | `40_Wiki/` = conhecimento processado alvo; `wiki/` fica compatibilidade operacional ate migracao de links/RAG/MCP. |
 
 ## Regra anti-caos
 
@@ -58,12 +58,12 @@ Motivos:
 
 Estas pastas nao devem receber novos arquivos, salvo manutencao de conteudo ja existente:
 
-- `10_Mapas/`
-- `20_Projetos/`
-- `30_Conhecimento/`
-- `40_Decisoes/`
-- `40_Repertorio/`
-- `50_Fontes/`
+- `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/10_Mapas/`
+- `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/20_Projetos/`
+- `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/30_Conhecimento/`
+- `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/40_Decisoes/`
+- `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/40_Repertorio/`
+- `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/50_Fontes/`
 - `sources/`
 - `wiki/`
 

@@ -43,9 +43,9 @@ Transformar conteúdo bruto em fonte preservada, nota organizada ou página wiki
 | Saída | Destino | Formato |
 |---|---|---|
 | Fonte preservada | `sources/<tipo>/` | Markdown com frontmatter |
-| Nota organizada | `00_Inbox/`, `30_Conhecimento/`, `60_Sistemas/` | Markdown |
+| Nota organizada | `00_Inbox/`, `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/30_Conhecimento/`, `60_Sistemas/` | Markdown |
 | Página wiki | `wiki/` | Markdown com fonte linkada |
-| Pendência | `10_Mapas/Painel_Pendencias_FabioOS.md` ou nota de projeto | checklist |
+| Pendência | `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/10_Mapas/Painel_Pendencias_FabioOS.md` ou nota de projeto | checklist |
 | Log | `50_Registros/Agentes/` | Markdown |
 
 ## Ferramentas

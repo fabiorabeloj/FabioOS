@@ -4,7 +4,7 @@ area: 60_Sistemas
 projeto: FabioOS
 status: gerado
 gerado_por: classificar_dado_fabioos.py
-fonte_original: 30_Conhecimento/Tecnologia/Radar/2026-06-28_prompt-arquiteturas-de-mercado-fabioos.md
+fonte_original: 90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/30_Conhecimento/Tecnologia/Radar/2026-06-28_prompt-arquiteturas-de-mercado-fabioos.md
 dominio: IAOS
 classe_dado: Interno
 criado_em: 2026-06-28
@@ -55,5 +55,5 @@ Pode entrar no fluxo normal se nao houver dados pessoais.
 
 ## Fonte
 
-- Arquivo analisado: `30_Conhecimento/Tecnologia/Radar/2026-06-28_prompt-arquiteturas-de-mercado-fabioos.md`
+- Arquivo analisado: `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/30_Conhecimento/Tecnologia/Radar/2026-06-28_prompt-arquiteturas-de-mercado-fabioos.md`
 - Tamanho aproximado: 892 palavras

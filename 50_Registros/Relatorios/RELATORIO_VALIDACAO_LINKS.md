@@ -39,7 +39,7 @@ tags: [validacao, links, backlinks]
 
 ### 2. ⚠️ Inconsistência de ortografia
 - **Problema**: `[[Automaçao]]` vs `[[Automacao]]` (com/sem acento)
-- **Localização**: 30_Conhecimento/Automaçao.md
+- **Localização**: 90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/30_Conhecimento/Automaçao.md
 - **Solução**: Padronizar nome do arquivo para sem acento: `Automacao.md`
 
 ### 3. ⚠️ Referência a arquivo que não existe
@@ -48,12 +48,12 @@ tags: [validacao, links, backlinks]
 - **Solução**: Remover link ou criar arquivo
 
 ### 4. ⚠️ Links com extensão .md em sintaxe wiki
-- **Problema**: `[[30_Conhecimento/IA.md]]` tem extensão
+- **Problema**: `[[90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/30_Conhecimento/IA.md]]` tem extensão
 - **Localização**: Dashboard.md, INDEX.md (2 ocorrências)
-- **Solução**: Remover `.md` → `[[30_Conhecimento/IA]]` (ou `[[IA]]`)
+- **Solução**: Remover `.md` → `[[90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/30_Conhecimento/IA]]` (ou `[[IA]]`)
 
 ### 5. ⚠️ Links com caminhos completos (não recomendado)
-- **Padrão encontrado**: `[[30_Conhecimento/Tecnologia/Continuidade]]`
+- **Padrão encontrado**: `[[90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/30_Conhecimento/Tecnologia/Continuidade]]`
 - **Obsidian preferência**: `[[Continuidade]]` (sem caminho)
 - **Impacto**: Menor, mas dificulta refactoring
 - **Ação**: Opcional — manter se houver conflitos de nomes
@@ -80,7 +80,7 @@ tags: [validacao, links, backlinks]
 
 ### 1. Correções imediatas (CRÍTICO)
 - [ ] Corrigir `[[80_Sistemas]]` → `[[60_Sistemas]]`
-- [ ] Corrigir `[[30_Conhecimento/IA.md]]` → `[[IA]]`
+- [ ] Corrigir `[[90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/30_Conhecimento/IA.md]]` → `[[IA]]`
 - [ ] Resolver referência `[[Cantina]]`
 
 ### 2. Padronização (IMPORTANTE)

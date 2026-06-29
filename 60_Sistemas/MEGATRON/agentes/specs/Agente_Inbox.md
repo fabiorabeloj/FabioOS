@@ -46,7 +46,7 @@ Monitorar entradas novas, classificar destino operacional e encaminhar cada item
 | Roteamento para Pietra | Sistema Pietra | mensagem classificada |
 | Roteamento para Escola | Sistema Escola | material ou tarefa |
 | Roteamento para humano | Fabio | alerta |
-| Tarefa | `10_Mapas/Painel_Pendencias_FabioOS.md` ou projeto | checklist |
+| Tarefa | `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/10_Mapas/Painel_Pendencias_FabioOS.md` ou projeto | checklist |
 | Log de triagem | `50_Registros/Agentes/` | Markdown |
 
 ## Ferramentas

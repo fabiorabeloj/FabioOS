@@ -106,7 +106,7 @@ Relatórios e comunicação com pais
 ## Próximas Automações
 
 ### HOJE
-- [ ] Criar pasta `50_Fontes/Escola/` para materiais
+- [ ] Criar pasta `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/50_Fontes/Escola/` para materiais
 - [ ] Criar 5 notas sobre tópicos de Geografia
 - [ ] Criar 5 notas sobre tópicos de Filosofia
 

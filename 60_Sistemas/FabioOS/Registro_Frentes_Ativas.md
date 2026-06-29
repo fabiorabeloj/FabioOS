@@ -53,7 +53,7 @@ Artefatos compartilhados incluem:
 
 | INVENTARIO_FERRAMENTAS_IA_V0 | Codex | `60_Sistemas/FabioOS/scripts/inventario_ferramentas_ia.py`, `60_Sistemas/FabioOS/Inventario_Ferramentas_IA_Local_2026-06-28.md`, dashboard e changelog | concluida | 2026-06-28 | Inventario gerado sem revelar tokens; OpenClaw/Cursor/Hermes existem mas CLIs nao estao no PATH; n8n nao esta ouvindo em 5678; OpenRouter env ausente |
 
-| MATRIZ_APTIDAO_IAS | Codex | `40_Repertorio/IA/Modelos_e_IAs/Matriz_de_Aptidao_das_IAs_FabioOS.md`, `STATUS.md`, `NEXT_ACTIONS.md`, mapa, roteamento, specs, skills, agentes e changelog | concluida | 2026-06-29 | Matriz criada e conectada ao prompt mestre, roteamento, specs, skills, agentes, STATUS/NEXT_ACTIONS e mapa; sem instalar, sem chamar API, sem mexer em tokens, RAG DB, MCP_FABIOOS, OpenClaw runtime, n8n externo ou push |
+| MATRIZ_APTIDAO_IAS | Codex | `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/40_Repertorio/IA/Modelos_e_IAs/Matriz_de_Aptidao_das_IAs_FabioOS.md`, `STATUS.md`, `NEXT_ACTIONS.md`, mapa, roteamento, specs, skills, agentes e changelog | concluida | 2026-06-29 | Matriz criada e conectada ao prompt mestre, roteamento, specs, skills, agentes, STATUS/NEXT_ACTIONS e mapa; sem instalar, sem chamar API, sem mexer em tokens, RAG DB, MCP_FABIOOS, OpenClaw runtime, n8n externo ou push |
 
 | LLM_WIKI_OPERACIONAL | Codex | `50_Registros/Auditoria/Reentrada_Codex_FabioOS.md`, `30_Projetos/FabioOS/LLM_Wiki_FabioOS.md`, `60_Sistemas/Wiki/`, `10_Dashboard/`, `index.md`, `log.md`, `STATUS.md`, `NEXT_ACTIONS.md`, changelog | concluida | 2026-06-29 | LLM Wiki operacional formalizada; sem migracao em massa, sem automacao externa, sem RAG reindex, sem MCP runtime, sem OpenClaw/n8n externo e sem push |
 
@@ -68,6 +68,8 @@ Artefatos compartilhados incluem:
 | NORMALIZACAO_OBSIDIAN_V2 | Codex | `60_Sistemas/FabioOS/Mapa_Canonico_Pastas_Obsidian_v2_2026-06-29.md`, `50_Registros/Auditoria/Auditoria_Pastas_Obsidian_2026-06-29.md`, `60_Sistemas/FabioOS/Plano_Normalizacao_Pastas_Obsidian_2026-06-29.md`, `10_Dashboard/Estrutura_Obsidian_FabioOS.md`, `CLAUDE.md`, mapa, status e changelog | concluida | 2026-06-29 | Taxonomia canonica v2 criada; pastas legadas marcadas; nenhuma migracao fisica em massa; sem apagar, sem mover, sem push |
 
 | ESTRUTURA_FISICA_LLM_WIKI | Codex | `05_Raw_Sources/`, `20_Areas/`, `40_Wiki/`, `70_Skills/`, `80_Specs/`, dashboards, ADR, auditoria, estrutura LLM Wiki, STATUS/NEXT_ACTIONS, mapa e changelog | concluida | 2026-06-29 | Estrutura fisica visivel no Obsidian criada com READMEs e documentos; sem mover `sources/`/`wiki/`, sem apagar, sem RAG/Grafo, commit local autorizado sem push |
+
+| LIMPEZA_VISUAL_RAIZ_OBSIDIAN | Codex | `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/`, `90_Arquivo/Descartes_Visuais_Obsidian_2026-06-29/`, `.obsidian/app.json`, `50_Registros/Relatorios/`, `STATUS.md`, `NEXT_ACTIONS.md`, `log.md`, changelog | concluida | 2026-06-29 | Pastas legadas arquivadas sem apagar; placeholders `Sem titulo` renomeados/arquivados; arquivos tecnicos ocultos no Obsidian; `sources`, `wiki` e `schema` preservados no disco por compatibilidade tecnica; sem RAG/Grafo/OpenClaw/n8n/push |
 
 ## Frentes observadas
 
@@ -110,3 +112,4 @@ Ao concluir, alterar `Estado` para `concluida`, registrar resultado e apontar o 
 - 2026-06-29 - `SPEC_MEGATRON_V1` concluida. SPEC de ignorancia explicita, resposta com fontes e limites read-only/propose-only criada para a proxima fase tecnica.
 - 2026-06-29 - `NORMALIZACAO_OBSIDIAN_V2` concluida. Auditoria, mapa canonico, plano de normalizacao e dashboard de estrutura criados; `CLAUDE.md`, Plano Mestre, Protocolo Operacional, STATUS/NEXT_ACTIONS, indices e changelog conectados; sem mover/apagar arquivos.
 - 2026-06-29 - `ESTRUTURA_FISICA_LLM_WIKI` concluida. Pastas fisicas `05_Raw_Sources`, `20_Areas`, `40_Wiki`, `70_Skills` e `80_Specs` criadas com READMEs; documentos de estrutura, proposta, mapa e ADR criados; `sources` e `wiki` preservados como compatibilidade.
+- 2026-06-29 - `LIMPEZA_VISUAL_RAIZ_OBSIDIAN` concluida. Pastas historicas da raiz foram movidas para `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/`; placeholders `Sem titulo` foram renomeados e arquivados; arquivos tecnicos foram ocultados na navegacao do Obsidian; `sources`, `wiki` e `schema` permanecem no disco por compatibilidade tecnica.

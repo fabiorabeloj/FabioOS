@@ -39,7 +39,7 @@ Codex aplicou o protocolo de continuidade enquanto Claude estava indisponivel.
 
 ## Principal lacuna
 
-Consultas genericas de status atual foram mitigadas para priorizar fontes canonicas recentes como `10_Mapas/Painel_Pendencias_FabioOS.md` e `60_Sistemas/FabioOS/STATUS.md`.
+Consultas genericas de status atual foram mitigadas para priorizar fontes canonicas recentes como `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/10_Mapas/Painel_Pendencias_FabioOS.md` e `60_Sistemas/FabioOS/STATUS.md`.
 
 ## Proxima acao
 

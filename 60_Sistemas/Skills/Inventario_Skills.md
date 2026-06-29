@@ -73,7 +73,7 @@ não serve neste caso.
 
 Quando a tarefa envolver escolha entre modelos, IAs, agentes ou ferramentas externas, consultar tambem:
 
-`40_Repertorio/IA/Modelos_e_IAs/Matriz_de_Aptidao_das_IAs_FabioOS.md`
+`90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/40_Repertorio/IA/Modelos_e_IAs/Matriz_de_Aptidao_das_IAs_FabioOS.md`
 
 Quando a tarefa envolver criacao, consulta ou manutencao de conhecimento, consultar tambem:
 
@@ -84,7 +84,7 @@ Quando a tarefa envolver criacao, consulta ou manutencao de conhecimento, consul
 - [[60_Sistemas/MCP/Inventario_MCP]] — MCPs necessários para algumas skills (ex: Playwright para Taste)
 - [[60_Sistemas/Claude_Code/Workstation_FabioOS]] — visão geral da workstation
 - [[60_Sistemas/FabioOS/Protocolo_Roteamento_Capacidades_IA]] — regra de uso efetivo das capacidades instaladas
-- [[40_Repertorio/IA/Modelos_e_IAs/Matriz_de_Aptidao_das_IAs_FabioOS]] — vocacao, limites e criterios de teste das IAs/ferramentas
+- [[90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/40_Repertorio/IA/Modelos_e_IAs/Matriz_de_Aptidao_das_IAs_FabioOS]] — vocacao, limites e criterios de teste das IAs/ferramentas
 
 ## Próximas ações
 - [ ] Testar `/taste` em um projeto com Playwright MCP ativo

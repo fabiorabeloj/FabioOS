@@ -30,7 +30,7 @@ Antes de qualquer ação, siga o AGENTS.md:
 2. Leia 60_Sistemas/FabioOS/Plano_Mestre_Implantacao_FabioOS.md.
 3. Leia wiki/indices/mapa-fabios.md.
 4. Leia 60_Sistemas/FabioOS/Protocolo_Operacional_FabioOS.md.
-5. Leia 10_Mapas/Painel_Pendencias_FabioOS.md.
+5. Leia 90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/10_Mapas/Painel_Pendencias_FabioOS.md.
 6. Leia o último changelog em 50_Registros/Changelog/.
 
 Depois, leia também:
@@ -62,7 +62,7 @@ Frentes seguras possíveis:
 - Criar relatório de validação das 10 perguntas RAG, se houver resultados.
 - Revisar segurança dos arquivos gerados pelo RAG.
 - Atualizar Painel/Mapa apenas se Claude não estiver editando esses arquivos.
-- Criar uma decisão em 40_Decisoes/ se houver escolha arquitetônica real.
+- Criar uma decisão em 90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/40_Decisoes/ se houver escolha arquitetônica real.
 - Preparar checklist de push quando todos os commits locais estiverem prontos.
 
 Frentes a evitar:
@@ -109,7 +109,7 @@ Se Claude estiver executando a Fase 12 RAG, o Codex paralelo deve ficar em modo 
 Se Claude não estiver executando nada, o Codex paralelo pode preparar:
 
 ```text
-40_Decisoes/2026-06-26_Decisao_Execucao_Fase12_RAG.md
+90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/40_Decisoes/2026-06-26_Decisao_Execucao_Fase12_RAG.md
 ```
 
 apenas se houver decisão real sobre instalação, modelo, escopo ou envio externo.

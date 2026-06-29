@@ -15,6 +15,8 @@ Material antigo, substituido, encerrado ou morto.
 Subpastas:
 
 - `Antigo/`
+- `Descartes_Visuais_Obsidian_2026-06-29/`
+- `Legado_Pre_LLM_Wiki_2026-06-29/`
 - `Superseded/`
 - `Projetos_Encerrados/`
 - `Referencias_Mortas/`

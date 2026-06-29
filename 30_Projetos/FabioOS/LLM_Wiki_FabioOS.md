@@ -43,7 +43,7 @@ No FabioOS:
 
 ### Raw sources
 
-Fontes brutas sao evidencias. Devem ser preservadas em `sources/`, `50_Fontes/`, `00_Inbox/` ou pasta equivalente, sem edicao destrutiva.
+Fontes brutas sao evidencias. Devem ser preservadas em `sources/`, `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/50_Fontes/`, `00_Inbox/` ou pasta equivalente, sem edicao destrutiva.
 
 Exemplos:
 

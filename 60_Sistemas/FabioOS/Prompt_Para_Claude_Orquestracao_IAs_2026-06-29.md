@@ -19,7 +19,7 @@ Antes de agir, leia:
 - CLAUDE.md
 - 60_Sistemas/FabioOS/Registro_Frentes_Ativas.md
 - 60_Sistemas/FabioOS/Quadro_Comando_IAs_Agentes_2026-06-28.md
-- 40_Repertorio/IA/Modelos_e_IAs/Matriz_de_Aptidao_das_IAs_FabioOS.md
+- 90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/40_Repertorio/IA/Modelos_e_IAs/Matriz_de_Aptidao_das_IAs_FabioOS.md
 - 30_Projetos/FabioOS/LLM_Wiki_FabioOS.md
 - index.md
 - log.md

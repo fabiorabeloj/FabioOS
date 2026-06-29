@@ -29,7 +29,7 @@ Todo RAG e todo MCP deve possuir escopo, permissao, teste, log, metrica, risco e
 | RAG_TraderOS | planejado | regras, diario, risco e financas | a definir | golden questions de risco |
 | RAG_PRIMUS | planejado | lore, campanhas e regras | a definir | continuidade narrativa |
 | RAG_IA | planejado | repertorio IA e ferramentas | `40_Wiki/IA/`, `40_Wiki/Modelos_e_IAs/` e compatibilidade `wiki/sistemas/` | perguntas de modelos/ferramentas |
-| RAG_Radar_Tecnologico | planejado | anuncios, demos e tendencias processadas | `40_Wiki/Radar_Tecnologico/` e compatibilidade `30_Conhecimento/Tecnologia/` | aplicabilidade no FabioOS |
+| RAG_Radar_Tecnologico | planejado | anuncios, demos e tendencias processadas | `40_Wiki/Radar_Tecnologico/` e compatibilidade `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/30_Conhecimento/Tecnologia/` | aplicabilidade no FabioOS |
 | RAG_Governanca | planejado | protocolos, decisoes e auditoria | `50_Registros/`, `60_Sistemas/FabioOS/` | permissoes/seguranca |
 | RAG_Skills | planejado | skills e comandos | `70_Skills/`, `.agents/skills/`, `60_Sistemas/Skills/` | roteamento de capacidades |
 | RAG_Specs | planejado | specs e planos | `80_Specs/` e compatibilidade `60_Sistemas/FabioOS/specs/` | spec por tarefa |

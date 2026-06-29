@@ -61,7 +61,7 @@ Uma frente paralela é segura quando:
 |---|---|
 | Editar `60_Sistemas/MEGATRON/agentes/` | Claude está preparando specs/implementação e commits |
 | Editar `wiki/indices/mapa-fabios.md` | Já está em commit planejado |
-| Editar `10_Mapas/Painel_Pendencias_FabioOS.md` | Já está em commit planejado |
+| Editar `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/10_Mapas/Painel_Pendencias_FabioOS.md` | Já está em commit planejado |
 | Editar `CLAUDE.md` ou `AGENTS.md` | Arquivos de governança no grupo do Claude |
 | Editar `.gitignore` | Claude já ajustou regras de cache/logs/config |
 | Criar changelog concorrente | Pode confundir a ordem dos commits |

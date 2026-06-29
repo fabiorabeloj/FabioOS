@@ -59,7 +59,7 @@ O catalogo operacional desta assimilacao vive em:
 
 O metodo geral de extracao vive em:
 
-[[30_Conhecimento/Tecnologia/Arquiteturas_de_Mercado_Radar_Tecnologico]]
+[[90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/30_Conhecimento/Tecnologia/Arquiteturas_de_Mercado_Radar_Tecnologico]]
 
 O gate de dominios, dados e permissoes vive em:
 

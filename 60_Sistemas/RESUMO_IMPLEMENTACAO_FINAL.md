@@ -42,11 +42,11 @@ Em uma única sessão, o FabioOS foi:
 
 ### O que foi feito
 - Análise completa de 461 links internos
-- Geração de [[RELATORIO_VALIDACAO_LINKS.md]]
+- Geração de [[50_Registros/Relatorios/RELATORIO_VALIDACAO_LINKS.md]]
 - Identificação de 6 problemas críticos
 - Correção de todos os problemas:
   - [[80_Sistemas]] → [[60_Sistemas]] ✅
-  - `[[30_Conhecimento/IA.md]]` → `[[IA]]` (4 ocorrências) ✅
+  - `[[90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/30_Conhecimento/IA.md]]` → `[[IA]]` (4 ocorrências) ✅
   - `[[Automaçao]]` → `[[Automacao]]` ✅
   - Limpeza de links em [[Dashboard]] ✅
   - Validação em [[PRIMUS]] ✅
@@ -86,7 +86,7 @@ CHANGELOG_AUTOMATION.md              ← Documentação completa
 ### Como ativar
 1. Fazer push do arquivo `.github/workflows/changelog.yml`
 2. GitHub Actions ativa automaticamente
-3. Cada commit atualiza `40_Decisoes/Changelog.md`
+3. Cada commit atualiza `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/40_Decisoes/Changelog.md`
 
 ### Próximas ações
 - [ ] Fazer primeiro commit com workflow
@@ -136,7 +136,7 @@ scripts/rag_claude.py         ← RAG + Claude integrado
 **Status:** ✅ Completo
 
 ### Tecnologia
-- Expandido `30_Conhecimento/Tecnologia/Tecnologia.md` com:
+- Expandido `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/30_Conhecimento/Tecnologia/Tecnologia.md` com:
   - Princípios fundamentais
   - Padrões de design
   - Boas práticas
@@ -159,9 +159,9 @@ scripts/rag_claude.py         ← RAG + Claude integrado
 
 ### Novos arquivos
 ```
-20_Projetos/TEMPLATE_NOVO_PROJETO.md
-30_Conhecimento/Tecnologia/Tecnologia.md (expandido)
-20_Projetos/IA.md (expandido)
+90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/20_Projetos/TEMPLATE_NOVO_PROJETO.md
+90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/30_Conhecimento/Tecnologia/Tecnologia.md (expandido)
+90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/20_Projetos/IA.md (expandido)
 ```
 
 ---
@@ -237,7 +237,7 @@ Todos os links validados ✅
 
 1. **Extensões duplicadas quebram tudo** — Correção imediata foi essencial
 2. **Índice central economiza tempo** — INDEX.md é referência constante
-3. **Links devem ser simples** — `[[Arquivo]]` > `[[30_Conhecimento/Arquivo.md]]`
+3. **Links devem ser simples** — `[[Arquivo]]` > `[[90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/30_Conhecimento/Arquivo.md]]`
 4. **Documentação gera documentação** — Bons templates facilitam criação
 5. **Automação exige planejamento** — Scripts prontos tornam implementação trivial
 
@@ -257,7 +257,7 @@ Todos os links validados ✅
 
 - **CLAUDE.md** — Papel do Claude no repositório
 - **INDEX.md** — Mapa central
-- **RELATORIO_VALIDACAO_LINKS.md** — Análise de links
+- **50_Registros/Relatorios/RELATORIO_VALIDACAO_LINKS.md** — Análise de links
 - **CHANGELOG_AUTOMATION.md** — Implementação GitHub Actions
 - **RAG_IMPLEMENTATION.md** — Guia RAG completo
 - **.github/workflows/changelog.yml** — Workflow pronto

@@ -191,7 +191,7 @@ A estrutura de destino deve seguir:
 
 `60_Sistemas/FabioOS/Mapa_Canonico_Pastas_Obsidian_v2_2026-06-29.md`
 
-Pastas legadas como `10_Mapas/`, `20_Projetos/`, `30_Conhecimento/`, `40_Decisoes/`, `40_Repertorio/`, `50_Fontes/`, `sources/` e `wiki/` nao devem receber novos arquivos sem justificativa explicita. `sources/` e `wiki/` continuam como compatibilidade operacional ate migracao de links, RAG, MCP e scripts.
+Pastas legadas como `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/10_Mapas/`, `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/20_Projetos/`, `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/30_Conhecimento/`, `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/40_Decisoes/`, `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/40_Repertorio/`, `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/50_Fontes/`, `sources/` e `wiki/` nao devem receber novos arquivos sem justificativa explicita. `sources/` e `wiki/` continuam como compatibilidade operacional ate migracao de links, RAG, MCP e scripts.
 
 ---
 

@@ -76,7 +76,7 @@ Testar o processo com uma primeira captura real.
 
 ---
 
-## arquivo_sugerido: 20_Projetos/FabioOS/Automacao_01_Conhecimento_Obsidian.md  
+## arquivo_sugerido: 90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/20_Projetos/FabioOS/Automacao_01_Conhecimento_Obsidian.md
 tipo: Decisão / Projeto  
 area: FabioOS  
 tags: [fabioos, obsidian, automacao, conhecimento, ia]

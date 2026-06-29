@@ -44,7 +44,7 @@ Este arquivo nao substitui `wiki/README.md` nem `wiki/indices/mapa-fabios.md`. E
 - [[40_Wiki/README]] - camada-alvo de conhecimento processado.
 - [[wiki/README]] - indice da pasta wiki.
 - [[wiki/indices/mapa-fabios]] - mapa navegavel.
-- [[30_Conhecimento/LLM_Wiki_Pattern]] - fonte conceitual.
+- [[90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/30_Conhecimento/LLM_Wiki_Pattern]] - fonte conceitual.
 - [[60_Sistemas/Claude_Code/project_llmwiki_architecture]] - memoria de arquitetura LLM Wiki.
 - [[schema/fluxo-wiki]] - fluxo minimo existente.
 - [[schema/qualidade-wiki]] - criterio de qualidade existente.
@@ -63,7 +63,7 @@ Este arquivo nao substitui `wiki/README.md` nem `wiki/indices/mapa-fabios.md`. E
 - [[60_Sistemas/MCP/Inventario_MCP]] - inventario MCP.
 - [[60_Sistemas/MEGATRON/agentes/README_Agentes]] - agentes MEGATRON.
 - [[60_Sistemas/Skills/Inventario_Skills]] - skills.
-- [[40_Repertorio/IA/Modelos_e_IAs/Matriz_de_Aptidao_das_IAs_FabioOS]] - matriz de aptidao.
+- [[90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/40_Repertorio/IA/Modelos_e_IAs/Matriz_de_Aptidao_das_IAs_FabioOS]] - matriz de aptidao.
 
 ## Status operacional
 

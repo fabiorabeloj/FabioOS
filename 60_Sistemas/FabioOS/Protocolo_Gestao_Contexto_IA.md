@@ -51,7 +51,7 @@ Leia o contexto do FabioOS e continue a partir do ultimo changelog.
 
 Antes de agir, leia:
 - AGENTS.md ou CLAUDE.md
-- 10_Mapas/Painel_Pendencias_FabioOS.md
+- 90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/10_Mapas/Painel_Pendencias_FabioOS.md
 - ultimo arquivo em 50_Registros/Changelog/
 - protocolo/relatorio especifico da frente atual
 

@@ -20,7 +20,7 @@ Script:
 
 Saida padrao:
 
-`10_Mapas/Dashboard_Operacional_FabioOS.md`
+`90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/10_Mapas/Dashboard_Operacional_FabioOS.md`
 
 ## O que verifica
 

@@ -26,12 +26,12 @@ atualizado_em: 2026-06-28
 
 ## Criado/modificado no vault
 
-- `10_Mapas/Painel_Memoria_FabioOS.md`
+- `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/10_Mapas/Painel_Memoria_FabioOS.md`
 - `00_Inbox/Email_para_Processar_FabioOS.md`
-- `40_Decisoes/Memoria_Email_FabioOS.md`
+- `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/40_Decisoes/Memoria_Email_FabioOS.md`
 - `60_Sistemas/FabioOS/Capacidades_Locais_Cursor_Hermes_2026-06-28.md`
-- `10_Mapas/Dashboard.md`
-- `10_Mapas/Conhecimento.md`
+- `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/10_Mapas/Dashboard.md`
+- `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/10_Mapas/Conhecimento.md`
 - `00_Inbox/Inbox.md`
 - `wiki/sistemas/hermes-agent.md`
 - `60_Sistemas/Hermes_Agent.md`

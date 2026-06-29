@@ -46,5 +46,5 @@ Este painel existe para tornar visivel o conhecimento absorvido de e-mails, conv
 
 - Painel: [[Painel_Memoria_FabioOS]]
 - Memoria: [[wiki/memoria/Mapa_Memoria_Fabio]]
-- Decisoes: [[40_Decisoes/Memoria_Email_FabioOS]]
+- Decisoes: [[90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/40_Decisoes/Memoria_Email_FabioOS]]
 - Inbox: [[00_Inbox/Email_para_Processar_FabioOS]]

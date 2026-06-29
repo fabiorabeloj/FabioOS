@@ -26,7 +26,7 @@ Criado roteiro operacional para transformar a arquitetura e os scripts da Fase 1
 | Arquivo | Alteração |
 |---|---|
 | `wiki/indices/mapa-fabios.md` | Incluído link para o roteiro de execução da Fase 12 RAG |
-| `10_Mapas/Painel_Pendencias_FabioOS.md` | Próxima ação de Fase 12 passou a apontar para o roteiro |
+| `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/10_Mapas/Painel_Pendencias_FabioOS.md` | Próxima ação de Fase 12 passou a apontar para o roteiro |
 
 ## Próxima ação recomendada
 

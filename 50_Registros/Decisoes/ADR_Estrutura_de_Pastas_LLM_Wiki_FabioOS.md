@@ -16,11 +16,11 @@ O FabioOS cresceu rapidamente com Obsidian, GitHub, RAG, MCP, MEGATRON, agentes,
 
 Com isso, surgiram pastas com funcoes sobrepostas:
 
-- `10_Mapas/` e `10_Dashboard/`;
-- `20_Projetos/` e `30_Projetos/`;
-- `30_Conhecimento/`, `40_Repertorio/`, `wiki/` e `40_Wiki/`;
-- `40_Decisoes/` e `50_Registros/Decisoes/`;
-- `50_Fontes/`, `sources/` e `05_Raw_Sources/`.
+- `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/10_Mapas/` e `10_Dashboard/`;
+- `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/20_Projetos/` e `30_Projetos/`;
+- `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/30_Conhecimento/`, `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/40_Repertorio/`, `wiki/` e `40_Wiki/`;
+- `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/40_Decisoes/` e `50_Registros/Decisoes/`;
+- `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/50_Fontes/`, `sources/` e `05_Raw_Sources/`.
 
 ## Problema
 

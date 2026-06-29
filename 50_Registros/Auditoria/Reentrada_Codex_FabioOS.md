@@ -27,7 +27,7 @@ git status --short
 Estado observado no inicio desta reentrada:
 
 - Arquivos modificados pela frente anterior `MATRIZ_APTIDAO_IAS` ainda estavam pendentes.
-- Nova matriz criada em `40_Repertorio/IA/Modelos_e_IAs/Matriz_de_Aptidao_das_IAs_FabioOS.md`.
+- Nova matriz criada em `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/40_Repertorio/IA/Modelos_e_IAs/Matriz_de_Aptidao_das_IAs_FabioOS.md`.
 - Changelog da matriz criado em `50_Registros/Changelog/2026-06-29_matriz-aptidao-ias-fabios.md`.
 - Arquivo nao rastreado e fora desta frente: `60_Sistemas/MEGATRON/Hipotese_Estetica_MEGATRON.md`.
 - Nenhum commit ou push foi realizado nesta reentrada.
@@ -77,7 +77,7 @@ Riscos identificados:
 Mitigacao adotada:
 
 - criar documentos centrais de LLM Wiki e protocolos minimos;
-- reaproveitar `30_Conhecimento/LLM_Wiki_Pattern.md`, `schema/fluxo-wiki.md`, `schema/qualidade-wiki.md` e `60_Sistemas/Claude_Code/project_llmwiki_architecture.md`;
+- reaproveitar `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/30_Conhecimento/LLM_Wiki_Pattern.md`, `schema/fluxo-wiki.md`, `schema/qualidade-wiki.md` e `60_Sistemas/Claude_Code/project_llmwiki_architecture.md`;
 - nao mover arquivos;
 - nao executar piloto;
 - nao reindexar RAG;
@@ -112,7 +112,7 @@ Justificativa:
 - Existem mudancas pendentes anteriores ainda sem commit.
 - O arquivo `60_Sistemas/MEGATRON/Hipotese_Estetica_MEGATRON.md` e untracked e nao pertence a esta frente.
 - `STATUS.md` possui historico com secoes que podem estar parcialmente superadas.
-- Ha tensao entre caminhos novos solicitados (`30_Projetos/`, `10_Dashboard/`) e a estrutura atual (`20_Projetos/`, `10_Mapas/`).
+- Ha tensao entre caminhos novos solicitados (`30_Projetos/`, `10_Dashboard/`) e a estrutura atual (`90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/20_Projetos/`, `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/10_Mapas/`).
 
 ## Resultado
 

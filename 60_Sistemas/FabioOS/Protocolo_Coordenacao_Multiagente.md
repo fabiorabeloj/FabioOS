@@ -57,7 +57,7 @@ Pode ser usada em paralelo quando criar arquivos novos:
 
 - novas specs em `00_Arquitetura/`;
 - novos protocolos em `60_Sistemas/FabioOS/`;
-- novas notas de decisão em `40_Decisoes/`;
+- novas notas de decisão em `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/40_Decisoes/`;
 - relatórios de revisão isolados.
 
 ### Zona compartilhada
@@ -65,7 +65,7 @@ Pode ser usada em paralelo quando criar arquivos novos:
 Exige coordenação antes de editar:
 
 - `wiki/indices/mapa-fabios.md`;
-- `10_Mapas/Painel_Pendencias_FabioOS.md`;
+- `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/10_Mapas/Painel_Pendencias_FabioOS.md`;
 - `CLAUDE.md`;
 - `AGENTS.md`;
 - `.gitignore`;

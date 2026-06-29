@@ -103,7 +103,7 @@ Sem governanca, ambos viram risco.
 
 1. Usar [[30_Projetos/FabioOS/LLM_Wiki_FabioOS]] antes de novas ingestoes.
 2. Usar [[10_Dashboard/RAG_MCP_Control_Plane]] antes de acionar RAG/MCP.
-3. Usar [[40_Repertorio/IA/Modelos_e_IAs/Matriz_de_Aptidao_das_IAs_FabioOS]] antes de escolher IA ou ferramenta.
+3. Usar [[90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/40_Repertorio/IA/Modelos_e_IAs/Matriz_de_Aptidao_das_IAs_FabioOS]] antes de escolher IA ou ferramenta.
 4. Criar a camada completa de governanca operacional como proxima frente documental.
 5. Testar tudo primeiro em piloto pequeno antes de escala.
 
@@ -118,7 +118,7 @@ Sem governanca, ambos viram risco.
 - [[60_Sistemas/Wiki/Schema_Wiki_FabioOS]]
 - [[60_Sistemas/FabioOS/Protocolo_Roteamento_Capacidades_IA]]
 - [[60_Sistemas/MEGATRON/agentes/README_Agentes]]
-- [[40_Repertorio/IA/Modelos_e_IAs/Matriz_de_Aptidao_das_IAs_FabioOS]]
+- [[90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/40_Repertorio/IA/Modelos_e_IAs/Matriz_de_Aptidao_das_IAs_FabioOS]]
 
 ## Proximas acoes
 

@@ -205,7 +205,7 @@ Esta interface é o **capstone** do FabioOS — a face que se senta sobre todas 
 
 - [[60_Sistemas/FabioOS/Plano_Mestre_Implantacao_FabioOS]]
 - [[60_Sistemas/FabioOS/Protocolo_Operacional_FabioOS]]
-- [[10_Mapas/Painel_Pendencias_FabioOS]]
+- [[90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/10_Mapas/Painel_Pendencias_FabioOS]]
 - [[wiki/conceitos/rag]]
 - [[wiki/conceitos/grafos-de-conhecimento]]
 - [[wiki/indices/mapa-fabios]]

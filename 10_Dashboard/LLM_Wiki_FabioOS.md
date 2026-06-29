@@ -22,7 +22,7 @@ atualizado_em: 2026-06-29
 
 ## Entradas existentes reaproveitadas
 
-- [[30_Conhecimento/LLM_Wiki_Pattern]]
+- [[90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/30_Conhecimento/LLM_Wiki_Pattern]]
 - [[60_Sistemas/Claude_Code/project_llmwiki_architecture]]
 - [[schema/fluxo-wiki]]
 - [[schema/qualidade-wiki]]
@@ -44,7 +44,7 @@ atualizado_em: 2026-06-29
 - MCP: [[60_Sistemas/MCP/Inventario_MCP]], [[wiki/conceitos/mcp]]
 - Skills: [[60_Sistemas/Skills/Inventario_Skills]]
 - Agentes: [[60_Sistemas/MEGATRON/agentes/README_Agentes]]
-- Aptidao de IAs: [[40_Repertorio/IA/Modelos_e_IAs/Matriz_de_Aptidao_das_IAs_FabioOS]]
+- Aptidao de IAs: [[90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/40_Repertorio/IA/Modelos_e_IAs/Matriz_de_Aptidao_das_IAs_FabioOS]]
 
 ## Status
 

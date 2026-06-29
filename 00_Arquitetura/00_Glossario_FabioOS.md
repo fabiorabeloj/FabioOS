@@ -25,7 +25,7 @@ A partir do [[00_Arquitetura/01_Modelo_Formal_FabioOS_MEGATRON|Modelo Formal]], 
 | **MEGATRON** | Interface, Interface única, JARVIS-do-Fabio | [[60_Sistemas/FabioOS/Visao_Interface_FabioOS]] | Interface cognitiva universal — orquestra o ecossistema de inteligências |
 | **FabioOS** | — | [[00_Arquitetura/01_Modelo_Formal_FabioOS_MEGATRON]] | Plataforma cognitiva base + domínio pessoal |
 | **PietraOS** | Sistema Pietra, Atendimento Pietra | [[60_Sistemas/Pietra/Sistema_Pietra]] | Domínio institucional (Colégio Pietra), futuro SaaS escolar |
-| **PrimusOS** | PRIMUS | [[20_Projetos/PRIMUS/INDEX_PRIMUS]] | Domínio narrativo — digestão de mundos persistentes |
+| **PrimusOS** | PRIMUS | [[90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/20_Projetos/PRIMUS/INDEX_PRIMUS]] | Domínio narrativo — digestão de mundos persistentes |
 
 ## Regra de uso
 
@@ -39,7 +39,7 @@ A partir do [[00_Arquitetura/01_Modelo_Formal_FabioOS_MEGATRON|Modelo Formal]], 
 - [[00_Arquitetura/01_Modelo_Formal_FabioOS_MEGATRON]]
 - [[60_Sistemas/FabioOS/Visao_Interface_FabioOS]]
 - [[60_Sistemas/Pietra/Sistema_Pietra]]
-- [[20_Projetos/PRIMUS/INDEX_PRIMUS]]
+- [[90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/20_Projetos/PRIMUS/INDEX_PRIMUS]]
 - [[wiki/indices/mapa-fabios]]
 
 ## Próximas ações

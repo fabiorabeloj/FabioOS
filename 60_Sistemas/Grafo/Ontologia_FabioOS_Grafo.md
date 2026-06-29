@@ -27,7 +27,7 @@ conservadoras a partir de caminhos e metadados.
 |---|---|---|
 | `Nota` | Arquivo Markdown | `wiki/indices/mapa-fabios.md` |
 | `Sistema` | `60_Sistemas/` ou frontmatter | `RAG`, `OpenClaw`, `FabioOS` |
-| `Projeto` | `20_Projetos/`, `30_Projetos/` ou frontmatter | `PRIMUS`, `Pietra` |
+| `Projeto` | `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/20_Projetos/`, `30_Projetos/` ou frontmatter | `PRIMUS`, `Pietra` |
 | `Conceito` | `wiki/conceitos/` ou wikilink conceitual | `RAG`, `Banco Vetorial` |
 | `Dominio` | Pasta raiz ou dominio canonico | `FabioOS`, `PietraOS`, `PrimusOS` |
 | `Tag` | Frontmatter ou tags Markdown | `rag`, `agentes` |
@@ -73,11 +73,11 @@ observacao:
 | Caminho | Tipo principal | Dominio |
 |---|---|---|
 | `00_Arquitetura/` | Nota | FabioOS |
-| `10_Mapas/` | Nota | FabioOS |
-| `20_Projetos/PRIMUS` | Projeto | PrimusOS |
-| `20_Projetos/` | Projeto | FabioOS |
-| `30_Conhecimento/` | Conceito | FabioOS |
-| `40_Decisoes/` | Nota | FabioOS |
+| `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/10_Mapas/` | Nota | FabioOS |
+| `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/20_Projetos/PRIMUS` | Projeto | PrimusOS |
+| `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/20_Projetos/` | Projeto | FabioOS |
+| `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/30_Conhecimento/` | Conceito | FabioOS |
+| `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/40_Decisoes/` | Nota | FabioOS |
 | `50_Registros/` | Nota | FabioOS |
 | `60_Sistemas/Pietra` | Sistema | PietraOS |
 | `60_Sistemas/MEGATRON` | Sistema | FabioOS |

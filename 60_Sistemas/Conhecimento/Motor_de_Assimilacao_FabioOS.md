@@ -81,6 +81,6 @@ Secoes:
 
 ## Relacoes
 
-- [[30_Conhecimento/Tecnologia/Arquiteturas_de_Mercado_Radar_Tecnologico]]
+- [[90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/30_Conhecimento/Tecnologia/Arquiteturas_de_Mercado_Radar_Tecnologico]]
 - [[60_Sistemas/FabioOS/Catalogo_Caminhos_Ferramentas_Demonstradas_2026-06-28]]
 - [[60_Sistemas/Wiki/Protocolo_Ingest_LLM_Wiki]]
