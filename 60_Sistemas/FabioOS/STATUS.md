@@ -27,6 +27,8 @@ Estado operacional:
 - Fase 12 RAG: banco vetorial restaurado com `1795` chunks e validacao em modo recuperacao registrada;
 - Fase 13 Grafo: grafo minimo local criado e validado; dados pesados tratados como regeneraveis;
 - Fase 15 MCP FabioOS: frente `MCP_FABIOOS` pertence ao Claude e segue protegida;
+- Mobile Gateway v0: servidor local Python implementado e rodando na porta `8787`; celular pode acessar pela LAN em `http://192.168.0.20:8787` se firewall permitir;
+- Conectores Google v0: Gmail e Google Drive catalogados em modo leitura; detalhes ficaram em `sources/*/_restrito/` fora do Git;
 - MEGATRON v0/v1: ha commits recentes de interface cognitiva e ignorancia explicita; revisar antes de promocao formal;
 - OpenClaw: gateway acessivel, Workboard `fabioos` criado e agente `fabioos-ponte` testado com sucesso; ainda precisa otimizar contexto para reduzir custo.
 

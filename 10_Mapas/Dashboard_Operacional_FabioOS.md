@@ -4,7 +4,7 @@ area: 10_Mapas
 projeto: FabioOS
 status: gerado
 gerado_por: dashboard_fabioos.py
-atualizado_em: 2026-06-28 23:36:00
+atualizado_em: 2026-06-28 23:54:00
 tags: [fabios, dashboard, python, automacao, status]
 ---
 
@@ -15,16 +15,15 @@ tags: [fabios, dashboard, python, automacao, status]
 
 ## Estado Git
 
-- Branch/status: `## main...origin/main [ahead 59]`
-- HEAD local: `255ba7e`
-- Arquivos modificados/untracked: `11`
-- Ultimo changelog: `2026-06-28_spec-driven-v0.md`
+- Branch/status: `## main...origin/main [ahead 60]`
+- HEAD local: `ab2907e`
+- Arquivos modificados/untracked: `16`
+- Ultimo changelog: `2026-06-28_catalogacao-google-connectors-v0.md`
 
 ## Frentes ativas
 
 - MCP_FABIOOS (Claude): em andamento
 - INTERINATO_CODEX (Codex): em andamento
-- SPEC_DRIVEN_V0 (Codex): em andamento
 
 ## Camadas cognitivas
 
@@ -35,7 +34,9 @@ tags: [fabios, dashboard, python, automacao, status]
 | MCP FabioOS | registrado no config global do Codex |
 | Radar Tecnologico | 1 analise(s), ultima: 2026-06-28_prompt-arquiteturas-de-mercado-fabioos.md |
 | Classificacao de dominios/dados | 1 classificacao(oes), ultima: 2026-06-28_radar-arquiteturas-de-mercado-fabioos.md |
-| Specs FabioOS | 1 SPEC(s), ultima: 2026-06-28_spec-driven-development-v0.md |
+| Specs FabioOS | 3 SPEC(s), ultima: 2026-06-28_catalogacao-google-connectors-v0.md |
+| Mobile Gateway | implementado, nenhuma captura mobile ainda |
+| Catalogos Google | Gmail: 4 nota(s) locais; Drive: 1 nota(s) locais |
 | Workflows n8n versionados | 2 JSON |
 
 ## Workflows n8n versionados
@@ -46,7 +47,7 @@ tags: [fabios, dashboard, python, automacao, status]
 ## Pendencias
 
 - Pendencias abertas no Painel: `24`
-- Pendencias abertas em NEXT_ACTIONS: `31`
+- Pendencias abertas em NEXT_ACTIONS: `34`
 
 ### Amostra do Painel
 
@@ -68,7 +69,7 @@ tags: [fabios, dashboard, python, automacao, status]
 - Aplicar o Radar Tecnologico em pelo menos 3 materiais reais antes de promover nova ferramenta ao roadmap. (`radar_tecnologico.py` implementado; falta rodar 3 casos reais)
 - Avaliar subfases candidatas 20.5, 21.5, 22.5, 23.5, 24, 25 e 26 antes de inflar o roadmap oficial.
 - Rodar scan de segredos antes de qualquer commit.
-- Decidir se a memoria consolidada do piloto pode entrar no RAG/Grafo.
+- Testar no celular: abrir `http://192.168.0.20:8787` na mesma rede Wi-Fi/LAN e salvar uma captura real.
 
 ## Inconsistencias detectadas
 
