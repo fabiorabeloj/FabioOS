@@ -1464,6 +1464,7 @@ A partir de 2026-06-28, as fases 0-23 continuam validas, mas passam a ser avalia
 - [[60_Sistemas/FabioOS/Matriz_Profissionalizacao_FabioOS_2026-06-28]]
 - [[60_Sistemas/FabioOS/Matriz_Dominios_Dados_Permissoes_2026-06-28]]
 - [[60_Sistemas/FabioOS/Catalogo_Caminhos_Ferramentas_Demonstradas_2026-06-28]]
+- [[60_Sistemas/FabioOS/Protocolo_Spec_Driven_FabioOS]]
 
 ## Subfases candidatas
 
@@ -1498,3 +1499,9 @@ O processo formal para essa extracao e o [[30_Conhecimento/Tecnologia/Arquitetur
 Antes de ingerir, reindexar, automatizar, enviar a modelo externo ou conectar dominios, aplicar a [[60_Sistemas/FabioOS/Matriz_Dominios_Dados_Permissoes_2026-06-28]].
 
 O classificador local v0 e `60_Sistemas/FabioOS/scripts/classificar_dado_fabioos.py`.
+
+## Regra Spec-Driven
+
+Antes de implementar fase, agente, automacao, integracao externa ou capacidade com custo/risco, criar SPEC seguindo [[60_Sistemas/FabioOS/Protocolo_Spec_Driven_FabioOS]].
+
+O gerador local v0 e `60_Sistemas/FabioOS/scripts/gerar_spec_fabioos.py`.

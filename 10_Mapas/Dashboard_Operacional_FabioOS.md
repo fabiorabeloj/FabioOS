@@ -4,7 +4,7 @@ area: 10_Mapas
 projeto: FabioOS
 status: gerado
 gerado_por: dashboard_fabioos.py
-atualizado_em: 2026-06-28 23:21:21
+atualizado_em: 2026-06-28 23:36:00
 tags: [fabios, dashboard, python, automacao, status]
 ---
 
@@ -15,16 +15,16 @@ tags: [fabios, dashboard, python, automacao, status]
 
 ## Estado Git
 
-- Branch/status: `## main...origin/main [ahead 58]`
-- HEAD local: `10e10d2`
-- Arquivos modificados/untracked: `10`
-- Ultimo changelog: `2026-06-28_dominios-permissoes-v0.md`
+- Branch/status: `## main...origin/main [ahead 59]`
+- HEAD local: `255ba7e`
+- Arquivos modificados/untracked: `11`
+- Ultimo changelog: `2026-06-28_spec-driven-v0.md`
 
 ## Frentes ativas
 
 - MCP_FABIOOS (Claude): em andamento
 - INTERINATO_CODEX (Codex): em andamento
-- DOMINIOS_PERMISSOES_V0 (Codex): em andamento
+- SPEC_DRIVEN_V0 (Codex): em andamento
 
 ## Camadas cognitivas
 
@@ -35,6 +35,7 @@ tags: [fabios, dashboard, python, automacao, status]
 | MCP FabioOS | registrado no config global do Codex |
 | Radar Tecnologico | 1 analise(s), ultima: 2026-06-28_prompt-arquiteturas-de-mercado-fabioos.md |
 | Classificacao de dominios/dados | 1 classificacao(oes), ultima: 2026-06-28_radar-arquiteturas-de-mercado-fabioos.md |
+| Specs FabioOS | 1 SPEC(s), ultima: 2026-06-28_spec-driven-development-v0.md |
 | Workflows n8n versionados | 2 JSON |
 
 ## Workflows n8n versionados
@@ -45,7 +46,7 @@ tags: [fabios, dashboard, python, automacao, status]
 ## Pendencias
 
 - Pendencias abertas no Painel: `24`
-- Pendencias abertas em NEXT_ACTIONS: `30`
+- Pendencias abertas em NEXT_ACTIONS: `31`
 
 ### Amostra do Painel
 
@@ -62,12 +63,12 @@ tags: [fabios, dashboard, python, automacao, status]
 
 - Preparar handoff para Claude retornar em 2026-06-29 13:00.
 - Rodar `classificar_dado_fabioos.py` antes de novas ingestoes sensiveis, RAG/Grafo ou envio a modelo externo.
+- Gerar SPEC antes de implementar nova fase, agente, automacao externa ou capacidade com custo/risco.
 - Usar o catalogo de caminhos demonstrados para avaliar novos anuncios, ferramentas, prints e prompts antes de instalar ou assinar.
 - Aplicar o Radar Tecnologico em pelo menos 3 materiais reais antes de promover nova ferramenta ao roadmap. (`radar_tecnologico.py` implementado; falta rodar 3 casos reais)
 - Avaliar subfases candidatas 20.5, 21.5, 22.5, 23.5, 24, 25 e 26 antes de inflar o roadmap oficial.
 - Rodar scan de segredos antes de qualquer commit.
 - Decidir se a memoria consolidada do piloto pode entrar no RAG/Grafo.
-- Investigar falhas do GitHub Actions `Auto Changelog`.
 
 ## Inconsistencias detectadas
 
