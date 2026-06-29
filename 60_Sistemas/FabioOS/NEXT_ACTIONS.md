@@ -30,6 +30,11 @@ atualizado_em: 2026-06-27
 - [x] Catalogar Gmail e Google Drive em modo leitura com resumo seguro no Obsidian.
 - [ ] Processar primeiro lote tematico dos conectores Google: FabioOS/IA, escola, projetos e financeiro restrito.
 - [ ] Decidir se OpenClaw Companion vira interface visual principal ou se fica atras de n8n/WhatsApp apos estabilidade.
+- [x] Gerar inventario local de Cursor, Hermes, OpenClaw, n8n, OpenRouter e runtimes.
+- [ ] Adicionar OpenRouter como variavel de ambiente local somente quando houver teto de custo definido.
+- [ ] Confirmar caminho executavel/CLI do Hermes antes de usa-lo como agente.
+- [ ] Confirmar como abrir Cursor por linha de comando ou manter Cursor como IDE humana visual.
+- [ ] Subir n8n local somente depois de decidir credenciais/webhooks e porta.
 - [x] Fazer inventario nao destrutivo da memoria pessoal/profissional antes de qualquer ingestao em massa.
 - [x] Registrar decisao de roteamento para e-mails, Google, Gemini e OpenClaw.
 - [x] Executar piloto controlado de uma thread Gmail sem anexos.

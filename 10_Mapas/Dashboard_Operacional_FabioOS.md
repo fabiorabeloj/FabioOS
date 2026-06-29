@@ -4,7 +4,7 @@ area: 10_Mapas
 projeto: FabioOS
 status: gerado
 gerado_por: dashboard_fabioos.py
-atualizado_em: 2026-06-28 23:54:00
+atualizado_em: 2026-06-28 23:58:32
 tags: [fabios, dashboard, python, automacao, status]
 ---
 
@@ -15,10 +15,10 @@ tags: [fabios, dashboard, python, automacao, status]
 
 ## Estado Git
 
-- Branch/status: `## main...origin/main [ahead 60]`
-- HEAD local: `ab2907e`
-- Arquivos modificados/untracked: `16`
-- Ultimo changelog: `2026-06-28_catalogacao-google-connectors-v0.md`
+- Branch/status: `## main...origin/main [ahead 61]`
+- HEAD local: `0a576f4`
+- Arquivos modificados/untracked: `11`
+- Ultimo changelog: `2026-06-28_inventario-ferramentas-ia-local-v0.md`
 
 ## Frentes ativas
 
@@ -34,9 +34,10 @@ tags: [fabios, dashboard, python, automacao, status]
 | MCP FabioOS | registrado no config global do Codex |
 | Radar Tecnologico | 1 analise(s), ultima: 2026-06-28_prompt-arquiteturas-de-mercado-fabioos.md |
 | Classificacao de dominios/dados | 1 classificacao(oes), ultima: 2026-06-28_radar-arquiteturas-de-mercado-fabioos.md |
-| Specs FabioOS | 3 SPEC(s), ultima: 2026-06-28_catalogacao-google-connectors-v0.md |
+| Specs FabioOS | 4 SPEC(s), ultima: 2026-06-28_inventario-ferramentas-ia-local-v0.md |
 | Mobile Gateway | implementado, nenhuma captura mobile ainda |
 | Catalogos Google | Gmail: 4 nota(s) locais; Drive: 1 nota(s) locais |
+| Ferramentas IA locais | inventario gerado: Inventario_Ferramentas_IA_Local_2026-06-28.md |
 | Workflows n8n versionados | 2 JSON |
 
 ## Workflows n8n versionados
@@ -47,7 +48,7 @@ tags: [fabios, dashboard, python, automacao, status]
 ## Pendencias
 
 - Pendencias abertas no Painel: `24`
-- Pendencias abertas em NEXT_ACTIONS: `34`
+- Pendencias abertas em NEXT_ACTIONS: `38`
 
 ### Amostra do Painel
 
