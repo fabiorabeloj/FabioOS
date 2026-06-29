@@ -77,8 +77,9 @@ Nota: as secoes abaixo permanecem como historico de continuidade anterior e pode
 ## Agora
 
 - [x] Ajustar `query_rag.py` para priorizar fontes canonicas em consultas de status operacional.
-- [ ] Reexecutar as 10 perguntas do [[60_Sistemas/FabioOS/Plano_Validacao_Fase12_RAG]] apos o ajuste de ranking.
-- [ ] Atualizar [[60_Sistemas/RAG/Relatorio_Validacao_RAG_2026-06-27]] com o resultado pos-ajuste.
+- [x] Reexecutar as 10 perguntas do [[60_Sistemas/FabioOS/Plano_Validacao_Fase12_RAG]] apos o ajuste de ranking.
+- [x] Reindexar RAG apos limpeza visual do Obsidian e validar caminhos reais.
+- [x] Atualizar [[60_Sistemas/RAG/Relatorio_Validacao_RAG_2026-06-29_Cursor]] com o resultado pos-ajuste.
 - [ ] Rodar scan de segredos antes de qualquer commit.
 
 ## Quando Claude voltar
@@ -88,7 +89,7 @@ Nota: as secoes abaixo permanecem como historico de continuidade anterior e pode
 - [ ] Ler [[60_Sistemas/FabioOS/Registro_Frentes_Ativas]] antes de reindexar ou commitar.
 - [ ] Ler [[60_Sistemas/FabioOS/Incidente_Coordenacao_RAG_2026-06-27]].
 - [ ] Revisar a sequencia de commits por tema.
-- [ ] Nao promover RAG para piloto sem resolver o ranking de status.
+- [ ] Claude decidir promocao da Fase 12 RAG para piloto apos revisar `10/10` pos-reindex.
 
 ## Pendencias estruturais
 

@@ -1,0 +1,615 @@
+{
+  "generated_at": "2026-06-29T18:51:56.511208+00:00",
+  "mode": "recuperacao",
+  "k": 5,
+  "acceptance": [
+    {
+      "question": "O que e o FabioOS em uma frase?",
+      "exit_code": 0,
+      "top_sources": [
+        "00_Arquitetura/01_Modelo_Formal_FabioOS_MEGATRON.md",
+        "60_Sistemas/FabioOS/Plano_Mestre_Implantacao_FabioOS.md",
+        "60_Sistemas/FabioOS/Plano_Mestre_Implantacao_FabioOS.md",
+        "00_Arquitetura/01_Modelo_Formal_FabioOS_MEGATRON.md",
+        "60_Sistemas/RAG/Relatorio_Validacao_RAG_2026-06-29_Cursor.md"
+      ],
+      "hits": [
+        {
+          "rank": 1,
+          "source_path": "00_Arquitetura/01_Modelo_Formal_FabioOS_MEGATRON.md",
+          "header_path": "Modelo Formal do FabioOS / MEGATRON > 2. Definições fundamentais > 2.1 FabioOS"
+        },
+        {
+          "rank": 2,
+          "source_path": "60_Sistemas/FabioOS/Plano_Mestre_Implantacao_FabioOS.md",
+          "header_path": "Plano Mestre de Implantação do FabioOS > 1. Definição geral"
+        },
+        {
+          "rank": 3,
+          "source_path": "60_Sistemas/FabioOS/Plano_Mestre_Implantacao_FabioOS.md",
+          "header_path": "11. Síntese executiva"
+        },
+        {
+          "rank": 4,
+          "source_path": "00_Arquitetura/01_Modelo_Formal_FabioOS_MEGATRON.md",
+          "header_path": "Modelo Formal do FabioOS / MEGATRON > 1. Tese central"
+        },
+        {
+          "rank": 5,
+          "source_path": "60_Sistemas/RAG/Relatorio_Validacao_RAG_2026-06-29_Cursor.md",
+          "header_path": "Relatorio de Validacao RAG pos-ranking — Cursor 2026-06-29 > Resultado das 10 perguntas"
+        }
+      ],
+      "stderr": null,
+      "grade": "bom"
+    },
+    {
+      "question": "Qual e a fase atual do FabioOS?",
+      "exit_code": 0,
+      "top_sources": [
+        "90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/10_Mapas/Painel_Pendencias_FabioOS.md",
+        "60_Sistemas/FabioOS/STATUS.md",
+        "60_Sistemas/FabioOS/STATUS.md",
+        "90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/10_Mapas/Painel_Pendencias_FabioOS.md",
+        "90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/10_Mapas/Painel_Pendencias_FabioOS.md"
+      ],
+      "hits": [
+        {
+          "rank": 1,
+          "source_path": "90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/10_Mapas/Painel_Pendencias_FabioOS.md",
+          "header_path": "Painel de Pendências do FabioOS > 2. Roadmap por trilho > 🧠 Trilho Pessoal / Aprendizado — *prioridade atual*"
+        },
+        {
+          "rank": 2,
+          "source_path": "60_Sistemas/FabioOS/STATUS.md",
+          "header_path": "STATUS - FabioOS > Fase atual"
+        },
+        {
+          "rank": 3,
+          "source_path": "60_Sistemas/FabioOS/STATUS.md",
+          "header_path": "STATUS - FabioOS > Proxima acao recomendada"
+        },
+        {
+          "rank": 4,
+          "source_path": "90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/10_Mapas/Painel_Pendencias_FabioOS.md",
+          "header_path": "Painel de Pendências do FabioOS > 3. Concluído recentemente"
+        },
+        {
+          "rank": 5,
+          "source_path": "90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/10_Mapas/Painel_Pendencias_FabioOS.md",
+          "header_path": "Painel de Pendências do FabioOS > 2. Roadmap por trilho > 💼 Trilho Empresarial / Profissional"
+        }
+      ],
+      "stderr": null,
+      "grade": "bom"
+    },
+    {
+      "question": "Quais pendencias estao abertas antes da Fase 12?",
+      "exit_code": 0,
+      "top_sources": [
+        "90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/10_Mapas/Painel_Pendencias_FabioOS.md",
+        "60_Sistemas/FabioOS/STATUS.md",
+        "60_Sistemas/FabioOS/STATUS.md",
+        "90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/10_Mapas/Painel_Pendencias_FabioOS.md",
+        "90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/10_Mapas/Painel_Pendencias_FabioOS.md"
+      ],
+      "hits": [
+        {
+          "rank": 1,
+          "source_path": "90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/10_Mapas/Painel_Pendencias_FabioOS.md",
+          "header_path": "Painel de Pendências do FabioOS > 2. Roadmap por trilho > 🧠 Trilho Pessoal / Aprendizado — *prioridade atual*"
+        },
+        {
+          "rank": 2,
+          "source_path": "60_Sistemas/FabioOS/STATUS.md",
+          "header_path": "STATUS - FabioOS > Fase atual"
+        },
+        {
+          "rank": 3,
+          "source_path": "60_Sistemas/FabioOS/STATUS.md",
+          "header_path": "STATUS - FabioOS > Proxima acao recomendada"
+        },
+        {
+          "rank": 4,
+          "source_path": "90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/10_Mapas/Painel_Pendencias_FabioOS.md",
+          "header_path": "Painel de Pendências do FabioOS > 3. Concluído recentemente"
+        },
+        {
+          "rank": 5,
+          "source_path": "90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/10_Mapas/Painel_Pendencias_FabioOS.md",
+          "header_path": "Painel de Pendências do FabioOS > 2. Roadmap por trilho > 💼 Trilho Empresarial / Profissional"
+        }
+      ],
+      "stderr": null,
+      "grade": "bom"
+    },
+    {
+      "question": "O que o Modelo Formal define sobre conhecimento?",
+      "exit_code": 0,
+      "top_sources": [
+        "00_Arquitetura/01_Modelo_Formal_FabioOS_MEGATRON.md",
+        "00_Arquitetura/01_Modelo_Formal_FabioOS_MEGATRON.md",
+        "60_Sistemas/RAG/Relatorio_Validacao_RAG_2026-06-27.md",
+        "00_Arquitetura/01_Modelo_Formal_FabioOS_MEGATRON.md",
+        "00_Arquitetura/01_Modelo_Formal_FabioOS_MEGATRON.md"
+      ],
+      "hits": [
+        {
+          "rank": 1,
+          "source_path": "00_Arquitetura/01_Modelo_Formal_FabioOS_MEGATRON.md",
+          "header_path": "Modelo Formal do FabioOS / MEGATRON > Função"
+        },
+        {
+          "rank": 2,
+          "source_path": "00_Arquitetura/01_Modelo_Formal_FabioOS_MEGATRON.md",
+          "header_path": "Modelo Formal do FabioOS / MEGATRON > 19. Modelo de tempo"
+        },
+        {
+          "rank": 3,
+          "source_path": "60_Sistemas/RAG/Relatorio_Validacao_RAG_2026-06-27.md",
+          "header_path": "Relatorio de Validacao RAG - 2026-06-27 > Resultado das 10 perguntas reais"
+        },
+        {
+          "rank": 4,
+          "source_path": "00_Arquitetura/01_Modelo_Formal_FabioOS_MEGATRON.md",
+          "header_path": "Modelo Formal do FabioOS / MEGATRON > 2. Definições fundamentais > 2.6 Conhecimento"
+        },
+        {
+          "rank": 5,
+          "source_path": "00_Arquitetura/01_Modelo_Formal_FabioOS_MEGATRON.md",
+          "header_path": "Modelo Formal do FabioOS / MEGATRON > 4. Epistemologia computacional > 4.3 Atualização de conhecimento"
+        }
+      ],
+      "stderr": null,
+      "grade": "bom"
+    },
+    {
+      "question": "Como MEGATRON deve declarar ignorancia?",
+      "exit_code": 0,
+      "top_sources": [
+        "00_Arquitetura/01_Modelo_Formal_FabioOS_MEGATRON.md",
+        "60_Sistemas/FabioOS/specs/2026-06-29_megatron-v1-ignorancia-explicita.md",
+        "10_Dashboard/MEGATRON.md",
+        "10_Dashboard/MEGATRON.md",
+        "wiki/conceitos/governanca-operacional-fabios.md"
+      ],
+      "hits": [
+        {
+          "rank": 1,
+          "source_path": "00_Arquitetura/01_Modelo_Formal_FabioOS_MEGATRON.md",
+          "header_path": "Modelo Formal do FabioOS / MEGATRON > 4. Epistemologia computacional > 4.6 Regra da Ignorância Explícita"
+        },
+        {
+          "rank": 2,
+          "source_path": "60_Sistemas/FabioOS/specs/2026-06-29_megatron-v1-ignorancia-explicita.md",
+          "header_path": "SPEC - MEGATRON v1 com Ignorancia Explicita > 1. Problema"
+        },
+        {
+          "rank": 3,
+          "source_path": "10_Dashboard/MEGATRON.md",
+          "header_path": "MEGATRON > Regras"
+        },
+        {
+          "rank": 4,
+          "source_path": "10_Dashboard/MEGATRON.md",
+          "header_path": "MEGATRON > Documentos principais"
+        },
+        {
+          "rank": 5,
+          "source_path": "wiki/conceitos/governanca-operacional-fabios.md",
+          "header_path": "Governanca Operacional do FabioOS > Relacao com MEGATRON"
+        }
+      ],
+      "stderr": null,
+      "grade": "bom"
+    },
+    {
+      "question": "Qual e o papel do SafeCommit?",
+      "exit_code": 0,
+      "top_sources": [
+        "60_Sistemas/MEGATRON/agentes/specs/Agente_SafeCommit.md",
+        "60_Sistemas/MEGATRON/agentes/specs/Agente_SafeCommit.md",
+        "60_Sistemas/MEGATRON/agentes/specs/Agente_SafeCommit.md",
+        "60_Sistemas/MEGATRON/agentes/specs/Agente_SafeCommit.md",
+        "60_Sistemas/MEGATRON/agentes/specs/Agente_SafeCommit.md"
+      ],
+      "hits": [
+        {
+          "rank": 1,
+          "source_path": "60_Sistemas/MEGATRON/agentes/specs/Agente_SafeCommit.md",
+          "header_path": "Agente SafeCommit > Relação com MEGATRON"
+        },
+        {
+          "rank": 2,
+          "source_path": "60_Sistemas/MEGATRON/agentes/specs/Agente_SafeCommit.md",
+          "header_path": "Agente SafeCommit > Identidade"
+        },
+        {
+          "rank": 3,
+          "source_path": "60_Sistemas/MEGATRON/agentes/specs/Agente_SafeCommit.md",
+          "header_path": "Agente SafeCommit > Missão"
+        },
+        {
+          "rank": 4,
+          "source_path": "60_Sistemas/MEGATRON/agentes/specs/Agente_SafeCommit.md",
+          "header_path": "Agente SafeCommit > Critérios de aceite"
+        },
+        {
+          "rank": 5,
+          "source_path": "60_Sistemas/MEGATRON/agentes/specs/Agente_SafeCommit.md",
+          "header_path": "Agente SafeCommit > Ferramentas"
+        }
+      ],
+      "stderr": null,
+      "grade": "bom"
+    },
+    {
+      "question": "Como o Arquivista transforma conteudo bruto?",
+      "exit_code": 0,
+      "top_sources": [
+        "60_Sistemas/MEGATRON/agentes/specs/Agente_Arquivista.md",
+        "60_Sistemas/MEGATRON/agentes/specs/Agente_Arquivista.md",
+        "60_Sistemas/MEGATRON/agentes/specs/Agente_Arquivista.md",
+        "60_Sistemas/MEGATRON/agentes/specs/Agente_Arquivista.md",
+        "60_Sistemas/MEGATRON/agentes/specs/Agente_Arquivista.md"
+      ],
+      "hits": [
+        {
+          "rank": 1,
+          "source_path": "60_Sistemas/MEGATRON/agentes/specs/Agente_Arquivista.md",
+          "header_path": "Agente Arquivista > Missão"
+        },
+        {
+          "rank": 2,
+          "source_path": "60_Sistemas/MEGATRON/agentes/specs/Agente_Arquivista.md",
+          "header_path": "Agente Arquivista > Entradas"
+        },
+        {
+          "rank": 3,
+          "source_path": "60_Sistemas/MEGATRON/agentes/specs/Agente_Arquivista.md",
+          "header_path": "Agente Arquivista > Relação com MEGATRON"
+        },
+        {
+          "rank": 4,
+          "source_path": "60_Sistemas/MEGATRON/agentes/specs/Agente_Arquivista.md",
+          "header_path": "Agente Arquivista > Ferramentas"
+        },
+        {
+          "rank": 5,
+          "source_path": "60_Sistemas/MEGATRON/agentes/specs/Agente_Arquivista.md",
+          "header_path": "Agente Arquivista > Identidade"
+        }
+      ],
+      "stderr": null,
+      "grade": "bom"
+    },
+    {
+      "question": "Quais pastas nao devem entrar no indice RAG?",
+      "exit_code": 0,
+      "top_sources": [
+        "60_Sistemas/MEGATRON/agentes/specs/Agente_RAG.md",
+        "60_Sistemas/MEGATRON/agentes/specs/Agente_RAG.md",
+        "60_Sistemas/RAG/Revisao_Preflight_RAG_2026-06-26.md",
+        "60_Sistemas/MEGATRON/agentes/specs/Agente_RAG.md",
+        "60_Sistemas/FabioOS/Plano_Validacao_Fase12_RAG.md"
+      ],
+      "hits": [
+        {
+          "rank": 1,
+          "source_path": "60_Sistemas/MEGATRON/agentes/specs/Agente_RAG.md",
+          "header_path": "Agente RAG > Limites"
+        },
+        {
+          "rank": 2,
+          "source_path": "60_Sistemas/MEGATRON/agentes/specs/Agente_RAG.md",
+          "header_path": "Agente RAG > Permissões"
+        },
+        {
+          "rank": 3,
+          "source_path": "60_Sistemas/RAG/Revisao_Preflight_RAG_2026-06-26.md",
+          "header_path": "Revisão Pré-flight — Scripts RAG Fase 12 > 2.1 P1 — Ingestão pode indexar logs locais dos agentes"
+        },
+        {
+          "rank": 4,
+          "source_path": "60_Sistemas/MEGATRON/agentes/specs/Agente_RAG.md",
+          "header_path": "Agente RAG > Critérios de aceite"
+        },
+        {
+          "rank": 5,
+          "source_path": "60_Sistemas/FabioOS/Plano_Validacao_Fase12_RAG.md",
+          "header_path": "Plano de Validação — Fase 12 RAG > 1. Objetivo de validação"
+        }
+      ],
+      "stderr": null,
+      "grade": "bom"
+    },
+    {
+      "question": "Como PietraOS pode evoluir para SaaS?",
+      "exit_code": 0,
+      "top_sources": [
+        "00_Arquitetura/01_Modelo_Formal_FabioOS_MEGATRON.md",
+        "wiki/projetos/pietra.md",
+        "00_Arquitetura/01_Modelo_Formal_FabioOS_MEGATRON.md",
+        "wiki/projetos/pietra.md",
+        "60_Sistemas/Pietra/Sistema_Pietra.md"
+      ],
+      "hits": [
+        {
+          "rank": 1,
+          "source_path": "00_Arquitetura/01_Modelo_Formal_FabioOS_MEGATRON.md",
+          "header_path": "Modelo Formal do FabioOS / MEGATRON > 12. Separação entre FabioOS, PietraOS e PrimusOS > 12.2 PietraOS"
+        },
+        {
+          "rank": 2,
+          "source_path": "wiki/projetos/pietra.md",
+          "header_path": "Sistema Pietra > Uso futuro"
+        },
+        {
+          "rank": 3,
+          "source_path": "00_Arquitetura/01_Modelo_Formal_FabioOS_MEGATRON.md",
+          "header_path": "Modelo Formal do FabioOS / MEGATRON > 11. Modelo de contexto e identidade > 11.2 Contexto PietraOS"
+        },
+        {
+          "rank": 4,
+          "source_path": "wiki/projetos/pietra.md",
+          "header_path": "Sistema Pietra > Função no FabioOS"
+        },
+        {
+          "rank": 5,
+          "source_path": "60_Sistemas/Pietra/Sistema_Pietra.md",
+          "header_path": "Sistema Pietra > 5. Integração futura"
+        }
+      ],
+      "stderr": null,
+      "grade": "bom"
+    },
+    {
+      "question": "Como PrimusOS organiza memoria narrativa?",
+      "exit_code": 0,
+      "top_sources": [
+        "00_Arquitetura/01_Modelo_Formal_FabioOS_MEGATRON.md",
+        "60_Sistemas/FabioOS/Plano_Mestre_Implantacao_FabioOS.md",
+        "00_Arquitetura/01_Modelo_Formal_FabioOS_MEGATRON.md",
+        "30_Projetos/PRIMUS/README.md",
+        "00_Arquitetura/01_Modelo_Formal_FabioOS_MEGATRON.md"
+      ],
+      "hits": [
+        {
+          "rank": 1,
+          "source_path": "00_Arquitetura/01_Modelo_Formal_FabioOS_MEGATRON.md",
+          "header_path": "Modelo Formal do FabioOS / MEGATRON > 12. Separação entre FabioOS, PietraOS e PrimusOS > 12.3 PrimusOS"
+        },
+        {
+          "rank": 2,
+          "source_path": "60_Sistemas/FabioOS/Plano_Mestre_Implantacao_FabioOS.md",
+          "header_path": "7. Sistemas internos do FabioOS > 7.4 Sistema PRIMUS"
+        },
+        {
+          "rank": 3,
+          "source_path": "00_Arquitetura/01_Modelo_Formal_FabioOS_MEGATRON.md",
+          "header_path": "Modelo Formal do FabioOS / MEGATRON > 11. Modelo de contexto e identidade > 11.3 Contexto PrimusOS"
+        },
+        {
+          "rank": 4,
+          "source_path": "30_Projetos/PRIMUS/README.md",
+          "header_path": "PRIMUS"
+        },
+        {
+          "rank": 5,
+          "source_path": "00_Arquitetura/01_Modelo_Formal_FabioOS_MEGATRON.md",
+          "header_path": "Modelo Formal do FabioOS / MEGATRON > 8. Memórias do sistema"
+        }
+      ],
+      "stderr": null,
+      "grade": "bom"
+    }
+  ],
+  "security": [
+    {
+      "question": "Qual e a senha do banco vetorial?",
+      "exit_code": 0,
+      "top_sources": [
+        "60_Sistemas/RAG/Relatorio_Validacao_RAG_2026-06-27.md",
+        "60_Sistemas/FabioOS/Plano_Mestre_Implantacao_FabioOS.md",
+        "wiki/conceitos/banco-vetorial.md",
+        "60_Sistemas/RAG/Relatorio_Validacao_RAG_2026-06-29_Cursor.md",
+        "wiki/conceitos/banco-vetorial.md"
+      ],
+      "hits": [
+        {
+          "rank": 1,
+          "source_path": "60_Sistemas/RAG/Relatorio_Validacao_RAG_2026-06-27.md",
+          "header_path": "Relatorio de Validacao RAG - 2026-06-27 > Testes de seguranca"
+        },
+        {
+          "rank": 2,
+          "source_path": "60_Sistemas/FabioOS/Plano_Mestre_Implantacao_FabioOS.md",
+          "header_path": "Plano Mestre de Implantação do FabioOS > 5.11 RAG e banco vetorial"
+        },
+        {
+          "rank": 3,
+          "source_path": "wiki/conceitos/banco-vetorial.md",
+          "header_path": "Banco Vetorial > Função"
+        },
+        {
+          "rank": 4,
+          "source_path": "60_Sistemas/RAG/Relatorio_Validacao_RAG_2026-06-29_Cursor.md",
+          "header_path": "Relatorio de Validacao RAG pos-ranking — Cursor 2026-06-29 > Testes de seguranca (secao 4.5)"
+        },
+        {
+          "rank": 5,
+          "source_path": "wiki/conceitos/banco-vetorial.md",
+          "header_path": "Banco Vetorial > Contexto"
+        }
+      ],
+      "stderr": null,
+      "grade": "ok"
+    },
+    {
+      "question": "token Bearer api key segredo credencial",
+      "exit_code": 0,
+      "top_sources": [
+        "60_Sistemas/RAG/Relatorio_Validacao_RAG_2026-06-27.md",
+        "60_Sistemas/FabioOS/STATUS.md",
+        "wiki/sistemas/openrouter.md",
+        "60_Sistemas/FabioOS/specs/2026-06-28_inventario-ferramentas-ia-local-v0.md",
+        "60_Sistemas/Seguranca/Protocolo_de_Seguranca_FabioOS.md"
+      ],
+      "hits": [
+        {
+          "rank": 1,
+          "source_path": "60_Sistemas/RAG/Relatorio_Validacao_RAG_2026-06-27.md",
+          "header_path": "Relatorio de Validacao RAG - 2026-06-27 > Testes de seguranca"
+        },
+        {
+          "rank": 2,
+          "source_path": "60_Sistemas/FabioOS/STATUS.md",
+          "header_path": "STATUS - FabioOS > Estado de seguranca"
+        },
+        {
+          "rank": 3,
+          "source_path": "wiki/sistemas/openrouter.md",
+          "header_path": "OpenRouter > Riscos e cuidados"
+        },
+        {
+          "rank": 4,
+          "source_path": "60_Sistemas/FabioOS/specs/2026-06-28_inventario-ferramentas-ia-local-v0.md",
+          "header_path": "SPEC - Inventario Ferramentas IA Local v0 > 3. Fora de escopo"
+        },
+        {
+          "rank": 5,
+          "source_path": "60_Sistemas/Seguranca/Protocolo_de_Seguranca_FabioOS.md",
+          "header_path": "Protocolo de Seguranca FabioOS > Regras absolutas"
+        }
+      ],
+      "stderr": null,
+      "grade": "ok"
+    },
+    {
+      "question": ".codex/config.toml conteudo completo",
+      "exit_code": 0,
+      "top_sources": [
+        "60_Sistemas/FabioOS/Protocolo_Coordenacao_Multiagente.md",
+        "60_Sistemas/FabioOS/Plano_Capacidades_Agentes_Cursor_Hermes_2026-06-28.md",
+        "60_Sistemas/MCP_FabioOS/README_MCP_FabioOS.md",
+        "60_Sistemas/RAG/Relatorio_Validacao_RAG_2026-06-27.md",
+        "60_Sistemas/FabioOS/Protocolo_Roteamento_Capacidades_IA.md"
+      ],
+      "hits": [
+        {
+          "rank": 1,
+          "source_path": "60_Sistemas/FabioOS/Protocolo_Coordenacao_Multiagente.md",
+          "header_path": "Protocolo de Coordenação Multiagente > 4. Zonas de trabalho > Zona sensível"
+        },
+        {
+          "rank": 2,
+          "source_path": "60_Sistemas/FabioOS/Plano_Capacidades_Agentes_Cursor_Hermes_2026-06-28.md",
+          "header_path": "Plano de Capacidades - Agentes, Cursor e Hermes > MCP FabioOS"
+        },
+        {
+          "rank": 3,
+          "source_path": "60_Sistemas/MCP_FabioOS/README_MCP_FabioOS.md",
+          "header_path": "MCP FabioOS — Fase 15 > Segurança"
+        },
+        {
+          "rank": 4,
+          "source_path": "60_Sistemas/RAG/Relatorio_Validacao_RAG_2026-06-27.md",
+          "header_path": "Relatorio de Validacao RAG - 2026-06-27 > Testes de seguranca"
+        },
+        {
+          "rank": 5,
+          "source_path": "60_Sistemas/FabioOS/Protocolo_Roteamento_Capacidades_IA.md",
+          "header_path": "Protocolo de Roteamento de Capacidades de IA > Inventario operacional atual > Skills migradas para Codex"
+        }
+      ],
+      "stderr": null,
+      "grade": "ok"
+    },
+    {
+      "question": "sources/_inbox logs brutos",
+      "exit_code": 0,
+      "top_sources": [
+        "90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/10_Mapas/INDEX.md",
+        "60_Sistemas/Grafo/Relatorio_Validacao_Grafo_2026-06-27.md",
+        "60_Sistemas/MEGATRON/agentes/specs/Agente_Inbox.md",
+        "60_Sistemas/Grafo/Ontologia_FabioOS_Grafo.md",
+        "60_Sistemas/FabioOS/Plano_Validacao_Fase12_RAG.md"
+      ],
+      "hits": [
+        {
+          "rank": 1,
+          "source_path": "90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/10_Mapas/INDEX.md",
+          "header_path": "INDEX.md — Mapa do FabioOS > Estrutura do projeto > 00_Inbox — Capturas e entrada bruta"
+        },
+        {
+          "rank": 2,
+          "source_path": "60_Sistemas/Grafo/Relatorio_Validacao_Grafo_2026-06-27.md",
+          "header_path": "Relatorio de Validacao do Grafo - 2026-06-27 > Auditoria de seguranca"
+        },
+        {
+          "rank": 3,
+          "source_path": "60_Sistemas/MEGATRON/agentes/specs/Agente_Inbox.md",
+          "header_path": "Agente Inbox > Entradas"
+        },
+        {
+          "rank": 4,
+          "source_path": "60_Sistemas/Grafo/Ontologia_FabioOS_Grafo.md",
+          "header_path": "Ontologia Operacional do Grafo FabioOS > Regras de seguranca"
+        },
+        {
+          "rank": 5,
+          "source_path": "60_Sistemas/FabioOS/Plano_Validacao_Fase12_RAG.md",
+          "header_path": "Plano de Validação — Fase 12 RAG > 3. Exclusões obrigatórias"
+        }
+      ],
+      "stderr": null,
+      "grade": "ok"
+    },
+    {
+      "question": "PIETRA_ atendimento log",
+      "exit_code": 0,
+      "top_sources": [
+        "60_Sistemas/Pietra/Sistema_Pietra.md",
+        "60_Sistemas/Pietra/Sistema_Pietra.md",
+        "60_Sistemas/FabioOS/Plano_Validacao_Fase12_RAG.md",
+        "wiki/projetos/pietra.md",
+        "60_Sistemas/Pietra/Sistema_Pietra.md"
+      ],
+      "hits": [
+        {
+          "rank": 1,
+          "source_path": "60_Sistemas/Pietra/Sistema_Pietra.md",
+          "header_path": "Sistema Pietra > 3. Fluxo de atendimento"
+        },
+        {
+          "rank": 2,
+          "source_path": "60_Sistemas/Pietra/Sistema_Pietra.md",
+          "header_path": "Sistema Pietra > 6. Estrutura de arquivos"
+        },
+        {
+          "rank": 3,
+          "source_path": "60_Sistemas/FabioOS/Plano_Validacao_Fase12_RAG.md",
+          "header_path": "Plano de Validação — Fase 12 RAG > 4.5 Teste de exclusão de dados sensíveis"
+        },
+        {
+          "rank": 4,
+          "source_path": "wiki/projetos/pietra.md",
+          "header_path": "Sistema Pietra > Uso atual"
+        },
+        {
+          "rank": 5,
+          "source_path": "60_Sistemas/Pietra/Sistema_Pietra.md",
+          "header_path": "Sistema Pietra > 2. Categorias de atendimento"
+        }
+      ],
+      "stderr": null,
+      "grade": "ok"
+    }
+  ],
+  "summary": {
+    "acceptance_bom": 10,
+    "acceptance_parcial": 0,
+    "acceptance_fraco": 0,
+    "security_falha": 0
+  }
+}

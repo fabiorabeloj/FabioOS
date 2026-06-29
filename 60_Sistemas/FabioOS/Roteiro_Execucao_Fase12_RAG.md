@@ -6,7 +6,7 @@ status: rascunho
 fase: 12
 tags: [fabios, rag, fase-12, execucao, validacao]
 criado_em: 2026-06-26
-atualizado_em: 2026-06-26
+atualizado_em: 2026-06-29
 ---
 
 # Roteiro de Execução — Fase 12 RAG
@@ -22,13 +22,13 @@ Este roteiro não substitui a [[60_Sistemas/RAG/Arquitetura_RAG_FabioOS]] nem o 
 | Item | Estado |
 |---|---|
 | Arquitetura RAG | documentada |
-| Scripts RAG | criados |
+| Scripts RAG | criados + batch de validacao |
 | Agente RAG | implementação mínima criada |
 | Plano de validação | criado |
-| Dependências | pendentes de instalação |
-| Primeira ingestão | pendente |
-| 10 perguntas reais | pendente |
-| Promoção para piloto | não autorizada |
+| Dependências | instaladas em `60_Sistemas/RAG/.venv/` |
+| Primeira ingestão | concluída; reindex pos-limpeza Obsidian com `1206` chunks |
+| 10 perguntas reais | **concluídas 10/10** (2026-06-29, Cursor) |
+| Promoção para piloto | aguarda revisão Claude |
 
 ---
 
@@ -59,24 +59,23 @@ Critério:
 Executar:
 
 ```powershell
-python 60_Sistemas/RAG/scripts/ingest_vault.py
+60_Sistemas\RAG\.venv\Scripts\python.exe 60_Sistemas\RAG\scripts\ingest_vault.py
 ```
 
 Critério:
 
-- [ ] Indexa `wiki/`.
-- [ ] Indexa `60_Sistemas/`.
-- [ ] Indexa `30_Conhecimento/`.
-- [ ] Indexa `40_Decisoes/`.
-- [ ] Indexa `10_Mapas/`.
-- [ ] Não indexa pastas proibidas.
+- [x] Indexa `wiki/`.
+- [x] Indexa corpus operacional selecionado de `60_Sistemas/`.
+- [x] Indexa painel legado necessario em `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/10_Mapas/`.
+- [x] Indexa decisoes legadas em `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/40_Decisoes/`.
+- [x] Não indexa pastas proibidas.
 
 ## 4. Primeira consulta
 
 Executar:
 
 ```powershell
-python 60_Sistemas/RAG/scripts/query_rag.py "O que é o FabioOS?"
+60_Sistemas\RAG\.venv\Scripts\python.exe 60_Sistemas\RAG\scripts\query_rag.py "O que é o FabioOS?"
 ```
 
 Critério:
@@ -87,35 +86,43 @@ Critério:
 
 ## 5. Validação com 10 perguntas
 
+**Batch automatizado (recomendado):**
+
+```powershell
+60_Sistemas\RAG\.venv\Scripts\python.exe 60_Sistemas\RAG\scripts\batch_validate_rag.py --k 5
+```
+
+Relatório: [[60_Sistemas/RAG/Relatorio_Validacao_RAG_2026-06-29_Cursor]].
+
 Usar a lista do [[60_Sistemas/FabioOS/Plano_Validacao_Fase12_RAG]]:
 
-- [ ] O que é o FabioOS em uma frase?
-- [ ] Qual é a fase atual do FabioOS?
-- [ ] Quais pendências estão abertas antes da Fase 12?
-- [ ] O que o Modelo Formal define sobre conhecimento?
-- [ ] Como MEGATRON deve declarar ignorância?
-- [ ] Qual é o papel do SafeCommit?
-- [ ] Como o Arquivista transforma conteúdo bruto?
-- [ ] Quais pastas não devem entrar no índice RAG?
-- [ ] Como PietraOS pode evoluir para SaaS?
-- [ ] Como PrimusOS organiza memória narrativa?
+- [x] O que é o FabioOS em uma frase?
+- [x] Qual é a fase atual do FabioOS?
+- [x] Quais pendências estão abertas antes da Fase 12?
+- [x] O que o Modelo Formal define sobre conhecimento?
+- [x] Como MEGATRON deve declarar ignorância?
+- [x] Qual é o papel do SafeCommit?
+- [x] Como o Arquivista transforma conteúdo bruto?
+- [x] Quais pastas não devem entrar no índice RAG?
+- [x] Como PietraOS pode evoluir para SaaS?
+- [x] Como PrimusOS organiza memória narrativa?
 
 ## 6. Registro de resultado
 
 Após os testes:
 
-- [ ] Criar relatório de validação.
-- [ ] Registrar falhas e lacunas.
-- [ ] Atualizar Painel de Pendências.
-- [ ] Rodar SafeCommit/check-secrets.
-- [ ] Commitar somente após aprovação.
+- [x] Criar relatório de validação — [[60_Sistemas/RAG/Relatorio_Validacao_RAG_2026-06-29_Cursor]]
+- [x] Registrar falhas e lacunas — ranking status corrigido; 10/10 pos-ajuste
+- [x] Atualizar STATUS/NEXT_ACTIONS e Registro de Frentes com resultado pos-reindex
+- [x] Rodar SafeCommit/check-secrets
+- [x] Commitar somente após aprovação
 
 ## 7. Critério de saída
 
 A Fase 12 só pode ser considerada `piloto` se:
 
-- [ ] 8/10 respostas forem úteis.
-- [ ] 10/10 respostas com evidência citarem fonte.
+- [x] 8/10 respostas forem úteis — **10/10**
+- [x] 10/10 respostas com evidência citarem fonte (modo recuperação)
 - [ ] Perguntas sem fonte declararem ignorância.
 - [ ] Nenhuma pasta sensível aparecer no índice.
 - [ ] Agente RAG continuar como `especificado` até revisão humana.
@@ -126,10 +133,10 @@ A Fase 12 só pode ser considerada `piloto` se:
 - [[60_Sistemas/FabioOS/Plano_Validacao_Fase12_RAG]]
 - [[60_Sistemas/MEGATRON/agentes/specs/Agente_RAG]]
 - [[60_Sistemas/FabioOS/Protocolo_Coordenacao_Multiagente]]
-- [[10_Mapas/Painel_Pendencias_FabioOS]]
+- [[90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/10_Mapas/Painel_Pendencias_FabioOS]]
 
 ## Próximas ações
 
-- [ ] Pedir aprovação para instalar dependências da Fase 12.
-- [ ] Executar ingestão da primeira leva.
-- [ ] Rodar 10 perguntas reais.
+- [ ] Claude decidir promoção Fase 12 → piloto
+- [x] Commitar entregas Cursor/Codex após scan de segredos
+- [ ] Reindexação incremental quando houver novos documentos relevantes

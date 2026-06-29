@@ -163,7 +163,7 @@ Adicionar `00_Arquitetura` a `INCLUDE_DIRS` antes da ingestao definitiva.
 
 ## 6.3 P2 — Consulta de status atual precisa recuperar Painel/Mapa recentes
 
-A pergunta sobre fase atual nao recuperou diretamente `10_Mapas/Painel_Pendencias_FabioOS.md`, possivelmente porque a ingestao parou antes de `10_Mapas/`.
+A pergunta sobre fase atual nao recuperou diretamente `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/10_Mapas/Painel_Pendencias_FabioOS.md`, possivelmente porque a ingestao parou antes de `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/10_Mapas/`.
 
 Recomendacao:
 
