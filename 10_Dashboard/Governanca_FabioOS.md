@@ -30,7 +30,7 @@ Centralizar os documentos da Fase 17 - Governanca Operacional.
 
 ## Relacoes
 
-- [[wiki/conceitos/governanca-operacional-fabios]]
+- [[40_Wiki/_compat_wiki/conceitos/governanca-operacional-fabios]]
 - [[30_Projetos/FabioOS/LLM_Wiki_FabioOS]]
 - [[10_Dashboard/RAG_MCP_Control_Plane]]
 - [[60_Sistemas/FabioOS/Roadmap_Fases_FabioOS_v2_2026-06-29]]

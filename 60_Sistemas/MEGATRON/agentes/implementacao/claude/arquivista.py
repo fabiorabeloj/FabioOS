@@ -94,7 +94,7 @@ atualizado_em: {hoje}
 
 # {args.titulo}
 
-> Classificação provisória: **{dominio}**. Revisar e promover (fonte/wiki/tarefa) conforme o Protocolo Operacional.
+> Classificação provisória: **{dominio}**. Revisar e promover (fonte/40_Wiki/_compat_wiki/tarefa) conforme o Protocolo Operacional.
 
 ## Conteúdo bruto
 

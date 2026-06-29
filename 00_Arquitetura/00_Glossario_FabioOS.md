@@ -40,9 +40,9 @@ A partir do [[00_Arquitetura/01_Modelo_Formal_FabioOS_MEGATRON|Modelo Formal]], 
 - [[60_Sistemas/FabioOS/Visao_Interface_FabioOS]]
 - [[60_Sistemas/Pietra/Sistema_Pietra]]
 - [[90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/20_Projetos/PRIMUS/INDEX_PRIMUS]]
-- [[wiki/indices/mapa-fabios]]
+- [[40_Wiki/_compat_wiki/indices/mapa-fabios]]
 
 ## Próximas ações
 
 - [ ] Ao criar PietraOS como produto, separar dados institucionais dos pessoais por camada explícita
-- [ ] Atualizar `wiki/indices/mapa-fabios.md` com os termos canônicos quando conveniente
+- [ ] Atualizar `40_Wiki/_compat_wiki/indices/mapa-fabios.md` com os termos canônicos quando conveniente

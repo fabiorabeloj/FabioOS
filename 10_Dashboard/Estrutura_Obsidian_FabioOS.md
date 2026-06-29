@@ -45,7 +45,7 @@ Auditoria:
 | skill reutilizavel | `70_Skills/` |
 | spec executavel | `80_Specs/` |
 | material encerrado | `90_Arquivo/` |
-| schema ou criterio de qualidade | `schema/` |
+| schema ou criterio de qualidade | `60_Sistemas/Wiki/schema/` |
 
 ## Pastas legadas
 
@@ -57,8 +57,8 @@ Nao criar novos arquivos nestas pastas sem justificativa:
 - `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/40_Decisoes/`
 - `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/40_Repertorio/`
 - `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/50_Fontes/`
-- `sources/`
-- `wiki/`
+- `05_Raw_Sources/_compat_sources/`
+- `40_Wiki/_compat_wiki/`
 
 ## Proxima acao
 

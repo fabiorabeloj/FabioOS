@@ -22,9 +22,9 @@ atualizado_em: 2026-06-27
 ## Criado/modificado
 
 - `.gitignore`
-- `sources/email/_restrito/2026-06-27_piloto_gmail_protocolos_fabioos.md` (local/ignorado)
-- `wiki/memoria/decisoes/2026-06-27_Piloto_Email_Protocolos_FabioOS.md`
-- `wiki/memoria/Mapa_Memoria_Fabio.md`
+- `05_Raw_Sources/_compat_sources/email/_restrito/2026-06-27_piloto_gmail_protocolos_fabioos.md` (local/ignorado)
+- `40_Wiki/_compat_wiki/memoria/decisoes/2026-06-27_Piloto_Email_Protocolos_FabioOS.md`
+- `40_Wiki/_compat_wiki/memoria/Mapa_Memoria_Fabio.md`
 - `60_Sistemas/FabioOS/NEXT_ACTIONS.md`
 - `60_Sistemas/OpenClaw/ponte/STATUS_PONTE.md`
 

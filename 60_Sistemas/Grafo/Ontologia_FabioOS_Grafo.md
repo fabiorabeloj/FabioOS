@@ -25,10 +25,10 @@ conservadoras a partir de caminhos e metadados.
 
 | Tipo | Fonte principal | Exemplo |
 |---|---|---|
-| `Nota` | Arquivo Markdown | `wiki/indices/mapa-fabios.md` |
+| `Nota` | Arquivo Markdown | `40_Wiki/_compat_wiki/indices/mapa-fabios.md` |
 | `Sistema` | `60_Sistemas/` ou frontmatter | `RAG`, `OpenClaw`, `FabioOS` |
 | `Projeto` | `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/20_Projetos/`, `30_Projetos/` ou frontmatter | `PRIMUS`, `Pietra` |
-| `Conceito` | `wiki/conceitos/` ou wikilink conceitual | `RAG`, `Banco Vetorial` |
+| `Conceito` | `40_Wiki/_compat_wiki/conceitos/` ou wikilink conceitual | `RAG`, `Banco Vetorial` |
 | `Dominio` | Pasta raiz ou dominio canonico | `FabioOS`, `PietraOS`, `PrimusOS` |
 | `Tag` | Frontmatter ou tags Markdown | `rag`, `agentes` |
 | `Arquivo` | Artefato nao Markdown futuro | reservado |
@@ -83,14 +83,14 @@ observacao:
 | `60_Sistemas/MEGATRON` | Sistema | FabioOS |
 | `60_Sistemas/RAG` | Sistema | FabioOS |
 | `60_Sistemas/OpenClaw` | Sistema | FabioOS |
-| `wiki/conceitos/` | Conceito | FabioOS |
-| `wiki/projetos/pietra` | Projeto | PietraOS |
-| `wiki/indices/` | Nota | FabioOS |
+| `40_Wiki/_compat_wiki/conceitos/` | Conceito | FabioOS |
+| `40_Wiki/_compat_wiki/projetos/pietra` | Projeto | PietraOS |
+| `40_Wiki/_compat_wiki/indices/` | Nota | FabioOS |
 
 ## Regras de seguranca
 
 - Nao indexar `00_Inbox/`.
-- Nao indexar `sources/_inbox/`.
+- Nao indexar `05_Raw_Sources/_compat_sources/_inbox/`.
 - Nao indexar `.obsidian/`, `.claude/`, `.codex/`, `.git/`.
 - Nao indexar `.venv/`, `node_modules/`, `site-packages/`.
 - Nao indexar `fabioos_db/`.

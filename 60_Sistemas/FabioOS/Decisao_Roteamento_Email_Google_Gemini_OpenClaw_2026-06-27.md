@@ -84,7 +84,7 @@ Antes de ler um e-mail, o agente deve registrar:
 2. Identificador: link, remetente+assunto, busca Gmail, ou ID.
 3. Escopo: thread inteira ou mensagem unica.
 4. Anexos: ler ou ignorar; quais tipos.
-5. Destino: `sources/email/pessoal`, `sources/email/trabalho`, `sources/email/_restrito` ou `wiki/memoria`.
+5. Destino: `05_Raw_Sources/_compat_sources/email/pessoal`, `05_Raw_Sources/_compat_sources/email/trabalho`, `05_Raw_Sources/_compat_sources/email/_restrito` ou `40_Wiki/_compat_wiki/memoria`.
 6. Indexacao: `nao-indexar` por padrao ate revisao.
 
 Saida esperada:
@@ -104,8 +104,8 @@ Saida esperada:
 1. Inventario sem ler corpo profundo.
 2. Amostra pequena autorizada.
 3. Classificacao por sensibilidade.
-4. Conversao para `sources/` com frontmatter.
-5. Transformacao para `wiki/memoria/`.
+4. Conversao para `05_Raw_Sources/_compat_sources/` com frontmatter.
+5. Transformacao para `40_Wiki/_compat_wiki/memoria/`.
 6. Revisao humana.
 7. So depois promocao para RAG/Grafo.
 
@@ -123,6 +123,6 @@ Executar um **piloto manual pequeno**:
 
 1. Fabio escolhe uma unica thread de e-mail.
 2. Codex usa conector Gmail apenas para essa thread.
-3. A saida fica primeiro em `sources/email/_restrito/`.
-4. Depois o resumo consolidado vai para `wiki/memoria/`.
+3. A saida fica primeiro em `05_Raw_Sources/_compat_sources/email/_restrito/`.
+4. Depois o resumo consolidado vai para `40_Wiki/_compat_wiki/memoria/`.
 5. Nada entra no RAG sem revisao.

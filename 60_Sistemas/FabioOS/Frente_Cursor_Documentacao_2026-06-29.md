@@ -31,7 +31,7 @@ Registrar e persistir no vault tudo que a frente `CURSOR_VALIDACAO_RAG` produziu
 - [[60_Sistemas/Cursor/README_Cursor_FabioOS]]
 - [[60_Sistemas/RAG/README_Scripts_RAG]]
 - [[50_Registros/Changelog/2026-06-29_cursor-documentacao-sessao-obsidian]]
-- Atualizacoes em [[wiki/conceitos/rag]] e [[60_Sistemas/FabioOS/Roteiro_Execucao_Fase12_RAG]]
+- Atualizacoes em [[40_Wiki/_compat_wiki/conceitos/rag]] e [[60_Sistemas/FabioOS/Roteiro_Execucao_Fase12_RAG]]
 
 ## Anti-colisao
 

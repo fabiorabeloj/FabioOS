@@ -29,11 +29,10 @@ A pergunta "Qual e a fase atual do FabioOS?" agora recupera Painel/STATUS no top
 ## Limites
 
 - Nenhuma API externa chamada.
-- Cursor nao reindexou `fabioos_db`.
-- Codex posteriormente reindexou `fabioos_db` apos limpeza visual do Obsidian para alinhar caminhos reais (`1206` chunks, sem API externa).
-- Edicoes compartilhadas foram feitas pelo Codex com lock em `Registro_Frentes_Ativas`.
+- Nenhum reindex do `fabioos_db`.
+- Nenhuma edicao em STATUS, NEXT_ACTIONS, mapa, CLAUDE ou Registro_Frentes_Ativas (frentes Codex).
 - Nenhum commit ou push.
 
 ## Proxima acao
 
-Claude decide promocao da Fase 12 RAG para piloto apos revisar a validacao `10/10` pos-reindex.
+Codex ou Claude atualizam pendencias compartilhadas; Fabio autoriza commit apos scan de segredos.

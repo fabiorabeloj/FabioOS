@@ -17,7 +17,7 @@ Criado plano de custos para uso da OpenRouter no FabioOS e plano estrategico de 
 - Criado `60_Sistemas/OpenRouter/Plano_Custos_OpenRouter_FabioOS.md`.
 - Criado `00_Arquitetura/Plano_Orcamento_FabioOS_MEGATRON_2026.md`.
 - Atualizada a nota `60_Sistemas/OpenRouter/OpenRouter.md` com referencia aos planos.
-- Atualizada a wiki `wiki/sistemas/openrouter.md` com links internos.
+- Atualizada a wiki `40_Wiki/_compat_wiki/sistemas/openrouter.md` com links internos.
 
 ## Decisoes
 

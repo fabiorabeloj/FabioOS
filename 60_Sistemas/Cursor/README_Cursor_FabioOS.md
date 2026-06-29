@@ -36,7 +36,7 @@ Cursor **nao** deve:
 Antes de cada sessao:
 
 1. Ler [[60_Sistemas/FabioOS/Registro_Frentes_Ativas]] (ou declarar frente isolada em arquivo novo).
-2. Evitar zona compartilhada: `STATUS.md`, `NEXT_ACTIONS.md`, `mapa-fabios.md`, `CLAUDE.md`.
+2. Evitar zona compartilhada: `STATUS.md`, `NEXT_ACTIONS.md`, `mapa-fabios.md`, `60_Sistemas/FabioOS/bootstrap/CLAUDE.md`.
 3. Preferir arquivos novos + scripts + relatorios proprios.
 4. Persistir entrega: relatorio + changelog + sessao em `50_Registros/Sessoes/`.
 
@@ -70,7 +70,7 @@ Ver [[60_Sistemas/RAG/README_Scripts_RAG]] para detalhes.
 - [[90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/40_Repertorio/IA/Modelos_e_IAs/Matriz_de_Aptidao_das_IAs_FabioOS]]
 - [[60_Sistemas/FabioOS/Protocolo_Coordenacao_Multiagente]]
 - [[60_Sistemas/FabioOS/Plano_Capacidades_Agentes_Cursor_Hermes_2026-06-28]]
-- [[wiki/conceitos/rag]]
+- [[40_Wiki/_compat_wiki/conceitos/rag]]
 
 ## Proximas acoes
 

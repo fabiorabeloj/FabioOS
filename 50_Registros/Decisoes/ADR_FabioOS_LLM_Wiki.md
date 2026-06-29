@@ -63,7 +63,7 @@ Fontes brutas serao preservadas como evidencia imutavel. A wiki em Markdown sera
 ## Riscos
 
 - automatizar ingest antes de validar qualidade;
-- criar wiki paralela sem integrar com `wiki/` existente;
+- criar wiki paralela sem integrar com `40_Wiki/_compat_wiki/` existente;
 - nao diferenciar fonte bruta de sintese;
 - deixar MCP sem matriz de permissao;
 - usar RAG sem testes de recuperacao.
@@ -72,7 +72,7 @@ Fontes brutas serao preservadas como evidencia imutavel. A wiki em Markdown sera
 
 1. Criar schema operacional da wiki.
 2. Criar protocolos de ingest, query e lint.
-3. Criar `index.md` e `log.md` centrais.
+3. Criar `10_Dashboard/_entrada/index.md` e `50_Registros/Logs_Agentes/log.md` centrais.
 4. Criar RAG/MCP Control Plane.
 5. Executar piloto pequeno apenas com autorizacao humana.
 6. Revisar governanca operacional antes de automatizar escala.

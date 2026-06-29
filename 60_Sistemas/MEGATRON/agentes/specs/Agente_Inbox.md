@@ -34,7 +34,7 @@ Monitorar entradas novas, classificar destino operacional e encaminhar cada item
 | Entrada | Origem | Formato |
 |---|---|---|
 | Capturas manuais | `00_Inbox/` | Markdown, texto, imagem |
-| Logs de captura | `sources/_inbox/` | Markdown |
+| Logs de captura | `05_Raw_Sources/_compat_sources/_inbox/` | Markdown |
 | Mensagens externas | OpenClaw/n8n | JSON ou Markdown |
 | Pendências soltas | usuário ou changelog | checklist |
 
@@ -51,7 +51,7 @@ Monitorar entradas novas, classificar destino operacional e encaminhar cada item
 
 ## Ferramentas
 
-- Leitura de `00_Inbox/` e `sources/_inbox/`.
+- Leitura de `00_Inbox/` e `05_Raw_Sources/_compat_sources/_inbox/`.
 - `rg` para detectar padrões.
 - Regras do [[60_Sistemas/FabioOS/Protocolo_Operacional_FabioOS]].
 - Catálogo de intents do Pietra quando aplicável.
@@ -112,7 +112,7 @@ MEGATRON usa Inbox como sensor de entrada. Inbox informa "o que chegou" e "para 
 
 ## Implementação mínima
 
-1. Rotina manual: listar arquivos novos em `00_Inbox/` e `sources/_inbox/`.
+1. Rotina manual: listar arquivos novos em `00_Inbox/` e `05_Raw_Sources/_compat_sources/_inbox/`.
 2. Produzir relatório de triagem.
 3. Para cada item, sugerir destino e agente.
 4. Só mover ou transformar após confirmação.

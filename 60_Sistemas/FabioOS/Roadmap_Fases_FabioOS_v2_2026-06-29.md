@@ -62,7 +62,7 @@ As fases 0-23 originais foram boas para iniciar o FabioOS, mas ficaram defasadas
 | 4 | Claude Code project-level | concluida/parcial | ampliar para Codex, skills e subagentes |
 | 4.5 | Saneamento tecnico | concluida | manter como base |
 | 5 | LLM Wiki inicial | concluida | promover para LLM Wiki operacional |
-| 6 | Bootstrap de contexto | concluida | manter e reforcar com `index.md`/`log.md` |
+| 6 | Bootstrap de contexto | concluida | manter e reforcar com `10_Dashboard/_entrada/index.md`/`50_Registros/Logs_Agentes/log.md` |
 | 7 | Camada 1 ferramentas | concluida | manter |
 | 7.5 | Protocolo/Ingestao | concluida/parcial | unificar com protocolos LLM Wiki |
 | 8 | Sistema Escola | concluida base | evoluir depois com RAG/Google/n8n |
@@ -95,7 +95,7 @@ As fases 0-23 originais foram boas para iniciar o FabioOS, mas ficaram defasadas
 | 2 | Git/GitHub | concluida | vault versionavel e restauravel |
 | 3 | Workstation IA | concluida | ferramentas principais instaladas/inventariadas |
 | 4 | Agentes, skills e comandos | concluida/parcial | agentes iniciais e skills documentadas |
-| 5 | LLM Wiki inicial | concluida | `sources/`, `wiki/`, `schema/` funcionando |
+| 5 | LLM Wiki inicial | concluida | `05_Raw_Sources/_compat_sources/`, `40_Wiki/_compat_wiki/`, `60_Sistemas/Wiki/schema/` funcionando |
 | 6 | Bootstrap de contexto | concluida | nova sessao consegue retomar por arquivos |
 | 7 | Camada operacional basica | concluida | ferramentas e protocolos centrais documentados |
 | 8 | EscolaOS base | concluida | templates e comandos escolares existem |

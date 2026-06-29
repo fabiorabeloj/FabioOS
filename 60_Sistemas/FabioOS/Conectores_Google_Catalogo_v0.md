@@ -15,8 +15,8 @@ atualizado_em: 2026-06-28
 
 Os conectores Gmail e Google Drive foram usados com sucesso em modo leitura. Esta nota e o resumo versionavel. Os detalhes com nomes de arquivos, metadados de conta, consultas e amostras ficam em:
 
-- `sources/email/_restrito/2026-06-28_catalogo_gmail_pessoal.md`
-- `sources/drive/_restrito/2026-06-28_catalogo_google_drive_root.md`
+- `05_Raw_Sources/_compat_sources/email/_restrito/2026-06-28_catalogo_gmail_pessoal.md`
+- `05_Raw_Sources/_compat_sources/drive/_restrito/2026-06-28_catalogo_google_drive_root.md`
 
 Essas pastas sao visiveis no Obsidian local, mas ficam fora do Git.
 
@@ -53,7 +53,7 @@ Estado observado:
 |---|---|
 | Newsletter/promocional | catalogar como ruido; nao ingerir |
 | E-mail pessoal | triagem humana antes de resumo |
-| E-mail de projeto | resumo seguro em `wiki/memoria/projetos/` |
+| E-mail de projeto | resumo seguro em `40_Wiki/_compat_wiki/memoria/projetos/` |
 | Documento escolar | encaminhar para Sistema Escola |
 | PDF financeiro/boleto | manter restrito; nao enviar a modelo externo |
 | Documento sem titulo | catalogar, depois renomear/classificar manualmente |

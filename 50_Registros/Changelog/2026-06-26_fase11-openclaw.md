@@ -30,7 +30,7 @@ Criação da arquitetura completa do OpenClaw — gateway conversacional baseado
 
 | Arquivo | Descrição |
 |---|---|
-| `60_Sistemas/n8n/Workflows/FabioOS_WhatsApp_Pietra.md` | Documentação completa (10 seções padrão CLAUDE.md) |
+| `60_Sistemas/n8n/Workflows/FabioOS_WhatsApp_Pietra.md` | Documentação completa (10 seções padrão 60_Sistemas/FabioOS/bootstrap/CLAUDE.md) |
 | `60_Sistemas/n8n/Workflows/FabioOS_WhatsApp_Pietra.json` | Workflow importável com 7 nós |
 
 ### Comando Claude Code
@@ -41,8 +41,8 @@ Criação da arquitetura completa do OpenClaw — gateway conversacional baseado
 
 ## Arquivos atualizados
 
-- `wiki/sistemas/openclaw.md` — tecnologia base definida, uso atual atualizado
-- `wiki/indices/mapa-fabios.md` — fase 11 em andamento, próxima: 12
+- `40_Wiki/_compat_wiki/sistemas/openclaw.md` — tecnologia base definida, uso atual atualizado
+- `40_Wiki/_compat_wiki/indices/mapa-fabios.md` — fase 11 em andamento, próxima: 12
 - `60_Sistemas/FabioOS/Plano_Mestre_Implantacao_FabioOS.md` — fase 11 com entregáveis
 
 ## Arquitetura do workflow FabioOS_WhatsApp_Pietra
@@ -66,7 +66,7 @@ POST /webhook/whatsapp-pietra (Evolution API)
   · mensagem de notificação para professor
         ↓
 [Salvar Log no Vault]
-  · POST → Obsidian API → sources/_inbox/PIETRA_YYYY-MM_LOG.md
+  · POST → Obsidian API → 05_Raw_Sources/_compat_sources/_inbox/PIETRA_YYYY-MM_LOG.md
         ↓
 [Responder]
   · JSON: {status, categoria, nivel, acao}
@@ -78,7 +78,7 @@ POST /webhook/whatsapp-pietra (Evolution API)
 - **Número anonimizado** no log: apenas 4 últimos dígitos (`****9999`)
 - **fromMe ignorado**: mensagens enviadas pelo próprio número da escola não geram classificação
 - **Escalonamento por palavras de risco**: "advogado", "PROCON", "violência" → `escalonar: true` independente da categoria
-- **Log em `sources/_inbox/`**: arquivo por mês `PIETRA_YYYY-MM_LOG.md` — nunca commitar
+- **Log em `05_Raw_Sources/_compat_sources/_inbox/`**: arquivo por mês `PIETRA_YYYY-MM_LOG.md` — nunca commitar
 - **`/simular-mensagem-pietra`**: comando para testar o fluxo sem precisar de WhatsApp ou n8n
 
 ## Para ativar (checklist)
@@ -91,7 +91,7 @@ POST /webhook/whatsapp-pietra (Evolution API)
 [ ] Importar FabioOS_WhatsApp_Pietra.json no n8n
 [ ] Ativar o workflow
 [ ] Testar com curl simulando payload Evolution API
-[ ] Confirmar log em sources/_inbox/PIETRA_2026-06_LOG.md
+[ ] Confirmar log em 05_Raw_Sources/_compat_sources/_inbox/PIETRA_2026-06_LOG.md
 ```
 
 ## Teste sem infraestrutura
@@ -110,5 +110,5 @@ Classifica localmente, sem n8n ou WhatsApp.
 - [[60_Sistemas/OpenClaw/Sistema_OpenClaw]]
 - [[60_Sistemas/Pietra/Sistema_Pietra]]
 - [[60_Sistemas/n8n/Workflows/FabioOS_WhatsApp_Pietra]]
-- [[wiki/sistemas/openclaw]]
+- [[40_Wiki/_compat_wiki/sistemas/openclaw]]
 - [[50_Registros/Changelog/2026-06-26_fase10-n8n-operacional]]

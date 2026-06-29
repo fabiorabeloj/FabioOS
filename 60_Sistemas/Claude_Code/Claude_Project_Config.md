@@ -62,9 +62,9 @@ Invocados com `/nome-do-comando` no Claude Code:
 
 | Comando | Função |
 |---|---|
-| `/archive-source` | Arquiva fonte bruta em sources/ |
-| `/source-to-wiki` | Transforma fonte em página wiki/ |
-| `/update-index` | Atualiza índices sources/README.md e wiki/README.md |
+| `/archive-source` | Arquiva fonte bruta em 05_Raw_Sources/_compat_sources/ |
+| `/source-to-wiki` | Transforma fonte em página 40_Wiki/_compat_wiki/ |
+| `/update-index` | Atualiza índices 05_Raw_Sources/_compat_sources/README.md e 40_Wiki/_compat_wiki/README.md |
 | `/check-secrets` | Escaneia arquivos por credenciais antes do commit |
 | `/session-changelog` | Gera changelog da sessão em 50_Registros/Changelog/ |
 | `/safe-commit` | Fluxo completo de commit com verificação de segurança |
@@ -76,7 +76,7 @@ Acessados pelo Claude Code via subagentes:
 | Agente | Função |
 |---|---|
 | `vault-architect` | Audita e organiza estrutura do vault |
-| `wiki-curator` | Transforma sources/ em wiki/ com revisão humana |
+| `wiki-curator` | Transforma 05_Raw_Sources/_compat_sources/ em 40_Wiki/_compat_wiki/ com revisão humana |
 | `security-reviewer` | Detecta tokens e credenciais antes de commits |
 | `school-assistant` | Suporte a materiais escolares (esqueleto) |
 
@@ -164,7 +164,7 @@ da máquina ou configuração de CI.
 - [[60_Sistemas/Claude_Code/Workstation_FabioOS]]
 - [[60_Sistemas/Skills/Inventario_Skills]]
 - [[60_Sistemas/MCP/Inventario_MCP]]
-- [[schema/fluxo-wiki]]
+- [[60_Sistemas/Wiki/schema/fluxo-wiki]]
 
 ## Próximas ações
 

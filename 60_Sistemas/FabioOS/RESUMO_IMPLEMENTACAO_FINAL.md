@@ -255,7 +255,7 @@ Todos os links validados ✅
 
 ## 📞 Contatos & Referências
 
-- **CLAUDE.md** — Papel do Claude no repositório
+- **60_Sistemas/FabioOS/bootstrap/CLAUDE.md** — Papel do Claude no repositório
 - **INDEX.md** — Mapa central
 - **50_Registros/Relatorios/RELATORIO_VALIDACAO_LINKS.md** — Análise de links
 - **CHANGELOG_AUTOMATION.md** — Implementação GitHub Actions

@@ -93,7 +93,7 @@ Nenhuma etapa deve ser pulada. A transformação sem preservação perde a fonte
 | Print | `00_Inbox/` | → `05_Raw_Sources/Prints/` ou descartado |
 | PDF | `05_Raw_Sources/PDFs/` | → `40_Wiki/` (via extração) |
 | Link / URL | `05_Raw_Sources/Radar_Tecnologico/` | → `40_Wiki/` |
-| Google Docs | `05_Raw_Sources/Conversas/` ou compatibilidade `sources/drive/` | → `40_Wiki/` ou `60_Sistemas/Escola/` |
+| Google Docs | `05_Raw_Sources/Conversas/` ou compatibilidade `05_Raw_Sources/_compat_sources/drive/` | → `40_Wiki/` ou `60_Sistemas/Escola/` |
 | Email | `00_Inbox/` | → `50_Registros/` ou `05_Raw_Sources/Conversas/` |
 | Mensagem escolar | `00_Inbox/` | → `60_Sistemas/Escola/` |
 | Ideia | `00_Inbox/` | → `30_Projetos/` ou `40_Wiki/` |
@@ -143,11 +143,11 @@ Tempo estimado: **30–60 minutos** (preferencialmente domingo ou segunda-feira)
    com o que foi feito, decidido ou alterado na semana.
 
 3. REVISAR PENDÊNCIAS
-   Abrir notas com [ ] em aberto em 30_Projetos/ e wiki/.
+   Abrir notas com [ ] em aberto em 30_Projetos/ e 40_Wiki/_compat_wiki/.
    Mover para próxima semana ou executar.
 
 4. ATUALIZAR MAPA
-   Verificar se wiki/indices/mapa-fabios.md reflete o estado atual.
+   Verificar se 40_Wiki/_compat_wiki/indices/mapa-fabios.md reflete o estado atual.
    Corrigir links quebrados, fases e status.
 
 5. LIMPAR DUPLICAÇÕES
@@ -191,7 +191,7 @@ A estrutura de destino deve seguir:
 
 `60_Sistemas/FabioOS/Mapa_Canonico_Pastas_Obsidian_v2_2026-06-29.md`
 
-Pastas legadas como `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/10_Mapas/`, `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/20_Projetos/`, `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/30_Conhecimento/`, `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/40_Decisoes/`, `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/40_Repertorio/`, `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/50_Fontes/`, `sources/` e `wiki/` nao devem receber novos arquivos sem justificativa explicita. `sources/` e `wiki/` continuam como compatibilidade operacional ate migracao de links, RAG, MCP e scripts.
+Pastas legadas como `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/10_Mapas/`, `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/20_Projetos/`, `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/30_Conhecimento/`, `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/40_Decisoes/`, `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/40_Repertorio/`, `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/50_Fontes/`, `05_Raw_Sources/_compat_sources/` e `40_Wiki/_compat_wiki/` nao devem receber novos arquivos sem justificativa explicita. `05_Raw_Sources/_compat_sources/` e `40_Wiki/_compat_wiki/` continuam como compatibilidade operacional ate migracao de links, RAG, MCP e scripts.
 
 ---
 
@@ -327,10 +327,10 @@ PRIMUS_S02_WORLDFLAG-GUERRA-DO-NORTE.md
 
 ---
 
-### Fontes (`sources/`)
+### Fontes (`05_Raw_Sources/_compat_sources/`)
 
 ```
-sources/[categoria]/[YYYY-MM-DD]_[slug].md
+05_Raw_Sources/_compat_sources/[categoria]/[YYYY-MM-DD]_[slug].md
 ```
 
 | Campo | Valores possíveis |
@@ -340,10 +340,10 @@ sources/[categoria]/[YYYY-MM-DD]_[slug].md
 
 Exemplos:
 ```
-sources/web/2026-06-26_fastmcp-framework-docs.md
-sources/pdfs/2026-06-26_edital-concurso-xpto.md
-sources/repositorios/2026-06-25_gsd-core.md
-sources/research/2026-06-26_comparativo-bancos-vetoriais.md
+05_Raw_Sources/_compat_sources/web/2026-06-26_fastmcp-framework-docs.md
+05_Raw_Sources/_compat_sources/pdfs/2026-06-26_edital-concurso-xpto.md
+05_Raw_Sources/_compat_sources/repositorios/2026-06-25_gsd-core.md
+05_Raw_Sources/_compat_sources/research/2026-06-26_comparativo-bancos-vetoriais.md
 ```
 
 ---
@@ -397,13 +397,13 @@ Exemplos:
 | 7.5 — Ingestão | "Um link externo vira fonte preservada + Markdown normalizado." |
 | 8 — Escola | "Produzo uma prova do zero usando o FabioOS em menos de 30 min." |
 | 9 — Pietra | "Uma mensagem simulada é classificada e recebe resposta sugerida." |
-| 10 — n8n | "Um webhook gera uma nota em `sources/_inbox/`." |
+| 10 — n8n | "Um webhook gera uma nota em `05_Raw_Sources/_compat_sources/_inbox/`." |
 | 11 — OpenClaw | "Uma mensagem externa aciona uma ação controlada no FabioOS." |
 | 12 — RAG | "Perguntas recuperam notas relevantes do vault por semântica." |
 | 13 — Grafo | "Projetos, ferramentas e decisões aparecem conectados visualmente." |
 | 14 — MCPs | "Claude Code usa ferramenta externa com controle e log." |
 | 15 — MCP FabioOS | "Qualquer IA autorizada consulta e opera o FabioOS por MCP." |
-| 16 — Manus | "Manus entrega relatório que entra direto em `sources/research/`." |
+| 16 — Manus | "Manus entrega relatório que entra direto em `05_Raw_Sources/_compat_sources/research/`." |
 | 17 — Hermes | "Hermes executa tarefa agendada sem supervisão contínua." |
 | 18 — Trader | "Registro de operação gera cálculo de risco automaticamente." |
 | 19 — PRIMUS | "IA lembra evento de sessão anterior sem precisar reler tudo." |
@@ -424,9 +424,9 @@ Exemplos:
 
 - [[60_Sistemas/FabioOS/Plano_Mestre_Implantacao_FabioOS]]
 - [[60_Sistemas/FabioOS/Mapa_Canonico_Pastas_Obsidian_v2_2026-06-29]]
-- [[wiki/indices/mapa-fabios]]
-- [[schema/fluxo-wiki]]
-- [[schema/qualidade-wiki]]
+- [[40_Wiki/_compat_wiki/indices/mapa-fabios]]
+- [[60_Sistemas/Wiki/schema/fluxo-wiki]]
+- [[60_Sistemas/Wiki/schema/qualidade-wiki]]
 - [[.claude/commands/check-secrets]]
 - [[.claude/commands/safe-commit]]
 - [[.claude/commands/session-changelog]]

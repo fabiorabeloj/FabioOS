@@ -40,7 +40,7 @@ Confirmar que o RAG:
 
 | Pasta | Status | Motivo |
 |---|---|---|
-| `wiki/` | autorizado | Conhecimento curado |
+| `40_Wiki/_compat_wiki/` | autorizado | Conhecimento curado |
 | `60_Sistemas/` | autorizado parcial | Documentação técnica do FabioOS |
 | `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/30_Conhecimento/` | autorizado | Repertório conceitual |
 | `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/40_Decisoes/` | autorizado | Decisões e justificativas |
@@ -50,7 +50,7 @@ Confirmar que o RAG:
 
 | Pasta/arquivo | Motivo |
 |---|---|
-| `sources/_inbox/` | Pode conter logs e entradas não triadas |
+| `05_Raw_Sources/_compat_sources/_inbox/` | Pode conter logs e entradas não triadas |
 | `00_Inbox/` | Conteúdo bruto sem curadoria |
 | `90_Arquivo/` | Material encerrado ou de baixo sinal |
 | `.obsidian/` | Configuração local |
@@ -134,7 +134,7 @@ Verificações:
 - [ ] Buscar por `PIETRA_` não retorna logs de atendimento.
 - [ ] Buscar por `token`, `senha`, `Bearer` não retorna credenciais.
 - [ ] Buscar por `.codex/config.toml` não retorna conteúdo.
-- [ ] Buscar por `sources/_inbox` não retorna chunks.
+- [ ] Buscar por `05_Raw_Sources/_compat_sources/_inbox` não retorna chunks.
 
 ## 5. Perguntas reais de aceitação
 

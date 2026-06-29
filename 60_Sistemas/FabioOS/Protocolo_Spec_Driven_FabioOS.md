@@ -74,7 +74,7 @@ Toda SPEC deve responder:
 
 Antes de escolher a IA/ferramenta para uma SPEC, consultar [[90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/40_Repertorio/IA/Modelos_e_IAs/Matriz_de_Aptidao_das_IAs_FabioOS]].
 
-Se a SPEC criar, alterar ou consultar conhecimento persistente, consultar tambem [[30_Projetos/FabioOS/LLM_Wiki_FabioOS]], `index.md`, `log.md` e [[60_Sistemas/Wiki/Schema_Wiki_FabioOS]].
+Se a SPEC criar, alterar ou consultar conhecimento persistente, consultar tambem [[30_Projetos/FabioOS/LLM_Wiki_FabioOS]], `10_Dashboard/_entrada/index.md`, `50_Registros/Logs_Agentes/log.md` e [[60_Sistemas/Wiki/Schema_Wiki_FabioOS]].
 
 | Agente/IA | Papel |
 |---|---|

@@ -110,7 +110,7 @@ Nunca enviar para OpenRouter:
 - tokens, API keys, `.env`, credenciais ou cookies;
 - logs brutos de execucao;
 - `fabioos_db/` ou bases vetoriais;
-- `00_Inbox/` e `sources/_inbox/` sem triagem;
+- `00_Inbox/` e `05_Raw_Sources/_compat_sources/_inbox/` sem triagem;
 - dados pessoais sensiveis sem mascaramento;
 - arquivos inteiros quando trechos bastam.
 

@@ -140,7 +140,7 @@ Antes de usar geração, validar o modelo disponível ou tornar o modelo configu
 - Banco vetorial local `fabioos_db/` está protegido por `.gitignore`.
 - Dependências principais estão listadas, incluindo `python-frontmatter`.
 - Escopo inicial prioriza pastas de alto sinal.
-- `sources/_inbox/`, `00_Inbox/`, `.claude/`, `.obsidian/`, `.git`, `90_Arquivo` e `fabioos_db` estão excluídos.
+- `05_Raw_Sources/_compat_sources/_inbox/`, `00_Inbox/`, `.claude/`, `.obsidian/`, `.git`, `90_Arquivo` e `fabioos_db` estão excluídos.
 - Modo recuperação sem chave de API permite testar busca sem enviar dados externos.
 - Chunking por cabeçalho é adequado para primeira versão.
 

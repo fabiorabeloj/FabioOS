@@ -25,7 +25,7 @@ Criação do modelo formal do FabioOS/MEGATRON como base teórica, computacional
 
 | Arquivo | Alteração |
 |---|---|
-| `wiki/indices/mapa-fabios.md` | Incluído o modelo formal como documento de referência mestre e item nos documentos de sistema |
+| `40_Wiki/_compat_wiki/indices/mapa-fabios.md` | Incluído o modelo formal como documento de referência mestre e item nos documentos de sistema |
 | `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/10_Mapas/Painel_Pendencias_FabioOS.md` | Registrada a entrega em concluídos recentemente e adicionada pendência futura de derivar ontologia operacional para a Fase 13 |
 
 ## Decisões registradas

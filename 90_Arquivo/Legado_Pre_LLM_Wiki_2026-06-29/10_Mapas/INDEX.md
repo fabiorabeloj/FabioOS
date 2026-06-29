@@ -206,7 +206,7 @@ atualizado_em: YYYY-MM-DD
 - **Base de conhecimento:** [[30_Conhecimento|Conhecimento]]
 - **Decisões do sistema:** [[Decisoes]]
 - **Documentação técnica:** [[60_Sistemas|Sistemas]]
-- **Configuração do Claude:** [[CLAUDE]]
+- **Configuração do Claude:** [[60_Sistemas/FabioOS/bootstrap/CLAUDE]]
 
 ---
 

@@ -64,9 +64,9 @@ DEFAULT_OUTPUT_DIR = Path("30_Conhecimento") / "Tecnologia" / "Radar"
 def vault_root() -> Path:
     p = Path(__file__).resolve()
     for parent in p.parents:
-        if (parent / "CLAUDE.md").exists():
+        if (parent / "60_Sistemas/FabioOS/bootstrap/CLAUDE.md").exists():
             return parent
-    raise RuntimeError("Nao encontrei CLAUDE.md acima do script.")
+    raise RuntimeError("Nao encontrei 60_Sistemas/FabioOS/bootstrap/CLAUDE.md acima do script.")
 
 
 ROOT = vault_root()

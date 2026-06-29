@@ -17,7 +17,7 @@
     },
     {
       "parameters": {
-        "jsCode": "// Gerar filename e conteúdo da nota para sources/_inbox/\nconst data = $input.first().json;\nconst titulo = (data.titulo || 'sem-titulo').trim();\nconst conteudo = (data.conteudo || '').trim();\nconst tipo = data.tipo || 'texto';\nconst origem = data.origem || 'webhook';\n\n// Data atual no formato YYYY-MM-DD\nconst hoje = new Date().toISOString().split('T')[0];\n\n// Gerar slug sem acentos\nconst slug = titulo\n  .toLowerCase()\n  .normalize('NFD')\n  .replace(/[\\u0300-\\u036f]/g, '')\n  .replace(/[^a-z0-9]+/g, '-')\n  .replace(/^-|-$/g, '')\n  .substring(0, 60);\n\nconst filename = `${hoje}_${slug}.md`;\n\n// Montar frontmatter e conteúdo\nconst markdown = [\n  '---',\n  'tipo: fonte',\n  `origem: ${origem}`,\n  'status: bruto',\n  `tags: [inbox, ${tipo}]`,\n  `capturado_em: ${hoje}`,\n  '---',\n  '',\n  `# ${titulo}`,\n  '',\n  conteudo,\n  ''\n].join('\\n');\n\nreturn [{\n  json: { filename, markdown, titulo, hoje }\n}];"
+        "jsCode": "// Gerar filename e conteúdo da nota para 05_Raw_Sources/_compat_sources/_inbox/\nconst data = $input.first().json;\nconst titulo = (data.titulo || 'sem-titulo').trim();\nconst conteudo = (data.conteudo || '').trim();\nconst tipo = data.tipo || 'texto';\nconst origem = data.origem || 'webhook';\n\n// Data atual no formato YYYY-MM-DD\nconst hoje = new Date().toISOString().split('T')[0];\n\n// Gerar slug sem acentos\nconst slug = titulo\n  .toLowerCase()\n  .normalize('NFD')\n  .replace(/[\\u0300-\\u036f]/g, '')\n  .replace(/[^a-z0-9]+/g, '-')\n  .replace(/^-|-$/g, '')\n  .substring(0, 60);\n\nconst filename = `${hoje}_${slug}.md`;\n\n// Montar frontmatter e conteúdo\nconst markdown = [\n  '---',\n  'tipo: fonte',\n  `origem: ${origem}`,\n  'status: bruto',\n  `tags: [inbox, ${tipo}]`,\n  `capturado_em: ${hoje}`,\n  '---',\n  '',\n  `# ${titulo}`,\n  '',\n  conteudo,\n  ''\n].join('\\n');\n\nreturn [{\n  json: { filename, markdown, titulo, hoje }\n}];"
       },
       "id": "b2c3d4e5-f6a7-8901-bcde-f12345678901",
       "name": "Gerar Nota",
@@ -28,7 +28,7 @@
     {
       "parameters": {
         "method": "PUT",
-        "url": "=https://host.docker.internal:27124/vault/sources/_inbox/{{ $json.filename }}",
+        "url": "=https://host.docker.internal:27124/vault/05_Raw_Sources/_compat_sources/_inbox/{{ $json.filename }}",
         "authentication": "genericCredentialType",
         "genericAuthType": "httpHeaderAuth",
         "sendBody": true,
@@ -60,7 +60,7 @@
     {
       "parameters": {
         "respondWith": "json",
-        "responseBody": "={{ JSON.stringify({ status: 'ok', arquivo: $('Gerar Nota').item.json.filename, mensagem: 'Nota criada em sources/_inbox/' }) }}"
+        "responseBody": "={{ JSON.stringify({ status: 'ok', arquivo: $('Gerar Nota').item.json.filename, mensagem: 'Nota criada em 05_Raw_Sources/_compat_sources/_inbox/' }) }}"
       },
       "id": "d4e5f6a7-b8c9-0123-defa-234567890123",
       "name": "Responder",

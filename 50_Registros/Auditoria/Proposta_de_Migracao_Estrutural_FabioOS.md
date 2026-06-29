@@ -31,9 +31,9 @@ Pastas principais existentes antes da criacao fisica:
 - `50_Registros/`
 - `60_Sistemas/`
 - `90_Arquivo/`
-- `schema/`
-- `sources/`
-- `wiki/`
+- `60_Sistemas/Wiki/schema/`
+- `05_Raw_Sources/_compat_sources/`
+- `40_Wiki/_compat_wiki/`
 
 ## Estrutura-alvo
 
@@ -53,8 +53,8 @@ Pastas principais existentes antes da criacao fisica:
 
 | Atual | Alvo | Acao recomendada |
 |---|---|---|
-| `sources/` | `05_Raw_Sources/` | Manter como compatibilidade; migrar depois por lote |
-| `wiki/` | `40_Wiki/` | Manter como compatibilidade; migrar depois por lote |
+| `05_Raw_Sources/_compat_sources/` | `05_Raw_Sources/` | Manter como compatibilidade; migrar depois por lote |
+| `40_Wiki/_compat_wiki/` | `40_Wiki/` | Manter como compatibilidade; migrar depois por lote |
 | `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/10_Mapas/` | `10_Dashboard/` ou `40_Wiki/_MOCs/` | Migrar mapas vivos para dashboard e mapas conceituais para MOCs |
 | `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/20_Projetos/` | `30_Projetos/` ou `20_Areas/` | Separar projeto ativo de area continua |
 | `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/30_Conhecimento/` | `40_Wiki/` | Migrar conhecimento processado apos curadoria |
@@ -66,10 +66,10 @@ Pastas principais existentes antes da criacao fisica:
 
 ## Arquivos ja corretos
 
-- `CLAUDE.md`
-- `AGENTS.md`
-- `index.md`
-- `log.md`
+- `60_Sistemas/FabioOS/bootstrap/CLAUDE.md`
+- `60_Sistemas/FabioOS/bootstrap/AGENTS.md`
+- `10_Dashboard/_entrada/index.md`
+- `50_Registros/Logs_Agentes/log.md`
 - `60_Sistemas/FabioOS/STATUS.md`
 - `60_Sistemas/FabioOS/NEXT_ACTIONS.md`
 - `60_Sistemas/FabioOS/Registro_Frentes_Ativas.md`
@@ -95,15 +95,15 @@ Redundantes nao significa apagaveis.
 
 | Grupo | Risco |
 |---|---|
-| `sources/` e `05_Raw_Sources/` | Duplicar fontes se agentes escreverem nos dois sem regra |
-| `wiki/` e `40_Wiki/` | Duplicar conhecimento processado |
+| `05_Raw_Sources/_compat_sources/` e `05_Raw_Sources/` | Duplicar fontes se agentes escreverem nos dois sem regra |
+| `40_Wiki/_compat_wiki/` e `40_Wiki/` | Duplicar conhecimento processado |
 | `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/10_Mapas/` e `10_Dashboard/` | Duplicar paineis/mapas |
 | `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/40_Decisoes/` e `50_Registros/Decisoes/` | Perder historico de decisoes |
 
 ## O que nao deve ser movido agora
 
-- `sources/`
-- `wiki/`
+- `05_Raw_Sources/_compat_sources/`
+- `40_Wiki/_compat_wiki/`
 - `60_Sistemas/RAG/fabioos_db/`
 - `60_Sistemas/Grafo/data/`
 - `.agents/skills/`
@@ -118,7 +118,7 @@ Redundantes nao significa apagaveis.
 - migracao de e-mails;
 - migracao de dados pessoais;
 - promocao de conteudo para RAG/Grafo;
-- alteracao de scripts que dependem de `sources/` ou `wiki/`;
+- alteracao de scripts que dependem de `05_Raw_Sources/_compat_sources/` ou `40_Wiki/_compat_wiki/`;
 - remocao de qualquer pasta legada.
 
 ## Etapas recomendadas
@@ -129,8 +129,8 @@ Redundantes nao significa apagaveis.
 4. Migrar mapas selecionados de `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/10_Mapas/`.
 5. Migrar specs para `80_Specs/` somente apos ajustar links.
 6. Atualizar RAG/MCP para aceitar aliases.
-7. So entao decidir se `sources/` e `wiki/` viram aliases permanentes ou sao migrados fisicamente.
+7. So entao decidir se `05_Raw_Sources/_compat_sources/` e `40_Wiki/_compat_wiki/` viram aliases permanentes ou sao migrados fisicamente.
 
 ## Recomendacao final
 
-Adotar a estrutura fisica LLM Wiki agora, mas tratar `sources/` e `wiki/` como aliases operacionais ate que RAG, MCP, Grafo e backlinks estejam preparados.
+Adotar a estrutura fisica LLM Wiki agora, mas tratar `05_Raw_Sources/_compat_sources/` e `40_Wiki/_compat_wiki/` como aliases operacionais ate que RAG, MCP, Grafo e backlinks estejam preparados.

@@ -171,7 +171,7 @@
         "60_Sistemas/FabioOS/specs/2026-06-29_megatron-v1-ignorancia-explicita.md",
         "10_Dashboard/MEGATRON.md",
         "10_Dashboard/MEGATRON.md",
-        "wiki/conceitos/governanca-operacional-fabios.md"
+        "40_Wiki/_compat_wiki/conceitos/governanca-operacional-fabios.md"
       ],
       "hits": [
         {
@@ -196,7 +196,7 @@
         },
         {
           "rank": 5,
-          "source_path": "wiki/conceitos/governanca-operacional-fabios.md",
+          "source_path": "40_Wiki/_compat_wiki/conceitos/governanca-operacional-fabios.md",
           "header_path": "Governanca Operacional do FabioOS > Relacao com MEGATRON"
         }
       ],
@@ -328,9 +328,9 @@
       "exit_code": 0,
       "top_sources": [
         "00_Arquitetura/01_Modelo_Formal_FabioOS_MEGATRON.md",
-        "wiki/projetos/pietra.md",
+        "40_Wiki/_compat_wiki/projetos/pietra.md",
         "00_Arquitetura/01_Modelo_Formal_FabioOS_MEGATRON.md",
-        "wiki/projetos/pietra.md",
+        "40_Wiki/_compat_wiki/projetos/pietra.md",
         "60_Sistemas/Pietra/Sistema_Pietra.md"
       ],
       "hits": [
@@ -341,7 +341,7 @@
         },
         {
           "rank": 2,
-          "source_path": "wiki/projetos/pietra.md",
+          "source_path": "40_Wiki/_compat_wiki/projetos/pietra.md",
           "header_path": "Sistema Pietra > Uso futuro"
         },
         {
@@ -351,7 +351,7 @@
         },
         {
           "rank": 4,
-          "source_path": "wiki/projetos/pietra.md",
+          "source_path": "40_Wiki/_compat_wiki/projetos/pietra.md",
           "header_path": "Sistema Pietra > Função no FabioOS"
         },
         {
@@ -411,9 +411,9 @@
       "top_sources": [
         "60_Sistemas/RAG/Relatorio_Validacao_RAG_2026-06-27.md",
         "60_Sistemas/FabioOS/Plano_Mestre_Implantacao_FabioOS.md",
-        "wiki/conceitos/banco-vetorial.md",
+        "40_Wiki/_compat_wiki/conceitos/banco-vetorial.md",
         "60_Sistemas/RAG/Relatorio_Validacao_RAG_2026-06-29_Cursor.md",
-        "wiki/conceitos/banco-vetorial.md"
+        "40_Wiki/_compat_wiki/conceitos/banco-vetorial.md"
       ],
       "hits": [
         {
@@ -428,7 +428,7 @@
         },
         {
           "rank": 3,
-          "source_path": "wiki/conceitos/banco-vetorial.md",
+          "source_path": "40_Wiki/_compat_wiki/conceitos/banco-vetorial.md",
           "header_path": "Banco Vetorial > Função"
         },
         {
@@ -438,7 +438,7 @@
         },
         {
           "rank": 5,
-          "source_path": "wiki/conceitos/banco-vetorial.md",
+          "source_path": "40_Wiki/_compat_wiki/conceitos/banco-vetorial.md",
           "header_path": "Banco Vetorial > Contexto"
         }
       ],
@@ -451,7 +451,7 @@
       "top_sources": [
         "60_Sistemas/RAG/Relatorio_Validacao_RAG_2026-06-27.md",
         "60_Sistemas/FabioOS/STATUS.md",
-        "wiki/sistemas/openrouter.md",
+        "40_Wiki/_compat_wiki/sistemas/openrouter.md",
         "60_Sistemas/FabioOS/specs/2026-06-28_inventario-ferramentas-ia-local-v0.md",
         "60_Sistemas/Seguranca/Protocolo_de_Seguranca_FabioOS.md"
       ],
@@ -468,7 +468,7 @@
         },
         {
           "rank": 3,
-          "source_path": "wiki/sistemas/openrouter.md",
+          "source_path": "40_Wiki/_compat_wiki/sistemas/openrouter.md",
           "header_path": "OpenRouter > Riscos e cuidados"
         },
         {
@@ -526,7 +526,7 @@
       "grade": "ok"
     },
     {
-      "question": "sources/_inbox logs brutos",
+      "question": "05_Raw_Sources/_compat_sources/_inbox logs brutos",
       "exit_code": 0,
       "top_sources": [
         "90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/10_Mapas/INDEX.md",
@@ -572,7 +572,7 @@
         "60_Sistemas/Pietra/Sistema_Pietra.md",
         "60_Sistemas/Pietra/Sistema_Pietra.md",
         "60_Sistemas/FabioOS/Plano_Validacao_Fase12_RAG.md",
-        "wiki/projetos/pietra.md",
+        "40_Wiki/_compat_wiki/projetos/pietra.md",
         "60_Sistemas/Pietra/Sistema_Pietra.md"
       ],
       "hits": [
@@ -593,7 +593,7 @@
         },
         {
           "rank": 4,
-          "source_path": "wiki/projetos/pietra.md",
+          "source_path": "40_Wiki/_compat_wiki/projetos/pietra.md",
           "header_path": "Sistema Pietra > Uso atual"
         },
         {

@@ -5,7 +5,7 @@ FabioOS — RAG Fase 12: ingestão mínima do vault.
 Lê a 1a leva de pastas, faz chunking consciente de cabeçalhos, gera embeddings
 LOCAIS (bge-m3) e armazena no Chroma. Versão mínima funcional — não perfeita.
 
-Segurança: NUNCA indexa logs sensíveis (sources/_inbox/, PIETRA*_LOG, etc.).
+Segurança: NUNCA indexa logs sensíveis (05_Raw_Sources/_compat_sources/_inbox/, PIETRA*_LOG, etc.).
 Embeddings 100% locais — nada sai da máquina.
 
 Uso:
@@ -57,7 +57,7 @@ INCLUDE_DIRS = [
     "60_Sistemas/Pietra",
     "70_Skills",
     "80_Specs",
-    "wiki",
+    "40_Wiki/_compat_wiki",
     "90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/40_Decisoes",
 ]
 

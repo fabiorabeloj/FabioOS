@@ -47,7 +47,7 @@ Esta matriz aplica a decisao registrada em [[2026-06-28_Decisao_Python_n8n_MEGAT
 | MEGATRON acao -> agente | Hibrido | Python decide rota; agente executa; n8n se externo | acao sensivel sem aprovacao | Implementar propose-only primeiro |
 | Dashboard textual FabioOS | Python | Lê status, Git, changelogs, agentes | painel desatualizado | Gerar Markdown com fontes |
 | Dashboard visual FabioOS | Python + Cursor/web | Precisa app/interface | complexidade prematura | Prototipo depois do MCP estabilizar |
-| `start_fabioos.ps1` / retomada | PowerShell + Python | Ambiente Windows e checagens locais | iniciar servico indevido | Manter conservador e idempotente |
+| `60_Sistemas/Scripts/60_Sistemas/Scripts/start_fabioos.ps1` / retomada | PowerShell + Python | Ambiente Windows e checagens locais | iniciar servico indevido | Manter conservador e idempotente |
 | Limpeza segura do PC/vault | Python | Auditoria local e quarentena | exclusao indevida | Somente read-only ate aprovacao |
 | Gmail pessoal: triagem pontual | Conector Gmail + Python | Busca autorizada + resumo local | dados pessoais sensiveis | Escopo pequeno, sem envio/arquivo em massa |
 | Gmail profissional | n8n/Gmail connector | Conta externa, credencial e fluxo institucional | privacidade/institucional | Solicitar autorizacao antes de ler |

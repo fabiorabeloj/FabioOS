@@ -90,14 +90,14 @@ Exemplos:
 │   ├── TEMPLATE_GABARITO.md
 │   └── TEMPLATE_COMUNICADO.md
 │
-sources/docs/               ← materiais externos que chegam como fonte bruta
+05_Raw_Sources/_compat_sources/docs/               ← materiais externos que chegam como fonte bruta
                                (ex: PDF do livro, aviso da escola)
 
 30_Projetos/ ou 00_Inbox/   ← rascunhos em andamento
 
 50_Registros/               ← registros de entregas, cronograma de aplicação
 
-wiki/projetos/escola.md     ← visão geral navegável do sistema
+40_Wiki/_compat_wiki/projetos/escola.md     ← visão geral navegável do sistema
 ```
 
 O destino final de cada material **produzido** é em `60_Sistemas/Escola/` ou em uma pasta de projeto ativo.
@@ -207,10 +207,10 @@ Nenhuma comunicação sai pelo Pietra sem aprovação do Sistema Escola.
 
 ## Relações
 
-- [[wiki/projetos/escola]]
+- [[40_Wiki/_compat_wiki/projetos/escola]]
 - [[60_Sistemas/FabioOS/Protocolo_Operacional_FabioOS]]
 - [[60_Sistemas/FabioOS/Plano_Mestre_Implantacao_FabioOS]]
-- [[wiki/indices/mapa-fabios]]
+- [[40_Wiki/_compat_wiki/indices/mapa-fabios]]
 
 ## Próximas ações
 

@@ -22,4 +22,4 @@ Fonte bruta e evidencia. Nao editar destrutivamente.
 
 Compatibilidade:
 
-`sources/` continua existindo como pasta operacional legada enquanto RAG, MCP, scripts e links sao migrados por lote.
+`05_Raw_Sources/_compat_sources/` continua existindo como pasta operacional legada enquanto RAG, MCP, scripts e links sao migrados por lote.

@@ -98,7 +98,7 @@ Claude Code / n8n / MCPs
   ↓
 Obsidian + GitHub
   ↓
-sources/ → wiki/ → schema/ → mapas → RAG → grafo
+05_Raw_Sources/_compat_sources/ → 40_Wiki/_compat_wiki/ → 60_Sistemas/Wiki/schema/ → mapas → RAG → grafo
 ```
 
 Geometricamente, o sistema pode ser entendido assim:
@@ -136,7 +136,7 @@ A estrutura recomendada do vault é:
 70_Skills/
 80_Specs/
 90_Arquivo/
-schema/
+60_Sistemas/Wiki/schema/
 .claude/
 ```
 
@@ -155,7 +155,7 @@ schema/
 | `70_Skills/`     | Habilidades reutilizáveis dos agentes                                   |
 | `80_Specs/`      | Especificações executáveis antes de implementações relevantes           |
 | `90_Arquivo/`    | Materiais encerrados ou preservados                                     |
-| `schema/`        | Regras, padrões e critérios de qualidade                                |
+| `60_Sistemas/Wiki/schema/`        | Regras, padrões e critérios de qualidade                                |
 | `.claude/`       | Configuração project-level do Claude Code                               |
 
 ### 4.2 Transicao para a estrutura canonica v2
@@ -238,11 +238,11 @@ Funções:
 O Claude Code deve operar dentro do repositório, guiado por arquivos como:
 
 ```text
-CLAUDE.md
+60_Sistemas/FabioOS/bootstrap/CLAUDE.md
 .claude/commands/
 .claude/agents/
-schema/
-wiki/indices/mapa-fabios.md
+60_Sistemas/Wiki/schema/
+40_Wiki/_compat_wiki/indices/mapa-fabios.md
 50_Registros/Changelog/
 ```
 
@@ -375,11 +375,11 @@ Uso ideal:
 ```text
 Manus → relatório externo
 ↓
-sources/research/
+05_Raw_Sources/_compat_sources/research/
 ↓
 Claude Code
 ↓
-wiki/
+40_Wiki/_compat_wiki/
 ```
 
 ---
@@ -547,7 +547,7 @@ link / página / arquivo / doc / repo
 ↓
 captura
 ↓
-preservação em sources/
+preservação em 05_Raw_Sources/_compat_sources/
 ↓
 extração para Markdown
 ↓
@@ -555,7 +555,7 @@ normalização com YAML
 ↓
 curadoria
 ↓
-wiki/
+40_Wiki/_compat_wiki/
 ↓
 mapa
 ↓
@@ -569,7 +569,7 @@ commit seguro
 ## 6.3 Estrutura de pastas para ingestão
 
 ```text
-sources/
+05_Raw_Sources/_compat_sources/
 ├── web/
 ├── docs/
 ├── pdfs/
@@ -584,14 +584,14 @@ sources/
 
 | Pasta                   | Função                                      |
 | ----------------------- | ------------------------------------------- |
-| `sources/web/`          | Páginas web e links                         |
-| `sources/docs/`         | Arquivos DOCX, ODT, TXT e documentos locais |
-| `sources/pdfs/`         | PDFs preservados ou extraídos               |
-| `sources/drive/`        | Google Docs e arquivos do Google Drive      |
-| `sources/repositorios/` | Repositórios GitHub e documentação técnica  |
-| `sources/research/`     | Relatórios externos, inclusive do Manus     |
-| `sources/extracted/`    | Texto convertido para Markdown              |
-| `sources/_inbox/`       | Material ainda não processado               |
+| `05_Raw_Sources/_compat_sources/web/`          | Páginas web e links                         |
+| `05_Raw_Sources/_compat_sources/docs/`         | Arquivos DOCX, ODT, TXT e documentos locais |
+| `05_Raw_Sources/_compat_sources/pdfs/`         | PDFs preservados ou extraídos               |
+| `05_Raw_Sources/_compat_sources/drive/`        | Google Docs e arquivos do Google Drive      |
+| `05_Raw_Sources/_compat_sources/repositorios/` | Repositórios GitHub e documentação técnica  |
+| `05_Raw_Sources/_compat_sources/research/`     | Relatórios externos, inclusive do Manus     |
+| `05_Raw_Sources/_compat_sources/extracted/`    | Texto convertido para Markdown              |
+| `05_Raw_Sources/_compat_sources/_inbox/`       | Material ainda não processado               |
 
 ---
 
@@ -1048,9 +1048,9 @@ Objetivo: criar primeira wiki navegável.
 
 Entregáveis:
 
-* 10 páginas em `wiki/sistemas/` e `wiki/conceitos/`;
-* mapa em `wiki/indices/mapa-fabios.md`;
-* schemas `schema/fluxo-wiki.md` e `schema/qualidade-wiki.md`.
+* 10 páginas em `40_Wiki/_compat_wiki/sistemas/` e `40_Wiki/_compat_wiki/conceitos/`;
+* mapa em `40_Wiki/_compat_wiki/indices/mapa-fabios.md`;
+* schemas `60_Sistemas/Wiki/schema/fluxo-wiki.md` e `60_Sistemas/Wiki/schema/qualidade-wiki.md`.
 
 Critério de sucesso:
 
@@ -1069,12 +1069,12 @@ Objetivo: parar de depender de sessão anterior do Claude Code.
 Entregáveis:
 
 ```text
-CLAUDE.md atualizado com leitura obrigatória
-wiki/indices/mapa-fabios.md como ponto de entrada
+60_Sistemas/FabioOS/bootstrap/CLAUDE.md atualizado com leitura obrigatória
+40_Wiki/_compat_wiki/indices/mapa-fabios.md como ponto de entrada
 60_Sistemas/FabioOS/Plano_Mestre_Implantacao_FabioOS.md (este arquivo)
 ```
 
-O `CLAUDE.md` deve conter:
+O `60_Sistemas/FabioOS/bootstrap/CLAUDE.md` deve conter:
 
 * o que é o FabioOS;
 * estado atual;
@@ -1104,16 +1104,16 @@ Objetivo: documentar as ferramentas centrais.
 Páginas criadas:
 
 ```text
-wiki/sistemas/obsidian.md
-wiki/sistemas/claude-code.md
-wiki/sistemas/n8n.md
-wiki/sistemas/github.md
-wiki/sistemas/chatgpt.md
-wiki/sistemas/openrouter.md
-wiki/sistemas/openclaw.md
-wiki/sistemas/hermes-agent.md
-wiki/sistemas/manus.md
-wiki/sistemas/cursor.md
+40_Wiki/_compat_wiki/sistemas/obsidian.md
+40_Wiki/_compat_wiki/sistemas/claude-code.md
+40_Wiki/_compat_wiki/sistemas/n8n.md
+40_Wiki/_compat_wiki/sistemas/github.md
+40_Wiki/_compat_wiki/sistemas/chatgpt.md
+40_Wiki/_compat_wiki/sistemas/openrouter.md
+40_Wiki/_compat_wiki/sistemas/openclaw.md
+40_Wiki/_compat_wiki/sistemas/hermes-agent.md
+40_Wiki/_compat_wiki/sistemas/manus.md
+40_Wiki/_compat_wiki/sistemas/cursor.md
 ```
 
 Critério de sucesso:
@@ -1160,14 +1160,14 @@ Objetivo: fazer o FabioOS beber de links, páginas, arquivos e documentos.
 Entregáveis:
 
 ```text
-sources/web/             ✓
-sources/docs/            ✓
-sources/pdfs/            ✓
-sources/drive/           ✓
-sources/research/        ✓
-sources/extracted/       ✓
-sources/_inbox/          ✓
-sources/README.md        ✓ (atualizado com estrutura completa)
+05_Raw_Sources/_compat_sources/web/             ✓
+05_Raw_Sources/_compat_sources/docs/            ✓
+05_Raw_Sources/_compat_sources/pdfs/            ✓
+05_Raw_Sources/_compat_sources/drive/           ✓
+05_Raw_Sources/_compat_sources/research/        ✓
+05_Raw_Sources/_compat_sources/extracted/       ✓
+05_Raw_Sources/_compat_sources/_inbox/          ✓
+05_Raw_Sources/_compat_sources/README.md        ✓ (atualizado com estrutura completa)
 ```
 
 Comandos implementados:
@@ -1209,7 +1209,7 @@ Entregáveis:
 60_Sistemas/Escola/templates/TEMPLATE_REVISAO.md
 60_Sistemas/Escola/templates/TEMPLATE_GABARITO.md
 60_Sistemas/Escola/templates/TEMPLATE_COMUNICADO.md
-wiki/projetos/escola.md
+40_Wiki/_compat_wiki/projetos/escola.md
 ```
 
 Critério de sucesso:
@@ -1234,7 +1234,7 @@ Entregáveis:
 60_Sistemas/Pietra/intents/INTENTS_CATALOGO.md   ← 11 categorias com gatilhos
 60_Sistemas/Pietra/respostas-modelo/RESPOSTAS_MODELO.md ← 12 respostas-modelo
 60_Sistemas/Pietra/regras/REGRAS_CLASSIFICACAO.md ← escalonamento e privacidade
-wiki/projetos/pietra.md
+40_Wiki/_compat_wiki/projetos/pietra.md
 ```
 
 Critério de sucesso:
@@ -1257,7 +1257,7 @@ Entregáveis:
 60_Sistemas/n8n/README.md
 60_Sistemas/n8n/Workflows/FabioOS_Webhook_Inbox.md
 60_Sistemas/n8n/Workflows/FabioOS_Webhook_Inbox.json  ← pronto para importar
-wiki/sistemas/n8n.md (atualizado)
+40_Wiki/_compat_wiki/sistemas/n8n.md (atualizado)
 ```
 
 Critério de sucesso:
@@ -1410,7 +1410,7 @@ A regra de continuidade:
 
 ```text
 Sem contexto central, cada IA vira uma conversa solta.
-Com CLAUDE.md + wiki + protocolo + changelog, todas as IAs orbitam o mesmo sistema.
+Com 60_Sistemas/FabioOS/bootstrap/CLAUDE.md + wiki + protocolo + changelog, todas as IAs orbitam o mesmo sistema.
 ```
 
 ---

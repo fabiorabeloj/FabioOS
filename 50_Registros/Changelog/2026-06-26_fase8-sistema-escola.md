@@ -21,7 +21,7 @@ Criação do Sistema Escola no FabioOS — documentação operacional, 4 templat
 | Arquivo | Descrição |
 |---|---|
 | `60_Sistemas/Escola/Sistema_Escola.md` | Documentação completa: módulos, fluxos, convenções, comandos planejados |
-| `wiki/projetos/escola.md` | Wiki de projeto: função, uso atual/futuro, critério de sucesso |
+| `40_Wiki/_compat_wiki/projetos/escola.md` | Wiki de projeto: função, uso atual/futuro, critério de sucesso |
 
 ### Templates
 | Arquivo | Uso |
@@ -33,7 +33,7 @@ Criação do Sistema Escola no FabioOS — documentação operacional, 4 templat
 
 ## Arquivos atualizados
 
-- `wiki/indices/mapa-fabios.md` — Camada 5 atualizada com link para escola; fase 8 concluída; próxima: 8.5
+- `40_Wiki/_compat_wiki/indices/mapa-fabios.md` — Camada 5 atualizada com link para escola; fase 8 concluída; próxima: 8.5
 - `60_Sistemas/FabioOS/Plano_Mestre_Implantacao_FabioOS.md` — Fase 8 marcada concluída; ordem de prioridade atualizada
 
 ## Decisões registradas
@@ -54,7 +54,7 @@ Criação do Sistema Escola no FabioOS — documentação operacional, 4 templat
 
 ## Relações
 
-- [[wiki/projetos/escola]]
+- [[40_Wiki/_compat_wiki/projetos/escola]]
 - [[60_Sistemas/Escola/Sistema_Escola]]
 - [[60_Sistemas/FabioOS/Protocolo_Operacional_FabioOS]]
 - [[50_Registros/Changelog/2026-06-26_fase7-consolidacao-camada1]]

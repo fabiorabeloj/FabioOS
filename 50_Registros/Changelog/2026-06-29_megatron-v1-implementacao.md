@@ -42,7 +42,7 @@ Implementação da **MEGATRON v1** (`60_Sistemas/MEGATRON/v1/megatron.py`) confo
 Responde com fontes ✅ · declara ignorância ✅ · não inventa status ✅ · não executa ação externa ✅ · diferencia resposta/sugestão/ação ✅ · log ✅ · usa classe de permissão ✅ · ≥10 perguntas (8 golden + classificador) ✅.
 
 ## Gaps remanescentes (v1+)
-- Integrar `index.md`/`log.md` da LLM Wiki (além de STATUS/NEXT).
+- Integrar `10_Dashboard/_entrada/index.md`/`50_Registros/Logs_Agentes/log.md` da LLM Wiki (além de STATUS/NEXT).
 - Limiar de confiança por tipo de consulta (hoje único 0.5).
 - MCP nativo (quando registrado no cliente) em vez de in-memory.
 

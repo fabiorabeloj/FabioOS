@@ -16,19 +16,19 @@ Definir como agentes mantem a LLM Wiki do FabioOS.
 
 Este schema complementa:
 
-- [[schema/fluxo-wiki]]
-- [[schema/qualidade-wiki]]
+- [[60_Sistemas/Wiki/schema/fluxo-wiki]]
+- [[60_Sistemas/Wiki/schema/qualidade-wiki]]
 - [[30_Projetos/FabioOS/LLM_Wiki_FabioOS]]
 
 ## Estrutura
 
 | Camada | Caminho preferencial | Regra |
 |---|---|---|
-| Fonte bruta | `05_Raw_Sources/` (`sources/` em compatibilidade), `00_Inbox/` | preservar evidencia, sem editar destrutivamente |
-| Wiki processada | `40_Wiki/` (`wiki/` em compatibilidade) | conhecimento compilado, linkado e revisavel |
-| Schema | `schema/` e `60_Sistemas/Wiki/` | regras de manutencao |
-| Registro | `log.md`, changelogs, auditorias | rastro cronologico |
-| Navegacao | `index.md`, `wiki/README.md`, dashboards | entrada para humanos e agentes |
+| Fonte bruta | `05_Raw_Sources/` (`05_Raw_Sources/_compat_sources/` em compatibilidade), `00_Inbox/` | preservar evidencia, sem editar destrutivamente |
+| Wiki processada | `40_Wiki/` (`40_Wiki/_compat_wiki/` em compatibilidade) | conhecimento compilado, linkado e revisavel |
+| Schema | `60_Sistemas/Wiki/schema/` e `60_Sistemas/Wiki/` | regras de manutencao |
+| Registro | `50_Registros/Logs_Agentes/log.md`, changelogs, auditorias | rastro cronologico |
+| Navegacao | `10_Dashboard/_entrada/index.md`, `40_Wiki/_compat_wiki/README.md`, dashboards | entrada para humanos e agentes |
 
 ## Tipos de pagina
 
@@ -75,7 +75,7 @@ revisao:
 
 - Usar links Obsidian `[[caminho/arquivo]]` quando apontar para nota interna.
 - Toda pagina nova deve ter pelo menos um link de entrada previsto e um link de saida.
-- Paginas centrais devem ser ligadas a `index.md`, dashboard ou `wiki/README.md`.
+- Paginas centrais devem ser ligadas a `10_Dashboard/_entrada/index.md`, dashboard ou `40_Wiki/_compat_wiki/README.md`.
 - Evitar criar pagina nova se uma pagina existente puder ser atualizada.
 
 ## Regra para criar nova pagina
@@ -144,7 +144,7 @@ Protocolo: [[60_Sistemas/Wiki/Protocolo_Lint_LLM_Wiki]]
 
 ## Index e log
 
-- `index.md` e entrada semantica compacta para agentes.
-- `log.md` e registro cronologico append-only.
-- `wiki/README.md` continua sendo indice da pasta `wiki/`.
+- `10_Dashboard/_entrada/index.md` e entrada semantica compacta para agentes.
+- `50_Registros/Logs_Agentes/log.md` e registro cronologico append-only.
+- `40_Wiki/_compat_wiki/README.md` continua sendo indice da pasta `40_Wiki/_compat_wiki/`.
 - `50_Registros/Changelog/` continua sendo changelog de engenharia e governanca.

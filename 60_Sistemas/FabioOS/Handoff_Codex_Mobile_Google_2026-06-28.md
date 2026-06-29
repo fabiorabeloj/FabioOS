@@ -42,15 +42,15 @@ Arquivos versionaveis:
 
 - `60_Sistemas/FabioOS/Conectores_Google_Catalogo_v0.md`
 - `60_Sistemas/FabioOS/specs/2026-06-28_catalogacao-google-connectors-v0.md`
-- `wiki/memoria/Mapa_Conectores_Google_FabioOS.md`
+- `40_Wiki/_compat_wiki/memoria/Mapa_Conectores_Google_FabioOS.md`
 - `50_Registros/Changelog/2026-06-28_catalogacao-google-connectors-v0.md`
 - `.gitignore`
-- `sources/drive/_restrito/.gitkeep`
+- `05_Raw_Sources/_compat_sources/drive/_restrito/.gitkeep`
 
 Arquivos locais/restritos, fora do Git:
 
-- `sources/email/_restrito/2026-06-28_catalogo_gmail_pessoal.md`
-- `sources/drive/_restrito/2026-06-28_catalogo_google_drive_root.md`
+- `05_Raw_Sources/_compat_sources/email/_restrito/2026-06-28_catalogo_gmail_pessoal.md`
+- `05_Raw_Sources/_compat_sources/drive/_restrito/2026-06-28_catalogo_google_drive_root.md`
 
 Estado:
 

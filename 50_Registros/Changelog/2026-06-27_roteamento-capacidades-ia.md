@@ -20,7 +20,7 @@ atualizado_em: 2026-06-27
 ## Criado/modificado no vault
 
 - `60_Sistemas/FabioOS/Protocolo_Roteamento_Capacidades_IA.md`
-- `CLAUDE.md`
+- `60_Sistemas/FabioOS/bootstrap/CLAUDE.md`
 - `60_Sistemas/Skills/Inventario_Skills.md`
 - `60_Sistemas/FabioOS/Registro_Frentes_Ativas.md`
 

@@ -13,36 +13,36 @@ atualizado_em: 2026-06-26
 
 ## Resumo
 
-Estrutura completa de ingestão do FabioOS: 7 subpastas em `sources/`, 5 comandos slash de captura e normalização, e README atualizado com fluxo completo.
+Estrutura completa de ingestão do FabioOS: 7 subpastas em `05_Raw_Sources/_compat_sources/`, 5 comandos slash de captura e normalização, e README atualizado com fluxo completo.
 
 ## Arquivos criados
 
-### Subpastas em sources/ (com .gitkeep para versionamento)
+### Subpastas em 05_Raw_Sources/_compat_sources/ (com .gitkeep para versionamento)
 
 | Pasta | Função |
 |---|---|
-| `sources/web/` | Páginas web e links capturados via /ingest-url |
-| `sources/docs/` | Documentos locais via /ingest-doc |
-| `sources/pdfs/` | PDFs via /ingest-pdf |
-| `sources/drive/` | Google Docs/Drive (comandos futuros) |
-| `sources/research/` | Relatórios externos e outputs do Manus |
-| `sources/extracted/` | Texto extraído de PDFs/DOCX para Markdown |
-| `sources/_inbox/` | Entrada bruta não classificada |
+| `05_Raw_Sources/_compat_sources/web/` | Páginas web e links capturados via /ingest-url |
+| `05_Raw_Sources/_compat_sources/docs/` | Documentos locais via /ingest-doc |
+| `05_Raw_Sources/_compat_sources/pdfs/` | PDFs via /ingest-pdf |
+| `05_Raw_Sources/_compat_sources/drive/` | Google Docs/Drive (comandos futuros) |
+| `05_Raw_Sources/_compat_sources/research/` | Relatórios externos e outputs do Manus |
+| `05_Raw_Sources/_compat_sources/extracted/` | Texto extraído de PDFs/DOCX para Markdown |
+| `05_Raw_Sources/_compat_sources/_inbox/` | Entrada bruta não classificada |
 
 ### Comandos slash (.claude/commands/)
 
 | Comando | Função |
 |---|---|
-| `/ingest-url` | Captura URL com playwright-mcp, preserva em sources/web/ |
-| `/ingest-pdf` | Preserva PDF (ou texto extraído) em sources/pdfs/ |
-| `/ingest-doc` | Processa DOCX/TXT/conteúdo colado em sources/docs/ |
+| `/ingest-url` | Captura URL com playwright-mcp, preserva em 05_Raw_Sources/_compat_sources/web/ |
+| `/ingest-pdf` | Preserva PDF (ou texto extraído) em 05_Raw_Sources/_compat_sources/pdfs/ |
+| `/ingest-doc` | Processa DOCX/TXT/conteúdo colado em 05_Raw_Sources/_compat_sources/docs/ |
 | `/normalize-source` | Padroniza frontmatter e estrutura de fontes brutas |
 | `/check-source-quality` | Avalia fonte em 10 pontos antes de transformar em wiki |
 
 ## Arquivos atualizados
 
-- `sources/README.md` — reescrito com estrutura completa, fluxo, convenções e índice
-- `wiki/indices/mapa-fabios.md` — fase 7.5 concluída, próxima: 9 (Pietra)
+- `05_Raw_Sources/_compat_sources/README.md` — reescrito com estrutura completa, fluxo, convenções e índice
+- `40_Wiki/_compat_wiki/indices/mapa-fabios.md` — fase 7.5 concluída, próxima: 9 (Pietra)
 - `60_Sistemas/FabioOS/Plano_Mestre_Implantacao_FabioOS.md` — fase 7.5 marcada concluída
 
 ## Inventário completo de comandos (.claude/commands/)
@@ -78,7 +78,7 @@ Estrutura completa de ingestão do FabioOS: 7 subpastas em `sources/`, 5 comando
 
 ## Relações
 
-- [[sources/README]]
-- [[schema/fluxo-wiki]]
+- [[05_Raw_Sources/_compat_sources/README]]
+- [[60_Sistemas/Wiki/schema/fluxo-wiki]]
 - [[60_Sistemas/FabioOS/Protocolo_Operacional_FabioOS]]
 - [[50_Registros/Changelog/2026-06-26_fase8-sistema-escola]]

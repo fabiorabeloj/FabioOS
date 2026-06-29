@@ -112,7 +112,7 @@ limite de gasto no painel da OpenRouter antes de liberar modelos pagos.
 
 Observacao do primeiro teste: mesmo com `thinking off`, a chamada carregou cerca
 de 21k tokens de entrada por causa do contexto do agente. Antes de uso
-frequente, reduzir `AGENTS.md`/bootstrap do workspace da ponte.
+frequente, reduzir `60_Sistemas/FabioOS/bootstrap/AGENTS.md`/bootstrap do workspace da ponte.
 
 Atualizacao Codex em 2026-06-27:
 

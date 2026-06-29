@@ -6,7 +6,7 @@ status: ativo
 tags: [fabios, arquitetura, dominios, rag, megatron]
 criado_em: 2026-06-28
 atualizado_em: 2026-06-28
-fonte: [[sources/docs/2026-06-28_anuncios-ia-roadmap-fabioos]]
+fonte: [[05_Raw_Sources/_compat_sources/docs/2026-06-28_anuncios-ia-roadmap-fabioos]]
 ---
 
 # Decisao - Federacao de Cerebros Especializados

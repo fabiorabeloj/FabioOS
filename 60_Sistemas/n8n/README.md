@@ -75,7 +75,7 @@ SSL: skip verification (certificado auto-assinado)
 
 ## Padrão de documentação de workflows
 
-Todo workflow criado no FabioOS deve ter uma nota em `60_Sistemas/n8n/Workflows/` seguindo o padrão do CLAUDE.md:
+Todo workflow criado no FabioOS deve ter uma nota em `60_Sistemas/n8n/Workflows/` seguindo o padrão do 60_Sistemas/FabioOS/bootstrap/CLAUDE.md:
 
 - Nome do workflow
 - Objetivo
@@ -92,10 +92,10 @@ Todo workflow criado no FabioOS deve ter uma nota em `60_Sistemas/n8n/Workflows/
 
 | Arquivo | Status | Função |
 |---|---|---|
-| `FabioOS_Webhook_Inbox.json` | pronto para importar | Webhook → nota em sources/_inbox/ |
+| `FabioOS_Webhook_Inbox.json` | pronto para importar | Webhook → nota em 05_Raw_Sources/_compat_sources/_inbox/ |
 
 ## Relações
 
-- [[wiki/sistemas/n8n]]
+- [[40_Wiki/_compat_wiki/sistemas/n8n]]
 - [[60_Sistemas/FabioOS/Plano_Mestre_Implantacao_FabioOS]]
 - [[60_Sistemas/FabioOS/Protocolo_Operacional_FabioOS]]

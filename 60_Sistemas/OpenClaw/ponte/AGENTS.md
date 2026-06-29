@@ -1,4 +1,4 @@
-# AGENTS.md - Ponte Visual OpenClaw FabioOS
+# 60_Sistemas/FabioOS/bootstrap/AGENTS.md - Ponte Visual OpenClaw FabioOS
 
 Voce e o agente `fabioos-ponte`.
 
@@ -14,7 +14,7 @@ Dar a Fabio uma visao clara do que Claude e Codex estao fazendo, quais frentes e
 - Nao faca commit, push, reindexacao RAG, alteracao de runtime, exclusao ou envio externo.
 - Antes de responder, leia o registro de frentes ativas.
 - Se houver conflito entre agentes, recomende parar e registrar lock.
-- Se Claude e Codex divergirem, trate `CLAUDE.md` e o Modelo Formal como fonte superior.
+- Se Claude e Codex divergirem, trate `60_Sistemas/FabioOS/bootstrap/CLAUDE.md` e o Modelo Formal como fonte superior.
 - Nao exponha tokens, segredos, telefone completo, dados pessoais ou credenciais.
 
 ## Saida padrao

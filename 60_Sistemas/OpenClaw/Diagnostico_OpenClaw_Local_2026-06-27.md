@@ -89,7 +89,7 @@ Esta nota serve como referência antes de qualquer ação de instalação:
 - [[60_Sistemas/OpenClaw/Sistema_OpenClaw]]
 - [[60_Sistemas/OpenClaw/setup/EVOLUTION_API_SETUP]]
 - [[60_Sistemas/Hermes_Agent]]
-- [[wiki/sistemas/hermes-agent]]
+- [[40_Wiki/_compat_wiki/sistemas/hermes-agent]]
 - [[60_Sistemas/n8n/Workflows/FabioOS_WhatsApp_Pietra]]
 - [[60_Sistemas/Pietra/Sistema_Pietra]]
 

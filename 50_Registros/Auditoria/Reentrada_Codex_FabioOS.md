@@ -69,7 +69,7 @@ A Matriz de Aptidao continua valida, mas deve ser subordinada a uma camada maior
 Riscos identificados:
 
 - criar documentos demais sem piloto;
-- duplicar estruturas ja existentes em `sources/`, `wiki/` e `schema/`;
+- duplicar estruturas ja existentes em `05_Raw_Sources/_compat_sources/`, `40_Wiki/_compat_wiki/` e `60_Sistemas/Wiki/schema/`;
 - tratar RAG/MCP como tecnologia instalada em vez de infraestrutura governada;
 - deixar respostas importantes morrerem no chat;
 - expandir automacoes sem permissao e observabilidade.
@@ -77,7 +77,7 @@ Riscos identificados:
 Mitigacao adotada:
 
 - criar documentos centrais de LLM Wiki e protocolos minimos;
-- reaproveitar `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/30_Conhecimento/LLM_Wiki_Pattern.md`, `schema/fluxo-wiki.md`, `schema/qualidade-wiki.md` e `60_Sistemas/Claude_Code/project_llmwiki_architecture.md`;
+- reaproveitar `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/30_Conhecimento/LLM_Wiki_Pattern.md`, `60_Sistemas/Wiki/schema/fluxo-wiki.md`, `60_Sistemas/Wiki/schema/qualidade-wiki.md` e `60_Sistemas/Claude_Code/project_llmwiki_architecture.md`;
 - nao mover arquivos;
 - nao executar piloto;
 - nao reindexar RAG;
@@ -90,7 +90,7 @@ O spawn tecnico de subagente falhou neste runtime, entao a revisao foi registrad
 | Papel | Parecer |
 |---|---|
 | Arquiteto | LLM Wiki e compativel com a arquitetura cognitiva distribuida se for schema operacional, nao abstracao solta. |
-| Obsidian/Wiki | A estrutura `sources/`, `wiki/`, `schema/` ja existe e deve ser mantida incrementalmente. |
+| Obsidian/Wiki | A estrutura `05_Raw_Sources/_compat_sources/`, `40_Wiki/_compat_wiki/`, `60_Sistemas/Wiki/schema/` ja existe e deve ser mantida incrementalmente. |
 | RAG | RAG deve priorizar wiki compilada, com raw sources como evidencia secundaria. |
 | MCP | MCP deve ser tratado por risco, permissao, log e aprovacao humana. |
 | Governanca | A falta de definicao de concluido, logs e revisao semanal e risco maior que falta de ferramenta. |

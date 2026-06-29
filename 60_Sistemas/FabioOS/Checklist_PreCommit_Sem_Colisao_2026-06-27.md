@@ -39,8 +39,8 @@ Sem matar processos.
 
 Possiveis arquivos:
 
-- `CLAUDE.md`
-- `start_fabioos.ps1`
+- `60_Sistemas/FabioOS/bootstrap/CLAUDE.md`
+- `60_Sistemas/Scripts/60_Sistemas/Scripts/start_fabioos.ps1`
 - `50_Registros/Changelog/2026-06-27_retomada-ambiente-fabioos.md`
 - `50_Registros/Changelog/2026-06-27_validacao-rag-continuidade.md`
 - `60_Sistemas/FabioOS/Protocolo_Gestao_Contexto_IA.md`
@@ -96,7 +96,7 @@ Possiveis arquivos:
 - `60_Sistemas/OpenClaw/Roteiro_Ativacao_OpenClaw_Evolution_2026-06-27.md`
 - `60_Sistemas/n8n/Workflows/FabioOS_WhatsApp_Pietra.json`
 - `60_Sistemas/n8n/Workflows/FabioOS_WhatsApp_Pietra.md`
-- `wiki/sistemas/openclaw.md`
+- `40_Wiki/_compat_wiki/sistemas/openclaw.md`
 
 Mensagem sugerida:
 
@@ -110,9 +110,9 @@ Possiveis arquivos:
 
 - `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/20_Projetos/PRIMUS.md`
 - `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/30_Conhecimento/FabioOS.md`
-- `wiki/conceitos/rag.md`
-- `wiki/conceitos/banco-vetorial.md`
-- `wiki/indices/mapa-fabios.md`
+- `40_Wiki/_compat_wiki/conceitos/rag.md`
+- `40_Wiki/_compat_wiki/conceitos/banco-vetorial.md`
+- `40_Wiki/_compat_wiki/indices/mapa-fabios.md`
 - `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/10_Mapas/Painel_Pendencias_FabioOS.md`
 
 Mensagem sugerida:

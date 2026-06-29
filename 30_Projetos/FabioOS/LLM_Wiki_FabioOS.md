@@ -43,7 +43,7 @@ No FabioOS:
 
 ### Raw sources
 
-Fontes brutas sao evidencias. Devem ser preservadas em `sources/`, `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/50_Fontes/`, `00_Inbox/` ou pasta equivalente, sem edicao destrutiva.
+Fontes brutas sao evidencias. Devem ser preservadas em `05_Raw_Sources/_compat_sources/`, `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/50_Fontes/`, `00_Inbox/` ou pasta equivalente, sem edicao destrutiva.
 
 Exemplos:
 
@@ -64,7 +64,7 @@ Regra: fonte bruta e evidencia, nao conhecimento final.
 
 ### Wiki
 
-A wiki e a camada processada. No FabioOS, a pasta `wiki/` ja existe e deve ser fortalecida como base de conhecimento compilado.
+A wiki e a camada processada. No FabioOS, a pasta `40_Wiki/_compat_wiki/` ja existe e deve ser fortalecida como base de conhecimento compilado.
 
 Ela contem:
 
@@ -86,8 +86,8 @@ O schema define como agentes mantem a wiki.
 
 Documentos existentes reaproveitados:
 
-- [[schema/fluxo-wiki]]
-- [[schema/qualidade-wiki]]
+- [[60_Sistemas/Wiki/schema/fluxo-wiki]]
+- [[60_Sistemas/Wiki/schema/qualidade-wiki]]
 - [[60_Sistemas/Claude_Code/project_llmwiki_architecture]]
 
 Documento operacional novo:
@@ -153,15 +153,15 @@ Procura:
 
 Protocolo: [[60_Sistemas/Wiki/Protocolo_Lint_LLM_Wiki]]
 
-## Papel de index.md
+## Papel de 10_Dashboard/_entrada/index.md
 
-O `index.md` na raiz e o mapa semantico minimo para agentes. Ele aponta para os documentos centrais e evita que agentes criem paginas sem procurar equivalentes.
+O `10_Dashboard/_entrada/index.md` na raiz e o mapa semantico minimo para agentes. Ele aponta para os documentos centrais e evita que agentes criem paginas sem procurar equivalentes.
 
-Ele nao substitui `wiki/README.md` nem `wiki/indices/mapa-fabios.md`; ele funciona como entrada compacta para LLMs.
+Ele nao substitui `40_Wiki/_compat_wiki/README.md` nem `40_Wiki/_compat_wiki/indices/mapa-fabios.md`; ele funciona como entrada compacta para LLMs.
 
-## Papel de log.md
+## Papel de 50_Registros/Logs_Agentes/log.md
 
-O `log.md` na raiz e cronologico e append-only. Ele registra ingests, queries importantes, lint passes, decisoes de manutencao e reorganizacoes.
+O `50_Registros/Logs_Agentes/log.md` na raiz e cronologico e append-only. Ele registra ingests, queries importantes, lint passes, decisoes de manutencao e reorganizacoes.
 
 Ele nao substitui changelog de engenharia; ele registra a evolucao da wiki.
 
@@ -174,7 +174,7 @@ Equivalencia:
 ```text
 Obsidian = IDE
 Markdown = codigo do conhecimento
-wiki/ = codebase cognitiva
+40_Wiki/_compat_wiki/ = codebase cognitiva
 GitHub -> historico
 LLM = mantenedor
 MEGATRON = orquestrador
@@ -246,10 +246,10 @@ Codex e Claude Code devem operar como mantenedores da codebase cognitiva.
 
 Antes de criar ou alterar notas, devem:
 
-1. ler `CLAUDE.md`;
-2. ler `index.md`;
-3. ler `log.md`;
-4. consultar `wiki/README.md`;
+1. ler `60_Sistemas/FabioOS/bootstrap/CLAUDE.md`;
+2. ler `10_Dashboard/_entrada/index.md`;
+3. ler `50_Registros/Logs_Agentes/log.md`;
+4. consultar `40_Wiki/_compat_wiki/README.md`;
 5. consultar o schema aplicavel;
 6. procurar pagina existente;
 7. atualizar pagina existente quando possivel;
@@ -276,8 +276,8 @@ A LLM Wiki estara validada quando um piloto demonstrar:
 - pagina existente atualizada quando houver equivalente;
 - pagina nova criada somente quando necessario;
 - links internos criados;
-- `index.md` atualizado;
-- `log.md` atualizado;
+- `10_Dashboard/_entrada/index.md` atualizado;
+- `50_Registros/Logs_Agentes/log.md` atualizado;
 - lacuna ou contradicao registrada;
 - changelog produzido;
 - resultado recuperavel em query posterior.
@@ -288,17 +288,17 @@ O primeiro piloto controlado da LLM Wiki foi executado no dominio FabioOS/Govern
 
 Fonte preservada:
 
-- [[sources/fabios/2026-06-29_governanca-operacional-pontos-cegos]]
+- [[05_Raw_Sources/_compat_sources/fabios/2026-06-29_governanca-operacional-pontos-cegos]]
 
 Pagina wiki criada:
 
-- [[wiki/conceitos/governanca-operacional-fabios]]
+- [[40_Wiki/_compat_wiki/conceitos/governanca-operacional-fabios]]
 
 Paginas existentes atualizadas:
 
 - [[30_Projetos/FabioOS/LLM_Wiki_FabioOS]]
-- [[index]]
-- [[log]]
+- [[10_Dashboard/_entrada/index]]
+- [[50_Registros/Logs_Agentes/log]]
 - [[50_Registros/Changelog/CHANGELOG_FabioOS]]
 
 Resultado:

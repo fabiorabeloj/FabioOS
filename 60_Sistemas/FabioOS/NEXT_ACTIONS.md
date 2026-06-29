@@ -46,7 +46,7 @@ atualizado_em: 2026-06-29
 - [x] Criar mapa canonico v2 das pastas Obsidian e plano de normalizacao sem migracao em massa.
 - [x] Criar estrutura fisica LLM Wiki v1 com `05_Raw_Sources/`, `20_Areas/`, `40_Wiki/`, `70_Skills/` e `80_Specs/`.
 - [x] Limpar visualmente a raiz arquivando pastas legadas em `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/`.
-- [x] Ocultar arquivos tecnicos e compatibilidade (`AGENTS.md`, `CLAUDE.md`, `CODEX.md`, `README.md`, `log.md`, `sources/`, `wiki/`, `schema/`) da navegacao do Obsidian sem remove-los do disco.
+- [x] Ocultar arquivos tecnicos e compatibilidade (`60_Sistemas/FabioOS/bootstrap/AGENTS.md`, `60_Sistemas/FabioOS/bootstrap/CLAUDE.md`, `60_Sistemas/FabioOS/bootstrap/CODEX.md`, `README.md`, `50_Registros/Logs_Agentes/log.md`, `05_Raw_Sources/_compat_sources/`, `40_Wiki/_compat_wiki/`, `60_Sistemas/Wiki/schema/`) da navegacao do Obsidian sem remove-los do disco.
 - [x] Formalizar a estrutura canonica completa do Obsidian proposta pelo Fabio.
 - [x] Tirar arquivos `.md` soltos da raiz de `60_Sistemas/`.
 - [x] Esvaziar a gaveta visual `00_Inbox/Teste/` preservando as notas em `00_Inbox/Triagem/`.
@@ -98,7 +98,7 @@ Nota: as secoes abaixo permanecem como historico de continuidade anterior e pode
 ## Pendencias estruturais
 
 - [ ] Decidir se `60_Sistemas/FabioOS/STATUS.md` e `NEXT_ACTIONS.md` viram arquivos canonicos permanentes.
-- [ ] Integrar STATUS/NEXT_ACTIONS ao `start_fabioos.ps1`.
+- [ ] Integrar STATUS/NEXT_ACTIONS ao `60_Sistemas/Scripts/60_Sistemas/Scripts/start_fabioos.ps1`.
 - [ ] Criar rotina mensal de limpeza segura somente leitura antes de qualquer remocao.
 
 ## Bloqueios

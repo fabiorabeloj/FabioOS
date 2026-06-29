@@ -177,7 +177,7 @@ Nesta rodada:
 
 ## Criterio de aceite
 
-- a raiz do vault deve mostrar apenas pastas canonicas e `index.md` para uso humano;
+- a raiz do vault deve mostrar apenas pastas canonicas e `10_Dashboard/_entrada/index.md` para uso humano;
 - `00_Inbox/` deve expor as quatro gavetas de captura e triagem;
 - `60_Sistemas/` nao deve conter arquivos `.md` soltos na raiz;
 - nenhuma nota deve ser apagada;

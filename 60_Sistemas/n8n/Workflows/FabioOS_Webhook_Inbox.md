@@ -18,7 +18,7 @@ atualizado_em: 2026-06-26
 
 ## Objetivo
 
-Receber uma mensagem via webhook HTTP POST e criar automaticamente uma nota em `sources/_inbox/` do vault, pronta para triagem pelo protocolo operacional do FabioOS.
+Receber uma mensagem via webhook HTTP POST e criar automaticamente uma nota em `05_Raw_Sources/_compat_sources/_inbox/` do vault, pronta para triagem pelo protocolo operacional do FabioOS.
 
 **Critério de sucesso da Fase 10:**
 > Um webhook gera uma nota no FabioOS.
@@ -76,7 +76,7 @@ filename = `${hoje}_${slug}.md`
 
 ### Nó 3: Salvar no Vault (HTTP Request)
 - Método: `PUT`
-- URL: `https://host.docker.internal:27124/vault/sources/_inbox/{filename}`
+- URL: `https://host.docker.internal:27124/vault/05_Raw_Sources/_compat_sources/_inbox/{filename}`
 - Header: `Authorization: Bearer {OBSIDIAN_TOKEN}`
 - Body: conteúdo markdown gerado
 - SSL: verificação ignorada (certificado auto-assinado)
@@ -91,7 +91,7 @@ filename = `${hoje}_${slug}.md`
 {
   "status": "ok",
   "arquivo": "2026-06-26_titulo-da-nota.md",
-  "mensagem": "Nota criada em sources/_inbox/"
+  "mensagem": "Nota criada em 05_Raw_Sources/_compat_sources/_inbox/"
 }
 ```
 
@@ -154,7 +154,7 @@ curl -X POST http://localhost:5678/webhook/fabios-inbox \
 
 **Resultado esperado:**
 - Resposta JSON com `status: ok` e nome do arquivo
-- Arquivo `sources/_inbox/2026-06-26_teste-fase-10.md` criado no vault
+- Arquivo `05_Raw_Sources/_compat_sources/_inbox/2026-06-26_teste-fase-10.md` criado no vault
 
 ## Riscos
 
@@ -176,6 +176,6 @@ curl -X POST http://localhost:5678/webhook/fabios-inbox \
 ## Relações
 
 - [[60_Sistemas/n8n/README]]
-- [[wiki/sistemas/n8n]]
-- [[sources/README]]
+- [[40_Wiki/_compat_wiki/sistemas/n8n]]
+- [[05_Raw_Sources/_compat_sources/README]]
 - [[60_Sistemas/FabioOS/Protocolo_Operacional_FabioOS]]

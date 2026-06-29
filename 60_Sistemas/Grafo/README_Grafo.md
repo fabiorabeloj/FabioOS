@@ -133,7 +133,7 @@ A Fase 13 minima e considerada funcional quando:
 - Nao extrai entidades por LLM.
 - Nao grava em Neo4j.
 - Nao infere relacoes ambiciosas sem fonte explicita.
-- Nao usa conteudo bruto de `00_Inbox/` ou `sources/_inbox/`.
+- Nao usa conteudo bruto de `00_Inbox/` ou `05_Raw_Sources/_compat_sources/_inbox/`.
 - Nao toca no banco vetorial da Fase 12.
 
 ## Proximas acoes

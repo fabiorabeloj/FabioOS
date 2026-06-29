@@ -33,6 +33,12 @@ sources/drive/_restrito/*
 !sources/drive/_restrito/.gitkeep
 sources/chatgpt/_restrito/*
 !sources/chatgpt/_restrito/.gitkeep
+05_Raw_Sources/_compat_sources/email/_restrito/*
+!05_Raw_Sources/_compat_sources/email/_restrito/.gitkeep
+05_Raw_Sources/_compat_sources/drive/_restrito/*
+!05_Raw_Sources/_compat_sources/drive/_restrito/.gitkeep
+05_Raw_Sources/_compat_sources/chatgpt/_restrito/*
+!05_Raw_Sources/_compat_sources/chatgpt/_restrito/.gitkeep
 
 # Python
 __pycache__/

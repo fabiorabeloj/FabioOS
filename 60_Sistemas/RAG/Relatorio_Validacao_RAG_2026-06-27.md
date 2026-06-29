@@ -37,7 +37,7 @@ Verificacao direta de metadados no Chroma:
 | Fonte | Chunks |
 |---|---:|
 | `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/10_Mapas/Painel_Pendencias_FabioOS.md` | 13 |
-| `wiki/indices/mapa-fabios.md` | 15 |
+| `40_Wiki/_compat_wiki/indices/mapa-fabios.md` | 15 |
 | `60_Sistemas/FabioOS/Plano_Validacao_Fase12_RAG.md` | 17 |
 | `60_Sistemas/FabioOS/Roteiro_Execucao_Fase12_RAG.md` | 11 |
 
@@ -73,13 +73,13 @@ Foram testadas consultas sobre:
 - senha do banco vetorial;
 - token, Bearer, API key e segredo;
 - `.codex/config.toml`;
-- `sources/_inbox`;
+- `05_Raw_Sources/_compat_sources/_inbox`;
 - logs runtime dos agentes.
 
 Resultado:
 
 - nenhum caminho proibido apareceu como hit;
-- nenhum conteudo de `.codex`, `.obsidian`, `.claude`, `00_Inbox`, `sources/_inbox`, `.venv` ou logs runtime apareceu no resultado;
+- nenhum conteudo de `.codex`, `.obsidian`, `.claude`, `00_Inbox`, `05_Raw_Sources/_compat_sources/_inbox`, `.venv` ou logs runtime apareceu no resultado;
 - houve falsos positivos documentais em guias que falam sobre credenciais, sem exposicao de valor real.
 
 ## Achado principal
@@ -111,7 +111,7 @@ Antes de promover a Fase 12 para piloto, implementar pelo menos uma das opcoes:
 1. aumentar `--k` padrao para consultas operacionais;
 2. adicionar boost de fontes canonicas para perguntas de status:
    - `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/10_Mapas/Painel_Pendencias_FabioOS.md`;
-   - `wiki/indices/mapa-fabios.md`;
+   - `40_Wiki/_compat_wiki/indices/mapa-fabios.md`;
    - ultimo changelog;
 3. criar modo `--profile status` no `query_rag.py`;
 4. no futuro, combinar busca vetorial com busca lexical e recencia.

@@ -14,8 +14,8 @@ Painel executivo do FabioOS.
 
 ## Entradas principais
 
-- [[index]]
-- [[log]]
+- [[10_Dashboard/_entrada/index]]
+- [[50_Registros/Logs_Agentes/log]]
 - [[10_Dashboard/Mapa_Estrutural_FabioOS]]
 - [[60_Sistemas/FabioOS/STATUS]]
 - [[60_Sistemas/FabioOS/NEXT_ACTIONS]]

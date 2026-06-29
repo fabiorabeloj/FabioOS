@@ -28,7 +28,7 @@ Ordem de decisao:
 
 1. Usar contexto local: vault, RAG, Grafo e MCP FabioOS.
 2. Verificar a Matriz de Aptidao antes de escolher IA/modelo/ferramenta.
-3. Verificar `index.md`, `log.md` e schema LLM Wiki antes de criar ou alterar conhecimento.
+3. Verificar `10_Dashboard/_entrada/index.md`, `50_Registros/Logs_Agentes/log.md` e schema LLM Wiki antes de criar ou alterar conhecimento.
 4. Usar skills/agentes especializados quando o escopo for claro.
 5. Usar conectores e MCPs externos apenas com objetivo definido.
 6. Usar API/modelo pago apenas quando a camada local nao bastar.

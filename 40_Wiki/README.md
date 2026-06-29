@@ -16,4 +16,4 @@ Aqui entram conceitos, sinteses, paginas de ferramentas, entidades, repertorios 
 
 Compatibilidade:
 
-`wiki/` continua existindo como pasta operacional legada enquanto backlinks, RAG, MCP e scripts sao migrados com seguranca.
+`40_Wiki/_compat_wiki/` continua existindo como pasta operacional legada enquanto backlinks, RAG, MCP e scripts sao migrados com seguranca.

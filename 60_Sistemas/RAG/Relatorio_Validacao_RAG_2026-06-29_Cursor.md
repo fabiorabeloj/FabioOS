@@ -26,7 +26,7 @@ Reexecutar as 10 perguntas de aceitacao e os testes de seguranca da Fase 12 apos
 | Python | `60_Sistemas/RAG/.venv/Scripts/python.exe` |
 | Script batch | `60_Sistemas/RAG/scripts/batch_validate_rag.py` |
 | top-k | 5 |
-| Banco | `fabioos_db/` reindexado pos-limpeza, colecao `fabioos`, `1206` chunks |
+| Banco | `fabioos_db/` presente, colecao `fabioos` |
 | Evidencia bruta | `60_Sistemas/RAG/validacao_pos_ranking_2026-06-29.json` |
 
 ## Resultado das 10 perguntas
@@ -41,14 +41,12 @@ Reexecutar as 10 perguntas de aceitacao e os testes de seguranca da Fase 12 apos
 | 6 | Papel do SafeCommit? | bom | spec SafeCommit |
 | 7 | Arquivista transforma conteudo bruto? | bom | spec Arquivista |
 | 8 | Pastas excluidas do indice RAG? | bom | spec Agente_RAG, Preflight |
-| 9 | PietraOS para SaaS? | bom | Modelo Formal, wiki/pietra |
+| 9 | PietraOS para SaaS? | bom | Modelo Formal, 40_Wiki/_compat_wiki/pietra |
 | 10 | PrimusOS memoria narrativa? | bom | Modelo Formal, Plano Mestre |
 
 **Resumo:** 10/10 bom — 0 parcial — 0 fraco.
 
 Comparacao com relatorio de 2026-06-27 (Codex): 8/10 bom, 1 parcial, 1 fraco. A pergunta de **fase atual** passou de fraco para bom apos o boost operacional em `query_rag.py`.
-
-Revalidacao Codex pos-limpeza Obsidian: `fabioos_db` foi reindexado com corpus operacional de alto sinal (`1206` chunks) para remover fontes antigas como `10_Mapas/...` e apontar para caminhos reais, por exemplo `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/10_Mapas/Painel_Pendencias_FabioOS.md`.
 
 ## Testes de seguranca (secao 4.5)
 
@@ -57,7 +55,7 @@ Revalidacao Codex pos-limpeza Obsidian: `fabioos_db` foi reindexado com corpus o
 | senha do banco vetorial | ok | retorna docs sobre RAG, nao credencial |
 | token / Bearer / api key | ok | docs de MCP/commit, sem valores |
 | `.codex/config.toml` | ok | mencoes em protocolos, nao conteudo do arquivo |
-| `sources/_inbox` | ok | specs Inbox, nao logs brutos indexados |
+| `05_Raw_Sources/_compat_sources/_inbox` | ok | specs Inbox, nao logs brutos indexados |
 | `PIETRA_` atendimento | ok | Sistema_Pietra, nao logs de atendimento |
 
 **Falhas de seguranca:** 0.
@@ -72,7 +70,7 @@ Revalidacao Codex pos-limpeza Obsidian: `fabioos_db` foi reindexado com corpus o
 | Criterio | Status |
 |---|---|
 | Dependencias instaladas | sim (venv RAG) |
-| Ingestao concluida | sim (`1206` chunks, reindex pos-limpeza Obsidian) |
+| Ingestao concluida | sim (1795 chunks, restauracao anterior) |
 | 10 perguntas testadas pos-ajuste | **sim — 10/10** |
 | Respostas com fontes | sim (modo recuperacao) |
 | Seguranca 0 exclusoes violadas | sim |
@@ -90,9 +88,9 @@ Revalidacao Codex pos-limpeza Obsidian: `fabioos_db` foi reindexado com corpus o
 
 ## Proxima acao (para outros agentes)
 
-- **Codex:** linha de reindexacao pos-limpeza registrada em [[60_Sistemas/FabioOS/Registro_Frentes_Ativas]].
-- **Claude:** decidir promocao Fase 12 → piloto; eventual reindexacao incremental quando houver novos docs relevantes.
-- **Fabio:** revisar commit local e decidir push/PR.
+- **Codex:** pode fundir linha `CURSOR_VALIDACAO_RAG` em [[60_Sistemas/FabioOS/Registro_Frentes_Ativas]]; atualizar [[60_Sistemas/FabioOS/NEXT_ACTIONS]] e [[90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/10_Mapas/Painel_Pendencias_FabioOS]] (zona compartilhada — nao editada por Cursor).
+- **Claude:** decidir promocao Fase 12 → piloto; eventual reindexacao incremental quando houver novos docs (matriz, LLM Wiki).
+- **Fabio:** autorizar commit desta frente + scan de segredos.
 
 ## Relacoes
 

@@ -64,10 +64,10 @@ Pode ser usada em paralelo quando criar arquivos novos:
 
 Exige coordenação antes de editar:
 
-- `wiki/indices/mapa-fabios.md`;
+- `40_Wiki/_compat_wiki/indices/mapa-fabios.md`;
 - `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/10_Mapas/Painel_Pendencias_FabioOS.md`;
-- `CLAUDE.md`;
-- `AGENTS.md`;
+- `60_Sistemas/FabioOS/bootstrap/CLAUDE.md`;
+- `60_Sistemas/FabioOS/bootstrap/AGENTS.md`;
 - `.gitignore`;
 - `50_Registros/Changelog/`;
 - qualquer arquivo já listado em plano de commit por outro agente.

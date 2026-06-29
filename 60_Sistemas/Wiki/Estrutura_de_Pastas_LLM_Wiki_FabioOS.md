@@ -91,7 +91,7 @@ fonte bruta -> conhecimento processado -> operacao do sistema
 
 ## Compatibilidade operacional
 
-As pastas `sources/` e `wiki/` continuam existentes.
+As pastas `05_Raw_Sources/_compat_sources/` e `40_Wiki/_compat_wiki/` continuam existentes.
 
 Motivo:
 
@@ -104,10 +104,10 @@ Decisao:
 
 ```text
 05_Raw_Sources/ = alvo fisico novo para fontes brutas.
-sources/ = compatibilidade operacional ate migracao.
+05_Raw_Sources/_compat_sources/ = compatibilidade operacional ate migracao.
 
 40_Wiki/ = alvo fisico novo para conhecimento processado.
-wiki/ = compatibilidade operacional ate migracao.
+40_Wiki/_compat_wiki/ = compatibilidade operacional ate migracao.
 ```
 
 ## Relacao com RAG
@@ -129,8 +129,8 @@ MCPs devem usar esta estrutura como contrato de destino.
 
 Exemplos:
 
-- `criar_nota_fonte` -> `05_Raw_Sources/` ou `sources/` em modo compatibilidade.
-- `consultar_wiki` -> `40_Wiki/` e `wiki/`.
+- `criar_nota_fonte` -> `05_Raw_Sources/` ou `05_Raw_Sources/_compat_sources/` em modo compatibilidade.
+- `consultar_wiki` -> `40_Wiki/` e `40_Wiki/_compat_wiki/`.
 - `registrar_decisao` -> `50_Registros/Decisoes/` ou `50_Registros/ADR/`.
 - `criar_spec` -> `80_Specs/`.
 
@@ -174,7 +174,7 @@ Os cerebros do FabioOS se manifestam por dominios:
 ## Estrategia de migracao
 
 1. Criar estrutura fisica.
-2. Manter compatibilidade com `sources/` e `wiki/`.
+2. Manter compatibilidade com `05_Raw_Sources/_compat_sources/` e `40_Wiki/_compat_wiki/`.
 3. Mapear equivalencias.
 4. Migrar em lotes pequenos.
 5. Atualizar backlinks.
@@ -185,7 +185,7 @@ Os cerebros do FabioOS se manifestam por dominios:
 
 - quebrar links Obsidian;
 - desalinhar scripts RAG/MCP;
-- duplicar conteudo entre `wiki/` e `40_Wiki/`;
+- duplicar conteudo entre `40_Wiki/_compat_wiki/` e `40_Wiki/`;
 - criar confusao se agentes nao consultarem o mapa antes de escrever;
 - versionar fontes sensiveis sem querer.
 
@@ -193,7 +193,7 @@ Os cerebros do FabioOS se manifestam por dominios:
 
 - pastas-alvo existem fisicamente;
 - cada pasta nova tem README ou nota;
-- `CLAUDE.md`, `index.md`, mapa e changelog apontam para a estrutura;
+- `60_Sistemas/FabioOS/bootstrap/CLAUDE.md`, `10_Dashboard/_entrada/index.md`, mapa e changelog apontam para a estrutura;
 - nenhum arquivo foi apagado;
-- `sources/` e `wiki/` continuam preservados;
+- `05_Raw_Sources/_compat_sources/` e `40_Wiki/_compat_wiki/` continuam preservados;
 - commit e feito com stage explicito e scan de segredos.

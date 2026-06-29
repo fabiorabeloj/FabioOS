@@ -49,7 +49,7 @@ Lock local: [[60_Sistemas/FabioOS/Frente_Cursor_2026-06-29]].
 
 | Arquivo | Alteracao |
 |---|---|
-| `wiki/conceitos/rag.md` | Status da validacao, links aos relatorios e batch |
+| `40_Wiki/_compat_wiki/conceitos/rag.md` | Status da validacao, links aos relatorios e batch |
 | `60_Sistemas/FabioOS/Roteiro_Execucao_Fase12_RAG.md` | Estado real pos-validacao; comando batch |
 | `60_Sistemas/RAG/Arquitetura_RAG_FabioOS.md` | Secao de validacao reproduzivel |
 
@@ -58,8 +58,8 @@ Lock local: [[60_Sistemas/FabioOS/Frente_Cursor_2026-06-29]].
 - `60_Sistemas/FabioOS/STATUS.md`
 - `60_Sistemas/FabioOS/NEXT_ACTIONS.md`
 - `60_Sistemas/FabioOS/Registro_Frentes_Ativas.md`
-- `wiki/indices/mapa-fabios.md`
-- `CLAUDE.md`
+- `40_Wiki/_compat_wiki/indices/mapa-fabios.md`
+- `60_Sistemas/FabioOS/bootstrap/CLAUDE.md`
 - `60_Sistemas/MCP_FabioOS/` (frente Claude)
 - `60_Sistemas/RAG/fabioos_db/` (sem reindex)
 - `30_Projetos/`, `10_Dashboard/`, `60_Sistemas/Wiki/` (frente Codex LLM Wiki)
@@ -123,7 +123,7 @@ Arquivos desta frente: sem credenciais reais. Unico match: string de teste `"tok
 - [[60_Sistemas/FabioOS/Frente_Cursor_2026-06-29]]
 - [[50_Registros/Changelog/2026-06-29_validacao-rag-pos-ranking-cursor]]
 - [[60_Sistemas/Cursor/README_Cursor_FabioOS]]
-- [[wiki/conceitos/rag]]
+- [[40_Wiki/_compat_wiki/conceitos/rag]]
 
 ## Proximas acoes
 

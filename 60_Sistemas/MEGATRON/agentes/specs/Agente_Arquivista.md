@@ -34,24 +34,24 @@ Transformar conteúdo bruto em fonte preservada, nota organizada ou página wiki
 | Entrada | Origem | Formato |
 |---|---|---|
 | Texto bruto | `00_Inbox/`, usuário, conversa IA | Markdown ou texto |
-| Fonte externa | `sources/`, URL, PDF, DOCX | Markdown ou arquivo preservado |
+| Fonte externa | `05_Raw_Sources/_compat_sources/`, URL, PDF, DOCX | Markdown ou arquivo preservado |
 | Classificação | Inbox ou usuário | tipo/destino sugerido |
-| Schema de qualidade | `schema/` | Markdown |
+| Schema de qualidade | `60_Sistemas/Wiki/schema/` | Markdown |
 
 ## Saídas
 
 | Saída | Destino | Formato |
 |---|---|---|
-| Fonte preservada | `sources/<tipo>/` | Markdown com frontmatter |
+| Fonte preservada | `05_Raw_Sources/_compat_sources/<tipo>/` | Markdown com frontmatter |
 | Nota organizada | `00_Inbox/`, `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/30_Conhecimento/`, `60_Sistemas/` | Markdown |
-| Página wiki | `wiki/` | Markdown com fonte linkada |
+| Página wiki | `40_Wiki/_compat_wiki/` | Markdown com fonte linkada |
 | Pendência | `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/10_Mapas/Painel_Pendencias_FabioOS.md` ou nota de projeto | checklist |
 | Log | `50_Registros/Agentes/` | Markdown |
 
 ## Ferramentas
 
 - Comandos: `/archive-source`, `/ingest-url`, `/ingest-doc`, `/ingest-pdf`, `/normalize-source`, `/source-to-wiki`, `/update-index`.
-- Leitura de `schema/fluxo-wiki.md` e `schema/qualidade-wiki.md`.
+- Leitura de `60_Sistemas/Wiki/schema/fluxo-wiki.md` e `60_Sistemas/Wiki/schema/qualidade-wiki.md`.
 - Busca com `rg`.
 - Escrita Markdown.
 
@@ -129,7 +129,7 @@ MEGATRON aciona Arquivista quando uma entrada precisa virar memória organizada.
 ## Relações
 
 - [[60_Sistemas/Arquivista_FabioOS]]
-- [[schema/fluxo-wiki]]
-- [[schema/qualidade-wiki]]
+- [[60_Sistemas/Wiki/schema/fluxo-wiki]]
+- [[60_Sistemas/Wiki/schema/qualidade-wiki]]
 - [[60_Sistemas/MEGATRON/agentes/specs/Agente_Inbox]]
 - [[60_Sistemas/MEGATRON/agentes/specs/Agente_RAG]]

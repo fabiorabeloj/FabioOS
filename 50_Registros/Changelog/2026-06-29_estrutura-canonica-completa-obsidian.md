@@ -32,7 +32,7 @@ Aplicada a organizacao fisica solicitada para reduzir a desordem visual no Obsid
 - `60_Sistemas/FabioOS/STATUS.md`
 - `60_Sistemas/FabioOS/NEXT_ACTIONS.md`
 - `60_Sistemas/FabioOS/Registro_Frentes_Ativas.md`
-- `log.md`
+- `50_Registros/Logs_Agentes/log.md`
 - referencias textuais conhecidas para os caminhos movidos
 
 ## Resultado
