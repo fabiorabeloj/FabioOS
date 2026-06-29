@@ -19,6 +19,14 @@ Separar, a partir dos anuncios e reflexoes enviados por Fabio, o que deve ser ab
 
 Anuncio nao vira prioridade automaticamente. Anuncio vira **sinal**.
 
+## Correcao de leitura
+
+Este arquivo nao deve ser lido como uma absorcao passiva de anuncios.
+
+O objetivo correto e extrair o que os anuncios ensinam sobre estrutura profissional: seguranca, governanca, dados, observabilidade, deploy, custo, permissoes, agentes e interface. A especificacao normativa criada a partir desta correcao e:
+
+[[60_Sistemas/FabioOS/Estrutura_Profissional_FabioOS_MEGATRON_2026-06-28]]
+
 O FabioOS absorve apenas o que:
 
 - reforca a arquitetura ja definida;

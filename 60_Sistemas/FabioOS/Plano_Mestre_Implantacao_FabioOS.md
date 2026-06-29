@@ -1449,3 +1449,45 @@ A regra de continuidade:
 O contexto não deve depender da sessão anterior.
 O contexto deve estar escrito no próprio FabioOS.
 ```
+
+---
+
+# 12. Addendum - camada profissional transversal
+
+Os sinais de mercado sobre agentes, MCPs, bancos, automacao, dashboards, deploy e infraestrutura nao devem ser tratados como modismo. Eles ensinam quais capacidades um sistema operacional profissional precisa ter.
+
+A partir de 2026-06-28, as fases 0-23 continuam validas, mas passam a ser avaliadas tambem pela camada de profissionalizacao descrita em:
+
+- [[40_Decisoes/2026-06-28_Decisao_Camadas_Profissionais_FabioOS]]
+- [[30_Conhecimento/Tecnologia/Arquiteturas_de_Mercado_Radar_Tecnologico]]
+- [[60_Sistemas/FabioOS/Estrutura_Profissional_FabioOS_MEGATRON_2026-06-28]]
+- [[60_Sistemas/FabioOS/Matriz_Profissionalizacao_FabioOS_2026-06-28]]
+- [[60_Sistemas/FabioOS/Catalogo_Caminhos_Ferramentas_Demonstradas_2026-06-28]]
+
+## Subfases candidatas
+
+| Subfase | Tema | Funcao |
+|---|---|---|
+| 20.5 | Data Platform | PostgreSQL/Supabase para dados estruturados, tarefas, estados, custos e metadados |
+| 21.5 | Observability Stack | Logs, metricas, erros, custos e execucao de agentes |
+| 22.5 | AI Cost and Privacy Control | Tetos de custo por provedor, classificacao de dados e politica de envio a modelos |
+| 23.5 | Deploy and Reliability Stack | Docker/VPS/cloud, backup, rollback, ambientes e monitoramento |
+| 24 | Federacao de dominios | FabioOS, PietraOS, TraderOS, PrimusOS e IAOS com memorias/permissoes por escopo |
+| 25 | ProductOS | Produto externo: usuarios, pagamentos, e-mail transacional, analytics e suporte |
+| 26 | Local AI and Hardware Lab | Avaliacao de IA local/hardware apenas depois de medir uso real, custo e privacidade |
+
+## Gate profissional
+
+Uma capacidade nova so avanca quando tiver objetivo, entrada, saida, permissao, log, custo, teste minimo, fallback e documentacao.
+
+## Regra de assimilacao
+
+Quando Fabio trouxer um prompt, print, anuncio, video ou ferramenta, a pergunta correta nao e "vamos instalar?". A pergunta correta e:
+
+```text
+Que caminho isso demonstra e qual camada do FabioOS melhora?
+```
+
+So depois disso se decide se vira estudo, especificacao, subfase, piloto ou descarte.
+
+O processo formal para essa extracao e o [[30_Conhecimento/Tecnologia/Arquiteturas_de_Mercado_Radar_Tecnologico]].

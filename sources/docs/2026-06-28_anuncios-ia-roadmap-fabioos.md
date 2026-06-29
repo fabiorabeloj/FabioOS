@@ -3,15 +3,15 @@ tipo: fonte
 origem: arquivo
 formato: txt
 nome_original: pasted-text.txt
-titulo: Anuncios e sinais de mercado para roadmap FabioOS
+titulo: Prompt de arquitetura, recursos e sinais de mercado para FabioOS
 autor: Fabio / conversa assistida por IA
-caminho_original: C:\Users\user\.codex\attachments\a33a8a3f-93a9-48d7-bd34-ee58ac3c7bf1\pasted-text.txt
+caminho_original: anexo local Codex (pasted-text.txt)
 capturado_em: 2026-06-28
 status: bruto-sintetizado
-tags: [fabios, roadmap, anuncios, ia, arquitetura]
+tags: [fabios, roadmap, arquitetura, recursos, capacidades]
 ---
 
-# Anuncios e sinais de mercado para roadmap FabioOS
+# Prompt de arquitetura, recursos e sinais de mercado para FabioOS
 
 ## Identificacao
 
@@ -28,13 +28,13 @@ Fonte longa com reflexoes de Fabio e respostas de IA sobre:
 - integracao entre varias IAs;
 - notas Markdown entrando no Obsidian;
 - possibilidade de varios RAGs ou "segundos cerebros";
-- papéis de OpenClaw, n8n, Codex, Claude, Cursor e Hermes;
+- papeis de OpenClaw, n8n, Codex, Claude, Cursor e Hermes;
 - anuncios de mercado sobre agentes, MCP, Python, Linux, Docker, Supabase, MongoDB, Vercel, Cloudflare, PostHog, Lovable, Red Hat, FIAP, Confluent e Spec-Driven Development;
 - necessidade de dashboard unico, observabilidade, deploy, bancos de dados e engenharia de agentes.
 
 ## Sintese estruturada
 
-[FATO] A fonte e uma colecao de sinais, anuncios e reflexoes. Nao deve ser tratada como fonte tecnica primaria ou validacao factual definitiva.
+[FATO] A fonte e uma colecao de sinais, demonstracoes, ferramentas e reflexoes. Nao deve ser tratada como fonte tecnica primaria ou validacao factual definitiva.
 
 [INTERPRETACAO] O material aponta para uma convergencia de arquitetura:
 
@@ -49,7 +49,7 @@ Usuario
   -> deploy / producao
 ```
 
-[DECISAO CANDIDATA] O FabioOS deve absorver o que reforca sua arquitetura modular, mas evitar adicionar ferramentas apenas porque aparecem em anuncios.
+[DECISAO CANDIDATA] O FabioOS deve aprender com os caminhos demonstrados e incorporar apenas o que reforca sua arquitetura modular, segura e observavel.
 
 ## Ideias uteis extraidas
 
@@ -68,7 +68,9 @@ Usuario
 
 ## Por que esta aqui
 
-Fabio usa anuncios e cursos como modo de descobrir tendencias. Esta fonte deve alimentar o roadmap sem transformar propaganda em prioridade automatica.
+Fabio usa anuncios, cursos e demonstracoes como modo de descobrir tendencias. Esta fonte deve alimentar o roadmap sem transformar propaganda em prioridade automatica.
+
+A leitura correta nao e "absorver anuncios"; e extrair caminhos profissionais: integracao entre IAs, MCP, bancos, RAG, grafo, dashboard, observabilidade, seguranca, deploy e produto.
 
 ## Avaliacao de qualidade
 
@@ -81,6 +83,7 @@ Nivel: maduro como insumo estrategico, nao como fonte factual tecnica primaria.
 
 ## Proximas acoes
 
-- [x] Transformar em analise de absorcao para as fases do FabioOS.
+- [x] Transformar em analise de arquitetura para as fases do FabioOS.
 - [x] Registrar decisao sobre federacao de cerebros especializados.
+- [x] Criar catalogo de caminhos e ferramentas demonstradas.
 - [ ] Verificar tecnologias especificas na fonte primaria antes de comprar, assinar ou implantar.

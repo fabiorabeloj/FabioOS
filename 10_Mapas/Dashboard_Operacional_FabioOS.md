@@ -4,7 +4,7 @@ area: 10_Mapas
 projeto: FabioOS
 status: gerado
 gerado_por: dashboard_fabioos.py
-atualizado_em: 2026-06-28 14:10:19
+atualizado_em: 2026-06-28 22:15:00
 tags: [fabios, dashboard, python, automacao, status]
 ---
 
@@ -15,10 +15,10 @@ tags: [fabios, dashboard, python, automacao, status]
 
 ## Estado Git
 
-- Branch/status: `## main...origin/main [ahead 55]`
-- HEAD local: `4646739`
-- Arquivos modificados/untracked: `3`
-- Ultimo changelog: `2026-06-28_matriz-automatizacoes-python-n8n.md`
+- Branch/status: `## main...origin/main [ahead 57]`
+- HEAD local: `86dc93b`
+- Arquivos modificados/untracked: `15`
+- Ultimo changelog: `2026-06-28_estrutura-profissional-fabios-megatron.md`
 
 ## Frentes ativas
 
@@ -32,6 +32,7 @@ tags: [fabios, dashboard, python, automacao, status]
 | RAG local | presente, 1795 chunks |
 | Grafo local | 840 nos, 2680 arestas, 0 arestas orfas, 0 nos isolados, 100.0% conectados |
 | MCP FabioOS | registrado no config global do Codex |
+| Radar Tecnologico | 1 analise(s), ultima: 2026-06-28_prompt-arquiteturas-de-mercado-fabioos.md |
 | Workflows n8n versionados | 2 JSON |
 
 ## Workflows n8n versionados
@@ -42,7 +43,7 @@ tags: [fabios, dashboard, python, automacao, status]
 ## Pendencias
 
 - Pendencias abertas no Painel: `24`
-- Pendencias abertas em NEXT_ACTIONS: `26`
+- Pendencias abertas em NEXT_ACTIONS: `30`
 
 ### Amostra do Painel
 
@@ -58,13 +59,13 @@ tags: [fabios, dashboard, python, automacao, status]
 ### Amostra do NEXT_ACTIONS
 
 - Preparar handoff para Claude retornar em 2026-06-29 13:00.
+- Criar matriz de dominios/dados/permissoes com base na camada profissional do FabioOS.
+- Usar o catalogo de caminhos demonstrados para avaliar novos anuncios, ferramentas, prints e prompts antes de instalar ou assinar.
+- Aplicar o Radar Tecnologico em pelo menos 3 materiais reais antes de promover nova ferramenta ao roadmap. (`radar_tecnologico.py` implementado; falta rodar 3 casos reais)
+- Avaliar subfases candidatas 20.5, 21.5, 22.5, 23.5, 24, 25 e 26 antes de inflar o roadmap oficial.
 - Rodar scan de segredos antes de qualquer commit.
 - Decidir se a memoria consolidada do piloto pode entrar no RAG/Grafo.
 - Investigar falhas do GitHub Actions `Auto Changelog`.
-- Criar matriz de privacidade por provedor IA.
-- Solicitar exportacao do ChatGPT se Fabio quiser absorver conversas antigas.
-- Verificar se existe conector/autorizacao do Gmail de trabalho.
-- Ler [[60_Sistemas/FabioOS/Interinato_Codex_2026-06-27_a_2026-06-29]].
 
 ## Inconsistencias detectadas
 

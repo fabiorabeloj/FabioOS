@@ -37,6 +37,8 @@ REGISTRO_FRENTES = ROOT / "60_Sistemas" / "FabioOS" / "Registro_Frentes_Ativas.m
 CHANGELOG_DIR = ROOT / "50_Registros" / "Changelog"
 GRAFO_AUDITORIA = ROOT / "60_Sistemas" / "Grafo" / "data" / "auditoria_grafo.json"
 RAG_DB = ROOT / "60_Sistemas" / "RAG" / "fabioos_db"
+RAG_PYTHON = ROOT / "60_Sistemas" / "RAG" / ".venv" / "Scripts" / "python.exe"
+RADAR_DIR = ROOT / "30_Conhecimento" / "Tecnologia" / "Radar"
 MCP_CODEX_CONFIG = Path.home() / ".codex" / "config.toml"
 OUTPUT = ROOT / "10_Mapas" / "Dashboard_Operacional_FabioOS.md"
 
@@ -107,6 +109,26 @@ def rag_status() -> str:
         col = chromadb.PersistentClient(path=str(RAG_DB)).get_collection("fabioos")
         return f"presente, {col.count()} chunks"
     except Exception as exc:
+        if RAG_PYTHON.exists():
+            code = (
+                "import chromadb, sys; "
+                "col = chromadb.PersistentClient(path=sys.argv[1]).get_collection('fabioos'); "
+                "print(col.count())"
+            )
+            try:
+                result = subprocess.run(
+                    [str(RAG_PYTHON), "-c", code, str(RAG_DB)],
+                    cwd=ROOT,
+                    capture_output=True,
+                    text=True,
+                    encoding="utf-8",
+                    timeout=30,
+                    check=False,
+                )
+                if result.returncode == 0 and result.stdout.strip().isdigit():
+                    return f"presente, {result.stdout.strip()} chunks"
+            except Exception:
+                pass
         return f"presente, contagem indisponivel ({exc.__class__.__name__})"
 
 
@@ -131,6 +153,16 @@ def mcp_fabioos_status() -> str:
     if "[mcp_servers.fabioos]" not in txt:
         return "nao registrado no config global do Codex"
     return "registrado no config global do Codex"
+
+
+def radar_status() -> str:
+    if not RADAR_DIR.exists():
+        return "nenhuma analise gerada"
+    arquivos = sorted(RADAR_DIR.glob("*.md"), key=lambda p: p.stat().st_mtime, reverse=True)
+    if not arquivos:
+        return "nenhuma analise gerada"
+    latest = arquivos[0].name
+    return f"{len(arquivos)} analise(s), ultima: {latest}"
 
 
 def n8n_workflows() -> list[str]:
@@ -196,6 +228,7 @@ tags: [fabios, dashboard, python, automacao, status]
 | RAG local | {rag_status()} |
 | Grafo local | {grafo_status()} |
 | MCP FabioOS | {mcp_fabioos_status()} |
+| Radar Tecnologico | {radar_status()} |
 | Workflows n8n versionados | {len(workflows)} JSON |
 
 ## Workflows n8n versionados
