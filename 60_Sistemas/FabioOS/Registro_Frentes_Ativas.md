@@ -45,6 +45,8 @@ Artefatos compartilhados incluem:
 
 | DOMINIOS_PERMISSOES_V0 | Codex | `60_Sistemas/FabioOS/Matriz_Dominios_Dados_Permissoes_2026-06-28.md`, `60_Sistemas/FabioOS/scripts/classificar_dado_fabioos.py`, `60_Sistemas/FabioOS/classificacoes/`, dashboard, mapa e changelog | concluida | 2026-06-28 | Classificador local v0 implementado e testado; nao tocou RAG DB, Grafo data, MCP_FABIOOS, OpenClaw auth/runtime ou push |
 
+| SPEC_DRIVEN_V0 | Codex | `60_Sistemas/FabioOS/Protocolo_Spec_Driven_FabioOS.md`, `60_Sistemas/FabioOS/templates/Template_SPEC_FabioOS.md`, `60_Sistemas/FabioOS/specs/`, `60_Sistemas/FabioOS/scripts/gerar_spec_fabioos.py`, dashboard, mapa e changelog | concluida | 2026-06-28 | Fluxo SPEC -> plano -> tarefas -> testes -> changelog implementado localmente; nao tocou RAG DB, Grafo data, MCP_FABIOOS, OpenClaw auth/runtime ou arquivo untracked fora da frente |
+
 ## Frentes observadas
 
 | Frente | Dono | Observacao |
@@ -74,3 +76,4 @@ Ao concluir, alterar `Estado` para `concluida`, registrar resultado e apontar o 
 - 2026-06-27 - `COMMITS_TEMATICOS` concluida. Commits locais de coordenacao, retomada, RAG, higiene, OpenClaw, Obsidian e Fase 13 foram criados sem push; o checklist pre-commit sem colisao ficou registrado como governanca.
 - 2026-06-27 - `ROTEAMENTO_CAPACIDADES` concluida. Protocolo criado para obrigar consulta a skills, comandos, agentes, subagentes, scripts, MCPs, RAG e grafo antes de execucao manual.
 - 2026-06-28 - `DOMINIOS_PERMISSOES_V0` concluida. Matriz de dominios/dados/permissoes e classificador local v0 criados; dashboard passou a exibir classificacoes.
+- 2026-06-28 - `SPEC_DRIVEN_V0` concluida. Protocolo, template, gerador local de SPEC e primeira SPEC real criados; dashboard passou a exibir SPECs.

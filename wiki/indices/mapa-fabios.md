@@ -24,6 +24,8 @@ atualizado_em: 2026-06-26
 
 **[[60_Sistemas/FabioOS/Matriz_Dominios_Dados_Permissoes_2026-06-28]]** — gate operacional para decidir dominio, classe de dado, permissao RAG/Grafo e uso de modelo externo.
 
+**[[60_Sistemas/FabioOS/Protocolo_Spec_Driven_FabioOS]]** — protocolo para transformar ideias e fases futuras em SPEC antes de implementar.
+
 **[[00_Arquitetura/01_Modelo_Formal_FabioOS_MEGATRON]]** — modelo formal do FabioOS/MEGATRON: ontologia, epistemologia, domínios, memória, agentes, governança, autoconstrução e implementação.
 
 **[[60_Sistemas/FabioOS/Protocolo_Coordenacao_Multiagente]]** — regras para Codex, Claude, MEGATRON e futuros agentes trabalharem em paralelo sem conflito.
@@ -194,6 +196,7 @@ Como criar novos MCPs e ferramentas para o FabioOS.
 - [[60_Sistemas/FabioOS/Estrutura_Profissional_FabioOS_MEGATRON_2026-06-28]] — estrutura profissional transversal do FabioOS/MEGATRON
 - [[60_Sistemas/FabioOS/Matriz_Profissionalizacao_FabioOS_2026-06-28]] — matriz de avaliacao de tecnologias, anuncios e capacidades
 - [[60_Sistemas/FabioOS/Matriz_Dominios_Dados_Permissoes_2026-06-28]] — classificacao de dominios, dados e permissoes
+- [[60_Sistemas/FabioOS/Protocolo_Spec_Driven_FabioOS]] — fluxo SPEC -> plano -> tarefas -> testes -> changelog
 - [[60_Sistemas/FabioOS/Catalogo_Caminhos_Ferramentas_Demonstradas_2026-06-28]] — caminhos e demonstracoes aproveitaveis no FabioOS
 - [[30_Conhecimento/Tecnologia/Arquiteturas_de_Mercado_Radar_Tecnologico]] — radar tecnologico para arquiteturas de mercado
 - [[60_Sistemas/FabioOS/Protocolo_Operacional_FabioOS]] — fluxo operacional, rotinas e convenções de nome
