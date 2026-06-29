@@ -32,7 +32,7 @@ caso. Se nao existir, registrar a lacuna para evolucao do FabioOS.
 Antes de escolher uma IA, modelo ou ferramenta externa, consultar tambem:
 
 ```text
-40_Repertorio/IA/Modelos_e_IAs/Matriz_de_Aptidao_das_IAs_FabioOS.md
+90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/40_Repertorio/IA/Modelos_e_IAs/Matriz_de_Aptidao_das_IAs_FabioOS.md
 ```
 
 Essa matriz define vocacao, limites, risco, teste e criterio de permanencia. Nenhum modelo deve ser acionado apenas por preferencia ou curiosidade.
@@ -217,7 +217,7 @@ Este protocolo estara funcionando quando:
 - [[60_Sistemas/Claude_Code/Workstation_FabioOS]]
 - [[60_Sistemas/Skills/Inventario_Skills]]
 - [[60_Sistemas/MCP/Inventario_MCP]]
-- [[40_Repertorio/IA/Modelos_e_IAs/Matriz_de_Aptidao_das_IAs_FabioOS]]
+- [[90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/40_Repertorio/IA/Modelos_e_IAs/Matriz_de_Aptidao_das_IAs_FabioOS]]
 - [[60_Sistemas/MEGATRON/agentes/README_Agentes]]
 - [[60_Sistemas/FabioOS/Registro_Frentes_Ativas]]
 

@@ -8,7 +8,7 @@ Antes de qualquer ação, leia estes arquivos na ordem indicada:
 2. **`60_Sistemas/FabioOS/Plano_Mestre_Implantacao_FabioOS.md`** — arquitetura completa, fases e regras estratégicas
 3. **`wiki/indices/mapa-fabios.md`** — mapa navegável de sistemas, MCPs e wiki
 4. **`60_Sistemas/FabioOS/Protocolo_Operacional_FabioOS.md`** — fluxo operacional, rotinas, aprovação humana e convenções de nome
-5. **`10_Mapas/Painel_Pendencias_FabioOS.md`** — pendências abertas e roadmap por trilho (pessoal/aprendizado → empresarial → final)
+5. **`90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/10_Mapas/Painel_Pendencias_FabioOS.md`** — pendências abertas e roadmap por trilho (pessoal/aprendizado → empresarial → final)
 6. **Último arquivo em `50_Registros/Changelog/`** — estado mais recente do projeto
 
 Após a leitura, informe ao usuário:
@@ -30,7 +30,7 @@ Não inicie trabalho sem ter lido os arquivos acima.
 - **Transicao de contexto entre IAs:** seguir `60_Sistemas/FabioOS/Protocolo_Gestao_Contexto_IA.md` quando a conversa ficar longa, degradada ou perto de limite de uso.
 - **Limpeza segura do PC/projeto:** seguir `60_Sistemas/FabioOS/Protocolo_Limpeza_Segura_FabioOS_PC.md`; nunca deletar direto, usar quarentena e registro.
 - **Roteamento de capacidades:** antes de improvisar, verificar skills, comandos, agentes, subagentes, scripts, MCPs, RAG e grafo conforme `60_Sistemas/FabioOS/Protocolo_Roteamento_Capacidades_IA.md`.
-- **Matriz de aptidao das IAs:** antes de escolher IA/modelo/ferramenta, consultar `40_Repertorio/IA/Modelos_e_IAs/Matriz_de_Aptidao_das_IAs_FabioOS.md`; nenhuma IA entra por acumulacao ou curiosidade.
+- **Matriz de aptidao das IAs:** antes de escolher IA/modelo/ferramenta, consultar `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/40_Repertorio/IA/Modelos_e_IAs/Matriz_de_Aptidao_das_IAs_FabioOS.md`; nenhuma IA entra por acumulacao ou curiosidade.
 - **LLM Wiki operacional:** antes de criar ou alterar conhecimento, ler `index.md`, `log.md` e `60_Sistemas/Wiki/Schema_Wiki_FabioOS.md`; preferir atualizar pagina existente e registrar ingest/query/lint quando aplicavel.
 - **Mapa canonico de pastas:** antes de criar arquivo novo, consultar `60_Sistemas/FabioOS/Mapa_Canonico_Pastas_Obsidian_v2_2026-06-29.md`; pastas legadas nao devem receber conteudo novo salvo manutencao explicita.
 
@@ -80,12 +80,12 @@ Resumo operacional:
 
 Pastas legadas preservadas:
 
-- `10_Mapas/`
-- `20_Projetos/`
-- `30_Conhecimento/`
-- `40_Decisoes/`
-- `40_Repertorio/`
-- `50_Fontes/`
+- `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/10_Mapas/`
+- `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/20_Projetos/`
+- `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/30_Conhecimento/`
+- `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/40_Decisoes/`
+- `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/40_Repertorio/`
+- `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/50_Fontes/`
 - `sources/`
 - `wiki/`
 

@@ -50,12 +50,12 @@ Auditoria:
 
 Nao criar novos arquivos nestas pastas sem justificativa:
 
-- `10_Mapas/`
-- `20_Projetos/`
-- `30_Conhecimento/`
-- `40_Decisoes/`
-- `40_Repertorio/`
-- `50_Fontes/`
+- `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/10_Mapas/`
+- `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/20_Projetos/`
+- `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/30_Conhecimento/`
+- `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/40_Decisoes/`
+- `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/40_Repertorio/`
+- `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/50_Fontes/`
 - `sources/`
 - `wiki/`
 

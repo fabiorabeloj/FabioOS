@@ -28,7 +28,7 @@ Modelo Formal: o MEGATRON precisa de RAG + Grafo + **MCPs**. RAG e Grafo já exi
 | `consultar_grafo(termo, top)` | Busca nós relacionados ou lista hubs (via `query_graph.py`) |
 | `buscar_nota(termo, limite)` | Procura `.md` por nome/conteúdo no vault |
 | `consultar_wiki(termo, limite)` | Idem, escopado a `wiki/` |
-| `listar_projetos()` | Lista projetos em `20_Projetos/` |
+| `listar_projetos()` | Lista projetos em `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/20_Projetos/` |
 
 Exclui dos resultados: `.venv`, `fabioos_db`, `.git`, `.obsidian`, `.claude`, `sources/_inbox`.
 

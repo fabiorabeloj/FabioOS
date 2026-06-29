@@ -82,12 +82,12 @@ Regra: documentacao pode ser preparada; runtime e envio externo exigem confirmac
 
 ### Higiene de vault / wiki
 
-- `20_Projetos/PRIMUS.md`
-- `30_Conhecimento/FabioOS.md`
+- `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/20_Projetos/PRIMUS.md`
+- `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/30_Conhecimento/FabioOS.md`
 - `wiki/conceitos/rag.md`
 - `wiki/conceitos/banco-vetorial.md`
 - `wiki/indices/mapa-fabios.md`
-- `10_Mapas/Painel_Pendencias_FabioOS.md`
+- `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/10_Mapas/Painel_Pendencias_FabioOS.md`
 
 Regra: stage explicito; revisar frontmatter e links antes de commit.
 

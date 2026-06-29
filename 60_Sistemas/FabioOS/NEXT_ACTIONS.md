@@ -45,7 +45,9 @@ atualizado_em: 2026-06-27
 - [ ] Implementar MEGATRON v1 somente apos revisar a SPEC e confirmar limites read-only/propose-only.
 - [x] Criar mapa canonico v2 das pastas Obsidian e plano de normalizacao sem migracao em massa.
 - [x] Criar estrutura fisica LLM Wiki v1 com `05_Raw_Sources/`, `20_Areas/`, `40_Wiki/`, `70_Skills/` e `80_Specs/`.
-- [ ] Executar uma migracao piloto de pastas: 1 mapa de `10_Mapas/` para `40_Wiki/_MOCs/` ou `10_Dashboard/`, ou 1 decisao de `40_Decisoes/` para `50_Registros/Decisoes/`.
+- [x] Limpar visualmente a raiz arquivando pastas legadas em `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/`.
+- [x] Ocultar arquivos tecnicos e compatibilidade (`AGENTS.md`, `CLAUDE.md`, `CODEX.md`, `README.md`, `log.md`, `sources/`, `wiki/`, `schema/`) da navegacao do Obsidian sem remove-los do disco.
+- [ ] Executar uma migracao piloto de pastas: 1 mapa de `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/10_Mapas/` para `40_Wiki/_MOCs/` ou `10_Dashboard/`, ou 1 decisao de `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/40_Decisoes/` para `50_Registros/Decisoes/`.
 - [ ] Adicionar OpenRouter como variavel de ambiente local somente quando houver teto de custo definido.
 - [ ] Confirmar caminho executavel/CLI do Hermes antes de usa-lo como agente.
 - [ ] Confirmar como abrir Cursor por linha de comando ou manter Cursor como IDE humana visual.

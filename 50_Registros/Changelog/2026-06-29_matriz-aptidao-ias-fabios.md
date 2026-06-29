@@ -15,7 +15,7 @@ Criada a matriz operacional que define vocacao, tarefas recomendadas, tarefas pr
 
 ## Entregas
 
-- `40_Repertorio/IA/Modelos_e_IAs/Matriz_de_Aptidao_das_IAs_FabioOS.md`
+- `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/40_Repertorio/IA/Modelos_e_IAs/Matriz_de_Aptidao_das_IAs_FabioOS.md`
 - Atualizacoes em STATUS, NEXT_ACTIONS, mapa, roteamento, specs, skills, agentes e prompt de orquestracao.
 
 ## Decisao

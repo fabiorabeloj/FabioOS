@@ -18,7 +18,7 @@ Implementada a primeira borda mobile funcional do FabioOS: uma pagina web local,
 - `60_Sistemas/FabioOS/scripts/mobile_gateway_fabioos.py`
 - `60_Sistemas/FabioOS/Mobile_Gateway_FabioOS_v0.md`
 - `60_Sistemas/FabioOS/specs/2026-06-28_mobile-gateway-fabioos-v0.md`
-- `10_Mapas/Dashboard_Operacional_FabioOS.md`
+- `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/10_Mapas/Dashboard_Operacional_FabioOS.md`
 
 ## Decisoes
 

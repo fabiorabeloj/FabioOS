@@ -20,7 +20,7 @@ atualizado_em: 2026-06-26
 
 **[[60_Sistemas/FabioOS/Catalogo_Caminhos_Ferramentas_Demonstradas_2026-06-28]]** — catalogo para avaliar ferramentas, prints, anuncios e demonstracoes antes de incorporar ao FabioOS.
 
-**[[30_Conhecimento/Tecnologia/Arquiteturas_de_Mercado_Radar_Tecnologico]]** — metodo para extrair problema, arquitetura, tecnologias, conceitos, padroes e prioridade de materiais de mercado.
+**[[90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/30_Conhecimento/Tecnologia/Arquiteturas_de_Mercado_Radar_Tecnologico]]** — metodo para extrair problema, arquitetura, tecnologias, conceitos, padroes e prioridade de materiais de mercado.
 
 **[[60_Sistemas/FabioOS/Matriz_Dominios_Dados_Permissoes_2026-06-28]]** — gate operacional para decidir dominio, classe de dado, permissao RAG/Grafo e uso de modelo externo.
 
@@ -32,7 +32,7 @@ atualizado_em: 2026-06-26
 
 **[[60_Sistemas/FabioOS/Protocolo_Roteamento_Capacidades_IA]]** — regra para usar skills, comandos, agentes, subagentes, scripts, MCPs, RAG e grafo antes de improvisar execução manual.
 
-**[[40_Repertorio/IA/Modelos_e_IAs/Matriz_de_Aptidao_das_IAs_FabioOS]]** — matriz de vocacao, limites, riscos, testes e permanencia das IAs, modelos, agentes e ferramentas do FabioOS.
+**[[90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/40_Repertorio/IA/Modelos_e_IAs/Matriz_de_Aptidao_das_IAs_FabioOS]]** — matriz de vocacao, limites, riscos, testes e permanencia das IAs, modelos, agentes e ferramentas do FabioOS.
 **[[30_Projetos/FabioOS/LLM_Wiki_FabioOS]]** — decisao operacional da LLM Wiki como memoria compilada do FabioOS.
 **[[10_Dashboard/RAG_MCP_Control_Plane]]** — painel de governanca de RAGs e MCPs.
 **[[10_Dashboard/LLM_Wiki_FabioOS]]** — dashboard da frente LLM Wiki.
@@ -52,7 +52,7 @@ atualizado_em: 2026-06-26
 
 **[[wiki/memoria/Mapa_Memoria_Fabio]]** — ponto de entrada para a memória pessoal/profissional do FabioOS: ChatGPT, Gmail pessoal, Gmail profissional e fontes sensíveis por camadas.
 
-**[[10_Mapas/Painel_Memoria_FabioOS]]** — painel navegável para conhecimento absorvido de e-mails, conversas e fontes pessoais/profissionais.
+**[[90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/10_Mapas/Painel_Memoria_FabioOS]]** — painel navegável para conhecimento absorvido de e-mails, conversas e fontes pessoais/profissionais.
 
 **[[60_Sistemas/FabioOS/Protocolo_Ingestao_Memoria_Pessoal_Profissional]]** — protocolo de consentimento, privacidade e triagem antes de absorver ChatGPT/e-mails no vault.
 
@@ -216,8 +216,8 @@ Como criar novos MCPs e ferramentas para o FabioOS.
 - [[60_Sistemas/FabioOS/Matriz_Dominios_Dados_Permissoes_2026-06-28]] — classificacao de dominios, dados e permissoes
 - [[60_Sistemas/FabioOS/Protocolo_Spec_Driven_FabioOS]] — fluxo SPEC -> plano -> tarefas -> testes -> changelog
 - [[60_Sistemas/FabioOS/Catalogo_Caminhos_Ferramentas_Demonstradas_2026-06-28]] — caminhos e demonstracoes aproveitaveis no FabioOS
-- [[40_Repertorio/IA/Modelos_e_IAs/Matriz_de_Aptidao_das_IAs_FabioOS]] — criterio de escolha e permanencia de IAs/ferramentas
-- [[30_Conhecimento/Tecnologia/Arquiteturas_de_Mercado_Radar_Tecnologico]] — radar tecnologico para arquiteturas de mercado
+- [[90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/40_Repertorio/IA/Modelos_e_IAs/Matriz_de_Aptidao_das_IAs_FabioOS]] — criterio de escolha e permanencia de IAs/ferramentas
+- [[90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/30_Conhecimento/Tecnologia/Arquiteturas_de_Mercado_Radar_Tecnologico]] — radar tecnologico para arquiteturas de mercado
 - [[60_Sistemas/FabioOS/Protocolo_Operacional_FabioOS]] — fluxo operacional, rotinas e convenções de nome
 - [[60_Sistemas/FabioOS/Protocolo_Coordenacao_Multiagente]] — coordenação entre Codex, Claude, MEGATRON e futuros agentes
 - [[60_Sistemas/FabioOS/Protocolo_Roteamento_Capacidades_IA]] — roteamento obrigatório para capacidades já instaladas

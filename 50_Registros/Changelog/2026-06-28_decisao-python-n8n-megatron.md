@@ -19,7 +19,7 @@ atualizado_em: 2026-06-28
 
 ## Criado/modificado no vault
 
-- `40_Decisoes/2026-06-28_Decisao_Python_n8n_MEGATRON.md`
+- `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/40_Decisoes/2026-06-28_Decisao_Python_n8n_MEGATRON.md`
 - `50_Registros/Changelog/2026-06-28_decisao-python-n8n-megatron.md`
 
 ## Pendente

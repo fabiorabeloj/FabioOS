@@ -35,13 +35,13 @@ git commit -m "test: validar backlinks e gerar relatório
 - Analisados 461 links internos
 - Taxa de sucesso: 98.5%
 - Corrigidos 6 problemas críticos
-- Relatório completo em RELATORIO_VALIDACAO_LINKS.md"
+- Relatório completo em 50_Registros/Relatorios/RELATORIO_VALIDACAO_LINKS.md"
 
 # Passo 5: Automação Changelog
 git commit -m "ci: implementar changelog automático com GitHub Actions
 
 - Workflow em .github/workflows/changelog.yml
-- Auto-update de 40_Decisoes/Changelog.md em cada push
+- Auto-update de 90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/40_Decisoes/Changelog.md em cada push
 - Convenção de commits: TIPO: Descrição
 - Documentação em CHANGELOG_AUTOMATION.md"
 
@@ -56,8 +56,8 @@ git commit -m "docs: documentar implementação de RAG com Chroma
 # Passo 7: Expandir conteúdo
 git commit -m "docs: expandir Tecnologia, Projetos e criar templates
 
-- 30_Conhecimento/Tecnologia expandido com princípios e padrões
-- 20_Projetos/IA expandido com arquitetura e roadmap
+- 90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/30_Conhecimento/Tecnologia expandido com princípios e padrões
+- 90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/20_Projetos/IA expandido com arquitetura e roadmap
 - TEMPLATE_NOVO_PROJETO.md para novos projetos
 - Todos os links corrigidos"
 
@@ -90,7 +90,7 @@ Estrutura:
 Documentação:
 - RAG_IMPLEMENTATION.md (guia Chroma)
 - CHANGELOG_AUTOMATION.md (GitHub Actions)
-- RELATORIO_VALIDACAO_LINKS.md (análise)
+- 50_Registros/Relatorios/RELATORIO_VALIDACAO_LINKS.md (análise)
 - RESUMO_IMPLEMENTACAO_FINAL.md (executivo)
 
 Expansão:
@@ -100,7 +100,7 @@ Expansão:
 - TEMPLATE_NOVO_PROJETO.md criado
 
 Links:
-- Todos os [[30_Conhecimento/IA.md]] corrigidos para [[IA]]
+- Todos os [[90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/30_Conhecimento/IA.md]] corrigidos para [[IA]]
 - [[80_Sistemas]] corrigido para [[60_Sistemas]]
 - Pipe syntax padronizado
 

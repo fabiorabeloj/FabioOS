@@ -158,8 +158,8 @@ criado_em: 2026-06-25
 ## 📂 Arquivos-Chave para Começar
 
 **HOJE - LEIA:**
-1. `30_Conhecimento/Continuidade_da_Vida.md` (coração)
-2. `10_Mapas/Mapa_Mestre_Fabio.md` (visão geral)
+1. `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/30_Conhecimento/Continuidade_da_Vida.md` (coração)
+2. `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/10_Mapas/Mapa_Mestre_Fabio.md` (visão geral)
 3. `PROXIMOS_PASSOS_COMPLETO.md` (execução)
 
 **DEPOIS - USE:**
@@ -207,7 +207,7 @@ criado_em: 2026-06-25
 
 **NÃO leia mais. COMECE AGORA.**
 
-1. Abra `10_Mapas/Mapa_Mestre_Fabio.md` no Obsidian
+1. Abra `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/10_Mapas/Mapa_Mestre_Fabio.md` no Obsidian
 2. Leia [[Continuidade da Vida]]
 3. Capture 5 ideias sobre sua vida
 4. Volte aqui amanhã
@@ -222,10 +222,10 @@ criado_em: 2026-06-25
 → Leia `PROXIMOS_PASSOS_COMPLETO.md`
 
 **Se não souber qual é o conceito:**
-→ Leia `30_Conhecimento/Continuidade_da_Vida.md`
+→ Leia `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/30_Conhecimento/Continuidade_da_Vida.md`
 
 **Se quiser visão geral:**
-→ Abra `10_Mapas/Mapa_Mestre_Fabio.md`
+→ Abra `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/10_Mapas/Mapa_Mestre_Fabio.md`
 
 ---
 

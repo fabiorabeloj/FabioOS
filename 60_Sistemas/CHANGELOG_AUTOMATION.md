@@ -72,14 +72,14 @@ jobs:
           echo "" >> TEMP_CHANGELOG
           echo "${COMMIT_MSG}" >> TEMP_CHANGELOG
           echo "" >> TEMP_CHANGELOG
-          cat 40_Decisoes/Changelog.md >> TEMP_CHANGELOG
-          mv TEMP_CHANGELOG 40_Decisoes/Changelog.md
+          cat 90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/40_Decisoes/Changelog.md >> TEMP_CHANGELOG
+          mv TEMP_CHANGELOG 90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/40_Decisoes/Changelog.md
 
       - name: Commit Changelog
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add 40_Decisoes/Changelog.md
+          git add 90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/40_Decisoes/Changelog.md
           git commit -m "docs: atualizar changelog [skip ci]"
           git push
 ```

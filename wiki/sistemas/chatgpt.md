@@ -65,7 +65,7 @@ No FabioOS, o ChatGPT cumpre:
 
 ## Próximas ações
 
-- [ ] Salvar outputs estratégicos do ChatGPT em `sources/research/` ou `40_Decisoes/`
+- [ ] Salvar outputs estratégicos do ChatGPT em `sources/research/` ou `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/40_Decisoes/`
 - [ ] Definir quando usar ChatGPT vs Claude Code como critério operacional
 
 ## Links internos

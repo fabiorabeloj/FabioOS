@@ -30,6 +30,15 @@ Painel para navegar a estrutura fisica LLM Wiki do FabioOS.
 | Specs | [[80_Specs/README]] | Planos executaveis |
 | Arquivo | [[90_Arquivo/README]] | Material antigo |
 
+## Legado arquivado
+
+- [[90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/README]]
+- [[90_Arquivo/Descartes_Visuais_Obsidian_2026-06-29/README]]
+
+As antigas pastas de raiz foram preservadas nesse arquivo para reduzir poluicao visual no Obsidian.
+
+Arquivos tecnicos de operacao (`AGENTS.md`, `CLAUDE.md`, `CODEX.md`, `README.md`, `log.md`, `sources/`, `wiki/`, `schema/` e diretorios de agentes) continuam no disco, mas foram ocultados no Obsidian via `.obsidian/app.json`.
+
 ## Documentos estruturais
 
 - [[60_Sistemas/Wiki/Estrutura_de_Pastas_LLM_Wiki_FabioOS]]

@@ -19,7 +19,7 @@ E-mails nao devem ser simplesmente arquivados. Eles devem virar conhecimento est
 1. Ler apenas e-mails dentro de escopo autorizado.
 2. Manter fonte bruta em `sources/email/_restrito/`.
 3. Criar conhecimento consolidado em `wiki/memoria/`.
-4. Expor o resultado em [[10_Mapas/Painel_Memoria_FabioOS]].
+4. Expor o resultado em [[90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/10_Mapas/Painel_Memoria_FabioOS]].
 5. Revisar antes de promover para RAG/Grafo.
 
 ## Conhecimento ja criado

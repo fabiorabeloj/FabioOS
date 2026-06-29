@@ -1,3 +1,19 @@
 {
-  "alwaysUpdateLinks": true
+  "alwaysUpdateLinks": true,
+  "userIgnoreFilters": [
+    ".agents/",
+    ".claude/",
+    ".codex/",
+    ".github/",
+    "schema/",
+    "sources/",
+    "wiki/",
+    ".gitignore",
+    "AGENTS.md",
+    "CLAUDE.md",
+    "CODEX.md",
+    "README.md",
+    "log.md",
+    "start_fabioos.ps1"
+  ]
 }

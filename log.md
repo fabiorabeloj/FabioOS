@@ -32,7 +32,7 @@ Formato:
 - Fonte: anexos de decisao arquitetural enviados pelo usuario e documentos existentes do vault.
 - Paginas criadas: `30_Projetos/FabioOS/LLM_Wiki_FabioOS.md`, `60_Sistemas/Wiki/*`, `10_Dashboard/*`, `index.md`.
 - Paginas atualizadas: STATUS/NEXT_ACTIONS, CLAUDE, mapa, wiki/README, matriz de aptidao.
-- Contradicoes: estrutura solicitada usa `30_Projetos/` e `10_Dashboard/`, enquanto o vault historico tambem usa `20_Projetos/` e `10_Mapas/`.
+- Contradicoes: estrutura solicitada usa `30_Projetos/` e `10_Dashboard/`, enquanto o vault historico tambem usa `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/20_Projetos/` e `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/10_Mapas/`.
 - Proximas acoes: executar piloto pequeno somente apos autorizacao humana.
 
 ## [2026-06-29] ingest | Piloto governanca operacional
@@ -45,9 +45,9 @@ Formato:
 
 ## [2026-06-29] roadmap | Reformulacao das fases FabioOS v2
 
-- Fonte: [[60_Sistemas/FabioOS/Plano_Mestre_Implantacao_FabioOS]], [[10_Mapas/Painel_Pendencias_FabioOS]], [[30_Projetos/FabioOS/LLM_Wiki_FabioOS]], [[wiki/conceitos/governanca-operacional-fabios]]
+- Fonte: [[60_Sistemas/FabioOS/Plano_Mestre_Implantacao_FabioOS]], [[90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/10_Mapas/Painel_Pendencias_FabioOS]], [[30_Projetos/FabioOS/LLM_Wiki_FabioOS]], [[wiki/conceitos/governanca-operacional-fabios]]
 - Paginas criadas: [[60_Sistemas/FabioOS/Roadmap_Fases_FabioOS_v2_2026-06-29]]
-- Paginas atualizadas: [[60_Sistemas/FabioOS/Plano_Mestre_Implantacao_FabioOS]], [[10_Mapas/Painel_Pendencias_FabioOS]], [[60_Sistemas/FabioOS/STATUS]], [[60_Sistemas/FabioOS/NEXT_ACTIONS]], [[index]], [[wiki/indices/mapa-fabios]]
+- Paginas atualizadas: [[60_Sistemas/FabioOS/Plano_Mestre_Implantacao_FabioOS]], [[90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/10_Mapas/Painel_Pendencias_FabioOS]], [[60_Sistemas/FabioOS/STATUS]], [[60_Sistemas/FabioOS/NEXT_ACTIONS]], [[index]], [[wiki/indices/mapa-fabios]]
 - Contradicoes: Plano Mestre antigo tratava RAG/Grafo como futuros; Roadmap v2 corrige para ativos/controlados.
 - Proximas acoes: revisar Roadmap v2 com Claude/Fabio e iniciar Fase 17 Governanca Operacional.
 
@@ -72,7 +72,7 @@ Formato:
 - Fonte: auditoria da arvore real do vault, CLAUDE.md, Plano Mestre e Protocolo Operacional.
 - Paginas criadas: [[50_Registros/Auditoria/Auditoria_Pastas_Obsidian_2026-06-29]], [[60_Sistemas/FabioOS/Mapa_Canonico_Pastas_Obsidian_v2_2026-06-29]], [[60_Sistemas/FabioOS/Plano_Normalizacao_Pastas_Obsidian_2026-06-29]], [[10_Dashboard/Estrutura_Obsidian_FabioOS]]
 - Paginas atualizadas: [[CLAUDE]], [[60_Sistemas/FabioOS/Plano_Mestre_Implantacao_FabioOS]], [[60_Sistemas/FabioOS/Protocolo_Operacional_FabioOS]], [[60_Sistemas/FabioOS/STATUS]], [[60_Sistemas/FabioOS/NEXT_ACTIONS]], [[index]]
-- Contradicoes: coexistencia de `10_Mapas/` e `10_Dashboard/`, `20_Projetos/` e `30_Projetos/`, `30_Conhecimento/` e `40_Repertorio/`, `40_Decisoes/` e `50_Registros/Decisoes/`, `50_Fontes/` e `sources/`.
+- Contradicoes: coexistencia de `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/10_Mapas/` e `10_Dashboard/`, `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/20_Projetos/` e `30_Projetos/`, `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/30_Conhecimento/` e `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/40_Repertorio/`, `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/40_Decisoes/` e `50_Registros/Decisoes/`, `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/50_Fontes/` e `sources/`.
 - Proximas acoes: executar uma migracao piloto pequena antes de qualquer lote maior.
 
 ## [2026-06-29] governanca | Estrutura fisica LLM Wiki
@@ -82,3 +82,11 @@ Formato:
 - Paginas atualizadas: [[CLAUDE]], [[README]], [[index]], [[wiki/indices/mapa-fabios]], [[60_Sistemas/FabioOS/STATUS]], [[60_Sistemas/FabioOS/NEXT_ACTIONS]]
 - Contradicoes: `sources/` e `wiki/` permanecem por compatibilidade operacional ate migracao de links, RAG, MCP e scripts.
 - Proximas acoes: revisar proposta e executar migracao piloto pequena.
+
+## [2026-06-29] governanca | Limpeza visual da raiz Obsidian
+
+- Fonte: validacao visual da raiz no Obsidian e decisao humana explicita para organizar.
+- Paginas criadas: [[90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/README]], [[90_Arquivo/Descartes_Visuais_Obsidian_2026-06-29/README]]
+- Paginas atualizadas: [[10_Dashboard/Mapa_Estrutural_FabioOS]], [[90_Arquivo/README]], [[60_Sistemas/FabioOS/STATUS]], [[60_Sistemas/FabioOS/NEXT_ACTIONS]], [[50_Registros/Changelog/CHANGELOG_FabioOS]], `.obsidian/app.json`
+- Contradicoes: `sources/`, `wiki/` e `schema/` continuam no disco por compatibilidade tecnica com scripts, RAG, MCP e convencoes existentes, mas ficam ocultos na navegacao humana do Obsidian.
+- Proximas acoes: migrar conteudo legado por lotes pequenos, com backlinks e changelog por lote.

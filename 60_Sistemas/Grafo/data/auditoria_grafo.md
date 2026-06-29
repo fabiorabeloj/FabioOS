@@ -63,16 +63,16 @@ Registrar metricas de consistencia e cobertura do grafo minimo da Fase 13.
 | Dominio:FabioOS | Dominio | 162 | 162 | 0 |
 | Projeto:FabioOS | Projeto | 103 | 103 | 0 |
 | Dominio:60_Sistemas | Dominio | 83 | 83 | 0 |
-| 10_Mapas/Mapa_Mestre_Fabio | Nota | 70 | 5 | 65 |
+| 90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/10_Mapas/Mapa_Mestre_Fabio | Nota | 70 | 5 | 65 |
 | wiki/indices/mapa-fabios | Conceito | 68 | 22 | 46 |
-| 10_Mapas/Mapa_de_TraderOS | Nota | 58 | 4 | 54 |
-| 10_Mapas/INDEX | Nota | 56 | 1 | 55 |
-| 10_Mapas/Mapa_de_Escola | Nota | 54 | 4 | 50 |
-| 30_Conhecimento/Obsidian | Sistema | 53 | 34 | 19 |
-| 10_Mapas/Mapa_de_Filosofia | Nota | 46 | 4 | 42 |
-| 20_Projetos/Fabio0S | Projeto | 46 | 19 | 27 |
-| 20_Projetos/Trader | Projeto | 45 | 16 | 29 |
-| 10_Mapas/Mapa_de_Geografia | Nota | 43 | 4 | 39 |
+| 90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/10_Mapas/Mapa_de_TraderOS | Nota | 58 | 4 | 54 |
+| 90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/10_Mapas/INDEX | Nota | 56 | 1 | 55 |
+| 90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/10_Mapas/Mapa_de_Escola | Nota | 54 | 4 | 50 |
+| 90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/30_Conhecimento/Obsidian | Sistema | 53 | 34 | 19 |
+| 90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/10_Mapas/Mapa_de_Filosofia | Nota | 46 | 4 | 42 |
+| 90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/20_Projetos/Fabio0S | Projeto | 46 | 19 | 27 |
+| 90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/20_Projetos/Trader | Projeto | 45 | 16 | 29 |
+| 90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/10_Mapas/Mapa_de_Geografia | Nota | 43 | 4 | 39 |
 | 00_Arquitetura/01_Modelo_Formal_FabioOS_MEGATRON | Nota | 42 | 18 | 24 |
 | 60_Sistemas/FabioOS/Plano_Mestre_Implantacao_FabioOS | Sistema | 42 | 26 | 16 |
 

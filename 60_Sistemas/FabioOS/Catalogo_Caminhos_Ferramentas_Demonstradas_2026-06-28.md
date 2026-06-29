@@ -21,7 +21,7 @@ Registrar o que o prompt ensina em termos de caminhos, demonstracoes e ferrament
 - como testar sem risco;
 - quando promover para parte oficial da estrutura.
 
-Este catalogo aplica o metodo do [[30_Conhecimento/Tecnologia/Arquiteturas_de_Mercado_Radar_Tecnologico]] ao FabioOS.
+Este catalogo aplica o metodo do [[90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/30_Conhecimento/Tecnologia/Arquiteturas_de_Mercado_Radar_Tecnologico]] ao FabioOS.
 
 ## Principio
 
@@ -192,7 +192,7 @@ Uso:
 python 60_Sistemas/FabioOS/scripts/radar_tecnologico.py caminho\para\material.txt --title "Titulo do material"
 ```
 
-Ele gera uma nota em `30_Conhecimento/Tecnologia/Radar/` com:
+Ele gera uma nota em `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/30_Conhecimento/Tecnologia/Radar/` com:
 
 - problema;
 - arquitetura;

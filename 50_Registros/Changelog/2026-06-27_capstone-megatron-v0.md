@@ -50,4 +50,4 @@ B1 RAG → B2 Agentes → B3 Grafo → B4 MCP FabioOS → B5 MEGATRON v0   (todo
 - [[60_Sistemas/MEGATRON/v0/README_MEGATRON_v0]]
 - [[60_Sistemas/FabioOS/Visao_Interface_FabioOS]]
 - [[00_Arquitetura/01_Modelo_Formal_FabioOS_MEGATRON]]
-- [[10_Mapas/Painel_Pendencias_FabioOS]]
+- [[90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/10_Mapas/Painel_Pendencias_FabioOS]]

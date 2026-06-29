@@ -13,7 +13,7 @@ atualizado_em: 2026-06-28
 ## O que foi feito
 
 - Criada automacao Python local `dashboard_fabioos.py`.
-- Gerado painel `10_Mapas/Dashboard_Operacional_FabioOS.md`.
+- Gerado painel `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/10_Mapas/Dashboard_Operacional_FabioOS.md`.
 - Documentada a automacao em `Dashboard_Textual_FabioOS.md`.
 - Validado que o script roda sem API externa, sem token, sem reindexar RAG e sem executar workflows.
 
@@ -29,7 +29,7 @@ atualizado_em: 2026-06-28
 
 - `60_Sistemas/FabioOS/scripts/dashboard_fabioos.py`
 - `60_Sistemas/FabioOS/Dashboard_Textual_FabioOS.md`
-- `10_Mapas/Dashboard_Operacional_FabioOS.md`
+- `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/10_Mapas/Dashboard_Operacional_FabioOS.md`
 - `50_Registros/Changelog/2026-06-28_dashboard-textual-fabioos-python.md`
 
 ## Pendente

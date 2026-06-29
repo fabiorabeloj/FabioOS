@@ -20,7 +20,7 @@ O FabioOS nao deve virar uma colecao de IAs soltas. Cada IA deve ter papel, limi
 
 Documentos normativos complementares:
 
-- [[40_Repertorio/IA/Modelos_e_IAs/Matriz_de_Aptidao_das_IAs_FabioOS]]
+- [[90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/40_Repertorio/IA/Modelos_e_IAs/Matriz_de_Aptidao_das_IAs_FabioOS]]
 - [[30_Projetos/FabioOS/LLM_Wiki_FabioOS]]
 - [[10_Dashboard/RAG_MCP_Control_Plane]]
 

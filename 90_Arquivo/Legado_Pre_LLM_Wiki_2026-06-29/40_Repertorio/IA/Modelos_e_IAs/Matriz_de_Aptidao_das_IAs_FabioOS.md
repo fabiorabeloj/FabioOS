@@ -1,6 +1,6 @@
 ---
 tipo: matriz
-area: 40_Repertorio/IA
+area: 90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/40_Repertorio/IA
 projeto: FabioOS
 status: ativo
 classe_dado: Interno
@@ -482,7 +482,7 @@ Para cada IA/ferramenta promovida a `ativo` ou `piloto`, registrar:
 
 ## Relacoes obrigatorias
 
-- LLM Wiki: [[30_Conhecimento/LLM_Wiki_Pattern]] e [[30_Projetos/FabioOS/LLM_Wiki_FabioOS]]
+- LLM Wiki: [[90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/30_Conhecimento/LLM_Wiki_Pattern]] e [[30_Projetos/FabioOS/LLM_Wiki_FabioOS]]
 - MEGATRON: [[00_Arquitetura/01_Modelo_Formal_FabioOS_MEGATRON]] e [[60_Sistemas/MEGATRON/v0/README_MEGATRON_v0]]
 - RAG/MCP Control Plane: [[10_Dashboard/RAG_MCP_Control_Plane]]
 - Governanca: [[60_Sistemas/FabioOS/Protocolo_Coordenacao_Multiagente]] e [[60_Sistemas/FabioOS/Registro_Frentes_Ativas]]

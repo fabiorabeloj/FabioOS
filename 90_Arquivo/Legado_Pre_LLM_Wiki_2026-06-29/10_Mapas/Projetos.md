@@ -9,7 +9,7 @@ Mapa dos projetos ativos.
 - [[FabioOS]]
 - [[PRIMUS]]
 - [[Escola]]
-- [[30_Conhecimento/IA.md]]
+- [[90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/30_Conhecimento/IA.md]]
 - [[Trader]]
 
 ## Regra

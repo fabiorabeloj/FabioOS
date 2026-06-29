@@ -34,7 +34,7 @@ Consolidar status dos agentes, tarefas, pendências, riscos, logs e próximos pa
 | Entrada | Origem | Formato |
 |---|---|---|
 | Registro de agentes | `Registro_Agentes.md` | Markdown |
-| Pendências | `10_Mapas/Painel_Pendencias_FabioOS.md` | Markdown |
+| Pendências | `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/10_Mapas/Painel_Pendencias_FabioOS.md` | Markdown |
 | Changelogs | `50_Registros/Changelog/` | Markdown |
 | Logs de agentes | `50_Registros/Agentes/` | Markdown |
 | Estado Git | repositório | status textual |
@@ -44,7 +44,7 @@ Consolidar status dos agentes, tarefas, pendências, riscos, logs e próximos pa
 
 | Saída | Destino | Formato |
 |---|---|---|
-| Painel textual | `10_Mapas/` ou `60_Sistemas/MEGATRON/` | Markdown |
+| Painel textual | `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/10_Mapas/` ou `60_Sistemas/MEGATRON/` | Markdown |
 | Alertas | MEGATRON / Fabio | lista priorizada |
 | Próximas ações | Painel de Pendências | checklist |
 | Status de agentes | Registro_Agentes | tabela atualizada |
@@ -127,6 +127,6 @@ MEGATRON usa Dashboard como painel de consciência operacional. Dashboard respon
 ## Relações
 
 - [[60_Sistemas/MEGATRON/agentes/Registro_Agentes]]
-- [[10_Mapas/Painel_Pendencias_FabioOS]]
+- [[90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/10_Mapas/Painel_Pendencias_FabioOS]]
 - [[60_Sistemas/MEGATRON/agentes/specs/Agente_SafeCommit]]
 - [[60_Sistemas/MEGATRON/agentes/specs/Agente_Inbox]]

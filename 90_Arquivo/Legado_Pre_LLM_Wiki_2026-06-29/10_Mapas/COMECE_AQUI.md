@@ -20,7 +20,7 @@
 
 ### 30 MINUTOS — Entenda a Estrutura
 ```
-1. Abrir 10_Mapas/Mapa_Mestre_Fabio.md
+1. Abrir 90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/10_Mapas/Mapa_Mestre_Fabio.md
 2. Clicar em [[Continuidade da Vida]]
 3. Entender 6 pilares
 4. Voltar e explorar 3 mapas
@@ -28,7 +28,7 @@
 
 ### 30 MINUTOS — Capture & Configure
 ```
-1. Abrir 30_Conhecimento/Segundo_Cerebro.md
+1. Abrir 90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/30_Conhecimento/Segundo_Cerebro.md
 2. Capturar 5 ideias em Obsidian (5min)
 3. Abrir graph view (1min)
 4. Agendar Revisão Semanal - ESCOLHA HORÁRIO:
@@ -114,7 +114,7 @@ Você só precisa começar.**
 ## 🚀 VAMOS?
 
 **Feche este arquivo e abra:**
-→ `10_Mapas/Mapa_Mestre_Fabio.md`
+→ `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/10_Mapas/Mapa_Mestre_Fabio.md`
 
 **Agora. Não depois. Agora.**
 

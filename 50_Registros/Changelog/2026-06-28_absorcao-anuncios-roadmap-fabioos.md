@@ -22,7 +22,7 @@ atualizado_em: 2026-06-28
 
 - `sources/docs/2026-06-28_anuncios-ia-roadmap-fabioos.md`
 - `60_Sistemas/FabioOS/Analise_Absorcao_Anuncios_IA_2026-06-28.md`
-- `40_Decisoes/2026-06-28_Decisao_Federacao_Cerebros_Especializados.md`
+- `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/40_Decisoes/2026-06-28_Decisao_Federacao_Cerebros_Especializados.md`
 
 ## Conclusao
 

@@ -1,4 +1,4 @@
-# 10_Mapas/Vida.md
+# 90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/10_Mapas/Vida.md
 
 # Vida
 
@@ -12,7 +12,7 @@ Mapa geral das áreas da vida.
     
 - [[Trader]]
     
-- [[30_Conhecimento/IA.md]]
+- [[90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/30_Conhecimento/IA.md]]
     
 - [[FabioOS]]
     

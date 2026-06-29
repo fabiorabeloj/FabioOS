@@ -41,7 +41,7 @@ Construir um ecossistema integrado de memória, automação, inteligência artif
 
 [[Escola]]
 
-[[30_Conhecimento/IA.md]]
+[[90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/30_Conhecimento/IA.md]]
 
 [[Trader]]
 
@@ -69,7 +69,7 @@ Consolidar conhecimento e relacionamentos antes das integrações.
 
 [[PRIMUS]]
 [[Escola]]
-[[30_Conhecimento/IA.md]]
+[[90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/30_Conhecimento/IA.md]]
 [[Trader]]
 
 ## Mapas
@@ -112,7 +112,7 @@ Construir um ecossistema integrado de memória, automação, inteligência artif
 
 [[Escola]]
 
-[[30_Conhecimento/IA.md]]
+[[90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/30_Conhecimento/IA.md]]
 
 [[Trader]]
 
@@ -234,7 +234,7 @@ Relações:
     
 - [[Geografia]]
     
-- [[30_Conhecimento/IA.md]]
+- [[90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/30_Conhecimento/IA.md]]
     
 - [[Automacao]]
     
@@ -268,7 +268,7 @@ Relações:
 
 - [[n8n]]
     
-- [[30_Conhecimento/IA.md]]
+- [[90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/30_Conhecimento/IA.md]]
     
 - [[Obsidian]]
     
@@ -319,7 +319,7 @@ Relações:
     
 - [[Trader]]
     
-- [[30_Conhecimento/IA.md]]
+- [[90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/30_Conhecimento/IA.md]]
     
 - [[PRIMUS]]
     
@@ -349,7 +349,7 @@ Status:
 
 1. Consolidar notas centrais no [[Obsidian]].
     
-2. Formalizar [[30_Conhecimento/IA.md]].
+2. Formalizar [[90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/30_Conhecimento/IA.md]].
     
 3. Formalizar [[Escola]].
     

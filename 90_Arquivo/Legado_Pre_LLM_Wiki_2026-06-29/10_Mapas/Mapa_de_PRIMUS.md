@@ -26,7 +26,7 @@ PRIMUS não termina em P. O ciclo volta para E.
 
 ## 📚 Documentação Principal
 
-### 👉 **COMECE AQUI: [[20_Projetos/PRIMUS/INDEX_PRIMUS|INDEX_PRIMUS]]**
+### 👉 **COMECE AQUI: [[90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/20_Projetos/PRIMUS/INDEX_PRIMUS|INDEX_PRIMUS]]**
 **Índice completo dos 9 arquivos estruturados**
 
 ---
@@ -37,25 +37,25 @@ PRIMUS não termina em P. O ciclo volta para E.
 
 | Arquivo | Bloco | Objetivo | Status |
 |---------|-------|----------|--------|
-| [[20_Projetos/PRIMUS/00_CIRCUITO_MESTRE\|00 — Circuito Mestre]] | — | Entender E→I→P (loop circular) | ✅ Completo |
-| [[20_Projetos/PRIMUS/01_SISTEMA_DEFINICOES\|01 — Mapa do Sistema]] | BLOCO 1 | Fixações: Circuito, Prisma, Pipeline T1-T4 | ✅ Completo |
-| [[20_Projetos/PRIMUS/02_TIPOS_PRIMUS\|02 — Sistema de Tipos]] | BLOCO 2 | 28 tipos obrigatórios (dicionário) | ✅ Completo |
-| [[20_Projetos/PRIMUS/03_TEMPLATES_FAMILIA\|03 — Templates por Família]] | BLOCO 3 | 8 templates (estrutura de cada tipo) | ✅ Completo |
+| [[90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/20_Projetos/PRIMUS/00_CIRCUITO_MESTRE\|00 — Circuito Mestre]] | — | Entender E→I→P (loop circular) | ✅ Completo |
+| [[90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/20_Projetos/PRIMUS/01_SISTEMA_DEFINICOES\|01 — Mapa do Sistema]] | BLOCO 1 | Fixações: Circuito, Prisma, Pipeline T1-T4 | ✅ Completo |
+| [[90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/20_Projetos/PRIMUS/02_TIPOS_PRIMUS\|02 — Sistema de Tipos]] | BLOCO 2 | 28 tipos obrigatórios (dicionário) | ✅ Completo |
+| [[90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/20_Projetos/PRIMUS/03_TEMPLATES_FAMILIA\|03 — Templates por Família]] | BLOCO 3 | 8 templates (estrutura de cada tipo) | ✅ Completo |
 
 ### Fase 2: Conteúdo Executável
 
 | Arquivo | Bloco | Objetivo | Status |
 |---------|-------|----------|--------|
-| [[20_Projetos/PRIMUS/04_LIVRO_DO_JOGADOR\|04 — Livro do Jogador]] | BLOCO 4 | Raças, Classes, Antecedentes, Itens, Magias | 🟡 Estrutura pronta |
-| [[20_Projetos/PRIMUS/05_LIVRO_DO_MESTRE\|05 — Livro do Mestre]] | BLOCO 5 | Contrato, 3 Perguntas, ΔP, Validação | ✅ Completo |
-| [[20_Projetos/PRIMUS/06_MISSAO_0001\|06 — Missão 0001]] | BLOCO 6 | Prova de conceito (E→I→P funcional) | ✅ Estruturado |
+| [[90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/20_Projetos/PRIMUS/04_LIVRO_DO_JOGADOR\|04 — Livro do Jogador]] | BLOCO 4 | Raças, Classes, Antecedentes, Itens, Magias | 🟡 Estrutura pronta |
+| [[90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/20_Projetos/PRIMUS/05_LIVRO_DO_MESTRE\|05 — Livro do Mestre]] | BLOCO 5 | Contrato, 3 Perguntas, ΔP, Validação | ✅ Completo |
+| [[90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/20_Projetos/PRIMUS/06_MISSAO_0001\|06 — Missão 0001]] | BLOCO 6 | Prova de conceito (E→I→P funcional) | ✅ Estruturado |
 
 ### Fase 3: Integração & Execução
 
 | Arquivo | Objetivo | Status |
 |---------|----------|--------|
-| [[20_Projetos/PRIMUS/07_INTEGRACAO_COMPLETA\|07 — Integração Completa]] | Mostrar cascata 1→2→3→4→5→6 | ✅ Completo |
-| [[20_Projetos/PRIMUS/08_PROXIMOS_PASSOS\|08 — Próximos Passos]] | Roadmap executável (HOJE / Semana / Mês) | ✅ Pronto |
+| [[90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/20_Projetos/PRIMUS/07_INTEGRACAO_COMPLETA\|07 — Integração Completa]] | Mostrar cascata 1→2→3→4→5→6 | ✅ Completo |
+| [[90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/20_Projetos/PRIMUS/08_PROXIMOS_PASSOS\|08 — Próximos Passos]] | Roadmap executável (HOJE / Semana / Mês) | ✅ Pronto |
 
 ---
 
@@ -142,7 +142,7 @@ E(v2) (Enciclopédia modificada)
 - Preencher BLOCO 4 com 5+ raças, classes, antecedentes
 - Revisar BLOCOs 5-6
 - Preparar primeira execução
-- **Ver:** [[20_Projetos/PRIMUS/08_PROXIMOS_PASSOS]]
+- **Ver:** [[90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/20_Projetos/PRIMUS/08_PROXIMOS_PASSOS]]
 
 ### ⬜ Fase 3: Execução (2 semanas)
 **Status:** NÃO COMEÇOU  
@@ -172,11 +172,11 @@ PRIMUS toca estes 6 pilares:
 ## 🚀 Próximos Passos Imediatos
 
 **HOJE:**
-- [ ] Leia [[20_Projetos/PRIMUS/INDEX_PRIMUS]]
+- [ ] Leia [[90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/20_Projetos/PRIMUS/INDEX_PRIMUS]]
 - [ ] Leia BLOCOs 1-3 (estrutura)
 - [ ] Comece BLOCO 4 (preencha 3 raças)
 
-**Ver:** [[20_Projetos/PRIMUS/08_PROXIMOS_PASSOS|08 — Próximos Passos (roadmap detalhado)]]
+**Ver:** [[90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/20_Projetos/PRIMUS/08_PROXIMOS_PASSOS|08 — Próximos Passos (roadmap detalhado)]]
 
 ---
 
@@ -196,5 +196,5 @@ PRIMUS toca estes 6 pilares:
 **Criado:** 2026-06-25  
 **Versão:** 2.0 (Estrutura E→I→P completa)  
 **Status:** ✅ Pronto para execução  
-**Próximo:** [[20_Projetos/PRIMUS/08_PROXIMOS_PASSOS|Próximos Passos]]  
+**Próximo:** [[90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/20_Projetos/PRIMUS/08_PROXIMOS_PASSOS|Próximos Passos]]
 **Centro:** [[Continuidade_da_Vida]] / [[Criatividade]]

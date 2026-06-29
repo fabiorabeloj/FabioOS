@@ -144,7 +144,7 @@ Arquivos principais:
 Decisao:
 
 - `05_Raw_Sources/`, `10_Dashboard/`, `20_Areas/`, `30_Projetos/`, `40_Wiki/`, `50_Registros/`, `60_Sistemas/`, `70_Skills/`, `80_Specs/` e `90_Arquivo/` passam a ser destinos canonicos v2;
-- `10_Mapas/`, `20_Projetos/`, `30_Conhecimento/`, `40_Decisoes/` e `50_Fontes/` ficam preservadas como pastas legadas;
+- `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/10_Mapas/`, `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/20_Projetos/`, `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/30_Conhecimento/`, `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/40_Decisoes/` e `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/50_Fontes/` ficam preservadas como pastas legadas;
 - nao houve migracao fisica em massa;
 - migracoes futuras devem ser pequenas, com revisao de backlinks e changelog.
 
@@ -188,6 +188,56 @@ Restricoes respeitadas:
 
 - sem apagar arquivos;
 - sem mover `sources/` ou `wiki/`;
+- sem reindexar RAG;
+- sem regenerar Grafo;
+- sem push.
+
+## 2026-06-29 - Limpeza visual da raiz Obsidian
+
+Executada a organizacao fisica da raiz do vault para reduzir duplicidade visual no Obsidian e alinhar a estrutura ao modelo LLM Wiki.
+
+Movido para arquivo legado:
+
+- `10_Mapas/`
+- `20_Projetos/`
+- `30_Conhecimento/`
+- `40_Decisoes/`
+- `40_Repertorio/`
+- `50_Fontes/`
+- `PRIMUS_Obsidian_Starter_v0_1/`
+
+Destino:
+
+- `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/`
+
+Arquivos soltos reorganizados:
+
+- `RELATORIO_VALIDACAO_LINKS.md` -> `50_Registros/Relatorios/RELATORIO_VALIDACAO_LINKS.md`
+- `Sem titulo*.base/canvas` -> `90_Arquivo/Descartes_Visuais_Obsidian_2026-06-29/` com nomes neutros de placeholder
+
+Ocultado na navegacao do Obsidian via `.obsidian/app.json`:
+
+- `AGENTS.md`
+- `CLAUDE.md`
+- `CODEX.md`
+- `README.md`
+- `log.md`
+- `start_fabioos.ps1`
+- `sources/`
+- `wiki/`
+- `schema/`
+- diretorios tecnicos de agentes/configuracao
+
+Decisao:
+
+- nenhuma pasta ou arquivo foi apagado;
+- `sources/`, `wiki/` e `schema/` permanecem na raiz por compatibilidade tecnica;
+- backlinks textuais foram atualizados quando apontavam para caminhos legados;
+- migracoes de conteudo util do legado devem ocorrer por lotes pequenos.
+
+Restricoes respeitadas:
+
+- sem apagar arquivos;
 - sem reindexar RAG;
 - sem regenerar Grafo;
 - sem push.

@@ -48,7 +48,7 @@ criado_em: 2026-06-25
 
 ```
 FabioOS/
-├── 10_Mapas/
+├── 90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/10_Mapas/
 │   ├── Mapa_Mestre_Fabio.md           ← COMECE AQUI
 │   ├── Mapa_de_Sistemas.md
 │   ├── Mapa_de_Escola.md
@@ -61,13 +61,13 @@ FabioOS/
 │   ├── Mapa_de_Financas.md
 │   └── Mapa_de_Saude.md
 │
-├── 20_Projetos/
+├── 90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/20_Projetos/
 │   ├── Escola.md                      ← Trabalho docente
 │   ├── Trader.md                      ← Trading estruturado
 │   ├── PRIMUS.md                      ← Sistema narrativo
 │   └── ... (outros projetos)
 │
-├── 30_Conhecimento/
+├── 90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/30_Conhecimento/
 │   ├── Continuidade_da_Vida.md        ← CORAÇÃO DO SISTEMA
 │   ├── FabioOS.md                     ← Meta-documentação
 │   ├── Segundo_Cerebro.md
@@ -78,12 +78,12 @@ FabioOS/
 │   ├── Geografia/
 │   └── Tecnologia/
 │
-├── 40_Decisoes/
+├── 90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/40_Decisoes/
 │   ├── Decisoes.md
 │   ├── Changelog.md
 │   └── Aprendizado.md
 │
-├── 50_Fontes/
+├── 90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/50_Fontes/
 │   ├── Livros.md
 │   ├── Artigos.md
 │   ├── Links.md

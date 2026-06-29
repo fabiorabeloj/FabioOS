@@ -42,9 +42,9 @@ Confirmar que o RAG:
 |---|---|---|
 | `wiki/` | autorizado | Conhecimento curado |
 | `60_Sistemas/` | autorizado parcial | Documentação técnica do FabioOS |
-| `30_Conhecimento/` | autorizado | Repertório conceitual |
-| `40_Decisoes/` | autorizado | Decisões e justificativas |
-| `10_Mapas/` | autorizado | Visão estrutural |
+| `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/30_Conhecimento/` | autorizado | Repertório conceitual |
+| `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/40_Decisoes/` | autorizado | Decisões e justificativas |
+| `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/10_Mapas/` | autorizado | Visão estrutural |
 
 ## 3. Exclusões obrigatórias
 
@@ -213,4 +213,4 @@ Após os commits temáticos do Claude:
 - [[00_Arquitetura/01_Modelo_Formal_FabioOS_MEGATRON]]
 - [[60_Sistemas/MEGATRON/agentes/specs/Agente_RAG]]
 - [[60_Sistemas/MEGATRON/agentes/Revisao_Agentes_Checklist]]
-- [[10_Mapas/Painel_Pendencias_FabioOS]]
+- [[90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/10_Mapas/Painel_Pendencias_FabioOS]]

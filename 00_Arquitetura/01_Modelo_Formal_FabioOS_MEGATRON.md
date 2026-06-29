@@ -228,7 +228,7 @@ Toda decisão relevante deve conter:
 - status;
 - condição de revisão.
 
-Decisões arquitetônicas devem virar ADR ou nota em `40_Decisoes/`. Decisões operacionais podem virar log, tarefa ou changelog.
+Decisões arquitetônicas devem virar ADR ou nota em `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/40_Decisoes/`. Decisões operacionais podem virar log, tarefa ou changelog.
 
 ### 2.11 Ação
 
@@ -563,7 +563,7 @@ MEGATRON
 
 ### 6.1 Fontes Imutáveis
 
-Camada de preservação. Fica em `sources/`, `50_Fontes/` ou pastas específicas quando houver motivo histórico.
+Camada de preservação. Fica em `sources/`, `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/50_Fontes/` ou pastas específicas quando houver motivo histórico.
 
 ### 6.2 Digestão
 
@@ -668,7 +668,7 @@ O FabioOS possui múltiplas memórias, cada uma com finalidade, risco, formato e
 | Episódica | Conversas, eventos, reuniões e interações | Acúmulo de ruído e dados pessoais | logs, changelogs, notas datadas | Revisar e resumir periodicamente |
 | Semântica | Conceitos, explicações, sínteses | Alucinação se sem fonte | wiki, RAG, embeddings | Manter enquanto válido |
 | Procedural | Rotinas, scripts, workflows | Execução incorreta | `.claude/commands`, n8n, scripts | Versionar e testar |
-| Decisória | ADRs, decisões, justificativas | Perder motivo histórico | `40_Decisoes/`, changelog | Permanente |
+| Decisória | ADRs, decisões, justificativas | Perder motivo histórico | `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/40_Decisoes/`, changelog | Permanente |
 | Institucional | PietraOS | Dados escolares sensíveis | sistema Pietra, logs anonimizados | Restrita e auditável |
 | Narrativa | PrimusOS | Mistura entre cânone e rascunho | E-I-P, worldflags, entidades | Permanente por campanha/mundo |
 | Pessoal | FabioOS pessoal | Privacidade | vault, projetos, notas | Privada por padrão |
@@ -704,7 +704,7 @@ Condição de revisão
 
 | Classe | Destino |
 |---|---|
-| Arquitetônica | ADR ou `40_Decisoes/` |
+| Arquitetônica | ADR ou `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/40_Decisoes/` |
 | Operacional | Changelog, tarefa ou painel |
 | Conteúdo | Wiki ou fonte relacionada |
 | Segurança | Registro próprio e revisão humana |
@@ -1153,9 +1153,9 @@ Este documento:
 - subordina o [[60_Sistemas/FabioOS/Plano_Mestre_Implantacao_FabioOS]] no nível conceitual, mas não o substitui no roadmap;
 - incorpora a [[60_Sistemas/FabioOS/Visao_Interface_FabioOS]] como especificação inicial da interface MEGATRON;
 - incorpora a [[60_Sistemas/RAG/Arquitetura_RAG_FabioOS]] como implementação inicial da Memória Semântica;
-- incorpora o [[30_Conhecimento/LLM_Wiki_Pattern]] como padrão base expandido;
+- incorpora o [[90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/30_Conhecimento/LLM_Wiki_Pattern]] como padrão base expandido;
 - incorpora [[60_Sistemas/Pietra/Sistema_Pietra]] como primeira especialização institucional;
-- incorpora [[20_Projetos/PRIMUS/01_SISTEMA_DEFINICOES]] como base formal de PrimusOS.
+- incorpora [[90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/20_Projetos/PRIMUS/01_SISTEMA_DEFINICOES]] como base formal de PrimusOS.
 
 Nenhum documento anterior deve ser apagado sem autorização. Documentos históricos permanecem como fonte de evolução.
 
@@ -1168,17 +1168,17 @@ Nenhum documento anterior deve ser apagado sem autorização. Documentos histór
 - [[60_Sistemas/FabioOS/Visao_Interface_FabioOS]]
 - [[60_Sistemas/RAG/Arquitetura_RAG_FabioOS]]
 - [[60_Sistemas/Pietra/Sistema_Pietra]]
-- [[20_Projetos/PRIMUS/01_SISTEMA_DEFINICOES]]
-- [[30_Conhecimento/LLM_Wiki_Pattern]]
+- [[90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/20_Projetos/PRIMUS/01_SISTEMA_DEFINICOES]]
+- [[90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/30_Conhecimento/LLM_Wiki_Pattern]]
 - [[schema/fluxo-wiki]]
 - [[schema/qualidade-wiki]]
 - [[wiki/indices/mapa-fabios]]
-- [[10_Mapas/Painel_Pendencias_FabioOS]]
+- [[90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/10_Mapas/Painel_Pendencias_FabioOS]]
 
 ## Próximas ações
 
 - [ ] Criar `00_Arquitetura/02_Ontologia_FabioOS.md` apenas se a implementação do grafo exigir detalhamento separado.
 - [ ] Criar `00_Arquitetura/03_Epistemologia_FabioOS.md` apenas se as regras de confiança precisarem virar schema operacional.
 - [ ] Atualizar `wiki/indices/mapa-fabios.md` para incluir `00_Arquitetura/01_Modelo_Formal_FabioOS_MEGATRON`.
-- [ ] Atualizar `10_Mapas/Painel_Pendencias_FabioOS.md` com a nova pendência de formalizar ontologia/grafo.
+- [ ] Atualizar `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/10_Mapas/Painel_Pendencias_FabioOS.md` com a nova pendência de formalizar ontologia/grafo.
 - [ ] Criar changelog desta entrega antes de qualquer commit.
