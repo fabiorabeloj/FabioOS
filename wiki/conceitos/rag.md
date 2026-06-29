@@ -5,7 +5,7 @@ projeto: FabioOS
 status: ativo
 tags: [conceito, rag, recuperacao-semantica, memoria, fase-12]
 criado_em: 2026-06-27
-atualizado_em: 2026-06-27
+atualizado_em: 2026-06-29
 ---
 
 # RAG — Recuperação Aumentada por Geração
@@ -27,16 +27,22 @@ pergunta → embedding local → busca top-k no banco vetorial → contexto → 
 - **Arquitetura e decisões da implementação:** [[60_Sistemas/RAG/Arquitetura_RAG_FabioOS]] (Chroma + `bge-m3` local + Claude).
 - **Banco vetorial subjacente:** [[wiki/conceitos/banco-vetorial]].
 - **Regra de qualidade:** se não houver fonte suficiente, o sistema declara ignorância (Regra da Ignorância Explícita) em vez de alucinar.
-- **Privacidade:** embeddings rodam localmente; dados sensíveis (`sources/_inbox/`, logs Pietra) são excluídos do índice.
+- **Scripts e comandos:** [[60_Sistemas/RAG/README_Scripts_RAG]] — venv, `query_rag.py`, `batch_validate_rag.py`.
+- **Validação (2026-06-29):** 10/10 perguntas de aceitação em modo recuperação — [[60_Sistemas/RAG/Relatorio_Validacao_RAG_2026-06-29_Cursor]]; evidência JSON em `validacao_pos_ranking_2026-06-29.json`.
+- **Sessão Cursor:** inventário completo em [[50_Registros/Sessoes/2026-06-29_cursor-sessao-validacao-rag]].
 
 ## Relações
 
 - [[60_Sistemas/RAG/Arquitetura_RAG_FabioOS]]
 - [[wiki/conceitos/banco-vetorial]]
 - [[00_Arquitetura/01_Modelo_Formal_FabioOS_MEGATRON]]
-- [[60_Sistemas/MEGATRON/agentes/specs/Agente_RAG]]
+- [[60_Sistemas/RAG/README_Scripts_RAG]]
+- [[60_Sistemas/RAG/Relatorio_Validacao_RAG_2026-06-29_Cursor]]
+- [[50_Registros/Sessoes/2026-06-29_cursor-sessao-validacao-rag]]
 
 ## Próximas ações
 
-- [ ] Concluir a validação da Fase 12 (consultas em modo recuperação)
-- [ ] Conectar o RAG ao grafo (Fase 13) e ao MEGATRON
+- [x] Concluir a validação da Fase 12 (consultas em modo recuperação) — 10/10 em 2026-06-29
+- [x] Conectar o RAG ao grafo (Fase 13) e ao MEGATRON v0
+- [ ] Claude/Codex decidir promoção da Fase 12 para piloto
+- [ ] Reindexação incremental após novos docs (LLM Wiki, matriz de aptidão)

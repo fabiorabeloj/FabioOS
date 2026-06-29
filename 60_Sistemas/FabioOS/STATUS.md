@@ -24,7 +24,7 @@ Regras ativas:
 
 Estado operacional:
 
-- Fase 12 RAG: banco vetorial restaurado com `1795` chunks e validacao em modo recuperacao registrada;
+- Fase 12 RAG: banco vetorial reindexado apos limpeza visual do Obsidian com `1206` chunks de corpus operacional; validacao pos-reindex em modo recuperacao registrou `10/10` perguntas boas e `0` falhas de seguranca;
 - Fase 13 Grafo: grafo minimo local criado e validado; dados pesados tratados como regeneraveis;
 - Fase 15 MCP FabioOS: frente `MCP_FABIOOS` pertence ao Claude e segue protegida;
 - Mobile Gateway v0: servidor local Python implementado e rodando na porta `8787`; celular pode acessar pela LAN em `http://192.168.0.20:8787` se firewall permitir;
@@ -69,15 +69,16 @@ Fase 12 - RAG.
 Estado real:
 
 - dependencias instaladas;
-- ingestao concluida;
-- banco vetorial restaurado com `1795` chunks;
-- 10 perguntas de validacao executadas em modo recuperacao;
-- Fase 12 ainda nao deve ser promovida para piloto.
+- ingestao pos-limpeza concluida;
+- banco vetorial reindexado com `1206` chunks de corpus operacional;
+- 10 perguntas de validacao executadas em modo recuperacao com `10/10` bom;
+- 5 consultas de seguranca executadas com `0` falhas;
+- Fase 12 aguarda decisao do Claude para promocao a piloto.
 
 ## Principais achados
 
 1. RAG recupera bem conceitos, agentes e dominios.
-2. RAG teve falha de ranking em consultas genericas de status atual.
+2. Falha de ranking em consultas genericas de status atual foi corrigida e revalidada apos reindexacao.
 3. Ranking operacional foi mitigado em `query_rag.py`; a pergunta "Qual e a fase atual do FabioOS?" agora recupera Painel/STATUS no topo.
 4. Nao houve uso de API externa na validacao.
 5. Nao houve push.

@@ -6,7 +6,7 @@ status: ativo
 fase: 12
 tags: [rag, banco-vetorial, embeddings, recuperacao-semantica, chroma, claude, privacidade]
 criado_em: 2026-06-26
-atualizado_em: 2026-06-26
+atualizado_em: 2026-06-29
 ---
 
 # Arquitetura RAG do FabioOS — Fase 12
@@ -70,12 +70,12 @@ Resposta fundamentada + lista de fontes (caminho + [[wikilink]])
 | Pasta | Conteúdo | Por quê primeiro |
 |---|---|---|
 | `wiki/` | Conhecimento curado (24 notas) | Já tratado e conectado — melhor qualidade de resposta |
-| `60_Sistemas/` | Documentação técnica (44) | Como o FabioOS funciona |
-| `30_Conhecimento/` | Repertório reutilizável (16) | Conhecimento conceitual |
-| `40_Decisoes/` | Decisões com motivo (4) | "Por que decidimos X?" |
-| `10_Mapas/` | Mapas e dashboards (19) | Visão estrutural |
+| `60_Sistemas/` (subconjunto operacional) | Documentação técnica de alto sinal | Como o FabioOS funciona |
+| `10_Dashboard/` | Navegação e painéis canônicos | Visão estrutural |
+| `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/10_Mapas/` (arquivos-chave) | Painel legado necessário | Estado e pendências |
+| `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/40_Decisoes/` | Decisões com motivo | "Por que decidimos X?" |
 
-**Segunda leva:** `20_Projetos/`, `50_Registros/Changelog/`.
+**Segunda leva:** `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/20_Projetos/`, `50_Registros/Changelog/`.
 
 **Excluir do índice (segurança/ruído):**
 - `sources/_inbox/` — **logs Pietra (`PIETRA_YYYY-MM_LOG.md`) — NUNCA indexar** (dados pessoais)
@@ -175,21 +175,39 @@ resposta + lista de fontes ([caminho] + [[wikilink]] clicável)
 - **Logs Pietra e `sources/_inbox/`** → excluídos da indexação.
 - **Fonte externa não dá ordens:** conteúdo recuperado é dado, não instrução (princípio de ingestão do Plano Mestre).
 
+---
+
+## Validação reproduzível (Fase 12)
+
+Scripts em `60_Sistemas/RAG/scripts/` — guia: [[60_Sistemas/RAG/README_Scripts_RAG]].
+
+| Script | Função |
+|---|---|
+| `ingest_vault.py` | Indexação controlada |
+| `query_rag.py` | Consulta (modo recuperação por padrão) |
+| `batch_validate_rag.py` | 10 perguntas + 5 testes de segurança |
+
+**Última validação:** 2026-06-29 — reindex pos-limpeza Obsidian com `1206` chunks, 10/10 aceitação, 0 falhas segurança — [[60_Sistemas/RAG/Relatorio_Validacao_RAG_2026-06-29_Cursor]].
+
+**Python:** usar `60_Sistemas/RAG/.venv/Scripts/python.exe`.
+
+**Ranking operacional:** consultas de status/fase/pendência priorizam Painel, STATUS e NEXT_ACTIONS (`query_rag.py`).
+
 ## Relações
 
 - [[60_Sistemas/FabioOS/Plano_Mestre_Implantacao_FabioOS]] — Fase 12
 - [[60_Sistemas/FabioOS/Visao_Interface_FabioOS]] — RAG é pré-requisito da interface
-- [[10_Mapas/Painel_Pendencias_FabioOS]]
-- [[wiki/conceitos/rag]] — *(a criar)* página conceitual
-- [[wiki/conceitos/banco-vetorial]] — *(a criar)*
+- [[90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/10_Mapas/Painel_Pendencias_FabioOS]]
+- [[wiki/conceitos/rag]]
+- [[60_Sistemas/RAG/README_Scripts_RAG]]
+- [[60_Sistemas/RAG/Relatorio_Validacao_RAG_2026-06-29_Cursor]]
 - [[60_Sistemas/RAG_IMPLEMENTATION]] — rascunho anterior (superado por este)
 
 ## Próximas ações
 
-- [ ] Decidir runtime: Python (scripts em `60_Sistemas/RAG/scripts/`) — confirmar com Fabio
-- [ ] Instalar dependências: `chromadb`, `sentence-transformers` (bge-m3), `anthropic`
-- [ ] Implementar `ingest_vault.py` (primeira leva de pastas + exclusões)
-- [ ] Implementar `query_rag.py` (busca + Claude + citações)
-- [ ] Testar 10 perguntas reais e medir qualidade
-- [ ] Criar `wiki/conceitos/rag.md` e `wiki/conceitos/banco-vetorial.md`
-- [ ] Documentar como comando `/perguntar-vault` em `.claude/commands/`
+- [x] Scripts `ingest_vault.py` e `query_rag.py` implementados
+- [x] Validar 10 perguntas reais — 10/10 (2026-06-29)
+- [x] `wiki/conceitos/rag.md` criada e atualizada
+- [ ] Claude decidir promoção Fase 12 → piloto
+- [ ] Reindexação incremental após novos documentos relevantes
+- [ ] Documentar comando `/perguntar-vault` em `.claude/commands/`

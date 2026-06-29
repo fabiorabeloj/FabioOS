@@ -33,17 +33,68 @@ DB_PATH = SCRIPT_DIR.parent / "fabioos_db"  # 60_Sistemas/RAG/fabioos_db
 COLLECTION = "fabioos"
 MODEL_NAME = "BAAI/bge-m3"                   # multilíngue, forte em PT-BR, local
 
-# 1a leva de pastas (alto sinal, estável)
-INCLUDE_DIRS = ["00_Arquitetura", "wiki", "60_Sistemas", "30_Conhecimento", "40_Decisoes", "10_Mapas"]
+# 1a leva de pastas (alto sinal, estável), já na estrutura LLM Wiki.
+INCLUDE_DIRS = [
+    "00_Arquitetura",
+    "10_Dashboard",
+    "20_Areas",
+    "30_Projetos",
+    "40_Wiki",
+    "50_Registros/Decisoes",
+    "60_Sistemas/FabioOS/specs",
+    "60_Sistemas/Governanca",
+    "60_Sistemas/Agentes",
+    "60_Sistemas/Protocolos",
+    "60_Sistemas/Seguranca",
+    "60_Sistemas/Memoria",
+    "60_Sistemas/Conhecimento",
+    "60_Sistemas/Padroes",
+    "60_Sistemas/Observabilidade",
+    "60_Sistemas/MEGATRON/agentes/specs",
+    "60_Sistemas/RAG",
+    "60_Sistemas/Grafo",
+    "60_Sistemas/MCP_FabioOS",
+    "60_Sistemas/Pietra",
+    "70_Skills",
+    "80_Specs",
+    "wiki",
+    "90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/40_Decisoes",
+]
+
+INCLUDE_FILES = [
+    "60_Sistemas/FabioOS/STATUS.md",
+    "60_Sistemas/FabioOS/NEXT_ACTIONS.md",
+    "60_Sistemas/FabioOS/Plano_Mestre_Implantacao_FabioOS.md",
+    "60_Sistemas/FabioOS/Roadmap_Fases_FabioOS_v2_2026-06-29.md",
+    "60_Sistemas/FabioOS/Registro_Frentes_Ativas.md",
+    "60_Sistemas/FabioOS/Protocolo_Operacional_FabioOS.md",
+    "60_Sistemas/FabioOS/Protocolo_Roteamento_Capacidades_IA.md",
+    "60_Sistemas/FabioOS/Protocolo_Coordenacao_Multiagente.md",
+    "60_Sistemas/FabioOS/Plano_Validacao_Fase12_RAG.md",
+    "60_Sistemas/FabioOS/Roteiro_Execucao_Fase12_RAG.md",
+    "60_Sistemas/FabioOS/Mapa_Canonico_Pastas_Obsidian_v2_2026-06-29.md",
+    "60_Sistemas/FabioOS/Plano_Normalizacao_Pastas_Obsidian_2026-06-29.md",
+    "60_Sistemas/FabioOS/Plano_Capacidades_Agentes_Cursor_Hermes_2026-06-28.md",
+    "60_Sistemas/FabioOS/Visao_Interface_FabioOS.md",
+    "90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/10_Mapas/Painel_Pendencias_FabioOS.md",
+    "90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/10_Mapas/Painel_Memoria_FabioOS.md",
+    "90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/10_Mapas/INDEX.md",
+    "90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/10_Mapas/Mapa_Mestre_Fabio.md",
+]
 
 # Exclusões de segurança/ruído (defesa em profundidade)
-EXCLUDE_SUBSTRINGS = ["_inbox", ".obsidian", ".claude", "90_Arquivo",
+EXCLUDE_SUBSTRINGS = ["_inbox", ".obsidian", ".claude",
+                      "90_Arquivo/Descartes_Visuais",
+                      "90_Arquivo/Antigo",
+                      "90_Arquivo/Superseded",
+                      "90_Arquivo/Projetos_Encerrados",
+                      "90_Arquivo/Referencias_Mortas",
                       "00_Inbox", "node_modules", ".git", "fabioos_db",
                       "/logs/", "agentes/logs", "agentes_log",
                       ".venv", "site-packages"]  # logs runtime + venv/libs
 EXCLUDE_FILENAME_RE = re.compile(r"PIETRA.*LOG", re.IGNORECASE)  # logs Pietra
 
-MAX_CHARS = 1500      # tamanho-alvo do chunk
+MAX_CHARS = 6000      # tamanho-alvo do chunk
 META_KEYS = ["tipo", "area", "projeto", "status", "tags"]  # do frontmatter
 
 
@@ -66,6 +117,11 @@ def collect_files():
         for md in base.rglob("*.md"):
             if is_safe(md):
                 files.append(md)
+    for f in INCLUDE_FILES:
+        path = VAULT_ROOT / f
+        if path.exists() and is_safe(path):
+            files.append(path)
+    files = sorted(set(files), key=lambda p: p.as_posix())
     return files
 
 
@@ -160,7 +216,7 @@ def main():
 
     print(f"✂️  Total de chunks: {len(docs)}")
     print("📊 Gerando embeddings e gravando no Chroma (em lotes)...")
-    BATCH = 64
+    BATCH = 256
     for start in range(0, len(docs), BATCH):
         sl = slice(start, start + BATCH)
         emb = model.encode(docs[sl], normalize_embeddings=True).tolist()

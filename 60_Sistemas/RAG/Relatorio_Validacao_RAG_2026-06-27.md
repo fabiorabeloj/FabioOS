@@ -36,7 +36,7 @@ Verificacao direta de metadados no Chroma:
 
 | Fonte | Chunks |
 |---|---:|
-| `10_Mapas/Painel_Pendencias_FabioOS.md` | 13 |
+| `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/10_Mapas/Painel_Pendencias_FabioOS.md` | 13 |
 | `wiki/indices/mapa-fabios.md` | 15 |
 | `60_Sistemas/FabioOS/Plano_Validacao_Fase12_RAG.md` | 17 |
 | `60_Sistemas/FabioOS/Roteiro_Execucao_Fase12_RAG.md` | 11 |
@@ -47,7 +47,7 @@ Conclusao: a ingestao atual foi restaurada e esta completa o suficiente para val
 
 | # | Pergunta | Resultado | Fontes principais |
 |---|---|---|---|
-| 1 | O que e o FabioOS em uma frase? | bom | Modelo Formal, `30_Conhecimento/FabioOS.md`, Plano Mestre |
+| 1 | O que e o FabioOS em uma frase? | bom | Modelo Formal, `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/30_Conhecimento/FabioOS.md`, Plano Mestre |
 | 2 | Qual e a fase atual do FabioOS? | fraco | recuperou relatorio antigo e documentos gerais; nao trouxe Painel no top 12 |
 | 3 | Quais pendencias estao abertas antes da Fase 12? | parcial | trouxe Plano de Validacao/Roteiro; Painel aparece apenas em top 7/top 9 |
 | 4 | O que o Modelo Formal define sobre conhecimento? | bom | Modelo Formal |
@@ -110,7 +110,7 @@ Antes de promover a Fase 12 para piloto, implementar pelo menos uma das opcoes:
 
 1. aumentar `--k` padrao para consultas operacionais;
 2. adicionar boost de fontes canonicas para perguntas de status:
-   - `10_Mapas/Painel_Pendencias_FabioOS.md`;
+   - `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/10_Mapas/Painel_Pendencias_FabioOS.md`;
    - `wiki/indices/mapa-fabios.md`;
    - ultimo changelog;
 3. criar modo `--profile status` no `query_rag.py`;

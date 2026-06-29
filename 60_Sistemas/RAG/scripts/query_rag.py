@@ -33,6 +33,14 @@ DB_PATH = SCRIPT_DIR.parent / "fabioos_db"
 COLLECTION = "fabioos"
 MODEL_NAME = "BAAI/bge-m3"
 CLAUDE_MODEL = os.getenv("FABIOOS_RAG_CLAUDE_MODEL", "claude-sonnet-4-6")
+_MODEL = None
+
+
+def get_model():
+    global _MODEL
+    if _MODEL is None:
+        _MODEL = SentenceTransformer(MODEL_NAME)
+    return _MODEL
 
 OPERATIONAL_TERMS = (
     "fase atual", "status", "pendência", "pendencias", "pendências",
@@ -45,7 +53,7 @@ OPERATIONAL_QUERY_SUFFIX = (
     "STATUS Estado atual prioridade atual Fase 12 validação parcial"
 )
 CANONICAL_OPERATIONAL_SOURCES = {
-    "10_Mapas/Painel_Pendencias_FabioOS.md": 0.12,
+    "90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/10_Mapas/Painel_Pendencias_FabioOS.md": 0.12,
     "wiki/indices/mapa-fabios.md": 0.07,
     "60_Sistemas/FabioOS/STATUS.md": 0.10,
     "60_Sistemas/FabioOS/NEXT_ACTIONS.md": 0.09,
@@ -68,7 +76,7 @@ def retrieve(question: str, k: int):
     retrieval_question = question + OPERATIONAL_QUERY_SUFFIX if operational else question
     pool_k = max(k, 40) if operational else k
 
-    model = SentenceTransformer(MODEL_NAME)
+    model = get_model()
     client = chromadb.PersistentClient(path=str(DB_PATH))
     collection = client.get_collection(COLLECTION)
     q_emb = model.encode([retrieval_question], normalize_embeddings=True).tolist()

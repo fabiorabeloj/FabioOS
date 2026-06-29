@@ -71,6 +71,8 @@ Artefatos compartilhados incluem:
 
 | LIMPEZA_VISUAL_RAIZ_OBSIDIAN | Codex | `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/`, `90_Arquivo/Descartes_Visuais_Obsidian_2026-06-29/`, `.obsidian/app.json`, `50_Registros/Relatorios/`, `STATUS.md`, `NEXT_ACTIONS.md`, `log.md`, changelog | concluida | 2026-06-29 | Pastas legadas arquivadas sem apagar; placeholders `Sem titulo` renomeados/arquivados; arquivos tecnicos ocultos no Obsidian; `sources`, `wiki` e `schema` preservados no disco por compatibilidade tecnica; sem RAG/Grafo/OpenClaw/n8n/push |
 
+| RAG_REINDEX_POS_LIMPEZA_OBSIDIAN | Codex | `60_Sistemas/RAG/scripts/ingest_vault.py`, `query_rag.py`, `batch_validate_rag.py`, `fabioos_db/`, relatorios de validacao | concluida | 2026-06-29 | Reindexacao executada para alinhar fontes RAG aos caminhos reais apos limpeza visual; `1206` chunks; validacao `10/10` e `0` falhas; sem API externa, sem `--generate`, sem push |
+
 ## Frentes observadas
 
 | Frente | Dono | Observacao |
@@ -113,3 +115,4 @@ Ao concluir, alterar `Estado` para `concluida`, registrar resultado e apontar o 
 - 2026-06-29 - `NORMALIZACAO_OBSIDIAN_V2` concluida. Auditoria, mapa canonico, plano de normalizacao e dashboard de estrutura criados; `CLAUDE.md`, Plano Mestre, Protocolo Operacional, STATUS/NEXT_ACTIONS, indices e changelog conectados; sem mover/apagar arquivos.
 - 2026-06-29 - `ESTRUTURA_FISICA_LLM_WIKI` concluida. Pastas fisicas `05_Raw_Sources`, `20_Areas`, `40_Wiki`, `70_Skills` e `80_Specs` criadas com READMEs; documentos de estrutura, proposta, mapa e ADR criados; `sources` e `wiki` preservados como compatibilidade.
 - 2026-06-29 - `LIMPEZA_VISUAL_RAIZ_OBSIDIAN` concluida. Pastas historicas da raiz foram movidas para `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/`; placeholders `Sem titulo` foram renomeados e arquivados; arquivos tecnicos foram ocultados na navegacao do Obsidian; `sources`, `wiki` e `schema` permanecem no disco por compatibilidade tecnica.
+- 2026-06-29 - `RAG_REINDEX_POS_LIMPEZA_OBSIDIAN` concluida. `fabioos_db` foi reindexado com corpus operacional de alto sinal (`1206` chunks), caminhos reais pos-limpeza e validacao `10/10` em modo recuperacao, sem API externa.
