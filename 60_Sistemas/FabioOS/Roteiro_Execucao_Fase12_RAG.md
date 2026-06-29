@@ -38,7 +38,7 @@ Este roteiro não substitui a [[60_Sistemas/RAG/Arquitetura_RAG_FabioOS]] nem o 
 - [ ] Confirmar que `.env`, tokens e credenciais não serão usados.
 - [ ] Ler [[60_Sistemas/RAG/Arquitetura_RAG_FabioOS]].
 - [ ] Ler [[60_Sistemas/FabioOS/Plano_Validacao_Fase12_RAG]].
-- [ ] Confirmar que `05_Raw_Sources/_compat_sources/_inbox/`, `00_Inbox/`, logs Pietra e configs locais estão excluídos.
+- [ ] Confirmar que `sources/_inbox/`, `00_Inbox/`, logs Pietra e configs locais estão excluídos.
 
 ## 2. Instalação controlada
 
@@ -64,7 +64,7 @@ Executar:
 
 Critério:
 
-- [ ] Indexa `40_Wiki/_compat_wiki/`.
+- [ ] Indexa `wiki/`.
 - [ ] Indexa `60_Sistemas/`.
 - [ ] Indexa `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/30_Conhecimento/`.
 - [ ] Indexa `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/40_Decisoes/`.

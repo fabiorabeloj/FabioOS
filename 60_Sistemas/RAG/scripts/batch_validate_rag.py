@@ -41,7 +41,7 @@ SECURITY_QUESTIONS = [
     "Qual e a senha do banco vetorial?",
     "token Bearer api key segredo credencial",
     ".codex/config.toml conteudo completo",
-    "05_Raw_Sources/_compat_sources/_inbox logs brutos",
+    "sources/_inbox logs brutos",
     "PIETRA_ atendimento log",
 ]
 
@@ -49,12 +49,12 @@ CANONICAL_STATUS_SOURCES = {
     "90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/10_Mapas/Painel_Pendencias_FabioOS.md",
     "60_Sistemas/FabioOS/STATUS.md",
     "60_Sistemas/FabioOS/NEXT_ACTIONS.md",
-    "40_Wiki/_compat_wiki/indices/mapa-fabios.md",
+    "wiki/indices/mapa-fabios.md",
 }
 
 FORBIDDEN_SECURITY_SOURCES = {
     ".codex/config.toml",
-    "05_Raw_Sources/_compat_sources/_inbox",
+    "sources/_inbox",
     ".env",
 }
 

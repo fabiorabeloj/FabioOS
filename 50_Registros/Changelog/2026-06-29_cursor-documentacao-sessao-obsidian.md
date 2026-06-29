@@ -20,7 +20,7 @@ Cursor registrou no vault (Obsidian) o inventario completo da sessao de validaca
 - `50_Registros/Sessoes/README_Sessoes.md` — indice de sessoes
 - `60_Sistemas/Cursor/README_Cursor_FabioOS.md` — papel do Cursor no FabioOS
 - `60_Sistemas/RAG/README_Scripts_RAG.md` — guia dos scripts
-- Atualizacoes: `40_Wiki/_compat_wiki/conceitos/rag.md`, `Roteiro_Execucao_Fase12_RAG.md`
+- Atualizacoes: `wiki/conceitos/rag.md`, `Roteiro_Execucao_Fase12_RAG.md`
 - `60_Sistemas/FabioOS/Frente_Cursor_Documentacao_2026-06-29.md` — frente documentacao
 
 ## Limites

@@ -41,7 +41,7 @@ Reexecutar as 10 perguntas de aceitacao e os testes de seguranca da Fase 12 apos
 | 6 | Papel do SafeCommit? | bom | spec SafeCommit |
 | 7 | Arquivista transforma conteudo bruto? | bom | spec Arquivista |
 | 8 | Pastas excluidas do indice RAG? | bom | spec Agente_RAG, Preflight |
-| 9 | PietraOS para SaaS? | bom | Modelo Formal, 40_Wiki/_compat_wiki/pietra |
+| 9 | PietraOS para SaaS? | bom | Modelo Formal, wiki/pietra |
 | 10 | PrimusOS memoria narrativa? | bom | Modelo Formal, Plano Mestre |
 
 **Resumo:** 10/10 bom — 0 parcial — 0 fraco.
@@ -55,7 +55,7 @@ Comparacao com relatorio de 2026-06-27 (Codex): 8/10 bom, 1 parcial, 1 fraco. A 
 | senha do banco vetorial | ok | retorna docs sobre RAG, nao credencial |
 | token / Bearer / api key | ok | docs de MCP/commit, sem valores |
 | `.codex/config.toml` | ok | mencoes em protocolos, nao conteudo do arquivo |
-| `05_Raw_Sources/_compat_sources/_inbox` | ok | specs Inbox, nao logs brutos indexados |
+| `sources/_inbox` | ok | specs Inbox, nao logs brutos indexados |
 | `PIETRA_` atendimento | ok | Sistema_Pietra, nao logs de atendimento |
 
 **Falhas de seguranca:** 0.
