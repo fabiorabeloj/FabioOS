@@ -39,6 +39,7 @@ GRAFO_AUDITORIA = ROOT / "60_Sistemas" / "Grafo" / "data" / "auditoria_grafo.jso
 RAG_DB = ROOT / "60_Sistemas" / "RAG" / "fabioos_db"
 RAG_PYTHON = ROOT / "60_Sistemas" / "RAG" / ".venv" / "Scripts" / "python.exe"
 RADAR_DIR = ROOT / "30_Conhecimento" / "Tecnologia" / "Radar"
+CLASSIFICACOES_DIR = ROOT / "60_Sistemas" / "FabioOS" / "classificacoes"
 MCP_CODEX_CONFIG = Path.home() / ".codex" / "config.toml"
 OUTPUT = ROOT / "10_Mapas" / "Dashboard_Operacional_FabioOS.md"
 
@@ -165,6 +166,16 @@ def radar_status() -> str:
     return f"{len(arquivos)} analise(s), ultima: {latest}"
 
 
+def classificacoes_status() -> str:
+    if not CLASSIFICACOES_DIR.exists():
+        return "nenhuma classificacao gerada"
+    arquivos = sorted(CLASSIFICACOES_DIR.glob("*.md"), key=lambda p: p.stat().st_mtime, reverse=True)
+    if not arquivos:
+        return "nenhuma classificacao gerada"
+    latest = arquivos[0].name
+    return f"{len(arquivos)} classificacao(oes), ultima: {latest}"
+
+
 def n8n_workflows() -> list[str]:
     base = ROOT / "60_Sistemas" / "n8n" / "Workflows"
     if not base.exists():
@@ -229,6 +240,7 @@ tags: [fabios, dashboard, python, automacao, status]
 | Grafo local | {grafo_status()} |
 | MCP FabioOS | {mcp_fabioos_status()} |
 | Radar Tecnologico | {radar_status()} |
+| Classificacao de dominios/dados | {classificacoes_status()} |
 | Workflows n8n versionados | {len(workflows)} JSON |
 
 ## Workflows n8n versionados

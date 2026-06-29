@@ -1462,6 +1462,7 @@ A partir de 2026-06-28, as fases 0-23 continuam validas, mas passam a ser avalia
 - [[30_Conhecimento/Tecnologia/Arquiteturas_de_Mercado_Radar_Tecnologico]]
 - [[60_Sistemas/FabioOS/Estrutura_Profissional_FabioOS_MEGATRON_2026-06-28]]
 - [[60_Sistemas/FabioOS/Matriz_Profissionalizacao_FabioOS_2026-06-28]]
+- [[60_Sistemas/FabioOS/Matriz_Dominios_Dados_Permissoes_2026-06-28]]
 - [[60_Sistemas/FabioOS/Catalogo_Caminhos_Ferramentas_Demonstradas_2026-06-28]]
 
 ## Subfases candidatas
@@ -1491,3 +1492,9 @@ Que caminho isso demonstra e qual camada do FabioOS melhora?
 So depois disso se decide se vira estudo, especificacao, subfase, piloto ou descarte.
 
 O processo formal para essa extracao e o [[30_Conhecimento/Tecnologia/Arquiteturas_de_Mercado_Radar_Tecnologico]].
+
+## Regra de dominio e permissao
+
+Antes de ingerir, reindexar, automatizar, enviar a modelo externo ou conectar dominios, aplicar a [[60_Sistemas/FabioOS/Matriz_Dominios_Dados_Permissoes_2026-06-28]].
+
+O classificador local v0 e `60_Sistemas/FabioOS/scripts/classificar_dado_fabioos.py`.

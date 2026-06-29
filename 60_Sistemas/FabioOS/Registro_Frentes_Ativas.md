@@ -43,6 +43,8 @@ Artefatos compartilhados incluem:
 
 | MEMORIA_PESSOAL_PROFISSIONAL | Codex | `60_Sistemas/FabioOS/Protocolo_Ingestao_Memoria_Pessoal_Profissional.md`, `sources/chatgpt/`, `sources/email/`, `wiki/memoria/` | em desenho | 2026-06-27 | Absorver ChatGPT e e-mails por camadas: inventario, consentimento, triagem, fonte bruta, resumo seguro e wiki/RAG; nao ler ou arquivar emails em massa sem escopo aprovado |
 
+| DOMINIOS_PERMISSOES_V0 | Codex | `60_Sistemas/FabioOS/Matriz_Dominios_Dados_Permissoes_2026-06-28.md`, `60_Sistemas/FabioOS/scripts/classificar_dado_fabioos.py`, `60_Sistemas/FabioOS/classificacoes/`, dashboard, mapa e changelog | concluida | 2026-06-28 | Classificador local v0 implementado e testado; nao tocou RAG DB, Grafo data, MCP_FABIOOS, OpenClaw auth/runtime ou push |
+
 ## Frentes observadas
 
 | Frente | Dono | Observacao |
@@ -71,3 +73,4 @@ Ao concluir, alterar `Estado` para `concluida`, registrar resultado e apontar o 
 - 2026-06-27 - `COORD_CLAUDE_CODEX` concluida. Prompt para Claude e relatorio de zonas de posse criados para evitar nova colisao.
 - 2026-06-27 - `COMMITS_TEMATICOS` concluida. Commits locais de coordenacao, retomada, RAG, higiene, OpenClaw, Obsidian e Fase 13 foram criados sem push; o checklist pre-commit sem colisao ficou registrado como governanca.
 - 2026-06-27 - `ROTEAMENTO_CAPACIDADES` concluida. Protocolo criado para obrigar consulta a skills, comandos, agentes, subagentes, scripts, MCPs, RAG e grafo antes de execucao manual.
+- 2026-06-28 - `DOMINIOS_PERMISSOES_V0` concluida. Matriz de dominios/dados/permissoes e classificador local v0 criados; dashboard passou a exibir classificacoes.
