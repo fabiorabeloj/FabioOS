@@ -6,6 +6,8 @@ Projeto narrativo persistente do FabioOS.
 
 - [[PRIMUS]]
 - [[Plano_Ingestao_PRIMUS]]
+- [[Roteiro_Execucao_PRIMUS_6_Blocos]]
+- [[Missao_0001_Preparacao]]
 
 ## Relacoes
 
@@ -13,3 +15,4 @@ Projeto narrativo persistente do FabioOS.
 - [[40_Wiki/PRIMUS/Circuito_EIP]]
 - [[40_Wiki/PRIMUS/Taxonomia_PRIMUS]]
 - [[80_Specs/PRIMUS/Spec_Ingestao_PRIMUS_ChatGPT]]
+- [[80_Specs/PRIMUS/Templates_PRIMUS_Blocos]]

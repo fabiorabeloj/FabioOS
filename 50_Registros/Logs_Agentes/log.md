@@ -106,3 +106,11 @@ Formato:
 - Paginas atualizadas: [[05_Raw_Sources/PRIMUS/README]], [[30_Projetos/PRIMUS/README]], [[40_Wiki/PRIMUS/README]], [[80_Specs/PRIMUS/README]], [[50_Registros/Barramento_Multiagente]].
 - Contradicoes: diretorio de export ChatGPT no vault existe, mas esta vazio; fontes PRIMUS reais estao em Downloads/Desktop e no legado.
 - Proximas acoes: extrair `PRIMUS - CONTEXTO COMPLETO FINAL (NAO PERDER).pdf` e comparar com o sumario estrutural antes de migrar DOCX/ZIP em massa.
+
+## [2026-06-30] ingest | PRIMUS contexto completo final PDF
+
+- Fonte: `C:\Users\user\Downloads\PRIMUS — CONTEXTO COMPLETO FINAL (NÃO PERDER).pdf`.
+- Paginas criadas: [[05_Raw_Sources/PRIMUS/2026-06-30_pdf_primus_contexto_completo_final]], [[30_Projetos/PRIMUS/Roteiro_Execucao_PRIMUS_6_Blocos]], [[30_Projetos/PRIMUS/Missao_0001_Preparacao]], [[80_Specs/PRIMUS/Templates_PRIMUS_Blocos]].
+- Paginas atualizadas: [[40_Wiki/PRIMUS/PrimusOS]], [[30_Projetos/PRIMUS/Plano_Ingestao_PRIMUS]], [[30_Projetos/PRIMUS/README]], [[80_Specs/PRIMUS/README]].
+- Contradicoes: o PDF confirma a ordem operacional 1->2->3->4->5->6 e nao contradiz o sumario estrutural; ele e mais pratico e menos cosmologico.
+- Proximas acoes: ampliar templates para `mission`, `npc`, `creature` e `spell`; depois preparar Missao 0001.
