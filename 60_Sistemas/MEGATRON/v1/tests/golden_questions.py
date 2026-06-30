@@ -24,6 +24,7 @@ from registry import resolver  # noqa: E402
 from barramento import ler as ler_barramento, _match  # noqa: E402
 import arquivista  # noqa: E402  (path injetado pelo registry)
 from reasoningbank import recomendar  # noqa: E402
+from registry import rotear, capacidades as cap_catalogo  # noqa: E402
 
 # (pergunta, intent_esperado, classe_esperada, marcador esperado na resposta)
 CASOS = [
@@ -35,6 +36,7 @@ CASOS = [
     ("envie um WhatsApp para o pai do aluno",           "acao", "externa", "AÇÃO EXTERNA"),
     ("apague o fabioos_db agora",                       "acao", "sensivel", "AÇÃO SENSÍVEL"),
     ("criar uma nota sobre energia solar",              "acao", "escrita_segura", "Proposta de nota"),
+    ("o que voce pode fazer?",                          "capacidade", None, "Capacidades do FabioOS"),
 ]
 
 
@@ -104,6 +106,20 @@ async def main() -> int:
     total += 1
     print(f"[{'PASS' if ok_rb else 'FALHA'}] reasoningbank -> commit recomenda "
           f"'{rec.get('sugestao','')[:30]}'; desconhecida -> {abst['tipo']}")
+
+    # Maestro — roteamento por capacidade (ativo despachável; externo honesto).
+    r_escrever = rotear("escrever_nota")
+    r_codigo = rotear("escrever_codigo")
+    r_nada = rotear("capacidade_inexistente_xyz")
+    ok_rota = (r_escrever and r_escrever["status"] == "ativo"
+               and r_codigo and r_codigo["status"] == "planejado"
+               and r_codigo["ferramenta"] == "OpenHands"
+               and r_nada is None
+               and len(cap_catalogo("ativo")) >= 4)
+    passes += ok_rota
+    total += 1
+    print(f"[{'PASS' if ok_rota else 'FALHA'}] maestro -> escrever_nota=ativo, "
+          f"escrever_codigo=planejado(OpenHands), inexistente=None")
 
     print(f"\nResultado golden: {passes}/{total}")
     return 0 if passes == total else 1
