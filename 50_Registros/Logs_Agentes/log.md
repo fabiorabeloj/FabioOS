@@ -162,3 +162,11 @@ Formato:
 - Paginas atualizadas: [[80_Specs/PRIMUS/Spec_WorldState_PRIMUS]], [[40_Wiki/PRIMUS/README]], [[30_Projetos/PRIMUS/README]], [[80_Specs/PRIMUS/README]], [[40_Wiki/PRIMUS/PrimusOS]], [[50_Registros/Barramento_Multiagente]].
 - Contradicoes: WorldState anterior estava como objeto minimo editavel; Project corrige para estado derivado de DeltaP valido.
 - Proximas acoes: selecionar 20 CatalogEntries reais a partir de D&D Core + WWN.
+
+## [2026-06-30] implementacao documental | CatalogEntries e CatalogPool PRIMUS
+
+- Fonte: [[40_Wiki/PRIMUS/Matriz_Fontes_PRIMUS]], [[80_Specs/PRIMUS/Spec_CatalogEntry_PRIMUS]].
+- Paginas criadas: [[80_Specs/PRIMUS/Spec_CatalogEntry_PRIMUS]], [[30_Projetos/PRIMUS/CatalogEntries_Lote_0001_PRIMUS]], [[30_Projetos/PRIMUS/CatalogPool_0001_PRIMUS]], [[50_Registros/Changelog/2026-06-30_catalogentries-catalogpool-primus]].
+- Paginas atualizadas: [[30_Projetos/PRIMUS/Fila_Operacional_PRIMUS]], [[30_Projetos/PRIMUS/Backlog_PRIMUS_Implementacao]], [[30_Projetos/PRIMUS/README]], [[80_Specs/PRIMUS/README]].
+- Contradicoes: entradas sao bootstrap e ainda precisam pagina/trecho antes de promocao.
+- Proximas acoes: criar V(E) e aplicar no lote.

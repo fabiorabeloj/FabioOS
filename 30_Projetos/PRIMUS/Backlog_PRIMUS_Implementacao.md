@@ -15,8 +15,8 @@ tags: [primus, backlog, implementacao, roadmap]
 
 1. Ontologia formal.
 2. DeltaP e WorldState derivado.
-3. CatalogEntries reais.
-4. CatalogPool.
+3. CatalogEntries reais. Iniciado em [[CatalogEntries_Lote_0001_PRIMUS]].
+4. CatalogPool. Iniciado em [[CatalogPool_0001_PRIMUS]].
 5. Validadores V(E), V(I), V(P).
 6. Tension/Faction/Conflict Engine.
 7. Engrenagem 6.

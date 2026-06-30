@@ -12,3 +12,4 @@ SPECs do sistema narrativo PRIMUS.
 - [[Spec_Ontologia_Formal_PRIMUS]]
 - [[Spec_DeltaP_PRIMUS]]
 - [[Spec_PRIMUS_Steward]]
+- [[Spec_CatalogEntry_PRIMUS]]
