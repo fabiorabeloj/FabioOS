@@ -1,0 +1,67 @@
+{
+  "vertical": "escola",
+  "descricao": "Config da vertical Escola (PietraOS). Compartilhada por todos os tenants-escola; cada tenant pode sobrescrever setores/FAQ/base. Esta config É o moat (biblioteca por vertical).",
+  "categorias": {
+    "financeiro": {
+      "keywords": ["boleto", "mensalidade", "pagamento", "comprovante", "cobranca", "cobrança", "fatura", "pix", "parcela", "inadimpl"],
+      "setor": "Financeiro",
+      "risco": "medio",
+      "template": "Recebemos sua mensagem sobre {assunto}. Encaminhamos ao setor Financeiro e retornaremos em breve."
+    },
+    "documento": {
+      "keywords": ["historico", "histórico", "declaracao", "declaração", "transferencia", "transferência", "requerimento", "segunda via", "documento"],
+      "setor": "Secretaria",
+      "risco": "medio",
+      "template": "Recebemos seu pedido de documento. A Secretaria vai providenciar e te avisamos quando estiver pronto."
+    },
+    "saude": {
+      "keywords": ["atestado", "saude", "saúde", "medico", "médico", "remedio", "remédio", "alergia", "doente", "febre", "laudo"],
+      "setor": "Secretaria/Coordenacao",
+      "risco": "alto",
+      "template": null
+    },
+    "pedagogico": {
+      "keywords": ["prova", "nota", "recuperacao", "recuperação", "trabalho", "materia", "matéria", "conteudo", "conteúdo", "licao", "lição", "tarefa"],
+      "setor": "Professor/Coordenacao",
+      "risco": "medio",
+      "template": "Sobre {assunto}, vamos verificar com o professor/coordenacao e retornamos com a informacao."
+    },
+    "reclamacao": {
+      "keywords": ["reclamacao", "reclamação", "reclamar", "insatisfeit", "absurdo", "pessimo", "péssimo", "nao aceito", "não aceito"],
+      "setor": "Coordenacao",
+      "risco": "alto",
+      "template": null
+    },
+    "sensivel": {
+      "keywords": ["bullying", "briga", "agressao", "agressão", "conflito", "ameaca", "ameaça", "violencia", "violência", "denuncia", "denúncia", "abuso", "assedio", "assédio"],
+      "setor": "Coordenacao/Direcao",
+      "risco": "critico",
+      "template": null
+    },
+    "reuniao": {
+      "keywords": ["reuniao", "reunião", "conversar", "falar com", "agendar", "atendimento com"],
+      "setor": "Coordenacao",
+      "risco": "medio",
+      "template": "Claro, podemos agendar. Qual o melhor dia e horario para voce?"
+    },
+    "matricula": {
+      "keywords": ["matricula", "matrícula", "vaga", "inscricao", "inscrição", "valores", "mensalidade quanto", "quero matricular"],
+      "setor": "Comercial/Secretaria",
+      "risco": "baixo",
+      "template": "Que bom seu interesse! Vou te passar as informacoes de matricula e valores."
+    },
+    "faq": {
+      "keywords": ["horario", "horário", "uniforme", "material", "calendario", "calendário", "evento", "que horas", "onde", "quando"],
+      "setor": "Atendimento",
+      "risco": "baixo",
+      "template": "Sobre {assunto}: vou te enviar a informacao. Qualquer duvida, estamos a disposicao."
+    }
+  },
+  "categoria_padrao": "faq",
+  "risco_regras": {
+    "baixo":   {"responde_auto": true,  "aprovacao_humana": false, "bloqueia": false, "escala": false},
+    "medio":   {"responde_auto": false, "aprovacao_humana": true,  "bloqueia": false, "escala": false},
+    "alto":    {"responde_auto": false, "aprovacao_humana": true,  "bloqueia": true,  "escala": false},
+    "critico": {"responde_auto": false, "aprovacao_humana": true,  "bloqueia": true,  "escala": true}
+  }
+}

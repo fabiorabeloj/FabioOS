@@ -64,3 +64,6 @@ logs/
 
 # Credenciais e segredos locais (NUNCA versionar)
 60_Sistemas/FabioOS/_restrito/
+
+# PietraOS: dados de tenants (mensagens reais de pais - LGPD, nunca versionar)
+60_Sistemas/Pietra/tenants/
