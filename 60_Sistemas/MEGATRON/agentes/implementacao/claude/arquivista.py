@@ -18,7 +18,7 @@ import unicodedata
 from datetime import date
 from pathlib import Path
 
-from _common import vault_root, log_event
+from _common import vault_root, log_event, resultado
 
 ROOT = vault_root()
 
@@ -54,33 +54,8 @@ def dentro_do_vault(path: Path) -> bool:
         return False
 
 
-def main():
-    ap = argparse.ArgumentParser()
-    ap.add_argument("--titulo", required=True)
-    g = ap.add_mutually_exclusive_group(required=True)
-    g.add_argument("--texto")
-    g.add_argument("--arquivo")
-    ap.add_argument("--dominio", help="força o domínio (senão classifica)")
-    ap.add_argument("--dest", help="pasta destino relativa ao vault (padrão 00_Inbox)")
-    args = ap.parse_args()
-
-    texto = args.texto if args.texto else Path(args.arquivo).read_text(encoding="utf-8")
-    dominio = args.dominio or classificar(texto, args.titulo)
-
-    hoje = date.today().isoformat()
-    dest_dir = ROOT / (args.dest or "00_Inbox")
-    if not dentro_do_vault(dest_dir):
-        print("🛑 Destino recusado: --dest deve permanecer dentro da raiz do vault FabioOS.")
-        log_event("Arquivista", "abortado", "destino fora do vault")
-        return 2
-    dest_dir.mkdir(parents=True, exist_ok=True)
-    destino = dest_dir / f"{hoje}_{slug(args.titulo)}.md"
-    if destino.exists():
-        print(f"⚠️  Já existe: {destino.relative_to(ROOT).as_posix()} — não sobrescrevo.")
-        log_event("Arquivista", "abortado", "destino ja existe")
-        return 1
-
-    nota = f"""---
+def _montar_nota(titulo: str, texto: str, dominio: str, hoje: str) -> str:
+    return f"""---
 tipo: nota
 area: 00_Inbox
 projeto: FabioOS
@@ -92,7 +67,7 @@ criado_em: {hoje}
 atualizado_em: {hoje}
 ---
 
-# {args.titulo}
+# {titulo}
 
 > Classificação provisória: **{dominio}**. Revisar e promover (fonte/40_Wiki/_compat_wiki/tarefa) conforme o Protocolo Operacional.
 
@@ -104,12 +79,66 @@ atualizado_em: {hoje}
 - [ ] Revisar classificação de domínio
 - [ ] Decidir destino final (fonte, wiki, tarefa, decisão ou arquivo)
 """
-    destino.write_text(nota, encoding="utf-8")
+
+
+def run(titulo: str, texto: str, dominio: str = None, dest: str = "00_Inbox",
+        dry_run: bool = True) -> dict:
+    """Contrato uniforme do agente (ver Ordens de Coordenação).
+
+    dry_run=True (padrão): NÃO escreve — devolve a proposta da nota para aprovação.
+    dry_run=False: cria o rascunho (escrita segura), sem sobrescrever.
+    Sempre devolve um `Resultado`.
+    """
+    dom = dominio or classificar(texto, titulo)
+    hoje = date.today().isoformat()
+    dest_dir = ROOT / dest
+    if not dentro_do_vault(dest_dir):
+        log_event("Arquivista", "abortado", "destino fora do vault")
+        return resultado("proposta", False, "Destino recusado",
+                         "`--dest` deve permanecer dentro da raiz do vault FabioOS.")
+    destino = dest_dir / f"{hoje}_{slug(titulo)}.md"
     rel = destino.relative_to(ROOT).as_posix()
-    print(f"✅ Nota criada: {rel}")
-    print(f"   Domínio classificado: {dominio}")
-    log_event("Arquivista", "nota_criada", f"{rel} dominio={dominio}")
-    return 0
+    nota = _montar_nota(titulo, texto, dom, hoje)
+
+    if dry_run:
+        return resultado(
+            "proposta", True, f"Proposta de nota: {titulo}",
+            corpo=f"Criaria `{rel}` (domínio **{dom}**). Prévia:\n\n{nota}",
+            sugestao="Para criar de fato, confirme (--confirmar).", artefato=None)
+
+    if destino.exists():
+        log_event("Arquivista", "abortado", "destino ja existe")
+        return resultado("proposta", False, "Já existe",
+                         f"`{rel}` já existe — não sobrescrevo.")
+    dest_dir.mkdir(parents=True, exist_ok=True)
+    destino.write_text(nota, encoding="utf-8")
+    log_event("Arquivista", "nota_criada", f"{rel} dominio={dom}")
+    return resultado("proposta", True, f"Nota criada: {titulo}",
+                     corpo=f"Rascunho criado em `{rel}` (domínio **{dom}**).",
+                     sugestao="Revisar classificação e promover.", artefato=rel)
+
+
+def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--titulo", required=True)
+    g = ap.add_mutually_exclusive_group(required=True)
+    g.add_argument("--texto")
+    g.add_argument("--arquivo")
+    ap.add_argument("--dominio", help="força o domínio (senão classifica)")
+    ap.add_argument("--dest", help="pasta destino relativa ao vault (padrão 00_Inbox)")
+    ap.add_argument("--confirmar", action="store_true",
+                    help="cria de fato (sem isto, roda em dry-run e só propõe)")
+    args = ap.parse_args()
+
+    texto = args.texto if args.texto else Path(args.arquivo).read_text(encoding="utf-8")
+    r = run(args.titulo, texto, dominio=args.dominio,
+            dest=args.dest or "00_Inbox", dry_run=not args.confirmar)
+
+    print(f"{'✅' if r['ok'] else '🛑'} {r['titulo']}")
+    print(r["corpo"])
+    if r["sugestao"]:
+        print(f"💡 {r['sugestao']}")
+    return 0 if r["ok"] else 1
 
 
 if __name__ == "__main__":
