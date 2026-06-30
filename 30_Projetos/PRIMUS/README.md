@@ -14,6 +14,8 @@ Projeto narrativo persistente do FabioOS.
 - [[Cantina_Rumores_0001_PRIMUS]]
 - [[Fila_Operacional_PRIMUS]]
 - [[Backlog_PRIMUS_Implementacao]]
+- [[CatalogEntries_Lote_0001_PRIMUS]]
+- [[CatalogPool_0001_PRIMUS]]
 - [[Missao_0001_Preparacao]]
 - [[40_Wiki/PRIMUS/Motor_Causal_PRIMUS]]
 
@@ -33,3 +35,4 @@ Projeto narrativo persistente do FabioOS.
 - [[80_Specs/PRIMUS/Spec_Ontologia_Formal_PRIMUS]]
 - [[80_Specs/PRIMUS/Spec_DeltaP_PRIMUS]]
 - [[80_Specs/PRIMUS/Spec_PRIMUS_Steward]]
+- [[80_Specs/PRIMUS/Spec_CatalogEntry_PRIMUS]]
