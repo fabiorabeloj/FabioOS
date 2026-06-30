@@ -46,8 +46,9 @@ Toda tarefa deve ter area, status, saida esperada e criterio de conclusao.
 | PRIMUS-TASK-0025 | Fontes | done | critica | Transformar D&D Core em fontes Restricted | [[CatalogEntries_Restricted_DND_Core_0001]] |
 | PRIMUS-TASK-0026 | Validacao | done | alta | Validar `CE-DND-0006 Equipment` como quinta entrada estavel | [[Validacao_VE_5_Entradas_PRIMUS_Index]] |
 | PRIMUS-TASK-0027 | Validacao | done | alta | Validar `CE-DND-0007 Creature` como primeira entrada de Desafio | [[Validacao_VE_5_Entradas_PRIMUS_Index]] |
-| PRIMUS-TASK-0028 | Validacao | pending | alta | Validar `CE-DND-0009 Encounter` ou `CE-DND-0010 Treasure` | DMG/PRIMUS Index sem dump integral |
+| PRIMUS-TASK-0028 | Validacao | done | alta | Validar `CE-DND-0009 Encounter` e `CE-DND-0010 Treasure` | [[Ancoras_PRIMUS_Index_DND_Core]] |
+| PRIMUS-TASK-0029 | Validacao | pending | alta | Validar `CE-DND-0001 Player Character` ou iniciar WWN | PRIMUS Index sem dump integral |
 
 ## Proxima Tarefa
 
-`PRIMUS-TASK-0028`: validar `CE-DND-0009 Encounter` ou `CE-DND-0010 Treasure`, sem copiar texto integral, antes de liberar Engrenagem 6 ou Missao 0001.
+`PRIMUS-TASK-0029`: validar `CE-DND-0001 Player Character` ou iniciar WWN, sem copiar texto integral, antes de liberar Engrenagem 6 ou Missao 0001.

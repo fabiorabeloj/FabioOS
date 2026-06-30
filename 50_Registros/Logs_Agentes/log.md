@@ -234,4 +234,5 @@ Formato:
 - Resultado: `SRC-DND-PHB-2014`, `SRC-DND-DMG-2014` e `SRC-DND-MM-2014` criados como fontes restritas.
 - Validacao: `CE-DND-0006 Equipment` recebeu `VE-local-index-pass` via PRIMUS Index (`phb`, pagina 153, record id `bed90f56-fd8f-48cd-af0f-b3e0e0bfc7e0`).
 - Validacao: `CE-DND-0007 Creature` recebeu `VE-local-index-pass` via PRIMUS Index (`mm`, pagina 4, record id `35c6d241-b738-4c62-9dd6-ff591dfcf90a`).
+- Ancoras: `CE-DND-0003`, `CE-DND-0009` e `CE-DND-0010` receberam ancoras `VE-local-index-pass` via [[30_Projetos/PRIMUS/Ancoras_PRIMUS_Index_DND_Core]].
 - Limites: sem extracao, sem OCR, sem RAG, sem dump integral e sem alterar `documentalista.py`.

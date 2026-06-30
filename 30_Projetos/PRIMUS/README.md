@@ -16,6 +16,7 @@ Projeto narrativo persistente do FabioOS.
 - [[Backlog_PRIMUS_Implementacao]]
 - [[CatalogEntries_Lote_0001_PRIMUS]]
 - [[CatalogEntries_Restricted_DND_Core_0001]]
+- [[Ancoras_PRIMUS_Index_DND_Core]]
 - [[CatalogPool_0001_PRIMUS]]
 - [[Validacao_VE_Lote_0001_PRIMUS]]
 - [[Validacao_VE_5_Entradas_PRIMUS_Index]]
