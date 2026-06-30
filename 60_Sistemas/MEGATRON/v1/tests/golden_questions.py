@@ -121,6 +121,14 @@ async def main() -> int:
     print(f"[{'PASS' if ok_rota else 'FALHA'}] maestro -> escrever_nota=ativo, "
           f"escrever_codigo=planejado(OpenHands), inexistente=None")
 
+    # Fatia 4 — cadeia RAG->grafo->síntese numa resposta única (contrato Resultado).
+    r_chain = await responder("O que e o FabioOS?")
+    ok_chain = ("Síntese" in r_chain and "Recuperado do vault" in r_chain)
+    passes += ok_chain
+    total += 1
+    print(f"[{'PASS' if ok_chain else 'FALHA'}] fatia4 cadeia -> resposta tem "
+          f"'Recuperado do vault' + 'Síntese'")
+
     print(f"\nResultado golden: {passes}/{total}")
     return 0 if passes == total else 1
 
