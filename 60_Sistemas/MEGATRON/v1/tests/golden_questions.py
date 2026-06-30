@@ -18,7 +18,7 @@ try:
 except Exception:
     pass
 
-from megatron import responder, classificar  # noqa: E402
+from megatron import responder, classificar, briefing  # noqa: E402
 
 # (pergunta, intent_esperado, classe_esperada, marcador esperado na resposta)
 CASOS = [
@@ -45,8 +45,18 @@ async def main() -> int:
         print(f"[{'PASS' if ok else 'FALHA'}] intent={intent}/{classe} "
               f"(esperado {intent_exp}/{classe_exp}) | marcador '{marcador}': "
               f"{'sim' if ok_marcador else 'NAO'} | {pergunta}")
-    print(f"\nResultado golden: {passes}/{len(CASOS)}")
-    return 0 if passes == len(CASOS) else 1
+    # Fatia 1 — briefing proativo (sem args) devolve Resultado estruturado.
+    b = briefing()
+    ok_brief = (b.get("tipo") == "briefing" and b.get("ok") is True
+                and "Estado operacional" in b.get("corpo", ""))
+    passes += ok_brief
+    total = len(CASOS) + 1
+    print(f"[{'PASS' if ok_brief else 'FALHA'}] briefing -> tipo={b.get('tipo')} | "
+          f"corpo com estado: {'sim' if 'Estado operacional' in b.get('corpo','') else 'NAO'} "
+          f"| sugestao: {'sim' if b.get('sugestao') else 'NAO'}")
+
+    print(f"\nResultado golden: {passes}/{total}")
+    return 0 if passes == total else 1
 
 
 if __name__ == "__main__":

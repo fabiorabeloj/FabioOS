@@ -93,7 +93,14 @@ Nota: as secoes abaixo permanecem como historico de continuidade anterior e pode
 - [ ] Ler [[60_Sistemas/FabioOS/Registro_Frentes_Ativas]] antes de reindexar ou commitar.
 - [ ] Ler [[60_Sistemas/FabioOS/Incidente_Coordenacao_RAG_2026-06-27]].
 - [ ] Revisar a sequencia de commits por tema.
-- [ ] Claude decidir promocao da Fase 12 RAG para piloto apos revisar `10/10` pos-reindex.
+- [x] Claude decidir promocao da Fase 12 RAG para piloto apos revisar `10/10` pos-reindex. **PROMOVIDA** em 2026-06-29 — ver [[50_Registros/Decisoes/ADR_2026-06-29_Promocao_Fase12_RAG_Piloto]].
+
+## Fase 12.1 - hardening RAG (zona Claude, pos-piloto)
+
+- [ ] Avaliar `MAX_CHARS` 6000 -> ~1000-1500 + overlap; reindexar **com lock** e rerodar `batch_validate_rag.py` para comparar 10/10.
+- [ ] Documentar ficha tecnica canonica do RAG (modelo, chunking, exclusoes, golden questions) apontando para `batch_validate_rag.py` como conjunto versionado.
+- [ ] Formalizar politica de reindex (gatilho: novos docs canonicos) com lock obrigatorio.
+- [ ] Corrigir citacao "1795 chunks" -> "1206 chunks" na tabela de criterios de `60_Sistemas/RAG/Relatorio_Validacao_RAG_2026-06-29_Cursor.md` (zona Cursor — handoff).
 
 ## Pendencias estruturais
 

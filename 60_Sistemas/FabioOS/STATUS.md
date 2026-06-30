@@ -24,7 +24,7 @@ Regras ativas:
 
 Estado operacional:
 
-- Fase 12 RAG: banco vetorial reindexado apos limpeza visual do Obsidian com `1206` chunks de corpus operacional; validacao pos-reindex em modo recuperacao registrou `10/10` perguntas boas e `0` falhas de seguranca;
+- Fase 12 RAG: **PROMOVIDA A PILOTO** por Claude em 2026-06-29 (ADR `50_Registros/Decisoes/ADR_2026-06-29_Promocao_Fase12_RAG_Piloto.md`). Banco vetorial reindexado com `1206` chunks; validacao em modo recuperacao registrou `10/10` perguntas boas e `0` vazamentos contra o indice real. Hardening de precisao (`MAX_CHARS`, ficha tecnica) diferido para Fase 12.1, sem bloquear o piloto;
 - Fase 13 Grafo: grafo minimo local criado e validado; dados pesados tratados como regeneraveis;
 - Fase 15 MCP FabioOS: frente `MCP_FABIOOS` pertence ao Claude e segue protegida;
 - Mobile Gateway v0: servidor local Python implementado e rodando na porta `8787`; celular pode acessar pela LAN em `http://192.168.0.20:8787` se firewall permitir;
