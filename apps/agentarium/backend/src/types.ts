@@ -11,6 +11,22 @@ export type AgentRuntimeState = (typeof AGENT_STATES)[number];
 /** @deprecated use AgentRuntimeState */
 export type AgentStateKind = AgentRuntimeState;
 
+export const AGENT_LAYERS = [
+  "command",
+  "security",
+  "technical",
+  "knowledge",
+  "school",
+  "finance",
+  "interface",
+  "personal",
+] as const;
+
+export type AgentLayer = (typeof AGENT_LAYERS)[number];
+
+export const AGENT_STATUSES = ["active", "inactive", "planned"] as const;
+export type AgentStatus = (typeof AGENT_STATUSES)[number];
+
 export const ZONES = [
   "WhatsApp",
   "Inbox",
@@ -56,12 +72,43 @@ export type AgentPolicy = {
 export type Agent = {
   id: string;
   name: string;
+  layer: AgentLayer;
+  status: AgentStatus;
   role: string;
+  responsibilities: string[];
+  inputs: string[];
+  outputs: string[];
+  requiresApprovalFor: string[];
+  essential: boolean;
+  catalogZone: string;
   state: AgentRuntimeState;
   task: string;
   zone: Zone;
   updatedAt: string;
   policy: AgentPolicy;
+};
+
+export type FabioAgentDefinition = {
+  id: string;
+  name: string;
+  layer: AgentLayer;
+  role: string;
+  responsibilities: string[];
+  inputs: string[];
+  outputs: string[];
+  status: AgentStatus;
+  catalogZone: string;
+  mapZone: Zone;
+  requiresApprovalFor: string[];
+  essential: boolean;
+  initialTask: string;
+  policyTemplate: Omit<AgentPolicy, "riskLevel" | "riskNotes">;
+};
+
+export type AgentCatalog = {
+  agents: Agent[];
+  layers: AgentLayer[];
+  counts: { active: number; planned: number; inactive: number; total: number };
 };
 
 export type AgentStateUpdate = {
@@ -95,6 +142,8 @@ export type AgentPolicyUpdate = Partial<
 export type SecurityMatrixRow = {
   id: string;
   name: string;
+  status: AgentStatus;
+  layer: AgentLayer;
   sandboxMode: SandboxMode;
   workspaceAccess: WorkspaceAccess;
   exec: boolean;
@@ -113,4 +162,5 @@ export type SecurityMatrix = {
 export type WsMessage =
   | { type: "snapshot"; agents: Agent[] }
   | { type: "agent_updated"; agent: Agent }
-  | { type: "security_matrix"; matrix: SecurityMatrix };
+  | { type: "security_matrix"; matrix: SecurityMatrix }
+  | { type: "catalog"; catalog: AgentCatalog };

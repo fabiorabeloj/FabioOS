@@ -4,12 +4,17 @@ import type { Agent, WsMessage } from "./types.js";
 import { store } from "./store.js";
 import { buildSecurityMatrix } from "./risk.js";
 
+function matrixPayload() {
+  return buildSecurityMatrix(store.catalogAgents());
+}
+
 export function attachWebSocket(server: Server): WebSocketServer {
   const wss = new WebSocketServer({ server, path: "/ws" });
 
   wss.on("connection", (socket) => {
-    send(socket, { type: "snapshot", agents: store.list() });
-    send(socket, { type: "security_matrix", matrix: buildSecurityMatrix(store.list()) });
+    send(socket, { type: "snapshot", agents: store.listActive() });
+    send(socket, { type: "security_matrix", matrix: matrixPayload() });
+    send(socket, { type: "catalog", catalog: store.catalog() });
   });
 
   store.subscribe((agent) => {
@@ -17,10 +22,7 @@ export function attachWebSocket(server: Server): WebSocketServer {
   });
 
   store.subscribeMatrix(() => {
-    broadcast(wss, {
-      type: "security_matrix",
-      matrix: buildSecurityMatrix(store.list()),
-    });
+    broadcast(wss, { type: "security_matrix", matrix: matrixPayload() });
   });
 
   return wss;
@@ -42,6 +44,5 @@ function broadcast(wss: WebSocketServer, msg: WsMessage): void {
 }
 
 export function broadcastAgent(agent: Agent): void {
-  // store.subscribe already handles this; exported for future external hooks
   void agent;
 }

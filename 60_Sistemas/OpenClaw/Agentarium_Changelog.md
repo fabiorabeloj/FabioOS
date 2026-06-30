@@ -11,6 +11,39 @@ atualizado_em: 2026-06-30
 
 # Agentarium Changelog
 
+## v0.3 — Agent Catalog
+
+**Status:** estavel local.
+
+### Implementado
+
+- `fabioAgents.ts` — 27 agentes FabioOS com layer, policy, responsabilidades;
+- `status: active | planned | inactive` — 5 ativos, 22 planejados;
+- `GET /catalog` — catalogo completo;
+- aba **Agent Catalog** com filtro por camada;
+- Security Matrix expandida para todos os agentes;
+- Inspector com responsibilities, inputs/outputs, requiresApprovalFor.
+
+### Limite atual
+
+- agentes planejados nao simulam movimento;
+- policy ainda simulada (nao le openclaw.json);
+- WhatsApp nao conectado ao runtime real.
+
+## v0.2.1 — Pixel Ops Animation Layer
+
+**Status:** estável local.
+
+### Implementado
+
+- sprites 8-bit originais (matriz ASCII → CSS grid) para 5 agentes;
+- animações: idle, walk, thinking, executing, approval, done, error, danger;
+- efeitos de status (pontos, scanline, `!`, check, X);
+- movimento entre zonas com walk1/walk2 por 800ms;
+- zonas táticas com grid, contador e acento por tipo;
+- HUD pixelado (scanlines, bordas, sombras, badges);
+- `prefers-reduced-motion` respeitado.
+
 ## v0.2 — MEGATRON Tactical Agentarium
 
 **Status:** estável local.

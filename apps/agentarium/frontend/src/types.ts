@@ -6,6 +6,18 @@ export type AgentRuntimeState =
   | "done"
   | "error";
 
+export type AgentLayer =
+  | "command"
+  | "security"
+  | "technical"
+  | "knowledge"
+  | "school"
+  | "finance"
+  | "interface"
+  | "personal";
+
+export type AgentStatus = "active" | "inactive" | "planned";
+
 export type Zone =
   | "WhatsApp"
   | "Inbox"
@@ -48,7 +60,15 @@ export type AgentPolicy = {
 export type Agent = {
   id: string;
   name: string;
+  layer: AgentLayer;
+  status: AgentStatus;
   role: string;
+  responsibilities: string[];
+  inputs: string[];
+  outputs: string[];
+  requiresApprovalFor: string[];
+  essential: boolean;
+  catalogZone: string;
   state: AgentRuntimeState;
   task: string;
   zone: Zone;
@@ -56,9 +76,17 @@ export type Agent = {
   policy: AgentPolicy;
 };
 
+export type AgentCatalog = {
+  agents: Agent[];
+  layers: AgentLayer[];
+  counts: { active: number; planned: number; inactive: number; total: number };
+};
+
 export type SecurityMatrixRow = {
   id: string;
   name: string;
+  status: AgentStatus;
+  layer: AgentLayer;
   sandboxMode: SandboxMode;
   workspaceAccess: WorkspaceAccess;
   exec: boolean;
@@ -77,7 +105,25 @@ export type SecurityMatrix = {
 export type WsMessage =
   | { type: "snapshot"; agents: Agent[] }
   | { type: "agent_updated"; agent: Agent }
-  | { type: "security_matrix"; matrix: SecurityMatrix };
+  | { type: "security_matrix"; matrix: SecurityMatrix }
+  | { type: "catalog"; catalog: AgentCatalog };
+
+export const LAYER_LABELS: Record<AgentLayer, string> = {
+  command: "Comando",
+  security: "Seguranca",
+  technical: "Tecnico",
+  knowledge: "Conhecimento",
+  school: "Escola",
+  finance: "Financeiro",
+  interface: "Interface",
+  personal: "Pessoal",
+};
+
+export const STATUS_LABELS: Record<AgentStatus, string> = {
+  active: "ATIVO",
+  inactive: "INATIVO",
+  planned: "PLANEJADO",
+};
 
 export const ZONES: Zone[] = [
   "WhatsApp",

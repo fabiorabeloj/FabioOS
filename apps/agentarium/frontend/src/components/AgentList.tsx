@@ -9,7 +9,7 @@ type Props = {
 
 export function AgentList({ agents, selectedId, onSelect }: Props) {
   return (
-    <aside className="agent-list panel-tactical">
+    <aside className="agent-list panel-tactical pixel-panel pixel-border">
       <h2>Operacional</h2>
       <ul>
         {agents.map((a) => (
