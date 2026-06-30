@@ -43,7 +43,7 @@ NEXT_FILE = VAULT / "60_Sistemas" / "FabioOS" / "NEXT_ACTIONS.md"
 
 from server import mcp           # reaproveita o MCP FabioOS (in-memory)  # noqa: E402
 from fastmcp import Client       # noqa: E402
-from registry import resolver    # despacho a agentes (Fatia 2)  # noqa: E402
+from registry import resolver, capacidades as cap_catalogo  # despacho + Maestro  # noqa: E402
 from barramento import ler as ler_barramento  # caixa multiagente  # noqa: E402
 
 LIMIAR_IGNORANCIA = 0.5  # dist cosseno bge-m3: <0.5 relevante; >0.5 → ignorância
@@ -52,6 +52,11 @@ STATUS_KW = ("fase atual", "status", "pendencia", "pendência", "proximo passo",
              "próximo passo", "o que falta", "roadmap", "onde estamos", "estado")
 RELACAO_KW = ("relaciona", "relacionado", "conectado", "relação", "relacao",
               "depende", "vizinho", "ligado a")
+CAPACIDADE_KW = ("o que voce pode", "o que você pode", "quais capacidades",
+                 "suas capacidades", "capacidade", "quem faz", "quem pode",
+                 "o que sabe fazer", "o que consegue fazer", "quem consegue",
+                 "time de agentes", "equipe de agentes", "o que voce faz",
+                 "o que você faz")
 # Ação → classe de permissão (matriz simplificada da Fase 17).
 # Usar RADICAIS para pegar conjugações (apagar/apague/apaga; enviar/envie/envia).
 ACAO_EXTERNA = ("push", "envi", "whatsapp", "email", "e-mail", "publica", "deploy")
@@ -68,6 +73,8 @@ def classificar(msg: str):
         return "acao", "sensivel"
     if any(k in m for k in ACAO_ESCRITA):
         return "acao", "escrita_segura"
+    if any(k in m for k in CAPACIDADE_KW):
+        return "capacidade", None
     if any(k in m for k in STATUS_KW):
         return "status", None
     if any(k in m for k in RELACAO_KW):
@@ -104,6 +111,33 @@ def _ler_estado() -> str:
             corte = txt[:900].strip()
             partes.append(f"### {nome} ({f.relative_to(VAULT).as_posix()})\n{corte}")
     return "\n\n".join(partes) or "(STATUS/NEXT_ACTIONS não encontrados)"
+
+
+def _capacidades_resultado() -> dict:
+    """O Maestro anuncia o time: capacidades por status (ativo/planejado/gated)."""
+    cat = cap_catalogo()
+    grupos = {"ativo": [], "planejado": [], "gated": []}
+    for agente, d in cat.items():
+        grupos.get(d["status"], []).append(
+            f"- **{agente}** ({d['ferramenta']}): {', '.join(d['capacidades'])}")
+    rotulo = {"ativo": "✅ Ativos (executam hoje)",
+              "planejado": "🛠️ Planejados (candidatos da stack, não instalados)",
+              "gated": "🔒 Gated (requer aprovação humana/runtime)"}
+    corpo = []
+    for st in ("ativo", "planejado", "gated"):
+        corpo.append(f"### {rotulo[st]}")
+        corpo += (grupos[st] or ["- (nenhum)"])
+        corpo.append("")
+    n_ativo = len(grupos["ativo"])
+    return {
+        "tipo": "capacidades", "ok": True,
+        "titulo": f"Capacidades do FabioOS — {n_ativo} agente(s) ativo(s)",
+        "corpo": "\n".join(corpo).strip(),
+        "fontes": [{"source_path": "60_Sistemas/MEGATRON/v1/registry.py",
+                    "header_path": "AGENTES"}],
+        "sugestao": "Capacidades planejadas/gated entram via Matriz de Aptidão + SPEC + aprovação.",
+        "artefato": None,
+    }
 
 
 def _titulo_do_pedido(msg: str) -> str:
@@ -177,6 +211,10 @@ def _render(resultado: dict) -> str:
 async def responder(msg: str, confirmar: bool = False) -> str:
     intent, classe = classificar(msg)
     registrar(f"{intent}:{classe}" if classe else intent, msg)
+
+    # CAPACIDADE — o Maestro anuncia o time (read-only, sem RAG)
+    if intent == "capacidade":
+        return _render(_capacidades_resultado())
 
     # AÇÃO — diferencia permissão; nunca executa sem aprovação
     if intent == "acao":
