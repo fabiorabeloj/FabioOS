@@ -18,9 +18,12 @@ try:
 except Exception:
     pass
 
-from megatron import responder, classificar, briefing  # noqa: E402
+import shutil  # noqa: E402
+from megatron import responder, classificar, briefing, VAULT  # noqa: E402
 from registry import resolver  # noqa: E402
 from barramento import ler as ler_barramento, _match  # noqa: E402
+import arquivista  # noqa: E402  (path injetado pelo registry)
+from reasoningbank import recomendar  # noqa: E402
 
 # (pergunta, intent_esperado, classe_esperada, marcador esperado na resposta)
 CASOS = [
@@ -75,6 +78,32 @@ async def main() -> int:
     total += 1
     print(f"[{'PASS' if ok_bus else 'FALHA'}] barramento -> ler() ok ({len(inbox)} p/ claude); "
           f"matching todos/lead->claude correto")
+
+    # Fatia 3 — write path (dry_run=False) cria rascunho real; self-cleaning.
+    testdir = "00_Inbox/_golden_tmp"
+    r3 = arquivista.run("Golden Confirm Test", "conteudo de teste",
+                        dest=testdir, dry_run=False)
+    criado = (VAULT / r3["artefato"]) if r3.get("artefato") else None
+    ok_confirm = bool(r3["ok"] and criado and criado.exists())
+    if criado and criado.exists():
+        criado.unlink()
+    tmproot = VAULT / testdir
+    if tmproot.exists():
+        shutil.rmtree(tmproot, ignore_errors=True)
+    passes += ok_confirm
+    total += 1
+    print(f"[{'PASS' if ok_confirm else 'FALHA'}] fatia3 confirmar -> rascunho criado "
+          f"({r3.get('artefato')}) e removido")
+
+    # ReasoningBank-lite — recomenda 'scan' p/ commit; abstém p/ tarefa desconhecida.
+    rec = recomendar("commit")
+    abst = recomendar("tarefa_que_nunca_existiu_123")
+    ok_rb = (rec["tipo"] == "sugestao" and "scan" in rec["sugestao"].lower()
+             and abst["tipo"] == "abstencao")
+    passes += ok_rb
+    total += 1
+    print(f"[{'PASS' if ok_rb else 'FALHA'}] reasoningbank -> commit recomenda "
+          f"'{rec.get('sugestao','')[:30]}'; desconhecida -> {abst['tipo']}")
 
     print(f"\nResultado golden: {passes}/{total}")
     return 0 if passes == total else 1

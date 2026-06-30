@@ -174,20 +174,21 @@ def _render(resultado: dict) -> str:
     return "\n".join(linhas)
 
 
-async def responder(msg: str) -> str:
+async def responder(msg: str, confirmar: bool = False) -> str:
     intent, classe = classificar(msg)
     registrar(f"{intent}:{classe}" if classe else intent, msg)
 
     # AÇÃO — diferencia permissão; nunca executa sem aprovação
     if intent == "acao":
-        # escrita segura: DESPACHA ao agente em dry-run (Fatia 2) — propõe, não cria
+        # escrita segura: DESPACHA ao Arquivista. Sem --confirmar = dry-run (propõe);
+        # com --confirmar (aprovação humana) = cria o rascunho de fato (Fatia 3).
         if classe == "escrita_segura":
             run_agente = resolver(classe)
             if run_agente is not None:
                 titulo = _titulo_do_pedido(msg)
                 r = run_agente(titulo,
                                f"(rascunho proposto a partir do pedido: {msg})",
-                               dry_run=True)
+                               dry_run=not confirmar)
                 return _render(r)
         # sensível / externa permanecem BLOQUEADAS (sem agente automático)
         rotulo = {"externa": "AÇÃO EXTERNA", "sensivel": "AÇÃO SENSÍVEL"}[classe]
@@ -235,11 +236,14 @@ async def responder(msg: str) -> str:
 
 
 def main() -> int:
-    if len(sys.argv) < 2:
+    args = sys.argv[1:]
+    confirmar = "--confirmar" in args
+    args = [a for a in args if a != "--confirmar"]
+    if not args:
         # sem argumento -> briefing proativo (Fatia 1): "Bom dia, FabioOS"
         print(_render(briefing()))
         return 0
-    print(asyncio.run(responder(" ".join(sys.argv[1:]))))
+    print(asyncio.run(responder(" ".join(args), confirmar=confirmar)))
     return 0
 
 
