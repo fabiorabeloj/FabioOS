@@ -43,7 +43,10 @@ Toda tarefa deve ter area, status, saida esperada e criterio de conclusao.
 | PRIMUS-TASK-0022 | Fontes | done | alta | Registrar Google Drive `Rpg .docx` como fonte restrita | [[05_Raw_Sources/PRIMUS/2026-06-30_google-drive-rpg-docx]] |
 | PRIMUS-TASK-0023 | Digestor | done | critica | Criar PRIMUS Digestor v0 | [[60_Sistemas/PRIMUS_Digestor/README]] |
 | PRIMUS-TASK-0024 | Digestor | pending | alta | Rodar digestor em lote pequeno real | `catalog_entries.jsonl` validado |
+| PRIMUS-TASK-0025 | Fontes | done | critica | Transformar D&D Core em fontes Restricted | [[CatalogEntries_Restricted_DND_Core_0001]] |
+| PRIMUS-TASK-0026 | Validacao | done | alta | Validar `CE-DND-0006 Equipment` como quinta entrada estavel | [[Validacao_VE_5_Entradas_PRIMUS_Index]] |
+| PRIMUS-TASK-0027 | Validacao | pending | alta | Validar `CE-DND-0007 Creature` como primeira entrada de Desafio | MM/PRIMUS Index sem dump integral |
 
 ## Proxima Tarefa
 
-`PRIMUS-TASK-0024`: rodar o digestor em lote pequeno real e validar a saida antes de liberar Engrenagem 6 ou Missao 0001.
+`PRIMUS-TASK-0027`: validar `CE-DND-0007 Creature` como primeira entrada de Desafio, sem copiar texto integral, antes de liberar Engrenagem 6 ou Missao 0001.
