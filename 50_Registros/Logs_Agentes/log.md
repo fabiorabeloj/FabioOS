@@ -178,3 +178,11 @@ Formato:
 - Paginas atualizadas: [[30_Projetos/PRIMUS/Fila_Operacional_PRIMUS]], [[30_Projetos/PRIMUS/CatalogPool_0001_PRIMUS]], [[30_Projetos/PRIMUS/README]], [[80_Specs/PRIMUS/README]].
 - Contradicoes: nenhuma; validacao deixa claro que o lote ainda nao e canonico.
 - Proximas acoes: validar pagina/trecho de 5 entradas prioritarias.
+
+## [2026-06-30] implementacao documental | PRIMUS Changelog 5.6 e operacao v1
+
+- Fonte: Project ChatGPT `Priumus`, especialmente o log `Changelog 5.4 Revisado` e o log `Status do projeto PRIMUS`.
+- Paginas criadas: [[05_Raw_Sources/PRIMUS/2026-06-30_chatgpt_project_primus_changelog_5_6]], [[40_Wiki/PRIMUS/Changelog_PRIMUS_5_6]], [[80_Specs/PRIMUS/Spec_Vector_Engine_PRIMUS]], [[80_Specs/PRIMUS/Spec_WorldCycle_PRIMUS]], [[80_Specs/PRIMUS/Spec_Villain_Engine_PRIMUS]], [[80_Specs/PRIMUS/Spec_Mission_Contract_PRIMUS]], [[30_Projetos/PRIMUS/PRIMUS_Operacao_v1]], [[30_Projetos/PRIMUS/Vectors_0001_PRIMUS]], [[30_Projetos/PRIMUS/Villains_0001_PRIMUS]], [[30_Projetos/PRIMUS/Cantina_Board_0001_PRIMUS]], [[30_Projetos/PRIMUS/Mission_Contract_0001_PRIMUS]], [[30_Projetos/PRIMUS/DeltaP_Log_0001_PRIMUS]].
+- Paginas atualizadas: [[30_Projetos/PRIMUS/Fila_Operacional_PRIMUS]], [[30_Projetos/PRIMUS/Backlog_PRIMUS_Implementacao]], [[30_Projetos/PRIMUS/README]], [[80_Specs/PRIMUS/README]], [[50_Registros/Barramento_Multiagente]].
+- Contradicoes: Changelog 5.6 reforca que Missao 0001 continua bloqueada; PRIMUS agora possui cockpit operacional, mas ainda precisa validar pagina/trecho de 5 CatalogEntries antes de missao canonica.
+- Proximas acoes: validar 5 CatalogEntries prioritarias e promover WorldState v1.0.

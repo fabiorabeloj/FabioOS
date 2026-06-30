@@ -31,7 +31,15 @@ Toda tarefa deve ter area, status, saida esperada e criterio de conclusao.
 | PRIMUS-TASK-0010 | Persistencia | pending | alta | Aplicar DeltaP ao WorldState | update manual validado |
 | PRIMUS-TASK-0011 | Interface | pending | media | Criar mock da Cantina | tela Obsidian/UI |
 | PRIMUS-TASK-0012 | Automacao | pending | media | Desenhar workflow n8n PRIMUS Steward | fluxo sem codigo destrutivo |
+| PRIMUS-TASK-0013 | Changelog | done | critica | Formalizar Changelog 5.6 a partir dos logs do Project ChatGPT | [[40_Wiki/PRIMUS/Changelog_PRIMUS_5_6]] |
+| PRIMUS-TASK-0014 | Operacao | done | critica | Criar cockpit operacional minimo | [[PRIMUS_Operacao_v1]] |
+| PRIMUS-TASK-0015 | Motor | done | alta | Formalizar Vector Engine v0 | [[80_Specs/PRIMUS/Spec_Vector_Engine_PRIMUS]] |
+| PRIMUS-TASK-0016 | Motor | done | alta | Formalizar WorldCycle v0 | [[80_Specs/PRIMUS/Spec_WorldCycle_PRIMUS]] |
+| PRIMUS-TASK-0017 | Motor | done | alta | Formalizar Villain Engine v0 e Mission Contract v0 | [[80_Specs/PRIMUS/Spec_Villain_Engine_PRIMUS]] |
+| PRIMUS-TASK-0018 | Validacao | pending | critica | Validar pagina/trecho de 5 CatalogEntries prioritarias | 5 entradas com fonte pontual |
+| PRIMUS-TASK-0019 | Persistencia | pending | critica | Promover WorldState v1.0 | WorldState com vetores e DeltaP |
+| PRIMUS-TASK-0020 | Motor | pending | alta | Rodar primeira rodada manual de WorldCycle sem missao canonica | Cantina Board atualizada |
 
 ## Proxima Tarefa
 
-`PRIMUS-TASK-0009`: formalizar Engrenagem 6, mas somente com entradas `VE-pass-com-pendencia` e sem gerar missao canonica.
+`PRIMUS-TASK-0018`: validar pagina/trecho de 5 CatalogEntries prioritarias antes de liberar Engrenagem 6 ou Missao 0001.
