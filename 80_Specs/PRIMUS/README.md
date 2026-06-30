@@ -7,3 +7,4 @@ SPECs do sistema narrativo PRIMUS.
 - [[Spec_Ingestao_PRIMUS_ChatGPT]]
 - [[Templates_PRIMUS_Blocos]]
 - [[Spec_WorldState_PRIMUS]]
+- [[Spec_Tension_Engine_PRIMUS]]

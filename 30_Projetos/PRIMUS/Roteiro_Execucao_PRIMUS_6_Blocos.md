@@ -119,12 +119,13 @@ Fluxo:
 WorldState -> Tensoes -> Conflitos -> Faccoes -> Missoes -> DeltaP -> WorldState
 ```
 
-**Status:** especificado em [[80_Specs/PRIMUS/Spec_WorldState_PRIMUS]] e explicado em [[40_Wiki/PRIMUS/Motor_Causal_PRIMUS]].
+**Status:** iniciado em [[WorldState_0001_PRIMUS]], detalhado em [[Tensoes_Iniciais_PRIMUS]], especificado em [[80_Specs/PRIMUS/Spec_WorldState_PRIMUS]] e [[80_Specs/PRIMUS/Spec_Tension_Engine_PRIMUS]].
 
 ## Checklist de Execucao
 
-- [ ] Fase 0 WorldState minimo criado.
-- [ ] Fase 0 Tension Engine inicial especificado.
+- [x] Fase 0 WorldState minimo criado.
+- [x] Fase 0 Tension Engine inicial especificado.
+- [ ] Converter tensoes em conflitos candidatos.
 - [ ] Bloco 1 validado como definicao oficial.
 - [ ] Bloco 2 validado como taxonomia oficial.
 - [x] Bloco 3 criado com templates iniciais.
@@ -136,4 +137,4 @@ WorldState -> Tensoes -> Conflitos -> Faccoes -> Missoes -> DeltaP -> WorldState
 
 ## Proxima Acao
 
-Criar `WorldState_0001_PRIMUS.md` e uma primeira lista de tensoes estruturais antes de mexer no contrato final da [[Missao_0001_Preparacao]].
+Converter [[Tensoes_Iniciais_PRIMUS]] em conflitos candidatos para a Cantina Conflict Engine antes de mexer no contrato final da [[Missao_0001_Preparacao]].
