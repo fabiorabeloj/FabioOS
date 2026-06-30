@@ -61,3 +61,6 @@ logs/
 
 # Extracoes locais de PDF (Restricted-safe, nao versionar)
 00_Inbox/pdfs/_extracted/
+
+# Credenciais e segredos locais (NUNCA versionar)
+60_Sistemas/FabioOS/_restrito/
