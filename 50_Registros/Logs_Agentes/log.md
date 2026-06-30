@@ -226,3 +226,11 @@ Formato:
 - Relatorio: [[50_Registros/Relatorios/2026-06-30_drop-pdf-lote-0001]].
 - Status: Stirling no ar, mas autenticado/bloqueado por HTTP 401; OCR real ainda pendente.
 - Limites preservados: sem extracao integral, sem RAG reindex, sem API externa.
+
+## [2026-06-30] implementacao | Transformacao Restricted D&D Core
+
+- Ordem: Claude decidiu que extracao/documentalista e zona dele; Codex fica com CatalogEntries/resumos/metadados PRIMUS.
+- Entrega: [[05_Raw_Sources/PRIMUS/2026-06-30_pdf-dnd-core-restricted-lote-0001]], [[30_Projetos/PRIMUS/CatalogEntries_Restricted_DND_Core_0001]], [[30_Projetos/PRIMUS/Plano_Transformacao_Restricted_DND_Core]].
+- Resultado: `SRC-DND-PHB-2014`, `SRC-DND-DMG-2014` e `SRC-DND-MM-2014` criados como fontes restritas.
+- Validacao: `CE-DND-0006 Equipment` recebeu `VE-local-index-pass` via PRIMUS Index (`phb`, pagina 153, record id `bed90f56-fd8f-48cd-af0f-b3e0e0bfc7e0`).
+- Limites: sem extracao, sem OCR, sem RAG, sem dump integral e sem alterar `documentalista.py`.

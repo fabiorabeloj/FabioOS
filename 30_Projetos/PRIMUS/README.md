@@ -15,6 +15,7 @@ Projeto narrativo persistente do FabioOS.
 - [[Fila_Operacional_PRIMUS]]
 - [[Backlog_PRIMUS_Implementacao]]
 - [[CatalogEntries_Lote_0001_PRIMUS]]
+- [[CatalogEntries_Restricted_DND_Core_0001]]
 - [[CatalogPool_0001_PRIMUS]]
 - [[Validacao_VE_Lote_0001_PRIMUS]]
 - [[Validacao_VE_5_Entradas_PRIMUS_Index]]
@@ -26,6 +27,7 @@ Projeto narrativo persistente do FabioOS.
 - [[DeltaP_Log_0001_PRIMUS]]
 - [[Runtime_PRIMUS_Index_Local]]
 - [[Plano_Digestor_PRIMUS]]
+- [[Plano_Transformacao_Restricted_DND_Core]]
 - [[Missao_0001_Preparacao]]
 - [[40_Wiki/PRIMUS/Motor_Causal_PRIMUS]]
 
