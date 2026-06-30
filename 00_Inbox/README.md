@@ -26,3 +26,4 @@ Subpastas:
 - `Processar/`
 - `Ideias/`
 - `Triagem/`
+- `pdfs/` - drop folder do pipeline "PDF novo -> evento -> documentalista"
