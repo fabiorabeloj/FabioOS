@@ -28,6 +28,14 @@ def log_path() -> Path:
     return agentes_dir() / "logs" / "agentes_log.md"
 
 
+def resultado(tipo: str, ok: bool, titulo: str, corpo: str = "",
+              fontes: list = None, sugestao: str = "", artefato: str = None) -> dict:
+    """Fábrica do contrato congelado `Resultado` (ver Ordens de Coordenação).
+    Único formato de troca entre orquestrador, agentes e apresentação."""
+    return {"tipo": tipo, "ok": ok, "titulo": titulo, "corpo": corpo,
+            "fontes": fontes or [], "sugestao": sugestao, "artefato": artefato}
+
+
 def log_event(agente: str, acao: str, detalhe: str = "") -> None:
     """Grava uma linha de rastro no log dos agentes (sem segredos)."""
     lp = log_path()

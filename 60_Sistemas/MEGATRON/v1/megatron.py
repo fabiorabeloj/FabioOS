@@ -43,6 +43,7 @@ NEXT_FILE = VAULT / "60_Sistemas" / "FabioOS" / "NEXT_ACTIONS.md"
 
 from server import mcp           # reaproveita o MCP FabioOS (in-memory)  # noqa: E402
 from fastmcp import Client       # noqa: E402
+from registry import resolver    # despacho a agentes (Fatia 2)  # noqa: E402
 
 LIMIAR_IGNORANCIA = 0.5  # dist cosseno bge-m3: <0.5 relevante; >0.5 → ignorância
 
@@ -104,6 +105,17 @@ def _ler_estado() -> str:
     return "\n\n".join(partes) or "(STATUS/NEXT_ACTIONS não encontrados)"
 
 
+def _titulo_do_pedido(msg: str) -> str:
+    """Extrai um título do pedido de escrita, removendo o verbo inicial."""
+    t = msg.strip().rstrip("?.! ")
+    for v in ("criar uma nota sobre", "criar nota sobre", "registrar pendencia",
+              "registrar pendência", "registrar", "registre", "criar", "crie",
+              "gerar", "salvar", "escrever", "anotar", "anote"):
+        if t.lower().startswith(v):
+            return (t[len(v):].strip() or msg.strip())
+    return t or msg.strip()
+
+
 def _pendencias_abertas(n: int = 5) -> list:
     """Extrai as primeiras pendências abertas (- [ ]) do NEXT_ACTIONS."""
     if not NEXT_FILE.exists():
@@ -159,13 +171,21 @@ async def responder(msg: str) -> str:
     intent, classe = classificar(msg)
     registrar(f"{intent}:{classe}" if classe else intent, msg)
 
-    # AÇÃO — diferencia permissão; nunca executa
+    # AÇÃO — diferencia permissão; nunca executa sem aprovação
     if intent == "acao":
-        rotulo = {"externa": "AÇÃO EXTERNA", "sensivel": "AÇÃO SENSÍVEL",
-                  "escrita_segura": "AÇÃO DE ESCRITA"}[classe]
+        # escrita segura: DESPACHA ao agente em dry-run (Fatia 2) — propõe, não cria
+        if classe == "escrita_segura":
+            run_agente = resolver(classe)
+            if run_agente is not None:
+                titulo = _titulo_do_pedido(msg)
+                r = run_agente(titulo,
+                               f"(rascunho proposto a partir do pedido: {msg})",
+                               dry_run=True)
+                return _render(r)
+        # sensível / externa permanecem BLOQUEADAS (sem agente automático)
+        rotulo = {"externa": "AÇÃO EXTERNA", "sensivel": "AÇÃO SENSÍVEL"}[classe]
         agente = {"externa": "aprovação humana + n8n/OpenClaw",
-                  "sensivel": "aprovação humana (SafeCommit/segurança)",
-                  "escrita_segura": "SafeCommit/Arquivista"}[classe]
+                  "sensivel": "aprovação humana (SafeCommit/segurança)"}[classe]
         return (f"🛑 {rotulo} detectada — MEGATRON v1 é read-only/propose-only.\n"
                 f"  • Pedido: {msg}\n"
                 f"  • NÃO executo. Classe de permissão: {classe} → requer **aprovação humana** "

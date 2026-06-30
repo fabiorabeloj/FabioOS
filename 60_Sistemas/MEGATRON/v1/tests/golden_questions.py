@@ -19,6 +19,7 @@ except Exception:
     pass
 
 from megatron import responder, classificar, briefing  # noqa: E402
+from registry import resolver  # noqa: E402
 
 # (pergunta, intent_esperado, classe_esperada, marcador esperado na resposta)
 CASOS = [
@@ -29,7 +30,7 @@ CASOS = [
     ("Qual a cor favorita do dragao de Marte em 1850?", "consulta", None, "Ignorância"),
     ("envie um WhatsApp para o pai do aluno",           "acao", "externa", "AÇÃO EXTERNA"),
     ("apague o fabioos_db agora",                       "acao", "sensivel", "AÇÃO SENSÍVEL"),
-    ("criar uma nota sobre energia solar",              "acao", "escrita_segura", "AÇÃO DE ESCRITA"),
+    ("criar uma nota sobre energia solar",              "acao", "escrita_segura", "Proposta de nota"),
 ]
 
 
@@ -54,6 +55,15 @@ async def main() -> int:
     print(f"[{'PASS' if ok_brief else 'FALHA'}] briefing -> tipo={b.get('tipo')} | "
           f"corpo com estado: {'sim' if 'Estado operacional' in b.get('corpo','') else 'NAO'} "
           f"| sugestao: {'sim' if b.get('sugestao') else 'NAO'}")
+
+    # Fatia 2 — registro de agentes: escrita_segura despachável; sensivel/externa não.
+    ok_reg = (callable(resolver("escrita_segura"))
+              and resolver("sensivel") is None
+              and resolver("externa") is None)
+    passes += ok_reg
+    total += 1
+    print(f"[{'PASS' if ok_reg else 'FALHA'}] registry -> escrita_segura despachável; "
+          f"sensivel/externa bloqueadas")
 
     print(f"\nResultado golden: {passes}/{total}")
     return 0 if passes == total else 1
