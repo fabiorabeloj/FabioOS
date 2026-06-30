@@ -29,7 +29,9 @@ Agrupar entradas candidatas para futura Engrenagem 6 sem executar missao.
 
 Validacao preliminar em [[Validacao_VE_Lote_0001_PRIMUS]].
 
-Resultado: `VE-pass-com-pendencia`.
+Validacao local-index inicial em [[Validacao_VE_5_Entradas_PRIMUS_Index]].
+
+Resultado: `VE-pass-com-pendencia`, com 5 evidencias locais iniciais.
 
 ## Bloqueio
 
@@ -37,4 +39,4 @@ Nenhuma entrada deste pool esta canonica ate receber pagina/trecho. O pool serve
 
 ## Proxima Acao
 
-Validar pagina/trecho de 5 entradas prioritarias.
+Revisar a entrada parcial `CE-DND-0003` e validar as proximas entradas prioritarias.

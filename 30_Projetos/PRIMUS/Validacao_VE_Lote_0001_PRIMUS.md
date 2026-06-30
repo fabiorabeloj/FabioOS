@@ -18,8 +18,8 @@ tags: [primus, validacao, ve, catalogentries]
 |---|---|
 | Type | ok |
 | Class Base | ok |
-| Source | ok em nivel de fonte, pendente em pagina |
-| Page/Snippet | pendente |
+| Source | ok em nivel de fonte; 5 entradas possuem evidencia local-index |
+| Page/Snippet | parcial: 4 pass, 1 partial via PRIMUS Index |
 | Box/Subbox | ok como bootstrap |
 | Affects/NeverAffects | ok em padrao de lote |
 | Instancing Hint | ok preliminar |
@@ -30,11 +30,13 @@ tags: [primus, validacao, ve, catalogentries]
 
 O lote recebe `VE-pass-com-pendencia`: estrutura suficiente para organizar CatalogPool, mas insuficiente para gerar missao canonica.
 
+Atualizacao 2026-06-30: 5 entradas foram verificadas via [[Validacao_VE_5_Entradas_PRIMUS_Index]]. Isso melhora a confianca do lote, mas ainda nao libera Missao 0001.
+
 ## Validacao por Grupo
 
 | Grupo | Entries | Resultado | Pendencia |
 |---|---|---|---|
-| Jogador | CE-DND-0001 a CE-DND-0006 | VE-pass-com-pendencia | pagina/trecho D&D Core |
+| Jogador | CE-DND-0001 a CE-DND-0006 | VE-pass-com-pendencia com 4 evidencias locais | revisar CE-DND-0003 e validar CE-DND-0001/0006 |
 | Desafio | CE-DND-0007 a CE-DND-0010 | VE-pass-com-pendencia | pagina/trecho DMG/MM |
 | Mundo | CE-WWN-0001, CE-WWN-0002, CE-WWN-0005, CE-WWN-0006 | VE-pass-com-pendencia | pagina/trecho WWN |
 | Agentes coletivos | CE-WWN-0003, CE-WWN-0009 | VE-pass-com-pendencia | confirmar se fica em WWN ou SWN |
@@ -48,4 +50,4 @@ O lote recebe `VE-pass-com-pendencia`: estrutura suficiente para organizar Catal
 
 ## Proxima Acao
 
-Selecionar 5 entradas do lote e validar pagina/trecho primeiro, em vez de tentar validar as 20 de uma vez.
+Revisar `CE-DND-0003` para obter ancora generica melhor de `species/race`, ou validar `CE-DND-0006 equipment` como quinta entrada mais estavel.

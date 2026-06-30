@@ -21,13 +21,13 @@ Este lote cria entradas estruturais iniciais a partir das fontes do Project Chat
 | ID | Type | Name | Class Base | Source | Instancing Hint | Status |
 |---|---|---|---|---|---|---|
 | CE-DND-0001 | player_character | Player Character | Agent | D&D Core | ator jogavel de instancia | fonte-pendente |
-| CE-DND-0002 | class | Class | Entity | D&D Core | define progressao de personagem | fonte-pendente |
-| CE-DND-0003 | species | Species/Race | Entity | D&D Core | define origem jogavel | fonte-pendente |
-| CE-DND-0004 | background | Background | Entity | D&D Core | gera pericias, historia e gancho | fonte-pendente |
-| CE-DND-0005 | spell | Spell | Entity | D&D Core | efeito mecanico em encontro | fonte-pendente |
+| CE-DND-0002 | class | Class | Entity | D&D Core | define progressao de personagem | VE-local-index-pass |
+| CE-DND-0003 | species | Species/Race | Entity | D&D Core | define origem jogavel | VE-local-index-partial |
+| CE-DND-0004 | background | Background | Entity | D&D Core | gera pericias, historia e gancho | VE-local-index-pass |
+| CE-DND-0005 | spell | Spell | Entity | D&D Core | efeito mecanico em encontro | VE-local-index-pass |
 | CE-DND-0006 | equipment | Equipment | Object | D&D Core | recurso de personagem ou recompensa | fonte-pendente |
 | CE-DND-0007 | creature | Creature | Agent | Monster Manual | ator antagonista/neutro | fonte-pendente |
-| CE-DND-0008 | condition | Condition | State | D&D Core | estado temporario em instancia | fonte-pendente |
+| CE-DND-0008 | condition | Condition | State | D&D Core | estado temporario em instancia | VE-local-index-pass |
 | CE-DND-0009 | encounter | Encounter | Event | D&D Core/DMG | unidade de desafio | fonte-pendente |
 | CE-DND-0010 | treasure | Treasure | Object | DMG | recompensa e possivel DeltaP | fonte-pendente |
 
@@ -64,4 +64,4 @@ confidence: baixa_ate_validar_pagina
 
 ## Proxima Acao
 
-Aplicar V(E) neste lote: validar tipo, fonte, encaixe, instancing hint e limites.
+Continuar V(E) no lote: revisar `CE-DND-0003` e validar entradas restantes com fonte/pagina via [[Validacao_VE_5_Entradas_PRIMUS_Index]].

@@ -17,6 +17,7 @@ Projeto narrativo persistente do FabioOS.
 - [[CatalogEntries_Lote_0001_PRIMUS]]
 - [[CatalogPool_0001_PRIMUS]]
 - [[Validacao_VE_Lote_0001_PRIMUS]]
+- [[Validacao_VE_5_Entradas_PRIMUS_Index]]
 - [[PRIMUS_Operacao_v1]]
 - [[Vectors_0001_PRIMUS]]
 - [[Villains_0001_PRIMUS]]
