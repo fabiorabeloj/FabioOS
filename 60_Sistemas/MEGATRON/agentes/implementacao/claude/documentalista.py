@@ -18,6 +18,7 @@ Uso:
     python documentalista.py --pdf "00_Inbox/pdfs/arquivo.pdf" --confirmar
 """
 import argparse
+import json
 import os
 import re
 import sys
@@ -31,7 +32,31 @@ from _common import resultado, log_event, vault_root
 ROOT = vault_root()
 STIRLING = os.environ.get("STIRLING_URL", "http://localhost:8081")
 EXTRACT_DIR = ROOT / "00_Inbox" / "pdfs" / "_extracted"   # gitignored
+EVENTS_DIR = ROOT / "00_Inbox" / "pdfs" / "_events"        # eventos do Codex (front door)
 PREVIEW = 400
+
+
+def _atualizar_evento(pdf_name: str, **campos) -> str:
+    """Avança o evento do PDF (contrato com Cursor): atualiza status/safety/extraction
+    para a aba PDF Pipeline progredir DETECTADO→OCR→INDEXADO. Chaves 'safety.x' vão
+    para o bloco safety; demais no topo. Retorna o nome do arquivo ou ''."""
+    if not EVENTS_DIR.exists():
+        return ""
+    for jf in EVENTS_DIR.glob("*.json"):
+        try:
+            ev = json.loads(jf.read_text(encoding="utf-8"))
+        except Exception:
+            continue
+        if ev.get("file_name") == pdf_name:
+            ev.setdefault("safety", {})
+            for k, v in campos.items():
+                if k.startswith("safety."):
+                    ev["safety"][k.split(".", 1)[1]] = v
+                else:
+                    ev[k] = v
+            jf.write_text(json.dumps(ev, ensure_ascii=False, indent=2), encoding="utf-8")
+            return jf.name
+    return ""
 
 
 def _slug(s: str) -> str:
@@ -118,6 +143,12 @@ def run(pdf_path: str = None, op: str = "extrair", dry_run: bool = True) -> dict
         EXTRACT_DIR.mkdir(parents=True, exist_ok=True)
         out.write_text(texto, encoding="utf-8")
         log_event("Documentalista", "extraido_local", f"{rel} {n}pg {chars}c")
+        # contrato Cursor: avança o evento (painel PDF Pipeline DETECTADO→OCR→…)
+        _atualizar_evento(p.name, status="extracted",
+                          **{"safety.ocr_executed": True},
+                          extraction={"method": "pymupdf-local", "pages": n,
+                                      "chars": chars, "output_gitignored": rel,
+                                      "rag_reindexed": False})
     return resultado(
         "proposta", True, f"Extraído (local): {p.name}",
         corpo=(f"{n} páginas, {chars} chars. "
