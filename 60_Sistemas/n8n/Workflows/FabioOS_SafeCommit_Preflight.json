@@ -1,0 +1,108 @@
+{
+  "id": "fabioosSafeCommitPreflight",
+  "name": "FabioOS - SafeCommit Preflight",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "fabios-safecommit-preflight",
+        "responseMode": "responseNode",
+        "options": {}
+      },
+      "id": "20000000-0000-4000-8000-000000000001",
+      "name": "Webhook - Preflight",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [120, 360],
+      "webhookId": "fabios-safecommit-preflight"
+    },
+    {
+      "parameters": {
+        "jsCode": "const raw = $input.first().json || {};\nconst files = Array.isArray(raw.files) ? raw.files.map(String) : String(raw.files || '').split(/\\r?\\n|,/).map(s => s.trim()).filter(Boolean);\nconst diff = String(raw.diff || raw.patch || raw.conteudo || '').trim();\nconst title = String(raw.title || raw.titulo || raw.message || 'commit FabioOS').trim();\nconst source = String(raw.source || raw.origem || 'n8n').trim();\nconst requestId = raw.request_id || `safe_${Date.now()}_${Math.random().toString(36).slice(2, 8)}`;\nreturn [{ json: {\n  request_id: requestId,\n  received_at: new Date().toISOString(),\n  title,\n  source,\n  files,\n  diff,\n  diff_lines: diff ? diff.split(/\\r?\\n/).length : 0,\n  status: 'normalized'\n}}];"
+      },
+      "id": "20000000-0000-4000-8000-000000000002",
+      "name": "01 Normalizar Diff e Arquivos",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [390, 360]
+    },
+    {
+      "parameters": {
+        "jsCode": "const item = $input.first().json;\nconst patterns = [\n  {name: 'openai_key', re: /sk-[A-Za-z0-9._-]{16,}/i, severity: 'alto'},\n  {name: 'github_token', re: /gh[pous]_[A-Za-z0-9._-]{16,}/i, severity: 'alto'},\n  {name: 'bearer_token', re: /Bearer\\s+[A-Za-z0-9._-]{16,}/i, severity: 'alto'},\n  {name: 'api_key_assignment', re: /api[_-]?key\\s*[:=]/i, severity: 'medio'},\n  {name: 'password_assignment', re: /(password|senha)\\s*[:=]/i, severity: 'medio'},\n  {name: 'secret_assignment', re: /secret\\s*[:=]/i, severity: 'medio'},\n  {name: 'env_file', re: /(^|[\\/])\\.env(\\.|$)/i, severity: 'medio'},\n  {name: 'private_key', re: /BEGIN\\s+(RSA|OPENSSH|EC|PRIVATE)\\s+KEY/i, severity: 'alto'}\n];\nconst lines = item.diff ? item.diff.split(/\\r?\\n/) : [];\nconst findings = [];\nfor (let i = 0; i < lines.length; i++) {\n  const line = lines[i];\n  for (const p of patterns) {\n    if (p.re.test(line)) {\n      findings.push({line: i + 1, pattern: p.name, severity: p.severity, value_omitted: true});\n    }\n  }\n}\nfor (const f of item.files) {\n  if (/(^|[\\/])\\.env(\\.|$)/i.test(f) || /\\.(pem|key|secret)$/i.test(f)) {\n    findings.push({file: f, pattern: 'sensitive_filename', severity: 'alto', value_omitted: true});\n  }\n}\nreturn [{ json: {...item, findings, findings_count: findings.length, status: 'scanned'} }];"
+      },
+      "id": "20000000-0000-4000-8000-000000000003",
+      "name": "02 Scan de Segredos",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [680, 360]
+    },
+    {
+      "parameters": {
+        "jsCode": "const item = $input.first().json;\nconst hasHigh = item.findings.some(f => f.severity === 'alto');\nconst hasMedium = item.findings.some(f => f.severity === 'medio');\nlet decision = 'safe_to_review';\nlet ok = true;\nlet severity = 'baixo';\nif (hasHigh) { decision = 'blocked'; ok = false; severity = 'alto'; }\nelse if (hasMedium) { decision = 'needs_human_review'; ok = false; severity = 'medio'; }\nconst warnings = [];\nif (!item.files.length) warnings.push('nenhuma_lista_de_arquivos');\nif (!item.diff) warnings.push('sem_diff_para_escanear');\nreturn [{ json: {...item, ok, severity, decision, warnings, status: 'classified'} }];"
+      },
+      "id": "20000000-0000-4000-8000-000000000004",
+      "name": "03 Classificar Risco",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [960, 360]
+    },
+    {
+      "parameters": {
+        "jsCode": "const item = $input.first().json;\nconst explicitPaths = item.files.map(f => `git add -- \"${f.replace(/\"/g, '\\\\\"')}\"`);\nlet type = 'docs';\nconst joined = item.files.join(' ').toLowerCase();\nif (/script|\\.py|\\.js|\\.ts|workflow|n8n/.test(joined)) type = 'feat';\nif (/fix|bug|corrigir|hotfix/.test(item.title.toLowerCase())) type = 'fix';\nif (/changelog|readme|doc|governanca|contrato/.test(joined)) type = 'docs';\nconst message = `${type}: ${item.title.toLowerCase().replace(/[^a-z0-9\\s:-]/g, '').replace(/\\s+/g, ' ').slice(0, 72)}`;\nconst plan = {\n  stage_policy: 'stage_explicit_paths_only',\n  never_use: ['git add -A'],\n  suggested_stage_commands: explicitPaths,\n  suggested_commit_message: message,\n  pre_commit_checks: ['git diff --cached --check', 'scan de segredos', 'validacao especifica da frente']\n};\nreturn [{ json: {...item, plan, status: 'planned'} }];"
+      },
+      "id": "20000000-0000-4000-8000-000000000005",
+      "name": "04 Plano de Commit Seguro",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [1240, 360]
+    },
+    {
+      "parameters": {
+        "jsCode": "const item = $input.first().json;\nconst audit = {\n  request_id: item.request_id,\n  received_at: item.received_at,\n  files_count: item.files.length,\n  diff_lines: item.diff_lines,\n  findings_count: item.findings_count,\n  severity: item.severity,\n  decision: item.decision,\n  external_effects: false,\n  git_executed: false,\n  note: 'Preflight apenas consultivo. Nao faz stage, commit, push ou escrita no vault.'\n};\nreturn [{ json: {...item, audit, status: 'ready_to_respond'} }];"
+      },
+      "id": "20000000-0000-4000-8000-000000000006",
+      "name": "05 Auditoria",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [1510, 360]
+    },
+    {
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={{ JSON.stringify({ status: $json.decision, ok: $json.ok, request_id: $json.request_id, severity: $json.severity, warnings: $json.warnings, findings: $json.findings, plan: $json.plan, audit: $json.audit }) }}"
+      },
+      "id": "20000000-0000-4000-8000-000000000007",
+      "name": "06 Responder Preflight",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1,
+      "position": [1780, 360]
+    }
+  ],
+  "connections": {
+    "Webhook - Preflight": {
+      "main": [[{ "node": "01 Normalizar Diff e Arquivos", "type": "main", "index": 0 }]]
+    },
+    "01 Normalizar Diff e Arquivos": {
+      "main": [[{ "node": "02 Scan de Segredos", "type": "main", "index": 0 }]]
+    },
+    "02 Scan de Segredos": {
+      "main": [[{ "node": "03 Classificar Risco", "type": "main", "index": 0 }]]
+    },
+    "03 Classificar Risco": {
+      "main": [[{ "node": "04 Plano de Commit Seguro", "type": "main", "index": 0 }]]
+    },
+    "04 Plano de Commit Seguro": {
+      "main": [[{ "node": "05 Auditoria", "type": "main", "index": 0 }]]
+    },
+    "05 Auditoria": {
+      "main": [[{ "node": "06 Responder Preflight", "type": "main", "index": 0 }]]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "meta": {
+    "instanceId": "fabios"
+  }
+}
