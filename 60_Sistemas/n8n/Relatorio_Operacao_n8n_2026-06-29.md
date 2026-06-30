@@ -52,6 +52,7 @@ Arquivos em `60_Sistemas/n8n/Workflows/`:
 
 | Arquivo | JSON valido | Nos | Grupos de conexao |
 |---|---:|---:|---:|
+| `FabioOS_Intake_Orquestrador_Seguro.json` | sim | 9 | 8 |
 | `FabioOS_Webhook_Inbox.json` | sim | 4 | 3 |
 | `FabioOS_WhatsApp_Pietra.json` | sim | 8 | 6 |
 
@@ -64,6 +65,19 @@ fabioosWebhookInbox
 ```
 
 Ele foi importado como **inativo** por seguranca.
+
+Tambem foi criado e importado como **inativo** o workflow-mae:
+
+```text
+FabioOS - Intake Orquestrador Seguro
+ID: fabioosIntakeOrquestradorSeguro
+```
+
+Este workflow representa a cadeia profissional de entrada do FabioOS:
+
+```text
+entrada -> normalizacao -> validacao -> classificacao -> permissao -> roteamento -> rascunho -> auditoria -> resposta
+```
 
 Motivo:
 

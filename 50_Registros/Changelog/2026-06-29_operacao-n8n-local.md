@@ -21,6 +21,7 @@ Codex assumiu a frente `N8N_LOCAL_OPERACAO` enquanto Cursor trabalha no OpenClaw
 - Confirmado painel em `http://127.0.0.1:5678/`.
 - Validado JSON dos workflows versionados em `60_Sistemas/n8n/Workflows/`.
 - Importado `FabioOS - Webhook para Inbox` como workflow inativo no n8n local.
+- Criado workflow-mae `FabioOS - Intake Orquestrador Seguro` para representar a cadeia profissional de entrada do FabioOS.
 - Criado indice visual em `60_Sistemas/n8n/Workflows/INDEX_Workflows_n8n.md`.
 - Registrado relatorio operacional em `60_Sistemas/n8n/Relatorio_Operacao_n8n_2026-06-29.md`.
 
