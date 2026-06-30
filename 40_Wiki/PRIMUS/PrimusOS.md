@@ -49,6 +49,7 @@ Dentro do FabioOS, PrimusOS deve:
 - O sumario estrutural define PRIMUS como Grimorio, Atlas e Motor de Campanha Perpetua.
 - O PDF de contexto completo final define uma ordem operacional fixa em seis blocos.
 - O Google Doc completo amplia o PRIMUS para v4/v5 e muda a prioridade: antes da Missao 0001, devem existir WorldState, Tension Engine e Cantina Conflict Engine.
+- O Project ChatGPT adiciona outra camada: WorldState deve ser derivado de DeltaP valido, e o PRIMUS precisa de ontologia formal antes de expandir lore.
 - O legado do vault ja contem circuito EIP, sistema de tipos, templates, livro do jogador, livro do mestre e Missao 0001.
 - Existem fontes locais adicionais em Downloads e Desktop que ainda nao foram ingeridas.
 
@@ -65,6 +66,8 @@ PRIMUS e um laboratorio perfeito para testar o FabioOS como arquitetura cognitiv
 - [x] Converter tensoes em conflitos candidatos.
 - [x] Criar Player View da Cantina.
 - [x] Criar rumores seguros da Cantina.
+- [x] Inventariar logs/fontes do Project ChatGPT.
+- [x] Criar specs de ontologia formal, DeltaP e Steward.
 - [ ] Selecionar fonte/regiao segura ou lote E real para primeiro conflito jogavel.
 - [ ] Transformar os tipos em templates ativos.
 - [ ] Criar a primeira missao executavel somente depois do WorldState.

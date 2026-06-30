@@ -154,3 +154,11 @@ Formato:
 - Paginas atualizadas: [[30_Projetos/PRIMUS/README]], [[30_Projetos/PRIMUS/Roteiro_Execucao_PRIMUS_6_Blocos]], [[40_Wiki/PRIMUS/PrimusOS]], [[50_Registros/Barramento_Multiagente]].
 - Contradicoes: nenhuma; rumores foram criados como seguros e nao-canonicos.
 - Proximas acoes: selecionar fonte/regiao segura ou lote E real para primeiro conflito jogavel.
+
+## [2026-06-30] ingest | Project ChatGPT PRIMUS
+
+- Fonte: Project ChatGPT `Priumus`, abas Chats e Fontes.
+- Paginas criadas: [[05_Raw_Sources/PRIMUS/2026-06-30_chatgpt_project_primus_inventario_logs]], [[40_Wiki/PRIMUS/Matriz_Fontes_PRIMUS]], [[40_Wiki/PRIMUS/Falhas_Ontologicas_PRIMUS]], [[40_Wiki/PRIMUS/Arquitetura_MultiIA_PRIMUS]], [[80_Specs/PRIMUS/Spec_Ontologia_Formal_PRIMUS]], [[80_Specs/PRIMUS/Spec_DeltaP_PRIMUS]], [[80_Specs/PRIMUS/Spec_PRIMUS_Steward]], [[30_Projetos/PRIMUS/Fila_Operacional_PRIMUS]], [[30_Projetos/PRIMUS/Backlog_PRIMUS_Implementacao]].
+- Paginas atualizadas: [[80_Specs/PRIMUS/Spec_WorldState_PRIMUS]], [[40_Wiki/PRIMUS/README]], [[30_Projetos/PRIMUS/README]], [[80_Specs/PRIMUS/README]], [[40_Wiki/PRIMUS/PrimusOS]], [[50_Registros/Barramento_Multiagente]].
+- Contradicoes: WorldState anterior estava como objeto minimo editavel; Project corrige para estado derivado de DeltaP valido.
+- Proximas acoes: selecionar 20 CatalogEntries reais a partir de D&D Core + WWN.
