@@ -20,6 +20,7 @@ tags: [fabios, n8n, workflows, automacao]
 | Workflow | ID | Estado observado | Visualizar |
 |---|---|---|---|
 | FabioOS - Intake Orquestrador Seguro | `fabioosIntakeOrquestradorSeguro` | importado, inativo por seguranca | http://127.0.0.1:5678/workflow/fabioosIntakeOrquestradorSeguro |
+| FabioOS - SPEC para Plano de Execucao | `fabioosSpecPlanoExecucao` | importado, inativo por seguranca | http://127.0.0.1:5678/workflow/fabioosSpecPlanoExecucao |
 | FabioOS - SafeCommit Preflight | `fabioosSafeCommitPreflight` | importado, inativo por seguranca | http://127.0.0.1:5678/workflow/fabioosSafeCommitPreflight |
 | FabioOS - Webhook para Inbox | `fabioosWebhookInbox` | importado, inativo por seguranca | http://127.0.0.1:5678/workflow/fabioosWebhookInbox |
 | FabioOS - WhatsApp para Pietra | `fabioosWhatsappPietraV2` | ativo segundo log do n8n | http://127.0.0.1:5678/workflow/fabioosWhatsappPietraV2 |
@@ -61,6 +62,16 @@ O workflow `FabioOS - SafeCommit Preflight` representa a trilha visual de segura
 ```text
 diff/arquivos -> scan segredos -> risco -> plano stage explicito -> auditoria -> resposta
 ```
+
+## Cadeia de autoconstrucao
+
+O workflow `FabioOS - SPEC para Plano de Execucao` transforma uma demanda em plano auditavel:
+
+```text
+SPEC -> gate de excelencia -> tarefas -> donos -> gates -> testes -> aceite
+```
+
+Ele e util para decidir se uma fase esta madura para implementacao antes de qualquer codigo.
 
 ## Limites
 

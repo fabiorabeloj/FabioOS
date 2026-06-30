@@ -1,0 +1,121 @@
+{
+  "id": "fabioosSpecPlanoExecucao",
+  "name": "FabioOS - SPEC para Plano de Execucao",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "fabios-spec-plano",
+        "responseMode": "responseNode",
+        "options": {}
+      },
+      "id": "30000000-0000-4000-8000-000000000001",
+      "name": "Webhook - SPEC",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [120, 360],
+      "webhookId": "fabios-spec-plano"
+    },
+    {
+      "parameters": {
+        "jsCode": "const raw = $input.first().json || {};\nconst text = String(raw.spec || raw.conteudo || raw.content || '').trim();\nconst title = String(raw.titulo || raw.title || raw.nome || 'SPEC sem titulo').trim().slice(0, 160);\nconst domain = String(raw.dominio || raw.domain || 'FabioOS').trim();\nconst phase = String(raw.fase || raw.phase || '').trim();\nconst requester = String(raw.solicitante || raw.requester || 'Fabio').trim();\nconst requestId = raw.request_id || `spec_${Date.now()}_${Math.random().toString(36).slice(2, 8)}`;\nreturn [{ json: {\n  request_id: requestId,\n  received_at: new Date().toISOString(),\n  title,\n  domain,\n  phase,\n  requester,\n  spec_text: text,\n  raw_keys: Object.keys(raw),\n  status: 'normalized'\n}}];"
+      },
+      "id": "30000000-0000-4000-8000-000000000002",
+      "name": "01 Normalizar SPEC",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [380, 360]
+    },
+    {
+      "parameters": {
+        "jsCode": "const item = $input.first().json;\nconst text = `${item.title}\\n${item.spec_text}`;\nconst lower = text.toLowerCase();\nconst missing = [];\nif (!item.spec_text || item.spec_text.length < 20) missing.push('spec_texto_curto');\nif (!/(objetivo|objective|resultado)/i.test(text)) missing.push('objetivo');\nif (!/(fora de escopo|out of scope|nao fazer|não fazer)/i.test(text)) missing.push('fora_de_escopo');\nif (!/(criterio|critério|aceite|acceptance)/i.test(text)) missing.push('criterios_de_aceite');\nif (!/(teste|validacao|validação)/i.test(text)) missing.push('testes');\nif (!/(risco|risk)/i.test(text)) missing.push('riscos');\nlet excellence_gate = missing.length === 0 ? 'pass' : 'needs_refinement';\nlet permission = 'propose_only';\nif (/(whatsapp|email|push|deploy|pagamento|trade|apagar|delete|token|credencial)/i.test(lower)) permission = 'human_approval_required';\nreturn [{ json: {...item, missing_sections: missing, excellence_gate, permission, status: 'excellence_checked'} }];"
+      },
+      "id": "30000000-0000-4000-8000-000000000003",
+      "name": "02 Gate de Excelencia",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [650, 360]
+    },
+    {
+      "parameters": {
+        "jsCode": "const item = $input.first().json;\nconst lower = `${item.title}\\n${item.spec_text}`.toLowerCase();\nlet complexity = 'media';\nif (item.spec_text.length < 800) complexity = 'baixa';\nif (item.spec_text.length > 2500 || /(multiagente|runtime|api externa|whatsapp|mcp|rag|grafo|deploy)/i.test(lower)) complexity = 'alta';\nconst tasks = [];\ntasks.push({id: 'T1', owner: 'Codex', task: 'Formalizar SPEC e criterios de aceite', zone: 'documentacao'});\ntasks.push({id: 'T2', owner: 'Claude', task: 'Validar arquitetura e contrato tecnico', zone: 'arquitetura'});\nif (/(interface|dashboard|visual|html|render|apresentacao|apresentação)/i.test(lower)) tasks.push({id: 'T3', owner: 'Cursor', task: 'Prototipar apresentacao/interface consumindo contrato', zone: 'interface'});\nif (/(n8n|workflow|automacao|automação|webhook)/i.test(lower)) tasks.push({id: 'T4', owner: 'Codex', task: 'Criar workflow n8n inativo e documentado', zone: 'automacao_documentada'});\nif (/(rag|busca semantica|fonte|fontes)/i.test(lower)) tasks.push({id: 'T5', owner: 'Claude', task: 'Validar uso RAG read-only sem reindex', zone: 'rag_read_only'});\nif (/(openclaw|whatsapp|evolution)/i.test(lower)) tasks.push({id: 'T6', owner: 'Cursor/OpenClaw', task: 'Validar canal visual sem envio real', zone: 'runtime_bloqueado'});\nreturn [{ json: {...item, complexity, tasks, status: 'decomposed'} }];"
+      },
+      "id": "30000000-0000-4000-8000-000000000004",
+      "name": "03 Decompor Tarefas",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [930, 360]
+    },
+    {
+      "parameters": {
+        "jsCode": "const item = $input.first().json;\nconst lower = `${item.title}\\n${item.spec_text}`.toLowerCase();\nconst gates = [\n  'Nao expor tokens ou credenciais',\n  'Sem push sem aprovacao humana',\n  'Sem apagar conhecimento',\n  'Sem acao externa sem autorizacao',\n  'Changelog obrigatorio',\n  'Scan de segredos antes de commit'\n];\nif (/(rag|mcp|grafo)/i.test(lower)) gates.push('Uso RAG/MCP/Grafo somente read-only salvo handoff explicito');\nif (/(n8n|openclaw|whatsapp|email)/i.test(lower)) gates.push('Runtime externo permanece inativo ou Fabio-gated');\nif (/(codigo|script|python|workflow)/i.test(lower)) gates.push('Teste minimo local ou validacao sintatica obrigatoria');\nreturn [{ json: {...item, quality_gates: gates, status: 'gated'} }];"
+      },
+      "id": "30000000-0000-4000-8000-000000000005",
+      "name": "04 Gates de Qualidade",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [1210, 360]
+    },
+    {
+      "parameters": {
+        "jsCode": "const item = $input.first().json;\nconst acceptance = [\n  'Artefato versionavel no vault',\n  'Visivel no Obsidian',\n  'Sem credenciais expostas',\n  'Possui changelog',\n  'Possui rollback ou criterio de desligamento'\n];\nif (item.excellence_gate !== 'pass') acceptance.unshift(`SPEC refinada: corrigir secoes ausentes (${item.missing_sections.join(', ')})`);\nconst tests = [\n  'Validar JSON/Markdown quando aplicavel',\n  'Rodar scan de segredos',\n  'Conferir git diff --check',\n  'Conferir que arquivos de outras frentes nao entraram no stage'\n];\nreturn [{ json: {...item, acceptance, tests, status: 'acceptance_ready'} }];"
+      },
+      "id": "30000000-0000-4000-8000-000000000006",
+      "name": "05 Aceite e Testes",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [1490, 360]
+    },
+    {
+      "parameters": {
+        "jsCode": "const item = $input.first().json;\nconst plan = {\n  request_id: item.request_id,\n  title: item.title,\n  domain: item.domain,\n  phase: item.phase,\n  excellence_gate: item.excellence_gate,\n  permission: item.permission,\n  complexity: item.complexity,\n  tasks: item.tasks,\n  quality_gates: item.quality_gates,\n  acceptance: item.acceptance,\n  tests: item.tests,\n  recommended_next_step: item.excellence_gate === 'pass' ? 'aprovar plano e distribuir tarefas por zona' : 'refinar SPEC antes de implementar',\n  external_effects: false\n};\nconst markdown = [\n  `# Plano de Execucao - ${item.title}`,\n  '',\n  `- Dominio: ${item.domain}`,\n  `- Fase: ${item.phase || 'nao definida'}`,\n  `- Gate de excelencia: ${item.excellence_gate}`,\n  `- Permissao: ${item.permission}`,\n  `- Complexidade: ${item.complexity}`,\n  '',\n  '## Tarefas',\n  ...item.tasks.map(t => `- [ ] ${t.id} (${t.owner}/${t.zone}): ${t.task}`),\n  '',\n  '## Gates de qualidade',\n  ...item.quality_gates.map(g => `- ${g}`),\n  '',\n  '## Criterios de aceite',\n  ...item.acceptance.map(a => `- [ ] ${a}`),\n  '',\n  '## Testes minimos',\n  ...item.tests.map(t => `- [ ] ${t}`),\n  ''\n].join('\\n');\nreturn [{ json: {...item, execution_plan: plan, markdown_plan: markdown, status: 'plan_ready'} }];"
+      },
+      "id": "30000000-0000-4000-8000-000000000007",
+      "name": "06 Montar Plano",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [1770, 360]
+    },
+    {
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={{ JSON.stringify({ status: $json.excellence_gate, request_id: $json.request_id, title: $json.title, permission: $json.permission, complexity: $json.complexity, missing_sections: $json.missing_sections, execution_plan: $json.execution_plan, markdown_plan: $json.markdown_plan }) }}"
+      },
+      "id": "30000000-0000-4000-8000-000000000008",
+      "name": "07 Responder Plano",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1,
+      "position": [2050, 360]
+    }
+  ],
+  "connections": {
+    "Webhook - SPEC": {
+      "main": [[{ "node": "01 Normalizar SPEC", "type": "main", "index": 0 }]]
+    },
+    "01 Normalizar SPEC": {
+      "main": [[{ "node": "02 Gate de Excelencia", "type": "main", "index": 0 }]]
+    },
+    "02 Gate de Excelencia": {
+      "main": [[{ "node": "03 Decompor Tarefas", "type": "main", "index": 0 }]]
+    },
+    "03 Decompor Tarefas": {
+      "main": [[{ "node": "04 Gates de Qualidade", "type": "main", "index": 0 }]]
+    },
+    "04 Gates de Qualidade": {
+      "main": [[{ "node": "05 Aceite e Testes", "type": "main", "index": 0 }]]
+    },
+    "05 Aceite e Testes": {
+      "main": [[{ "node": "06 Montar Plano", "type": "main", "index": 0 }]]
+    },
+    "06 Montar Plano": {
+      "main": [[{ "node": "07 Responder Plano", "type": "main", "index": 0 }]]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "meta": {
+    "instanceId": "fabios"
+  }
+}
