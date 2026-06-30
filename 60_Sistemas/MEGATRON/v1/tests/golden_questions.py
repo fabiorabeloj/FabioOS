@@ -129,6 +129,17 @@ async def main() -> int:
     print(f"[{'PASS' if ok_chain else 'FALHA'}] fatia4 cadeia -> resposta tem "
           f"'Recuperado do vault' + 'Síntese'")
 
+    # Pesquisador (Crawl4AI) — agente ativo e roteável (sem crawlear na bateria).
+    import pesquisador  # noqa: E402  (path injetado pelo registry)
+    r_pesq = rotear("coletar_web")
+    ok_pesq = (callable(getattr(pesquisador, "run", None))
+               and r_pesq and r_pesq["status"] == "ativo"
+               and "Crawl4AI" in r_pesq["ferramenta"])
+    passes += ok_pesq
+    total += 1
+    print(f"[{'PASS' if ok_pesq else 'FALHA'}] pesquisador -> coletar_web=ativo (Crawl4AI), "
+          f"run() callable")
+
     print(f"\nResultado golden: {passes}/{total}")
     return 0 if passes == total else 1
 

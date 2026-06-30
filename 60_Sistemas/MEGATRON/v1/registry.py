@@ -35,11 +35,12 @@ AGENTES = {
                       "capacidades": ["recomendar_estrategia"]},
     "barramento": {"status": "ativo", "ferramenta": "interno (barramento.py)",
                    "capacidades": ["comunicar_agentes"]},
+    # 1º tool da stack INSTALADO e funcional (SPEC crawl4ai-ingestao-rag)
+    "pesquisador": {"status": "ativo", "ferramenta": "Crawl4AI 0.9 (venv RAG; CLI pesquisador.py)",
+                    "capacidades": ["coletar_web", "alimentar_rag"]},
     # Futuros — stack operacional (não instalados; ver Mapa de Arquitetura)
     "programador": {"status": "planejado", "ferramenta": "OpenHands",
                     "capacidades": ["escrever_codigo", "corrigir_bug", "abrir_pr"]},
-    "pesquisador": {"status": "planejado", "ferramenta": "Crawl4AI",
-                    "capacidades": ["coletar_web", "alimentar_rag"]},
     "documentalista": {"status": "planejado", "ferramenta": "Stirling PDF",
                        "capacidades": ["processar_pdf", "ocr", "merge_split_pdf"]},
     "banco": {"status": "planejado", "ferramenta": "Supabase / Qdrant",

@@ -76,12 +76,12 @@ URL (aprovada)
 
 ## 7. Plano de tarefas (após OK do Fabio)
 
-- [ ] `pip install crawl4ai` no venv do RAG (isolado) + smoke test 1 URL.
-- [ ] `pesquisador.py`: `run(url) -> Resultado` (markdown limpo, dry-run salva preview).
-- [ ] Registrar agente `pesquisador` como `ativo` no `registry.py`.
-- [ ] Integrar ao Arquivista (salvar em `05_Raw_Sources/web/`).
-- [ ] Golden: 5 casos (doc técnica, artigo, página JS, página com tabela, página bloqueada → falha graciosa).
+- [x] `pip install crawl4ai` (0.9.0) no venv do RAG + `playwright install chromium` + smoke test (`example.com` → markdown limpo, dry-run). **Feito 2026-06-30.**
+- [x] `pesquisador.py`: `run(url) -> Resultado` (markdown limpo; dry-run só prévia; `--confirmar` salva em `05_Raw_Sources/web/`).
+- [x] Registrar agente `pesquisador` como `ativo` no `registry.py` (Maestro mostra 6 ativos).
+- [ ] Golden de crawl real: 5 casos (doc técnica, artigo, página JS, tabela, página bloqueada → falha graciosa). [golden atual: import+rota ativa, sem rede]
 - [ ] Registrar experiência no ReasoningBank (funcionou? que tipo de site?).
+- [ ] (opcional) Wire `coletar_web` ao responder do MEGATRON (intent "pesquisar").
 
 ## 8. Testes mínimos
 
