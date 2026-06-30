@@ -57,6 +57,22 @@ Com um LLM local plugado + os agentes autônomos da stack (OpenHands = programad
 Browser Use = navegador), o MEGATRON passa de **roteador** a **organismo que age e
 raciocina sozinho** — eu viro consultor/arquiteto, não o motor.
 
+## PoC realizada (2026-06-30) — cérebro local funciona, mas precisa de GPU
+
+Instalado Ollama + `llama3.2:3b` e ligado o modo `--llm` no MEGATRON. Resultado:
+- ✅ **Arquitetura provada:** `megatron.py "..." --llm` chama o LLM local e **gera
+  resposta redigida** sobre a recuperação do RAG — **sem Claude, sem API**.
+- ⚠️ **GPU GTX 1050 Ti (2016) é velha demais:** `CUDA error: PTX compiled with an
+  unsupported toolchain`. O modelo **não roda na GPU** desta máquina.
+- ⚠️ **Forçado CPU** (`OLLAMA_NUM_GPU=0`): funciona, mas **lento** (~25s prompt curto;
+  ~1-3 min p/ síntese sobre RAG). Modelo 3B é fraco — às vezes diz "não sabe".
+- 🎯 **Conclusão = o argumento de hardware, ao vivo:** com uma **GPU moderna**
+  (RTX 3090+) o MEGATRON raciocinaria **bem e rápido**, local. Hoje: prova de
+  conceito ok; uso prático real exige a GPU.
+
+**Nota operacional:** nesta máquina, iniciar o Ollama com `OLLAMA_NUM_GPU=0`
+(a 1050 Ti quebra com CUDA). Default `OLLAMA_MODEL=llama3.2:3b`.
+
 ## Resumo em uma frase
 
 Hoje: **MEGATRON = corpo autônomo (roteia/recupera/lembra) + cérebro emprestado
