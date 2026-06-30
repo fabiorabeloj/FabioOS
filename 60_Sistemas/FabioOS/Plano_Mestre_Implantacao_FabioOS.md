@@ -98,7 +98,7 @@ Claude Code / n8n / MCPs
   ↓
 Obsidian + GitHub
   ↓
-sources/ → wiki/ → schema/ → mapas → RAG → grafo
+05_Raw_Sources/_compat_sources/ → 40_Wiki/_compat_wiki/ → 60_Sistemas/Wiki/schema/ → mapas → RAG → grafo
 ```
 
 Geometricamente, o sistema pode ser entendido assim:
@@ -126,16 +126,17 @@ A estrutura recomendada do vault é:
 
 ```text
 00_Inbox/
+05_Raw_Sources/
 10_Dashboard/
 20_Areas/
 30_Projetos/
-40_Repertorio/
+40_Wiki/
 50_Registros/
 60_Sistemas/
+70_Skills/
+80_Specs/
 90_Arquivo/
-sources/
-wiki/
-schema/
+60_Sistemas/Wiki/schema/
 .claude/
 ```
 
@@ -144,17 +145,31 @@ schema/
 | Pasta            | Função                                                                  |
 | ---------------- | ----------------------------------------------------------------------- |
 | `00_Inbox/`      | Entrada rápida de ideias, textos, prints, links e capturas              |
+| `05_Raw_Sources/` | Fontes brutas e evidências originais                                   |
 | `10_Dashboard/`  | Painéis de controle e visão geral                                       |
 | `20_Areas/`      | Áreas contínuas da vida: escola, finanças, saúde, estudos, vida pessoal |
 | `30_Projetos/`   | Projetos com começo, desenvolvimento e entregáveis                      |
-| `40_Repertorio/` | Conhecimento acumulado por tema                                         |
+| `40_Wiki/`       | Conhecimento processado, conectado e navegável                          |
 | `50_Registros/`  | Decisões, changelogs, reuniões, logs e histórico                        |
 | `60_Sistemas/`   | Documentação técnica dos sistemas usados                                |
+| `70_Skills/`     | Habilidades reutilizáveis dos agentes                                   |
+| `80_Specs/`      | Especificações executáveis antes de implementações relevantes           |
 | `90_Arquivo/`    | Materiais encerrados ou preservados                                     |
-| `sources/`       | Fontes brutas preservadas                                               |
-| `wiki/`          | Conhecimento tratado, conectado e navegável                             |
-| `schema/`        | Regras, padrões e critérios de qualidade                                |
+| `60_Sistemas/Wiki/schema/`        | Regras, padrões e critérios de qualidade                                |
 | `.claude/`       | Configuração project-level do Claude Code                               |
+
+### 4.2 Transicao para a estrutura canonica v2
+
+Em 2026-06-29, foi formalizado o mapa canonico de pastas:
+
+- [[60_Sistemas/FabioOS/Mapa_Canonico_Pastas_Obsidian_v2_2026-06-29]]
+
+Decisao operacional:
+
+- a estrutura v2 passa a governar novos arquivos;
+- pastas antigas como `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/10_Mapas/`, `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/20_Projetos/`, `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/30_Conhecimento/`, `40_Decisoes`, `40_Repertorio`, `50_Fontes`, `sources` e `wiki` permanecem preservadas como legado/compatibilidade;
+- nenhuma pasta legada deve ser apagada;
+- migracoes devem ocorrer por lotes pequenos, com revisao de backlinks, changelog e aprovacao quando impactarem RAG/Grafo.
 
 ---
 
@@ -223,11 +238,11 @@ Funções:
 O Claude Code deve operar dentro do repositório, guiado por arquivos como:
 
 ```text
-CLAUDE.md
+60_Sistemas/FabioOS/bootstrap/CLAUDE.md
 .claude/commands/
 .claude/agents/
-schema/
-wiki/indices/mapa-fabios.md
+60_Sistemas/Wiki/schema/
+40_Wiki/_compat_wiki/indices/mapa-fabios.md
 50_Registros/Changelog/
 ```
 
@@ -360,11 +375,11 @@ Uso ideal:
 ```text
 Manus → relatório externo
 ↓
-sources/research/
+05_Raw_Sources/_compat_sources/research/
 ↓
 Claude Code
 ↓
-wiki/
+40_Wiki/_compat_wiki/
 ```
 
 ---
@@ -532,7 +547,7 @@ link / página / arquivo / doc / repo
 ↓
 captura
 ↓
-preservação em sources/
+preservação em 05_Raw_Sources/_compat_sources/
 ↓
 extração para Markdown
 ↓
@@ -540,7 +555,7 @@ normalização com YAML
 ↓
 curadoria
 ↓
-wiki/
+40_Wiki/_compat_wiki/
 ↓
 mapa
 ↓
@@ -554,7 +569,7 @@ commit seguro
 ## 6.3 Estrutura de pastas para ingestão
 
 ```text
-sources/
+05_Raw_Sources/_compat_sources/
 ├── web/
 ├── docs/
 ├── pdfs/
@@ -569,14 +584,14 @@ sources/
 
 | Pasta                   | Função                                      |
 | ----------------------- | ------------------------------------------- |
-| `sources/web/`          | Páginas web e links                         |
-| `sources/docs/`         | Arquivos DOCX, ODT, TXT e documentos locais |
-| `sources/pdfs/`         | PDFs preservados ou extraídos               |
-| `sources/drive/`        | Google Docs e arquivos do Google Drive      |
-| `sources/repositorios/` | Repositórios GitHub e documentação técnica  |
-| `sources/research/`     | Relatórios externos, inclusive do Manus     |
-| `sources/extracted/`    | Texto convertido para Markdown              |
-| `sources/_inbox/`       | Material ainda não processado               |
+| `05_Raw_Sources/_compat_sources/web/`          | Páginas web e links                         |
+| `05_Raw_Sources/_compat_sources/docs/`         | Arquivos DOCX, ODT, TXT e documentos locais |
+| `05_Raw_Sources/_compat_sources/pdfs/`         | PDFs preservados ou extraídos               |
+| `05_Raw_Sources/_compat_sources/drive/`        | Google Docs e arquivos do Google Drive      |
+| `05_Raw_Sources/_compat_sources/repositorios/` | Repositórios GitHub e documentação técnica  |
+| `05_Raw_Sources/_compat_sources/research/`     | Relatórios externos, inclusive do Manus     |
+| `05_Raw_Sources/_compat_sources/extracted/`    | Texto convertido para Markdown              |
+| `05_Raw_Sources/_compat_sources/_inbox/`       | Material ainda não processado               |
 
 ---
 
@@ -1033,9 +1048,9 @@ Objetivo: criar primeira wiki navegável.
 
 Entregáveis:
 
-* 10 páginas em `wiki/sistemas/` e `wiki/conceitos/`;
-* mapa em `wiki/indices/mapa-fabios.md`;
-* schemas `schema/fluxo-wiki.md` e `schema/qualidade-wiki.md`.
+* 10 páginas em `40_Wiki/_compat_wiki/sistemas/` e `40_Wiki/_compat_wiki/conceitos/`;
+* mapa em `40_Wiki/_compat_wiki/indices/mapa-fabios.md`;
+* schemas `60_Sistemas/Wiki/schema/fluxo-wiki.md` e `60_Sistemas/Wiki/schema/qualidade-wiki.md`.
 
 Critério de sucesso:
 
@@ -1054,12 +1069,12 @@ Objetivo: parar de depender de sessão anterior do Claude Code.
 Entregáveis:
 
 ```text
-CLAUDE.md atualizado com leitura obrigatória
-wiki/indices/mapa-fabios.md como ponto de entrada
+60_Sistemas/FabioOS/bootstrap/CLAUDE.md atualizado com leitura obrigatória
+40_Wiki/_compat_wiki/indices/mapa-fabios.md como ponto de entrada
 60_Sistemas/FabioOS/Plano_Mestre_Implantacao_FabioOS.md (este arquivo)
 ```
 
-O `CLAUDE.md` deve conter:
+O `60_Sistemas/FabioOS/bootstrap/CLAUDE.md` deve conter:
 
 * o que é o FabioOS;
 * estado atual;
@@ -1082,23 +1097,23 @@ Ao abrir uma nova sessão, basta dizer:
 
 ## Fase 7 — Consolidação da Camada 1
 
-Status: pendente.
+Status: **concluída**.
 
 Objetivo: documentar as ferramentas centrais.
 
-Páginas prioritárias:
+Páginas criadas:
 
 ```text
-wiki/sistemas/obsidian.md
-wiki/sistemas/claude-code.md
-wiki/sistemas/n8n.md
-wiki/sistemas/github.md
-wiki/sistemas/chatgpt.md
-wiki/sistemas/openrouter.md
-wiki/sistemas/openclaw.md
-wiki/sistemas/hermes-agent.md
-wiki/sistemas/manus.md
-wiki/sistemas/cursor.md
+40_Wiki/_compat_wiki/sistemas/obsidian.md
+40_Wiki/_compat_wiki/sistemas/claude-code.md
+40_Wiki/_compat_wiki/sistemas/n8n.md
+40_Wiki/_compat_wiki/sistemas/github.md
+40_Wiki/_compat_wiki/sistemas/chatgpt.md
+40_Wiki/_compat_wiki/sistemas/openrouter.md
+40_Wiki/_compat_wiki/sistemas/openclaw.md
+40_Wiki/_compat_wiki/sistemas/hermes-agent.md
+40_Wiki/_compat_wiki/sistemas/manus.md
+40_Wiki/_compat_wiki/sistemas/cursor.md
 ```
 
 Critério de sucesso:
@@ -1107,36 +1122,69 @@ Critério de sucesso:
 Toda ferramenta principal tem função definida dentro do FabioOS.
 ```
 
+## Fase 7.5 — Protocolo Operacional
+
+Status: **concluída**.
+
+Objetivo: definir como o FabioOS é usado no dia a dia.
+
+Entregável:
+
+```text
+60_Sistemas/FabioOS/Protocolo_Operacional_FabioOS.md
+```
+
+Contém:
+- princípio central (5 destinos)
+- fluxo operacional (entrada → revisão)
+- destino por tipo de entrada
+- rotinas diária, semanal e mensal
+- regras de aprovação humana
+- convenções de nomenclatura
+- critérios de sucesso por fase
+
+Critério de sucesso:
+
+```text
+Qualquer entrada sabe onde vai e como será processada.
+```
+
 ---
 
 ## Fase 7.5 — Ingestão externa
 
-Status: pendente.
+Status: **concluída**.
 
 Objetivo: fazer o FabioOS beber de links, páginas, arquivos e documentos.
 
 Entregáveis:
 
 ```text
-sources/web/
-sources/docs/
-sources/pdfs/
-sources/drive/
-sources/research/
-sources/extracted/
-sources/_inbox/
+05_Raw_Sources/_compat_sources/web/             ✓
+05_Raw_Sources/_compat_sources/docs/            ✓
+05_Raw_Sources/_compat_sources/pdfs/            ✓
+05_Raw_Sources/_compat_sources/drive/           ✓
+05_Raw_Sources/_compat_sources/research/        ✓
+05_Raw_Sources/_compat_sources/extracted/       ✓
+05_Raw_Sources/_compat_sources/_inbox/          ✓
+05_Raw_Sources/_compat_sources/README.md        ✓ (atualizado com estrutura completa)
 ```
 
-Comandos:
+Comandos implementados:
 
 ```text
-/ingest-url
-/ingest-doc
-/ingest-pdf
-/ingest-drive-doc
-/ingest-repo
-/normalize-source
-/check-source-quality
+/ingest-url              ✓
+/ingest-pdf              ✓
+/ingest-doc              ✓
+/normalize-source        ✓
+/check-source-quality    ✓
+```
+
+Comandos pendentes (Fase 14+):
+
+```text
+/ingest-drive-doc        ← depende de MCP Google Drive
+/ingest-repo             ← usar /archive-source por enquanto
 ```
 
 Critério de sucesso:
@@ -1149,23 +1197,45 @@ Um link ou arquivo externo vira fonte preservada, Markdown normalizado e possív
 
 ## Fase 8 — Sistema Escola
 
-Status: pendente.
+Status: **concluída**.
 
 Objetivo: criar sistema de produção docente.
+
+Entregáveis:
+
+```text
+60_Sistemas/Escola/Sistema_Escola.md
+60_Sistemas/Escola/templates/TEMPLATE_PROVA.md
+60_Sistemas/Escola/templates/TEMPLATE_REVISAO.md
+60_Sistemas/Escola/templates/TEMPLATE_GABARITO.md
+60_Sistemas/Escola/templates/TEMPLATE_COMUNICADO.md
+40_Wiki/_compat_wiki/projetos/escola.md
+```
 
 Critério de sucesso:
 
 ```text
 Produzir materiais escolares com padrão, velocidade e rastreabilidade.
+Teste: criar prova do zero em menos de 30 min com Claude Code.
 ```
 
 ---
 
 ## Fase 9 — Sistema Pietra
 
-Status: pendente.
+Status: **concluída**.
 
 Objetivo: iniciar Atendimento Inteligente Pietra.
+
+Entregáveis:
+
+```text
+60_Sistemas/Pietra/Sistema_Pietra.md
+60_Sistemas/Pietra/intents/INTENTS_CATALOGO.md   ← 11 categorias com gatilhos
+60_Sistemas/Pietra/respostas-modelo/RESPOSTAS_MODELO.md ← 12 respostas-modelo
+60_Sistemas/Pietra/regras/REGRAS_CLASSIFICACAO.md ← escalonamento e privacidade
+40_Wiki/_compat_wiki/projetos/pietra.md
+```
 
 Critério de sucesso:
 
@@ -1177,9 +1247,18 @@ Uma mensagem simulada é classificada corretamente e recebe resposta sugerida.
 
 ## Fase 10 — n8n operacional
 
-Status: iniciado, ainda não completo.
+Status: **workflow criado — ativação pendente** (importar JSON + configurar credencial Obsidian).
 
 Objetivo: criar automações reais.
+
+Entregáveis:
+
+```text
+60_Sistemas/n8n/README.md
+60_Sistemas/n8n/Workflows/FabioOS_Webhook_Inbox.md
+60_Sistemas/n8n/Workflows/FabioOS_Webhook_Inbox.json  ← pronto para importar
+40_Wiki/_compat_wiki/sistemas/n8n.md (atualizado)
+```
 
 Critério de sucesso:
 
@@ -1187,11 +1266,28 @@ Critério de sucesso:
 Um webhook gera uma nota no FabioOS.
 ```
 
+Para concluir: importar JSON no n8n UI → configurar credencial Obsidian API Token → ativar → testar curl.
+
 ---
 
 ## Fase 11 — OpenClaw como porta externa
 
-Status: pendente.
+Status: **arquitetura criada — setup Evolution API pendente**.
+
+Entregáveis:
+
+```text
+60_Sistemas/OpenClaw/Sistema_OpenClaw.md
+60_Sistemas/OpenClaw/setup/EVOLUTION_API_SETUP.md
+60_Sistemas/n8n/Workflows/FabioOS_WhatsApp_Pietra.md
+60_Sistemas/n8n/Workflows/FabioOS_WhatsApp_Pietra.json  ← pronto para importar
+.claude/commands/simular-mensagem-pietra.md
+```
+
+Tecnologia base: Evolution API (open-source, Docker, porta 8080).
+Fluxo: WhatsApp → Evolution API (webhook) → n8n (classifica) → Pietra → notifica professor.
+
+Para concluir: executar EVOLUTION_API_SETUP.md → importar workflow → testar curl.
 
 Critério de sucesso:
 
@@ -1257,43 +1353,64 @@ Qualquer IA autorizada consegue consultar e operar o FabioOS por MCP.
 
 ## Fases 16–23
 
-| Fase | Assunto | Status |
-|---|---|---|
-| 16 | Manus como executor externo | Futuro |
-| 16.5 | Cursor para desenvolvimento | Futuro |
-| 17 | Hermes Agent (opcional) | Opcional |
-| 18 | Sistema Trader | Pendente |
-| 19 | Sistema PRIMUS | Pendente |
-| 20 | Integração Google (Gmail, Drive, Calendar) | Futuro |
-| 21 | Dashboards (FabioOS, Escola, Trader, PRIMUS) | Futuro |
-| 22 | Segurança e permissões (contínua) | Contínua |
-| 23 | Produção controlada | Futuro |
+> **Reordenamento (2026-06-26):** a pedido do Fabio, **Trader (18) e PRIMUS (19) foram movidos para o final** do roadmap. A **Interface única do FabioOS** foi adicionada como **capstone** — ver [[60_Sistemas/FabioOS/Visao_Interface_FabioOS]].
+
+| Fase | Assunto | Status | Trilho |
+|---|---|---|---|
+| 16 | Manus como executor externo | Futuro | Infra |
+| 16.5 | Cursor para desenvolvimento | Futuro | Infra |
+| 17 | Hermes Agent (opcional) | Opcional | Infra |
+| 20 | Integração Google (Gmail, Drive, Calendar) | Futuro | Empresarial |
+| 21 | Dashboards (FabioOS, Escola) | Futuro | Empresarial |
+| 22 | Segurança e permissões (contínua) | Contínua | Infra |
+| 23 | Produção controlada | Futuro | Empresarial |
+| **Capstone** | **Interface única (ecossistema de inteligências)** | Conceito | Capstone |
+| 18 | Sistema Trader | Final | Pessoal |
+| 19 | Sistema PRIMUS | Final | Pessoal |
+
+**Painel de controle de pendências e trilhos:** [[90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/10_Mapas/Painel_Pendencias_FabioOS]]
 
 ---
 
-# 9. Ordem prioritária a partir do estado atual
+# 9. Protocolo Operacional
+
+O protocolo define como o FabioOS é usado no dia a dia — fluxo de entradas, rotinas e regras de aprovação humana.
+
+Documento completo: **`60_Sistemas/FabioOS/Protocolo_Operacional_FabioOS.md`**
+
+---
+
+# 10. Ordem prioritária a partir do estado atual
 
 ```text
-Fase 6 — Bootstrap de contexto       ← AGORA
-Fase 7 — Consolidação da Camada 1
-Fase 7.5 — Ingestão externa
-Fase 8 — Sistema Escola
+Fase 6 — Bootstrap de contexto            ✓ concluída
+Fase 7 — Consolidação da Camada 1         ✓ concluída
+Fase 7.5 — Protocolo Operacional          ✓ concluída
+Fase 8 — Sistema Escola                   ✓ concluída
+Fase 7.5 — Ingestão externa               ← PRÓXIMA (paralela à 8.5)
+Fase 8.5 — Comandos Escola + school-assistant    ✓ concluída
+Fase 7.5 — Ingestão externa                       ← PRÓXIMA
 Fase 9 — Sistema Pietra
-Fase 10 — n8n operacional
-Fase 11 — OpenClaw
-Fase 12 — RAG
-Fase 13 — Grafo
-Fase 14 — MCPs prontos
-Fase 15 — MCP FabioOS
+Fase 9 — Sistema Pietra                           ✓ concluída
+Fase 10 — n8n operacional                         ~ ativação pendente
+Fase 11 — OpenClaw                                 ~ setup Evolution API pendente
+Fase 12 — RAG                                      ← PRÓXIMA (trilho pessoal/aprendizado)
+Fase 13 — Grafo                                    (trilho pessoal/aprendizado)
+Fase 14 — MCPs prontos                             (infra)
+Fase 15 — MCP FabioOS                              (infra)
+Fase 20–23 — Google, Dashboards, Produção          (trilho empresarial)
+Capstone — Interface única                         (depende de 12,13,14,15,21)
+Fase 18 — Trader                                   (final)
+Fase 19 — PRIMUS                                   (final)
 ```
 
-Não é recomendável avançar para Hermes, RAG, grafo ou MCP customizado antes do bootstrap de contexto.
+> Ordem de execução por trilho e pendências abertas: ver **[[90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/10_Mapas/Painel_Pendencias_FabioOS]]**.
 
-A razão:
+A regra de continuidade:
 
 ```text
 Sem contexto central, cada IA vira uma conversa solta.
-Com CLAUDE.md + wiki + changelog, todas as IAs orbitam o mesmo sistema.
+Com 60_Sistemas/FabioOS/bootstrap/CLAUDE.md + wiki + protocolo + changelog, todas as IAs orbitam o mesmo sistema.
 ```
 
 ---
@@ -1346,4 +1463,90 @@ A regra de continuidade:
 ```text
 O contexto não deve depender da sessão anterior.
 O contexto deve estar escrito no próprio FabioOS.
+```
+
+---
+
+# 12. Addendum - camada profissional transversal
+
+Os sinais de mercado sobre agentes, MCPs, bancos, automacao, dashboards, deploy e infraestrutura nao devem ser tratados como modismo. Eles ensinam quais capacidades um sistema operacional profissional precisa ter.
+
+A partir de 2026-06-28, as fases 0-23 continuam validas, mas passam a ser avaliadas tambem pela camada de profissionalizacao descrita em:
+
+- [[90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/40_Decisoes/2026-06-28_Decisao_Camadas_Profissionais_FabioOS]]
+- [[90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/30_Conhecimento/Tecnologia/Arquiteturas_de_Mercado_Radar_Tecnologico]]
+- [[60_Sistemas/FabioOS/Estrutura_Profissional_FabioOS_MEGATRON_2026-06-28]]
+- [[60_Sistemas/FabioOS/Matriz_Profissionalizacao_FabioOS_2026-06-28]]
+- [[60_Sistemas/FabioOS/Matriz_Dominios_Dados_Permissoes_2026-06-28]]
+- [[60_Sistemas/FabioOS/Catalogo_Caminhos_Ferramentas_Demonstradas_2026-06-28]]
+- [[60_Sistemas/FabioOS/Protocolo_Spec_Driven_FabioOS]]
+
+## Subfases candidatas
+
+| Subfase | Tema | Funcao |
+|---|---|---|
+| 20.5 | Data Platform | PostgreSQL/Supabase para dados estruturados, tarefas, estados, custos e metadados |
+| 21.5 | Observability Stack | Logs, metricas, erros, custos e execucao de agentes |
+| 22.5 | AI Cost and Privacy Control | Tetos de custo por provedor, classificacao de dados e politica de envio a modelos |
+| 23.5 | Deploy and Reliability Stack | Docker/VPS/cloud, backup, rollback, ambientes e monitoramento |
+| 24 | Federacao de dominios | FabioOS, PietraOS, TraderOS, PrimusOS e IAOS com memorias/permissoes por escopo |
+| 25 | ProductOS | Produto externo: usuarios, pagamentos, e-mail transacional, analytics e suporte |
+| 26 | Local AI and Hardware Lab | Avaliacao de IA local/hardware apenas depois de medir uso real, custo e privacidade |
+
+## Gate profissional
+
+Uma capacidade nova so avanca quando tiver objetivo, entrada, saida, permissao, log, custo, teste minimo, fallback e documentacao.
+
+## Regra de assimilacao
+
+Quando Fabio trouxer um prompt, print, anuncio, video ou ferramenta, a pergunta correta nao e "vamos instalar?". A pergunta correta e:
+
+```text
+Que caminho isso demonstra e qual camada do FabioOS melhora?
+```
+
+So depois disso se decide se vira estudo, especificacao, subfase, piloto ou descarte.
+
+O processo formal para essa extracao e o [[90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/30_Conhecimento/Tecnologia/Arquiteturas_de_Mercado_Radar_Tecnologico]].
+
+## Regra de dominio e permissao
+
+Antes de ingerir, reindexar, automatizar, enviar a modelo externo ou conectar dominios, aplicar a [[60_Sistemas/FabioOS/Matriz_Dominios_Dados_Permissoes_2026-06-28]].
+
+O classificador local v0 e `60_Sistemas/FabioOS/scripts/classificar_dado_fabioos.py`.
+
+## Regra Spec-Driven
+
+Antes de implementar fase, agente, automacao, integracao externa ou capacidade com custo/risco, criar SPEC seguindo [[60_Sistemas/FabioOS/Protocolo_Spec_Driven_FabioOS]].
+
+O gerador local v0 e `60_Sistemas/FabioOS/scripts/gerar_spec_fabioos.py`.
+
+---
+
+# 13. Addendum - Roadmap v2 das fases
+
+Em 2026-06-29, as fases 0-23 foram revisadas contra o estado real do FabioOS.
+
+Documento de referencia:
+
+- [[60_Sistemas/FabioOS/Roadmap_Fases_FabioOS_v2_2026-06-29]]
+
+Decisao:
+
+- manter este Plano Mestre como historico e referencia ampla;
+- usar o Roadmap v2 como orientacao operacional atual;
+- corrigir o status de RAG, Grafo, MCP FabioOS e MEGATRON v0 como capacidades ja iniciadas;
+- promover Governanca Operacional para proxima frente urgente;
+- tratar ProductOS, hardware local e producao externa como fases posteriores a observabilidade, seguranca e controle de custos.
+
+Ordem recomendada pelo Roadmap v2:
+
+```text
+Governanca
+-> MEGATRON v1
+-> RAG/Grafo/MCP hardening
+-> Google/email dry-run
+-> Dashboard/observabilidade
+-> n8n/OpenClaw controlados
+-> dominios/produto
 ```

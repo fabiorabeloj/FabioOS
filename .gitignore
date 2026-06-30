@@ -4,12 +4,16 @@
 .obsidian/graph.json
 .obsidian/cache/
 .obsidian/plugins/*/data.json
+.obsidian/*.backup-*
 
 # Claude local/private settings
 CLAUDE.local.md
 .claude/settings.local.json
 # Skills são junctions locais (máquina-específico) — recriar conforme Claude_Project_Config.md
 .claude/skills/
+
+# Codex — config local com tokens reais (versionar só o config.toml.example)
+.codex/config.toml
 
 # Secrets
 .env
@@ -22,6 +26,30 @@ credentials/
 tokens/
 *.token
 
+# Fontes pessoais/restritas - manter locais, fora do Git
+sources/email/_restrito/*
+!sources/email/_restrito/.gitkeep
+sources/drive/_restrito/*
+!sources/drive/_restrito/.gitkeep
+sources/chatgpt/_restrito/*
+!sources/chatgpt/_restrito/.gitkeep
+05_Raw_Sources/_compat_sources/email/_restrito/*
+!05_Raw_Sources/_compat_sources/email/_restrito/.gitkeep
+05_Raw_Sources/_compat_sources/drive/_restrito/*
+!05_Raw_Sources/_compat_sources/drive/_restrito/.gitkeep
+05_Raw_Sources/_compat_sources/chatgpt/_restrito/*
+!05_Raw_Sources/_compat_sources/chatgpt/_restrito/.gitkeep
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# Grafo Fase 13 — dados gerados regeneráveis (build_graph.py / export_graph_csv.py)
+# Mantém auditoria_grafo.md (evidência legível); ignora json/csv pesados.
+60_Sistemas/Grafo/data/*.json
+60_Sistemas/Grafo/data/*.csv
+
 # System
 .DS_Store
 Thumbs.db
@@ -30,3 +58,9 @@ desktop.ini
 # Logs
 *.log
 logs/
+
+# Extracoes locais de PDF (Restricted-safe, nao versionar)
+00_Inbox/pdfs/_extracted/
+
+# Credenciais e segredos locais (NUNCA versionar)
+60_Sistemas/FabioOS/_restrito/

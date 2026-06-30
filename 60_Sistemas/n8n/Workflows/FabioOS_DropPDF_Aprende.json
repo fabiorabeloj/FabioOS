@@ -1,0 +1,82 @@
+{
+  "id": "fabioosDropPdfAprende",
+  "name": "FabioOS - Drop PDF Aprende",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "fabios-drop-pdf",
+        "responseMode": "responseNode",
+        "options": {}
+      },
+      "id": "60000000-0000-4000-8000-000000000001",
+      "name": "Webhook - PDF Recebido",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [120, 320],
+      "webhookId": "fabios-drop-pdf"
+    },
+    {
+      "parameters": {
+        "jsCode": "const raw = $input.first().json || {};\nconst now = new Date().toISOString();\nconst pdfPath = String(raw.pdf_path || raw.path || raw.file_path || raw.caminho || '').trim();\nconst fileName = String(raw.file_name || raw.filename || pdfPath.split(/[\\\\/]/).pop() || 'documento.pdf').trim();\nconst source = String(raw.source || raw.origem || 'n8n-webhook').trim();\nconst requestId = raw.request_id || `pdf_${Date.now()}_${Math.random().toString(36).slice(2, 8)}`;\nreturn [{ json: { request_id: requestId, received_at: now, pdf_path: pdfPath, file_name: fileName, source, raw_keys: Object.keys(raw), status: 'normalized' } }];"
+      },
+      "id": "60000000-0000-4000-8000-000000000002",
+      "name": "01 Normalizar Payload",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [380, 320]
+    },
+    {
+      "parameters": {
+        "jsCode": "const item = $input.first().json;\nconst flags = [];\nlet ok = true;\nif (!item.pdf_path) { ok = false; flags.push('sem_caminho_pdf'); }\nif (!item.file_name.toLowerCase().endsWith('.pdf') && !item.pdf_path.toLowerCase().endsWith('.pdf')) { ok = false; flags.push('nao_pdf'); }\nconst underDrop = item.pdf_path.replace(/\\\\/g, '/').includes('00_Inbox/pdfs/');\nif (!underDrop) flags.push('fora_do_drop_folder_recomendado');\nreturn [{ json: { ...item, ok, flags, permission: ok ? 'trigger_only' : 'blocked', status: ok ? 'validated' : 'blocked' } }];"
+      },
+      "id": "60000000-0000-4000-8000-000000000003",
+      "name": "02 Validar PDF",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [640, 320]
+    },
+    {
+      "parameters": {
+        "jsCode": "const item = $input.first().json;\nconst event = {\n  event_id: item.request_id,\n  detected_at: item.received_at,\n  status: item.status,\n  source: item.source,\n  source_pdf: item.pdf_path,\n  file_name: item.file_name,\n  target_agent: 'claude.documentalista',\n  spec: '60_Sistemas/FabioOS/specs/2026-06-30_pipeline-pdf-aprende.md',\n  next_action: 'Executar watcher local ou entregar caminho ao documentalista quando Stirling estiver autenticado.',\n  safety: {\n    ocr_executed: false,\n    rag_reindexed: false,\n    content_copied: false,\n    requires_sensitive_data_gate: true,\n    requires_human_curation_before_rag: true\n  }\n};\nreturn [{ json: { ...item, drop_event: event, status: item.ok ? 'event_ready' : 'blocked' } }];"
+      },
+      "id": "60000000-0000-4000-8000-000000000004",
+      "name": "03 Montar Evento",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [910, 320]
+    },
+    {
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={{ JSON.stringify({ status: $json.status, ok: $json.ok, request_id: $json.request_id, permission: $json.permission, flags: $json.flags, drop_event: $json.drop_event, note: 'Workflow consultivo/importavel. A gravacao local continua com watch_pdf_drop.py para evitar dependencia de credencial/volume no n8n.' }) }}"
+      },
+      "id": "60000000-0000-4000-8000-000000000005",
+      "name": "04 Responder Evento",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1,
+      "position": [1180, 320]
+    }
+  ],
+  "connections": {
+    "Webhook - PDF Recebido": {
+      "main": [[{ "node": "01 Normalizar Payload", "type": "main", "index": 0 }]]
+    },
+    "01 Normalizar Payload": {
+      "main": [[{ "node": "02 Validar PDF", "type": "main", "index": 0 }]]
+    },
+    "02 Validar PDF": {
+      "main": [[{ "node": "03 Montar Evento", "type": "main", "index": 0 }]]
+    },
+    "03 Montar Evento": {
+      "main": [[{ "node": "04 Responder Evento", "type": "main", "index": 0 }]]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "meta": {
+    "instanceId": "fabios"
+  }
+}

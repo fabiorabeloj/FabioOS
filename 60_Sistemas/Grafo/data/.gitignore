@@ -1,0 +1,6 @@
+# Artefatos regeneraveis da Fase 13 - Grafo.
+# Manter no Git apenas a evidencia leve em Markdown.
+*.json
+*.csv
+!auditoria_grafo.md
+!.gitignore

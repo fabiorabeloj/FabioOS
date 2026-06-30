@@ -1,0 +1,4 @@
+# MCP FabioOS (Fase 15)
+# Reaproveita o venv do RAG (60_Sistemas/RAG/.venv), que já tem
+# chromadb + sentence-transformers. Aqui só falta o servidor MCP:
+fastmcp>=2.0

@@ -1,0 +1,220 @@
+{
+  "name": "FabioOS - WhatsApp para Pietra",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "whatsapp-pietra-v2",
+        "responseMode": "responseNode",
+        "options": {}
+      },
+      "id": "w1a2b3c4-d5e6-7890-abcd-111111111111",
+      "name": "Webhook WhatsApp",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        240,
+        300
+      ],
+      "webhookId": "whatsapp-pietra-v2"
+    },
+    {
+      "parameters": {
+        "jsCode": "// Extrair dados do payload da Evolution API\nconst input = $input.first().json;\nlet body = input.body || input;\n\nif (typeof body === 'string') {\n  try {\n    body = JSON.parse(body);\n  } catch (error) {\n    body = {};\n  }\n}\n\nconst data = body.data || {};\nconst key = data.key || {};\nconst msg = data.message || {};\nconst instance = body.instance || data.instance || '';\nconst modoPessoal = instance === 'fabioos-pessoal';\n\n// Texto da mensagem (suporta conversation ou extendedTextMessage)\nconst texto = msg.conversation \n  || msg.extendedTextMessage?.text \n  || '';\nconst textoLimpo = texto.trim();\n\n// Anonimizar n?mero: manter apenas 4 ?ltimos d?gitos\nconst jid = key.remoteJid || '';\nconst numeroCompleto = jid.replace('@s.whatsapp.net', '').replace('@g.us', '');\nconst numeroAnon = '****' + numeroCompleto.slice(-4);\n\nconst nome = data.pushName || (modoPessoal ? 'Comando pessoal' : 'Respons?vel');\nconst timestamp = data.messageTimestamp || Math.floor(Date.now() / 1000);\nconst dataHora = new Date(timestamp * 1000).toISOString().replace('T', ' ').substring(0, 16);\nconst hoje = new Date(timestamp * 1000).toISOString().split('T')[0];\nconst anoMes = hoje.substring(0, 7); // YYYY-MM\n\n// No modo pessoal, aceitar mensagens enviadas pelo pr?prio usu?rio apenas com prefixo FabioOS.\nif (key.fromMe && !modoPessoal) {\n  return [{ json: { ignorar: true, motivo: 'mensagem_enviada_pelo_numero' } }];\n}\n\nif (key.fromMe && modoPessoal && !/^fabioos[,s:]/i.test(textoLimpo)) {\n  return [{ json: { ignorar: true, motivo: 'comando_pessoal_sem_prefixo_fabioos' } }];\n}\n\n// Ignorar se n?o h? texto\nif (!textoLimpo) {\n  return [{ json: { ignorar: true, motivo: 'sem_texto' } }];\n}\n\nreturn [{\n  json: {\n    texto: textoLimpo,\n    numeroAnon,\n    nome,\n    instance,\n    modo: modoPessoal ? 'pessoal' : 'pietra',\n    dataHora,\n    hoje,\n    anoMes,\n    logFilename: modoPessoal ? `WHATSAPP_PESSOAL_${anoMes}_LOG.md` : `PIETRA_${anoMes}_LOG.md`,\n    ignorar: false\n  }\n}];"
+      },
+      "id": "w2b3c4d5-e6f7-8901-bcde-222222222222",
+      "name": "Extrair Dados",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        460,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "boolean": [
+            {
+              "value1": "={{ $json.ignorar }}",
+              "value2": true
+            }
+          ]
+        }
+      },
+      "id": "w2b3c4d5-e6f7-8901-bcde-333333333333",
+      "name": "Ignorar?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        680,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "// Classificar intent da mensagem com base nas palavras-gatilho do Pietra\nconst texto = $json.texto.toLowerCase()\n  .normalize('NFD').replace(/[\\u0300-\\u036f]/g, ''); // remove acentos para matching\n\nconst categorias = [\n  {\n    nome: 'ocorrencia',\n    nivel: 'alto',\n    escalonar: true,\n    gatilhos: ['ocorrencia', 'ocorrência', 'suspensao', 'briga', 'conflito', 'bullying', 'agressao', 'ameaca', 'assedio', 'disciplinar', 'expulsao'],\n    resposta_key: 'OCORRENCIA_ESCALONAMENTO'\n  },\n  {\n    nome: 'financeiro',\n    nivel: 'alto',\n    escalonar: false,\n    gatilhos: ['mensalidade', 'boleto', 'pagamento', 'atraso', 'debito', 'vencimento', 'inadimplente', 'valor da mensalidade', 'isentao', 'bolsa'],\n    resposta_key: 'FINANCEIRO_REDIRECIONAMENTO'\n  },\n  {\n    nome: 'matricula',\n    nivel: 'medio',\n    escalonar: false,\n    gatilhos: ['matricula', 'rematricula', 'renovar matricula', 'prazo de matricula', 'inscricao', 'vaga', 'novo aluno'],\n    resposta_key: 'MATRICULA_INFO'\n  },\n  {\n    nome: 'segunda_chamada',\n    nivel: 'medio',\n    escalonar: false,\n    gatilhos: ['segunda chamada', 'faltou na prova', 'nao pode fazer a prova', 'nao fez a prova', 'atestado', 'justificativa de falta', 'falta na avaliacao'],\n    resposta_key: 'SEGUNDA_CHAMADA_PROCEDIMENTO'\n  },\n  {\n    nome: 'prova',\n    nivel: 'medio',\n    escalonar: false,\n    gatilhos: ['prova', 'avaliacao', 'simulado', 'recuperacao', 'nota', 'resultado', 'gabarito', 'media', 'conteudo da prova', 'quando e a prova'],\n    resposta_key: 'PROVA_DATA_CONTEUDO'\n  },\n  {\n    nome: 'coordenacao',\n    nivel: 'medio',\n    escalonar: false,\n    gatilhos: ['coordenacao', 'coordenador', 'reuniao', 'conversar com a coordenadora', 'agendar', 'reclamacao', 'conselho'],\n    resposta_key: 'COORDENACAO_AGENDAMENTO'\n  },\n  {\n    nome: 'secretaria',\n    nivel: 'medio',\n    escalonar: false,\n    gatilhos: ['declaracao', 'historico', 'documento', 'certidao', 'transferencia', 'atestado de matricula', 'ficha do aluno', 'horario de atendimento'],\n    resposta_key: 'SECRETARIA_DOCUMENTOS'\n  },\n  {\n    nome: 'duvida_pedagogica',\n    nivel: 'medio',\n    escalonar: false,\n    gatilhos: ['dificuldade', 'reforco', 'nao esta entendendo', 'acompanhamento', 'laudo', 'necessidade especial', 'ajudar em casa', 'atividade extra'],\n    resposta_key: 'PEDAGOGICO_REDIRECIONAMENTO'\n  },\n  {\n    nome: 'professor',\n    nivel: 'baixo',\n    escalonar: false,\n    gatilhos: ['professor', 'prof ', 'quero falar com o professor', 'contato do professor'],\n    resposta_key: 'PROFESSOR_CONTATO'\n  },\n  {\n    nome: 'material',\n    nivel: 'baixo',\n    escalonar: false,\n    gatilhos: ['lista de material', 'livro', 'apostila', 'caderno', 'uniforme', 'material escolar'],\n    resposta_key: 'MATERIAL_LISTA'\n  },\n  {\n    nome: 'horario',\n    nivel: 'baixo',\n    escalonar: false,\n    gatilhos: ['horario', 'que horas comeca', 'que horas termina', 'entrada', 'saida', 'feriado', 'recesso', 'aula amanha'],\n    resposta_key: 'HORARIO_INFO'\n  }\n];\n\n// Contar correspondências por categoria\nlet melhorCategoria = null;\nlet melhorPontuacao = 0;\n\nfor (const cat of categorias) {\n  let pontos = 0;\n  for (const gatilho of cat.gatilhos) {\n    if (texto.includes(gatilho)) pontos++;\n  }\n  if (pontos > melhorPontuacao) {\n    melhorPontuacao = pontos;\n    melhorCategoria = cat;\n  }\n}\n\n// Se não encontrou nada, classificar como não identificado\nif (!melhorCategoria || melhorPontuacao === 0) {\n  melhorCategoria = {\n    nome: 'nao_classificada',\n    nivel: 'medio',\n    escalonar: false,\n    resposta_key: 'NAO_CLASSIFICADO'\n  };\n}\n\n// Verificar condições especiais de escalonamento\nconst palavrasRisco = ['advogado', 'procon', 'processo', 'acao judicial', 'abuso', 'violencia'];\nconst temRisco = palavrasRisco.some(p => texto.includes(p));\nif (temRisco) melhorCategoria.escalonar = true;\n\nreturn [{\n  json: {\n    ...($json),\n    categoria: melhorCategoria.nome,\n    nivel: melhorCategoria.nivel,\n    escalonar: melhorCategoria.escalonar || temRisco,\n    resposta_key: melhorCategoria.resposta_key,\n    pontuacao: melhorPontuacao\n  }\n}];"
+      },
+      "id": "w3c4d5e6-f7a8-9012-cdef-444444444444",
+      "name": "Classificar Intent",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        900,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "// Montar entrada de log anonimizada\nconst d = $json;\nconst acao = d.escalonar ? 'escalada' : 'sugestao_preparada';\nconst logLinha = `| ${d.dataHora} | WhatsApp | ${d.numeroAnon} | ${d.categoria} | ${d.nivel} | ${acao} | pendente |\\n`;\n\n// Montar notificação para o professor\nconst notificacao = [\n  `[PIETRA] Nova mensagem recebida`,\n  `Canal: WhatsApp | Número: ${d.numeroAnon}`,\n  `Categoria: ${d.categoria} | Nível: ${d.nivel}`,\n  d.escalonar ? '⚠ ESCALONAMENTO OBRIGATÓRIO — Notificar coordenação' : '',\n  ``,\n  `Mensagem: \"${d.texto}\"`,\n  ``,\n  d.escalonar \n    ? 'Encaminhar imediatamente para a coordenação pedagógica.'\n    : `Resposta sugerida (modelo: ${d.resposta_key}):`,\n  d.escalonar \n    ? ''\n    : 'Ver: 60_Sistemas/Pietra/respostas-modelo/RESPOSTAS_MODELO.md'\n].filter(l => l !== undefined).join('\\n');\n\nreturn [{\n  json: {\n    ...($json),\n    logLinha,\n    notificacao,\n    acao\n  }\n}];"
+      },
+      "id": "w4d5e6f7-a8b9-0123-defa-555555555555",
+      "name": "Montar Log e Notificação",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1120,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://host.docker.internal:27124/vault/05_Raw_Sources/_compat_sources/_inbox/{{ $json.logFilename }}",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendBody": true,
+        "contentType": "raw",
+        "rawContentType": "text/markdown",
+        "body": "={{ $json.logLinha }}",
+        "options": {
+          "allowUnauthorizedCerts": true
+        }
+      },
+      "id": "w5e6f7a8-b9c0-1234-efab-666666666666",
+      "name": "Salvar Log no Vault",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        1340,
+        300
+      ],
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "obsidian-api",
+          "name": "Obsidian API Token"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={{ JSON.stringify({ status: $('Classificar Intent').item.json.escalonar ? 'escalado' : 'ok', categoria: $('Classificar Intent').item.json.categoria, nivel: $('Classificar Intent').item.json.nivel, acao: $('Montar Log e Notificação').item.json.acao }) }}"
+      },
+      "id": "w6f7a8b9-c0d1-2345-fabc-777777777777",
+      "name": "Responder",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1,
+      "position": [
+        1560,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={\"status\": \"ignorado\", \"motivo\": \"{{ $('Extrair Dados').item.json.motivo }}\"}"
+      },
+      "id": "w7a8b9c0-d1e2-3456-abcd-888888888888",
+      "name": "Responder Ignorado",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1,
+      "position": [
+        900,
+        500
+      ]
+    }
+  ],
+  "connections": {
+    "Webhook WhatsApp": {
+      "main": [
+        [
+          {
+            "node": "Extrair Dados",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Extrair Dados": {
+      "main": [
+        [
+          {
+            "node": "Ignorar?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Ignorar?": {
+      "main": [
+        [
+          {
+            "node": "Responder Ignorado",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Classificar Intent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Classificar Intent": {
+      "main": [
+        [
+          {
+            "node": "Montar Log e Notificação",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Montar Log e Notificação": {
+      "main": [
+        [
+          {
+            "node": "Salvar Log no Vault",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Salvar Log no Vault": {
+      "main": [
+        [
+          {
+            "node": "Responder",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "meta": {
+    "instanceId": "fabios"
+  }
+}
