@@ -146,3 +146,11 @@ Formato:
 - Paginas atualizadas: [[30_Projetos/PRIMUS/README]], [[30_Projetos/PRIMUS/Roteiro_Execucao_PRIMUS_6_Blocos]], [[40_Wiki/PRIMUS/PrimusOS]], [[50_Registros/Barramento_Multiagente]].
 - Contradicoes: nenhuma; Player View reforca que ver nao e ter.
 - Proximas acoes: criar `Cantina_Rumores_0001_PRIMUS.md`.
+
+## [2026-06-30] implementacao documental | Rumores seguros da Cantina PRIMUS
+
+- Fonte: [[30_Projetos/PRIMUS/PlayerView_Cantina_0001_PRIMUS]].
+- Paginas criadas: [[30_Projetos/PRIMUS/Cantina_Rumores_0001_PRIMUS]], [[50_Registros/Changelog/2026-06-30_rumores-cantina-primus]].
+- Paginas atualizadas: [[30_Projetos/PRIMUS/README]], [[30_Projetos/PRIMUS/Roteiro_Execucao_PRIMUS_6_Blocos]], [[40_Wiki/PRIMUS/PrimusOS]], [[50_Registros/Barramento_Multiagente]].
+- Contradicoes: nenhuma; rumores foram criados como seguros e nao-canonicos.
+- Proximas acoes: selecionar fonte/regiao segura ou lote E real para primeiro conflito jogavel.
