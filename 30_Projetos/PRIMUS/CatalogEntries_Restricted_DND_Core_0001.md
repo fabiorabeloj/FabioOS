@@ -37,7 +37,7 @@ Estas entradas sao **CatalogEntries de fonte**. Elas nao sao regras jogaveis com
 | CE-DND-0004 Background | SRC-DND-PHB-2014 | ja tem VE-local-index-pass |
 | CE-DND-0005 Spell | SRC-DND-PHB-2014 | ja tem VE-local-index-pass |
 | CE-DND-0006 Equipment | SRC-DND-PHB-2014 | validado como quinta entrada estavel via PRIMUS Index |
-| CE-DND-0007 Creature | SRC-DND-MM-2014 | validar pelo PRIMUS Index ou documentalista |
+| CE-DND-0007 Creature | SRC-DND-MM-2014 | validado pelo PRIMUS Index como primeira entrada de Desafio |
 | CE-DND-0008 Condition | SRC-DND-PHB-2014 | ja tem VE-local-index-pass |
 | CE-DND-0009 Encounter | SRC-DND-DMG-2014 | validar quando DMG estiver processavel |
 | CE-DND-0010 Treasure | SRC-DND-DMG-2014 | validar quando DMG estiver processavel |
@@ -55,4 +55,4 @@ Uma entrada derivada destas fontes so pode virar `pool-ready` se:
 
 ## Recomendacao Operacional
 
-`CE-DND-0006 Equipment` ja foi validada como quinta entrada estavel. O proximo ganho de confianca e validar `CE-DND-0007 Creature` com `SRC-DND-MM-2014`.
+`CE-DND-0006 Equipment` e `CE-DND-0007 Creature` ja foram validadas. O proximo ganho de confianca e validar `CE-DND-0009 Encounter` ou `CE-DND-0010 Treasure` com `SRC-DND-DMG-2014`.

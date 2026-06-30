@@ -26,7 +26,7 @@ Este lote cria entradas estruturais iniciais a partir das fontes do Project Chat
 | CE-DND-0004 | background | Background | Entity | D&D Core | gera pericias, historia e gancho | VE-local-index-pass |
 | CE-DND-0005 | spell | Spell | Entity | D&D Core | efeito mecanico em encontro | VE-local-index-pass |
 | CE-DND-0006 | equipment | Equipment | Object | D&D Core | recurso de personagem ou recompensa | VE-local-index-pass |
-| CE-DND-0007 | creature | Creature | Agent | Monster Manual | ator antagonista/neutro | fonte-pendente |
+| CE-DND-0007 | creature | Creature | Agent | Monster Manual | ator antagonista/neutro | VE-local-index-pass |
 | CE-DND-0008 | condition | Condition | State | D&D Core | estado temporario em instancia | VE-local-index-pass |
 | CE-DND-0009 | encounter | Encounter | Event | D&D Core/DMG | unidade de desafio | fonte-pendente |
 | CE-DND-0010 | treasure | Treasure | Object | DMG | recompensa e possivel DeltaP | fonte-pendente |
@@ -64,4 +64,4 @@ confidence: baixa_ate_validar_pagina
 
 ## Proxima Acao
 
-Continuar V(E) no lote: `CE-DND-0006` foi validada como quinta entrada estavel via [[Validacao_VE_5_Entradas_PRIMUS_Index]]. Proxima frente: revisar `CE-DND-0003` ou iniciar validacao de `CE-DND-0007 Creature`.
+Continuar V(E) no lote: `CE-DND-0006` e `CE-DND-0007` foram validadas via [[Validacao_VE_5_Entradas_PRIMUS_Index]]. Proxima frente: validar `CE-DND-0009 Encounter` ou `CE-DND-0010 Treasure`.
