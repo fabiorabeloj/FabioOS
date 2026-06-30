@@ -8,3 +8,4 @@ SPECs do sistema narrativo PRIMUS.
 - [[Templates_PRIMUS_Blocos]]
 - [[Spec_WorldState_PRIMUS]]
 - [[Spec_Tension_Engine_PRIMUS]]
+- [[Spec_Cantina_Conflict_Engine_PRIMUS]]

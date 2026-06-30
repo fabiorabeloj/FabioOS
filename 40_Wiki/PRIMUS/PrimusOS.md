@@ -62,7 +62,8 @@ PRIMUS e um laboratorio perfeito para testar o FabioOS como arquitetura cognitiv
 - [x] Absorver o Google Doc multiaba do PRIMUS.
 - [x] Criar WorldState minimo.
 - [x] Especificar Tension Engine.
-- [ ] Converter tensoes em conflitos candidatos.
+- [x] Converter tensoes em conflitos candidatos.
+- [ ] Criar Player View da Cantina.
 - [ ] Transformar os tipos em templates ativos.
 - [ ] Criar a primeira missao executavel somente depois do WorldState.
 - [ ] Definir agente futuro `primus-lorekeeper`.

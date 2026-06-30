@@ -95,8 +95,10 @@ A [[30_Projetos/PRIMUS/Missao_0001_Preparacao]] deve ficar congelada como prepar
 
 - [[30_Projetos/PRIMUS/WorldState_0001_PRIMUS]]
 - [[30_Projetos/PRIMUS/Tensoes_Iniciais_PRIMUS]]
+- [[30_Projetos/PRIMUS/Conflitos_Candidatos_PRIMUS]]
 - [[80_Specs/PRIMUS/Spec_WorldState_PRIMUS]]
 - [[80_Specs/PRIMUS/Spec_Tension_Engine_PRIMUS]]
+- [[80_Specs/PRIMUS/Spec_Cantina_Conflict_Engine_PRIMUS]]
 
 ## Relacoes
 
