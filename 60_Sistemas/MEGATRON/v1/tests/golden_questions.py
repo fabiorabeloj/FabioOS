@@ -38,6 +38,7 @@ CASOS = [
     ("criar uma nota sobre energia solar",              "acao", "escrita_segura", "Proposta de nota"),
     ("o que voce pode fazer?",                          "capacidade", None, "Capacidades do FabioOS"),
     ("colete os dados de algum lugar",                  "pesquisa", None, "Pesquisa web"),
+    ("qual a melhor forma de commitar?",                "estrategia", None, "scan"),
 ]
 
 

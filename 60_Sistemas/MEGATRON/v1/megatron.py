@@ -46,6 +46,7 @@ from fastmcp import Client       # noqa: E402
 from registry import (resolver, resolver_capacidade,  # noqa: E402
                       capacidades as cap_catalogo, rotear)  # despacho + Maestro
 from barramento import ler as ler_barramento  # caixa multiagente  # noqa: E402
+from reasoningbank import recomendar as rb_recomendar  # memória de experiências  # noqa: E402
 
 LIMIAR_IGNORANCIA = 0.5  # dist cosseno bge-m3: <0.5 relevante; >0.5 → ignorância
 
@@ -58,6 +59,10 @@ CAPACIDADE_KW = ("o que voce pode", "o que você pode", "quais capacidades",
                  "o que sabe fazer", "o que consegue fazer", "quem consegue",
                  "time de agentes", "equipe de agentes", "o que voce faz",
                  "o que você faz")
+ESTRATEGIA_KW = ("melhor forma", "melhor abordagem", "melhor jeito", "como devo",
+                 "como faco", "como faço", "qual estrategia", "qual a estrategia",
+                 "qual estratégia", "ja deu certo", "já deu certo", "o que funciona",
+                 "recomenda", "recomendacao", "recomendação")
 PESQUISA_KW = ("pesquis", "colet", "crawl", "raspar", "rastrear", "scrape",
                "baixar a pagina", "ler o site", "ler a pagina")
 URL_RE = re.compile(r"https?://\S+")
@@ -71,6 +76,8 @@ ACAO_ESCRITA = ("commit", "criar", "crie", "escrev", "salva", "gerar", "registr"
 
 def classificar(msg: str):
     m = msg.lower()
+    if any(k in m for k in ESTRATEGIA_KW):
+        return "estrategia", None
     if any(k in m for k in ACAO_EXTERNA):
         return "acao", "externa"
     if any(k in m for k in ACAO_SENSIVEL):
@@ -242,6 +249,11 @@ def _sintese(fontes: list, termo: str) -> str:
 async def responder(msg: str, confirmar: bool = False) -> str:
     intent, classe = classificar(msg)
     registrar(f"{intent}:{classe}" if classe else intent, msg)
+
+    # ESTRATÉGIA — o Maestro consulta a própria memória de experiências
+    if intent == "estrategia":
+        termo = _termo_chave(msg)
+        return _render(rb_recomendar(termo))
 
     # CAPACIDADE — o Maestro anuncia o time (read-only, sem RAG)
     if intent == "capacidade":
