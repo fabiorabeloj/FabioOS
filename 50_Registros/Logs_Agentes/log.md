@@ -211,3 +211,10 @@ Formato:
 - Sistema criado: [[60_Sistemas/PRIMUS_Digestor/README]] com scripts de extracao, segmentacao, classificacao, validacao, exportacao Markdown e importacao do PRIMUS Index.
 - Restricoes: fonte DOCX tratada como privada/restrita; corpo integral nao foi copiado para Git.
 - Proximas acoes: rodar lote pequeno real e validar `catalog_entries.jsonl`.
+
+## [2026-06-30] implementacao | Pipeline Drop PDF Codex v0
+
+- Fonte: [[60_Sistemas/FabioOS/specs/2026-06-30_pipeline-pdf-aprende]].
+- Entrega: [[00_Inbox/pdfs/README]], [[60_Sistemas/FabioOS/Pipeline_DropPDF_Codex_v0]], `60_Sistemas/FabioOS/scripts/watch_pdf_drop.py`, `60_Sistemas/n8n/Workflows/FabioOS_DropPDF_Aprende.json`.
+- Resultado: PDF novo em `00_Inbox/pdfs/` gera evento auditavel para `claude.documentalista`.
+- Limites: sem OCR, sem RAG reindex, sem API externa, sem alterar `documentalista.py`, sem credenciais Stirling.

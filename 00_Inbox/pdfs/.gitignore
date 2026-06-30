@@ -1,0 +1,5 @@
+*.pdf
+*.PDF
+_events/*.json
+_events/*.md
+!_events/README.md
