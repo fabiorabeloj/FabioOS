@@ -1,0 +1,502 @@
+{
+  "generated_at": "2026-06-30T01:10:58",
+  "git": {
+    "header": "## main...origin/main [ahead 84]",
+    "ahead": 84,
+    "dirty_count": 60,
+    "modified_count": 27,
+    "untracked_count": 33,
+    "dirty_sample": [
+      " M 00_Inbox/Triagem/Teste_MCP_Obsidian.md",
+      " M 50_Registros/Changelog/2026-06-29_validacao-rag-pos-ranking-cursor.md",
+      " M 50_Registros/Sessoes/2026-06-29_cursor-sessao-validacao-rag.md",
+      " M 50_Registros/Sessoes/README_Sessoes.md",
+      " M 60_Sistemas/FabioOS/NEXT_ACTIONS.md",
+      " M 60_Sistemas/FabioOS/Registro_Frentes_Ativas.md",
+      " M 60_Sistemas/FabioOS/STATUS.md",
+      " M 60_Sistemas/MEGATRON/agentes/STATUS_Agentes.md",
+      " M 60_Sistemas/MEGATRON/v1/megatron.py",
+      " M 60_Sistemas/MEGATRON/v1/tests/golden_questions.py",
+      " M 60_Sistemas/OpenClaw/Relatorio_Ativacao_WhatsApp_Pessoal_2026-06-27.md",
+      " M 60_Sistemas/OpenClaw/ponte/AGENTS.md",
+      " M 60_Sistemas/RAG/scripts/batch_validate_rag.py",
+      " M apps/agentarium/backend/src/agents/fabioAgents.ts",
+      " M apps/agentarium/backend/src/index.ts",
+      " M apps/agentarium/backend/src/simulator.ts",
+      " M apps/agentarium/backend/src/store.ts",
+      " M apps/agentarium/backend/src/types.ts",
+      " M apps/agentarium/backend/src/websocket.ts",
+      " M apps/agentarium/frontend/src/App.css",
+      " M apps/agentarium/frontend/src/App.tsx",
+      " M apps/agentarium/frontend/src/components/AgentInspector.tsx",
+      " M apps/agentarium/frontend/src/components/ZoneMap.tsx",
+      " M apps/agentarium/frontend/src/components/pixel/PixelAgentAvatar.tsx",
+      " M apps/agentarium/frontend/src/hooks/useAgents.ts",
+      " M apps/agentarium/frontend/src/pixel/agentSprites.ts",
+      " M apps/agentarium/frontend/src/types.ts",
+      "?? .cursor/",
+      "?? .gitattributes",
+      "?? 10_Mapas/",
+      "?? 50_Registros/Auditoria/Auditoria_Encoding_FabioOS_2026-06-29.md",
+      "?? 50_Registros/Changelog/2026-06-29_auditoria-encoding-fabioos.md",
+      "?? 50_Registros/Changelog/2026-06-29_cursor-config-openclaw-agentes.md",
+      "?? 50_Registros/Changelog/2026-06-29_openclaw-megatron-agentes-ponte.md",
+      "?? 50_Registros/Changelog/2026-06-29_promocao-fase12-rag-piloto.md",
+      "?? 50_Registros/Changelog/2026-06-30_reality-check-fabios.md",
+      "?? 50_Registros/Decisoes/ADR_2026-06-29_Promocao_Fase12_RAG_Piloto.md",
+      "?? 60_Sistemas/FabioOS/Frente_Cursor_OpenClaw_Agentes_2026-06-29.md",
+      "?? 60_Sistemas/FabioOS/Integracao_Cursor_e_Coordenacao_Multiagente_2026-06-29.md",
+      "?? 60_Sistemas/FabioOS/Ordens_Coordenacao_Paralela_MEGATRON_2026-06-29.md"
+    ],
+    "latest_commits": [
+      "93aacf1 Add Pixel Ops layer and FabioOS agent catalog v0.3",
+      "1148f06 Implement MEGATRON Tactical Agentarium v0.2",
+      "4a06cb5 feat: adicionar esteira spec para plano no n8n",
+      "0b1490b feat: adicionar preflight safecommit no n8n",
+      "2742532 docs: formalizar contratos de governanca do megatron coordenador"
+    ]
+  },
+  "root": {
+    "items": [
+      {
+        "name": ".agents",
+        "kind": "dir",
+        "size": null
+      },
+      {
+        "name": ".claude",
+        "kind": "dir",
+        "size": null
+      },
+      {
+        "name": ".codex",
+        "kind": "dir",
+        "size": null
+      },
+      {
+        "name": ".cursor",
+        "kind": "dir",
+        "size": null
+      },
+      {
+        "name": ".github",
+        "kind": "dir",
+        "size": null
+      },
+      {
+        "name": ".obsidian",
+        "kind": "dir",
+        "size": null
+      },
+      {
+        "name": "00_Arquitetura",
+        "kind": "dir",
+        "size": null
+      },
+      {
+        "name": "00_Inbox",
+        "kind": "dir",
+        "size": null
+      },
+      {
+        "name": "05_Raw_Sources",
+        "kind": "dir",
+        "size": null
+      },
+      {
+        "name": "10_Dashboard",
+        "kind": "dir",
+        "size": null
+      },
+      {
+        "name": "10_Mapas",
+        "kind": "dir",
+        "size": null
+      },
+      {
+        "name": "20_Areas",
+        "kind": "dir",
+        "size": null
+      },
+      {
+        "name": "30_Projetos",
+        "kind": "dir",
+        "size": null
+      },
+      {
+        "name": "40_Wiki",
+        "kind": "dir",
+        "size": null
+      },
+      {
+        "name": "50_Registros",
+        "kind": "dir",
+        "size": null
+      },
+      {
+        "name": "60_Sistemas",
+        "kind": "dir",
+        "size": null
+      },
+      {
+        "name": "70_Skills",
+        "kind": "dir",
+        "size": null
+      },
+      {
+        "name": "80_Specs",
+        "kind": "dir",
+        "size": null
+      },
+      {
+        "name": "90_Arquivo",
+        "kind": "dir",
+        "size": null
+      },
+      {
+        "name": "apps",
+        "kind": "dir",
+        "size": null
+      },
+      {
+        "name": "wiki",
+        "kind": "dir",
+        "size": null
+      },
+      {
+        "name": ".gitattributes",
+        "kind": "file",
+        "size": 188
+      },
+      {
+        "name": ".gitignore",
+        "kind": "file",
+        "size": 1433
+      },
+      {
+        "name": "debug-e23183.log",
+        "kind": "file",
+        "size": 2152
+      },
+      {
+        "name": "start_agentarium.ps1",
+        "kind": "file",
+        "size": 1890
+      },
+      {
+        "name": "start_whatsapp_pessoal.ps1",
+        "kind": "file",
+        "size": 9910
+      },
+      {
+        "name": "test_agentarium_event.ps1",
+        "kind": "file",
+        "size": 736
+      },
+      {
+        "name": "test_agentarium_policy_danger.ps1",
+        "kind": "file",
+        "size": 659
+      },
+      {
+        "name": "test_whatsapp_personal_message.ps1",
+        "kind": "file",
+        "size": 1764
+      },
+      {
+        "name": "test_whatsapp_pessoal.ps1",
+        "kind": "file",
+        "size": 1896
+      }
+    ],
+    "unexpected": [
+      {
+        "name": ".agents",
+        "kind": "dir",
+        "size": null
+      },
+      {
+        "name": ".claude",
+        "kind": "dir",
+        "size": null
+      },
+      {
+        "name": ".codex",
+        "kind": "dir",
+        "size": null
+      },
+      {
+        "name": ".cursor",
+        "kind": "dir",
+        "size": null
+      },
+      {
+        "name": ".github",
+        "kind": "dir",
+        "size": null
+      },
+      {
+        "name": ".obsidian",
+        "kind": "dir",
+        "size": null
+      },
+      {
+        "name": "10_Mapas",
+        "kind": "dir",
+        "size": null
+      },
+      {
+        "name": "apps",
+        "kind": "dir",
+        "size": null
+      },
+      {
+        "name": "wiki",
+        "kind": "dir",
+        "size": null
+      },
+      {
+        "name": ".gitattributes",
+        "kind": "file",
+        "size": 188
+      },
+      {
+        "name": ".gitignore",
+        "kind": "file",
+        "size": 1433
+      },
+      {
+        "name": "debug-e23183.log",
+        "kind": "file",
+        "size": 2152
+      },
+      {
+        "name": "start_agentarium.ps1",
+        "kind": "file",
+        "size": 1890
+      },
+      {
+        "name": "start_whatsapp_pessoal.ps1",
+        "kind": "file",
+        "size": 9910
+      },
+      {
+        "name": "test_agentarium_event.ps1",
+        "kind": "file",
+        "size": 736
+      },
+      {
+        "name": "test_agentarium_policy_danger.ps1",
+        "kind": "file",
+        "size": 659
+      },
+      {
+        "name": "test_whatsapp_personal_message.ps1",
+        "kind": "file",
+        "size": 1764
+      },
+      {
+        "name": "test_whatsapp_pessoal.ps1",
+        "kind": "file",
+        "size": 1896
+      }
+    ],
+    "visible_unexpected": [
+      {
+        "name": "10_Mapas",
+        "kind": "dir",
+        "size": null
+      },
+      {
+        "name": "apps",
+        "kind": "dir",
+        "size": null
+      },
+      {
+        "name": "wiki",
+        "kind": "dir",
+        "size": null
+      },
+      {
+        "name": "debug-e23183.log",
+        "kind": "file",
+        "size": 2152
+      },
+      {
+        "name": "start_agentarium.ps1",
+        "kind": "file",
+        "size": 1890
+      },
+      {
+        "name": "start_whatsapp_pessoal.ps1",
+        "kind": "file",
+        "size": 9910
+      },
+      {
+        "name": "test_agentarium_event.ps1",
+        "kind": "file",
+        "size": 736
+      },
+      {
+        "name": "test_agentarium_policy_danger.ps1",
+        "kind": "file",
+        "size": 659
+      },
+      {
+        "name": "test_whatsapp_personal_message.ps1",
+        "kind": "file",
+        "size": 1764
+      },
+      {
+        "name": "test_whatsapp_pessoal.ps1",
+        "kind": "file",
+        "size": 1896
+      }
+    ],
+    "technical_root": [
+      {
+        "name": ".agents",
+        "kind": "dir",
+        "size": null
+      },
+      {
+        "name": ".claude",
+        "kind": "dir",
+        "size": null
+      },
+      {
+        "name": ".codex",
+        "kind": "dir",
+        "size": null
+      },
+      {
+        "name": ".cursor",
+        "kind": "dir",
+        "size": null
+      },
+      {
+        "name": ".github",
+        "kind": "dir",
+        "size": null
+      },
+      {
+        "name": ".obsidian",
+        "kind": "dir",
+        "size": null
+      },
+      {
+        "name": ".gitattributes",
+        "kind": "file",
+        "size": 188
+      },
+      {
+        "name": ".gitignore",
+        "kind": "file",
+        "size": 1433
+      }
+    ]
+  },
+  "docker": {
+    "available": true,
+    "containers": [
+      {
+        "name": "evolution-api",
+        "image": "evoapicloud/evolution-api:latest",
+        "status": "Up 36 minutes",
+        "ports": "0.0.0.0:8080->8080/tcp, [::]:8080->8080/tcp",
+        "public_bind": true
+      },
+      {
+        "name": "evolution-redis",
+        "image": "redis:7-alpine",
+        "status": "Up 36 minutes",
+        "ports": "6379/tcp",
+        "public_bind": false
+      },
+      {
+        "name": "evolution-postgres",
+        "image": "postgres:16-alpine",
+        "status": "Up 36 minutes",
+        "ports": "5432/tcp",
+        "public_bind": false
+      },
+      {
+        "name": "n8n",
+        "image": "docker.n8n.io/n8nio/n8n",
+        "status": "Up 5 hours",
+        "ports": "0.0.0.0:5678->5678/tcp, [::]:5678->5678/tcp",
+        "public_bind": true
+      }
+    ],
+    "error": ""
+  },
+  "n8n": {
+    "http_ok": true,
+    "http_status": 200,
+    "workflow_list_ok": true,
+    "workflow_list_timeout": false,
+    "workflow_count": 8,
+    "workflows": [
+      "JDZA4lXZSn3uMMqj|FabioOS â€” Captura para Obsidian",
+      "o0B7C9gBC3UOOf1H|FabioOS â€” Webhook Arquivista",
+      "fabioosWhatsappPietra|FabioOS - WhatsApp para Pietra (desativado)",
+      "fabioosWhatsappPietraV2|FabioOS - WhatsApp para Pietra",
+      "fabioosWebhookInbox|FabioOS - Webhook para Inbox",
+      "fabioosIntakeOrquestradorSeguro|FabioOS - Intake Orquestrador Seguro",
+      "fabioosSafeCommitPreflight|FabioOS - SafeCommit Preflight",
+      "fabioosSpecPlanoExecucao|FabioOS - SPEC para Plano de Execucao"
+    ],
+    "vault_mounted": false,
+    "mounts": [
+      {
+        "name": "n8n_data",
+        "destination": "/home/node/.n8n",
+        "type": "volume"
+      }
+    ]
+  },
+  "duplicates": {
+    "legacy_exists": true,
+    "canonical_exists": true,
+    "legacy_path": "wiki\\conceitos\\rag.md",
+    "canonical_path": "40_Wiki\\_compat_wiki\\conceitos\\rag.md",
+    "same_hash": true
+  },
+  "blindspots": [
+    {
+      "level": "P1",
+      "id": "git_ahead_no_remote_backup",
+      "message": "main esta 84 commits a frente do origin/main; ha risco de perda local e PR desatualizado."
+    },
+    {
+      "level": "P1",
+      "id": "dirty_parallel_worktree",
+      "message": "worktree tem 60 itens alterados/novos; alta chance de colisao entre agentes."
+    },
+    {
+      "level": "P1",
+      "id": "visible_root_drift",
+      "message": "raiz visivel do vault voltou a ter itens fora da taxonomia canonica: 10_Mapas, apps, wiki, debug-e23183.log, start_agentarium.ps1, start_whatsapp_pessoal.ps1, test_agentarium_event.ps1, test_agentarium_policy_danger.ps1, test_whatsapp_personal_message.ps1, test_whatsapp_pessoal.ps1."
+    },
+    {
+      "level": "P2",
+      "id": "technical_root_sprawl",
+      "message": "raiz contem diretorios/arquivos tecnicos que podem aparecer em algumas ferramentas: .agents, .claude, .codex, .cursor, .github, .obsidian, .gitattributes, .gitignore."
+    },
+    {
+      "level": "P1",
+      "id": "runtime_public_bind",
+      "message": "containers expostos em 0.0.0.0/[::]: evolution-api, n8n."
+    },
+    {
+      "level": "P2",
+      "id": "n8n_without_vault_mount",
+      "message": "n8n esta online, mas o vault nao esta montado em /vault; workflows devem usar REST API ou falharao ao escrever localmente."
+    },
+    {
+      "level": "P2",
+      "id": "legacy_wiki_recreated",
+      "message": "wiki/conceitos/rag.md reapareceu e e duplicata do arquivo canonico; alguma frente ainda escreve no caminho legado."
+    }
+  ]
+}
