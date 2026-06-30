@@ -6,6 +6,7 @@ Fontes brutas do universo narrativo PRIMUS.
 
 - [[Inventario_Fontes_PRIMUS_2026-06-30]]
 - [[2026-06-30_chatgpt_primus_sumario_estrutural]]
+- [[2026-06-30_pdf_primus_contexto_completo_final]]
 
 ## Regra
 

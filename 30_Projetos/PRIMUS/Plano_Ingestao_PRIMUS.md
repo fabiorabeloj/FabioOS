@@ -16,9 +16,10 @@ Trazer o PRIMUS para a estrutura viva do FabioOS sem transformar o vault em depo
 
 ## Escopo Inicial
 
-Fonte inicial processada:
+Fontes iniciais processadas:
 
 - [[05_Raw_Sources/PRIMUS/2026-06-30_chatgpt_primus_sumario_estrutural]]
+- [[05_Raw_Sources/PRIMUS/2026-06-30_pdf_primus_contexto_completo_final]]
 
 Fontes inventariadas:
 
@@ -71,6 +72,13 @@ Fontes inventariadas:
 - Wiki conceitual em [[40_Wiki/PRIMUS/PrimusOS]].
 - Notas centrais sobre [[40_Wiki/PRIMUS/Circuito_EIP]] e [[40_Wiki/PRIMUS/Taxonomia_PRIMUS]].
 
+## Segundo Lote Concluido
+
+- PDF `PRIMUS - CONTEXTO COMPLETO FINAL (NAO PERDER)` extraido localmente.
+- Nota-fonte criada em [[05_Raw_Sources/PRIMUS/2026-06-30_pdf_primus_contexto_completo_final]].
+- Roteiro de execucao criado em [[Roteiro_Execucao_PRIMUS_6_Blocos]].
+- Templates iniciais criados em [[80_Specs/PRIMUS/Templates_PRIMUS_Blocos]].
+
 ## Proxima Acao
 
-Extrair o PDF `PRIMUS - CONTEXTO COMPLETO FINAL (NAO PERDER).pdf` para uma nota-fonte controlada e comparar com o sumario estrutural.
+Executar o Bloco 3 criando templates adicionais para `mission`, `npc`, `creature` e `spell`, depois preparar a Missao 0001.
