@@ -203,3 +203,11 @@ Formato:
 - Paginas atualizadas: [[30_Projetos/PRIMUS/CatalogEntries_Lote_0001_PRIMUS]], [[30_Projetos/PRIMUS/Validacao_VE_Lote_0001_PRIMUS]], [[30_Projetos/PRIMUS/CatalogPool_0001_PRIMUS]], [[30_Projetos/PRIMUS/Fila_Operacional_PRIMUS]], [[30_Projetos/PRIMUS/README]].
 - Resultado: 4 entradas `VE-local-index-pass` e 1 entrada `VE-local-index-partial`.
 - Proximas acoes: resolver `CE-DND-0003` ou validar `CE-DND-0006 equipment` como alternativa mais estavel.
+
+## [2026-06-30] implementacao | PRIMUS Digestor v0
+
+- Fonte: Google Drive `Rpg .docx` (ID redigido no Git) e prompts de arquitetura enviados pelo Fabio.
+- Paginas criadas: [[05_Raw_Sources/PRIMUS/2026-06-30_google-drive-rpg-docx]], [[80_Specs/PRIMUS/Spec_Digestor_PDF_PRIMUS]], [[30_Projetos/PRIMUS/Plano_Digestor_PRIMUS]], [[50_Registros/Changelog/2026-06-30_primus-digestor-v0]].
+- Sistema criado: [[60_Sistemas/PRIMUS_Digestor/README]] com scripts de extracao, segmentacao, classificacao, validacao, exportacao Markdown e importacao do PRIMUS Index.
+- Restricoes: fonte DOCX tratada como privada/restrita; corpo integral nao foi copiado para Git.
+- Proximas acoes: rodar lote pequeno real e validar `catalog_entries.jsonl`.
