@@ -17,6 +17,7 @@ Uso:
 from pathlib import Path
 from datetime import datetime
 import asyncio
+import os
 import re
 import sys
 
@@ -50,6 +51,23 @@ from reasoningbank import (recomendar as rb_recomendar,  # noqa: E402
                            registrar as rb_registrar)  # memória de experiências
 
 LIMIAR_IGNORANCIA = 0.5  # dist cosseno bge-m3: <0.5 relevante; >0.5 → ignorância
+
+# Cérebro local (opt-in via --llm). Padrão: OFF (recuperação custo-zero, sem LLM).
+OLLAMA_HOST = os.environ.get("OLLAMA_HOST", "http://localhost:11434")
+OLLAMA_MODEL = os.environ.get("OLLAMA_MODEL", "llama3.2:3b")
+
+
+def _llm_ollama(prompt: str, model: str = None) -> str:
+    """Gera texto com o LLM LOCAL (Ollama). Só é chamado em modo --llm.
+    Sem rede externa, sem custo de API — roda na máquina (GPU se disponível)."""
+    import json as _json
+    import urllib.request as _u
+    data = _json.dumps({"model": model or OLLAMA_MODEL, "prompt": prompt,
+                        "stream": False}).encode("utf-8")
+    req = _u.Request(OLLAMA_HOST + "/api/generate", data=data,
+                     headers={"Content-Type": "application/json"})
+    with _u.urlopen(req, timeout=180) as r:
+        return _json.loads(r.read().decode("utf-8")).get("response", "").strip()
 
 STATUS_KW = ("fase atual", "status", "pendencia", "pendência", "proximo passo",
              "próximo passo", "o que falta", "roadmap", "onde estamos", "estado")
@@ -251,7 +269,7 @@ def _sintese(fontes: list, termo: str) -> str:
             f"não é texto gerado. Para síntese redigida, é preciso aprovar uso de modelo.")
 
 
-async def responder(msg: str, confirmar: bool = False) -> str:
+async def responder(msg: str, confirmar: bool = False, usar_llm: bool = False) -> str:
     intent, classe = classificar(msg)
     registrar(f"{intent}:{classe}" if classe else intent, msg)
 
@@ -354,6 +372,17 @@ async def responder(msg: str, confirmar: bool = False) -> str:
 
         corpo.append("\n## Síntese\n" + _sintese(fontes, termo))
 
+        # Cérebro local (opt-in): gera resposta redigida SOBRE a recuperação
+        if usar_llm:
+            prompt = (f"Responda em PT-BR, conciso, usando APENAS os trechos do vault "
+                      f"FabioOS abaixo. Se não houver base, diga que não sabe.\n\n"
+                      f"Pergunta: {msg}\n\nTrechos:\n{rag}\n\nResposta:")
+            try:
+                corpo.append("\n## Resposta redigida (cérebro local · Ollama)\n"
+                             + _llm_ollama(prompt))
+            except Exception as e:
+                corpo.append(f"\n## Cérebro local indisponível\n(Ollama não respondeu: {e})")
+
         return _render({"tipo": "resposta", "ok": True, "titulo": f"🔎 {msg}",
                         "corpo": "\n".join(corpo), "fontes": fontes,
                         "sugestao": "Confira as fontes; para agir, peça e eu preparo o "
@@ -364,12 +393,13 @@ async def responder(msg: str, confirmar: bool = False) -> str:
 def main() -> int:
     args = sys.argv[1:]
     confirmar = "--confirmar" in args
-    args = [a for a in args if a != "--confirmar"]
+    usar_llm = "--llm" in args
+    args = [a for a in args if a not in ("--confirmar", "--llm")]
     if not args:
         # sem argumento -> briefing proativo (Fatia 1): "Bom dia, FabioOS"
         print(_render(briefing()))
         return 0
-    print(asyncio.run(responder(" ".join(args), confirmar=confirmar)))
+    print(asyncio.run(responder(" ".join(args), confirmar=confirmar, usar_llm=usar_llm)))
     return 0
 
 
