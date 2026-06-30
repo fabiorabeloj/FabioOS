@@ -58,3 +58,6 @@ desktop.ini
 # Logs
 *.log
 logs/
+
+# Extracoes locais de PDF (Restricted-safe, nao versionar)
+00_Inbox/pdfs/_extracted/
