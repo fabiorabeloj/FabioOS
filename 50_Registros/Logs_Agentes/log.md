@@ -233,4 +233,5 @@ Formato:
 - Entrega: [[05_Raw_Sources/PRIMUS/2026-06-30_pdf-dnd-core-restricted-lote-0001]], [[30_Projetos/PRIMUS/CatalogEntries_Restricted_DND_Core_0001]], [[30_Projetos/PRIMUS/Plano_Transformacao_Restricted_DND_Core]].
 - Resultado: `SRC-DND-PHB-2014`, `SRC-DND-DMG-2014` e `SRC-DND-MM-2014` criados como fontes restritas.
 - Validacao: `CE-DND-0006 Equipment` recebeu `VE-local-index-pass` via PRIMUS Index (`phb`, pagina 153, record id `bed90f56-fd8f-48cd-af0f-b3e0e0bfc7e0`).
+- Validacao: `CE-DND-0007 Creature` recebeu `VE-local-index-pass` via PRIMUS Index (`mm`, pagina 4, record id `35c6d241-b738-4c62-9dd6-ff591dfcf90a`).
 - Limites: sem extracao, sem OCR, sem RAG, sem dump integral e sem alterar `documentalista.py`.

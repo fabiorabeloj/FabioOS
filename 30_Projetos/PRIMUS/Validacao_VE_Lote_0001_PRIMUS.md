@@ -19,7 +19,7 @@ tags: [primus, validacao, ve, catalogentries]
 | Type | ok |
 | Class Base | ok |
 | Source | ok em nivel de fonte; 5 entradas possuem evidencia local-index |
-| Page/Snippet | parcial: 5 pass, 1 partial via PRIMUS Index |
+| Page/Snippet | parcial: 6 pass, 1 partial via PRIMUS Index |
 | Box/Subbox | ok como bootstrap |
 | Affects/NeverAffects | ok em padrao de lote |
 | Instancing Hint | ok preliminar |
@@ -30,14 +30,14 @@ tags: [primus, validacao, ve, catalogentries]
 
 O lote recebe `VE-pass-com-pendencia`: estrutura suficiente para organizar CatalogPool, mas insuficiente para gerar missao canonica.
 
-Atualizacao 2026-06-30: 6 entradas foram verificadas via [[Validacao_VE_5_Entradas_PRIMUS_Index]]: 5 `pass` e 1 `partial`. Isso melhora a confianca do lote, mas ainda nao libera Missao 0001.
+Atualizacao 2026-06-30: 7 entradas foram verificadas via [[Validacao_VE_5_Entradas_PRIMUS_Index]]: 6 `pass` e 1 `partial`. Isso melhora a confianca do lote, mas ainda nao libera Missao 0001.
 
 ## Validacao por Grupo
 
 | Grupo | Entries | Resultado | Pendencia |
 |---|---|---|---|
 | Jogador | CE-DND-0001 a CE-DND-0006 | VE-pass-com-pendencia com 5 evidencias locais | revisar CE-DND-0003 e CE-DND-0001 |
-| Desafio | CE-DND-0007 a CE-DND-0010 | VE-pass-com-pendencia | pagina/trecho DMG/MM |
+| Desafio | CE-DND-0007 a CE-DND-0010 | VE-pass-com-pendencia com 1 evidencia local | validar encontro, tesouro e condicao de uso |
 | Mundo | CE-WWN-0001, CE-WWN-0002, CE-WWN-0005, CE-WWN-0006 | VE-pass-com-pendencia | pagina/trecho WWN |
 | Agentes coletivos | CE-WWN-0003, CE-WWN-0009 | VE-pass-com-pendencia | confirmar se fica em WWN ou SWN |
 | Gatilhos | CE-WWN-0004, CE-WWN-0007, CE-WWN-0008, CE-WWN-0010 | VE-pass-com-pendencia | pagina/trecho WWN |
@@ -50,4 +50,4 @@ Atualizacao 2026-06-30: 6 entradas foram verificadas via [[Validacao_VE_5_Entrad
 
 ## Proxima Acao
 
-Revisar `CE-DND-0003` para obter ancora generica melhor de `species/race`, ou iniciar `CE-DND-0007 creature` como primeira validacao do grupo Desafio.
+Validar `CE-DND-0009 Encounter` ou `CE-DND-0010 Treasure` contra DMG/PRIMUS Index, mantendo `CE-DND-0003` como parcial ate nova decisao.

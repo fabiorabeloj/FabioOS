@@ -48,3 +48,15 @@ Os PDFs D&D Core agora existem no PRIMUS como fontes restritas rastreaveis:
 - resultado: `VE-local-index-pass`.
 
 Isso completa uma alternativa estavel de 5 entradas `pass`, mantendo `CE-DND-0003` como parcial.
+
+## Validacao CE-DND-0007
+
+`CE-DND-0007 Creature` foi validada via PRIMUS Index:
+
+- livro: `mm`;
+- pagina: `4`;
+- record id: `35c6d241-b738-4c62-9dd6-ff591dfcf90a`;
+- ancora: `O QUE E UM MONSTRO`;
+- resultado: `VE-local-index-pass`.
+
+Isso inicia o grupo Desafio com uma entrada `pass`, sem extrair texto do PDF MM.
