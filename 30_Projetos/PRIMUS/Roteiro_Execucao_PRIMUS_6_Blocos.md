@@ -127,7 +127,8 @@ WorldState -> Tensoes -> Conflitos -> Faccoes -> Missoes -> DeltaP -> WorldState
 - [x] Fase 0 Tension Engine inicial especificado.
 - [x] Converter tensoes em conflitos candidatos.
 - [x] Criar Player View da Cantina.
-- [ ] Criar rumores seguros da Cantina.
+- [x] Criar rumores seguros da Cantina.
+- [ ] Selecionar fonte/regiao segura ou lote E real para primeiro conflito jogavel.
 - [ ] Bloco 1 validado como definicao oficial.
 - [ ] Bloco 2 validado como taxonomia oficial.
 - [x] Bloco 3 criado com templates iniciais.
@@ -139,4 +140,4 @@ WorldState -> Tensoes -> Conflitos -> Faccoes -> Missoes -> DeltaP -> WorldState
 
 ## Proxima Acao
 
-Criar `Cantina_Rumores_0001_PRIMUS.md` com rumores seguros antes de mexer no contrato final da [[Missao_0001_Preparacao]].
+Selecionar fonte/regiao segura ou lote E real para transformar um rumor em conflito jogavel antes de mexer no contrato final da [[Missao_0001_Preparacao]].
