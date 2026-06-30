@@ -44,6 +44,7 @@ NEXT_FILE = VAULT / "60_Sistemas" / "FabioOS" / "NEXT_ACTIONS.md"
 from server import mcp           # reaproveita o MCP FabioOS (in-memory)  # noqa: E402
 from fastmcp import Client       # noqa: E402
 from registry import resolver    # despacho a agentes (Fatia 2)  # noqa: E402
+from barramento import ler as ler_barramento  # caixa multiagente  # noqa: E402
 
 LIMIAR_IGNORANCIA = 0.5  # dist cosseno bge-m3: <0.5 relevante; >0.5 → ignorância
 
@@ -136,20 +137,26 @@ def briefing() -> dict:
     em Ordens_Coordenacao_Paralela_MEGATRON_2026-06-29.md."""
     registrar("briefing", "(sem args)")
     pend = _pendencias_abertas(5)
+    inbox = ler_barramento(para="claude", status="aberto")
     hoje = datetime.now().strftime("%Y-%m-%d")
     corpo = ["## Estado operacional (fontes canônicas)\n", _ler_estado(),
              "\n## Pendências abertas (topo)"]
     corpo += ([f"- {p}" for p in pend] if pend
               else ["- (nenhuma pendência aberta em NEXT_ACTIONS)"])
+    corpo.append("\n## Caixa de entrada (barramento multiagente)")
+    corpo += ([f"- [{m['de']}→{m['para']}] {m['tipo']}: {m['mensagem']}" for m in inbox]
+              if inbox else ["- (nenhuma mensagem aberta para o lead)"])
     fontes = [{"source_path": f.relative_to(VAULT).as_posix(), "header_path": ""}
               for f in (STATUS_FILE, NEXT_FILE) if f.exists()]
+    sugestao = (f"Responder no barramento: {inbox[0]['de']} pediu '{inbox[0]['mensagem'][:60]}'"
+                if inbox else (pend[0] if pend else "Revisar STATUS/NEXT_ACTIONS."))
     return {
         "tipo": "briefing",
         "ok": True,
         "titulo": f"Briefing FabioOS — {hoje}",
         "corpo": "\n".join(corpo),
         "fontes": fontes,
-        "sugestao": pend[0] if pend else "Revisar STATUS/NEXT_ACTIONS.",
+        "sugestao": sugestao,
         "artefato": None,
     }
 

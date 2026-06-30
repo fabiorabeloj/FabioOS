@@ -20,6 +20,7 @@ except Exception:
 
 from megatron import responder, classificar, briefing  # noqa: E402
 from registry import resolver  # noqa: E402
+from barramento import ler as ler_barramento, _match  # noqa: E402
 
 # (pergunta, intent_esperado, classe_esperada, marcador esperado na resposta)
 CASOS = [
@@ -64,6 +65,16 @@ async def main() -> int:
     total += 1
     print(f"[{'PASS' if ok_reg else 'FALHA'}] registry -> escrita_segura despachável; "
           f"sensivel/externa bloqueadas")
+
+    # Barramento — ler() não destrutivo + matching de destinatário (lead->claude).
+    inbox = ler_barramento(para="claude", status="aberto")
+    ok_bus = (isinstance(inbox, list)
+              and _match("todos", "claude") and _match("lead", "claude")
+              and not _match("cursor", "claude"))
+    passes += ok_bus
+    total += 1
+    print(f"[{'PASS' if ok_bus else 'FALHA'}] barramento -> ler() ok ({len(inbox)} p/ claude); "
+          f"matching todos/lead->claude correto")
 
     print(f"\nResultado golden: {passes}/{total}")
     return 0 if passes == total else 1
