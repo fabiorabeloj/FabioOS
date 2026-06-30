@@ -130,3 +130,11 @@ Formato:
 - Paginas atualizadas: [[30_Projetos/PRIMUS/README]], [[30_Projetos/PRIMUS/Roteiro_Execucao_PRIMUS_6_Blocos]], [[40_Wiki/PRIMUS/Motor_Causal_PRIMUS]], [[40_Wiki/PRIMUS/PrimusOS]], [[80_Specs/PRIMUS/README]], [[50_Registros/Barramento_Multiagente]].
 - Contradicoes: nenhuma nova; esta entrega resolve a contradicao anterior entre "executar Missao 0001" e "fundacao causal primeiro".
 - Proximas acoes: gerar conflitos candidatos para a Cantina Conflict Engine.
+
+## [2026-06-30] implementacao documental | Conflitos candidatos e Cantina PRIMUS
+
+- Fonte: [[30_Projetos/PRIMUS/Tensoes_Iniciais_PRIMUS]], [[80_Specs/PRIMUS/Spec_Tension_Engine_PRIMUS]].
+- Paginas criadas: [[30_Projetos/PRIMUS/Conflitos_Candidatos_PRIMUS]], [[80_Specs/PRIMUS/Spec_Cantina_Conflict_Engine_PRIMUS]], [[50_Registros/Changelog/2026-06-30_conflitos-cantina-primus]].
+- Paginas atualizadas: [[30_Projetos/PRIMUS/README]], [[30_Projetos/PRIMUS/Roteiro_Execucao_PRIMUS_6_Blocos]], [[40_Wiki/PRIMUS/Motor_Causal_PRIMUS]], [[40_Wiki/PRIMUS/PrimusOS]], [[80_Specs/PRIMUS/README]], [[50_Registros/Barramento_Multiagente]].
+- Contradicoes: nenhuma; conflitos bloqueados continuam impedindo execucao prematura de missao.
+- Proximas acoes: criar `PlayerView_Cantina_0001_PRIMUS.md`.

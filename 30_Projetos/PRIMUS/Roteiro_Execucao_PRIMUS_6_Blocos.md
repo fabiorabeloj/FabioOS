@@ -119,13 +119,14 @@ Fluxo:
 WorldState -> Tensoes -> Conflitos -> Faccoes -> Missoes -> DeltaP -> WorldState
 ```
 
-**Status:** iniciado em [[WorldState_0001_PRIMUS]], detalhado em [[Tensoes_Iniciais_PRIMUS]], especificado em [[80_Specs/PRIMUS/Spec_WorldState_PRIMUS]] e [[80_Specs/PRIMUS/Spec_Tension_Engine_PRIMUS]].
+**Status:** iniciado em [[WorldState_0001_PRIMUS]], detalhado em [[Tensoes_Iniciais_PRIMUS]], convertido em [[Conflitos_Candidatos_PRIMUS]], especificado em [[80_Specs/PRIMUS/Spec_WorldState_PRIMUS]], [[80_Specs/PRIMUS/Spec_Tension_Engine_PRIMUS]] e [[80_Specs/PRIMUS/Spec_Cantina_Conflict_Engine_PRIMUS]].
 
 ## Checklist de Execucao
 
 - [x] Fase 0 WorldState minimo criado.
 - [x] Fase 0 Tension Engine inicial especificado.
-- [ ] Converter tensoes em conflitos candidatos.
+- [x] Converter tensoes em conflitos candidatos.
+- [ ] Criar Player View da Cantina.
 - [ ] Bloco 1 validado como definicao oficial.
 - [ ] Bloco 2 validado como taxonomia oficial.
 - [x] Bloco 3 criado com templates iniciais.
@@ -137,4 +138,4 @@ WorldState -> Tensoes -> Conflitos -> Faccoes -> Missoes -> DeltaP -> WorldState
 
 ## Proxima Acao
 
-Converter [[Tensoes_Iniciais_PRIMUS]] em conflitos candidatos para a Cantina Conflict Engine antes de mexer no contrato final da [[Missao_0001_Preparacao]].
+Criar `PlayerView_Cantina_0001_PRIMUS.md` com opcoes visiveis e bloqueios claros antes de mexer no contrato final da [[Missao_0001_Preparacao]].
