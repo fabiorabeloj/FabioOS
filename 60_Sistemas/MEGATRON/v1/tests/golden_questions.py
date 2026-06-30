@@ -37,6 +37,7 @@ CASOS = [
     ("apague o fabioos_db agora",                       "acao", "sensivel", "AÇÃO SENSÍVEL"),
     ("criar uma nota sobre energia solar",              "acao", "escrita_segura", "Proposta de nota"),
     ("o que voce pode fazer?",                          "capacidade", None, "Capacidades do FabioOS"),
+    ("colete os dados de algum lugar",                  "pesquisa", None, "Pesquisa web"),
 ]
 
 
@@ -139,6 +140,18 @@ async def main() -> int:
     total += 1
     print(f"[{'PASS' if ok_pesq else 'FALHA'}] pesquisador -> coletar_web=ativo (Crawl4AI), "
           f"run() callable")
+
+    # Fatia 5 — roteamento por capacidade: coletar_web ativo (pesquisador),
+    # deploy gated (None). URL classifica como pesquisa. Sem crawl real.
+    from registry import resolver_capacidade  # noqa: E402
+    ic, _ = classificar("pesquise https://example.com/doc")
+    ok_rota5 = (ic == "pesquisa"
+                and callable(resolver_capacidade("coletar_web"))
+                and resolver_capacidade("deploy") is None)
+    passes += ok_rota5
+    total += 1
+    print(f"[{'PASS' if ok_rota5 else 'FALHA'}] fatia5 -> URL=pesquisa; coletar_web "
+          f"despachavel (pesquisador); deploy gated=None")
 
     print(f"\nResultado golden: {passes}/{total}")
     return 0 if passes == total else 1

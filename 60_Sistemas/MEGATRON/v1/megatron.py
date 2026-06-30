@@ -43,7 +43,8 @@ NEXT_FILE = VAULT / "60_Sistemas" / "FabioOS" / "NEXT_ACTIONS.md"
 
 from server import mcp           # reaproveita o MCP FabioOS (in-memory)  # noqa: E402
 from fastmcp import Client       # noqa: E402
-from registry import resolver, capacidades as cap_catalogo  # despacho + Maestro  # noqa: E402
+from registry import (resolver, resolver_capacidade,  # noqa: E402
+                      capacidades as cap_catalogo, rotear)  # despacho + Maestro
 from barramento import ler as ler_barramento  # caixa multiagente  # noqa: E402
 
 LIMIAR_IGNORANCIA = 0.5  # dist cosseno bge-m3: <0.5 relevante; >0.5 → ignorância
@@ -57,6 +58,9 @@ CAPACIDADE_KW = ("o que voce pode", "o que você pode", "quais capacidades",
                  "o que sabe fazer", "o que consegue fazer", "quem consegue",
                  "time de agentes", "equipe de agentes", "o que voce faz",
                  "o que você faz")
+PESQUISA_KW = ("pesquis", "colet", "crawl", "raspar", "rastrear", "scrape",
+               "baixar a pagina", "ler o site", "ler a pagina")
+URL_RE = re.compile(r"https?://\S+")
 # Ação → classe de permissão (matriz simplificada da Fase 17).
 # Usar RADICAIS para pegar conjugações (apagar/apague/apaga; enviar/envie/envia).
 ACAO_EXTERNA = ("push", "envi", "whatsapp", "email", "e-mail", "publica", "deploy")
@@ -75,6 +79,8 @@ def classificar(msg: str):
         return "acao", "escrita_segura"
     if any(k in m for k in CAPACIDADE_KW):
         return "capacidade", None
+    if URL_RE.search(msg) or any(k in m for k in PESQUISA_KW):
+        return "pesquisa", None
     if any(k in m for k in STATUS_KW):
         return "status", None
     if any(k in m for k in RELACAO_KW):
@@ -240,6 +246,26 @@ async def responder(msg: str, confirmar: bool = False) -> str:
     # CAPACIDADE — o Maestro anuncia o time (read-only, sem RAG)
     if intent == "capacidade":
         return _render(_capacidades_resultado())
+
+    # PESQUISA — roteia por capacidade (coletar_web -> pesquisador/Crawl4AI)
+    if intent == "pesquisa":
+        url_m = URL_RE.search(msg)
+        rota = rotear("coletar_web")
+        if not url_m:
+            return _render({"tipo": "abstencao", "ok": False,
+                            "titulo": "🔎 Pesquisa web",
+                            "corpo": "Preciso de uma URL para coletar. Ex.: "
+                                     "`megatron \"pesquise https://exemplo.com/doc\"`.",
+                            "fontes": [], "sugestao": "Informe a URL.", "artefato": None})
+        run_pesq = resolver_capacidade("coletar_web")
+        if run_pesq is None:     # capacidade existe mas agente não está ativo
+            alvo = f"{rota['agente']} ({rota['ferramenta']}, {rota['status']})" if rota else "nenhum agente"
+            return (f"🛑 Capacidade 'coletar_web' não está ativa — rotearia para {alvo}; "
+                    f"requer instalação/aprovação. Posso propor, não executar.")
+        url = url_m.group(0)
+        # pesquisador.run faz asyncio.run interno -> roda em thread p/ evitar loop aninhado
+        r = await asyncio.to_thread(lambda: run_pesq(url, dry_run=not confirmar))
+        return _render(r)
 
     # AÇÃO — diferencia permissão; nunca executa sem aprovação
     if intent == "acao":
