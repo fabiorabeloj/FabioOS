@@ -75,6 +75,21 @@ def resolver(classe: str):
     return None
 
 
+def resolver_capacidade(capacidade: str):
+    """Retorna a função `run` do agente ATIVO que possui a capacidade, ou None
+    (se não houver, ou se o agente estiver planejado/gated). Import lazy."""
+    r = rotear(capacidade)
+    if not r or r["status"] != "ativo":
+        return None
+    if r["agente"] == "pesquisador":
+        import pesquisador
+        return pesquisador.run
+    if r["agente"] == "arquivista":
+        import arquivista
+        return arquivista.run
+    return None
+
+
 def capacidades(status: str = None) -> dict:
     """Catálogo de capacidades (opcionalmente filtrado por status)."""
     if status is None:
