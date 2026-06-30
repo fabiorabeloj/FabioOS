@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useRef, useState } from "react";
-import type { Agent, SecurityMatrix, WsMessage } from "../types";
+import type { Agent, AgentCatalog, AgentLayer, SecurityMatrix, WsMessage } from "../types";
 
 const API_BASE = (import.meta.env.VITE_API_BASE as string | undefined)?.replace(/\/$/, "") ?? "/api";
 const WS_BASE =
@@ -14,8 +14,16 @@ function mergeAgent(list: Agent[], updated: Agent): Agent[] {
   return next;
 }
 
+function mergeCatalogAgents(catalog: AgentCatalog, updated: Agent): AgentCatalog {
+  return {
+    ...catalog,
+    agents: mergeAgent(catalog.agents, updated),
+  };
+}
+
 export function useAgents() {
   const [agents, setAgents] = useState<Agent[]>([]);
+  const [catalog, setCatalog] = useState<AgentCatalog | null>(null);
   const [matrix, setMatrix] = useState<SecurityMatrix | null>(null);
   const [connected, setConnected] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -23,15 +31,19 @@ export function useAgents() {
 
   const fetchAgents = useCallback(async () => {
     try {
-      const [agentsRes, matrixRes] = await Promise.all([
+      const [agentsRes, matrixRes, catalogRes] = await Promise.all([
         fetch(`${API_BASE}/agents`),
         fetch(`${API_BASE}/security/matrix`),
+        fetch(`${API_BASE}/catalog`),
       ]);
       if (!agentsRes.ok) throw new Error(`HTTP ${agentsRes.status} /agents`);
       const agentsData = (await agentsRes.json()) as { agents: Agent[] };
       setAgents(agentsData.agents);
       if (matrixRes.ok) {
         setMatrix((await matrixRes.json()) as SecurityMatrix);
+      }
+      if (catalogRes.ok) {
+        setCatalog((await catalogRes.json()) as AgentCatalog);
       }
       setError(null);
     } catch (e) {
@@ -59,8 +71,11 @@ export function useAgents() {
           setError(null);
         } else if (msg.type === "agent_updated") {
           setAgents((prev) => mergeAgent(prev, msg.agent));
+          setCatalog((prev) => (prev ? mergeCatalogAgents(prev, msg.agent) : prev));
         } else if (msg.type === "security_matrix") {
           setMatrix(msg.matrix);
+        } else if (msg.type === "catalog") {
+          setCatalog(msg.catalog);
         }
       } catch {
         /* ignore */
@@ -73,5 +88,35 @@ export function useAgents() {
     };
   }, [fetchAgents]);
 
-  return { agents, matrix, connected, error, refetch: fetchAgents, apiBase: API_BASE };
+  const resolveAgent = useCallback(
+    (id: string | null): Agent | null => {
+      if (!id) return null;
+      return (
+        agents.find((a) => a.id === id) ??
+        catalog?.agents.find((a) => a.id === id) ??
+        null
+      );
+    },
+    [agents, catalog],
+  );
+
+  return {
+    agents,
+    catalog,
+    matrix,
+    connected,
+    error,
+    refetch: fetchAgents,
+    apiBase: API_BASE,
+    resolveAgent,
+  };
+}
+
+export function filterCatalogByLayer(
+  catalog: AgentCatalog | null,
+  layer: AgentLayer | "all",
+): Agent[] {
+  if (!catalog) return [];
+  if (layer === "all") return catalog.agents;
+  return catalog.agents.filter((a) => a.layer === layer);
 }

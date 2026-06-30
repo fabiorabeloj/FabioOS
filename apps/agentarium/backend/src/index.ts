@@ -36,11 +36,14 @@ export async function buildApp() {
     ok: true,
     service: "agentarium-backend",
     product: "MEGATRON Tactical Agentarium",
+    version: "0.3.0",
   }));
 
   app.get("/agents", async () => ({
-    agents: store.list(),
+    agents: store.listActive(),
   }));
+
+  app.get("/catalog", async () => store.catalog());
 
   app.get("/agents/:id", async (req, reply) => {
     const { id } = req.params as { id: string };
@@ -51,14 +54,14 @@ export async function buildApp() {
     return { agent };
   });
 
-  app.get("/security/matrix", async () => buildSecurityMatrix(store.list()));
+  app.get("/security/matrix", async () => buildSecurityMatrix(store.catalogAgents()));
 
   app.post("/agents/:id/policy", async (req, reply) => {
     const { id } = req.params as { id: string };
     const body = req.body as AgentPolicyUpdate;
     try {
       const agent = store.updatePolicy(id, body);
-      return { agent, matrix: buildSecurityMatrix(store.list()) };
+      return { agent, matrix: buildSecurityMatrix(store.catalogAgents()) };
     } catch {
       return reply.status(404).send({ error: "Agent not found" });
     }

@@ -1,5 +1,5 @@
 import type { Agent } from "../types";
-import { STATE_LABELS, RISK_LABELS } from "../types";
+import { LAYER_LABELS, STATE_LABELS, RISK_LABELS, STATUS_LABELS } from "../types";
 import { PolicyBadges } from "./PolicyBadges";
 
 type Props = {
@@ -9,7 +9,7 @@ type Props = {
 export function AgentInspector({ agent }: Props) {
   if (!agent) {
     return (
-      <aside className="agent-inspector panel-tactical">
+      <aside className="agent-inspector panel-tactical pixel-panel pixel-border">
         <h2>Agent Inspector</h2>
         <p className="muted">Clique em um agente no mapa ou na matriz.</p>
       </aside>
@@ -19,24 +19,62 @@ export function AgentInspector({ agent }: Props) {
   const p = agent.policy;
 
   return (
-    <aside className="agent-inspector panel-tactical">
+    <aside className="agent-inspector panel-tactical pixel-panel pixel-border">
       <h2>Agent Inspector</h2>
       <PolicyBadges policy={p} />
 
       <dl className="inspector-dl">
         <dt>Name</dt>
         <dd>{agent.name}</dd>
+        <dt>Status</dt>
+        <dd>
+          <span className={`catalog-badge catalog-badge--${agent.status}`}>
+            {STATUS_LABELS[agent.status]}
+          </span>
+        </dd>
+        <dt>Layer</dt>
+        <dd>{LAYER_LABELS[agent.layer]}</dd>
+        <dt>Essential</dt>
+        <dd>{agent.essential ? "Sim" : "Opcional"}</dd>
         <dt>Role</dt>
         <dd>{agent.role}</dd>
+        <dt>Catalog zone</dt>
+        <dd>{agent.catalogZone}</dd>
         <dt>State</dt>
         <dd>{STATE_LABELS[agent.state]}</dd>
         <dt>Task</dt>
         <dd>{agent.task}</dd>
-        <dt>Zone</dt>
+        <dt>Runtime zone</dt>
         <dd>{agent.zone}</dd>
         <dt>UpdatedAt</dt>
         <dd>{new Date(agent.updatedAt).toLocaleString("pt-BR")}</dd>
       </dl>
+
+      <h3 className="inspector-sub">RESPONSIBILITIES</h3>
+      <ul className="inspector-list">
+        {agent.responsibilities.map((r) => (
+          <li key={r}>{r}</li>
+        ))}
+      </ul>
+
+      <h3 className="inspector-sub">INPUTS / OUTPUTS</h3>
+      <dl className="inspector-dl">
+        <dt>Inputs</dt>
+        <dd>{agent.inputs.join(", ")}</dd>
+        <dt>Outputs</dt>
+        <dd>{agent.outputs.join(", ")}</dd>
+      </dl>
+
+      <h3 className="inspector-sub">REQUIRES APPROVAL FOR</h3>
+      {agent.requiresApprovalFor.length === 0 ? (
+        <p className="muted">Nenhuma aprovacao obrigatoria definida.</p>
+      ) : (
+        <ul className="inspector-list">
+          {agent.requiresApprovalFor.map((r) => (
+            <li key={r}>{r}</li>
+          ))}
+        </ul>
+      )}
 
       <h3 className="inspector-sub">POLICY</h3>
       <dl className="inspector-dl">

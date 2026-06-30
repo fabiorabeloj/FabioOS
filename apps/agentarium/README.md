@@ -25,13 +25,39 @@ cd apps/agentarium/backend && npm install && npm run dev
 cd apps/agentarium/frontend && npm install && npm run dev
 ```
 
-## Funcionalidades v0.2
+## Funcionalidades v0.3
+
+- **Agent Catalog** — 27 agentes FabioOS (5 ativos, 22 planejados)
+- Filtro por camada (command, security, technical, knowledge, school, finance, interface, personal)
+- **Pixel Ops Animation Layer** — sprites 8-bit originais
+- **Security Matrix** — todos os agentes do catalogo
+- `GET /catalog` — metadata completa
+
+## Funcionalidades v0.2.1
 
 - Mapa tático 16-bit com agentes em movimento
+- **Pixel Ops Animation Layer** — sprites 8-bit originais + HUD 16-bit
 - **Security Matrix** — sandbox, access, exec, write, elevated, risk
 - **Agent Inspector** — policy, agentDir, auth, risk notes
-- Badges pixelados `[SBX]`, `[FS]`, `[EXEC]`, `[ELEV]`, `[RISK]`
 - `POST /agents/:id/policy` — altera policy simulada e recalcula risco
+
+### Testar animações por estado (Codex)
+
+```powershell
+$utf = { param($j) [System.Text.Encoding]::UTF8.GetBytes($j) }
+
+# Thinking
+Invoke-RestMethod -Uri "http://127.0.0.1:3847/agents/codex/state" -Method POST `
+  -ContentType "application/json; charset=utf-8" `
+  -Body (& $utf '{"state":"thinking","task":"Analisando tarefa","zone":"Classificação"}')
+
+# Executing
+Invoke-RestMethod -Uri "http://127.0.0.1:3847/agents/codex/state" -Method POST `
+  -ContentType "application/json; charset=utf-8" `
+  -Body (& $utf '{"state":"executing","task":"Aplicando patch","zone":"GitHub"}')
+
+# Waiting approval / Done / Error — idem com state correspondente
+```
 
 ## Testes
 

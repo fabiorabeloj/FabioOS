@@ -97,6 +97,62 @@ Políticas padrão: `backend/src/policies/defaultPolicies.ts` e [[60_Sistemas/Op
 
 Cores: safe = verde, warning = amarelo, danger = vermelho (avatar com tremor leve).
 
+## Pixel Ops Animation Layer
+
+Camada visual **8/16-bit** do Agentarium — sprites originais em matriz de pixels, sem assets externos.
+
+### Estrutura
+
+```text
+apps/agentarium/frontend/src/pixel/
+  pixelTypes.ts       # tipos e mapeamento estado → animação
+  pixelPalettes.ts    # paleta de cores por caractere
+  agentSprites.ts     # matrizes por agente (idle, walk, thinking…)
+  animations.css      # keyframes CSS
+
+apps/agentarium/frontend/src/components/pixel/
+  PixelSprite.tsx     # renderiza matriz em CSS grid
+  PixelAgentAvatar.tsx
+  PixelShadow.tsx
+  PixelStatusEffect.tsx
+```
+
+### Como os sprites são definidos
+
+Cada linha de uma `PixelFrame` é uma string; cada caractere vira um quadrado colorido pela paleta (`.` = transparente). Exemplo: `K` = contorno escuro, `C` = ciano.
+
+### Como criar novo sprite
+
+1. Adicionar entrada em `agentSprites.ts` com frames `idle`, `walk1`, `walk2`, etc.
+2. Definir paleta com `mergePalette({ ... })`.
+3. Registrar emoji/ID no backend se for agente ativo.
+
+### Como adicionar nova animação
+
+1. Incluir frames em `PixelSpriteFrames` em `pixelTypes.ts`.
+2. Adicionar keyframe em `animations.css` e classe `.pixel-anim--*`.
+3. Mapear em `resolvePixelAnim()` e `resolveAnimClass()`.
+
+### Mapeamento estado → animação
+
+| Estado | Animação | Efeito extra |
+|---|---|---|
+| idle | `pixel-idle` | respiração 1px |
+| thinking | `pixel-thinking` | 3 pontos pulsantes |
+| executing | `pixel-executing` | scanline + bits |
+| waiting_approval | `pixel-approval` | `!` pixelado |
+| done | `pixel-done` | check verde |
+| error | `pixel-error` | tremor + X |
+| danger (policy) | `pixel-danger` | tremor vermelho |
+| walking (800ms após mudança de zona) | `pixel-walk` | alterna walk1/walk2 |
+
+### Reduzir/desativar animações
+
+- Respeita `prefers-reduced-motion: reduce` (animações quase desligadas).
+- Simulador pode ser desligado com `AGENTARIUM_AUTO_SIM=false`.
+
+Sprites são **originais** (matriz ASCII → CSS grid); nenhum pacote ou imagem externa.
+
 ## Agentes iniciais (v0.2)
 
 | ID | Nome | Função | Zona inicial |

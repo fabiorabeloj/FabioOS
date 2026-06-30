@@ -3,9 +3,11 @@ import type {
   AgentPolicyUpdate,
   AgentRuntimeState,
   AgentStateUpdate,
+  AgentCatalog,
+  AgentLayer,
   Zone,
 } from "./types.js";
-import { buildInitialAgents } from "./policies/defaultPolicies.js";
+import { buildInitialActiveAgents, buildFullCatalog, LAYER_LABELS } from "./agents/fabioAgents.js";
 import { refreshAllRisks, refreshAgentRisk } from "./risk.js";
 
 const now = () => new Date().toISOString();
@@ -31,11 +33,36 @@ class AgentStore {
     );
   }
 
+  listActive(): Agent[] {
+    return this.list().filter((a) => a.status === "active");
+  }
+
+  catalog(): AgentCatalog {
+    const agents = buildFullCatalog(this.agents);
+    const counts = {
+      active: agents.filter((a) => a.status === "active").length,
+      planned: agents.filter((a) => a.status === "planned").length,
+      inactive: agents.filter((a) => a.status === "inactive").length,
+      total: agents.length,
+    };
+    return {
+      agents,
+      layers: Object.keys(LAYER_LABELS) as AgentLayer[],
+      counts,
+    };
+  }
+
+  catalogAgents(): Agent[] {
+    return this.catalog().agents;
+  }
+
   get(id: string): Agent | undefined {
     const a = this.agents.get(id);
-    if (!a) return undefined;
-    const [refreshed] = refreshAllRisks([a]);
-    return refreshed;
+    if (a) {
+      const [refreshed] = refreshAllRisks([a]);
+      return refreshed;
+    }
+    return buildFullCatalog(this.agents).find((c) => c.id === id);
   }
 
   private persist(agent: Agent): Agent {
@@ -78,7 +105,7 @@ class AgentStore {
   }
 }
 
-export const store = new AgentStore(buildInitialAgents());
+export const store = new AgentStore(buildInitialActiveAgents());
 
 export function isValidState(s: string): s is AgentRuntimeState {
   return ["idle", "thinking", "executing", "waiting_approval", "done", "error"].includes(

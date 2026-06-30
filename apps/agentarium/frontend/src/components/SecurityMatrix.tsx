@@ -1,5 +1,5 @@
 import type { SecurityMatrix } from "../types";
-import { RISK_LABELS } from "../types";
+import { LAYER_LABELS, RISK_LABELS, STATUS_LABELS } from "../types";
 
 type Props = {
   matrix: SecurityMatrix | null;
@@ -10,7 +10,7 @@ type Props = {
 export function SecurityMatrixPanel({ matrix, onSelect, selectedId }: Props) {
   if (!matrix) {
     return (
-      <section className="security-matrix panel-tactical">
+      <section className="security-matrix panel-tactical pixel-panel pixel-border">
         <h2>Security Matrix</h2>
         <p className="muted">Carregando matriz...</p>
       </section>
@@ -18,7 +18,7 @@ export function SecurityMatrixPanel({ matrix, onSelect, selectedId }: Props) {
   }
 
   return (
-    <section className="security-matrix panel-tactical">
+    <section className="security-matrix panel-tactical pixel-panel pixel-border">
       <h2>Security Matrix</h2>
       {matrix.globalAlerts.length > 0 && (
         <ul className="global-alerts">
@@ -34,6 +34,8 @@ export function SecurityMatrixPanel({ matrix, onSelect, selectedId }: Props) {
           <thead>
             <tr>
               <th>Agent</th>
+              <th>Status</th>
+              <th>Layer</th>
               <th>Sandbox</th>
               <th>Access</th>
               <th>Exec</th>
@@ -50,6 +52,12 @@ export function SecurityMatrixPanel({ matrix, onSelect, selectedId }: Props) {
                 onClick={() => onSelect(row.id)}
               >
                 <td>{row.name}</td>
+                <td>
+                  <span className={`catalog-badge catalog-badge--${row.status}`}>
+                    {STATUS_LABELS[row.status]}
+                  </span>
+                </td>
+                <td className="pixel-label">{LAYER_LABELS[row.layer]}</td>
                 <td>{row.sandboxMode}</td>
                 <td>{row.workspaceAccess}</td>
                 <td>{row.exec ? "yes" : "no"}</td>

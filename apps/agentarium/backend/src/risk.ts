@@ -110,6 +110,8 @@ export function buildSecurityMatrix(agents: Agent[]): SecurityMatrix {
   const rows: SecurityMatrixRow[] = refreshed.map((a) => ({
     id: a.id,
     name: a.name,
+    status: a.status,
+    layer: a.layer,
     sandboxMode: a.policy.sandboxMode,
     workspaceAccess: a.policy.workspaceAccess,
     exec: toolAllowed(a.policy, "exec"),
