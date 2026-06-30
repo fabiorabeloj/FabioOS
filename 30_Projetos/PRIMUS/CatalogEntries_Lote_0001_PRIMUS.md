@@ -22,14 +22,14 @@ Este lote cria entradas estruturais iniciais a partir das fontes do Project Chat
 |---|---|---|---|---|---|---|
 | CE-DND-0001 | player_character | Player Character | Agent | D&D Core | ator jogavel de instancia | fonte-pendente |
 | CE-DND-0002 | class | Class | Entity | D&D Core | define progressao de personagem | VE-local-index-pass |
-| CE-DND-0003 | species | Species/Race | Entity | D&D Core | define origem jogavel | VE-local-index-partial |
+| CE-DND-0003 | species | Species/Race | Entity | D&D Core | define origem jogavel | VE-local-index-pass |
 | CE-DND-0004 | background | Background | Entity | D&D Core | gera pericias, historia e gancho | VE-local-index-pass |
 | CE-DND-0005 | spell | Spell | Entity | D&D Core | efeito mecanico em encontro | VE-local-index-pass |
 | CE-DND-0006 | equipment | Equipment | Object | D&D Core | recurso de personagem ou recompensa | VE-local-index-pass |
 | CE-DND-0007 | creature | Creature | Agent | Monster Manual | ator antagonista/neutro | VE-local-index-pass |
 | CE-DND-0008 | condition | Condition | State | D&D Core | estado temporario em instancia | VE-local-index-pass |
-| CE-DND-0009 | encounter | Encounter | Event | D&D Core/DMG | unidade de desafio | fonte-pendente |
-| CE-DND-0010 | treasure | Treasure | Object | DMG | recompensa e possivel DeltaP | fonte-pendente |
+| CE-DND-0009 | encounter | Encounter | Event | D&D Core/DMG | unidade de desafio | VE-local-index-pass |
+| CE-DND-0010 | treasure | Treasure | Object | DMG | recompensa e possivel DeltaP | VE-local-index-pass |
 
 ## Entradas Sandbox / WWN
 
@@ -64,4 +64,4 @@ confidence: baixa_ate_validar_pagina
 
 ## Proxima Acao
 
-Continuar V(E) no lote: `CE-DND-0006` e `CE-DND-0007` foram validadas via [[Validacao_VE_5_Entradas_PRIMUS_Index]]. Proxima frente: validar `CE-DND-0009 Encounter` ou `CE-DND-0010 Treasure`.
+Continuar V(E) no lote: as entradas D&D Core `CE-DND-0002` a `CE-DND-0010` estao validadas via [[Validacao_VE_5_Entradas_PRIMUS_Index]] e [[Ancoras_PRIMUS_Index_DND_Core]]. Proxima frente: validar `CE-DND-0001 Player Character` ou iniciar as entradas WWN.

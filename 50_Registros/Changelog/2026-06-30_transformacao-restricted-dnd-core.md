@@ -60,3 +60,15 @@ Isso completa uma alternativa estavel de 5 entradas `pass`, mantendo `CE-DND-000
 - resultado: `VE-local-index-pass`.
 
 Isso inicia o grupo Desafio com uma entrada `pass`, sem extrair texto do PDF MM.
+
+## Rodada de Ancoras
+
+Foram aplicadas ancoras adicionais via PRIMUS Index:
+
+| CatalogEntry | Resultado | Livro | Pagina | Record ID | Ancora |
+|---|---|---|---:|---|---|
+| CE-DND-0003 | VE-local-index-pass | phb | 18 | `868a79ee-22cc-4ca8-b30b-ec35f5652e54` | ESCOLHENDO UMA RAÇA |
+| CE-DND-0009 | VE-local-index-pass | dmg | 81 | `d73f90d8-bf4b-4b49-8392-e71f3ddfe186` | CRIANDO ENCONTROS |
+| CE-DND-0010 | VE-local-index-pass | dmg | 133 | `b267d38d-749c-4710-adaa-b7aeb1792e0d` | USANDO AS TABELAS DE TESOURO INDIVIDUAL |
+
+Nenhum texto integral foi copiado.
