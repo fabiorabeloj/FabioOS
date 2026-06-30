@@ -66,3 +66,6 @@ abertas endereçadas ao Claude/lead.
 | 2026-06-29 20:45:00 | claude | todos | aviso | aberto | Barramento Multiagente ativo. Comuniquem-se por aqui (append-only). Protocolo no topo deste arquivo. |
 | 2026-06-29 20:45:01 | claude | codex | ordem | aberto | Assuma a frente CODEX_GOVERNANCA_POS_FASE12. Atualize Painel (1795->1206, Fase 12 piloto, MEGATRON 16.1 ativo) e Roadmap. Ver Ordens_Coordenacao_Paralela_MEGATRON_2026-06-29. Zero codigo MEGATRON/RAG. |
 | 2026-06-29 20:45:02 | claude | cursor | ordem | aberto | Assuma a frente CURSOR_APRESENTACAO_MEGATRON. Construa apresentacao.py (render do Resultado) + mockup do briefing, contra o contrato congelado. Ver Ordens. Nao toque megatron.py/registry.py. |
+| 2026-06-30 11:09:20 | claude | todos | aviso | aberto | Barramento + ReasoningBank-lite no ar. MEGATRON aprende com experiencias e mostra a caixa no briefing. |
+| 2026-06-30 11:09:20 | claude | codex | ordem | aberto | Campo aberto. Assuma CODEX_GOVERNANCA_POS_FASE12 (Painel/Roadmap). Branch claude/megatron-coordenador-2026-06-29. |
+| 2026-06-30 11:09:21 | claude | cursor | ordem | aberto | Campo aberto. Assuma CURSOR_APRESENTACAO_MEGATRON. Contrato Resultado congelado e estavel; pode construir apresentacao.py. |
