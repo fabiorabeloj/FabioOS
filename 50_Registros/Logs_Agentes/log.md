@@ -186,3 +186,12 @@ Formato:
 - Paginas atualizadas: [[30_Projetos/PRIMUS/Fila_Operacional_PRIMUS]], [[30_Projetos/PRIMUS/Backlog_PRIMUS_Implementacao]], [[30_Projetos/PRIMUS/README]], [[80_Specs/PRIMUS/README]], [[50_Registros/Barramento_Multiagente]].
 - Contradicoes: Changelog 5.6 reforca que Missao 0001 continua bloqueada; PRIMUS agora possui cockpit operacional, mas ainda precisa validar pagina/trecho de 5 CatalogEntries antes de missao canonica.
 - Proximas acoes: validar 5 CatalogEntries prioritarias e promover WorldState v1.0.
+
+## [2026-06-30] runtime | PRIMUS Index local
+
+- Fonte: `C:\Users\user\Desktop\Projeto\primus-site` e `C:\Users\user\Desktop\Projeto\primus_out_20251230_055048`.
+- Validacao: `primus.sqlite` possui `10788` registros (`phb`, `dmg`, `mm`, `classes_compendio`); app FastAPI respondeu HTTP 200 em `http://127.0.0.1:8819/`.
+- Paginas criadas: [[30_Projetos/PRIMUS/Runtime_PRIMUS_Index_Local]], [[50_Registros/Changelog/2026-06-30_primus-index-runtime-local]].
+- Script criado: [[60_Sistemas/Scripts/start_primus_index.ps1]].
+- Contradicoes: app externo estava quebrado por assinatura antiga de `TemplateResponse`; corrigido fora do repo FabioOS.
+- Proximas acoes: usar o indice para validar pagina/trecho de 5 CatalogEntries.
