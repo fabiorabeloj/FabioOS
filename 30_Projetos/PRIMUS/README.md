@@ -7,6 +7,8 @@ Projeto narrativo persistente do FabioOS.
 - [[PRIMUS]]
 - [[Plano_Ingestao_PRIMUS]]
 - [[Roteiro_Execucao_PRIMUS_6_Blocos]]
+- [[WorldState_0001_PRIMUS]]
+- [[Tensoes_Iniciais_PRIMUS]]
 - [[Missao_0001_Preparacao]]
 - [[40_Wiki/PRIMUS/Motor_Causal_PRIMUS]]
 
@@ -21,3 +23,4 @@ Projeto narrativo persistente do FabioOS.
 - [[80_Specs/PRIMUS/Spec_Ingestao_PRIMUS_ChatGPT]]
 - [[80_Specs/PRIMUS/Templates_PRIMUS_Blocos]]
 - [[80_Specs/PRIMUS/Spec_WorldState_PRIMUS]]
+- [[80_Specs/PRIMUS/Spec_Tension_Engine_PRIMUS]]

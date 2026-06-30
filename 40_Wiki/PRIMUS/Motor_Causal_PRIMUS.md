@@ -91,6 +91,13 @@ PRIMUS nao pressupoe simulacao continua. O mundo avanca por procedimentos explic
 
 A [[30_Projetos/PRIMUS/Missao_0001_Preparacao]] deve ficar congelada como preparacao, nao como proxima execucao. O proximo passo real e formalizar WorldState minimo.
 
+## Artefatos Iniciais
+
+- [[30_Projetos/PRIMUS/WorldState_0001_PRIMUS]]
+- [[30_Projetos/PRIMUS/Tensoes_Iniciais_PRIMUS]]
+- [[80_Specs/PRIMUS/Spec_WorldState_PRIMUS]]
+- [[80_Specs/PRIMUS/Spec_Tension_Engine_PRIMUS]]
+
 ## Relacoes
 
 - [[PrimusOS]]

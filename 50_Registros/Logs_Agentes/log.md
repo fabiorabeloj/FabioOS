@@ -122,3 +122,11 @@ Formato:
 - Paginas atualizadas: [[05_Raw_Sources/PRIMUS/README]], [[40_Wiki/PRIMUS/README]], [[40_Wiki/PRIMUS/PrimusOS]], [[40_Wiki/PRIMUS/Taxonomia_PRIMUS]], [[30_Projetos/PRIMUS/Roteiro_Execucao_PRIMUS_6_Blocos]], [[30_Projetos/PRIMUS/Plano_Ingestao_PRIMUS]], [[30_Projetos/PRIMUS/README]], [[80_Specs/PRIMUS/README]], [[50_Registros/Barramento_Multiagente]].
 - Contradicoes: o roteiro anterior empurrava para Missao 0001; o Google Doc v5 desloca a prioridade para WorldState, Tension Engine e Cantina Conflict Engine.
 - Proximas acoes: criar `WorldState_0001_PRIMUS.md` e a primeira lista de tensoes estruturais.
+
+## [2026-06-30] implementacao documental | WorldState e Tension Engine PRIMUS
+
+- Fonte: [[05_Raw_Sources/PRIMUS/2026-06-30_google-doc_primus_contexto_completo_final]], [[40_Wiki/PRIMUS/Motor_Causal_PRIMUS]].
+- Paginas criadas: [[30_Projetos/PRIMUS/WorldState_0001_PRIMUS]], [[30_Projetos/PRIMUS/Tensoes_Iniciais_PRIMUS]], [[80_Specs/PRIMUS/Spec_Tension_Engine_PRIMUS]], [[50_Registros/Changelog/2026-06-30_worldstate-tension-engine-primus]].
+- Paginas atualizadas: [[30_Projetos/PRIMUS/README]], [[30_Projetos/PRIMUS/Roteiro_Execucao_PRIMUS_6_Blocos]], [[40_Wiki/PRIMUS/Motor_Causal_PRIMUS]], [[40_Wiki/PRIMUS/PrimusOS]], [[80_Specs/PRIMUS/README]], [[50_Registros/Barramento_Multiagente]].
+- Contradicoes: nenhuma nova; esta entrega resolve a contradicao anterior entre "executar Missao 0001" e "fundacao causal primeiro".
+- Proximas acoes: gerar conflitos candidatos para a Cantina Conflict Engine.
