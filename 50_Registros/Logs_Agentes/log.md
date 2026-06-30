@@ -170,3 +170,11 @@ Formato:
 - Paginas atualizadas: [[30_Projetos/PRIMUS/Fila_Operacional_PRIMUS]], [[30_Projetos/PRIMUS/Backlog_PRIMUS_Implementacao]], [[30_Projetos/PRIMUS/README]], [[80_Specs/PRIMUS/README]].
 - Contradicoes: entradas sao bootstrap e ainda precisam pagina/trecho antes de promocao.
 - Proximas acoes: criar V(E) e aplicar no lote.
+
+## [2026-06-30] validacao | V(E) lote 0001 PRIMUS
+
+- Fonte: [[30_Projetos/PRIMUS/CatalogEntries_Lote_0001_PRIMUS]].
+- Paginas criadas: [[80_Specs/PRIMUS/Spec_Validacao_VE_PRIMUS]], [[30_Projetos/PRIMUS/Validacao_VE_Lote_0001_PRIMUS]], [[50_Registros/Changelog/2026-06-30_validacao-ve-lote-0001-primus]].
+- Paginas atualizadas: [[30_Projetos/PRIMUS/Fila_Operacional_PRIMUS]], [[30_Projetos/PRIMUS/CatalogPool_0001_PRIMUS]], [[30_Projetos/PRIMUS/README]], [[80_Specs/PRIMUS/README]].
+- Contradicoes: nenhuma; validacao deixa claro que o lote ainda nao e canonico.
+- Proximas acoes: validar pagina/trecho de 5 entradas prioritarias.

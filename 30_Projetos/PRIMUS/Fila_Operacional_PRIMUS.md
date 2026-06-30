@@ -25,7 +25,7 @@ Toda tarefa deve ter area, status, saida esperada e criterio de conclusao.
 | PRIMUS-TASK-0004 | Fontes | done | alta | Criar matriz de fontes | [[40_Wiki/PRIMUS/Matriz_Fontes_PRIMUS]] |
 | PRIMUS-TASK-0005 | Governanca | done | alta | Criar spec do PRIMUS Steward | [[80_Specs/PRIMUS/Spec_PRIMUS_Steward]] |
 | PRIMUS-TASK-0006 | Catalogo | done | critica | Selecionar primeiro lote de CatalogEntries reais | [[CatalogEntries_Lote_0001_PRIMUS]] |
-| PRIMUS-TASK-0007 | Validacao | pending | critica | Definir V(E), V(I), V(P) operacional | criterios verificaveis |
+| PRIMUS-TASK-0007 | Validacao | done | critica | Definir V(E), V(I), V(P) operacional | [[80_Specs/PRIMUS/Spec_Validacao_VE_PRIMUS]] |
 | PRIMUS-TASK-0008 | Motor | done | alta | Formalizar CatalogPool | [[CatalogPool_0001_PRIMUS]] |
 | PRIMUS-TASK-0009 | Motor | pending | alta | Formalizar Engrenagem 6 | spec de geracao de missao |
 | PRIMUS-TASK-0010 | Persistencia | pending | alta | Aplicar DeltaP ao WorldState | update manual validado |
@@ -34,4 +34,4 @@ Toda tarefa deve ter area, status, saida esperada e criterio de conclusao.
 
 ## Proxima Tarefa
 
-`PRIMUS-TASK-0007`: definir e aplicar V(E) no [[CatalogEntries_Lote_0001_PRIMUS]].
+`PRIMUS-TASK-0009`: formalizar Engrenagem 6, mas somente com entradas `VE-pass-com-pendencia` e sem gerar missao canonica.
