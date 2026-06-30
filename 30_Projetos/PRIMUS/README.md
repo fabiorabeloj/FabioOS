@@ -23,6 +23,7 @@ Projeto narrativo persistente do FabioOS.
 - [[Cantina_Board_0001_PRIMUS]]
 - [[Mission_Contract_0001_PRIMUS]]
 - [[DeltaP_Log_0001_PRIMUS]]
+- [[Runtime_PRIMUS_Index_Local]]
 - [[Missao_0001_Preparacao]]
 - [[40_Wiki/PRIMUS/Motor_Causal_PRIMUS]]
 
