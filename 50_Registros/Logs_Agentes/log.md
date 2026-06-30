@@ -195,3 +195,11 @@ Formato:
 - Script criado: [[60_Sistemas/Scripts/start_primus_index.ps1]].
 - Contradicoes: app externo estava quebrado por assinatura antiga de `TemplateResponse`; corrigido fora do repo FabioOS.
 - Proximas acoes: usar o indice para validar pagina/trecho de 5 CatalogEntries.
+
+## [2026-06-30] validacao | V(E) 5 entradas via PRIMUS Index
+
+- Fonte: [[30_Projetos/PRIMUS/Runtime_PRIMUS_Index_Local]].
+- Pagina criada: [[30_Projetos/PRIMUS/Validacao_VE_5_Entradas_PRIMUS_Index]].
+- Paginas atualizadas: [[30_Projetos/PRIMUS/CatalogEntries_Lote_0001_PRIMUS]], [[30_Projetos/PRIMUS/Validacao_VE_Lote_0001_PRIMUS]], [[30_Projetos/PRIMUS/CatalogPool_0001_PRIMUS]], [[30_Projetos/PRIMUS/Fila_Operacional_PRIMUS]], [[30_Projetos/PRIMUS/README]].
+- Resultado: 4 entradas `VE-local-index-pass` e 1 entrada `VE-local-index-partial`.
+- Proximas acoes: resolver `CE-DND-0003` ou validar `CE-DND-0006 equipment` como alternativa mais estavel.

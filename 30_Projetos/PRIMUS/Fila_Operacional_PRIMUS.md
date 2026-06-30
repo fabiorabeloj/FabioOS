@@ -36,10 +36,11 @@ Toda tarefa deve ter area, status, saida esperada e criterio de conclusao.
 | PRIMUS-TASK-0015 | Motor | done | alta | Formalizar Vector Engine v0 | [[80_Specs/PRIMUS/Spec_Vector_Engine_PRIMUS]] |
 | PRIMUS-TASK-0016 | Motor | done | alta | Formalizar WorldCycle v0 | [[80_Specs/PRIMUS/Spec_WorldCycle_PRIMUS]] |
 | PRIMUS-TASK-0017 | Motor | done | alta | Formalizar Villain Engine v0 e Mission Contract v0 | [[80_Specs/PRIMUS/Spec_Villain_Engine_PRIMUS]] |
-| PRIMUS-TASK-0018 | Validacao | pending | critica | Validar pagina/trecho de 5 CatalogEntries prioritarias | 5 entradas com fonte pontual |
+| PRIMUS-TASK-0018 | Validacao | done-parcial | critica | Validar pagina/trecho de 5 CatalogEntries prioritarias | [[Validacao_VE_5_Entradas_PRIMUS_Index]] |
 | PRIMUS-TASK-0019 | Persistencia | pending | critica | Promover WorldState v1.0 | WorldState com vetores e DeltaP |
 | PRIMUS-TASK-0020 | Motor | pending | alta | Rodar primeira rodada manual de WorldCycle sem missao canonica | Cantina Board atualizada |
+| PRIMUS-TASK-0021 | Validacao | pending | alta | Resolver parcial de CE-DND-0003 ou substituir por Equipment | quinta entrada estavel para pool |
 
 ## Proxima Tarefa
 
-`PRIMUS-TASK-0018`: validar pagina/trecho de 5 CatalogEntries prioritarias antes de liberar Engrenagem 6 ou Missao 0001.
+`PRIMUS-TASK-0021`: resolver a parcial de `CE-DND-0003` ou validar `CE-DND-0006 equipment` como quinta entrada mais estavel antes de liberar Engrenagem 6 ou Missao 0001.
