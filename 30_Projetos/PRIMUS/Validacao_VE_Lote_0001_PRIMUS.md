@@ -1,0 +1,51 @@
+---
+tipo: validacao
+area: 30_Projetos
+projeto: PRIMUS
+status: aplicado-preliminar
+fonte: [[30_Projetos/PRIMUS/CatalogEntries_Lote_0001_PRIMUS]]
+spec: [[80_Specs/PRIMUS/Spec_Validacao_VE_PRIMUS]]
+criado_em: 2026-06-30
+atualizado_em: 2026-06-30
+tags: [primus, validacao, ve, catalogentries]
+---
+
+# Validacao V(E) - Lote 0001
+
+## Resultado Geral
+
+| Criterio | Resultado |
+|---|---|
+| Type | ok |
+| Class Base | ok |
+| Source | ok em nivel de fonte, pendente em pagina |
+| Page/Snippet | pendente |
+| Box/Subbox | ok como bootstrap |
+| Affects/NeverAffects | ok em padrao de lote |
+| Instancing Hint | ok preliminar |
+| Portability | ok preliminar |
+| Precedence | pendente por fonte especifica |
+
+## Decisao
+
+O lote recebe `VE-pass-com-pendencia`: estrutura suficiente para organizar CatalogPool, mas insuficiente para gerar missao canonica.
+
+## Validacao por Grupo
+
+| Grupo | Entries | Resultado | Pendencia |
+|---|---|---|---|
+| Jogador | CE-DND-0001 a CE-DND-0006 | VE-pass-com-pendencia | pagina/trecho D&D Core |
+| Desafio | CE-DND-0007 a CE-DND-0010 | VE-pass-com-pendencia | pagina/trecho DMG/MM |
+| Mundo | CE-WWN-0001, CE-WWN-0002, CE-WWN-0005, CE-WWN-0006 | VE-pass-com-pendencia | pagina/trecho WWN |
+| Agentes coletivos | CE-WWN-0003, CE-WWN-0009 | VE-pass-com-pendencia | confirmar se fica em WWN ou SWN |
+| Gatilhos | CE-WWN-0004, CE-WWN-0007, CE-WWN-0008, CE-WWN-0010 | VE-pass-com-pendencia | pagina/trecho WWN |
+
+## Bloqueios
+
+- Nenhuma entrada pode ser promovida a canon sem fonte/pagina.
+- Nenhuma entrada pode gerar Missao 0001 sem DeltaP previsto.
+- Faction turn deve aguardar decisao WWN vs SWN.
+
+## Proxima Acao
+
+Selecionar 5 entradas do lote e validar pagina/trecho primeiro, em vez de tentar validar as 20 de uma vez.

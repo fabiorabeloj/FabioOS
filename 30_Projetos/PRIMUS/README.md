@@ -16,6 +16,7 @@ Projeto narrativo persistente do FabioOS.
 - [[Backlog_PRIMUS_Implementacao]]
 - [[CatalogEntries_Lote_0001_PRIMUS]]
 - [[CatalogPool_0001_PRIMUS]]
+- [[Validacao_VE_Lote_0001_PRIMUS]]
 - [[Missao_0001_Preparacao]]
 - [[40_Wiki/PRIMUS/Motor_Causal_PRIMUS]]
 
@@ -36,3 +37,4 @@ Projeto narrativo persistente do FabioOS.
 - [[80_Specs/PRIMUS/Spec_DeltaP_PRIMUS]]
 - [[80_Specs/PRIMUS/Spec_PRIMUS_Steward]]
 - [[80_Specs/PRIMUS/Spec_CatalogEntry_PRIMUS]]
+- [[80_Specs/PRIMUS/Spec_Validacao_VE_PRIMUS]]
