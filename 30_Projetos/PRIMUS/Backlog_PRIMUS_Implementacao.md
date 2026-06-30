@@ -18,13 +18,16 @@ tags: [primus, backlog, implementacao, roadmap]
 3. CatalogEntries reais. Iniciado em [[CatalogEntries_Lote_0001_PRIMUS]].
 4. CatalogPool. Iniciado em [[CatalogPool_0001_PRIMUS]].
 5. Validadores V(E), V(I), V(P).
-6. Tension/Faction/Conflict Engine.
-7. Engrenagem 6.
-8. Mission Engine.
-9. Player View / Cantina.
-10. Banco relacional + grafo.
-11. n8n como esteira.
-12. OpenClaw como operador controlado.
+6. Vector Engine e WorldCycle.
+7. Tension/Faction/Conflict Engine.
+8. Villain Engine e Liga de Viloes Persistente.
+9. Engrenagem 6.
+10. Mission Contract.
+11. Mission Engine.
+12. Player View / Cantina.
+13. Banco relacional + grafo.
+14. n8n como esteira.
+15. OpenClaw como operador controlado.
 
 ## Nao Fazer Ainda
 
@@ -41,6 +44,9 @@ PRIMUS sera minimamente funcional quando existir:
 - 20 CatalogEntries reais;
 - V(E) aplicado;
 - CatalogPool;
+- Changelog 5.6 formalizado;
+- Vector Engine;
+- WorldCycle;
 - um conflito candidato com ator/local/motivo;
 - contrato de missao;
 - DeltaP previsto;

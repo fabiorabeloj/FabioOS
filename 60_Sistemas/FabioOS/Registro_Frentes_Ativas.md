@@ -84,6 +84,7 @@ Artefatos compartilhados incluem:
 | CODEX_GOVERNANCA_POS_FASE12 | Codex | `Painel_Pendencias_FabioOS.md`, `Roadmap_Fases_FabioOS_v2_2026-06-29.md`, `60_Sistemas/MEGATRON/agentes/Registro_Agentes.md` (doc), `60_Sistemas/Governanca/` INDEX, wikilinks | reservada | 2026-06-29 | Atualiza Painel (1795->1206, Fase 12 piloto, MEGATRON 16.1 ativo), Roadmap e doc do contrato de agente; ZERO codigo MEGATRON/RAG/MCP; nao toca STATUS/NEXT_ACTIONS (Claude) nem apresentacao (Cursor); sem push |
 
 | N8N_LOCAL_OPERACAO | Codex | container Docker `n8n`, porta `5678`, `60_Sistemas/n8n/`, relatorio/changelog da operacao | concluida | 2026-06-29 | Container `n8n` iniciado e painel validado em `127.0.0.1:5678`; workflows locais validados; nao tocou OpenClaw/Evolution, RAG, MEGATRON, MCP, credenciais reais ou push |
+| PRIMUS_OPERACAO_56 | Codex | `05_Raw_Sources/PRIMUS/`, `30_Projetos/PRIMUS/`, `40_Wiki/PRIMUS/`, `80_Specs/PRIMUS/`, log, barramento e changelog PRIMUS | concluida | 2026-06-30 | Project ChatGPT PRIMUS vasculhado; Changelog 5.6 formalizado; cockpit operacional e specs Vector/WorldCycle/Villain/MissionContract criados; Missao 0001 segue bloqueada ate validar pagina/trecho de 5 CatalogEntries; sem RAG/MCP/OpenClaw/n8n/push |
 
 ## Frentes observadas
 
@@ -130,3 +131,4 @@ Ao concluir, alterar `Estado` para `concluida`, registrar resultado e apontar o 
 - 2026-06-29 - `RAG_REINDEX_POS_LIMPEZA_OBSIDIAN` concluida. `fabioos_db` foi reindexado com corpus operacional de alto sinal (`1206` chunks), caminhos reais pos-limpeza e validacao `10/10` em modo recuperacao, sem API externa.
 - 2026-06-29 - `PROMOCAO_FASE12_PILOTO` concluida. Claude (arquiteto-chefe) revisou a evidencia bruta `validacao_pos_ranking_2026-06-29.json` (1206 chunks reais, 10/10 bom, 0 vazamentos) e promoveu a Fase 12 RAG a piloto via [[50_Registros/Decisoes/ADR_2026-06-29_Promocao_Fase12_RAG_Piloto]]; hardening de precisao diferido para Fase 12.1; sem reindex, sem commit, sem push.
 - 2026-06-29 - `ESTRUTURA_CANONICA_COMPLETA_OBSIDIAN` concluida. A arvore preferencial do Fabio foi formalizada, `00_Inbox/Teste/` foi esvaziada com preservacao em `00_Inbox/Triagem/`, `00_Inbox/Email_para_Processar_FabioOS.md` foi movido para `00_Inbox/Processar/` e `60_Sistemas/` ficou sem arquivos `.md` soltos na raiz.
+- 2026-06-30 - `PRIMUS_OPERACAO_56` concluida. Changelog 5.6 extraido do Project ChatGPT PRIMUS, formalizado e convertido em cockpit operacional minimo com Vector Engine, WorldCycle, Villain Engine, Mission Contract, Cantina Board, DeltaP Log e proxima acao validavel.
