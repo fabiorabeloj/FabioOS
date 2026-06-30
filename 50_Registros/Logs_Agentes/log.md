@@ -98,3 +98,11 @@ Formato:
 - Paginas atualizadas: [[60_Sistemas/FabioOS/Mapa_Canonico_Pastas_Obsidian_v2_2026-06-29]], [[10_Dashboard/Estrutura_Obsidian_FabioOS]], [[60_Sistemas/FabioOS/STATUS]], [[60_Sistemas/FabioOS/NEXT_ACTIONS]], [[60_Sistemas/FabioOS/Registro_Frentes_Ativas]]
 - Contradicoes: algumas pastas operacionais adicionais continuam existindo em `60_Sistemas/` por historico e links ativos; a regra agora e migrar somente em lotes pequenos ou documentar como excecao ativa.
 - Proximas acoes: revisar subpastas adicionais de `60_Sistemas/` e migrar apenas as que nao tiverem funcao operacional clara.
+
+## [2026-06-30] ingest | PRIMUS a partir de fontes ChatGPT/locais
+
+- Fonte: `C:\Users\user\Downloads\primus_sumario_estrutural_oficial.md`, fontes PRIMUS em Downloads/Desktop e legado `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/20_Projetos/PRIMUS/`.
+- Paginas criadas: [[05_Raw_Sources/PRIMUS/Inventario_Fontes_PRIMUS_2026-06-30]], [[05_Raw_Sources/PRIMUS/2026-06-30_chatgpt_primus_sumario_estrutural]], [[30_Projetos/PRIMUS/PRIMUS]], [[30_Projetos/PRIMUS/Plano_Ingestao_PRIMUS]], [[40_Wiki/PRIMUS/PrimusOS]], [[40_Wiki/PRIMUS/Circuito_EIP]], [[40_Wiki/PRIMUS/Taxonomia_PRIMUS]], [[80_Specs/PRIMUS/Spec_Ingestao_PRIMUS_ChatGPT]].
+- Paginas atualizadas: [[05_Raw_Sources/PRIMUS/README]], [[30_Projetos/PRIMUS/README]], [[40_Wiki/PRIMUS/README]], [[80_Specs/PRIMUS/README]], [[50_Registros/Barramento_Multiagente]].
+- Contradicoes: diretorio de export ChatGPT no vault existe, mas esta vazio; fontes PRIMUS reais estao em Downloads/Desktop e no legado.
+- Proximas acoes: extrair `PRIMUS - CONTEXTO COMPLETO FINAL (NAO PERDER).pdf` e comparar com o sumario estrutural antes de migrar DOCX/ZIP em massa.
