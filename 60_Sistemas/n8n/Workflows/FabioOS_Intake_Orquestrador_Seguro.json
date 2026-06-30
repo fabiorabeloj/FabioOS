@@ -1,0 +1,134 @@
+{
+  "id": "fabioosIntakeOrquestradorSeguro",
+  "name": "FabioOS - Intake Orquestrador Seguro",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "fabios-intake",
+        "responseMode": "responseNode",
+        "options": {}
+      },
+      "id": "10000000-0000-4000-8000-000000000001",
+      "name": "Webhook - Entrada Universal",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [120, 360],
+      "webhookId": "fabios-intake"
+    },
+    {
+      "parameters": {
+        "jsCode": "const raw = $input.first().json || {};\nconst now = new Date().toISOString();\nconst title = String(raw.titulo || raw.title || raw.assunto || 'entrada-sem-titulo').trim().slice(0, 160);\nconst content = String(raw.conteudo || raw.content || raw.texto || raw.message || '').trim();\nconst source = String(raw.origem || raw.source || 'webhook').trim();\nconst channel = String(raw.canal || raw.channel || source).trim();\nconst type = String(raw.tipo || raw.type || 'texto').trim();\nconst requestId = raw.request_id || `fbos_${Date.now()}_${Math.random().toString(36).slice(2, 8)}`;\n\nreturn [{ json: {\n  request_id: requestId,\n  received_at: now,\n  title,\n  content,\n  source,\n  channel,\n  type,\n  metadata: raw.metadata || {},\n  raw_keys: Object.keys(raw),\n  status: 'received',\n  flags: []\n}}];"
+      },
+      "id": "10000000-0000-4000-8000-000000000002",
+      "name": "01 Normalizar Entrada",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [360, 360]
+    },
+    {
+      "parameters": {
+        "jsCode": "const item = $input.first().json;\nconst flags = [...item.flags];\nlet valid = true;\nlet severity = 'baixo';\n\nif (!item.content || item.content.length < 2) {\n  valid = false;\n  severity = 'medio';\n  flags.push('conteudo_vazio');\n}\nif (item.content.length > 12000) {\n  severity = 'medio';\n  flags.push('conteudo_longo');\n}\nconst secretPattern = /(sk-[A-Za-z0-9]{16,}|gh[pous]_[A-Za-z0-9]{16,}|Bearer\\s+[A-Za-z0-9._-]{16,}|api[_-]?key\\s*[:=]|password\\s*[:=]|senha\\s*[:=]|secret\\s*[:=])/i;\nif (secretPattern.test(item.content)) {\n  severity = 'alto';\n  flags.push('possivel_segredo');\n}\nconst personalPattern = /(cpf|rg|cartao|cartão|endereco|endereço|telefone|whatsapp|email pessoal|saude|saúde)/i;\nif (personalPattern.test(item.content)) {\n  if (severity !== 'alto') severity = 'medio';\n  flags.push('possivel_dado_pessoal');\n}\n\nreturn [{ json: { ...item, valid, severity, flags, status: valid ? 'validated' : 'rejected' } }];"
+      },
+      "id": "10000000-0000-4000-8000-000000000003",
+      "name": "02 Validar Schema e Seguranca",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [620, 360]
+    },
+    {
+      "parameters": {
+        "jsCode": "const item = $input.first().json;\nconst text = `${item.title}\\n${item.content}`.toLowerCase();\nlet domain = 'fabios';\nlet intent = 'captura';\nlet agent = 'agent.inbox';\n\nconst has = (...words) => words.some(w => text.includes(w));\n\nif (has('prova', 'aluno', 'escola', 'professor', 'turma', 'pietra')) {\n  domain = 'escolaos';\n  intent = 'atendimento_escolar';\n  agent = 'agent.inbox';\n} else if (has('trade', 'trader', 'bitcoin', 'mercado', 'operacao')) {\n  domain = 'traderos';\n  intent = 'analise_trader';\n  agent = 'agent.rag';\n} else if (has('rag', 'fonte', 'consulta', 'pergunta')) {\n  domain = 'rag';\n  intent = 'consulta_semantica';\n  agent = 'agent.rag';\n} else if (has('commit', 'git', 'push', 'diff')) {\n  domain = 'github';\n  intent = 'pre_commit';\n  agent = 'agent.safecommit';\n} else if (has('arquivar', 'obsidian', 'nota', 'wiki')) {\n  domain = 'llm_wiki';\n  intent = 'arquivamento';\n  agent = 'agent.arquivista';\n} else if (has('dashboard', 'status', 'pendencia', 'tarefas')) {\n  domain = 'governanca';\n  intent = 'status_operacional';\n  agent = 'agent.dashboard';\n}\n\nreturn [{ json: { ...item, domain, intent, suggested_agent: agent, status: 'classified' } }];"
+      },
+      "id": "10000000-0000-4000-8000-000000000004",
+      "name": "03 Classificar Dominio e Intencao",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [900, 360]
+    },
+    {
+      "parameters": {
+        "jsCode": "const item = $input.first().json;\nlet permission = 'propose_only';\nlet requiresApproval = true;\nlet blockedReason = null;\n\nif (!item.valid) {\n  permission = 'blocked';\n  blockedReason = 'entrada_invalida';\n}\nif (item.flags.includes('possivel_segredo')) {\n  permission = 'blocked';\n  blockedReason = 'possivel_segredo';\n}\nif (item.intent === 'consulta_semantica') {\n  permission = 'read_only';\n  requiresApproval = false;\n}\nif (item.intent === 'pre_commit') {\n  permission = 'propose_only';\n  requiresApproval = true;\n}\nif (item.domain === 'escolaos' || item.flags.includes('possivel_dado_pessoal')) {\n  permission = permission === 'blocked' ? permission : 'manual_approval';\n  requiresApproval = true;\n}\n\nreturn [{ json: { ...item, permission, requires_approval: requiresApproval, blocked_reason: blockedReason, status: permission === 'blocked' ? 'blocked' : 'policy_checked' } }];"
+      },
+      "id": "10000000-0000-4000-8000-000000000005",
+      "name": "04 Aplicar Politica de Permissao",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [1190, 360]
+    },
+    {
+      "parameters": {
+        "jsCode": "const item = $input.first().json;\nlet route = '00_Inbox/Triagem';\nlet action = 'triagem_manual';\n\nif (item.permission === 'blocked') {\n  route = '00_Inbox/Triagem/Bloqueados';\n  action = 'bloquear_e_revisar';\n} else if (item.suggested_agent === 'agent.arquivista') {\n  route = '40_Wiki/_MOCs';\n  action = 'preparar_nota_wiki';\n} else if (item.suggested_agent === 'agent.rag') {\n  route = '60_Sistemas/RAG';\n  action = 'consulta_read_only';\n} else if (item.suggested_agent === 'agent.safecommit') {\n  route = '50_Registros/Auditoria';\n  action = 'preflight_commit';\n} else if (item.suggested_agent === 'agent.dashboard') {\n  route = '10_Dashboard';\n  action = 'atualizar_status_proposto';\n}\n\nreturn [{ json: { ...item, route, next_action: action, status: 'routed' } }];"
+      },
+      "id": "10000000-0000-4000-8000-000000000006",
+      "name": "05 Roteador de Agente",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [1460, 360]
+    },
+    {
+      "parameters": {
+        "jsCode": "const item = $input.first().json;\nconst safeTitle = item.title.replace(/[\\r\\n]+/g, ' ').slice(0, 120);\nconst markdown = [\n  '---',\n  'tipo: captura-orquestrada',\n  `origem: ${item.source}`,\n  `canal: ${item.channel}`,\n  `dominio: ${item.domain}`,\n  `intencao: ${item.intent}`,\n  `agente_sugerido: ${item.suggested_agent}`,\n  `permissao: ${item.permission}`,\n  `status: ${item.status}`,\n  `capturado_em: ${item.received_at}`,\n  '---',\n  '',\n  `# ${safeTitle}`,\n  '',\n  item.content,\n  '',\n  '## Roteamento sugerido',\n  '',\n  `- Destino: ${item.route}`,\n  `- Acao: ${item.next_action}`,\n  `- Requer aprovacao: ${item.requires_approval ? 'sim' : 'nao'}`,\n  `- Flags: ${item.flags.join(', ') || 'nenhuma'}`,\n  ''\n].join('\\n');\n\nreturn [{ json: { ...item, draft_markdown: markdown, status: 'draft_ready' } }];"
+      },
+      "id": "10000000-0000-4000-8000-000000000007",
+      "name": "06 Montar Rascunho Obsidian",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [1730, 360]
+    },
+    {
+      "parameters": {
+        "jsCode": "const item = $input.first().json;\nconst audit = {\n  request_id: item.request_id,\n  received_at: item.received_at,\n  domain: item.domain,\n  intent: item.intent,\n  agent: item.suggested_agent,\n  permission: item.permission,\n  route: item.route,\n  next_action: item.next_action,\n  flags: item.flags,\n  external_effects: false,\n  note: 'Workflow de orquestracao seguro: nenhum arquivo gravado e nenhuma API externa chamada.'\n};\nreturn [{ json: { ...item, audit, status: 'ready_to_respond' } }];"
+      },
+      "id": "10000000-0000-4000-8000-000000000008",
+      "name": "07 Preparar Auditoria",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [1990, 360]
+    },
+    {
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={{ JSON.stringify({ status: $json.permission === 'blocked' ? 'blocked' : 'ok', request_id: $json.request_id, domain: $json.domain, intent: $json.intent, suggested_agent: $json.suggested_agent, permission: $json.permission, requires_approval: $json.requires_approval, route: $json.route, next_action: $json.next_action, flags: $json.flags, blocked_reason: $json.blocked_reason, audit: $json.audit, draft_markdown: $json.draft_markdown }) }}"
+      },
+      "id": "10000000-0000-4000-8000-000000000009",
+      "name": "08 Responder Sem Efeito Externo",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1,
+      "position": [2260, 360]
+    }
+  ],
+  "connections": {
+    "Webhook - Entrada Universal": {
+      "main": [[{ "node": "01 Normalizar Entrada", "type": "main", "index": 0 }]]
+    },
+    "01 Normalizar Entrada": {
+      "main": [[{ "node": "02 Validar Schema e Seguranca", "type": "main", "index": 0 }]]
+    },
+    "02 Validar Schema e Seguranca": {
+      "main": [[{ "node": "03 Classificar Dominio e Intencao", "type": "main", "index": 0 }]]
+    },
+    "03 Classificar Dominio e Intencao": {
+      "main": [[{ "node": "04 Aplicar Politica de Permissao", "type": "main", "index": 0 }]]
+    },
+    "04 Aplicar Politica de Permissao": {
+      "main": [[{ "node": "05 Roteador de Agente", "type": "main", "index": 0 }]]
+    },
+    "05 Roteador de Agente": {
+      "main": [[{ "node": "06 Montar Rascunho Obsidian", "type": "main", "index": 0 }]]
+    },
+    "06 Montar Rascunho Obsidian": {
+      "main": [[{ "node": "07 Preparar Auditoria", "type": "main", "index": 0 }]]
+    },
+    "07 Preparar Auditoria": {
+      "main": [[{ "node": "08 Responder Sem Efeito Externo", "type": "main", "index": 0 }]]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "meta": {
+    "instanceId": "fabios"
+  }
+}

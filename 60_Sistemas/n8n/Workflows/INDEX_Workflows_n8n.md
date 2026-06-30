@@ -19,6 +19,7 @@ tags: [fabios, n8n, workflows, automacao]
 
 | Workflow | ID | Estado observado | Visualizar |
 |---|---|---|---|
+| FabioOS - Intake Orquestrador Seguro | `fabioosIntakeOrquestradorSeguro` | importado, inativo por seguranca | http://127.0.0.1:5678/workflow/fabioosIntakeOrquestradorSeguro |
 | FabioOS - Webhook para Inbox | `fabioosWebhookInbox` | importado, inativo por seguranca | http://127.0.0.1:5678/workflow/fabioosWebhookInbox |
 | FabioOS - WhatsApp para Pietra | `fabioosWhatsappPietraV2` | ativo segundo log do n8n | http://127.0.0.1:5678/workflow/fabioosWhatsappPietraV2 |
 | FabioOS - WhatsApp para Pietra (desativado) | `fabioosWhatsappPietra` | legado/desativado | http://127.0.0.1:5678/workflow/fabioosWhatsappPietra |
@@ -41,6 +42,16 @@ Motivo:
 2. `Arquivista local`: pegar capturas aprovadas e criar nota em `40_Wiki/` sem chamar API externa.
 3. `Preflight SafeCommit`: gatilho manual para rodar checklist antes de commit.
 4. `Dashboard operacional`: gatilho manual/agenda para consolidar STATUS/NEXT_ACTIONS sem alterar runtime.
+
+## Cadeia-mae
+
+O workflow `FabioOS - Intake Orquestrador Seguro` e o desenho inicial da cadeia-mae.
+
+Ele nao substitui os workflows especificos; ele decide qual trilha deve ser acionada:
+
+```text
+entrada -> validar -> classificar -> permissao -> roteador -> rascunho -> auditoria -> resposta
+```
 
 ## Limites
 
