@@ -20,6 +20,7 @@ Fontes iniciais processadas:
 
 - [[05_Raw_Sources/PRIMUS/2026-06-30_chatgpt_primus_sumario_estrutural]]
 - [[05_Raw_Sources/PRIMUS/2026-06-30_pdf_primus_contexto_completo_final]]
+- [[05_Raw_Sources/PRIMUS/2026-06-30_google-doc_primus_contexto_completo_final]]
 
 Fontes inventariadas:
 
@@ -79,6 +80,14 @@ Fontes inventariadas:
 - Roteiro de execucao criado em [[Roteiro_Execucao_PRIMUS_6_Blocos]].
 - Templates iniciais criados em [[80_Specs/PRIMUS/Templates_PRIMUS_Blocos]].
 
+## Terceiro Lote Concluido
+
+- Google Doc multiaba `PRIMUS - CONTEXTO COMPLETO FINAL (NAO PERDER)` lido via conector Google Drive.
+- Nota-fonte criada em [[05_Raw_Sources/PRIMUS/2026-06-30_google-doc_primus_contexto_completo_final]].
+- Notas estruturais criadas: [[40_Wiki/PRIMUS/Leis_do_PRIMUS]], [[40_Wiki/PRIMUS/Pipeline_PRIMUS]], [[40_Wiki/PRIMUS/Tipagem_Universal_PRIMUS]], [[40_Wiki/PRIMUS/Livros_do_PRIMUS]], [[40_Wiki/PRIMUS/Motor_Causal_PRIMUS]].
+- SPEC criada em [[80_Specs/PRIMUS/Spec_WorldState_PRIMUS]].
+- Roteiro corrigido para priorizar WorldState e Tension Engine antes da Missao 0001.
+
 ## Proxima Acao
 
-Executar o Bloco 3 criando templates adicionais para `mission`, `npc`, `creature` e `spell`, depois preparar a Missao 0001.
+Criar WorldState minimo e primeira lista de tensoes estruturais. A Missao 0001 fica congelada ate essa fundacao existir.

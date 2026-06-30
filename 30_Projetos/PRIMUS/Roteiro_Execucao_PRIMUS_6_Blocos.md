@@ -6,7 +6,7 @@ status: ativo
 fonte: [[05_Raw_Sources/PRIMUS/2026-06-30_pdf_primus_contexto_completo_final]]
 criado_em: 2026-06-30
 atualizado_em: 2026-06-30
-tags: [primus, execucao, roteiro, eip, missao-0001]
+tags: [primus, execucao, roteiro, eip, worldstate, tension-engine]
 ---
 
 # Roteiro de Execucao PRIMUS - 6 Blocos
@@ -14,6 +14,10 @@ tags: [primus, execucao, roteiro, eip, missao-0001]
 ## Funcao
 
 Converter o PRIMUS de estrutura conceitual para sistema jogavel e persistente.
+
+## Nota de Precedencia - Google Doc v5
+
+O Google Doc multiaba do PRIMUS corrige a prioridade anterior: a Missao 0001 nao deve ser executada antes da arquitetura essencial. Este roteiro continua valido como sequencia editorial, mas a proxima implementacao deve ser WorldState -> Tension Engine -> Cantina Conflict Engine, nao a missao.
 
 ## Ordem Obrigatoria
 
@@ -103,19 +107,33 @@ I: gerar dungeon instanciada
 P: registrar Delta P
 ```
 
-**Status:** preparacao viva criada em [[Missao_0001_Preparacao]].
+**Status:** preparacao viva criada em [[Missao_0001_Preparacao]], mas congelada ate WorldState e Tension Engine existirem.
+
+## Fase 0 - Fundacao Causal
+
+**Entrega:** WorldState minimo e Tension Engine inicial.
+
+Fluxo:
+
+```text
+WorldState -> Tensoes -> Conflitos -> Faccoes -> Missoes -> DeltaP -> WorldState
+```
+
+**Status:** especificado em [[80_Specs/PRIMUS/Spec_WorldState_PRIMUS]] e explicado em [[40_Wiki/PRIMUS/Motor_Causal_PRIMUS]].
 
 ## Checklist de Execucao
 
+- [ ] Fase 0 WorldState minimo criado.
+- [ ] Fase 0 Tension Engine inicial especificado.
 - [ ] Bloco 1 validado como definicao oficial.
 - [ ] Bloco 2 validado como taxonomia oficial.
 - [x] Bloco 3 criado com templates iniciais.
 - [ ] Bloco 4 reestruturado como livro jogavel minimo.
 - [ ] Bloco 5 reestruturado como motor operacional.
-- [x] Bloco 6 preparado como Missao 0001.
+- [x] Bloco 6 preparado como Missao 0001, mas nao liberado para execucao.
 - [ ] Delta P definido em YAML.
 - [ ] Decidir quando PRIMUS entra em RAG/Grafo separado.
 
 ## Proxima Acao
 
-Definir contrato YAML final da [[Missao_0001_Preparacao]] e fichas minimas das entradas E.
+Criar `WorldState_0001_PRIMUS.md` e uma primeira lista de tensoes estruturais antes de mexer no contrato final da [[Missao_0001_Preparacao]].

@@ -114,3 +114,11 @@ Formato:
 - Paginas atualizadas: [[40_Wiki/PRIMUS/PrimusOS]], [[30_Projetos/PRIMUS/Plano_Ingestao_PRIMUS]], [[30_Projetos/PRIMUS/README]], [[80_Specs/PRIMUS/README]].
 - Contradicoes: o PDF confirma a ordem operacional 1->2->3->4->5->6 e nao contradiz o sumario estrutural; ele e mais pratico e menos cosmologico.
 - Proximas acoes: ampliar templates para `mission`, `npc`, `creature` e `spell`; depois preparar Missao 0001.
+
+## [2026-06-30] ingest | PRIMUS Google Doc contexto completo final
+
+- Fonte: Google Doc `PRIMUS - CONTEXTO COMPLETO FINAL (NAO PERDER)` (`1x1DLPglzkbnRXTAz7i2PTus8uh5pJ9fQdO7NErgnbhw`).
+- Paginas criadas: [[05_Raw_Sources/PRIMUS/2026-06-30_google-doc_primus_contexto_completo_final]], [[40_Wiki/PRIMUS/Leis_do_PRIMUS]], [[40_Wiki/PRIMUS/Pipeline_PRIMUS]], [[40_Wiki/PRIMUS/Tipagem_Universal_PRIMUS]], [[40_Wiki/PRIMUS/Livros_do_PRIMUS]], [[40_Wiki/PRIMUS/Motor_Causal_PRIMUS]], [[80_Specs/PRIMUS/Spec_WorldState_PRIMUS]].
+- Paginas atualizadas: [[05_Raw_Sources/PRIMUS/README]], [[40_Wiki/PRIMUS/README]], [[40_Wiki/PRIMUS/PrimusOS]], [[40_Wiki/PRIMUS/Taxonomia_PRIMUS]], [[30_Projetos/PRIMUS/Roteiro_Execucao_PRIMUS_6_Blocos]], [[30_Projetos/PRIMUS/Plano_Ingestao_PRIMUS]], [[30_Projetos/PRIMUS/README]], [[80_Specs/PRIMUS/README]], [[50_Registros/Barramento_Multiagente]].
+- Contradicoes: o roteiro anterior empurrava para Missao 0001; o Google Doc v5 desloca a prioridade para WorldState, Tension Engine e Cantina Conflict Engine.
+- Proximas acoes: criar `WorldState_0001_PRIMUS.md` e a primeira lista de tensoes estruturais.
