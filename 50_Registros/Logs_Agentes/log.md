@@ -218,3 +218,11 @@ Formato:
 - Entrega: [[00_Inbox/pdfs/README]], [[60_Sistemas/FabioOS/Pipeline_DropPDF_Codex_v0]], `60_Sistemas/FabioOS/scripts/watch_pdf_drop.py`, `60_Sistemas/n8n/Workflows/FabioOS_DropPDF_Aprende.json`.
 - Resultado: PDF novo em `00_Inbox/pdfs/` gera evento auditavel para `claude.documentalista`.
 - Limites: sem OCR, sem RAG reindex, sem API externa, sem alterar `documentalista.py`, sem credenciais Stirling.
+
+## [2026-06-30] operacao | Drop PDF Lote 0001
+
+- Fonte: 5 PDFs enviados pelo Fabio em `00_Inbox/pdfs/`.
+- Resultado: 5 eventos criados em `00_Inbox/pdfs/_events/`.
+- Relatorio: [[50_Registros/Relatorios/2026-06-30_drop-pdf-lote-0001]].
+- Status: Stirling no ar, mas autenticado/bloqueado por HTTP 401; OCR real ainda pendente.
+- Limites preservados: sem extracao integral, sem RAG reindex, sem API externa.
