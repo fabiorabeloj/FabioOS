@@ -46,7 +46,8 @@ from fastmcp import Client       # noqa: E402
 from registry import (resolver, resolver_capacidade,  # noqa: E402
                       capacidades as cap_catalogo, rotear)  # despacho + Maestro
 from barramento import ler as ler_barramento  # caixa multiagente  # noqa: E402
-from reasoningbank import recomendar as rb_recomendar  # memória de experiências  # noqa: E402
+from reasoningbank import (recomendar as rb_recomendar,  # noqa: E402
+                           registrar as rb_registrar)  # memória de experiências
 
 LIMIAR_IGNORANCIA = 0.5  # dist cosseno bge-m3: <0.5 relevante; >0.5 → ignorância
 
@@ -65,6 +66,8 @@ ESTRATEGIA_KW = ("melhor forma", "melhor abordagem", "melhor jeito", "como devo"
                  "recomenda", "recomendacao", "recomendação")
 PESQUISA_KW = ("pesquis", "colet", "crawl", "raspar", "rastrear", "scrape",
                "baixar a pagina", "ler o site", "ler a pagina")
+DOCUMENTO_KW = ("pdf", "ocr", "juntar documento", "merge pdf", "dividir pdf",
+                "comprimir pdf", "assinar pdf", "processar documento", "stirling")
 URL_RE = re.compile(r"https?://\S+")
 # Ação → classe de permissão (matriz simplificada da Fase 17).
 # Usar RADICAIS para pegar conjugações (apagar/apague/apaga; enviar/envie/envia).
@@ -86,6 +89,8 @@ def classificar(msg: str):
         return "acao", "escrita_segura"
     if any(k in m for k in CAPACIDADE_KW):
         return "capacidade", None
+    if any(k in m for k in DOCUMENTO_KW):
+        return "documento", None
     if URL_RE.search(msg) or any(k in m for k in PESQUISA_KW):
         return "pesquisa", None
     if any(k in m for k in STATUS_KW):
@@ -255,6 +260,14 @@ async def responder(msg: str, confirmar: bool = False) -> str:
         termo = _termo_chave(msg)
         return _render(rb_recomendar(termo))
 
+    # DOCUMENTO — roteia por capacidade (processar_pdf -> documentalista/Stirling)
+    if intent == "documento":
+        run_doc = resolver_capacidade("processar_pdf")
+        if run_doc is None:
+            return ("🛑 Capacidade 'processar_pdf' não está ativa (documentalista/Stirling "
+                    "indisponível). Posso propor, não executar.")
+        return _render(await asyncio.to_thread(run_doc))
+
     # CAPACIDADE — o Maestro anuncia o time (read-only, sem RAG)
     if intent == "capacidade":
         return _render(_capacidades_resultado())
@@ -277,6 +290,9 @@ async def responder(msg: str, confirmar: bool = False) -> str:
         url = url_m.group(0)
         # pesquisador.run faz asyncio.run interno -> roda em thread p/ evitar loop aninhado
         r = await asyncio.to_thread(lambda: run_pesq(url, dry_run=not confirmar))
+        if confirmar and r.get("ok"):   # auto-learning: só em coleta real
+            rb_registrar("coletar_web", "pesquisador/crawl4ai",
+                         sucesso=True, confianca=0.7, nota="via Maestro")
         return _render(r)
 
     # AÇÃO — diferencia permissão; nunca executa sem aprovação
@@ -290,6 +306,9 @@ async def responder(msg: str, confirmar: bool = False) -> str:
                 r = run_agente(titulo,
                                f"(rascunho proposto a partir do pedido: {msg})",
                                dry_run=not confirmar)
+                if confirmar and r.get("ok"):   # auto-learning: só em execução real
+                    rb_registrar("escrever_nota", "arquivista (dry-run->confirmar)",
+                                 sucesso=True, confianca=0.7, nota="via Maestro")
                 return _render(r)
         # sensível / externa permanecem BLOQUEADAS (sem agente automático)
         rotulo = {"externa": "AÇÃO EXTERNA", "sensivel": "AÇÃO SENSÍVEL"}[classe]
