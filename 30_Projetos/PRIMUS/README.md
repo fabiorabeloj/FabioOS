@@ -25,6 +25,7 @@ Projeto narrativo persistente do FabioOS.
 - [[Mission_Contract_0001_PRIMUS]]
 - [[DeltaP_Log_0001_PRIMUS]]
 - [[Runtime_PRIMUS_Index_Local]]
+- [[Plano_Digestor_PRIMUS]]
 - [[Missao_0001_Preparacao]]
 - [[40_Wiki/PRIMUS/Motor_Causal_PRIMUS]]
 
@@ -50,3 +51,4 @@ Projeto narrativo persistente do FabioOS.
 - [[80_Specs/PRIMUS/Spec_WorldCycle_PRIMUS]]
 - [[80_Specs/PRIMUS/Spec_Villain_Engine_PRIMUS]]
 - [[80_Specs/PRIMUS/Spec_Mission_Contract_PRIMUS]]
+- [[80_Specs/PRIMUS/Spec_Digestor_PDF_PRIMUS]]

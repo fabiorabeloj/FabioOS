@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "PRIMUS CatalogEntry",
+  "type": "object",
+  "required": [
+    "EntryID",
+    "Type",
+    "Name",
+    "Box",
+    "Subbox",
+    "Source",
+    "Page",
+    "Snippet",
+    "Affects",
+    "NeverAffects",
+    "InstancingHints",
+    "Confidence",
+    "LicenseStatus"
+  ],
+  "properties": {
+    "EntryID": { "type": "string", "minLength": 3 },
+    "Type": { "type": "string" },
+    "Name": { "type": "string", "minLength": 1 },
+    "Box": { "type": "string" },
+    "Subbox": { "type": "string" },
+    "Source": { "type": "string" },
+    "SourcePath": { "type": "string" },
+    "Page": { "type": ["integer", "string"] },
+    "Snippet": { "type": "string" },
+    "Summary": { "type": "string" },
+    "Affects": { "type": "array", "items": { "type": "string" } },
+    "NeverAffects": { "type": "array", "items": { "type": "string" } },
+    "InstancingHints": { "type": "array", "items": { "type": "string" } },
+    "Confidence": { "type": "string", "enum": ["High", "Medium", "Low"] },
+    "LicenseStatus": { "type": "string", "enum": ["Open", "Private", "Restricted", "Unknown"] },
+    "Notes": { "type": "string" }
+  }
+}

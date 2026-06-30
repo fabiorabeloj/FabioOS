@@ -40,7 +40,10 @@ Toda tarefa deve ter area, status, saida esperada e criterio de conclusao.
 | PRIMUS-TASK-0019 | Persistencia | pending | critica | Promover WorldState v1.0 | WorldState com vetores e DeltaP |
 | PRIMUS-TASK-0020 | Motor | pending | alta | Rodar primeira rodada manual de WorldCycle sem missao canonica | Cantina Board atualizada |
 | PRIMUS-TASK-0021 | Validacao | pending | alta | Resolver parcial de CE-DND-0003 ou substituir por Equipment | quinta entrada estavel para pool |
+| PRIMUS-TASK-0022 | Fontes | done | alta | Registrar Google Drive `Rpg .docx` como fonte restrita | [[05_Raw_Sources/PRIMUS/2026-06-30_google-drive-rpg-docx]] |
+| PRIMUS-TASK-0023 | Digestor | done | critica | Criar PRIMUS Digestor v0 | [[60_Sistemas/PRIMUS_Digestor/README]] |
+| PRIMUS-TASK-0024 | Digestor | pending | alta | Rodar digestor em lote pequeno real | `catalog_entries.jsonl` validado |
 
 ## Proxima Tarefa
 
-`PRIMUS-TASK-0021`: resolver a parcial de `CE-DND-0003` ou validar `CE-DND-0006 equipment` como quinta entrada mais estavel antes de liberar Engrenagem 6 ou Missao 0001.
+`PRIMUS-TASK-0024`: rodar o digestor em lote pequeno real e validar a saida antes de liberar Engrenagem 6 ou Missao 0001.
