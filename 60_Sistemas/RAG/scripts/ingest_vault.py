@@ -94,7 +94,8 @@ EXCLUDE_SUBSTRINGS = ["_inbox", ".obsidian", ".claude",
                       ".venv", "site-packages"]  # logs runtime + venv/libs
 EXCLUDE_FILENAME_RE = re.compile(r"PIETRA.*LOG", re.IGNORECASE)  # logs Pietra
 
-MAX_CHARS = 6000      # tamanho-alvo do chunk
+MAX_CHARS = 6000      # Fase 12.1 (1200) adiada: reindex pesado em máquina carregada;
+#                       fazer em janela de manutenção (CPU livre) — ver barramento/changelog
 META_KEYS = ["tipo", "area", "projeto", "status", "tags"]  # do frontmatter
 
 

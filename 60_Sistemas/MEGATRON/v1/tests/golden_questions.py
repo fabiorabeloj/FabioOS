@@ -154,6 +154,15 @@ async def main() -> int:
     print(f"[{'PASS' if ok_rota5 else 'FALHA'}] fatia5 -> URL=pesquisa; coletar_web "
           f"despachavel (pesquisador); deploy gated=None")
 
+    # Documentalista — intent 'documento' + rota processar_pdf (sem chamar Stirling).
+    id_doc, _ = classificar("faca ocr nesse pdf")
+    ok_doc = (id_doc == "documento"
+              and callable(resolver_capacidade("processar_pdf")))
+    passes += ok_doc
+    total += 1
+    print(f"[{'PASS' if ok_doc else 'FALHA'}] documentalista -> 'ocr pdf'=documento; "
+          f"processar_pdf despachavel (Stirling)")
+
     print(f"\nResultado golden: {passes}/{total}")
     return 0 if passes == total else 1
 

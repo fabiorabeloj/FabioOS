@@ -87,6 +87,9 @@ def resolver_capacidade(capacidade: str):
     if r["agente"] == "arquivista":
         import arquivista
         return arquivista.run
+    if r["agente"] == "documentalista":
+        import documentalista
+        return documentalista.run
     return None
 
 
