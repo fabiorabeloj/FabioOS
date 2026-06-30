@@ -37,7 +37,7 @@ def _vault_root() -> Path:
 
 VAULT = _vault_root()
 sys.path.insert(0, str(VAULT / "60_Sistemas" / "MCP_FabioOS"))
-LOG = VAULT / "60_Sistemas" / "MEGATRON" / "v1" / "logs" / "megatron_v1_50_Registros/Logs_Agentes/log.md"
+LOG = VAULT / "60_Sistemas" / "MEGATRON" / "v1" / "logs" / "megatron_v1_log.md"
 STATUS_FILE = VAULT / "60_Sistemas" / "FabioOS" / "STATUS.md"
 NEXT_FILE = VAULT / "60_Sistemas" / "FabioOS" / "NEXT_ACTIONS.md"
 
@@ -104,6 +104,57 @@ def _ler_estado() -> str:
     return "\n\n".join(partes) or "(STATUS/NEXT_ACTIONS não encontrados)"
 
 
+def _pendencias_abertas(n: int = 5) -> list:
+    """Extrai as primeiras pendências abertas (- [ ]) do NEXT_ACTIONS."""
+    if not NEXT_FILE.exists():
+        return []
+    out = []
+    for line in NEXT_FILE.read_text(encoding="utf-8", errors="ignore").splitlines():
+        s = line.strip()
+        if s.startswith("- [ ]"):
+            out.append(s[5:].strip())
+            if len(out) >= n:
+                break
+    return out
+
+
+def briefing() -> dict:
+    """Fatia 1 — briefing proativo. Resultado estruturado a partir das FONTES
+    canônicas (STATUS/NEXT_ACTIONS). Rápido: sem RAG/modelo. Contrato congelado
+    em Ordens_Coordenacao_Paralela_MEGATRON_2026-06-29.md."""
+    registrar("briefing", "(sem args)")
+    pend = _pendencias_abertas(5)
+    hoje = datetime.now().strftime("%Y-%m-%d")
+    corpo = ["## Estado operacional (fontes canônicas)\n", _ler_estado(),
+             "\n## Pendências abertas (topo)"]
+    corpo += ([f"- {p}" for p in pend] if pend
+              else ["- (nenhuma pendência aberta em NEXT_ACTIONS)"])
+    fontes = [{"source_path": f.relative_to(VAULT).as_posix(), "header_path": ""}
+              for f in (STATUS_FILE, NEXT_FILE) if f.exists()]
+    return {
+        "tipo": "briefing",
+        "ok": True,
+        "titulo": f"Briefing FabioOS — {hoje}",
+        "corpo": "\n".join(corpo),
+        "fontes": fontes,
+        "sugestao": pend[0] if pend else "Revisar STATUS/NEXT_ACTIONS.",
+        "artefato": None,
+    }
+
+
+def _render(resultado: dict) -> str:
+    """Render mínimo p/ terminal. TEMPORÁRIO — Cursor substitui por
+    apresentacao.render() (ver Ordens de Coordenação). Não embeleza: só monta."""
+    linhas = [f"🧠 {resultado['titulo']}", "", resultado["corpo"]]
+    if resultado.get("sugestao"):
+        linhas += ["", f"💡 Próxima ação sugerida: {resultado['sugestao']}"]
+    if resultado.get("fontes"):
+        linhas += ["", "Fontes: "
+                   + ", ".join(f["source_path"] for f in resultado["fontes"])]
+    linhas += ["", f"[{resultado['tipo'].upper()}] · recuperação sem LLM (custo zero)"]
+    return "\n".join(linhas)
+
+
 async def responder(msg: str) -> str:
     intent, classe = classificar(msg)
     registrar(f"{intent}:{classe}" if classe else intent, msg)
@@ -158,8 +209,9 @@ async def responder(msg: str) -> str:
 
 def main() -> int:
     if len(sys.argv) < 2:
-        print('Uso: python megatron.py "sua pergunta ou pedido"')
-        return 1
+        # sem argumento -> briefing proativo (Fatia 1): "Bom dia, FabioOS"
+        print(_render(briefing()))
+        return 0
     print(asyncio.run(responder(" ".join(sys.argv[1:]))))
     return 0
 
