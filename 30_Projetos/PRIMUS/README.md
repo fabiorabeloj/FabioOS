@@ -8,11 +8,16 @@ Projeto narrativo persistente do FabioOS.
 - [[Plano_Ingestao_PRIMUS]]
 - [[Roteiro_Execucao_PRIMUS_6_Blocos]]
 - [[Missao_0001_Preparacao]]
+- [[40_Wiki/PRIMUS/Motor_Causal_PRIMUS]]
 
 ## Relacoes
 
 - [[40_Wiki/PRIMUS/PrimusOS]]
 - [[40_Wiki/PRIMUS/Circuito_EIP]]
 - [[40_Wiki/PRIMUS/Taxonomia_PRIMUS]]
+- [[40_Wiki/PRIMUS/Leis_do_PRIMUS]]
+- [[40_Wiki/PRIMUS/Pipeline_PRIMUS]]
+- [[40_Wiki/PRIMUS/Livros_do_PRIMUS]]
 - [[80_Specs/PRIMUS/Spec_Ingestao_PRIMUS_ChatGPT]]
 - [[80_Specs/PRIMUS/Templates_PRIMUS_Blocos]]
+- [[80_Specs/PRIMUS/Spec_WorldState_PRIMUS]]
