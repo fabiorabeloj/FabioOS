@@ -12,6 +12,8 @@ Projeto narrativo persistente do FabioOS.
 - [[Conflitos_Candidatos_PRIMUS]]
 - [[PlayerView_Cantina_0001_PRIMUS]]
 - [[Cantina_Rumores_0001_PRIMUS]]
+- [[Fila_Operacional_PRIMUS]]
+- [[Backlog_PRIMUS_Implementacao]]
 - [[Missao_0001_Preparacao]]
 - [[40_Wiki/PRIMUS/Motor_Causal_PRIMUS]]
 
@@ -28,3 +30,6 @@ Projeto narrativo persistente do FabioOS.
 - [[80_Specs/PRIMUS/Spec_WorldState_PRIMUS]]
 - [[80_Specs/PRIMUS/Spec_Tension_Engine_PRIMUS]]
 - [[80_Specs/PRIMUS/Spec_Cantina_Conflict_Engine_PRIMUS]]
+- [[80_Specs/PRIMUS/Spec_Ontologia_Formal_PRIMUS]]
+- [[80_Specs/PRIMUS/Spec_DeltaP_PRIMUS]]
+- [[80_Specs/PRIMUS/Spec_PRIMUS_Steward]]
