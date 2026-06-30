@@ -138,3 +138,11 @@ Formato:
 - Paginas atualizadas: [[30_Projetos/PRIMUS/README]], [[30_Projetos/PRIMUS/Roteiro_Execucao_PRIMUS_6_Blocos]], [[40_Wiki/PRIMUS/Motor_Causal_PRIMUS]], [[40_Wiki/PRIMUS/PrimusOS]], [[80_Specs/PRIMUS/README]], [[50_Registros/Barramento_Multiagente]].
 - Contradicoes: nenhuma; conflitos bloqueados continuam impedindo execucao prematura de missao.
 - Proximas acoes: criar `PlayerView_Cantina_0001_PRIMUS.md`.
+
+## [2026-06-30] implementacao documental | Player View da Cantina PRIMUS
+
+- Fonte: [[30_Projetos/PRIMUS/Conflitos_Candidatos_PRIMUS]], [[80_Specs/PRIMUS/Spec_Cantina_Conflict_Engine_PRIMUS]].
+- Paginas criadas: [[30_Projetos/PRIMUS/PlayerView_Cantina_0001_PRIMUS]], [[50_Registros/Changelog/2026-06-30_playerview-cantina-primus]].
+- Paginas atualizadas: [[30_Projetos/PRIMUS/README]], [[30_Projetos/PRIMUS/Roteiro_Execucao_PRIMUS_6_Blocos]], [[40_Wiki/PRIMUS/PrimusOS]], [[50_Registros/Barramento_Multiagente]].
+- Contradicoes: nenhuma; Player View reforca que ver nao e ter.
+- Proximas acoes: criar `Cantina_Rumores_0001_PRIMUS.md`.

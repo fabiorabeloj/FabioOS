@@ -10,6 +10,7 @@ Projeto narrativo persistente do FabioOS.
 - [[WorldState_0001_PRIMUS]]
 - [[Tensoes_Iniciais_PRIMUS]]
 - [[Conflitos_Candidatos_PRIMUS]]
+- [[PlayerView_Cantina_0001_PRIMUS]]
 - [[Missao_0001_Preparacao]]
 - [[40_Wiki/PRIMUS/Motor_Causal_PRIMUS]]
 
