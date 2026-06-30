@@ -208,6 +208,31 @@ def _render(resultado: dict) -> str:
     return "\n".join(linhas)
 
 
+def _fontes_do_rag(rag: str) -> list:
+    """Extrai caminhos de fontes (.md) do texto recuperado, p/ o contrato Resultado."""
+    seen, out = set(), []
+    for p in re.findall(r"[\w/_\-]+\.md", rag or ""):
+        if p not in seen:
+            seen.add(p)
+            out.append({"source_path": p, "header_path": ""})
+        if len(out) >= 5:
+            break
+    return out
+
+
+def _termo_chave(msg: str) -> str:
+    palavras = [w for w in re.findall(r"\w+", msg) if len(w) > 3]
+    return palavras[-1] if palavras else msg.strip()
+
+
+def _sintese(fontes: list, termo: str) -> str:
+    onde = ", ".join(f["source_path"] for f in fontes[:3]) or "(sem fontes diretas)"
+    return (f"- **Onde ler:** {onde}\n"
+            f"- **Termo central:** {termo}\n"
+            f"- **Honestidade:** recuperação + relação estruturada (sem LLM, custo zero); "
+            f"não é texto gerado. Para síntese redigida, é preciso aprovar uso de modelo.")
+
+
 async def responder(msg: str, confirmar: bool = False) -> str:
     intent, classe = classificar(msg)
     registrar(f"{intent}:{classe}" if classe else intent, msg)
@@ -238,6 +263,8 @@ async def responder(msg: str, confirmar: bool = False) -> str:
                 f"e roteamento para: {agente}.\n"
                 f"  • Posso **preparar/propor** o passo, não realizá-lo.")
 
+    # CONSULTA / RELAÇÃO / STATUS — cadeia RAG -> grafo -> síntese (Fatia 4),
+    # unificada no contrato Resultado.
     async with Client(mcp) as c:
         rag = _txt(await c.call_tool("consultar_rag", {"pergunta": msg, "k": 5}))
         m = re.search(r"dist=([0-9.]+)", rag or "")
@@ -245,32 +272,36 @@ async def responder(msg: str, confirmar: bool = False) -> str:
         sem_evidencia = ((not rag) or ("Nenhum trecho" in rag) or len(rag.strip()) < 40
                          or (melhor is not None and melhor > LIMIAR_IGNORANCIA))
 
-        partes = [f"🔎 {msg}\n"]
-
-        if intent == "status":
-            # estado operacional vem das FONTES canônicas, não de adivinhação
-            partes.append("📊 Estado operacional (fontes canônicas):\n" + _ler_estado())
-
+        # Abstenção (Ignorância Explícita) — exceto status, que vem de fonte canônica
         if sem_evidencia and intent != "status":
             extra = (f" (melhor dist={melhor:.2f} > limiar {LIMIAR_IGNORANCIA})"
                      if melhor is not None else "")
-            partes.append("⚠️ Ignorância explícita: não há evidência suficiente no vault "
-                          f"para responder com confiança{extra}. Refine a pergunta ou "
-                          "registre a lacuna.")
-            tipo = "ABSTENÇÃO"
-        else:
-            partes.append("📚 Recuperado do vault (com fontes):\n" + rag)
-            if intent == "relacao":
-                termo = msg.rstrip("?.! ").split()[-1]
-                grafo = _txt(await c.call_tool("consultar_grafo",
-                                               {"termo": termo, "top": 6}))
-                partes.append("\n🕸️ Relações (grafo):\n" + grafo)
-            tipo = "RESPOSTA"
+            corpo = ("⚠️ Ignorância explícita: não há evidência suficiente no vault "
+                     f"para responder com confiança{extra}.")
+            return _render({"tipo": "abstencao", "ok": False, "titulo": f"🔎 {msg}",
+                            "corpo": corpo, "fontes": [],
+                            "sugestao": "Refine a pergunta ou registre a lacuna no vault.",
+                            "artefato": None})
 
-        partes.append(f"\n[{tipo}] · recuperação sem LLM (custo zero) · "
-                      "💡 próxima ação sugerida: confira as fontes; para agir, peça e eu "
-                      "preparo o passo (aprovação humana antes de executar).")
-        return "\n".join(partes)
+        fontes = _fontes_do_rag(rag)
+        corpo = []
+        if intent == "status":
+            corpo.append("## Estado operacional (fontes canônicas)\n" + _ler_estado())
+        corpo.append("## Recuperado do vault\n" + rag)
+
+        # elo da cadeia: grafo sobre o termo-chave (sempre, não só em 'relacao')
+        termo = _termo_chave(msg)
+        grafo = _txt(await c.call_tool("consultar_grafo", {"termo": termo, "top": 6}))
+        if grafo and "Nenhum" not in grafo and len(grafo.strip()) > 10:
+            corpo.append(f"\n## Relações no grafo (termo: {termo})\n" + grafo)
+
+        corpo.append("\n## Síntese\n" + _sintese(fontes, termo))
+
+        return _render({"tipo": "resposta", "ok": True, "titulo": f"🔎 {msg}",
+                        "corpo": "\n".join(corpo), "fontes": fontes,
+                        "sugestao": "Confira as fontes; para agir, peça e eu preparo o "
+                                    "passo (aprovação humana antes de executar).",
+                        "artefato": None})
 
 
 def main() -> int:
