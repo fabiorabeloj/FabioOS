@@ -258,3 +258,10 @@ Formato:
 - Metodo: PRIMUS Index local + metadados, sem exportar a coluna `text`.
 - Auditoria: [[50_Registros/Auditoria/Auditoria_DND_Core_Wikilinks_2026-06-30]].
 - Limites: sem dump integral, sem RAG/reindex, sem texto bruto protegido.
+
+## [2026-07-01] revisao | Google Doc PRIMUS com otica atual
+
+- Pedido: reler o Google Doc PRIMUS com a otica atual do FabioOS/PRIMUS.
+- Entrega: [[50_Registros/Auditoria/Releitura_GoogleDoc_PRIMUS_2026-07-01]], [[40_Wiki/PRIMUS/Arquivo_Consultavel_PRIMUS]], [[80_Specs/PRIMUS/Spec_Operadores_Mundo_PRIMUS]].
+- Decisao: o gargalo atual nao e mais ingestao de fonte, e sim `R(X)` + ProblemGenerator + Arquivo Consultavel.
+- Limites: sem editar Google Doc, sem RAG/reindex, sem PDF.

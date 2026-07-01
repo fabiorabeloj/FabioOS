@@ -12,6 +12,7 @@ Conhecimento processado do universo narrativo PRIMUS.
 - [[Tipagem_Universal_PRIMUS]]
 - [[Livros_do_PRIMUS]]
 - [[Motor_Causal_PRIMUS]]
+- [[Arquivo_Consultavel_PRIMUS]]
 - [[Matriz_Fontes_PRIMUS]]
 - [[Falhas_Ontologicas_PRIMUS]]
 - [[Arquitetura_MultiIA_PRIMUS]]
@@ -24,6 +25,7 @@ Conhecimento processado do universo narrativo PRIMUS.
 - [[40_Wiki/PRIMUS/Persistencia/README]]
 - [[40_Wiki/PRIMUS/Fontes_Oficiais_DND/README]]
 - [[80_Specs/PRIMUS/Spec_Nos_Enciclopedia_PRIMUS]]
+- [[80_Specs/PRIMUS/Spec_Operadores_Mundo_PRIMUS]]
 
 ## Fonte Inicial
 

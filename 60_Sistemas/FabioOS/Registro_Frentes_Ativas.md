@@ -89,6 +89,7 @@ Artefatos compartilhados incluem:
 | OBSIDIAN_REVITALIZACAO | Codex | `.obsidian/graph.json`, `10_Dashboard/`, `40_Wiki/_MOCs/`, log, barramento e changelog | concluida | 2026-06-30 | Graph View atualizado para pastas canonicas; dashboard/MOC criados; wikilinks adicionados; nao tocou codigo MEGATRON/RAG nem reindex |
 | OBSIDIAN_PRIMUS_MOCS | Codex | `40_Wiki/_MOCs/MOC_PRIMUS.md`, `40_Wiki/PRIMUS/`, `80_Specs/PRIMUS/`, dashboards e auditoria de links | concluida | 2026-06-30 | PRIMUS ganhou MOC central, Enciclopedia E, Instancias I, Persistencia P, template e SPEC para novos nos; sem PDF extraction, sem RAG/reindex |
 | PRIMUS_DND_WIKILINKS | Codex | `40_Wiki/PRIMUS/Fontes_Oficiais_DND/`, MOCs PRIMUS, auditoria/changelog | concluida | 2026-06-30 | PHB/DMG/MM extraidos como indices seguros de pagina/categoria/ancora/destino PRIMUS; sem coluna text, sem dump integral, sem RAG/reindex |
+| PRIMUS_GOOGLE_DOC_RELEITURA | Codex | `50_Registros/Auditoria/Releitura_GoogleDoc_PRIMUS_2026-07-01.md`, `40_Wiki/PRIMUS/Arquivo_Consultavel_PRIMUS.md`, `80_Specs/PRIMUS/Spec_Operadores_Mundo_PRIMUS.md`, fila/MOC/log/changelog | concluida | 2026-07-01 | Google Doc relido com otica atual: prioridade muda para R(X), ProblemGenerator, Arquivo Consultavel e operadores de mundo; sem editar Google Doc, sem RAG/reindex |
 
 ## Frentes observadas
 

@@ -18,6 +18,7 @@ tags: [primus, moc, enciclopedia, llm-wiki]
 - [[30_Projetos/PRIMUS/PRIMUS_Operacao_v1]]
 - [[40_Wiki/PRIMUS/README]]
 - [[40_Wiki/PRIMUS/PrimusOS]]
+- [[40_Wiki/PRIMUS/Arquivo_Consultavel_PRIMUS]]
 
 ## Enciclopedia E
 
@@ -58,6 +59,7 @@ tags: [primus, moc, enciclopedia, llm-wiki]
 
 ## Specs e Templates
 
+- [[80_Specs/PRIMUS/Spec_Operadores_Mundo_PRIMUS]]
 - [[80_Specs/PRIMUS/Spec_Nos_Enciclopedia_PRIMUS]]
 - [[80_Specs/PRIMUS/Spec_CatalogEntry_PRIMUS]]
 - [[80_Specs/PRIMUS/Spec_Ontologia_Formal_PRIMUS]]
@@ -66,6 +68,7 @@ tags: [primus, moc, enciclopedia, llm-wiki]
 
 ## Fontes e Restricoes
 
+- [[50_Registros/Auditoria/Releitura_GoogleDoc_PRIMUS_2026-07-01]]
 - [[40_Wiki/PRIMUS/Fontes_Oficiais_DND/README]]
 - [[40_Wiki/PRIMUS/Fontes_Oficiais_DND/Wikilinks_DND_Core_PRIMUS]]
 - [[40_Wiki/PRIMUS/Fontes_Oficiais_DND/DND_Core_PHB_2014_Index_Seguro]]

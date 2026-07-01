@@ -57,6 +57,18 @@ Dentro do FabioOS, PrimusOS deve:
 
 PRIMUS e um laboratorio perfeito para testar o FabioOS como arquitetura cognitiva distribuida: fonte, wiki, grafo, RAG, agentes e automacao podem operar sobre um dominio criativo sem risco institucional.
 
+## Releitura 2026-07-01
+
+Com a malha Obsidian e os indices seguros dos livros oficiais ja criados, a leitura correta do Google Doc deixa de ser "absorver mais conteudo" e passa a ser "definir o que merece processamento".
+
+O eixo operacional atualizado e:
+
+```text
+WorldState -> R(X) -> Tensao -> Problema -> Conflito -> Cantina -> Missao -> DeltaP -> WorldState
+```
+
+O Arquivo Consultavel passa a ser camada de produto: ele controla o conhecimento progressivo do jogador e nao apenas a organizacao interna do vault.
+
 ## Proximas Acoes
 
 - [x] Extrair o contexto completo final.
@@ -69,6 +81,8 @@ PRIMUS e um laboratorio perfeito para testar o FabioOS como arquitetura cognitiv
 - [x] Inventariar logs/fontes do Project ChatGPT.
 - [x] Criar specs de ontologia formal, DeltaP e Steward.
 - [ ] Selecionar fonte/regiao segura ou lote E real para primeiro conflito jogavel.
+- [ ] Criar ProblemGenerator v0 com Campo de Relevancia `R(X)`.
+- [ ] Prototipar Arquivo Consultavel v0.
 - [ ] Transformar os tipos em templates ativos.
 - [ ] Criar a primeira missao executavel somente depois do WorldState.
 - [ ] Definir agente futuro `primus-lorekeeper`.

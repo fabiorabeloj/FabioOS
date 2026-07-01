@@ -48,7 +48,11 @@ Toda tarefa deve ter area, status, saida esperada e criterio de conclusao.
 | PRIMUS-TASK-0027 | Validacao | done | alta | Validar `CE-DND-0007 Creature` como primeira entrada de Desafio | [[Validacao_VE_5_Entradas_PRIMUS_Index]] |
 | PRIMUS-TASK-0028 | Validacao | done | alta | Validar `CE-DND-0009 Encounter` e `CE-DND-0010 Treasure` | [[Ancoras_PRIMUS_Index_DND_Core]] |
 | PRIMUS-TASK-0029 | Validacao | pending | alta | Validar `CE-DND-0001 Player Character` ou iniciar WWN | PRIMUS Index sem dump integral |
+| PRIMUS-TASK-0030 | Arquitetura | done | critica | Relido Google Doc com otica atual e formalizar operadores de mundo | [[50_Registros/Auditoria/Releitura_GoogleDoc_PRIMUS_2026-07-01]] |
+| PRIMUS-TASK-0031 | Produto | pending | critica | Especificar Arquivo Consultavel v0 como interface de conhecimento progressivo | prototipo de consulta por estados oculto/avistado/catalogado/compreendido |
+| PRIMUS-TASK-0032 | Motor | pending | critica | Criar ProblemGenerator v0 usando Campo de Relevancia `R(X)` | conflitos derivados de tensoes, nao de acumulacao de lore |
+| PRIMUS-TASK-0033 | Persistencia | pending | alta | Incorporar WorldModifier, ActivityModule, JourneyEngine, PersistentModifier e PPO ao DeltaP/WorldState | schema expandido validado |
 
 ## Proxima Tarefa
 
-`PRIMUS-TASK-0029`: validar `CE-DND-0001 Player Character` ou iniciar WWN, sem copiar texto integral, antes de liberar Engrenagem 6 ou Missao 0001.
+`PRIMUS-TASK-0032`: criar ProblemGenerator v0 usando [[80_Specs/PRIMUS/Spec_Operadores_Mundo_PRIMUS]], antes de liberar Engrenagem 6 ou Missao 0001.
