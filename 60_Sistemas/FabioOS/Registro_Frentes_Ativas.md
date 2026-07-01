@@ -100,6 +100,7 @@ Artefatos compartilhados incluem:
 | INTAKE_CLASSIFIER_CONVERGENCE | Codex | `60_Sistemas/FabioOS/scripts/email_intake_dry_run.py`, exemplos fake existentes, relatorio e changelog | concluida | 2026-07-01 | Email dry-run delega ao `megatron_core.classificar_intake()`; WhatsApp/PDF fake validados pelo mesmo contrato; sem acao externa e sem alterar core |
 | INTAKE_DISPATCH_CONTRACT_GUARD | Codex | `intake_queue.sample.json`, `universal_intake_schema.json`, `universal_intake_validator.py`, relatorio e changelog | concluida | 2026-07-01 | IDs unicos e validador anti-duplicata para a mesa de despacho; sem tocar UI/Agentarium, sem aprovar item real, sem RAG/API/push |
 | INTAKE_ADAPTER_OUTPUT_GUARD | Codex | `60_Sistemas/FabioOS/scripts/universal_intake_adapter.py`, relatorio e changelog | concluida | 2026-07-01 | Adapter escreve por padrao em fila dedicada `state/intake_queue.codex_adapter.json`; `--output` relativo validado; sem tocar fila viva, arquivista, UI, RAG/API/push |
+| INTAKE_COMMAND_EXTRACTOR | Codex | `60_Sistemas/FabioOS/scripts/intake_command_extract.py`, `universal_intake_adapter.py`, relatorio e changelog | concluida | 2026-07-01 | Comando natural agora extrai produto/serie/tema/prazo e anexa `extracao` opcional; sem tocar Agentarium, arquivista, RAG/API/push |
 
 ## Frentes observadas
 
@@ -158,3 +159,4 @@ Ao concluir, alterar `Estado` para `concluida`, registrar resultado e apontar o 
 - 2026-07-01 - `INTAKE_CLASSIFIER_CONVERGENCE` concluida. Relatorio Markdown legado do e-mail passou a usar o mesmo MEGATRON Core da fila universal; email/WhatsApp/PDF fake foram revalidados.
 - 2026-07-01 - `INTAKE_DISPATCH_CONTRACT_GUARD` concluida. Sample congelado da fila ganhou IDs unicos e o validador passou a bloquear duplicatas, protegendo os botoes Aprovar/Rejeitar do Agentarium.
 - 2026-07-01 - `INTAKE_ADAPTER_OUTPUT_GUARD` concluida. `universal_intake_adapter.py` deixou de usar a fila viva como destino padrao e passou a validar `--output` relativo sem crash.
+- 2026-07-01 - `INTAKE_COMMAND_EXTRACTOR` concluida. Comandos como `prova do 8o ano sobre Africa para amanha` passam a gerar `extracao` estruturada no card do Intake Universal.

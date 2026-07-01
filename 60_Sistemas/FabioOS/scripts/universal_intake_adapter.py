@@ -32,6 +32,7 @@ if str(MEGATRON_V1) not in sys.path:
     sys.path.insert(0, str(MEGATRON_V1))
 
 from megatron_core import classificar_intake  # noqa: E402
+from intake_command_extract import enriquecer_summary, extrair as extrair_comando, montar_subject  # noqa: E402
 
 
 SECRET_RX = re.compile(
@@ -128,18 +129,28 @@ def to_card(item: dict[str, Any], log_name: str = DEFAULT_LOG_NAME) -> dict[str,
     sender = str(item.get("sender") or "")
     subject = str(item.get("subject") or "")
     c = classificar_intake(text, source, sender, subject)
+    ext = extrair_comando(" ".join(part for part in (subject, text) if part))
+    ext_hits = sum(1 for key in ("produto", "serie", "tema", "prazo") if ext.get(key))
+    has_ext = c["sensitivity"] != "forbidden_external" and ext_hits >= 2 and float(ext.get("confianca") or 0) >= 0.5
     intake_id = f"intake_{timestamp_for_id(item)}_{stable_hash(item)}"
     raw_ref = f"60_Sistemas/MEGATRON/v1/state/_raw/{intake_id}.txt (gitignored, nao versionado)"
     status = status_for(c)
+    summary = redact_summary(text, c["sensitivity"])
+    card_subject = subject
 
-    return {
+    if has_ext:
+        summary = enriquecer_summary(summary, ext)
+        if not card_subject:
+            card_subject = montar_subject(ext, fallback=subject)
+
+    card = {
         "id": intake_id,
         "source": source,
         "received_at": str(item.get("received_at") or c["received_at"]),
         "sender": sender,
-        "subject": subject,
+        "subject": card_subject,
         "raw_content_ref": raw_ref,
-        "summary": redact_summary(text, c["sensitivity"]),
+        "summary": summary,
         "domain": c["domain"],
         "sensitivity": c["sensitivity"],
         "urgency": c["urgency"],
@@ -151,6 +162,15 @@ def to_card(item: dict[str, Any], log_name: str = DEFAULT_LOG_NAME) -> dict[str,
         "status": status,
         "log_ref": log_name,
     }
+    if has_ext:
+        card["extracao"] = {
+            "produto": ext.get("produto"),
+            "serie": ext.get("serie"),
+            "tema": ext.get("tema"),
+            "prazo": ext.get("prazo"),
+            "confianca": ext.get("confianca"),
+        }
+    return card
 
 
 def build_queue(
