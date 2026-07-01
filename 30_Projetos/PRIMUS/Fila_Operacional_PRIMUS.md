@@ -5,7 +5,7 @@ projeto: PRIMUS
 status: ativo
 fonte: [[80_Specs/PRIMUS/Spec_PRIMUS_Steward]]
 criado_em: 2026-06-30
-atualizado_em: 2026-06-30
+atualizado_em: 2026-07-01
 tags: [primus, fila, steward, tarefas]
 ---
 
@@ -52,7 +52,15 @@ Toda tarefa deve ter area, status, saida esperada e criterio de conclusao.
 | PRIMUS-TASK-0031 | Produto | pending | critica | Especificar Arquivo Consultavel v0 como interface de conhecimento progressivo | prototipo de consulta por estados oculto/avistado/catalogado/compreendido |
 | PRIMUS-TASK-0032 | Motor | pending | critica | Criar ProblemGenerator v0 usando Campo de Relevancia `R(X)` | conflitos derivados de tensoes, nao de acumulacao de lore |
 | PRIMUS-TASK-0033 | Persistencia | pending | alta | Incorporar WorldModifier, ActivityModule, JourneyEngine, PersistentModifier e PPO ao DeltaP/WorldState | schema expandido validado |
+| PRIMUS-TASK-0034 | Fontes | done | alta | Reler Google Drive `Rpg .docx` com otica operacional | [[50_Registros/Auditoria/Releitura_GoogleDrive_Rpg_Docx_PRIMUS_2026-07-01]] |
+| PRIMUS-TASK-0035 | Digestor | done | alta | Criar mapa de digestao seguro para `Rpg .docx` | [[Mapa_Digestao_Rpg_Docx_PRIMUS]] |
+| PRIMUS-TASK-0036 | Catalogo | done-parcial | alta | Criar CatalogEntries candidatas sem dump integral | [[CatalogEntries_Candidatas_Rpg_Docx_PRIMUS]] |
+| PRIMUS-TASK-0037 | Validacao | pending | alta | Aplicar V(E) nas 5 entradas mais seguras do `Rpg .docx` | entradas promovidas ou bloqueadas |
 
 ## Proxima Tarefa
 
 `PRIMUS-TASK-0032`: criar ProblemGenerator v0 usando [[80_Specs/PRIMUS/Spec_Operadores_Mundo_PRIMUS]], antes de liberar Engrenagem 6 ou Missao 0001.
+
+## Apoio de Fonte
+
+`PRIMUS-TASK-0037` alimenta o ProblemGenerator com padroes de mundo e missao, mas nao substitui `PRIMUS-TASK-0032`.

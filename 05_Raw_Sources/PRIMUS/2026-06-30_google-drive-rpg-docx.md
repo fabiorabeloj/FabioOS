@@ -72,3 +72,20 @@ DOCX/PDF -> extracao por pagina -> blocos -> CatalogEntry -> validacao -> Markdo
 - [ ] Validar 20 entradas.
 - [ ] Exportar somente CatalogEntries com metadados e snippet curto.
 - [ ] Gerar Missao 0001 apenas depois de DeltaP previsto.
+
+## Releitura 2026-07-01
+
+O arquivo foi relido pelo conector Google Drive com a otica atual do PRIMUS.
+
+Resultado:
+
+- continua classificado como fonte privada/restrita;
+- nao deve ter corpo integral versionado;
+- deve alimentar mapa de digestao, CatalogEntries candidatas e abstracoes operacionais;
+- blocos de IP externa ou fonte oficial devem permanecer como metadados/resumo seguro.
+
+Artefatos derivados:
+
+- [[50_Registros/Auditoria/Releitura_GoogleDrive_Rpg_Docx_PRIMUS_2026-07-01]]
+- [[30_Projetos/PRIMUS/Mapa_Digestao_Rpg_Docx_PRIMUS]]
+- [[30_Projetos/PRIMUS/CatalogEntries_Candidatas_Rpg_Docx_PRIMUS]]

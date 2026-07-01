@@ -5,7 +5,7 @@ projeto: PRIMUS
 status: operacional-v0
 fonte: [[05_Raw_Sources/PRIMUS/2026-06-30_google-drive-rpg-docx]]
 criado_em: 2026-06-30
-atualizado_em: 2026-06-30
+atualizado_em: 2026-07-01
 tags: [primus, spec, digestor, pdf, catalogentry]
 ---
 
@@ -34,6 +34,21 @@ E = Enciclopedia Funcional
 ```
 
 Ele nao executa missao, nao altera WorldState e nao gera DeltaP final.
+
+## Etapa Zero - Classificacao de Origem
+
+Antes de qualquer exportacao para Markdown, cada bloco deve receber uma classe de origem:
+
+| Classe | Uso |
+|---|---|
+| `autoral-provavel` | pode virar nota apos revisao humana |
+| `restrito-oficial` | apenas metadados, resumo curto e referencia |
+| `adaptacao-ou-traducao` | extrair padrao operacional, nao texto |
+| `procedimento-generico` | pode virar abstracao se nao copiar expressao |
+| `ip-externa` | bloquear ou analogizar |
+| `tabela-regra` | tratar como Restricted ate validacao |
+
+O caso de teste desta etapa e [[30_Projetos/PRIMUS/Mapa_Digestao_Rpg_Docx_PRIMUS]].
 
 ## Entradas
 
@@ -110,6 +125,7 @@ LicenseStatus:
 - Se a fonte for privada ou livro comercial, marcar `LicenseStatus: Restricted`.
 - Se houver duvida de classificacao, marcar `Confidence: Low`.
 - Markdown e visualizacao; fonte operacional e JSONL/SQLite/XLSX.
+- Fonte mista grande deve passar por mapa de digestao antes de virar lote.
 
 ## Criterios de Aceite
 

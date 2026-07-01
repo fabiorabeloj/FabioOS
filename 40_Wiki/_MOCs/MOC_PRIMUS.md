@@ -69,6 +69,10 @@ tags: [primus, moc, enciclopedia, llm-wiki]
 ## Fontes e Restricoes
 
 - [[50_Registros/Auditoria/Releitura_GoogleDoc_PRIMUS_2026-07-01]]
+- [[50_Registros/Auditoria/Releitura_GoogleDrive_Rpg_Docx_PRIMUS_2026-07-01]]
+- [[05_Raw_Sources/PRIMUS/2026-06-30_google-drive-rpg-docx]]
+- [[30_Projetos/PRIMUS/Mapa_Digestao_Rpg_Docx_PRIMUS]]
+- [[30_Projetos/PRIMUS/CatalogEntries_Candidatas_Rpg_Docx_PRIMUS]]
 - [[40_Wiki/PRIMUS/Fontes_Oficiais_DND/README]]
 - [[40_Wiki/PRIMUS/Fontes_Oficiais_DND/Wikilinks_DND_Core_PRIMUS]]
 - [[40_Wiki/PRIMUS/Fontes_Oficiais_DND/DND_Core_PHB_2014_Index_Seguro]]

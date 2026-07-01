@@ -5,7 +5,7 @@ projeto: PRIMUS
 status: ativo
 fonte: [[80_Specs/PRIMUS/Spec_Digestor_PDF_PRIMUS]]
 criado_em: 2026-06-30
-atualizado_em: 2026-06-30
+atualizado_em: 2026-07-01
 tags: [primus, digestor, pdf, markdown, catalogo]
 ---
 
@@ -30,6 +30,16 @@ Transformar PDFs, DOCX e indices existentes em CatalogEntries utilizaveis pelo P
 ```text
 60_Sistemas/PRIMUS_Digestor/
 ```
+
+## Fonte Mista Prioritaria
+
+O Google Drive `Rpg .docx` esta registrado como fonte-mae restrita:
+
+- [[05_Raw_Sources/PRIMUS/2026-06-30_google-drive-rpg-docx]]
+- [[30_Projetos/PRIMUS/Mapa_Digestao_Rpg_Docx_PRIMUS]]
+- [[30_Projetos/PRIMUS/CatalogEntries_Candidatas_Rpg_Docx_PRIMUS]]
+
+Regra: usar o arquivo para criar CatalogEntries e padroes abstratos; nunca exportar corpo integral.
 
 ## Primeiro Uso Recomendado
 
@@ -62,3 +72,4 @@ python 60_Sistemas/PRIMUS_Digestor/scripts/05_export_markdown.py `
 - Nao copiar texto integral.
 - Nao promover entradas `Restricted` para material publico.
 - Nao executar Missao 0001 antes de contrato.
+- Nao transformar `Rpg .docx` em wiki integral; usar o mapa de digestao e validar lote pequeno.

@@ -5,7 +5,7 @@ projeto: PRIMUS
 status: ativo
 fonte: [[05_Raw_Sources/PRIMUS/2026-06-30_chatgpt_project_primus_inventario_logs]]
 criado_em: 2026-06-30
-atualizado_em: 2026-06-30
+atualizado_em: 2026-07-01
 tags: [primus, fontes, matriz, canon, frameworks]
 ---
 
@@ -24,6 +24,7 @@ Fonte nao entra no PRIMUS por acumulacao. Fonte entra quando resolve um gargalo 
 | Setting Oficial | mundos oficiais com escopo proprio | Eberron, Ravenloft, Strixhaven, Sword Coast, Spelljammer |
 | Framework Operacional | procedimentos reaproveitaveis sem trocar regra D&D | WWN, SWN, Blades, Tome of Adventure Design |
 | Externo Controlado | material parceiro ou nao-D&D | SWE5, Pirate Adventurers, homebrews |
+| Fonte Compilada Restrita | material misto privado que exige digestao e classificacao de origem | `Rpg .docx` |
 
 ## Fontes Prioritarias
 
@@ -37,6 +38,7 @@ Fonte nao entra no PRIMUS por acumulacao. Fonte entra quando resolve um gargalo 
 | Tome of Adventure Design | importante | geradores de aventura/dungeon/hook | lore canon |
 | Eberron | importante | civilizacao, faccoes, economia magica | core mecanico |
 | Ravenloft | importante | dominios fechados, medo, maldicao | estrutura global PRIMUS |
+| Rpg .docx | importante operacional | mapa de padroes, CatalogEntries candidatas e funil do digestor | texto integral, canon direto ou IP externa literal |
 | ACKS | futuro | dominio, renda, tropas, mercado | antes de WorldState e tempo |
 | Godbound | futuro | escala divina e projetos amplos | antes de base mundana |
 
@@ -48,7 +50,8 @@ Fonte nao entra no PRIMUS por acumulacao. Fonte entra quando resolve um gargalo 
 4. Blades para medidores de pressao.
 5. Tome of Adventure Design para Engrenagem 6.
 6. Settings oficiais apenas quando houver regiao, faccao ou tema concreto.
-7. ACKS/Godbound somente depois de WorldState, tempo e escala de dominio.
+7. `Rpg .docx` apenas via [[30_Projetos/PRIMUS/Mapa_Digestao_Rpg_Docx_PRIMUS]] e [[30_Projetos/PRIMUS/CatalogEntries_Candidatas_Rpg_Docx_PRIMUS]].
+8. ACKS/Godbound somente depois de WorldState, tempo e escala de dominio.
 
 ## Regra de Integracao
 

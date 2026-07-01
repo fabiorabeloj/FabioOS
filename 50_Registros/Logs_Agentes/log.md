@@ -265,3 +265,10 @@ Formato:
 - Entrega: [[50_Registros/Auditoria/Releitura_GoogleDoc_PRIMUS_2026-07-01]], [[40_Wiki/PRIMUS/Arquivo_Consultavel_PRIMUS]], [[80_Specs/PRIMUS/Spec_Operadores_Mundo_PRIMUS]].
 - Decisao: o gargalo atual nao e mais ingestao de fonte, e sim `R(X)` + ProblemGenerator + Arquivo Consultavel.
 - Limites: sem editar Google Doc, sem RAG/reindex, sem PDF.
+
+## [2026-07-01] revisao | Google Drive Rpg .docx com otica operacional
+
+- Pedido: reler o segundo Google Drive/Doc informado pelo Fabio.
+- Entrega: [[50_Registros/Auditoria/Releitura_GoogleDrive_Rpg_Docx_PRIMUS_2026-07-01]], [[30_Projetos/PRIMUS/Mapa_Digestao_Rpg_Docx_PRIMUS]], [[30_Projetos/PRIMUS/CatalogEntries_Candidatas_Rpg_Docx_PRIMUS]].
+- Decisao: `Rpg .docx` e fonte-mae restrita e mista; entra como mapa de digestao e CatalogEntries candidatas, nao como dump integral.
+- Limites: sem editar Drive, sem exportar corpo integral, sem RAG/reindex, sem PDF, sem OpenClaw/n8n/runtime.

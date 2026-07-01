@@ -29,6 +29,8 @@ Projeto narrativo persistente do FabioOS.
 - [[DeltaP_Log_0001_PRIMUS]]
 - [[Runtime_PRIMUS_Index_Local]]
 - [[Plano_Digestor_PRIMUS]]
+- [[Mapa_Digestao_Rpg_Docx_PRIMUS]]
+- [[CatalogEntries_Candidatas_Rpg_Docx_PRIMUS]]
 - [[Plano_Transformacao_Restricted_DND_Core]]
 - [[Missao_0001_Preparacao]]
 - [[40_Wiki/PRIMUS/Motor_Causal_PRIMUS]]
