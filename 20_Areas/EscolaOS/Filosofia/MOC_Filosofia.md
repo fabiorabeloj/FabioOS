@@ -18,6 +18,8 @@ tags: [escolaos, filosofia, moc, curriculo, base-conhecimento]
 - [[socrates-maieutica]] — o método do conhece-te a ti mesmo.
 - [[platao-alegoria-da-caverna]] — mundo sensível × mundo das ideias.
 - [[aristoteles-virtude-e-meio-termo]] — ética da virtude e felicidade (eudaimonia).
+- [[aristoteles-quatro-causas]] — material, formal, eficiente, final (metafísica).
+- [[logica-e-metodo-indutivo]] — indução × dedução.
 - Helenismo: estoicismo e epicurismo *(a expandir)*.
 
 ## Medieval e Moderna
@@ -30,9 +32,16 @@ tags: [escolaos, filosofia, moc, curriculo, base-conhecimento]
 - [[marx-alienacao]] — trabalho, alienação e crítica do capital.
 - [[foucault-poder-e-saber]] — poder difuso, disciplina e verdade.
 
+## Idealismo e Estética
+- [[hegel-dialetica]] — tese/antítese/síntese; o real como processo.
+- [[estetica-arte-e-liberdade]] — arte, liberdade e romantismo filosófico.
+
 ## Existência e sentido
 - [[apolineo-e-dionisiaco]] · [[morte-de-deus]] · [[niilismo]] · [[ubermensch]] · [[vontade-schopenhauer]]
 - [[sartre-existencia-precede-essencia]] — liberdade e responsabilidade radical.
+
+## Material do Prof. Fabio (autoral)
+- [[Banco_Questoes_Filosofia_1e2EM]] — banco de questões 1º/2º EM, ligado aos conceitos.
 
 ## Sub-MOC temático
 - [[MOC_Nietzsche_Schopenhauer]] (aprofundamento — 3º EM).
