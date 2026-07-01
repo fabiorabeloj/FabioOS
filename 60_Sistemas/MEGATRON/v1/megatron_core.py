@@ -11,7 +11,7 @@ Regra máxima (Core Spec §3): nada externo/sensível age sozinho; padrão = pro
 
 Uso:
     python megatron_core.py "Fabio, precisamos da prova do 8o ano sobre Africa ate amanha"
-    python megatron_core.py "segue o token sk-ABC123..." --source gmail
+    python megatron_core.py "segue o token <credencial>..." --source gmail
 """
 import argparse
 import hashlib
