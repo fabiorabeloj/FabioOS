@@ -2,11 +2,16 @@
 tipo: roadmap
 area: FabioOS
 projeto: FabioOS
-status: proposto
+status: historico
 tags: [fabios, roadmap, fases, megatron, governanca, llm-wiki, rag, mcp]
 criado_em: 2026-06-29
-atualizado_em: 2026-06-29
+atualizado_em: 2026-07-01
 ---
+
+> ⚠️ **HISTÓRICO (superado em 2026-07-01).** A numeração de fases (0–29) virou ruído
+> após o pivô para o **Intake Universal**. A estrutura viva do projeto agora são os
+> **6 blocos (A–F)** em [[60_Sistemas/FabioOS/STATUS]] §2. Este documento fica como
+> registro do raciocínio que consolidou as 23 fases originais.
 
 # Roadmap de Fases FabioOS v2 - 2026-06-29
 

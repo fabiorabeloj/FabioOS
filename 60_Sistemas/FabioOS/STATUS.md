@@ -3,121 +3,78 @@ tipo: status
 area: 60_Sistemas
 projeto: FabioOS
 status: ativo
-tags: [fabios, status, continuidade, multiagente]
+tags: [fabios, status, continuidade, multiagente, intake-universal]
 criado_em: 2026-06-27
-atualizado_em: 2026-06-29
+atualizado_em: 2026-07-01
 ---
 
-# STATUS - FabioOS
+# STATUS — FabioOS
 
-## Estado canonico atual - 2026-06-27
+> **Estado canônico de continuidade.** Qualquer sessão retoma por aqui + `NEXT_ACTIONS.md`
+> + `50_Registros/Barramento_Multiagente.md`. Reescrito em 2026-07-01 (o conteúdo
+> anterior 27–29/06 estava defasado; histórico preservado no Git).
 
-Codex esta em **coordenacao operacional interina** ate **2026-06-29 13:00 America/Sao_Paulo**, porque Claude so retorna nesse horario. Claude continua sendo o lider estrutural quando voltar; o interinato serve para manter continuidade, registros e seguranca sem colisao.
+## 1. O que o FabioOS é hoje
 
-Regras ativas:
+Arquitetura cognitiva operacional do Fabio, com **3 cérebros** coordenados por arquivos:
+- **Claude** = arquiteto-chefe / governança / MEGATRON Core / RAG / MCP.
+- **Codex** = engenharia / infra / schema / conectores / PRIMUS.
+- **Cursor** = interface / Agentarium / revisão (Bugbot).
 
-- sem push sem autorizacao humana explicita;
-- sem apagar, reindexar ou recriar `60_Sistemas/RAG/fabioos_db/`;
-- sem tocar na frente `MCP_FABIOOS` do Claude sem handoff;
-- sem mexer em tokens, OpenClaw auth, WhatsApp/n8n externo ou QR Code sem aprovacao;
-- registrar lock em `Registro_Frentes_Ativas.md` antes de qualquer artefato compartilhado.
+A **espinha do produto** deixou de ser "instalar ferramentas" e passou a ser o
+**INTAKE UNIVERSAL + controle humano** (MEGATRON Core Spec v0.1): toda entrada de
+qualquer canal → normaliza → classifica → sensibilidade → domínio → agente →
+proposta → **aprovação humana** → log → memória. Nada externo/sensível age sozinho.
 
-Estado operacional:
+## 2. Estrutura real em BLOCOS (substitui a lista de 23/30 fases numeradas)
 
-- Fase 12 RAG: **PROMOVIDA A PILOTO** por Claude em 2026-06-29 (ADR `50_Registros/Decisoes/ADR_2026-06-29_Promocao_Fase12_RAG_Piloto.md`). Banco vetorial reindexado com `1206` chunks; validacao em modo recuperacao registrou `10/10` perguntas boas e `0` vazamentos contra o indice real. Hardening de precisao (`MAX_CHARS`, ficha tecnica) diferido para Fase 12.1, sem bloquear o piloto;
-- Fase 13 Grafo: grafo minimo local criado e validado; dados pesados tratados como regeneraveis;
-- Fase 15 MCP FabioOS: frente `MCP_FABIOOS` pertence ao Claude e segue protegida;
-- Mobile Gateway v0: servidor local Python implementado e rodando na porta `8787`; celular pode acessar pela LAN em `http://192.168.0.20:8787` se firewall permitir;
-- Conectores Google v0: Gmail e Google Drive catalogados em modo leitura; detalhes ficaram em `05_Raw_Sources/_compat_sources/*/_restrito/` fora do Git;
-- Inventario Ferramentas IA v0: OpenClaw/Cursor/Hermes detectados como instalacao/diretorio, mas CLIs nao estao no PATH; n8n nao esta ouvindo em `5678`; OpenRouter nao tem env var nesta sessao;
-- Matriz de Aptidao das IAs: criada em `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/40_Repertorio/IA/Modelos_e_IAs/Matriz_de_Aptidao_das_IAs_FabioOS.md`; passa a ser gate para escolher ChatGPT, Claude, Claude Code, Codex, Cursor, OpenClaw, n8n, Hermes, Manus, modelos chineses, multimodais e ferramentas futuras;
-- LLM Wiki operacional: decisao formalizada em `30_Projetos/FabioOS/LLM_Wiki_FabioOS.md`; `10_Dashboard/_entrada/index.md`, `50_Registros/Logs_Agentes/log.md`, schema, protocolos de ingest/query/lint e RAG/MCP Control Plane foram criados como camada de memoria governada;
-- Piloto LLM Wiki/Governanca: executado com uma fonte preservada, uma pagina wiki criada, uma pagina existente atualizada e index/log/changelog atualizados;
-- Roadmap Fases v2: criado em `60_Sistemas/FabioOS/Roadmap_Fases_FabioOS_v2_2026-06-29.md`; corrige status real das fases e promove Governanca Operacional como proxima frente urgente;
-- Fase 17 Governanca Operacional: camada documental criada com constituicao, permissoes, contratos de agentes, definicao de concluido, anti-caos, seguranca, memorias, assimilacao, metadados, observabilidade, ADR e dashboard;
-- Normalizacao Obsidian v2: mapa canonico de pastas criado em `60_Sistemas/FabioOS/Mapa_Canonico_Pastas_Obsidian_v2_2026-06-29.md`; pastas legadas foram identificadas e nao devem receber novos arquivos sem justificativa;
-- Estrutura fisica LLM Wiki: pastas `05_Raw_Sources/`, `20_Areas/`, `40_Wiki/`, `70_Skills/` e `80_Specs/` criadas com READMEs; `05_Raw_Sources/_compat_sources/` e `40_Wiki/_compat_wiki/` continuam como compatibilidade operacional;
-- Limpeza visual da raiz: pastas legadas foram arquivadas em `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/`; placeholders `Sem titulo` foram renomeados/arquivados em `90_Arquivo/Descartes_Visuais_Obsidian_2026-06-29/`; arquivos tecnicos permanecem no disco e foram ocultados no Obsidian via `.obsidian/app.json`;
-- Estrutura canonica completa do Obsidian: proposta visual do Fabio formalizada em `60_Sistemas/FabioOS/Estrutura_Canonica_Completa_Obsidian_2026-06-29.md`; `00_Inbox/Teste/` foi eliminada como gaveta visual, notas de teste foram preservadas em `00_Inbox/Triagem/`, `Email_para_Processar_FabioOS.md` foi movido para `00_Inbox/Processar/` e `60_Sistemas/` ficou sem arquivos `.md` soltos na raiz;
-- MEGATRON v0/v1: ha commits recentes de interface cognitiva e ignorancia explicita; revisar antes de promocao formal;
-- OpenClaw: gateway acessivel, Workboard `fabioos` criado e agente `fabioos-ponte` testado com sucesso; ainda precisa otimizar contexto para reduzir custo.
+| Bloco | Frente | Estado | Dono |
+|---|---|---|---|
+| **A · Fundação** | vault, Git, agentes/skills, LLM-Wiki, bases EscolaOS/PietraOS | ✅ concluído | Claude/Codex |
+| **B · Infra ativa** | RAG (piloto, 1206 chunks, 10/10), Grafo mínimo, MCP read-only (5 tools), MEGATRON v1 Maestro (golden 20/20) | 🟢 ativo/piloto | Claude |
+| **C · Intake Universal** | Core Spec v0.1, `megatron_core.py` (classificador), `intake_flow.py` (**prova §9 fechada**), schema+adapter+conectores, fila secretário | 🟡 **em prova** (espinha atual) | Claude+Codex+Cursor |
+| **D · Verticais/produto** | PietraOS (chatbot escolar multi-tenant, LGPD), EscolaOS (Geo+Filo), PRIMUS (RPG, runtime+index 10788 regs) | 🟢 em construção | Codex/Claude |
+| **E · Governança/segurança** | Barramento multiagente, locks, redação de segredo, ADR Nota-vs-Dado, política LGPD | 🟢 contínuo | Claude |
+| **F · Futuro (gated)** | canais reais (WhatsApp/Gmail), n8n ativo, dashboards/observabilidade, TraderOS, produção Docker/VPS | 🔒 bloqueado até prova + aprovação | — |
 
-Proxima acao recomendada:
+**Resposta à pergunta "ainda são 23 fases?":** não. O plano original (0–23) já tinha sido
+remapeado para 30 fases numeradas (v2, 29/06) e mesmo esse ficou obsoleto com o pivô para
+o Intake Universal. A numeração virou ruído; a estrutura real são os **6 blocos acima**.
+O roadmap v2 continua como histórico em `Roadmap_Fases_FabioOS_v2_2026-06-29.md`.
 
-1. Registrar e commitar o interinato Codex com scan.
-2. Criar/atualizar card no OpenClaw Workboard para tornar a frente visivel.
-3. Otimizar contexto do `fabioos-ponte` antes de novos testes com modelo.
-4. Preparar handoff de retorno para Claude.
-5. Aplicar a Matriz de Aptidao antes de escolher qualquer IA/modelo/ferramenta para nova tarefa.
-6. Revisar o Roadmap Fases v2 com Claude/Fabio.
-7. Revisar a Fase 17 Governanca Operacional e aplicar seus gates ao RAG/MCP/n8n/OpenClaw antes de novas automacoes.
-8. Revisar a estrutura canonica completa aplicada no Obsidian e decidir se pastas operacionais adicionais de `60_Sistemas/` devem ser migradas em lotes futuros.
-9. Executar proxima migracao pequena somente depois de revisar `50_Registros/Auditoria/Proposta_de_Migracao_Estrutural_FabioOS.md`.
-10. Manter `05_Raw_Sources/_compat_sources/` e `40_Wiki/_compat_wiki/` no disco ate adaptar RAG/MCP/scripts; para uso humano, eles ficam ocultos no Obsidian.
+## 3. Onde o Bloco C (foco) está agora
 
-Nota: as secoes abaixo permanecem como historico de continuidade anterior e podem conter estado ja superado.
+- ✅ **Claude:** Core Spec v0.1 + `megatron_core.py` + `intake_flow.py` (prova mínima §9:
+  5 payloads fake → classifica → **trava de redação** → fila "Aguardando Fabio" → log;
+  token nunca vaza). Contrato congelado: `60_Sistemas/MEGATRON/v1/examples/intake_queue.sample.json`.
+- 🟡 **Codex:** `universal_intake_adapter.py` + `email_intake_dry_run.py` adaptados ao schema
+  (dry-run seguro, bloqueia gravação fora do vault). Taxonomia alinhada ao Core Spec §4
+  (bug "coordenação→pietraos" corrigido em 2026-07-01).
+- 🟡 **Cursor:** Agentarium consome `intake_queue.json`; Bugbot mapeou revisão do projeto
+  em 7 ondas (`50_Registros/Relatorios/Plano_Bugbot_*`).
 
-## Estado atual
+## 4. Dívida técnica conhecida (a resolver, não urgente)
 
-Claude retornou e **assumiu a liderança das frentes** (decisão do Fabio por custo operacional do Codex). Os 33 commits locais (Fases 7→13, coordenação, RAG, Grafo, OpenClaw, governança) foram **sincronizados via push** no branch `claude/megatron-rag-fase12`, atualizando o **PR #1** (OPEN). `origin/main` permanece intocado.
+1. **Dois classificadores** (`megatron_core.DOMINIOS` vs `email_intake.DOMAIN_RULES`) —
+   convergir: o adapter deve delegar ao Core, não manter taxonomia própria.
+2. `email_intake`: "responsável pelo aluno" caiu em `pessoal` em vez de `pietraos` —
+   revisar matching de keywords (zona Codex).
+3. RAG hardening (MAX_CHARS 6000→~1200) adiado para janela com CPU livre.
+4. STATUS/roadmap/painel tinham deriva documental — este arquivo é agora a fonte única.
 
-Codex passa a operar em **modo auxiliar/econômico** conforme `Protocolo_Lideranca_e_Economia_Multiagente.md` (frentes seguras, sem push, sem destrutivo; subagentes Codex suspensos até reteste).
+## 5. Próxima ação recomendada
 
-## Fase atual
+1. **Codex:** convergir taxonomia (adapter delega ao `megatron_core.classificar_intake`);
+   ligar conectores fake→reais mantendo dry-run.
+2. **Cursor:** construir a fila "Aguardando Fabio" + campo de comando natural contra o
+   `intake_queue.sample.json`; autorizar Onda 1 do Bugbot (entradas sensoriais).
+3. **Fabio:** decidir quando ligar o primeiro canal real (WhatsApp Pietra) — só depois do
+   loop provado nas 3 fontes (email/whatsapp/pdf fake).
+4. **Claude:** repetir a prova §9 para WhatsApp e PDF fake (mesmo contrato).
 
-Fase 12 - RAG.
+## 6. Regras ativas (invioláveis)
 
-Estado real:
-
-- dependencias instaladas;
-- ingestao pos-limpeza concluida;
-- banco vetorial reindexado com `1206` chunks de corpus operacional;
-- 10 perguntas de validacao executadas em modo recuperacao com `10/10` bom;
-- 5 consultas de seguranca executadas com `0` falhas;
-- Fase 12 aguarda decisao do Claude para promocao a piloto.
-
-## Principais achados
-
-1. RAG recupera bem conceitos, agentes e dominios.
-2. Falha de ranking em consultas genericas de status atual foi corrigida e revalidada apos reindexacao.
-3. Ranking operacional foi mitigado em `query_rag.py`; a pergunta "Qual e a fase atual do FabioOS?" agora recupera Painel/STATUS no topo.
-4. Nao houve uso de API externa na validacao.
-5. Nao houve push.
-6. Nao houve commit.
-
-## Arquivos criados nesta continuidade
-
-- `60_Sistemas/RAG/Relatorio_Validacao_RAG_2026-06-27.md`
-- `60_Sistemas/FabioOS/STATUS.md`
-- `60_Sistemas/FabioOS/NEXT_ACTIONS.md`
-- `60_Sistemas/FabioOS/Prompt_Retomada_Claude_2026-06-29.md`
-- `60_Sistemas/FabioOS/Registro_Frentes_Ativas.md`
-- `60_Sistemas/FabioOS/Incidente_Coordenacao_RAG_2026-06-27.md`
-- `60_Sistemas/FabioOS/Prompt_Para_Claude_Coordenacao_2026-06-27.md`
-- `60_Sistemas/FabioOS/Relatorio_Coordenacao_Sem_Colisao_2026-06-27.md`
-- `60_Sistemas/FabioOS/Checklist_PreCommit_Sem_Colisao_2026-06-27.md`
-- `50_Registros/Changelog/2026-06-27_validacao-rag-continuidade.md`
-
-## Arquivos tocados por seguranca
-
-- `60_Sistemas/OpenClaw/setup/EVOLUTION_API_SETUP.md` - exemplos de chave foram trocados por placeholder explicito.
-
-## Arquivos que nao devem ser tocados sem cuidado
-
-- commits tematicos planejados pelo Claude;
-- scripts RAG modificados e ainda nao commitados;
-- bloco OpenClaw/WhatsApp em working tree;
-- arquivos de Obsidian locais e backups;
-- qualquer arquivo com credencial local.
-
-## Estado de seguranca
-
-Scan preliminar: sem credencial real encontrada nos arquivos desta frente. Houve apenas falsos positivos documentais sobre tokens, apikey e segredos.
-
-## Proxima acao recomendada
-
-Reexecutar a bateria completa das 10 perguntas apos o ajuste de ranking/recencia e so entao decidir sobre promocao da Fase 12 para piloto.
-
-## Prompt imediato para Claude
-
-Usar `60_Sistemas/FabioOS/Prompt_Para_Claude_Coordenacao_2026-06-27.md` para orientar Claude sem colisao com Codex.
+- Sem push/canal externo/n8n ativo/WhatsApp/apagar sem **aprovação humana explícita**.
+- Sem tocar `60_Sistemas/RAG/fabioos_db/` sem lock.
+- Segredo/credencial nunca em log, RAG ou Git (redação obrigatória).
+- Registrar lock em `Registro_Frentes_Ativas.md` antes de artefato compartilhado.
