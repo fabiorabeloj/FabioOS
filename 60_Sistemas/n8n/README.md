@@ -93,9 +93,11 @@ Todo workflow criado no FabioOS deve ter uma nota em `60_Sistemas/n8n/Workflows/
 | Arquivo | Status | Função |
 |---|---|---|
 | `FabioOS_Webhook_Inbox.json` | pronto para importar | Webhook → nota em 05_Raw_Sources/_compat_sources/_inbox/ |
+| `FabioOS_WhatsApp_Pietra_DryRun.json` | pronto para importar | WhatsApp/Evolution -> PietraOS em dry-run; sem envio externo |
 
 ## Relações
 
 - [[40_Wiki/_compat_wiki/sistemas/n8n]]
 - [[60_Sistemas/FabioOS/Plano_Mestre_Implantacao_FabioOS]]
 - [[60_Sistemas/FabioOS/Protocolo_Operacional_FabioOS]]
+- [[60_Sistemas/n8n/Workflows/FabioOS_WhatsApp_Pietra_DryRun]]

@@ -96,6 +96,7 @@ Artefatos compartilhados incluem:
 | PRIMUS_CONCEITOS_LIVROS | Codex | `40_Wiki/PRIMUS/conceitos/`, `40_Wiki/PRIMUS/README.md`, auditoria, log e changelog | concluida | 2026-07-01 | Ordem do Claude executada: 14 conceitos fortes adicionados, MOC atualizado e links DeltaP corrigidos; sem stubs massivos, sem texto protegido, sem RAG/reindex |
 | EMAIL_INTAKE_DRY_RUN | Codex | `60_Sistemas/FabioOS/scripts/email_intake_dry_run.py`, SPEC, diagnostico, inbox email, log e changelog | concluida | 2026-07-01 | Ponte local criada para payloads autorizados do Gmail/n8n; classifica e gera triagem restrita; sem OAuth proprio, sem envio, sem alterar mensagens, sem RAG/Grafo |
 | INBOX_UNIVERSAL_V01 | Codex | `60_Sistemas/FabioOS/schemas/universal_intake_schema.json`, `universal_intake_adapter.py`, `universal_intake_validator.py`, examples, SPEC, relatorio e changelog | concluida | 2026-07-01 | Alinhado ao MEGATRON Core Spec v0.1; gera fila consumivel pelo Cursor com Gmail/WhatsApp/PDF fake; summary redigido para segredo; sem RAG, sem envio, sem runtime externo |
+| N8N_PIETRA_DRY_RUN_BRIDGE | Codex | `60_Sistemas/n8n/scripts/pietra_whatsapp_dry_run_bridge.py`, `FabioOS_WhatsApp_Pietra_DryRun.*`, payload fake, relatorio e changelog | concluida | 2026-07-01 | Bridge n8n/Evolution -> `pietra_conversa.conversar()` em dry-run; sem envio WhatsApp, sem API externa, sem RAG e sem alterar motor Pietra |
 
 ## Frentes observadas
 
@@ -150,3 +151,4 @@ Ao concluir, alterar `Estado` para `concluida`, registrar resultado e apontar o 
 - 2026-07-01 - `PRIMUS_CONCEITOS_LIVROS` concluida. Livros FREE renderam conceitos fortes; D&D Core gerou apenas abstracoes de design; MOC de conceitos passou a ser o hub para evitar bolinhas soltas.
 - 2026-07-01 - `EMAIL_INTAKE_DRY_RUN` concluida. Diagnostico do modulo de e-mail feito; conector Gmail do Codex respondeu, mas FabioOS local nao tinha ponte; criado script dry-run para triagem restrita de payload autorizado.
 - 2026-07-01 - `INBOX_UNIVERSAL_V01` concluida. Codex criou schema, adaptador, validador e payloads fake; e-mail dry-run agora tambem emite fila universal no contrato do Cursor.
+- 2026-07-01 - `N8N_PIETRA_DRY_RUN_BRIDGE` concluida. Criado bridge local e workflow n8n importavel para transformar payload WhatsApp/Evolution em proposta Pietra, sempre com aprovacao humana e sem envio externo.

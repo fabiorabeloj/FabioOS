@@ -1,0 +1,16 @@
+{
+  "event": "messages.upsert",
+  "instance": "pietra-escola",
+  "data": {
+    "key": {
+      "remoteJid": "551199998888@s.whatsapp.net",
+      "fromMe": false,
+      "id": "FAKE_MESSAGE_ID"
+    },
+    "pushName": "Responsavel Teste",
+    "messageTimestamp": 1782900000,
+    "message": {
+      "conversation": "Bom dia, preciso do historico escolar da minha filha."
+    }
+  }
+}

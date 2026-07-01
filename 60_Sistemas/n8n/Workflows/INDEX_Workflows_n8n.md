@@ -24,6 +24,7 @@ tags: [fabios, n8n, workflows, automacao]
 | FabioOS - SafeCommit Preflight | `fabioosSafeCommitPreflight` | importado, inativo por seguranca | http://127.0.0.1:5678/workflow/fabioosSafeCommitPreflight |
 | FabioOS - Webhook para Inbox | `fabioosWebhookInbox` | importado, inativo por seguranca | http://127.0.0.1:5678/workflow/fabioosWebhookInbox |
 | FabioOS - WhatsApp para Pietra | `fabioosWhatsappPietraV2` | ativo segundo log do n8n | http://127.0.0.1:5678/workflow/fabioosWhatsappPietraV2 |
+| FabioOS - WhatsApp Pietra Dry Run | `fabioosWhatsappPietraDryRun` | pronto para importar; seguro por padrao | importar `FabioOS_WhatsApp_Pietra_DryRun.json` |
 | FabioOS - WhatsApp para Pietra (desativado) | `fabioosWhatsappPietra` | legado/desativado | http://127.0.0.1:5678/workflow/fabioosWhatsappPietra |
 | FabioOS - Webhook Arquivista | `o0B7C9gBC3UOOf1H` | ativo segundo log do n8n | http://127.0.0.1:5678/workflow/o0B7C9gBC3UOOf1H |
 | FabioOS - Captura para Obsidian | `JDZA4lXZSn3uMMqj` | existente no n8n local | http://127.0.0.1:5678/workflow/JDZA4lXZSn3uMMqj |
@@ -72,6 +73,21 @@ SPEC -> gate de excelencia -> tarefas -> donos -> gates -> testes -> aceite
 ```
 
 Ele e util para decidir se uma fase esta madura para implementacao antes de qualquer codigo.
+
+## Cadeia Pietra dry-run
+
+O workflow `FabioOS - WhatsApp Pietra Dry Run` transforma um payload Evolution/WhatsApp em proposta
+do PietraOS, sem envio externo:
+
+```text
+Evolution -> n8n webhook -> bridge local :8791 -> pietra_conversa -> proposta + cartao -> resposta dry-run
+```
+
+Antes de importar, iniciar o bridge:
+
+```powershell
+python 60_Sistemas/n8n/scripts/pietra_whatsapp_dry_run_bridge.py --serve --port 8791
+```
 
 ## Limites
 

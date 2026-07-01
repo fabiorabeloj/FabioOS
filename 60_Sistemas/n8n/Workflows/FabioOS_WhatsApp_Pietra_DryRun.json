@@ -1,0 +1,76 @@
+{
+  "id": "fabioosWhatsappPietraDryRun",
+  "name": "FabioOS - WhatsApp Pietra Dry Run",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "fabios-whatsapp-pietra-dry-run",
+        "responseMode": "responseNode",
+        "options": {}
+      },
+      "id": "20000000-0000-4000-8000-000000000001",
+      "name": "Webhook Evolution",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [160, 320],
+      "webhookId": "fabios-whatsapp-pietra-dry-run"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "http://host.docker.internal:8791/pietra/whatsapp/dry-run?tenant=colegio-pietra",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ JSON.stringify($json) }}",
+        "options": {
+          "timeout": 30000
+        }
+      },
+      "id": "20000000-0000-4000-8000-000000000002",
+      "name": "Pietra Dry Run Bridge",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [440, 320]
+    },
+    {
+      "parameters": {
+        "jsCode": "const r = $input.first().json;\nreturn [{ json: {\n  ok: r.ok === true,\n  dry_run: true,\n  send_allowed: false,\n  status: r.status,\n  tenant: r.tenant,\n  sender: r.sender,\n  estado: r.estado,\n  requires_human_approval: true,\n  respostas_sugeridas: r.respostas_sugeridas || [],\n  cartao: r.cartao || null,\n  audit: {\n    external_effects: false,\n    rag_used: false,\n    whatsapp_sent: false,\n    service: 'pietra_whatsapp_dry_run_bridge'\n  }\n}}];"
+      },
+      "id": "20000000-0000-4000-8000-000000000003",
+      "name": "Normalizar Resposta Segura",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [720, 320]
+    },
+    {
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={{ JSON.stringify($json) }}"
+      },
+      "id": "20000000-0000-4000-8000-000000000004",
+      "name": "Responder Sem Enviar WhatsApp",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1,
+      "position": [1000, 320]
+    }
+  ],
+  "connections": {
+    "Webhook Evolution": {
+      "main": [[{ "node": "Pietra Dry Run Bridge", "type": "main", "index": 0 }]]
+    },
+    "Pietra Dry Run Bridge": {
+      "main": [[{ "node": "Normalizar Resposta Segura", "type": "main", "index": 0 }]]
+    },
+    "Normalizar Resposta Segura": {
+      "main": [[{ "node": "Responder Sem Enviar WhatsApp", "type": "main", "index": 0 }]]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "meta": {
+    "instanceId": "fabios"
+  }
+}
