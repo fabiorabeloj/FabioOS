@@ -1,0 +1,35 @@
+---
+description: Regras do projeto FabioOS para o Cursor (oficina de software multiagente)
+alwaysApply: true
+---
+
+# FabioOS — Regras para o Cursor
+
+O FabioOS é um **sistema operacional cognitivo pessoal** (Obsidian = memória; Git = versão; multiagente Claude Code + Codex + Cursor; MEGATRON = interface coordenadora futura). Idioma: **português do Brasil**.
+
+## Início de toda sessão (ler antes de agir)
+1. `CLAUDE.md` (regras canônicas — fonte única)
+2. `00_Arquitetura/01_Modelo_Formal_FabioOS_MEGATRON.md` (constituição)
+3. `60_Sistemas/FabioOS/Roadmap_Fases_FabioOS_v2_2026-06-29.md` (roadmap autoritativo)
+4. `60_Sistemas/FabioOS/Registro_Frentes_Ativas.md` (locks/zonas — multiagente)
+5. `60_Sistemas/FabioOS/STATUS.md` + `NEXT_ACTIONS.md` + último changelog em `50_Registros/Changelog/`
+6. `60_Sistemas/FabioOS/Integracao_Cursor_e_Coordenacao_Multiagente_2026-06-29.md`
+
+## Papel do Cursor: oficina de software
+Construir **componentes de software de verdade**: interface MEGATRON (PWA/desktop), dashboards de observabilidade, empacotamento do MCP FabioOS, parsers/crawlers/ingestão, refactors com testes.
+
+## Zona do Cursor (anti-colisão — REGRA DURA)
+- **Pode editar:** apps/software na zona do Cursor (ex.: `60_Sistemas/MEGATRON/interface/`, `app/`).
+- **NÃO tocar sem handoff registrado:** `60_Sistemas/RAG/` (db e scripts), `60_Sistemas/MCP_FabioOS/`, `60_Sistemas/MEGATRON/v0` e `/v1` (core), estrutura do vault e governança documental.
+- Zonas: **Claude** = RAG/MCP/MEGATRON-core/arquitetura · **Codex** = estrutura/links/governança · **Cursor** = apps/software.
+
+## Regras invioláveis
+- **Registrar lock** no `Registro_Frentes_Ativas.md` antes de tocar qualquer artefato compartilhado.
+- **Sem `git push`** e **sem runtime** (n8n, OpenClaw, WhatsApp, Google, Docker) sem **aprovação humana**.
+- **Scan de segredos antes de commit**; nunca commitar tokens, `.env`, dados pessoais (`sources/*/_restrito/`, logs Pietra).
+- **Não apagar** conhecimento; preservar histórico; registrar decisões (changelog/ADR).
+- Não reindexar RAG nem matar processos sem lock.
+- Antes de improvisar, checar capacidades existentes (`60_Sistemas/FabioOS/Protocolo_Roteamento_Capacidades_IA.md`).
+
+## Primeira tarefa sugerida
+Protótipo/mockup da interface MEGATRON a partir de `60_Sistemas/FabioOS/Visao_Interface_FabioOS.md`, em zona própria, sem tocar o core.

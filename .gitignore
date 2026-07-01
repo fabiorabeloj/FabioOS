@@ -87,3 +87,6 @@ logs/
 # config cosmetica do Obsidian (muda com tema/preferencia, nao e conteudo)
 .obsidian/appearance.json
 .obsidian/themes/
+
+# Backups do RAG (regeneraveis, pesados) — nunca versionar
+60_Sistemas/RAG/fabioos_db_backup_*/
