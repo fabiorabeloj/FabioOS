@@ -1,60 +1,69 @@
 {
   "vertical": "escola",
-  "descricao": "Config da vertical Escola (PietraOS). Compartilhada por todos os tenants-escola; cada tenant pode sobrescrever setores/FAQ/base. Esta config É o moat (biblioteca por vertical).",
+  "descricao": "Config da vertical Escola (PietraOS). Padrao enterprise: persona, slots (coleta), risco, roteamento, templates. Compartilhada entre tenants; cada tenant sobrescreve {escola}, setores, FAQ e base.",
+  "persona": {
+    "nome_bot": "Assistente {escola}",
+    "saudacao": "Ola! 👋 Sou o assistente virtual da {escola}. Posso ajudar com documentos, financeiro, dúvidas pedagógicas, agendamentos e mais. Como posso ajudar?",
+    "tom": "institucional, claro, cordial, objetivo",
+    "horario_atendimento": "seg-sex 7h-18h",
+    "fora_horario": "No momento estamos fora do horário de atendimento ({horario}). Sua mensagem foi registrada e retornaremos no próximo dia útil. 🙂",
+    "fallback": "Desculpe, não entendi bem para te direcionar. Você poderia escolher uma opção?\n1) Financeiro/boleto\n2) Documentos/secretaria\n3) Dúvida pedagógica (prova, nota)\n4) Agendar reunião\n5) Falar com um atendente",
+    "encerramento": "Registrei seu atendimento e encaminhei para {setor}. Você receberá um retorno em breve. Mais alguma coisa? 🙂",
+    "handoff": "Entendo que este assunto precisa de atenção humana. Já encaminhei para {setor} com prioridade. Em breve alguém da equipe falará com você."
+  },
   "categorias": {
     "financeiro": {
-      "keywords": ["boleto", "mensalidade", "pagamento", "comprovante", "cobranca", "cobrança", "fatura", "pix", "parcela", "inadimpl"],
-      "setor": "Financeiro",
-      "risco": "medio",
-      "template": "Recebemos sua mensagem sobre {assunto}. Encaminhamos ao setor Financeiro e retornaremos em breve."
+      "keywords": ["boleto", "mensalidade", "pagamento", "comprovante", "cobranca", "cobrança", "fatura", "pix", "parcela", "inadimpl", "2 via", "segunda via boleto"],
+      "setor": "Financeiro", "risco": "medio",
+      "slots": [{"nome": "aluno", "pergunta": "Para qual aluno(a) é a questão financeira? (nome completo)"}],
+      "template": "Recebemos sobre {assunto} do(a) aluno(a) {aluno}. Encaminhamos ao Financeiro e retornaremos com a 2ª via/posição em breve."
     },
     "documento": {
-      "keywords": ["historico", "histórico", "declaracao", "declaração", "transferencia", "transferência", "requerimento", "segunda via", "documento"],
-      "setor": "Secretaria",
-      "risco": "medio",
-      "template": "Recebemos seu pedido de documento. A Secretaria vai providenciar e te avisamos quando estiver pronto."
+      "keywords": ["historico", "histórico", "declaracao", "declaração", "transferencia", "transferência", "requerimento", "segunda via", "documento", "comprovante de matricula"],
+      "setor": "Secretaria", "risco": "medio",
+      "slots": [
+        {"nome": "aluno", "pergunta": "Para qual aluno(a)? (nome completo)"},
+        {"nome": "tipo_documento", "pergunta": "Qual documento você precisa? (histórico, declaração, transferência, outro)"}
+      ],
+      "template": "Pedido registrado: {tipo_documento} do(a) aluno(a) {aluno}. A Secretaria vai providenciar e avisamos quando estiver pronto."
     },
     "saude": {
-      "keywords": ["atestado", "saude", "saúde", "medico", "médico", "remedio", "remédio", "alergia", "doente", "febre", "laudo"],
-      "setor": "Secretaria/Coordenacao",
-      "risco": "alto",
-      "template": null
+      "keywords": ["atestado", "saude", "saúde", "medico", "médico", "remedio", "remédio", "alergia", "doente", "febre", "laudo", "convulsao", "convulsão"],
+      "setor": "Secretaria/Coordenacao", "risco": "alto", "slots": [], "template": null
     },
     "pedagogico": {
-      "keywords": ["prova", "nota", "recuperacao", "recuperação", "trabalho", "materia", "matéria", "conteudo", "conteúdo", "licao", "lição", "tarefa"],
-      "setor": "Professor/Coordenacao",
-      "risco": "medio",
-      "template": "Sobre {assunto}, vamos verificar com o professor/coordenacao e retornamos com a informacao."
+      "keywords": ["prova", "nota", "recuperacao", "recuperação", "trabalho", "materia", "matéria", "conteudo", "conteúdo", "licao", "lição", "tarefa", "boletim"],
+      "setor": "Professor/Coordenacao", "risco": "medio",
+      "slots": [{"nome": "aluno", "pergunta": "Sobre qual aluno(a) e turma?"}],
+      "template": "Sobre {assunto} do(a) aluno(a) {aluno}: vamos verificar com o professor/coordenação e retornamos."
     },
     "reclamacao": {
-      "keywords": ["reclamacao", "reclamação", "reclamar", "insatisfeit", "absurdo", "pessimo", "péssimo", "nao aceito", "não aceito"],
-      "setor": "Coordenacao",
-      "risco": "alto",
-      "template": null
+      "keywords": ["reclamacao", "reclamação", "reclamar", "insatisfeit", "absurdo", "pessimo", "péssimo", "nao aceito", "não aceito", "indignad"],
+      "setor": "Coordenacao", "risco": "alto", "slots": [], "template": null
     },
     "sensivel": {
-      "keywords": ["bullying", "briga", "agressao", "agressão", "conflito", "ameaca", "ameaça", "violencia", "violência", "denuncia", "denúncia", "abuso", "assedio", "assédio"],
-      "setor": "Coordenacao/Direcao",
-      "risco": "critico",
-      "template": null
+      "keywords": ["bullying", "briga", "agressao", "agressão", "conflito", "ameaca", "ameaça", "violencia", "violência", "denuncia", "denúncia", "abuso", "assedio", "assédio", "machucou", "bateram"],
+      "setor": "Coordenacao/Direcao", "risco": "critico", "slots": [], "template": null
     },
     "reuniao": {
-      "keywords": ["reuniao", "reunião", "conversar", "falar com", "agendar", "atendimento com"],
-      "setor": "Coordenacao",
-      "risco": "medio",
-      "template": "Claro, podemos agendar. Qual o melhor dia e horario para voce?"
+      "keywords": ["reuniao", "reunião", "conversar", "falar com", "agendar", "atendimento com", "marcar horario"],
+      "setor": "Coordenacao", "risco": "medio",
+      "slots": [
+        {"nome": "aluno", "pergunta": "A reunião é sobre qual aluno(a)?"},
+        {"nome": "preferencia", "pergunta": "Qual o melhor dia e período para você? (manhã/tarde)"}
+      ],
+      "template": "Solicitação de reunião sobre {aluno} ({preferencia}) registrada. A Coordenação confirmará o horário."
     },
     "matricula": {
-      "keywords": ["matricula", "matrícula", "vaga", "inscricao", "inscrição", "valores", "mensalidade quanto", "quero matricular"],
-      "setor": "Comercial/Secretaria",
-      "risco": "baixo",
-      "template": "Que bom seu interesse! Vou te passar as informacoes de matricula e valores."
+      "keywords": ["matricula", "matrícula", "vaga", "inscricao", "inscrição", "valores", "quanto custa", "quero matricular", "tem vaga"],
+      "setor": "Comercial/Secretaria", "risco": "baixo",
+      "slots": [{"nome": "serie", "pergunta": "Para qual série/ano você busca vaga?"}],
+      "template": "Que ótimo seu interesse! Para {serie}, vou te enviar valores, vagas e como agendar uma visita. 🙂"
     },
     "faq": {
-      "keywords": ["horario", "horário", "uniforme", "material", "calendario", "calendário", "evento", "que horas", "onde", "quando"],
-      "setor": "Atendimento",
-      "risco": "baixo",
-      "template": "Sobre {assunto}: vou te enviar a informacao. Qualquer duvida, estamos a disposicao."
+      "keywords": ["horario", "horário", "uniforme", "material", "calendario", "calendário", "evento", "que horas", "onde", "quando", "endereco", "endereço"],
+      "setor": "Atendimento", "risco": "baixo", "slots": [],
+      "template": "Sobre {assunto}: vou te enviar a informação. Qualquer dúvida, é só chamar! 🙂"
     }
   },
   "categoria_padrao": "faq",
