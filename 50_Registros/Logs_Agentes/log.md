@@ -272,3 +272,10 @@ Formato:
 - Entrega: [[50_Registros/Auditoria/Releitura_GoogleDrive_Rpg_Docx_PRIMUS_2026-07-01]], [[30_Projetos/PRIMUS/Mapa_Digestao_Rpg_Docx_PRIMUS]], [[30_Projetos/PRIMUS/CatalogEntries_Candidatas_Rpg_Docx_PRIMUS]].
 - Decisao: `Rpg .docx` e fonte-mae restrita e mista; entra como mapa de digestao e CatalogEntries candidatas, nao como dump integral.
 - Limites: sem editar Drive, sem exportar corpo integral, sem RAG/reindex, sem PDF, sem OpenClaw/n8n/runtime.
+
+## [2026-07-01] arquitetura | Markdownizacao segura e apostilas EscolaOS
+
+- Pedido: esclarecer por que nem todos os livros viram MD integral e se apostilas docentes fazem o Obsidian crescer.
+- Entrega: [[80_Specs/PRIMUS/Spec_Markdownizacao_Segura_Livros_PRIMUS]], [[30_Projetos/PRIMUS/Plano_Markdownizacao_Livros_PRIMUS]], [[80_Specs/EscolaOS/Spec_Ingestao_Apostilas_EscolaOS]], [[20_Areas/EscolaOS/Pipeline_Apostilas_para_Obsidian]].
+- Paginas PRIMUS criadas: [[40_Wiki/PRIMUS/Enciclopedia/Regras_e_Procedimentos/Premissas_de_Mundo_de_Campanha]], [[40_Wiki/PRIMUS/Enciclopedia/Regras_e_Procedimentos/Mundo_Selvagem_como_Pressao]], [[40_Wiki/PRIMUS/Enciclopedia/Regras_e_Procedimentos/Mundo_Antigo_com_Ruinas_Ativas]], [[40_Wiki/PRIMUS/Enciclopedia/Regras_e_Procedimentos/Modelo_Cosmologico_Abstrato]], [[40_Wiki/PRIMUS/Instancias/Missao_por_Violacao_e_Reparacao]].
+- Decisao: livros restritos geram stubs, CatalogEntries e abstracoes; apostilas autorais podem gerar Markdown completo, aulas, revisoes e bancos de questoes.

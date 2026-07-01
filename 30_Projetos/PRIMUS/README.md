@@ -31,6 +31,7 @@ Projeto narrativo persistente do FabioOS.
 - [[Plano_Digestor_PRIMUS]]
 - [[Mapa_Digestao_Rpg_Docx_PRIMUS]]
 - [[CatalogEntries_Candidatas_Rpg_Docx_PRIMUS]]
+- [[Plano_Markdownizacao_Livros_PRIMUS]]
 - [[Plano_Transformacao_Restricted_DND_Core]]
 - [[Missao_0001_Preparacao]]
 - [[40_Wiki/PRIMUS/Motor_Causal_PRIMUS]]
@@ -44,7 +45,12 @@ Projeto narrativo persistente do FabioOS.
 - Lugares: [[40_Wiki/PRIMUS/Enciclopedia/Lugares/README]]
 - Criaturas: [[40_Wiki/PRIMUS/Enciclopedia/Criaturas/README]]
 - Regras: [[40_Wiki/PRIMUS/Enciclopedia/Regras_e_Procedimentos/README]]
+- Premissas de mundo: [[40_Wiki/PRIMUS/Enciclopedia/Regras_e_Procedimentos/Premissas_de_Mundo_de_Campanha]]
+- Mundo selvagem: [[40_Wiki/PRIMUS/Enciclopedia/Regras_e_Procedimentos/Mundo_Selvagem_como_Pressao]]
+- Mundo antigo: [[40_Wiki/PRIMUS/Enciclopedia/Regras_e_Procedimentos/Mundo_Antigo_com_Ruinas_Ativas]]
+- Cosmologia abstrata: [[40_Wiki/PRIMUS/Enciclopedia/Regras_e_Procedimentos/Modelo_Cosmologico_Abstrato]]
 - Instancias: [[40_Wiki/PRIMUS/Instancias/README]]
+- Missao por violacao: [[40_Wiki/PRIMUS/Instancias/Missao_por_Violacao_e_Reparacao]]
 - Persistencia: [[40_Wiki/PRIMUS/Persistencia/README]]
 
 ## Relacoes
@@ -70,3 +76,4 @@ Projeto narrativo persistente do FabioOS.
 - [[80_Specs/PRIMUS/Spec_Villain_Engine_PRIMUS]]
 - [[80_Specs/PRIMUS/Spec_Mission_Contract_PRIMUS]]
 - [[80_Specs/PRIMUS/Spec_Digestor_PDF_PRIMUS]]
+- [[80_Specs/PRIMUS/Spec_Markdownizacao_Segura_Livros_PRIMUS]]

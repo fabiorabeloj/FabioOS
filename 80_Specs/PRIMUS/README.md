@@ -21,3 +21,4 @@ SPECs do sistema narrativo PRIMUS.
 - [[Spec_Digestor_PDF_PRIMUS]]
 - [[Spec_Nos_Enciclopedia_PRIMUS]]
 - [[Spec_Operadores_Mundo_PRIMUS]]
+- [[Spec_Markdownizacao_Segura_Livros_PRIMUS]]
