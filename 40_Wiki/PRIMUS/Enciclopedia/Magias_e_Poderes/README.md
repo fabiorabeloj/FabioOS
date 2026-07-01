@@ -23,3 +23,4 @@ Magias, poderes, efeitos, condicoes, rituais e tipos de dano.
 
 - [[40_Wiki/PRIMUS/Enciclopedia/README]]
 - [[30_Projetos/PRIMUS/CatalogEntries_Lote_0001_PRIMUS]]
+- [[40_Wiki/PRIMUS/Fontes_Oficiais_DND/DND_Core_PHB_2014_Index_Seguro]]

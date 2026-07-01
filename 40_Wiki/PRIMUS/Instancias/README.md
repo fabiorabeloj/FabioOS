@@ -27,3 +27,4 @@ Camada I: coisas que acontecem no jogo. Missoes, encontros, objetivos, eventos, 
 - [[40_Wiki/_MOCs/MOC_PRIMUS]]
 - [[40_Wiki/PRIMUS/Enciclopedia/README]]
 - [[40_Wiki/PRIMUS/Persistencia/README]]
+- [[40_Wiki/PRIMUS/Fontes_Oficiais_DND/DND_Core_DMG_2014_Index_Seguro]]

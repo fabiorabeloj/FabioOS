@@ -27,6 +27,14 @@ Dar endereco fixo para cada tipo de conhecimento do PRIMUS.
 | Livro V - Motor do Jogo | Contrato de missao, Engrenagem 6, portabilidade, DeltaP, Player View, validacao e instancia. |
 | Livro VI - Registros e Historico | Campanhas, missoes executadas, estado de mundo, DeltaP acumulado e versoes do sistema. |
 
+## Fontes Oficiais Restritas
+
+- [[40_Wiki/PRIMUS/Fontes_Oficiais_DND/README]]
+- [[40_Wiki/PRIMUS/Fontes_Oficiais_DND/Wikilinks_DND_Core_PRIMUS]]
+- [[40_Wiki/PRIMUS/Fontes_Oficiais_DND/DND_Core_PHB_2014_Index_Seguro]]
+- [[40_Wiki/PRIMUS/Fontes_Oficiais_DND/DND_Core_DMG_2014_Index_Seguro]]
+- [[40_Wiki/PRIMUS/Fontes_Oficiais_DND/DND_Core_MM_2014_Index_Seguro]]
+
 ## Regra
 
 Conteudo sem livro tende a virar texto solto. Toda entrada importante deve ter endereco em Livro, Box e Subbox.

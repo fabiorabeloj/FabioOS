@@ -24,3 +24,5 @@ Itens comuns, equipamentos, itens magicos, artefatos, moedas, tabelas de tesouro
 
 - [[40_Wiki/PRIMUS/Enciclopedia/README]]
 - [[30_Projetos/PRIMUS/CatalogEntries_Restricted_DND_Core_0001]]
+- [[40_Wiki/PRIMUS/Fontes_Oficiais_DND/DND_Core_PHB_2014_Index_Seguro]]
+- [[40_Wiki/PRIMUS/Fontes_Oficiais_DND/DND_Core_DMG_2014_Index_Seguro]]

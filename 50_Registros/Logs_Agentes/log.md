@@ -250,3 +250,11 @@ Formato:
 - Entrega: [[40_Wiki/_MOCs/MOC_PRIMUS]], [[40_Wiki/PRIMUS/Enciclopedia/README]], [[40_Wiki/PRIMUS/Instancias/README]], [[40_Wiki/PRIMUS/Persistencia/README]], [[80_Specs/PRIMUS/Spec_Nos_Enciclopedia_PRIMUS]].
 - Auditoria: [[50_Registros/Auditoria/Auditoria_Links_Obsidian_PRIMUS_2026-06-30]].
 - Limites: sem extracao de PDF, sem reindex RAG, sem codigo MEGATRON/RAG.
+
+## [2026-06-30] implementacao | DND Core Wikilinks Seguros
+
+- Pedido: extrair wikilinks e markdowns dos livros oficiais enviados em PDF.
+- Entrega: [[40_Wiki/PRIMUS/Fontes_Oficiais_DND/README]], [[40_Wiki/PRIMUS/Fontes_Oficiais_DND/Wikilinks_DND_Core_PRIMUS]], indices PHB/DMG/MM.
+- Metodo: PRIMUS Index local + metadados, sem exportar a coluna `text`.
+- Auditoria: [[50_Registros/Auditoria/Auditoria_DND_Core_Wikilinks_2026-06-30]].
+- Limites: sem dump integral, sem RAG/reindex, sem texto bruto protegido.

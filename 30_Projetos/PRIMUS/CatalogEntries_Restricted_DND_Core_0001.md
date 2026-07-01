@@ -42,6 +42,13 @@ Estas entradas sao **CatalogEntries de fonte**. Elas nao sao regras jogaveis com
 | CE-DND-0009 Encounter | SRC-DND-DMG-2014 | validado com ancora geral de encontros |
 | CE-DND-0010 Treasure | SRC-DND-DMG-2014 | validado com ancora de tesouro individual |
 
+## Indices Seguros Gerados
+
+- PHB: [[40_Wiki/PRIMUS/Fontes_Oficiais_DND/DND_Core_PHB_2014_Index_Seguro]]
+- DMG: [[40_Wiki/PRIMUS/Fontes_Oficiais_DND/DND_Core_DMG_2014_Index_Seguro]]
+- MM: [[40_Wiki/PRIMUS/Fontes_Oficiais_DND/DND_Core_MM_2014_Index_Seguro]]
+- Mapa: [[40_Wiki/PRIMUS/Fontes_Oficiais_DND/Wikilinks_DND_Core_PRIMUS]]
+
 ## Regras de Promocao
 
 Uma entrada derivada destas fontes so pode virar `pool-ready` se:

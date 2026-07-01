@@ -23,3 +23,4 @@ Regras, procedimentos, geradores, tabelas, formulas, restricoes e templates joga
 
 - [[40_Wiki/PRIMUS/Enciclopedia/README]]
 - [[40_Wiki/PRIMUS/Pipeline_PRIMUS]]
+- [[40_Wiki/PRIMUS/Fontes_Oficiais_DND/Wikilinks_DND_Core_PRIMUS]]

@@ -391,6 +391,27 @@
                                           "a":  1,
                                           "rgb":  15769664
                                       }
+                        },
+                        {
+                            "query":  "path:\"40_Wiki/PRIMUS/Fontes_Oficiais_DND\"",
+                            "color":  {
+                                          "a":  1,
+                                          "rgb":  16729344
+                                      }
+                        },
+                        {
+                            "query":  "tag:#fontes-oficiais",
+                            "color":  {
+                                          "a":  1,
+                                          "rgb":  16729344
+                                      }
+                        },
+                        {
+                            "query":  "tag:#indice-seguro",
+                            "color":  {
+                                          "a":  1,
+                                          "rgb":  14250870
+                                      }
                         }
                     ],
     "collapse-display":  true,

@@ -23,3 +23,4 @@ Criaturas, NPCs, ameacas, deuses, espiritos, mortos-vivos, constructos e chefes.
 
 - [[40_Wiki/PRIMUS/Enciclopedia/README]]
 - [[30_Projetos/PRIMUS/Villains_0001_PRIMUS]]
+- [[40_Wiki/PRIMUS/Fontes_Oficiais_DND/DND_Core_MM_2014_Index_Seguro]]

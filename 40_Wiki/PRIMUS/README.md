@@ -22,6 +22,7 @@ Conhecimento processado do universo narrativo PRIMUS.
 - [[40_Wiki/PRIMUS/Enciclopedia/README]]
 - [[40_Wiki/PRIMUS/Instancias/README]]
 - [[40_Wiki/PRIMUS/Persistencia/README]]
+- [[40_Wiki/PRIMUS/Fontes_Oficiais_DND/README]]
 - [[80_Specs/PRIMUS/Spec_Nos_Enciclopedia_PRIMUS]]
 
 ## Fonte Inicial

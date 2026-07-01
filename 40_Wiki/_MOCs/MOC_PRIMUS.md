@@ -66,6 +66,11 @@ tags: [primus, moc, enciclopedia, llm-wiki]
 
 ## Fontes e Restricoes
 
+- [[40_Wiki/PRIMUS/Fontes_Oficiais_DND/README]]
+- [[40_Wiki/PRIMUS/Fontes_Oficiais_DND/Wikilinks_DND_Core_PRIMUS]]
+- [[40_Wiki/PRIMUS/Fontes_Oficiais_DND/DND_Core_PHB_2014_Index_Seguro]]
+- [[40_Wiki/PRIMUS/Fontes_Oficiais_DND/DND_Core_DMG_2014_Index_Seguro]]
+- [[40_Wiki/PRIMUS/Fontes_Oficiais_DND/DND_Core_MM_2014_Index_Seguro]]
 - [[30_Projetos/PRIMUS/CatalogEntries_Restricted_DND_Core_0001]]
 - [[30_Projetos/PRIMUS/Ancoras_PRIMUS_Index_DND_Core]]
 - [[30_Projetos/PRIMUS/Plano_Transformacao_Restricted_DND_Core]]

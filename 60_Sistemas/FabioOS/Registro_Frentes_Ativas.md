@@ -88,6 +88,7 @@ Artefatos compartilhados incluem:
 | PDF_DROP_TRIGGER_V0 | Codex | `00_Inbox/pdfs/`, `60_Sistemas/FabioOS/scripts/watch_pdf_drop.py`, `60_Sistemas/n8n/Workflows/FabioOS_DropPDF_Aprende.json`, barramento/log/changelog | concluida | 2026-06-30 | Porta de entrada da SPEC `pipeline-pdf-aprende` implementada: detecta PDF e entrega caminho/metadados ao Claude/documentalista; sem OCR, sem RAG, sem Stirling auth, sem push |
 | OBSIDIAN_REVITALIZACAO | Codex | `.obsidian/graph.json`, `10_Dashboard/`, `40_Wiki/_MOCs/`, log, barramento e changelog | concluida | 2026-06-30 | Graph View atualizado para pastas canonicas; dashboard/MOC criados; wikilinks adicionados; nao tocou codigo MEGATRON/RAG nem reindex |
 | OBSIDIAN_PRIMUS_MOCS | Codex | `40_Wiki/_MOCs/MOC_PRIMUS.md`, `40_Wiki/PRIMUS/`, `80_Specs/PRIMUS/`, dashboards e auditoria de links | concluida | 2026-06-30 | PRIMUS ganhou MOC central, Enciclopedia E, Instancias I, Persistencia P, template e SPEC para novos nos; sem PDF extraction, sem RAG/reindex |
+| PRIMUS_DND_WIKILINKS | Codex | `40_Wiki/PRIMUS/Fontes_Oficiais_DND/`, MOCs PRIMUS, auditoria/changelog | concluida | 2026-06-30 | PHB/DMG/MM extraidos como indices seguros de pagina/categoria/ancora/destino PRIMUS; sem coluna text, sem dump integral, sem RAG/reindex |
 
 ## Frentes observadas
 

@@ -23,3 +23,4 @@ Planos, dominios, regioes, biomas, assentamentos, marcos, dungeons, salas, perig
 
 - [[40_Wiki/PRIMUS/Enciclopedia/README]]
 - [[30_Projetos/PRIMUS/WorldState_0001_PRIMUS]]
+- [[40_Wiki/PRIMUS/Fontes_Oficiais_DND/DND_Core_DMG_2014_Index_Seguro]]
