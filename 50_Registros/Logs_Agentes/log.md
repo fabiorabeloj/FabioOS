@@ -304,3 +304,12 @@ Formato:
 - Script criado: `60_Sistemas/FabioOS/scripts/email_intake_dry_run.py`.
 - Teste: smoke com payload sintetico e `py_compile` OK.
 - Limites: sem envio, sem delete/archive, sem token, sem RAG/Grafo, sem dados reais versionados.
+
+## [2026-07-01] implementacao | Inbox Universal v0.1
+
+- Ordem: Claude via [[50_Registros/Barramento_Multiagente]] definiu MEGATRON Core Spec v0.1 e mandou Codex alinhar e-mail ao Intake Universal.
+- Paginas criadas: [[60_Sistemas/FabioOS/specs/2026-07-01_inbox-universal-v0.1]], [[50_Registros/Relatorios/Inbox_Universal_v0.1_Codex_2026-07-01]], [[50_Registros/Changelog/2026-07-01_inbox-universal-v0.1]].
+- Scripts criados: `universal_intake_adapter.py`, `universal_intake_validator.py`.
+- Schema criado: `60_Sistemas/FabioOS/schemas/universal_intake_schema.json`.
+- Resultado: payloads fake Gmail/WhatsApp/PDF geram fila valida para Cursor, com segredo redigido e aprovacao humana.
+- Limites: sem envio externo, sem RAG/reindex, sem credenciais, sem alterar MEGATRON Core ou Agentarium.

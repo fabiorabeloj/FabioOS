@@ -1,0 +1,95 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "fabioos://schemas/universal_intake_schema.json",
+  "title": "FabioOS Universal Intake Queue",
+  "type": "object",
+  "required": ["generated_at", "gerado_por", "contrato", "resumo", "cores_status", "fila"],
+  "additionalProperties": true,
+  "properties": {
+    "generated_at": { "type": "string" },
+    "gerado_por": { "type": "string" },
+    "contrato": { "const": "MEGATRON Core Spec v0.1" },
+    "resumo": {
+      "type": "object",
+      "required": ["total", "aguardando_fabio", "sensiveis"],
+      "properties": {
+        "total": { "type": "integer", "minimum": 0 },
+        "aguardando_fabio": { "type": "integer", "minimum": 0 },
+        "sensiveis": { "type": "integer", "minimum": 0 }
+      }
+    },
+    "cores_status": {
+      "type": "object",
+      "required": ["waiting_approval", "archived", "blocked", "classified"],
+      "properties": {
+        "waiting_approval": { "type": "string" },
+        "archived": { "type": "string" },
+        "blocked": { "type": "string" },
+        "classified": { "type": "string" }
+      }
+    },
+    "fila": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/intake_card" }
+    }
+  },
+  "$defs": {
+    "intake_card": {
+      "type": "object",
+      "required": [
+        "id",
+        "source",
+        "received_at",
+        "sender",
+        "subject",
+        "raw_content_ref",
+        "summary",
+        "domain",
+        "sensitivity",
+        "urgency",
+        "suggested_agent",
+        "suggested_action",
+        "alerta",
+        "requires_human_approval",
+        "rag_permitido",
+        "status",
+        "log_ref"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "id": { "type": "string", "pattern": "^intake_[0-9]{8}T[0-9]{6}(_[a-f0-9]{10,16})?$" },
+        "source": {
+          "type": "string",
+          "enum": ["gmail", "whatsapp", "pdf", "drive", "mobile", "manual", "obsidian", "github"]
+        },
+        "received_at": { "type": "string" },
+        "sender": { "type": "string" },
+        "subject": { "type": "string" },
+        "raw_content_ref": { "type": "string" },
+        "summary": { "type": "string", "maxLength": 240 },
+        "domain": {
+          "type": "string",
+          "enum": ["fabios", "pietraos", "escolaos", "primus", "financeiro", "pessoal", "tecnico", "juridico", "saude", "spam", "seguranca"]
+        },
+        "sensitivity": {
+          "type": "string",
+          "enum": ["public", "internal", "private", "restricted", "no_rag", "forbidden_external"]
+        },
+        "urgency": {
+          "type": "string",
+          "enum": ["none", "low", "medium", "high", "critical"]
+        },
+        "suggested_agent": { "type": "string" },
+        "suggested_action": { "type": "string" },
+        "alerta": { "type": "boolean" },
+        "requires_human_approval": { "type": "boolean" },
+        "rag_permitido": { "type": "boolean" },
+        "status": {
+          "type": "string",
+          "enum": ["captured", "classified", "waiting_approval", "approved", "executing", "executed", "archived", "blocked", "failed"]
+        },
+        "log_ref": { "type": "string" }
+      }
+    }
+  }
+}

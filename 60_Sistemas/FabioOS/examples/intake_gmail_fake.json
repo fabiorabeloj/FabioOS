@@ -1,0 +1,26 @@
+{
+  "emails": [
+    {
+      "id": "gmail-fake-001",
+      "thread_id": "thread-gmail-fake-001",
+      "from_": "Coordenacao Exemplo <coord@example.edu>",
+      "subject": "Prova 8o ano",
+      "snippet": "Fabio, precisamos da prova do 8o ano sobre Africa ate amanha, urgente.",
+      "labels": ["INBOX", "UNREAD"],
+      "has_attachment": false,
+      "attachments": [],
+      "email_ts": "2026-07-01T09:00:00-03:00"
+    },
+    {
+      "id": "gmail-fake-002",
+      "thread_id": "thread-gmail-fake-002",
+      "from_": "Promo Exemplo <promo@example.com>",
+      "subject": "OFERTA imperdivel",
+      "snippet": "Ganhe 70% de desconto, clique aqui, oferta imperdivel so hoje!",
+      "labels": ["INBOX", "CATEGORY_PROMOTIONS"],
+      "has_attachment": false,
+      "attachments": [],
+      "email_ts": "2026-07-01T09:20:00-03:00"
+    }
+  ]
+}

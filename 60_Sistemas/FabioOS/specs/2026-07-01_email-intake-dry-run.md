@@ -65,6 +65,11 @@ Arquivo Markdown em:
 
 `05_Raw_Sources/_compat_sources/email/_restrito/triagens/`
 
+Opcionalmente, com `--queue-json` ou `--write-queue`, o mesmo payload passa a
+emitir a fila universal do MEGATRON Core Spec v0.1, consumivel pelo Cursor:
+
+`60_Sistemas/MEGATRON/v1/state/intake_queue.json`
+
 Campos por mensagem:
 
 - fingerprint;
@@ -88,6 +93,7 @@ Campos por mensagem:
 - [x] Teste smoke com payload sintetico.
 - [ ] Conectar export real do conector Gmail/n8n em lote aprovado.
 - [ ] Expor contagem/status no Dashboard/Agentarium.
+- [x] Emitir fila universal compatível com o contrato do Cursor.
 
 ## Comando
 
@@ -102,6 +108,14 @@ Para gerar relatorio restrito:
 ```powershell
 python 60_Sistemas/FabioOS/scripts/email_intake_dry_run.py `
   --input caminho/do/payload_gmail.json
+```
+
+Para emitir a fila universal:
+
+```powershell
+python 60_Sistemas/FabioOS/scripts/email_intake_dry_run.py `
+  --input 60_Sistemas/FabioOS/examples/intake_gmail_fake.json `
+  --queue-json
 ```
 
 ## Relacoes

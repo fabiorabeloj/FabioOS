@@ -1,0 +1,11 @@
+{
+  "items": [
+    {
+      "source": "pdf",
+      "sender": "drop/00_Inbox/pdfs/edital.pdf",
+      "subject": "Edital municipal",
+      "texto": "Edital de contratacao de professores substitutos, prazo de inscricao ate sexta.",
+      "received_at": "2026-07-01T09:15:00-03:00"
+    }
+  ]
+}

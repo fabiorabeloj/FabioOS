@@ -1,0 +1,18 @@
+{
+  "items": [
+    {
+      "source": "whatsapp",
+      "sender": "+5511999990001",
+      "subject": "",
+      "texto": "Bom dia, meu filho passou mal e vai faltar hoje, mando o atestado depois.",
+      "received_at": "2026-07-01T09:05:00-03:00"
+    },
+    {
+      "source": "whatsapp",
+      "sender": "+5511999990002",
+      "subject": "",
+      "texto": "segue token=VALOR_DE_TESTE_FAKE para acessar o painel",
+      "received_at": "2026-07-01T09:10:00-03:00"
+    }
+  ]
+}

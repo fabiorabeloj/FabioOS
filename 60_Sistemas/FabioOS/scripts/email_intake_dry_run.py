@@ -17,6 +17,7 @@ import hashlib
 import json
 import re
 import sys
+import unicodedata
 from dataclasses import dataclass, field
 from datetime import datetime, timezone
 from pathlib import Path
@@ -24,12 +25,22 @@ from typing import Any
 
 
 ROOT = Path(__file__).resolve().parents[3]
+SCRIPTS_DIR = ROOT / "60_Sistemas" / "FabioOS" / "scripts"
 DEFAULT_OUTPUT_DIR = ROOT / "05_Raw_Sources" / "_compat_sources" / "email" / "_restrito" / "triagens"
+DEFAULT_QUEUE = ROOT / "60_Sistemas" / "MEGATRON" / "v1" / "state" / "intake_queue.json"
+
+if str(SCRIPTS_DIR) not in sys.path:
+    sys.path.insert(0, str(SCRIPTS_DIR))
+
+from universal_intake_adapter import build_queue, email_to_item, write_json  # noqa: E402
 
 
+# Taxonomia alinhada ao MEGATRON Core Spec v0.1 §4 (autoridade unica):
+# pai/responsavel -> pietraos ; coordenacao/prova/revisao -> escolaos.
+# "coordenacao" pertence a escolaos (era o divergente que o Bugbot Cursor achou).
 DOMAIN_RULES = [
-    ("pietraos", ("pietra", "responsavel", "responsável", "aluno", "aluna", "matricula", "matrícula", "coordenacao", "coordenação")),
-    ("escolaos", ("prova", "atividade", "turma", "aula", "geografia", "filosofia", "boletim", "recuperacao", "recuperação")),
+    ("pietraos", ("pietra", "responsavel", "responsável", "aluno", "aluna", "matricula", "matrícula")),
+    ("escolaos", ("prova", "atividade", "turma", "aula", "geografia", "filosofia", "boletim", "recuperacao", "recuperação", "coordenacao", "coordenação")),
     ("financeiro", ("boleto", "fatura", "pagamento", "cobranca", "cobrança", "pix", "recibo", "nota fiscal")),
     ("fabios", ("fabios", "github", "codex", "claude", "openai", "anthropic", "cursor", "openclaw", "n8n", "rag")),
     ("primus", ("primus", "rpg", "d&d", "dnd", "worlds without number", "stars without number")),
@@ -148,7 +159,10 @@ def normalize_email(raw: dict[str, Any]) -> EmailItem:
 
 
 def normalize_text(value: str) -> str:
-    return value.lower()
+    """Lowercase + strip accents (same idea as megatron_core._n)."""
+    folded = unicodedata.normalize("NFKD", value or "")
+    ascii_only = folded.encode("ascii", "ignore").decode()
+    return ascii_only.lower()
 
 
 def has_any(text: str, words: tuple[str, ...]) -> bool:
@@ -331,13 +345,35 @@ def main() -> int:
     parser = argparse.ArgumentParser(description="Classifica emails em dry-run sem efeitos externos.")
     parser.add_argument("--input", type=Path, help="JSON, JSONL ou objeto {emails:[...]} exportado por conector autorizado.")
     parser.add_argument("--output-dir", type=Path, default=DEFAULT_OUTPUT_DIR)
+    parser.add_argument("--queue-output", type=Path, default=DEFAULT_QUEUE, help="Destino da fila universal JSON.")
     parser.add_argument("--stdout", action="store_true", help="Imprime Markdown em vez de gravar arquivo.")
+    parser.add_argument("--queue-json", action="store_true", help="Emite fila universal JSON em vez do Markdown legado.")
+    parser.add_argument("--write-queue", action="store_true", help="Grava tambem a fila universal consumivel pelo Cursor.")
     args = parser.parse_args()
 
     payload = load_payload(args.input)
+    if not payload:
+        print(
+            json.dumps(
+                {"ok": False, "error": "Payload vazio ou sem mensagens."},
+                ensure_ascii=False,
+            ),
+            file=sys.stderr,
+        )
+        return 1
+
     emails = [normalize_email(raw) for raw in payload]
     results = [classify(item) for item in emails]
     source_name = args.input.name if args.input else "stdin"
+    queue = build_queue(
+        [email_to_item(raw) for raw in payload],
+        gerado_por="email_intake_dry_run.py -> universal_intake_adapter",
+    )
+
+    if args.queue_json:
+        print(json.dumps(queue, ensure_ascii=False, indent=2))
+        return 0
+
     markdown = render_markdown(results, source_name)
 
     if args.stdout:
@@ -345,8 +381,12 @@ def main() -> int:
         return 0
 
     target = write_report(markdown, args.output_dir, source_name)
+    queue_rel = None
+    if args.write_queue:
+        queue_target = write_json(args.queue_output, queue)
+        queue_rel = queue_target.relative_to(ROOT).as_posix()
     rel = target.relative_to(ROOT).as_posix()
-    print(json.dumps({"ok": True, "messages": len(results), "report": rel}, ensure_ascii=False))
+    print(json.dumps({"ok": True, "messages": len(results), "report": rel, "queue": queue_rel}, ensure_ascii=False))
     return 0
 
 
