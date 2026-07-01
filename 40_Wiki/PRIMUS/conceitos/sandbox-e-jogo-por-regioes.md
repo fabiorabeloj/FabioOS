@@ -25,7 +25,7 @@ somadas ao mundo que reage.
 ## Relações no grafo
 - Precisa das [[faccoes-e-turnos-de-faccao|facções]] e [[tags-de-aventura|tags]] para
   as regiões terem vida própria.
-- Cada visita/escolha gera variações → [[Spec_DeltaP|ΔP]] e alimenta o
+- Cada visita/escolha gera variacoes -> [[Spec_DeltaP_PRIMUS|DeltaP]] e alimenta o
   [[Spec_Tension_Engine_PRIMUS|Tension Engine]].
 
 ## Onde o DADO vive

@@ -20,6 +20,7 @@ Conhecimento processado do universo narrativo PRIMUS.
 - [[30_Projetos/PRIMUS/CatalogEntries_Candidatas_Rpg_Docx_PRIMUS]]
 - [[30_Projetos/PRIMUS/Plano_Markdownizacao_Livros_PRIMUS]]
 - [[40_Wiki/PRIMUS/Fontes_Oficiais_DND/Catalogo_DND_Core_Consolidado]]
+- [[40_Wiki/PRIMUS/conceitos/MOC_Conceitos_Design_PRIMUS]]
 - [[40_Wiki/PRIMUS/Enciclopedia/Regras_e_Procedimentos/Premissas_de_Mundo_de_Campanha]]
 - [[40_Wiki/PRIMUS/Enciclopedia/Regras_e_Procedimentos/Mundo_Selvagem_como_Pressao]]
 - [[40_Wiki/PRIMUS/Enciclopedia/Regras_e_Procedimentos/Mundo_Antigo_com_Ruinas_Ativas]]

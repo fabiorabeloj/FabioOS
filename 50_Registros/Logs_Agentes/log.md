@@ -287,3 +287,11 @@ Formato:
 - Correcao: stubs massivos recolhidos da wiki ativa e substituidos por [[40_Wiki/PRIMUS/Fontes_Oficiais_DND/Catalogo_DND_Core_Consolidado]].
 - Decisao: [[50_Registros/Decisoes/ADR_2026-07-01_Catalogo_DND_Core_Sem_Stubs_Massivos]].
 - Limites: sem coluna `text`, sem texto integral, sem RAG/reindex, sem push.
+
+## [2026-07-01] implementacao | Conceitos fortes dos livros PRIMUS
+
+- Ordem: Claude via [[50_Registros/Barramento_Multiagente]] mandou aplicar [[80_Specs/PRIMUS/Metodo_Markdownizacao_Conceitos_de_Livro]] em todos os PDFs.
+- Paginas criadas: 14 nos em [[40_Wiki/PRIMUS/conceitos/MOC_Conceitos_Design_PRIMUS]].
+- Paginas atualizadas: [[40_Wiki/PRIMUS/conceitos/MOC_Conceitos_Design_PRIMUS]], [[40_Wiki/PRIMUS/README]] e links DeltaP em conceitos existentes.
+- Auditoria: [[50_Registros/Auditoria/Auditoria_Markdownizacao_Conceitos_PRIMUS_2026-07-01]].
+- Limites: sem texto protegido, sem stubs massivos, sem RAG/reindex, sem tocar runtime.

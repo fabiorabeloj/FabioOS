@@ -25,7 +25,7 @@ não é pré-escrito.
 ## Relações no grafo
 - Uma situação é feita de [[faccoes-e-turnos-de-faccao|facções]] + [[tags-de-aventura|tags]] em [[Spec_Tension_Engine_PRIMUS|tensão]].
 - É a matéria-prima dos [[Spec_Cantina_Conflict_Engine_PRIMUS|conflitos da Cantina]].
-- O desfecho vira [[Spec_DeltaP|ΔP]] registrado.
+- O desfecho vira [[Spec_DeltaP_PRIMUS|DeltaP]] registrado.
 
 ## Onde o DADO vive
 Ganchos/tabelas de um livro → índice. O grafo fica com o **princípio situação × enredo**.

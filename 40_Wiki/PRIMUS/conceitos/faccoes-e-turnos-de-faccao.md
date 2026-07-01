@@ -35,7 +35,7 @@ longo do tempo.
 - Alimenta o **[[WorldState_0001_PRIMUS]]** — as facções são parte do estado do mundo.
 - É um motor de **[[Spec_Tension_Engine_PRIMUS|tensões]]**: objetivos de facção que
   se chocam geram as tensões que viram conflitos.
-- Liga-se ao **[[Spec_DeltaP|ΔP]]**: cada turno de facção é uma variação válida do mundo.
+- Liga-se ao **[[Spec_DeltaP_PRIMUS|DeltaP]]**: cada turno de facção é uma variação válida do mundo.
 - Fornece **conflitos candidatos** para a **[[Spec_Cantina_Conflict_Engine_PRIMUS|Cantina]]**.
 
 ## Onde o DADO vive (não vira nota)

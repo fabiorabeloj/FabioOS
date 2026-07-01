@@ -26,7 +26,7 @@ não descreve tudo, mas dá ganchos suficientes para improvisar uma aventura.
 - Fornece complicações à [[faccoes-e-turnos-de-faccao|dinâmica de facções]].
 - Vira insumo de [[Spec_Tension_Engine_PRIMUS|tensões]] e de conflitos da
   [[Spec_Cantina_Conflict_Engine_PRIMUS|Cantina]].
-- Cada tag aplicada é uma variação do mundo → [[Spec_DeltaP|ΔP]].
+- Cada tag aplicada é uma variacao do mundo -> [[Spec_DeltaP_PRIMUS|DeltaP]].
 
 ## Onde o DADO vive
 Listas específicas de tags de um livro → índice/PRIMUS Index. O grafo fica só com o
