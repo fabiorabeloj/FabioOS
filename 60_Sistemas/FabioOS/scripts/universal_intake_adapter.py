@@ -21,7 +21,9 @@ from typing import Any
 
 ROOT = Path(__file__).resolve().parents[3]
 MEGATRON_V1 = ROOT / "60_Sistemas" / "MEGATRON" / "v1"
-DEFAULT_QUEUE = MEGATRON_V1 / "state" / "intake_queue.json"
+# A fila viva `intake_queue.json` e atualizada pelo intake_flow/arquivista.
+# O adapter escreve em uma fila propria por padrao para evitar corrida entre agentes.
+DEFAULT_QUEUE = MEGATRON_V1 / "state" / "intake_queue.codex_adapter.json"
 DEFAULT_LOG_NAME = "intake_log.jsonl"
 CONTRACT = "MEGATRON Core Spec v0.1"
 REDACTED_PLACEHOLDER = "[REDIGIDO - credencial/segredo detectado; corpo retido fora da fila]"
@@ -39,7 +41,7 @@ SECRET_RX = re.compile(
 
 
 def load_payload(path: Path | None) -> list[dict[str, Any]]:
-    raw = sys.stdin.read() if path is None else path.read_text(encoding="utf-8")
+    raw = sys.stdin.read() if path is None else path.read_text(encoding="utf-8-sig")
     raw = raw.strip()
     if not raw:
         return []
@@ -180,18 +182,23 @@ def build_queue(
 
 def write_json(path: Path, payload: dict[str, Any]) -> Path:
     resolved_root = ROOT.resolve()
-    path.parent.mkdir(parents=True, exist_ok=True)
     resolved_target = path.resolve()
     if resolved_root not in [resolved_target, *resolved_target.parents]:
         raise ValueError("Destino deve permanecer dentro do vault FabioOS.")
-    path.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    return path
+    resolved_target.parent.mkdir(parents=True, exist_ok=True)
+    resolved_target.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    return resolved_target
 
 
 def main() -> int:
     parser = argparse.ArgumentParser(description="Gera fila do Intake Universal sem efeitos externos.")
     parser.add_argument("--input", type=Path, help="JSON, JSONL, {items:[...]} ou {emails:[...]}.")
-    parser.add_argument("--output", type=Path, default=DEFAULT_QUEUE, help="Destino da fila JSON (gitignored por padrao).")
+    parser.add_argument(
+        "--output",
+        type=Path,
+        default=DEFAULT_QUEUE,
+        help="Destino da fila JSON (por padrao, fila dedicada do Codex; gitignored).",
+    )
     parser.add_argument("--stdout", action="store_true", help="Imprime JSON no stdout em vez de gravar arquivo.")
     parser.add_argument("--generated-at", help="Timestamp fixo para samples versionaveis.")
     args = parser.parse_args()
@@ -206,7 +213,12 @@ def main() -> int:
         print(json.dumps(queue, ensure_ascii=False, indent=2))
     else:
         target = write_json(args.output, queue)
-        print(json.dumps({"ok": True, "cards": len(queue["fila"]), "queue": target.relative_to(ROOT).as_posix()}, ensure_ascii=False))
+        print(
+            json.dumps(
+                {"ok": True, "cards": len(queue["fila"]), "queue": target.relative_to(ROOT.resolve()).as_posix()},
+                ensure_ascii=False,
+            )
+        )
     return 0
 
 

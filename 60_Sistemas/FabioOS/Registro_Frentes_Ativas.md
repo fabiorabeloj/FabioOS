@@ -5,7 +5,7 @@ projeto: FabioOS
 status: ativo
 tags: [fabios, multiagente, locks, coordenacao, frentes-ativas]
 criado_em: 2026-06-27
-atualizado_em: 2026-06-29
+atualizado_em: 2026-07-01
 ---
 
 # Registro de Frentes Ativas
@@ -99,6 +99,7 @@ Artefatos compartilhados incluem:
 | N8N_PIETRA_DRY_RUN_BRIDGE | Codex | `60_Sistemas/n8n/scripts/pietra_whatsapp_dry_run_bridge.py`, `FabioOS_WhatsApp_Pietra_DryRun.*`, payload fake, relatorio e changelog | concluida | 2026-07-01 | Bridge n8n/Evolution -> `pietra_conversa.conversar()` em dry-run; sem envio WhatsApp, sem API externa, sem RAG e sem alterar motor Pietra |
 | INTAKE_CLASSIFIER_CONVERGENCE | Codex | `60_Sistemas/FabioOS/scripts/email_intake_dry_run.py`, exemplos fake existentes, relatorio e changelog | concluida | 2026-07-01 | Email dry-run delega ao `megatron_core.classificar_intake()`; WhatsApp/PDF fake validados pelo mesmo contrato; sem acao externa e sem alterar core |
 | INTAKE_DISPATCH_CONTRACT_GUARD | Codex | `intake_queue.sample.json`, `universal_intake_schema.json`, `universal_intake_validator.py`, relatorio e changelog | concluida | 2026-07-01 | IDs unicos e validador anti-duplicata para a mesa de despacho; sem tocar UI/Agentarium, sem aprovar item real, sem RAG/API/push |
+| INTAKE_ADAPTER_OUTPUT_GUARD | Codex | `60_Sistemas/FabioOS/scripts/universal_intake_adapter.py`, relatorio e changelog | concluida | 2026-07-01 | Adapter escreve por padrao em fila dedicada `state/intake_queue.codex_adapter.json`; `--output` relativo validado; sem tocar fila viva, arquivista, UI, RAG/API/push |
 
 ## Frentes observadas
 
@@ -156,3 +157,4 @@ Ao concluir, alterar `Estado` para `concluida`, registrar resultado e apontar o 
 - 2026-07-01 - `N8N_PIETRA_DRY_RUN_BRIDGE` concluida. Criado bridge local e workflow n8n importavel para transformar payload WhatsApp/Evolution em proposta Pietra, sempre com aprovacao humana e sem envio externo.
 - 2026-07-01 - `INTAKE_CLASSIFIER_CONVERGENCE` concluida. Relatorio Markdown legado do e-mail passou a usar o mesmo MEGATRON Core da fila universal; email/WhatsApp/PDF fake foram revalidados.
 - 2026-07-01 - `INTAKE_DISPATCH_CONTRACT_GUARD` concluida. Sample congelado da fila ganhou IDs unicos e o validador passou a bloquear duplicatas, protegendo os botoes Aprovar/Rejeitar do Agentarium.
+- 2026-07-01 - `INTAKE_ADAPTER_OUTPUT_GUARD` concluida. `universal_intake_adapter.py` deixou de usar a fila viva como destino padrao e passou a validar `--output` relativo sem crash.
