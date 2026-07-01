@@ -17,6 +17,7 @@ Painel executivo do FabioOS.
 - [[10_Dashboard/_entrada/index]]
 - [[50_Registros/Logs_Agentes/log]]
 - [[10_Dashboard/Mapa_Estrutural_FabioOS]]
+- [[10_Dashboard/Obsidian_Revitalizacao_FabioOS]]
 - [[60_Sistemas/FabioOS/STATUS]]
 - [[60_Sistemas/FabioOS/NEXT_ACTIONS]]
 - [[60_Sistemas/FabioOS/Roadmap_Fases_FabioOS_v2_2026-06-29]]

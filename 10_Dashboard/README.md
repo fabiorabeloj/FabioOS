@@ -15,3 +15,4 @@ Paineis vivos, mapas operacionais e centros de controle do FabioOS.
 Ponto principal:
 
 - [[10_Dashboard/Mapa_Estrutural_FabioOS]]
+- [[10_Dashboard/Obsidian_Revitalizacao_FabioOS]]

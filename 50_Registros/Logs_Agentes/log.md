@@ -236,3 +236,10 @@ Formato:
 - Validacao: `CE-DND-0007 Creature` recebeu `VE-local-index-pass` via PRIMUS Index (`mm`, pagina 4, record id `35c6d241-b738-4c62-9dd6-ff591dfcf90a`).
 - Ancoras: `CE-DND-0003`, `CE-DND-0009` e `CE-DND-0010` receberam ancoras `VE-local-index-pass` via [[30_Projetos/PRIMUS/Ancoras_PRIMUS_Index_DND_Core]].
 - Limites: sem extracao, sem OCR, sem RAG, sem dump integral e sem alterar `documentalista.py`.
+
+## [2026-06-30] implementacao | Obsidian Revitalizacao
+
+- Ordem: Claude abriu `OBSIDIAN_REVITALIZACAO` para revitalizar o vault visual.
+- Entrega: `.obsidian/graph.json`, [[10_Dashboard/Obsidian_Revitalizacao_FabioOS]], [[40_Wiki/_MOCs/MOC_Obsidian_FabioOS]], [[50_Registros/Changelog/2026-06-30_obsidian-revitalizacao]].
+- Resultado: Graph View passou a usar pastas canonicas e notas novas foram wikilinkadas em MOCs/dashboards.
+- Limites: sem codigo MEGATRON, sem codigo RAG, sem reindex, sem migracao em massa.

@@ -19,6 +19,7 @@ Documento governante:
 - [[60_Sistemas/FabioOS/Estrutura_Canonica_Completa_Obsidian_2026-06-29]]
 - [[60_Sistemas/FabioOS/Mapa_Canonico_Pastas_Obsidian_v2_2026-06-29]]
 - [[60_Sistemas/Wiki/Estrutura_de_Pastas_LLM_Wiki_FabioOS]]
+- [[40_Wiki/_MOCs/MOC_Obsidian_FabioOS]]
 
 Plano de migracao:
 
@@ -65,4 +66,5 @@ Nao criar novos arquivos nestas pastas sem justificativa:
 - [x] Aplicar a estrutura canonica completa proposta para a raiz visual do Obsidian.
 - [x] Remover arquivos soltos da raiz de `60_Sistemas/`.
 - [x] Atualizar backlinks conhecidos dos arquivos movidos.
+- [x] Atualizar Graph View para pastas canonicas.
 - [ ] So reindexar RAG/Grafo depois de aprovacao.
