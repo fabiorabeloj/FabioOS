@@ -1,0 +1,26 @@
+{
+  "_instrucoes": "Template de configuracao de uma escola (tenant). Cada campo vem de uma resposta do Formulario_Coordenacao_Piloto. Copie para tenants/<tenant>/tenant.json (gitignored) e preencha. O motor (pietra_conversa/inbox) mescla isto sobre a config da vertical.",
+  "tenant": "colegio-pietra",
+  "escola_nome": "Colégio Pietra",
+  "_de_onde_vem": "escola_nome <- Secao 1; whatsapp/horario <- Secao 1; setores <- Secao 2; prioridade_sensivel <- Secao 5; tom/assinatura <- Secao 6; faq <- Secao 4",
+  "whatsapp": "(00) 00000-0000",
+  "horario_atendimento": "seg-sex 7h-18h",
+  "assinatura": "Equipe Colégio Pietra",
+  "tom": "acolhedor",
+  "setores": {
+    "financeiro": "Financeiro",
+    "documento": "Secretaria",
+    "pedagogico": "Coordenação",
+    "reuniao": "Coordenação",
+    "matricula": "Secretaria/Comercial",
+    "faq": "Atendimento"
+  },
+  "prioridade_sensivel": "Coordenação/Direção",
+  "faq": {
+    "horario": "Entrada 7h, saída às 12h (manhã) e 13h-18h (tarde).",
+    "uniforme": "Uniforme completo, à venda na secretaria.",
+    "calendario": "Datas no portal do aluno e no grupo da turma.",
+    "material": "Lista de material enviada no início do ano.",
+    "valores": "Um atendente do comercial vai te passar os valores."
+  }
+}

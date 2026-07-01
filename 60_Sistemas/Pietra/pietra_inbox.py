@@ -41,6 +41,33 @@ def carregar_config() -> dict:
     return json.loads(CONFIG_PATH.read_text(encoding="utf-8"))
 
 
+def config_para_tenant(tenant: str):
+    """Config da vertical + overrides do tenant (tenants/<tenant>/tenant.json,
+    gitignored). É AQUI que as respostas do formulário da coordenação viram sistema:
+    escola_nome, setores (roteamento), tom e assinatura. Devolve (cfg, escola_nome)."""
+    cfg = carregar_config()
+    ov = {}
+    p = BASE / "tenants" / tenant / "tenant.json"
+    if p.exists():
+        try:
+            ov = json.loads(p.read_text(encoding="utf-8"))
+        except Exception:
+            ov = {}
+    escola = ov.get("escola_nome") or tenant.replace("-", " ").title()
+    for cat, setor in (ov.get("setores") or {}).items():
+        if cat in cfg["categorias"] and setor:
+            cfg["categorias"][cat]["setor"] = setor
+    if ov.get("tom"):
+        cfg["persona"]["tom"] = ov["tom"]
+    if ov.get("assinatura"):
+        cfg["persona"]["assinatura"] = ov["assinatura"]
+    if ov.get("prioridade_sensivel"):
+        for cat in ("sensivel", "saude", "reclamacao"):
+            if cat in cfg["categorias"]:
+                cfg["categorias"][cat]["setor"] = ov["prioridade_sensivel"]
+    return cfg, escola
+
+
 def classificar(texto: str, cfg: dict) -> str:
     """Pontua a mensagem contra as keywords de cada categoria. Sensível/crítico
     tem prioridade (ganha empate) para nunca vazar um caso grave como FAQ."""

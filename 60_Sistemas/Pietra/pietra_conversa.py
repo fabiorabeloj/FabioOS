@@ -31,7 +31,7 @@ for _s in (sys.stdout, sys.stderr):
 
 BASE = Path(__file__).resolve().parent
 sys.path.insert(0, str(BASE))
-from pietra_inbox import carregar_config, _norm, _assunto  # noqa: E402
+from pietra_inbox import carregar_config, config_para_tenant, _norm, _assunto  # noqa: E402
 
 MAX_FALLBACK = 2
 
@@ -109,9 +109,8 @@ def _registrar_cartao(cartao: dict):
 
 
 def conversar(tenant: str, remetente: str, texto: str, dentro_horario: bool = True) -> dict:
-    cfg = carregar_config()
+    cfg, escola = config_para_tenant(tenant)      # config da vertical + overrides do tenant
     persona = cfg["persona"]
-    escola = _display_escola(tenant)
     sess, nova = _load(tenant, remetente)
     sess["historico"].append({"de": "user", "txt": texto})
     if sess["primeiro_texto"] is None:
