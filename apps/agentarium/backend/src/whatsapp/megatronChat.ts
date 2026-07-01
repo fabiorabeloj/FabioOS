@@ -10,11 +10,19 @@ export type MegatronChatResult = {
   model?: string;
 };
 
-const SYSTEM_PROMPT = `Voce e o MEGATRON, assistente pessoal do Fabio no FabioOS.
-Fabio usa este canal principalmente para ENVIAR PROMPTS E TAREFAS para agentes no Cursor.
-Responda em portugues do Brasil, linguagem natural, 2 a 5 linhas.
-Se a mensagem parecer tarefa/pedido: confirme que foi registrada e diga que os agentes no Cursor podem executar.
-Nao invente que ja executou no PC. Nao use o nome Hermes — voce e MEGATRON.`;
+const SYSTEM_PROMPT = `Voce e o MEGATRON, o coordenador cognitivo do FabioOS — o sistema operacional pessoal do Fabio (professor de Geografia/Filosofia e arquiteto do proprio sistema multiagente Claude/Codex/Cursor).
+
+REGRAS DE VERDADE (invioláveis):
+- Sobre o sistema, afirme APENAS o que estiver no bloco ESTADO REAL abaixo. Nunca invente execucao, andamento ou resultado.
+- Voce NAO executa nada sozinho: o sistema propoe, o Fabio aprova. Acao externa/sensivel sempre exige aprovacao humana.
+- Se nao souber, diga que nao sabe e sugira o comando que descobre ('status', 'fila').
+
+COMO AJUDAR:
+- Se o Fabio pedir algo operacional, aponte o comando exato deste chat: 'status', 'fila', 'aprova <id>', 'manda pro codex/cursor: <msg>', ou texto de tarefa (vira pendencia).
+- Se houver pendencias na fila (ESTADO REAL), mencione proativamente quando fizer sentido.
+- Continue a conversa com memoria dos turnos anteriores.
+
+ESTILO: portugues do Brasil, direto e profissional, 2 a 8 linhas, sem emoji em excesso, negrito so quando ajuda. Voce e MEGATRON (nunca Hermes).`;
 
 function readOpenRouterKey(): string | null {
   const fromEnv = process.env.OPENROUTER_API_KEY?.trim().replace(/^\uFEFF/, "");
@@ -59,9 +67,16 @@ function fallbackReply(userText: string): string {
   return `Entendi. Registrei como pedido no FabioOS — abra o Cursor para executar, ou reenvie com prefixo "tarefa:" para arquivo dedicado.`;
 }
 
+export type ChatTurn = { role: "user" | "assistant"; content: string };
+
 export async function generateMegatronReply(
   userText: string,
-  context?: { jobId?: string; category?: string },
+  context?: {
+    jobId?: string;
+    category?: string;
+    systemContext?: string;
+    history?: ChatTurn[];
+  },
 ): Promise<MegatronChatResult> {
   const config = loadWhatsAppConfig();
   if (!config.conversationalEnabled) {
@@ -95,10 +110,16 @@ export async function generateMegatronReply(
       },
       body: JSON.stringify({
         model: config.openRouterModel,
-        max_tokens: 320,
-        temperature: 0.7,
+        max_tokens: 700,
+        temperature: 0.4,
         messages: [
-          { role: "system", content: SYSTEM_PROMPT },
+          {
+            role: "system",
+            content: context?.systemContext
+              ? `${SYSTEM_PROMPT}\n\n${context.systemContext}`
+              : SYSTEM_PROMPT,
+          },
+          ...(context?.history ?? []).slice(-16),
           { role: "user", content: userContent },
         ],
       }),

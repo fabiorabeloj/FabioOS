@@ -1,5 +1,5 @@
 import path from "node:path";
-import { generateMegatronReply, getOpenRouterStatus } from "../whatsapp/megatronChat.js";
+import { generateMegatronReply, getOpenRouterStatus, type ChatTurn } from "../whatsapp/megatronChat.js";
 import { submitNaturalCommand } from "../intakeDispatch/actions.js";
 import { runPythonJson } from "../intakeDispatch/python.js";
 import { resolveFabioOsRoot } from "../fabioos/paths.js";
@@ -21,6 +21,23 @@ type BridgeReply = { handled: boolean; reply: string; tipo: string };
 
 function resolveChatBridgeScript(): string {
   return path.join(resolveFabioOsRoot(), "60_Sistemas", "MEGATRON", "v1", "chat_bridge.py");
+}
+
+// Memória de conversa (multi-turno) — vive no processo, cap de 24 turnos.
+const chatHistory: ChatTurn[] = [];
+
+function remember(user: string, assistant: string) {
+  chatHistory.push({ role: "user", content: user }, { role: "assistant", content: assistant });
+  while (chatHistory.length > 24) chatHistory.shift();
+}
+
+async function fetchSystemContext(): Promise<string | undefined> {
+  try {
+    const r = await runPythonJson<{ contexto?: string }>(resolveChatBridgeScript(), ["--contexto"]);
+    return r.contexto || undefined;
+  } catch {
+    return undefined;
+  }
 }
 
 export function getMegatronChatStatus() {
@@ -45,6 +62,7 @@ export async function handleMegatronChat(message: string): Promise<MegatronChatR
           agentId: "megatron",
           message: `[CHAT] Fabio: ${trimmed.slice(0, 120)} → bridge/${bridge.tipo}`,
         });
+        remember(trimmed, bridge.reply); // LLM lembra do que a ponte fez
         return { ok: true, reply: bridge.reply, source: "bridge" };
       }
     } catch {
@@ -71,6 +89,8 @@ export async function handleMegatronChat(message: string): Promise<MegatronChatR
   const result = await generateMegatronReply(chatText, {
     category: intake ? "agentarium_chat_intake" : "agentarium_chat",
     jobId: intake?.cardId,
+    systemContext: await fetchSystemContext(), // olhos: estado real em toda resposta
+    history: chatHistory,                      // memória: conversa multi-turno
   });
 
   let reply = result.text;
@@ -87,6 +107,8 @@ export async function handleMegatronChat(message: string): Promise<MegatronChatR
     agentId: "megatron",
     message: `[CHAT] Fabio: ${trimmed.slice(0, 120)} → ${result.source}${intake ? " + intake" : ""}`,
   });
+
+  remember(trimmed, reply);
 
   return {
     ok: true,

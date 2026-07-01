@@ -140,6 +140,9 @@ def listar(saida: dict) -> int:
 def aprovar(saida: dict, alvo: str) -> int:
     fila = saida["fila"]
     item = next((i for i in fila if i["id"] == alvo and i["status"] == "waiting_approval"), None)
+    if item is None and len(alvo) >= 6:  # sufixo do id (como o chat sugere: "aprova fff2a9")
+        cand = [i for i in fila if i["id"].endswith(alvo) and i["status"] == "waiting_approval"]
+        item = cand[0] if len(cand) == 1 else None
     if item is None:  # tenta por domínio
         item = next((i for i in fila if i["domain"] == alvo and i["status"] == "waiting_approval"), None)
     if item is None:

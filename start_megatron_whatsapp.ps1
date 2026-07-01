@@ -127,7 +127,7 @@ if (-not $backendUp) {
 
   $env:WHATSAPP_REPLY_TO_FABIO = "true"
   $env:WHATSAPP_CONVERSATIONAL = "true"
-  $env:MEGATRON_OPENROUTER_MODEL = "openrouter/free"
+  $env:MEGATRON_OPENROUTER_MODEL = "anthropic/claude-haiku-4.5"
   $env:FABIO_WHATSAPP_NUMBER = $PhoneNumber
   $env:EVOLUTION_API_URL = $EvolutionBase
   $env:EVOLUTION_INSTANCE = $InstanceName

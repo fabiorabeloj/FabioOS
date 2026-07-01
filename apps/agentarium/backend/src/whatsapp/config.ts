@@ -50,7 +50,13 @@ export function loadWhatsAppConfig(): WhatsAppPersonalConfig {
     evolutionApiUrl: process.env.EVOLUTION_API_URL ?? "http://127.0.0.1:8080",
     evolutionInstance: process.env.EVOLUTION_INSTANCE ?? "fabioos-pessoal",
     conversationalEnabled: process.env.WHATSAPP_CONVERSATIONAL !== "false",
-    openRouterModel: process.env.MEGATRON_OPENROUTER_MODEL ?? "openrouter/free",
+    // Modelo pago barato (~$0.004/msg; $10 duram meses): respostas profissionais.
+    // "openrouter/free" (legado) roteava p/ modelos gratuitos instáveis que
+    // alucinavam — tratado como alias do default pago para pegar sem restart.
+    openRouterModel:
+      process.env.MEGATRON_OPENROUTER_MODEL && process.env.MEGATRON_OPENROUTER_MODEL !== "openrouter/free"
+        ? process.env.MEGATRON_OPENROUTER_MODEL
+        : "anthropic/claude-haiku-4.5",
   };
 }
 

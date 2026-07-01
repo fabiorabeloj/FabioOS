@@ -143,6 +143,28 @@ def rota_tarefa(texto: str) -> str | None:
             f"Aguardando sua aprovação → responda: aprova {item['id']}")
 
 
+def contexto_sistema() -> str:
+    """Snapshot compacto do estado REAL p/ injetar no prompt do LLM (olhos do chat).
+    Mantém <1KB: o LLM responde grounded sem custo de token explodir."""
+    e = montar()
+    L = ["=== ESTADO REAL DO FABIOOS (agora) ==="]
+    if e["velocidade"]:
+        L.append("Agentes (última atividade): " + " · ".join(
+            f"{ag} {ts[5:16]}" for ag, ts in
+            sorted(e["velocidade"].items(), key=lambda kv: kv[1], reverse=True)))
+    ag = e["fila_aguardando_fabio"]
+    L.append(f"Fila 'Aguardando Fabio': {len(ag)} pendência(s)")
+    for i in ag[:5]:
+        L.append(f"  • [{i['domain']}/{i['urgency']}] {i['action']} — id {i['id']}")
+    for m in e["atividade_recente"][-3:]:
+        L.append(f"Evento {m['ts'][11:16]}: [{m['tipo']}] {m['de']}→{m['para']}: {m['mensagem'][:80]}")
+    L.append(f"Frentes ativas: {len(e['frentes_ativas'])} ({', '.join(f['frente'] for f in e['frentes_ativas'][:4])})")
+    L.append("Comandos que o Fabio pode digitar aqui: 'status' · 'fila' · "
+             "'aprova <id>' (grava nota no Obsidian) · 'manda pro codex/cursor: <msg>' · "
+             "texto de tarefa vira pendência automática.")
+    return "\n".join(L)
+
+
 def rotear(texto: str) -> dict:
     t = _n(texto)
 
@@ -169,8 +191,15 @@ def rotear(texto: str) -> dict:
 
 def main() -> int:
     ap = argparse.ArgumentParser(description="Ponte chat Agentarium → cérebro MEGATRON")
-    ap.add_argument("texto")
+    ap.add_argument("texto", nargs="?", default="")
+    ap.add_argument("--contexto", action="store_true",
+                    help="emite snapshot do estado real p/ injetar no prompt do LLM")
     args = ap.parse_args()
+    if args.contexto:
+        print(json.dumps({"contexto": contexto_sistema()}, ensure_ascii=False))
+        return 0
+    if not args.texto:
+        ap.error("texto é obrigatório sem --contexto")
     print(json.dumps(rotear(args.texto), ensure_ascii=False))
     return 0
 

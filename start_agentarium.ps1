@@ -23,7 +23,7 @@ if (Test-Path $Lib) {
         AGENTARIUM_UI_PORT         = "5174"
         WHATSAPP_REPLY_TO_FABIO    = "true"
         WHATSAPP_CONVERSATIONAL    = "true"
-        MEGATRON_OPENROUTER_MODEL  = "openrouter/free"
+        MEGATRON_OPENROUTER_MODEL  = "anthropic/claude-haiku-4.5"
         EVOLUTION_API_URL          = "http://127.0.0.1:8080"
         EVOLUTION_INSTANCE         = "fabioos-pessoal"
     }
