@@ -1,0 +1,26 @@
+{
+  "emails": [
+    {
+      "id": "sample-school-001",
+      "thread_id": "sample-thread-001",
+      "from_": "Coordenacao Exemplo <coord@example.edu>",
+      "subject": "Reuniao pedagogica da turma 8A",
+      "snippet": "Precisamos confirmar retorno dos professores ate hoje sobre a reuniao.",
+      "labels": ["INBOX", "UNREAD"],
+      "has_attachment": false,
+      "attachments": [],
+      "email_ts": "2026-07-01T09:00:00-03:00"
+    },
+    {
+      "id": "sample-news-001",
+      "thread_id": "sample-thread-002",
+      "from_": "Newsletter Exemplo <news@example.com>",
+      "subject": "Lancamento de ferramenta de IA",
+      "snippet": "Newsletter semanal com novidades e links.",
+      "labels": ["INBOX", "CATEGORY_PROMOTIONS"],
+      "has_attachment": false,
+      "attachments": [],
+      "email_ts": "2026-07-01T10:00:00-03:00"
+    }
+  ]
+}

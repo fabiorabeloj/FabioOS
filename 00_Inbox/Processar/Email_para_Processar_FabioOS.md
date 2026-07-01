@@ -14,6 +14,14 @@ atualizado_em: 2026-06-28
 
 O primeiro lote de e-mails ja foi processado e convertido em conhecimento visivel no Obsidian.
 
+Em 2026-07-01 foi criado o intake local em dry-run:
+
+- [[60_Sistemas/FabioOS/specs/2026-07-01_email-intake-dry-run]]
+- [[50_Registros/Relatorios/Diagnostico_Modulo_Email_Agente_Pessoal_Perfeito_2026-07-01]]
+
+Ele nao le Gmail sozinho, mas transforma payload autorizado do conector/n8n em
+triagem restrita, sem envio, sem apagar, sem arquivar e sem RAG.
+
 ## Processados
 
 - [[40_Wiki/_compat_wiki/memoria/decisoes/2026-06-27_Piloto_Email_Protocolos_FabioOS]]
@@ -25,6 +33,7 @@ O primeiro lote de e-mails ja foi processado e convertido em conhecimento visive
 - [ ] Uma thread externa real escolhida por Fabio.
 - [ ] E-mails com prazos, pessoas, instituicoes ou anexos relevantes.
 - [ ] Gmail profissional somente apos autorizacao/conector.
+- [ ] Lote real pequeno pelo `email_intake_dry_run.py` apos escopo aprovado.
 
 ## Regra
 

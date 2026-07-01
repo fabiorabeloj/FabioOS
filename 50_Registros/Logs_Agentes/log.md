@@ -295,3 +295,12 @@ Formato:
 - Paginas atualizadas: [[40_Wiki/PRIMUS/conceitos/MOC_Conceitos_Design_PRIMUS]], [[40_Wiki/PRIMUS/README]] e links DeltaP em conceitos existentes.
 - Auditoria: [[50_Registros/Auditoria/Auditoria_Markdownizacao_Conceitos_PRIMUS_2026-07-01]].
 - Limites: sem texto protegido, sem stubs massivos, sem RAG/reindex, sem tocar runtime.
+
+## [2026-07-01] diagnostico | Email Intake Dry-Run
+
+- Fonte: hipotese do agente pessoal perfeito enviada pelo Fabio.
+- Diagnostico: Gmail responde pelo conector Codex, mas o FabioOS local ainda nao tinha ponte operacional de e-mail; o agente Inbox varre apenas arquivos.
+- Paginas criadas: [[50_Registros/Relatorios/Diagnostico_Modulo_Email_Agente_Pessoal_Perfeito_2026-07-01]], [[60_Sistemas/FabioOS/specs/2026-07-01_email-intake-dry-run]].
+- Script criado: `60_Sistemas/FabioOS/scripts/email_intake_dry_run.py`.
+- Teste: smoke com payload sintetico e `py_compile` OK.
+- Limites: sem envio, sem delete/archive, sem token, sem RAG/Grafo, sem dados reais versionados.

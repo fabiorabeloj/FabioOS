@@ -94,6 +94,7 @@ Artefatos compartilhados incluem:
 | MARKDOWNIZACAO_SEGURA_E_APOSTILAS | Codex | `80_Specs/PRIMUS/Spec_Markdownizacao_Segura_Livros_PRIMUS.md`, `30_Projetos/PRIMUS/Plano_Markdownizacao_Livros_PRIMUS.md`, `80_Specs/EscolaOS/Spec_Ingestao_Apostilas_EscolaOS.md`, `20_Areas/EscolaOS/Pipeline_Apostilas_para_Obsidian.md`, nos seguros PRIMUS | concluida | 2026-07-01 | Formalizada a regra: livros restritos viram stubs/CatalogEntries/abstracoes; apostilas autorais podem virar Markdown completo; sem dump protegido, sem RAG/reindex |
 | PRIMUS_DND_CORE_CATALOGO | Codex | `40_Wiki/PRIMUS/Fontes_Oficiais_DND/Catalogo_DND_Core_Consolidado.md`, ADR, auditoria, changelog, MOCs e READMEs | concluida | 2026-07-01 | Stubs massivos foram considerados inviaveis para Obsidian; PHB/DMG/MM ficam como catalogo consolidado e notas so sao promovidas seletivamente; sem coluna `text`, sem dump integral, sem RAG/reindex |
 | PRIMUS_CONCEITOS_LIVROS | Codex | `40_Wiki/PRIMUS/conceitos/`, `40_Wiki/PRIMUS/README.md`, auditoria, log e changelog | concluida | 2026-07-01 | Ordem do Claude executada: 14 conceitos fortes adicionados, MOC atualizado e links DeltaP corrigidos; sem stubs massivos, sem texto protegido, sem RAG/reindex |
+| EMAIL_INTAKE_DRY_RUN | Codex | `60_Sistemas/FabioOS/scripts/email_intake_dry_run.py`, SPEC, diagnostico, inbox email, log e changelog | concluida | 2026-07-01 | Ponte local criada para payloads autorizados do Gmail/n8n; classifica e gera triagem restrita; sem OAuth proprio, sem envio, sem alterar mensagens, sem RAG/Grafo |
 
 ## Frentes observadas
 
@@ -146,3 +147,4 @@ Ao concluir, alterar `Estado` para `concluida`, registrar resultado e apontar o 
 - 2026-07-01 - `MARKDOWNIZACAO_SEGURA_E_APOSTILAS` concluida. Criada regra operacional para gerar MDs de livros e apostilas: restritos entram como stubs/CatalogEntries/abstracoes; apostilas autorais entram como conhecimento completo.
 - 2026-07-01 - `PRIMUS_DND_CORE_CATALOGO` concluida. A tentativa de `10603` stubs mostrou risco de poluir o grafo; substituida por catalogo consolidado e regra de promocao seletiva.
 - 2026-07-01 - `PRIMUS_CONCEITOS_LIVROS` concluida. Livros FREE renderam conceitos fortes; D&D Core gerou apenas abstracoes de design; MOC de conceitos passou a ser o hub para evitar bolinhas soltas.
+- 2026-07-01 - `EMAIL_INTAKE_DRY_RUN` concluida. Diagnostico do modulo de e-mail feito; conector Gmail do Codex respondeu, mas FabioOS local nao tinha ponte; criado script dry-run para triagem restrita de payload autorizado.
