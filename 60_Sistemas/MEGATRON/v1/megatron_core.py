@@ -14,6 +14,7 @@ Uso:
     python megatron_core.py "segue o token sk-ABC123..." --source gmail
 """
 import argparse
+import hashlib
 import json
 import re
 import sys
@@ -102,8 +103,12 @@ def classificar_intake(texto: str, source: str = "manual", sender: str = "",
 
     alerta = urgencia in ("high", "critical") or sensibilidade in ("restricted", "forbidden_external")
 
+    now = datetime.now()
+    # id único (Core Spec §1: intake_<ts>_<hash>) — hash evita colisão no mesmo segundo
+    _h = hashlib.sha1(f"{subject}{texto}{sender}{now.timestamp()}".encode()).hexdigest()[:6]
+
     return {
-        "id": f"intake_{datetime.now().strftime('%Y%m%dT%H%M%S')}",
+        "id": f"intake_{now.strftime('%Y%m%dT%H%M%S')}_{_h}",
         "source": source, "received_at": datetime.now().isoformat(timespec="seconds"),
         "sender": sender, "subject": subject,
         "summary": (texto or "")[:180],
