@@ -17,7 +17,6 @@ import hashlib
 import json
 import re
 import sys
-import unicodedata
 from dataclasses import dataclass, field
 from datetime import datetime, timezone
 from pathlib import Path
@@ -26,70 +25,17 @@ from typing import Any
 
 ROOT = Path(__file__).resolve().parents[3]
 SCRIPTS_DIR = ROOT / "60_Sistemas" / "FabioOS" / "scripts"
+MEGATRON_V1 = ROOT / "60_Sistemas" / "MEGATRON" / "v1"
 DEFAULT_OUTPUT_DIR = ROOT / "05_Raw_Sources" / "_compat_sources" / "email" / "_restrito" / "triagens"
 DEFAULT_QUEUE = ROOT / "60_Sistemas" / "MEGATRON" / "v1" / "state" / "intake_queue.json"
 
 if str(SCRIPTS_DIR) not in sys.path:
     sys.path.insert(0, str(SCRIPTS_DIR))
+if str(MEGATRON_V1) not in sys.path:
+    sys.path.insert(0, str(MEGATRON_V1))
 
+from megatron_core import classificar_intake  # noqa: E402
 from universal_intake_adapter import build_queue, email_to_item, write_json  # noqa: E402
-
-
-# Taxonomia alinhada ao MEGATRON Core Spec v0.1 §4 (autoridade unica):
-# pai/responsavel -> pietraos ; coordenacao/prova/revisao -> escolaos.
-# "coordenacao" pertence a escolaos (era o divergente que o Bugbot Cursor achou).
-DOMAIN_RULES = [
-    ("pietraos", ("pietra", "responsavel", "responsável", "aluno", "aluna", "matricula", "matrícula")),
-    ("escolaos", ("prova", "atividade", "turma", "aula", "geografia", "filosofia", "boletim", "recuperacao", "recuperação", "coordenacao", "coordenação")),
-    ("financeiro", ("boleto", "fatura", "pagamento", "cobranca", "cobrança", "pix", "recibo", "nota fiscal")),
-    ("fabios", ("fabios", "github", "codex", "claude", "openai", "anthropic", "cursor", "openclaw", "n8n", "rag")),
-    ("primus", ("primus", "rpg", "d&d", "dnd", "worlds without number", "stars without number")),
-]
-
-NOISE_RULES = (
-    "newsletter",
-    "promocao",
-    "promoção",
-    "sale",
-    "festival",
-    "lancamento",
-    "lançamento",
-    "unsubscribe",
-)
-
-SENSITIVE_RULES = (
-    "cpf",
-    "rg",
-    "senha",
-    "password",
-    "token",
-    "api_key",
-    "apikey",
-    "secret",
-    "cartao",
-    "cartão",
-    "laudo",
-    "diagnostico",
-    "diagnóstico",
-    "atestado",
-    "saude",
-    "saúde",
-    "nota do aluno",
-)
-
-URGENT_RULES = (
-    "urgente",
-    "hoje",
-    "prazo",
-    "deadline",
-    "responder",
-    "retorno",
-    "confirmar",
-    "reuniao",
-    "reunião",
-    "convocacao",
-    "convocação",
-)
 
 
 @dataclass
@@ -158,89 +104,66 @@ def normalize_email(raw: dict[str, Any]) -> EmailItem:
     )
 
 
-def normalize_text(value: str) -> str:
-    """Lowercase + strip accents (same idea as megatron_core._n)."""
-    folded = unicodedata.normalize("NFKD", value or "")
-    ascii_only = folded.encode("ascii", "ignore").decode()
-    return ascii_only.lower()
+def text_for_core(item: EmailItem) -> str:
+    parts = [item.snippet]
+    if item.labels:
+        parts.append("labels: " + " ".join(item.labels))
+    if item.attachment_names:
+        parts.append("attachments: " + " ".join(item.attachment_names[:5]))
+    return "\n".join(part for part in parts if part)
 
 
-def has_any(text: str, words: tuple[str, ...]) -> bool:
-    return any(word in text for word in words)
+def bucket_from_core(classification: dict[str, Any], item: EmailItem) -> tuple[str, str]:
+    domain = classification["domain"]
+    action = classification["suggested_action"]
+    sensitivity = classification["sensitivity"]
+
+    if sensitivity in {"restricted", "forbidden_external", "no_rag"}:
+        return "Revisao humana", action
+    if domain == "spam" or action == "descartar":
+        return "FYI / ruido", action
+    if item.has_attachment:
+        return "Documento/anexo", action
+    if domain in {"pietraos", "escolaos"}:
+        return "Escola / Pietra", action
+    if domain == "financeiro":
+        return "Financeiro", action
+    if domain in {"fabios", "primus", "tecnico"}:
+        return "Projeto", action
+    return "Triagem", action
 
 
 def classify(item: EmailItem) -> TriageResult:
-    text = normalize_text(" ".join([item.sender, item.subject, item.snippet, " ".join(item.labels)]))
+    core = classificar_intake(
+        text_for_core(item),
+        source="gmail",
+        sender=item.sender,
+        subject=item.subject,
+    )
     flags: list[str] = []
-
-    domain = "pessoal"
-    for candidate, words in DOMAIN_RULES:
-        if has_any(text, words):
-            domain = candidate
-            break
-
-    noise = has_any(text, NOISE_RULES) or any(label in {"CATEGORY_PROMOTIONS"} for label in item.labels)
-    sensitive = has_any(text, SENSITIVE_RULES)
-    urgent = has_any(text, URGENT_RULES)
 
     if item.has_attachment:
         flags.append("tem_anexo")
-    if noise:
+    if core["domain"] == "spam":
         flags.append("possivel_ruido")
-    if sensitive:
+    if core["sensitivity"] in {"private", "restricted", "no_rag", "forbidden_external"}:
         flags.append("possivel_dado_sensivel")
-    if urgent:
+    if core["urgency"] in {"high", "critical"}:
         flags.append("possivel_urgencia")
 
-    if sensitive:
-        sensitivity = "restrito"
-    elif domain in {"pietraos", "escolaos", "financeiro"}:
-        sensitivity = "privado"
-    else:
-        sensitivity = "interno"
-
-    if urgent and not noise:
-        urgency = "alta"
-    elif domain in {"pietraos", "escolaos", "financeiro"}:
-        urgency = "media"
-    elif noise:
-        urgency = "baixa"
-    else:
-        urgency = "normal"
-
-    if sensitive:
-        bucket = "Revisao humana"
-        action = "abrir_resumo_restrito_e_decidir"
-    elif noise:
-        bucket = "FYI / ruido"
-        action = "ignorar_ou_arquivar_depois_de_revisao"
-    elif item.has_attachment:
-        bucket = "Documento/anexo"
-        action = "avaliar_anexo_e_arquivar_fonte"
-    elif domain in {"pietraos", "escolaos"}:
-        bucket = "Escola / Pietra"
-        action = "criar_tarefa_escolar_ou_resposta_sugerida"
-    elif domain == "financeiro":
-        bucket = "Financeiro"
-        action = "registrar_pendencia_financeira_restrita"
-    elif domain in {"fabios", "primus"}:
-        bucket = "Projeto"
-        action = "criar_tarefa_ou_nota_de_projeto"
-    else:
-        bucket = "Triagem"
-        action = "resumir_e_classificar_manualmente"
+    bucket, action = bucket_from_core(core, item)
 
     digest_source = "|".join([item.message_id, item.thread_id, item.sender, item.subject, item.timestamp])
     fingerprint = hashlib.sha256(digest_source.encode("utf-8")).hexdigest()[:16]
 
     return TriageResult(
         fingerprint=fingerprint,
-        domain=domain,
-        urgency=urgency,
-        sensitivity=sensitivity,
+        domain=core["domain"],
+        urgency=core["urgency"],
+        sensitivity=core["sensitivity"],
         bucket=bucket,
         suggested_action=action,
-        requires_human=True,
+        requires_human=bool(core["requires_human_approval"]),
         flags=flags,
         item=item,
     )
