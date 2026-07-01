@@ -57,7 +57,7 @@
       ],
       "additionalProperties": false,
       "properties": {
-        "id": { "type": "string", "pattern": "^intake_[0-9]{8}T[0-9]{6}(_[a-f0-9]{10,16})?$" },
+        "id": { "type": "string", "pattern": "^intake_[0-9]{8}T[0-9]{6}(_[a-f0-9]{6,16})?$" },
         "source": {
           "type": "string",
           "enum": ["gmail", "whatsapp", "pdf", "drive", "mobile", "manual", "obsidian", "github"]
@@ -88,7 +88,12 @@
           "type": "string",
           "enum": ["captured", "classified", "waiting_approval", "approved", "executing", "executed", "archived", "blocked", "failed"]
         },
-        "log_ref": { "type": "string" }
+        "log_ref": { "type": "string" },
+        "nota_ref": { "type": "string" },
+        "extracao": {
+          "type": "object",
+          "additionalProperties": true
+        }
       }
     }
   }

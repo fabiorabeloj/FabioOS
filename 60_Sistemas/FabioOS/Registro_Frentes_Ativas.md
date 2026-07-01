@@ -98,6 +98,7 @@ Artefatos compartilhados incluem:
 | INBOX_UNIVERSAL_V01 | Codex | `60_Sistemas/FabioOS/schemas/universal_intake_schema.json`, `universal_intake_adapter.py`, `universal_intake_validator.py`, examples, SPEC, relatorio e changelog | concluida | 2026-07-01 | Alinhado ao MEGATRON Core Spec v0.1; gera fila consumivel pelo Cursor com Gmail/WhatsApp/PDF fake; summary redigido para segredo; sem RAG, sem envio, sem runtime externo |
 | N8N_PIETRA_DRY_RUN_BRIDGE | Codex | `60_Sistemas/n8n/scripts/pietra_whatsapp_dry_run_bridge.py`, `FabioOS_WhatsApp_Pietra_DryRun.*`, payload fake, relatorio e changelog | concluida | 2026-07-01 | Bridge n8n/Evolution -> `pietra_conversa.conversar()` em dry-run; sem envio WhatsApp, sem API externa, sem RAG e sem alterar motor Pietra |
 | INTAKE_CLASSIFIER_CONVERGENCE | Codex | `60_Sistemas/FabioOS/scripts/email_intake_dry_run.py`, exemplos fake existentes, relatorio e changelog | concluida | 2026-07-01 | Email dry-run delega ao `megatron_core.classificar_intake()`; WhatsApp/PDF fake validados pelo mesmo contrato; sem acao externa e sem alterar core |
+| INTAKE_DISPATCH_CONTRACT_GUARD | Codex | `intake_queue.sample.json`, `universal_intake_schema.json`, `universal_intake_validator.py`, relatorio e changelog | concluida | 2026-07-01 | IDs unicos e validador anti-duplicata para a mesa de despacho; sem tocar UI/Agentarium, sem aprovar item real, sem RAG/API/push |
 
 ## Frentes observadas
 
@@ -154,3 +155,4 @@ Ao concluir, alterar `Estado` para `concluida`, registrar resultado e apontar o 
 - 2026-07-01 - `INBOX_UNIVERSAL_V01` concluida. Codex criou schema, adaptador, validador e payloads fake; e-mail dry-run agora tambem emite fila universal no contrato do Cursor.
 - 2026-07-01 - `N8N_PIETRA_DRY_RUN_BRIDGE` concluida. Criado bridge local e workflow n8n importavel para transformar payload WhatsApp/Evolution em proposta Pietra, sempre com aprovacao humana e sem envio externo.
 - 2026-07-01 - `INTAKE_CLASSIFIER_CONVERGENCE` concluida. Relatorio Markdown legado do e-mail passou a usar o mesmo MEGATRON Core da fila universal; email/WhatsApp/PDF fake foram revalidados.
+- 2026-07-01 - `INTAKE_DISPATCH_CONTRACT_GUARD` concluida. Sample congelado da fila ganhou IDs unicos e o validador passou a bloquear duplicatas, protegendo os botoes Aprovar/Rejeitar do Agentarium.

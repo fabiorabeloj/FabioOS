@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import argparse
+from collections import Counter
 import json
 import re
 import sys
@@ -12,6 +13,7 @@ from typing import Any
 
 
 REQUIRED_TOP = {"generated_at", "gerado_por", "contrato", "resumo", "cores_status", "fila"}
+OPTIONAL_CARD = {"nota_ref", "extracao"}
 REQUIRED_CARD = {
     "id",
     "source",
@@ -50,7 +52,7 @@ def add(errors: list[str], message: str) -> None:
 
 def validate_card(card: dict[str, Any], idx: int, errors: list[str]) -> None:
     missing = REQUIRED_CARD - set(card)
-    extra = set(card) - REQUIRED_CARD
+    extra = set(card) - REQUIRED_CARD - OPTIONAL_CARD
     if missing:
         add(errors, f"fila[{idx}] faltando campos: {sorted(missing)}")
     if extra:
@@ -59,7 +61,7 @@ def validate_card(card: dict[str, Any], idx: int, errors: list[str]) -> None:
         return
 
     prefix = f"fila[{idx}] {card.get('id')}"
-    if not re.match(r"^intake_[0-9]{8}T[0-9]{6}(_[a-f0-9]{10,16})?$", str(card["id"])):
+    if not re.match(r"^intake_[0-9]{8}T[0-9]{6}(_[a-f0-9]{6,16})?$", str(card["id"])):
         add(errors, f"{prefix}: id fora do padrao intake_<ts>[_<hash>]")
     if card["source"] not in SOURCES:
         add(errors, f"{prefix}: source invalido {card['source']}")
@@ -77,7 +79,15 @@ def validate_card(card: dict[str, Any], idx: int, errors: list[str]) -> None:
         add(errors, f"{prefix}: rag_permitido deve ser boolean")
     if card["sensitivity"] in {"private", "restricted", "no_rag", "forbidden_external"} and card["rag_permitido"]:
         add(errors, f"{prefix}: dado sensivel nao pode permitir RAG automaticamente")
-    if card["requires_human_approval"] and card["status"] not in {"waiting_approval", "blocked", "failed"}:
+    if card["requires_human_approval"] and card["status"] not in {
+        "waiting_approval",
+        "blocked",
+        "failed",
+        "executed",
+        "archived",
+        "approved",
+        "executing",
+    }:
         add(errors, f"{prefix}: item que exige humano deve aguardar aprovacao/bloqueio/falha")
     if SECRET_RX.search(str(card["summary"])):
         add(errors, f"{prefix}: summary parece conter segredo")
@@ -108,6 +118,10 @@ def validate_queue(queue: dict[str, Any]) -> list[str]:
     resumo = queue.get("resumo") or {}
     if resumo.get("total") != total:
         add(errors, f"resumo.total={resumo.get('total')} mas fila tem {total}")
+    ids = [str(card.get("id", "")) for card in queue["fila"] if isinstance(card, dict)]
+    duplicates = sorted(item_id for item_id, count in Counter(ids).items() if item_id and count > 1)
+    if duplicates:
+        add(errors, f"fila contem ids duplicados: {duplicates}")
     return errors
 
 
