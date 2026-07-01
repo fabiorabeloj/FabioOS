@@ -78,6 +78,15 @@ def _escrever_nota(item: dict) -> Path:
     linha_acao = (f"- [ ] {item['suggested_action']} — {item['summary']}"
                   if is_tarefa else item["summary"])
 
+    ext = item.get("extracao") or {}
+    bloco_extracao = ""
+    if any(ext.get(k) for k in ("produto", "serie", "tema", "prazo")):
+        linhas = []
+        for chave, rotulo in (("produto", "Produto"), ("serie", "Serie"), ("tema", "Tema"), ("prazo", "Prazo")):
+            if ext.get(chave):
+                linhas.append(f"- {rotulo}: {ext[chave]}")
+        bloco_extracao = "\n## Extracao estruturada\n\n" + "\n".join(linhas) + "\n"
+
     corpo = f"""---
 tipo: {tipo}
 area: 00_Inbox
@@ -100,7 +109,7 @@ tags: [fabios, intake, {item['domain']}]
 ## Pendência
 
 {linha_acao}
-
+{bloco_extracao}
 ## Contexto
 
 - Remetente: {item.get('sender') or '—'}
@@ -162,7 +171,12 @@ def aprovar(saida: dict, alvo: str) -> int:
 def main() -> int:
     ap = argparse.ArgumentParser(description="Arquivista do Intake — aprovação humana → Obsidian")
     ap.add_argument("--aprovar", metavar="ID|DOMINIO", help="aprova 1 item e grava a nota")
+    ap.add_argument("--fila", type=Path, help="fila alternativa (default: state/intake_queue.json). "
+                    "Use p/ provas isoladas, evitando colisão com a fila viva compartilhada.")
     args = ap.parse_args()
+    if args.fila:
+        global QUEUE
+        QUEUE = args.fila.resolve()
     saida = _carregar()
     return aprovar(saida, args.aprovar) if args.aprovar else listar(saida)
 

@@ -72,6 +72,11 @@ logs/
 60_Sistemas/MEGATRON/v1/state/intake_queue.json
 60_Sistemas/MEGATRON/v1/state/intake_log.jsonl
 60_Sistemas/MEGATRON/v1/state/_raw/
+60_Sistemas/MEGATRON/v1/state/megatron_runtime.json
+60_Sistemas/MEGATRON/v1/state/megatron_launcher.log
 
 # Intake: pendencias privadas aprovadas (dado de pai/aluno) ficam fora do Git
 00_Inbox/Triagem/_restrito/
+
+# Intake: filas de PROVA isoladas (transientes)
+60_Sistemas/MEGATRON/v1/state/_proof_*.json
