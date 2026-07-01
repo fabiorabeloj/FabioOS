@@ -80,3 +80,10 @@ logs/
 
 # Intake: filas de PROVA isoladas (transientes)
 60_Sistemas/MEGATRON/v1/state/_proof_*.json
+
+# --- Higiene: parar churn de arquivos derivados/cosmeticos (2026-07-01) ---
+# estado derivado do MEGATRON (regenerado pelo watcher, nao e conteudo)
+60_Sistemas/MEGATRON/v1/state/maestro_state.json
+# config cosmetica do Obsidian (muda com tema/preferencia, nao e conteudo)
+.obsidian/appearance.json
+.obsidian/themes/

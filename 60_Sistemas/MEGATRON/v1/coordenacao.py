@@ -77,14 +77,14 @@ def ler_fila():
 
 def montar():
     msgs = ler_barramento()
-    abertas = [m for m in msgs if m["status"].lower() in ("aberto", "aberta")]
     # última atividade por agente (velocidade)
     velocidade = {}
     for m in msgs:
         velocidade[m["de"]] = max(velocidade.get(m["de"], ""), m["ts"])
-    # ordens/handoffs abertos recentes (o que está pendente entre agentes)
-    pendentes = [m for m in abertas if m["tipo"] in ("ordem", "pedido", "handoff", "bloqueio")]
-    pendentes = sorted(pendentes, key=lambda m: m["ts"])[-6:]
+    # atividade recente REAL (cronológica). Nota: o status "aberto" do barramento
+    # não é confiável (ninguém marca "resolvido"), então mostramos o que de fato
+    # aconteceu por último, não o que está "aberto".
+    recentes = sorted(msgs, key=lambda m: m["ts"])[-8:]
 
     fila = ler_fila()
     aguardando = [i for i in fila if i["status"] == "waiting_approval"]
@@ -92,9 +92,9 @@ def montar():
 
     return {
         "gerado_em": datetime.now().isoformat(timespec="seconds"),
-        "barramento": {"total": len(msgs), "abertas": len(abertas)},
+        "barramento": {"total": len(msgs)},
         "velocidade": velocidade,
-        "pendentes_entre_agentes": pendentes,
+        "atividade_recente": recentes,
         "fila_aguardando_fabio": [
             {"id": i["id"], "domain": i["domain"], "sensitivity": i["sensitivity"],
              "urgency": i["urgency"], "action": i["suggested_action"]} for i in aguardando],
@@ -105,7 +105,7 @@ def montar():
 def render(e: dict) -> str:
     L = []
     L.append(f"╔══ COORDENAÇÃO FabioOS · {e['gerado_em']} ══╗")
-    L.append(f"║ barramento: {e['barramento']['total']} msgs ({e['barramento']['abertas']} abertas)")
+    L.append(f"║ barramento: {e['barramento']['total']} msgs")
 
     L.append("╟── velocidade (última atividade por agente) ──")
     if e["velocidade"]:
@@ -114,11 +114,12 @@ def render(e: dict) -> str:
     else:
         L.append("║   (sem registro)")
 
-    L.append(f"╟── pendente ENTRE agentes ({len(e['pendentes_entre_agentes'])}) ──")
-    for m in e["pendentes_entre_agentes"]:
-        L.append(f"║   [{m['tipo']}] {m['de']}→{m['para']}: {m['mensagem'][:64]}")
-    if not e["pendentes_entre_agentes"]:
-        L.append("║   (nada aberto)")
+    L.append(f"╟── atividade recente (últimas {len(e['atividade_recente'])}, cronológica) ──")
+    for m in e["atividade_recente"]:
+        hora = m["ts"][11:16] if len(m["ts"]) >= 16 else m["ts"]
+        L.append(f"║   {hora} [{m['tipo']}] {m['de']}→{m['para']}: {m['mensagem'][:56]}")
+    if not e["atividade_recente"]:
+        L.append("║   (sem atividade)")
 
     L.append(f"╟── fila AGUARDANDO FABIO ({len(e['fila_aguardando_fabio'])}) ──")
     for i in e["fila_aguardando_fabio"]:
