@@ -5,6 +5,7 @@ projeto: PRIMUS
 status: ativo
 fonte: [[30_Projetos/PRIMUS/Mapa_Digestao_Rpg_Docx_PRIMUS]]
 criado_em: 2026-07-01
+atualizado_em: 2026-07-01
 tags: [primus, markdown, livros, copyright, catalogentry, obsidian]
 ---
 
@@ -34,7 +35,9 @@ Fonte duvidosa -> quarentena ate classificacao
 | Padrao abstrato | sim | "item como vetor de campanha" |
 | Nota autoral derivada | sim | ideia nova escrita do zero |
 | Texto integral | nao | capitulo, tabela completa, statblock |
-| Lista completa protegida | nao | copiar todas as entradas de um livro comercial |
+| Lista completa protegida | nao | copiar conteudo integral de um livro comercial |
+| Lista completa de stubs em `40_Wiki` | nao | polui o grafo e enfraquece wikilinks |
+| Catalogo consolidado | sim | contagens, indices, fonte e criterios de promocao |
 
 ## Armas, Itens, Magias, Racas e Criaturas
 
@@ -69,10 +72,10 @@ Essas familias podem virar muitos MDs, mas com niveis diferentes:
 Livro/Fonte
   -> classificar licenca
   -> extrair metadados seguros
-  -> criar CatalogEntry
-  -> criar stub Markdown
+  -> catalogo consolidado / SQLite / JSONL
+  -> selecionar candidatos
   -> validar V(E)
-  -> promover para Enciclopedia ou manter restrito
+  -> promover poucas notas fortes para Enciclopedia
 ```
 
 ## Criterios de Aceite
@@ -88,4 +91,15 @@ Livro/Fonte
 
 Criar MDs de ideias seguras e abstratas a partir de [[30_Projetos/PRIMUS/CatalogEntries_Candidatas_Rpg_Docx_PRIMUS]].
 
-Para listas completas de armas, itens, magias e criaturas, a proxima etapa correta e gerar stubs seguros a partir do PRIMUS Index, sem copiar a coluna de texto.
+Para listas completas de armas, itens, magias e criaturas, a etapa correta e manter catalogo consultavel e promover apenas entradas semanticamente fortes.
+
+## Implementacao v0 e Correcao
+
+Implementado em 2026-07-01:
+
+- [[40_Wiki/PRIMUS/Fontes_Oficiais_DND/Catalogo_DND_Core_Consolidado]]
+- `60_Sistemas/PRIMUS_Digestor/scripts/07_export_official_stubs.py`
+- [[50_Registros/Auditoria/Auditoria_DND_Core_Stubs_2026-07-01]]
+- [[50_Registros/Decisoes/ADR_2026-07-01_Catalogo_DND_Core_Sem_Stubs_Massivos]]
+
+O lote massivo de stubs provou o limite da abordagem e foi recolhido da wiki ativa. A regra final e: catalogo bruto fora do grafo; notas individuais so quando promovidas.

@@ -32,6 +32,7 @@ Projeto narrativo persistente do FabioOS.
 - [[Mapa_Digestao_Rpg_Docx_PRIMUS]]
 - [[CatalogEntries_Candidatas_Rpg_Docx_PRIMUS]]
 - [[Plano_Markdownizacao_Livros_PRIMUS]]
+- [[40_Wiki/PRIMUS/Fontes_Oficiais_DND/Catalogo_DND_Core_Consolidado]]
 - [[Plano_Transformacao_Restricted_DND_Core]]
 - [[Missao_0001_Preparacao]]
 - [[40_Wiki/PRIMUS/Motor_Causal_PRIMUS]]

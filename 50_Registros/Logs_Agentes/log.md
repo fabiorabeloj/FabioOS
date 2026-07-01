@@ -279,3 +279,11 @@ Formato:
 - Entrega: [[80_Specs/PRIMUS/Spec_Markdownizacao_Segura_Livros_PRIMUS]], [[30_Projetos/PRIMUS/Plano_Markdownizacao_Livros_PRIMUS]], [[80_Specs/EscolaOS/Spec_Ingestao_Apostilas_EscolaOS]], [[20_Areas/EscolaOS/Pipeline_Apostilas_para_Obsidian]].
 - Paginas PRIMUS criadas: [[40_Wiki/PRIMUS/Enciclopedia/Regras_e_Procedimentos/Premissas_de_Mundo_de_Campanha]], [[40_Wiki/PRIMUS/Enciclopedia/Regras_e_Procedimentos/Mundo_Selvagem_como_Pressao]], [[40_Wiki/PRIMUS/Enciclopedia/Regras_e_Procedimentos/Mundo_Antigo_com_Ruinas_Ativas]], [[40_Wiki/PRIMUS/Enciclopedia/Regras_e_Procedimentos/Modelo_Cosmologico_Abstrato]], [[40_Wiki/PRIMUS/Instancias/Missao_por_Violacao_e_Reparacao]].
 - Decisao: livros restritos geram stubs, CatalogEntries e abstracoes; apostilas autorais podem gerar Markdown completo, aulas, revisoes e bancos de questoes.
+
+## [2026-07-01] implementacao | Stubs oficiais DND Core
+
+- Pedido: gerar todos os stubs dos livros oficiais.
+- Entrega inicial: `10603` stubs seguros (`phb=3880`, `dmg=3629`, `mm=3094`).
+- Correcao: stubs massivos recolhidos da wiki ativa e substituidos por [[40_Wiki/PRIMUS/Fontes_Oficiais_DND/Catalogo_DND_Core_Consolidado]].
+- Decisao: [[50_Registros/Decisoes/ADR_2026-07-01_Catalogo_DND_Core_Sem_Stubs_Massivos]].
+- Limites: sem coluna `text`, sem texto integral, sem RAG/reindex, sem push.

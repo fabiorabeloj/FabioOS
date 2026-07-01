@@ -5,7 +5,7 @@ projeto: PRIMUS
 status: operacional-v0
 fonte: [[80_Specs/PRIMUS/Spec_Digestor_PDF_PRIMUS]]
 criado_em: 2026-06-30
-atualizado_em: 2026-06-30
+atualizado_em: 2026-07-01
 tags: [primus, digestor, python, pdf, markdown]
 ---
 
@@ -36,6 +36,7 @@ PDF/DOCX/TXT/SQLite
 | `04_validate_entries.py` | valida campos obrigatorios |
 | `05_export_markdown.py` | exporta Markdown Obsidian |
 | `06_import_primus_index.py` | importa registros do `primus.sqlite` existente |
+| `07_export_official_stubs.py` | exportador tecnico de stubs; nao usar como saida final em `40_Wiki` |
 
 ## Fonte de Verdade
 
@@ -54,6 +55,19 @@ python 60_Sistemas/PRIMUS_Digestor/scripts/06_import_primus_index.py --db "C:\Us
 python 60_Sistemas/PRIMUS_Digestor/scripts/04_validate_entries.py --input 60_Sistemas/PRIMUS_Digestor/data/catalog_entries_demo.jsonl
 python 60_Sistemas/PRIMUS_Digestor/scripts/05_export_markdown.py --input 60_Sistemas/PRIMUS_Digestor/data/catalog_entries_demo.jsonl --out 60_Sistemas/PRIMUS_Digestor/out/markdown_demo
 ```
+
+## Catalogo Oficial DND Core
+
+```powershell
+python 60_Sistemas/PRIMUS_Digestor/scripts/07_export_official_stubs.py --db "C:\Users\user\Desktop\Projeto\primus-site\primus.sqlite" --out 60_Sistemas/PRIMUS_Digestor/out/official_stubs_tmp --books phb dmg mm
+```
+
+Uso:
+
+- apenas auditoria ou lote temporario;
+- nao apontar para `40_Wiki`;
+- nao commitar milhares de stubs como notas ativas;
+- usar [[40_Wiki/PRIMUS/Fontes_Oficiais_DND/Catalogo_DND_Core_Consolidado]] como saida humana.
 
 ## Smoke Test
 

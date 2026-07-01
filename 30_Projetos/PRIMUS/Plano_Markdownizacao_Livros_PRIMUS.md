@@ -5,6 +5,7 @@ projeto: PRIMUS
 status: ativo
 fonte: [[80_Specs/PRIMUS/Spec_Markdownizacao_Segura_Livros_PRIMUS]]
 criado_em: 2026-07-01
+atualizado_em: 2026-07-01
 tags: [primus, markdown, obsidian, catalogo, livros]
 ---
 
@@ -83,9 +84,24 @@ Gerar lote por lote:
 8. `missions`;
 9. `encounter_patterns`;
 
+## Execucao 2026-07-01 - Catalogo Oficial Core
+
+Pedido humano mudou a prioridade para cobrir todos os livros oficiais, mas a validacao arquitetural mostrou que stubs massivos como MDs soltos sao ruins para o Obsidian.
+
+Resultado:
+
+- [[40_Wiki/PRIMUS/Fontes_Oficiais_DND/Catalogo_DND_Core_Consolidado]]
+- `10603` registros catalogados;
+- PHB: `3880`;
+- DMG: `3629`;
+- MM: `3094`;
+- sem coluna `text`;
+- sem dump integral.
+- sem bolinhas soltas no grafo.
+
 ## Proxima Execucao Recomendada
 
-Gerar um lote pequeno de 20 stubs seguros:
+Promover um lote pequeno do catalogo consolidado para resumos transformativos:
 
 - 5 equipamentos;
 - 5 criaturas;
