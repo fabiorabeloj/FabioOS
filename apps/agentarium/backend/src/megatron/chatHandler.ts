@@ -1,16 +1,27 @@
+import path from "node:path";
 import { generateMegatronReply, getOpenRouterStatus } from "../whatsapp/megatronChat.js";
 import { submitNaturalCommand } from "../intakeDispatch/actions.js";
+import { runPythonJson } from "../intakeDispatch/python.js";
+import { resolveFabioOsRoot } from "../fabioos/paths.js";
 import { eventLog } from "../eventLog.js";
 
 export type MegatronChatResponse = {
   ok: boolean;
   reply: string;
-  source: "openrouter" | "fallback";
+  source: "openrouter" | "fallback" | "bridge";
   model?: string;
   intake?: { ok: boolean; message: string; cardId?: string };
 };
 
 const TASK_PREFIX = /^tarefa\s*:/i;
+
+// Ponte determinística (custo-zero): status/fila/aprovar/barramento/tarefa
+// respondidos com dado REAL do sistema; só conversa cai no OpenRouter.
+type BridgeReply = { handled: boolean; reply: string; tipo: string };
+
+function resolveChatBridgeScript(): string {
+  return path.join(resolveFabioOsRoot(), "60_Sistemas", "MEGATRON", "v1", "chat_bridge.py");
+}
 
 export function getMegatronChatStatus() {
   return getOpenRouterStatus();
@@ -20,6 +31,25 @@ export async function handleMegatronChat(message: string): Promise<MegatronChatR
   const trimmed = message.trim();
   if (trimmed.length < 1) {
     return { ok: false, reply: "Mensagem vazia.", source: "fallback" };
+  }
+
+  // 1) tenta o cérebro real primeiro (chat_bridge.py) — exceto o prefixo "tarefa:"
+  //    que já tem fluxo próprio via submitNaturalCommand.
+  if (!TASK_PREFIX.test(trimmed)) {
+    try {
+      const bridge = await runPythonJson<BridgeReply>(resolveChatBridgeScript(), [trimmed]);
+      if (bridge.handled && bridge.reply) {
+        eventLog.append({
+          channel: "SYSTEM",
+          source: "megatron-chat",
+          agentId: "megatron",
+          message: `[CHAT] Fabio: ${trimmed.slice(0, 120)} → bridge/${bridge.tipo}`,
+        });
+        return { ok: true, reply: bridge.reply, source: "bridge" };
+      }
+    } catch {
+      // ponte indisponível → segue para o fluxo LLM normalmente
+    }
   }
 
   let intake: MegatronChatResponse["intake"];

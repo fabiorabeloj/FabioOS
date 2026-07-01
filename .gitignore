@@ -90,3 +90,6 @@ logs/
 
 # Backups do RAG (regeneraveis, pesados) — nunca versionar
 60_Sistemas/RAG/fabioos_db_backup_*/
+
+# PDFs brutos: ficam no disco/drop, nunca no Git (binarios pesados; pipeline extrai)
+05_Raw_Sources/PDFs/
