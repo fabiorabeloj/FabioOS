@@ -67,3 +67,8 @@ logs/
 
 # PietraOS: dados de tenants (mensagens reais de pais - LGPD, nunca versionar)
 60_Sistemas/Pietra/tenants/
+
+# MEGATRON Intake Universal — saidas vivas (podem conter dado real de pai/aluno)
+60_Sistemas/MEGATRON/v1/state/intake_queue.json
+60_Sistemas/MEGATRON/v1/state/intake_log.jsonl
+60_Sistemas/MEGATRON/v1/state/_raw/
