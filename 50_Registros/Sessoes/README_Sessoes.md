@@ -19,6 +19,7 @@ Indice navegavel de sessoes registradas por agentes (Cursor, Codex, Claude) para
 | Data | Agente | Tema | Nota |
 |---|---|---|---|
 | 2026-06-29 | Cursor | Validacao RAG Fase 12 | [[50_Registros/Sessoes/2026-06-29_cursor-sessao-validacao-rag]] |
+| 2026-06-29 | Cursor | Auditoria encoding (Codex/Windows) | [[50_Registros/Auditoria/Auditoria_Encoding_FabioOS_2026-06-29]] |
 
 ## Como usar
 

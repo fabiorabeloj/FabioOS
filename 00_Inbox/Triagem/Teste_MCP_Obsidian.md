@@ -8,14 +8,14 @@ tags: [mcp, obsidian, validacao]
 
 # Teste MCP Obsidian
 
-Nota criada automaticamente via MCP Obsidian para validar a integra��o com o FabioOS.
+Nota criada automaticamente via MCP Obsidian para validar a integracao com o FabioOS.
 
 ## Resultado
 
 - Listagem de vault: OK
 - Leitura de nota: OK
-- Cria��o de nota: OK
+- Criacao de nota: OK
 
-## Conclus�o
+## Conclusao
 
 MCP Obsidian operacional.

@@ -1,0 +1,9 @@
+# FabioOS — normalizar texto como UTF-8 no Git
+* text=auto eol=lf
+*.md text utf-8
+*.py text utf-8
+*.ps1 text utf-8
+*.json text utf-8
+*.toml text utf-8
+*.yaml text utf-8
+*.yml text utf-8

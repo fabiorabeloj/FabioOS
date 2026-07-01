@@ -50,6 +50,10 @@ export function evaluateAgentRisk(agent: Agent): { riskLevel: RiskLevel; riskNot
     bump("warning", "exec permitted — monitor sandbox strength.");
   }
 
+  if (agent.rawStatus === "gated") {
+    bump("warning", "GATED — aguardando segredos/chaves do Fabio.");
+  }
+
   return { riskLevel: level, riskNotes: notes };
 }
 

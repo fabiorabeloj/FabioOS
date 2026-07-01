@@ -21,6 +21,13 @@ import sys
 from datetime import datetime, timezone
 from pathlib import Path
 
+# Console Windows (cp1252) — alinhar stdout antes de qualquer print
+for _s in (sys.stdout, sys.stderr):
+    try:
+        _s.reconfigure(encoding="utf-8")
+    except Exception:
+        pass
+
 SCRIPT_DIR = Path(__file__).resolve().parent
 QUERY_MODULE = SCRIPT_DIR / "query_rag.py"
 

@@ -347,17 +347,88 @@ curl -X POST http://127.0.0.1:3847/events \
 | **OpenClaw** | webhook ou script ponte → `/events` |
 | **GitHub** | n8n Actions / webhook → mapear para `codex` |
 | **Obsidian** | script pós-arquivamento → `arquivista` |
-| **WhatsApp/Evolution** | evento Evolution → `pietra` |
+| **WhatsApp/Evolution pessoal** | `POST /integrations/whatsapp/message` → **Hermes** (draft_only) |
+| **WhatsApp/Evolution escolar** | evento Evolution → **Pietra** (institucional) |
 
-Endpoint unificado: `POST /events` com campo `source` para auditoria.
+Endpoint unificado legado: `POST /events` com campo `source` para auditoria.
 
-## Limitações v0.2
+## Personal WhatsApp Governance (v0.5)
+
+### Agentes
+
+| Agente | Canal | Regra |
+|---|---|---|
+| **Hermes** | WhatsApp **pessoal** | Triagem, rascunhos, encaminhamento — **nunca envia** |
+| **Pietra** | WhatsApp **escolar/institucional** | Atendimento escolar — separada de Hermes |
+
+### Modo seguro (padrão)
+
+```env
+WHATSAPP_PERSONAL_MODE=draft_only
+WHATSAPP_AUTO_SEND=false
+WHATSAPP_GROUPS_ENABLED=false
+WHATSAPP_ALLOWED_CONTACTS=
+WHATSAPP_BLOCKED_CONTACTS=
+```
+
+- `WHATSAPP_AUTO_SEND=false` — nunca envia mensagem externa.
+- Allowlist vazia = aceita todos (exceto bloqueados/grupos).
+- Grupos desligados por padrão.
+- Mensagens sensíveis/financeiras → Supervisor.
+- Escola → Pietra + Supervisor.
+
+### Endpoint
+
+`POST http://127.0.0.1:3847/integrations/whatsapp/message`
+
+```json
+{
+  "messageId": "wa-001",
+  "conversationId": "5511999999999",
+  "contactName": "Contato Teste",
+  "from": "5511999999999",
+  "direction": "incoming",
+  "text": "Mensagem de teste",
+  "timestamp": "2026-06-30T00:00:00.000Z",
+  "source": "whatsapp",
+  "provider": "evolution_api"
+}
+```
+
+Resposta: `approvalState: draft_only`, `agentId: hermes`, sem envio.
+
+### Teste
+
+```powershell
+.\test_whatsapp_personal_message.ps1
+```
+
+### n8n / Evolution API
+
+Webhook Evolution (`fabioos-pessoal`) → n8n `whatsapp-pietra-v2` → opcionalmente `POST /integrations/whatsapp/message` no Agentarium para presença visual.
+
+### Zonas pessoais
+
+Personal WhatsApp → Message Intake → Classificação → Draft Reply → Awaiting Fabio → Approved → Sent
+
+Risco: → Supervisor → Blocked
+
+## v0.5 — Character Identity
+
+- 10 agentes ativos com **Agent Class** no Inspector
+- Sprites originais: MEGATRON, Hermes, Pietra, Arquivista, Codex, Pesquisador, Supervisor, Guardião, Roteador, Memória
+- Badges no mapa: REAL / SIM / IDLE / PLAN
+- Event Log + Personal WhatsApp Intake panel
+- Movimento por evento (simulação desligada por padrão: `AGENTARIUM_AUTO_SIM=true` para demo)
+
+## Limitações v0.5
 
 - Estado e policy em memória (reinício perde histórico).
-- Simulação ativa por padrão.
+- Simulação **desligada** por padrão (`AGENTARIUM_AUTO_SIM=true` para demo).
 - Policy é **simulada** (espelho conceitual OpenClaw, não lê `openclaw.json` ao vivo).
+- WhatsApp: classificação heurística inicial — sem envio automático.
 - Sem autenticação nos endpoints.
-- Sem persistência nem histórico temporal.
+- Jobs WhatsApp em memória (sem persistência).
 - Layout 2D fixo (não geográfico).
 - Não substitui Workboard OpenClaw nem `STATUS_Agentes.md`.
 

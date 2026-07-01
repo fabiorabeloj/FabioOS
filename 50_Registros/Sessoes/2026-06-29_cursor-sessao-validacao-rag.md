@@ -124,10 +124,24 @@ Arquivos desta frente: sem credenciais reais. Unico match: string de teste `"tok
 - [[50_Registros/Changelog/2026-06-29_validacao-rag-pos-ranking-cursor]]
 - [[60_Sistemas/Cursor/README_Cursor_FabioOS]]
 - [[wiki/conceitos/rag]]
+- [[50_Registros/Auditoria/Auditoria_Encoding_FabioOS_2026-06-29]]
+- [[50_Registros/Changelog/2026-06-29_auditoria-encoding-fabioos]]
+
+## 6. Auditoria encoding (Codex / Windows)
+
+| Entrega | Descricao |
+|---|---|
+| [[50_Registros/Auditoria/Auditoria_Encoding_FabioOS_2026-06-29]] | Diagnostico H1–H5, recomendacoes Codex |
+| `60_Sistemas/FabioOS/scripts/auditar_encoding_fabioos.py` | Script reproduzivel + log debug |
+| `.gitattributes` | UTF-8 canonico para md/py/ps1/json |
+| `00_Inbox/Triagem/Teste_MCP_Obsidian.md` | Unico .md corrompido encontrado — corrigido |
+
+Causa principal dos erros Codex: **runtime cp1252**, nao vault corrompido em massa.
 
 ## Proximas acoes
 
 - [ ] Fabio autorizar commit desta frente
 - [ ] Codex atualizar STATUS/NEXT_ACTIONS/Painel (zona compartilhada)
 - [ ] Claude decidir promocao Fase 12 → piloto
+- [x] Auditoria encoding — ver [[50_Registros/Auditoria/Auditoria_Encoding_FabioOS_2026-06-29]]
 - [ ] Cursor: frente seguinte — tooling MEGATRON/dashboard quando houver SPEC aprovada

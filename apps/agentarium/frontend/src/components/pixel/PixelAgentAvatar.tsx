@@ -1,5 +1,5 @@
 import type { Agent } from "../../types";
-import { RISK_LABELS, STATE_LABELS } from "../../types";
+import { RISK_LABELS, STATE_LABELS, AGENT_SHORT_NAMES, originBadge } from "../../types";
 import { getAgentSprite } from "../../pixel/agentSprites";
 import {
   resolveAnimClass,
@@ -53,9 +53,17 @@ export function PixelAgentAvatar({ agent, className = "" }: Props) {
     .toUpperCase()
     .replace(/\s/g, "");
 
+  const shortName = AGENT_SHORT_NAMES[agent.id] ?? agent.name.slice(0, 6).toUpperCase();
+  const origin = originBadge(agent);
+
   return (
     <div className={`pixel-avatar ${animClass} ${className}`.trim()}>
       <PixelStatusEffect state={agent.state} riskLevel={agent.policy.riskLevel} />
+      {isWalking && agent.lastFromZone && agent.lastToZone && (
+        <div className="pixel-avatar__route pixel-label" title={agent.task}>
+          {agent.lastFromZone.slice(0, 4)}→{agent.lastToZone.slice(0, 4)}
+        </div>
+      )}
       <div className="pixel-avatar__sprite-wrap">
         <PixelSprite
           frame={frame}
@@ -64,8 +72,11 @@ export function PixelAgentAvatar({ agent, className = "" }: Props) {
         />
       </div>
       <PixelShadow width={sprite.scale * 10} />
-      <div className="pixel-avatar__label pixel-label">{agent.name}</div>
+      <div className="pixel-avatar__label pixel-label">{shortName}</div>
       <div className="pixel-avatar__badges">
+        <span className={`pixel-badge pixel-badge--origin pixel-badge--origin-${origin.toLowerCase()}`}>
+          {origin}
+        </span>
         <span className={`pixel-badge pixel-badge--state pixel-badge--${agent.state}`}>
           {stateShort}
         </span>

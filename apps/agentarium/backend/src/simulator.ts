@@ -1,48 +1,43 @@
 import type { AgentStateKind, Zone } from "./types.js";
 import { store } from "./store.js";
+import { eventLog } from "./eventLog.js";
 
 type SimStep = {
   state: AgentStateKind;
   task: string;
   zone: Zone;
-  delayMs?: number;
 };
 
 const FLOWS: Record<string, SimStep[]> = {
+  hermes: [
+    { state: "executing", task: "Sim: mensagem pessoal recebida", zone: "Personal WhatsApp" },
+    { state: "thinking", task: "Sim: triagem", zone: "Message Intake" },
+    { state: "waiting_approval", task: "Sim: rascunho aguardando Fabio", zone: "Awaiting Fabio" },
+    { state: "idle", task: "Aguardando mensagens pessoais", zone: "Personal WhatsApp" },
+  ],
   pietra: [
-    { state: "executing", task: "Lendo mensagem de responsável", zone: "WhatsApp" },
-    { state: "thinking", task: "Classificando intenção", zone: "Classificação" },
-    { state: "waiting_approval", task: "Resposta aguardando Fabio", zone: "Aprovação Humana" },
-    { state: "done", task: "Atendimento encerrado", zone: "Concluído" },
-    { state: "idle", task: "Aguardando mensagens", zone: "WhatsApp" },
+    { state: "executing", task: "Sim: mensagem escolar", zone: "Classificação" },
+    { state: "waiting_approval", task: "Sim: resposta institucional", zone: "Aprovação Humana" },
+    { state: "idle", task: "Aguardando mensagens escolares", zone: "Classificação" },
   ],
   arquivista: [
-    { state: "executing", task: "Triando captura bruta", zone: "Inbox" },
-    { state: "thinking", task: "Normalizando metadados", zone: "Classificação" },
-    { state: "executing", task: "Gravando nota no vault", zone: "Obsidian" },
-    { state: "done", task: "Arquivo concluído", zone: "Concluído" },
+    { state: "executing", task: "Sim: triando captura", zone: "Inbox" },
+    { state: "executing", task: "Sim: arquivando", zone: "Obsidian" },
     { state: "idle", task: "Monitorando inbox", zone: "Inbox" },
   ],
   codex: [
-    { state: "thinking", task: "Analisando diff pendente", zone: "GitHub" },
-    { state: "executing", task: "Aplicando refatoração", zone: "GitHub" },
-    { state: "executing", task: "Workflow CI via n8n", zone: "n8n" },
-    { state: "done", task: "PR pronto para revisão", zone: "Concluído" },
-    { state: "idle", task: "Repositório estável", zone: "GitHub" },
+    { state: "executing", task: "Sim: refatoracao", zone: "GitHub" },
+    { state: "done", task: "Sim: PR pronto", zone: "Concluído" },
+    { state: "idle", task: "Repositorio estavel", zone: "GitHub" },
   ],
   pesquisador: [
-    { state: "thinking", task: "Consultando embeddings", zone: "RAG" },
-    { state: "executing", task: "Rankeando fontes", zone: "RAG" },
-    { state: "executing", task: "Sintetizando conceitos", zone: "Obsidian" },
-    { state: "done", task: "Nota wiki atualizada", zone: "Concluído" },
-    { state: "idle", task: "Índice vetorial pronto", zone: "RAG" },
+    { state: "thinking", task: "Sim: consultando RAG", zone: "RAG" },
+    { state: "done", task: "Sim: sintese pronta", zone: "Obsidian" },
+    { state: "idle", task: "Indice vetorial pronto", zone: "RAG" },
   ],
   supervisor: [
-    { state: "thinking", task: "Revisando risco de commit", zone: "Aprovação Humana" },
-    { state: "executing", task: "Scan de segredos", zone: "GitHub" },
-    { state: "waiting_approval", task: "Aguardando OK humano", zone: "Aprovação Humana" },
-    { state: "done", task: "Validação registrada", zone: "Concluído" },
-    { state: "idle", task: "Fila de aprovações vazia", zone: "Aprovação Humana" },
+    { state: "waiting_approval", task: "Sim: fila de aprovacao", zone: "Aprovação Humana" },
+    { state: "idle", task: "Fila de aprovacoes vazia", zone: "Aprovação Humana" },
   ],
 };
 
@@ -53,7 +48,7 @@ export function simulationStatus(): { running: boolean; intervalMs: number } {
   return { running: timer !== null, intervalMs: SIM_INTERVAL_MS };
 }
 
-const SIM_INTERVAL_MS = 4500;
+const SIM_INTERVAL_MS = 8000;
 
 export function startSimulation(): void {
   if (timer) return;
@@ -61,7 +56,6 @@ export function startSimulation(): void {
     indices.set(id, 0);
   }
   timer = setInterval(tickSimulation, SIM_INTERVAL_MS);
-  tickSimulation();
 }
 
 export function stopSimulation(): void {
@@ -73,18 +67,30 @@ export function stopSimulation(): void {
 
 function tickSimulation(): void {
   for (const [agentId, steps] of Object.entries(FLOWS)) {
+    if (!store.get(agentId)) continue;
     const idx = indices.get(agentId) ?? 0;
     const step = steps[idx % steps.length];
+    const prev = store.get(agentId);
     indices.set(agentId, (idx + 1) % steps.length);
-    store.update(agentId, step);
+    store.updateWithMeta(agentId, step, {
+      eventSource: "sim",
+      fromZone: prev?.zone,
+      toZone: step.zone,
+    });
+    eventLog.append({
+      channel: "SIM",
+      agentId,
+      fromZone: prev?.zone,
+      toZone: step.zone,
+      message: `[SIM] ${agentId} · ${prev?.zone ?? "?"} → ${step.zone}`,
+    });
   }
 }
 
-/** Injeta um passo de erro simulado (demo). */
 export function simulateError(agentId: string): void {
-  store.update(agentId, {
+  store.updateWithMeta(agentId, {
     state: "error",
     task: "Falha simulada — verificar logs",
     zone: "Erro",
-  });
+  }, { eventSource: "sim" });
 }

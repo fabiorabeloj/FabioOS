@@ -3,10 +3,10 @@ tipo: relatorio
 area: 60_Sistemas
 projeto: FabioOS
 sistema: OpenClaw
-status: aguardando-scan-qr
+status: conectado
 tags: [openclaw, evolution-api, whatsapp, n8n, pietra, fase-11]
 criado_em: 2026-06-27
-atualizado_em: 2026-06-27
+atualizado_em: 2026-06-30
 ---
 
 # Relatório de Ativação do WhatsApp Pessoal
@@ -31,8 +31,10 @@ O objetivo operacional é permitir que o usuário se comunique com o FabioOS pel
 | Workflow n8n | `FabioOS - WhatsApp para Pietra` ativo como `fabioosWhatsappPietraV2` |
 | Endpoint n8n | `http://localhost:5678/webhook/whatsapp-pietra-v2` |
 | Instância WhatsApp | `fabioos-pessoal` |
-| Estado da instância | `connecting` |
-| QR Code | Gerado em arquivo temporário local |
+| Estado da instância | `open` (2026-06-30 — conectado via QR) |
+| Número pessoal alvo | +55 11 98212-3896 |
+| Script operacional | `start_whatsapp_pessoal.ps1` (raiz do repo) |
+| QR temporário | `%TEMP%\fabioos-whatsapp-qr.html` |
 
 ## Decisões de segurança
 
@@ -46,7 +48,14 @@ O objetivo operacional é permitir que o usuário se comunique com o FabioOS pel
 - Chamadas são rejeitadas com mensagem operacional.
 - Não há envio automático de resposta para contatos externos.
 
-## Ajustes executados
+## Ajustes executados (2026-06-30)
+
+- Stack Evolution reiniciada (`evolution-postgres`, `evolution-redis`, `evolution-api` v2.3.7).
+- Webhook n8n confirmado ativo em `whatsapp-pietra-v2`.
+- Script `start_whatsapp_pessoal.ps1` criado para QR + verificação.
+- Script `test_whatsapp_pessoal.ps1` para validação pós-conexão.
+
+## Ajustes executados (2026-06-27)
 
 - Atualizada a Evolution API para imagem `evoapicloud/evolution-api:latest`, identificada em runtime como `v2.3.7`.
 - Criada a instância nova `fabioos-pessoal`, pois a instância anterior `pessoal` ficou presa em estado fechado.
@@ -55,10 +64,10 @@ O objetivo operacional é permitir que o usuário se comunique com o FabioOS pel
 
 ## Próxima ação humana
 
-- [ ] Escanear o QR Code no WhatsApp pessoal.
-- [ ] Confirmar que a instância `fabioos-pessoal` muda para estado `open`.
-- [ ] Enviar uma mensagem de teste para o próprio WhatsApp conectado.
-- [ ] Validar se o n8n classifica e registra a entrada.
+- [x] Escanear o QR Code no WhatsApp pessoal.
+- [x] Confirmar que a instância `fabioos-pessoal` muda para estado `open`.
+- [ ] Enviar uma mensagem de teste real pelo WhatsApp (humano).
+- [ ] Validar se o n8n classifica e registra a entrada em produção.
 
 ## Mensagem de teste sugerida
 

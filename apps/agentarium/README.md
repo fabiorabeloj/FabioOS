@@ -2,6 +2,8 @@
 
 Painel de **presença + governança + segurança operacional** dos agentes FabioOS (OpenClaw multi-agent sandbox).
 
+**Versão atual: v0.5** — Character Identity + Personal WhatsApp Governance
+
 ## Inicio rapido
 
 ```powershell
@@ -14,60 +16,74 @@ Painel de **presença + governança + segurança operacional** dos agentes Fabio
 | **Painel** | http://127.0.0.1:5174 |
 | API | http://127.0.0.1:3847 |
 | Security Matrix | http://127.0.0.1:3847/security/matrix |
+| WhatsApp intake | http://127.0.0.1:3847/integrations/whatsapp/jobs |
 
-## Manual (dois terminais)
+## Funcionalidades v0.5
 
-```bash
-# Terminal 1 — backend (3847)
-cd apps/agentarium/backend && npm install && npm run dev
+- **10 agentes ativos** com identidade visual (Agent Class no Inspector)
+- **Hermes** — WhatsApp pessoal (draft_only, sem envio automatico)
+- **Pietra** — escola/institucional (separada de Hermes)
+- Sprites 8-bit originais por classe tactica
+- **Event Log** + **Personal WhatsApp Intake** panel
+- `POST /integrations/whatsapp/message` — governanca WhatsApp pessoal
+- Movimento por evento real (sim off por padrao)
+- Telefones mascarados no frontend (`5511****9999`)
 
-# Terminal 2 — frontend (5174)
-cd apps/agentarium/frontend && npm install && npm run dev
-```
+## Personal WhatsApp Governance
 
-## Funcionalidades v0.3
+1. **Hermes** = WhatsApp pessoal (triagem, rascunhos, encaminhamento).
+2. **Pietra** = escola/institucional — nunca canal pessoal.
+3. Nenhuma mensagem enviada automaticamente.
+4. Modo padrao: `draft_only` (`WHATSAPP_PERSONAL_MODE=draft_only`).
+5. Grupos desligados: `WHATSAPP_GROUPS_ENABLED=false`.
+6. Allowlist opcional: `WHATSAPP_ALLOWED_CONTACTS=5511...,5512...`.
+7. Bloqueio: `WHATSAPP_BLOCKED_CONTACTS=...`.
+8. Jobs visiveis no painel **Personal WhatsApp Intake**.
+9. Aprovacao manual futura via Supervisor + `Awaiting Fabio`.
 
-- **Agent Catalog** — 27 agentes FabioOS (5 ativos, 22 planejados)
-- Filtro por camada (command, security, technical, knowledge, school, finance, interface, personal)
-- **Pixel Ops Animation Layer** — sprites 8-bit originais
-- **Security Matrix** — todos os agentes do catalogo
-- `GET /catalog` — metadata completa
-
-## Funcionalidades v0.2.1
-
-- Mapa tático 16-bit com agentes em movimento
-- **Pixel Ops Animation Layer** — sprites 8-bit originais + HUD 16-bit
-- **Security Matrix** — sandbox, access, exec, write, elevated, risk
-- **Agent Inspector** — policy, agentDir, auth, risk notes
-- `POST /agents/:id/policy` — altera policy simulada e recalcula risco
-
-### Testar animações por estado (Codex)
+### Testar mensagem pessoal
 
 ```powershell
-$utf = { param($j) [System.Text.Encoding]::UTF8.GetBytes($j) }
+.\test_whatsapp_personal_message.ps1
+```
 
-# Thinking
-Invoke-RestMethod -Uri "http://127.0.0.1:3847/agents/codex/state" -Method POST `
-  -ContentType "application/json; charset=utf-8" `
-  -Body (& $utf '{"state":"thinking","task":"Analisando tarefa","zone":"Classificação"}')
+Resultado esperado: Hermes move Personal WhatsApp → Message Intake; Event Log `[WHATSAPP] [MANUAL_TEST]`; `approvalState: draft_only`.
 
-# Executing
-Invoke-RestMethod -Uri "http://127.0.0.1:3847/agents/codex/state" -Method POST `
-  -ContentType "application/json; charset=utf-8" `
-  -Body (& $utf '{"state":"executing","task":"Aplicando patch","zone":"GitHub"}')
+### Conectar Evolution API / n8n
 
-# Waiting approval / Done / Error — idem com state correspondente
+Instancia `fabioos-pessoal` (Evolution) → webhook n8n `whatsapp-pietra-v2`. Para presenca no Agentarium, encaminhar payload para `POST /integrations/whatsapp/message`.
+
+### Ligar/desligar grupos
+
+```powershell
+$env:WHATSAPP_GROUPS_ENABLED = "true"   # desligado por padrao
+# Reiniciar backend Agentarium
+```
+
+### Configurar allowlist
+
+```powershell
+$env:WHATSAPP_ALLOWED_CONTACTS = "5511982123896,5511999999999"
+# Reiniciar backend — contatos fora da lista sao registrados sem acao
+```
+
+## Simulacao demo (opcional)
+
+```powershell
+$env:AGENTARIUM_AUTO_SIM = "true"
+.\start_agentarium.ps1
 ```
 
 ## Testes
 
 ```powershell
-.\test_agentarium_event.ps1          # evento de estado
-.\test_agentarium_policy_danger.ps1  # demo danger (Codex)
+.\test_whatsapp_personal_message.ps1   # Hermes + draft_only
+.\test_agentarium_event.ps1           # evento generico
+.\test_whatsapp_pessoal.ps1           # Evolution conectado
 ```
 
 ## Documentacao
 
-- `60_Sistemas/OpenClaw/Agentarium.md` — arquitetura e API
-- `60_Sistemas/OpenClaw/Agentarium_Policies.md` — politicas dos 5 agentes
-- `backend/src/policies/defaultPolicies.ts` — fonte das policies
+- `60_Sistemas/OpenClaw/Agentarium.md` — arquitetura completa v0.5
+- `60_Sistemas/OpenClaw/Agentarium_Agents.md` — catalogo de agentes
+- `backend/src/agents/agentVisualClasses.ts` — classes visuais

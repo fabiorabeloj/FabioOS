@@ -3,6 +3,13 @@ import type { Agent, Zone } from "../types";
 import { ZONES, ZONE_LAYOUT } from "../types";
 
 const ZONE_CLASS: Record<Zone, string> = {
+  "Personal WhatsApp": "zone--personal-wa",
+  "Message Intake": "zone--intake",
+  "Draft Reply": "zone--draft",
+  "Awaiting Fabio": "zone--awaiting",
+  Approved: "zone--approved",
+  Sent: "zone--sent",
+  Blocked: "zone--blocked",
   WhatsApp: "zone--whatsapp",
   Inbox: "zone--inbox",
   Classificação: "zone--classificacao",
@@ -31,11 +38,12 @@ export function ZoneMap({ agents }: Props) {
   }
 
   return (
-    <div className="zone-map zone-map--pixel" aria-label="Mapa tatico de zonas">
+    <div className="zone-map zone-map--pixel zone-map--v05" aria-label="Mapa tatico de zonas">
       {ZONES.map((zone) => {
         const z = ZONE_LAYOUT[zone];
         const count = counts.get(zone) ?? 0;
         const busy = active.get(zone) ?? 0;
+        const shortLabel = zone.length > 14 ? zone.replace("Personal ", "P. ").slice(0, 12) : zone;
         return (
           <div
             key={zone}
@@ -48,12 +56,12 @@ export function ZoneMap({ agents }: Props) {
               "--zone-accent": z.color,
             } as CSSProperties}
           >
-            <span className="zone__label pixel-label">{zone}</span>
+            <span className="zone__label pixel-label">{shortLabel}</span>
             <span className="zone__meta">
-              <span className="zone__count pixel-badge">{count} ops</span>
+              {count > 0 && <span className="zone__count pixel-badge">{count}</span>}
               {busy > 0 && (
                 <span className="zone__active pixel-badge pixel-badge--state pixel-badge--executing">
-                  {busy} live
+                  LIVE
                 </span>
               )}
             </span>

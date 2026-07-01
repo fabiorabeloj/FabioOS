@@ -1,6 +1,6 @@
 import { useMemo, useState } from "react";
 import type { Agent, AgentLayer } from "../types";
-import { LAYER_LABELS, STATUS_LABELS, RISK_LABELS } from "../types";
+import { LAYER_LABELS, STATUS_LABELS, RAW_STATUS_LABELS, RISK_LABELS } from "../types";
 import { filterCatalogByLayer } from "../hooks/useAgents";
 
 type Props = {
@@ -33,6 +33,12 @@ export function AgentCatalogPanel({ catalog, selectedId, onSelect }: Props) {
         <p className="agent-catalog__counts pixel-label">
           {catalog.counts.active} ativos · {catalog.counts.planned} planejados ·{" "}
           {catalog.counts.total} total
+          {catalog.maestro?.synced && (
+            <>
+              {" "}
+              · Maestro {catalog.maestro.generatedAt?.slice(0, 16) ?? "—"}
+            </>
+          )}
         </p>
       </header>
 
@@ -81,7 +87,7 @@ function CatalogCard({
   return (
     <button
       type="button"
-      className={`catalog-card catalog-card--${agent.status} ${selected ? "catalog-card--selected" : ""} ${agent.essential ? "catalog-card--essential" : ""}`}
+      className={`catalog-card catalog-card--${agent.status} ${agent.rawStatus === "gated" ? "catalog-card--gated" : ""} ${selected ? "catalog-card--selected" : ""} ${agent.essential ? "catalog-card--essential" : ""}`}
       onClick={() => onSelect(agent.id)}
     >
       <header>
@@ -89,6 +95,11 @@ function CatalogCard({
         <span className={`catalog-badge catalog-badge--${agent.status}`}>
           {STATUS_LABELS[agent.status]}
         </span>
+        {agent.rawStatus === "gated" && (
+          <span className="catalog-badge catalog-badge--gated">
+            {RAW_STATUS_LABELS.gated}
+          </span>
+        )}
       </header>
       <p className="catalog-card__layer pixel-label">{LAYER_LABELS[agent.layer]}</p>
       <p className="catalog-card__zone">{agent.catalogZone}</p>

@@ -231,6 +231,78 @@ const supervisorWalk2 = f(
   "....KKKK....",
 );
 
+const megatronIdle = f(
+  "....KKKK....",
+  "...KRRRRK...",
+  "..KRCWWCKK..",
+  "..KRCWWCKK..",
+  "..KRRRRRRK..",
+  "...KRRRRK...",
+  "..KRRRRRRK..",
+  "..KR....RK..",
+  "..KDD..DDK..",
+  "..KK....KK..",
+);
+
+const hermesIdle = f(
+  "....KKKK....",
+  "...KGGGGK...",
+  "..KGWWWWGK..",
+  "..KGWBWBGK..",
+  "..KGGGGGGK..",
+  "..KGCCCCGK..",
+  "..KG....GK..",
+  "..KDD..DDK..",
+  "..KK....KK..",
+  "...KGGGK....",
+);
+
+const guardiaoIdle = f(
+  "....KKKK....",
+  "...KRRRRK...",
+  "..KRYSSYRK..",
+  "..KRYSSYRK..",
+  "..KRRRRRRK..",
+  "..KRRRRRRK..",
+  "..KR....RK..",
+  "..KDD..DDK..",
+  "..KK....KK..",
+);
+
+const roteadorIdle = f(
+  "....KKKK....",
+  "...KOOOOK...",
+  "..KOBBBOOK..",
+  "..KOBBBBOK..",
+  "..KOOBBBOOK.",
+  "...KOOOOK...",
+  "..KDD..DDK..",
+  "..KK....KK..",
+);
+
+const memoriaIdle = f(
+  "....KKKK....",
+  "...KPPPPK...",
+  "..KPWWWWPK..",
+  "..KPWCCWPK..",
+  "..KPWWWWPK..",
+  "...KPPPPK...",
+  "..KDD..DDK..",
+  "..KK....KK..",
+);
+
+function walkFrom(idle: PixelFrame): [PixelFrame, PixelFrame] {
+  const w1 = [...idle, "....KKKK...."];
+  const w2 = [...idle, "..KK...KK..."];
+  return [w1, w2];
+}
+
+const [megatronWalk1, megatronWalk2] = walkFrom(megatronIdle);
+const [hermesWalk1, hermesWalk2] = walkFrom(hermesIdle);
+const [guardiaoWalk1, guardiaoWalk2] = walkFrom(guardiaoIdle);
+const [roteadorWalk1, roteadorWalk2] = walkFrom(roteadorIdle);
+const [memoriaWalk1, memoriaWalk2] = walkFrom(memoriaIdle);
+
 function thinkingVariant(base: PixelFrame): PixelFrame[] {
   const antenna = f(
     "...K.K.K....",
@@ -324,6 +396,24 @@ const pietraBase = mkSprite(
 pietraBase.frames.idle = [pietraIdle, pietraIdle2];
 
 export const AGENT_SPRITES: Record<string, PixelSpriteDefinition> = {
+  megatron: mkSprite(
+    "megatron",
+    "MEGATRON",
+    3,
+    mergePalette({ R: "#991b1b", C: "#22d3ee" }),
+    megatronIdle,
+    megatronWalk1,
+    megatronWalk2,
+  ),
+  hermes: mkSprite(
+    "hermes",
+    "Hermes",
+    3,
+    mergePalette({ G: "#15803d", W: "#ffffff", B: "#86efac" }),
+    hermesIdle,
+    hermesWalk1,
+    hermesWalk2,
+  ),
   pietra: pietraBase,
   arquivista: mkSprite(
     "arquivista",
@@ -360,6 +450,33 @@ export const AGENT_SPRITES: Record<string, PixelSpriteDefinition> = {
     supervisorIdle,
     supervisorWalk1,
     supervisorWalk2,
+  ),
+  guardiao: mkSprite(
+    "guardiao",
+    "Guardião",
+    3,
+    mergePalette({ R: "#dc2626", Y: "#eab308", S: "#64748b" }),
+    guardiaoIdle,
+    guardiaoWalk1,
+    guardiaoWalk2,
+  ),
+  roteador: mkSprite(
+    "roteador",
+    "Roteador",
+    3,
+    mergePalette({ O: "#ea580c", B: "#2563eb" }),
+    roteadorIdle,
+    roteadorWalk1,
+    roteadorWalk2,
+  ),
+  memoria: mkSprite(
+    "memoria",
+    "Memória",
+    3,
+    mergePalette({ P: "#7c3aed", C: "#22d3ee", W: "#e2e8f0" }),
+    memoriaIdle,
+    memoriaWalk1,
+    memoriaWalk2,
   ),
 };
 

@@ -1,5 +1,5 @@
 import type { Agent } from "../types";
-import { LAYER_LABELS, STATE_LABELS, RISK_LABELS, STATUS_LABELS } from "../types";
+import { LAYER_LABELS, STATE_LABELS, RISK_LABELS, STATUS_LABELS, getVisualClass } from "../types";
 import { PolicyBadges } from "./PolicyBadges";
 
 type Props = {
@@ -17,11 +17,34 @@ export function AgentInspector({ agent }: Props) {
   }
 
   const p = agent.policy;
+  const visualClass = getVisualClass(agent.id);
 
   return (
     <aside className="agent-inspector panel-tactical pixel-panel pixel-border">
       <h2>Agent Inspector</h2>
       <PolicyBadges policy={p} />
+
+      {visualClass && (
+        <>
+          <h3 className="inspector-sub">AGENT CLASS</h3>
+          <dl className="inspector-dl inspector-dl--class">
+            <dt>Visual class</dt>
+            <dd>{visualClass.visualClass}</dd>
+            <dt>Operational role</dt>
+            <dd>{visualClass.operationalRole}</dd>
+            <dt>Primary lane</dt>
+            <dd>{visualClass.primaryLane}</dd>
+            <dt>Home zone</dt>
+            <dd>{visualClass.homeZone}</dd>
+            <dt>Signature item</dt>
+            <dd>{visualClass.signatureItem}</dd>
+            <dt>Color identity</dt>
+            <dd>{visualClass.colorIdentity}</dd>
+            <dt>Approval requirement</dt>
+            <dd>{visualClass.approvalRequirement}</dd>
+          </dl>
+        </>
+      )}
 
       <dl className="inspector-dl">
         <dt>Name</dt>
@@ -46,6 +69,24 @@ export function AgentInspector({ agent }: Props) {
         <dd>{agent.task}</dd>
         <dt>Runtime zone</dt>
         <dd>{agent.zone}</dd>
+        {agent.homeZone && (
+          <>
+            <dt>Home zone</dt>
+            <dd>{agent.homeZone}</dd>
+          </>
+        )}
+        {agent.lastJobId && (
+          <>
+            <dt>Last job</dt>
+            <dd className="mono">{agent.lastJobId}</dd>
+          </>
+        )}
+        {agent.lastFromZone && agent.lastToZone && (
+          <>
+            <dt>Last route</dt>
+            <dd>{agent.lastFromZone} → {agent.lastToZone}</dd>
+          </>
+        )}
         <dt>UpdatedAt</dt>
         <dd>{new Date(agent.updatedAt).toLocaleString("pt-BR")}</dd>
       </dl>
