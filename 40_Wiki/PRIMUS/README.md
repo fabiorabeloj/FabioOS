@@ -16,6 +16,14 @@ Conhecimento processado do universo narrativo PRIMUS.
 - [[Falhas_Ontologicas_PRIMUS]]
 - [[Arquitetura_MultiIA_PRIMUS]]
 
+## MOC e Enciclopedia
+
+- [[40_Wiki/_MOCs/MOC_PRIMUS]]
+- [[40_Wiki/PRIMUS/Enciclopedia/README]]
+- [[40_Wiki/PRIMUS/Instancias/README]]
+- [[40_Wiki/PRIMUS/Persistencia/README]]
+- [[80_Specs/PRIMUS/Spec_Nos_Enciclopedia_PRIMUS]]
+
 ## Fonte Inicial
 
 - [[05_Raw_Sources/PRIMUS/Inventario_Fontes_PRIMUS_2026-06-30]]

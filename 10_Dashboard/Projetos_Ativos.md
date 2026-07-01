@@ -17,6 +17,7 @@ atualizado_em: 2026-06-29
 - [[30_Projetos/OpenClaw/README]]
 - [[30_Projetos/Escola_SaaS/README]]
 - [[30_Projetos/PRIMUS/README]]
+- [[40_Wiki/_MOCs/MOC_PRIMUS]]
 - [[30_Projetos/TraderOS/README]]
 
 ## Regra

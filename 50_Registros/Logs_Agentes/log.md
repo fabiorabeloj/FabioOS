@@ -243,3 +243,10 @@ Formato:
 - Entrega: `.obsidian/graph.json`, [[10_Dashboard/Obsidian_Revitalizacao_FabioOS]], [[40_Wiki/_MOCs/MOC_Obsidian_FabioOS]], [[50_Registros/Changelog/2026-06-30_obsidian-revitalizacao]].
 - Resultado: Graph View passou a usar pastas canonicas e notas novas foram wikilinkadas em MOCs/dashboards.
 - Limites: sem codigo MEGATRON, sem codigo RAG, sem reindex, sem migracao em massa.
+
+## [2026-06-30] implementacao | PRIMUS MOC e Enciclopedia
+
+- Motivo: usuario apontou que cores e dashboards nao bastam se os mapas nao levam a nos reais.
+- Entrega: [[40_Wiki/_MOCs/MOC_PRIMUS]], [[40_Wiki/PRIMUS/Enciclopedia/README]], [[40_Wiki/PRIMUS/Instancias/README]], [[40_Wiki/PRIMUS/Persistencia/README]], [[80_Specs/PRIMUS/Spec_Nos_Enciclopedia_PRIMUS]].
+- Auditoria: [[50_Registros/Auditoria/Auditoria_Links_Obsidian_PRIMUS_2026-06-30]].
+- Limites: sem extracao de PDF, sem reindex RAG, sem codigo MEGATRON/RAG.

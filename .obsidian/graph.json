@@ -1,4 +1,4 @@
-﻿{
+{
     "collapse-filter":  false,
     "search":  "",
     "showTags":  false,
@@ -85,6 +85,76 @@
                                       }
                         },
                         {
+                            "query":  "path:\"40_Wiki/PRIMUS/Enciclopedia\"",
+                            "color":  {
+                                          "a":  1,
+                                          "rgb":  2792847
+                                      }
+                        },
+                        {
+                            "query":  "path:\"40_Wiki/PRIMUS/Enciclopedia/Personagens_e_Opcoes\"",
+                            "color":  {
+                                          "a":  1,
+                                          "rgb":  16032353
+                                      }
+                        },
+                        {
+                            "query":  "path:\"40_Wiki/PRIMUS/Enciclopedia/Magias_e_Poderes\"",
+                            "color":  {
+                                          "a":  1,
+                                          "rgb":  8431798
+                                      }
+                        },
+                        {
+                            "query":  "path:\"40_Wiki/PRIMUS/Enciclopedia/Itens_e_Tesouros\"",
+                            "color":  {
+                                          "a":  1,
+                                          "rgb":  15320170
+                                      }
+                        },
+                        {
+                            "query":  "path:\"40_Wiki/PRIMUS/Enciclopedia/Criaturas\"",
+                            "color":  {
+                                          "a":  1,
+                                          "rgb":  15167313
+                                      }
+                        },
+                        {
+                            "query":  "path:\"40_Wiki/PRIMUS/Enciclopedia/Lugares\"",
+                            "color":  {
+                                          "a":  1,
+                                          "rgb":  5731728
+                                      }
+                        },
+                        {
+                            "query":  "path:\"40_Wiki/PRIMUS/Enciclopedia/Faccoes_e_Culturas\"",
+                            "color":  {
+                                          "a":  1,
+                                          "rgb":  11887990
+                                      }
+                        },
+                        {
+                            "query":  "path:\"40_Wiki/PRIMUS/Enciclopedia/Regras_e_Procedimentos\"",
+                            "color":  {
+                                          "a":  1,
+                                          "rgb":  7166330
+                                      }
+                        },
+                        {
+                            "query":  "path:\"40_Wiki/PRIMUS/Instancias\"",
+                            "color":  {
+                                          "a":  1,
+                                          "rgb":  2508371
+                                      }
+                        },
+                        {
+                            "query":  "path:\"40_Wiki/PRIMUS/Persistencia\"",
+                            "color":  {
+                                          "a":  1,
+                                          "rgb":  9081213
+                                      }
+                        },
+                        {
                             "query":  "path:\"50_Registros\"",
                             "color":  {
                                           "a":  1,
@@ -103,6 +173,13 @@
                             "color":  {
                                           "a":  1,
                                           "rgb":  15769664
+                                      }
+                        },
+                        {
+                            "query":  "path:\"50_Registros/Auditoria\"",
+                            "color":  {
+                                          "a":  1,
+                                          "rgb":  16763904
                                       }
                         },
                         {
@@ -197,6 +274,62 @@
                                       }
                         },
                         {
+                            "query":  "tag:#enciclopedia",
+                            "color":  {
+                                          "a":  1,
+                                          "rgb":  2792847
+                                      }
+                        },
+                        {
+                            "query":  "tag:#raca",
+                            "color":  {
+                                          "a":  1,
+                                          "rgb":  16032353
+                                      }
+                        },
+                        {
+                            "query":  "tag:#item",
+                            "color":  {
+                                          "a":  1,
+                                          "rgb":  15320170
+                                      }
+                        },
+                        {
+                            "query":  "tag:#faccao",
+                            "color":  {
+                                          "a":  1,
+                                          "rgb":  11887990
+                                      }
+                        },
+                        {
+                            "query":  "tag:#lugar",
+                            "color":  {
+                                          "a":  1,
+                                          "rgb":  5731728
+                                      }
+                        },
+                        {
+                            "query":  "tag:#criatura",
+                            "color":  {
+                                          "a":  1,
+                                          "rgb":  15167313
+                                      }
+                        },
+                        {
+                            "query":  "tag:#missao",
+                            "color":  {
+                                          "a":  1,
+                                          "rgb":  2508371
+                                      }
+                        },
+                        {
+                            "query":  "tag:#deltap",
+                            "color":  {
+                                          "a":  1,
+                                          "rgb":  9081213
+                                      }
+                        },
+                        {
                             "query":  "tag:#megatron",
                             "color":  {
                                           "a":  1,
@@ -270,6 +403,6 @@
     "repelStrength":  10,
     "linkStrength":  1,
     "linkDistance":  250,
-    "scale":  0.07058167567046385,
+    "scale":  0.09895430218636964,
     "close":  true
 }

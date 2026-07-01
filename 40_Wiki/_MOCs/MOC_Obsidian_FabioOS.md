@@ -34,6 +34,8 @@ tags: [fabios, moc, obsidian, grafo, llm-wiki]
 
 ## PRIMUS e Fontes Restritas
 
+- [[40_Wiki/_MOCs/MOC_PRIMUS]]
+- [[40_Wiki/PRIMUS/Enciclopedia/README]]
 - [[05_Raw_Sources/PRIMUS/2026-06-30_pdf-dnd-core-restricted-lote-0001]]
 - [[30_Projetos/PRIMUS/CatalogEntries_Restricted_DND_Core_0001]]
 - [[30_Projetos/PRIMUS/Plano_Transformacao_Restricted_DND_Core]]

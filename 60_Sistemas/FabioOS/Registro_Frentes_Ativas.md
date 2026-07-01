@@ -87,6 +87,7 @@ Artefatos compartilhados incluem:
 | PRIMUS_OPERACAO_56 | Codex | `05_Raw_Sources/PRIMUS/`, `30_Projetos/PRIMUS/`, `40_Wiki/PRIMUS/`, `80_Specs/PRIMUS/`, log, barramento e changelog PRIMUS | concluida | 2026-06-30 | Project ChatGPT PRIMUS vasculhado; Changelog 5.6 formalizado; cockpit operacional e specs Vector/WorldCycle/Villain/MissionContract criados; Missao 0001 segue bloqueada ate validar pagina/trecho de 5 CatalogEntries; sem RAG/MCP/OpenClaw/n8n/push |
 | PDF_DROP_TRIGGER_V0 | Codex | `00_Inbox/pdfs/`, `60_Sistemas/FabioOS/scripts/watch_pdf_drop.py`, `60_Sistemas/n8n/Workflows/FabioOS_DropPDF_Aprende.json`, barramento/log/changelog | concluida | 2026-06-30 | Porta de entrada da SPEC `pipeline-pdf-aprende` implementada: detecta PDF e entrega caminho/metadados ao Claude/documentalista; sem OCR, sem RAG, sem Stirling auth, sem push |
 | OBSIDIAN_REVITALIZACAO | Codex | `.obsidian/graph.json`, `10_Dashboard/`, `40_Wiki/_MOCs/`, log, barramento e changelog | concluida | 2026-06-30 | Graph View atualizado para pastas canonicas; dashboard/MOC criados; wikilinks adicionados; nao tocou codigo MEGATRON/RAG nem reindex |
+| OBSIDIAN_PRIMUS_MOCS | Codex | `40_Wiki/_MOCs/MOC_PRIMUS.md`, `40_Wiki/PRIMUS/`, `80_Specs/PRIMUS/`, dashboards e auditoria de links | concluida | 2026-06-30 | PRIMUS ganhou MOC central, Enciclopedia E, Instancias I, Persistencia P, template e SPEC para novos nos; sem PDF extraction, sem RAG/reindex |
 
 ## Frentes observadas
 

@@ -19,3 +19,4 @@ SPECs do sistema narrativo PRIMUS.
 - [[Spec_Villain_Engine_PRIMUS]]
 - [[Spec_Mission_Contract_PRIMUS]]
 - [[Spec_Digestor_PDF_PRIMUS]]
+- [[Spec_Nos_Enciclopedia_PRIMUS]]

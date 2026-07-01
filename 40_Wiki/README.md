@@ -17,6 +17,12 @@ Aqui entram conceitos, sinteses, paginas de ferramentas, entidades, repertorios 
 MOCs:
 
 - [[40_Wiki/_MOCs/MOC_Obsidian_FabioOS]]
+- [[40_Wiki/_MOCs/MOC_PRIMUS]]
+
+Projetos vivos:
+
+- [[40_Wiki/PRIMUS/README]]
+- [[40_Wiki/PRIMUS/Enciclopedia/README]]
 
 Compatibilidade:
 

@@ -5,6 +5,7 @@ Projeto narrativo persistente do FabioOS.
 ## Comece Aqui
 
 - [[PRIMUS]]
+- [[40_Wiki/_MOCs/MOC_PRIMUS]]
 - [[Plano_Ingestao_PRIMUS]]
 - [[Roteiro_Execucao_PRIMUS_6_Blocos]]
 - [[WorldState_0001_PRIMUS]]
@@ -31,6 +32,18 @@ Projeto narrativo persistente do FabioOS.
 - [[Plano_Transformacao_Restricted_DND_Core]]
 - [[Missao_0001_Preparacao]]
 - [[40_Wiki/PRIMUS/Motor_Causal_PRIMUS]]
+
+## Nos Futuros do PRIMUS
+
+- Enciclopedia: [[40_Wiki/PRIMUS/Enciclopedia/README]]
+- Personagens e opcoes: [[40_Wiki/PRIMUS/Enciclopedia/Personagens_e_Opcoes/README]]
+- Itens e tesouros: [[40_Wiki/PRIMUS/Enciclopedia/Itens_e_Tesouros/README]]
+- Faccoes e culturas: [[40_Wiki/PRIMUS/Enciclopedia/Faccoes_e_Culturas/README]]
+- Lugares: [[40_Wiki/PRIMUS/Enciclopedia/Lugares/README]]
+- Criaturas: [[40_Wiki/PRIMUS/Enciclopedia/Criaturas/README]]
+- Regras: [[40_Wiki/PRIMUS/Enciclopedia/Regras_e_Procedimentos/README]]
+- Instancias: [[40_Wiki/PRIMUS/Instancias/README]]
+- Persistencia: [[40_Wiki/PRIMUS/Persistencia/README]]
 
 ## Relacoes
 
