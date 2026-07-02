@@ -26,6 +26,18 @@ O caminho correto e:
 medir uso -> preparar interface -> comprar modulo -> migrar servico -> validar -> registrar custo
 ```
 
+## Regra financeira
+
+Tokens/API sao prioridade antes de GPU, mas nao antes do Core 24/7.
+
+```text
+Core 24/7 primeiro
+tokens com teto depois
+GPU local so apos metricas
+```
+
+Ver decisao: [[50_Registros/Decisoes/ADR_2026-07-02_Tokens_vs_Hardware_MEGATRON]]
+
 ## Fase H0 - Estado atual
 
 ### Objetivo
@@ -97,6 +109,16 @@ Falha do sistema operacional nao implica perda de memoria do FabioOS.
 - fonte ATX adequada;
 - GPU NVIDIA com VRAM suficiente;
 - prioridade candidata: RTX 3090 24 GB se custo/estado fizer sentido.
+
+### Gate financeiro
+
+Nao iniciar H3 sem:
+
+- 2-3 meses de custo API/cloud GPU medido;
+- lista de tarefas privadas ou massivas que exigem local;
+- Core estabilizado;
+- backup minimamente confiavel;
+- teste local claro para o modelo escolhido.
 
 ### Software
 

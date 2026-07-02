@@ -164,6 +164,44 @@ A melhor estrutura para o FabioOS/MEGATRON agora e:
 
 Essa decisao preserva ambicao sem trocar arquitetura por ansiedade de compra.
 
+## Addendum 2026-07-02 - Tokens/API vs hardware local
+
+Decisao complementar: [[50_Registros/Decisoes/ADR_2026-07-02_Tokens_vs_Hardware_MEGATRON]]
+
+### Tese
+
+No estado atual do FabioOS, tokens/API valem mais que GPU local, mas nao valem mais que ter um Core 24/7.
+
+Ordem correta:
+
+```text
+MEGATRON Core 24/7
+-> teto controlado de tokens/API
+-> RAM/SSD/backup conforme gargalo
+-> GPU local somente apos metricas
+```
+
+### Por que nao GPU agora
+
+- O gargalo atual ainda e software, orquestracao, fluxo, UI, logs e confiabilidade.
+- Os melhores modelos externos continuam superiores para arquitetura, codigo e raciocinio complexo.
+- Uma GPU local so vira investimento bom quando houver carga recorrente, privacidade forte ou processamento em massa.
+- Sem Core/backup/observabilidade, a GPU acelera um sistema ainda imaturo.
+
+### Por que nao so tokens
+
+- Tokens nao criam operacao 24/7.
+- Tokens nao mantem n8n, OpenClaw, Agentarium, filas, watchers e memoria operacional ligados.
+- Tokens acabam; infraestrutura permanece.
+
+### Politica operacional
+
+- Usar API para tarefas de alto valor e automacoes medidas.
+- Preferir OpenRouter/API com teto mensal, nao credito ilimitado.
+- Registrar custo por tarefa antes de subir teto.
+- Nao enviar dados `restricted`, `no_rag` ou `forbidden_external` para API externa.
+- Medir 7 dias antes de aumentar gasto.
+
 ## Referencias
 
 - OpenAI Help Center - ChatGPT Plus e Pro: `https://help.openai.com/`
