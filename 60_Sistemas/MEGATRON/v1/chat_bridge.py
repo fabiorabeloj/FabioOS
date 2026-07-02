@@ -57,6 +57,9 @@ def _n(s: str) -> str:
 
 # --- rotas -------------------------------------------------------------------
 RX_APROVA = re.compile(r"^aprovar?\s+(\S+)\s*$", re.IGNORECASE)
+# lote do digest: "aprova a, c" / "nega b" (letras únicas mapeadas em digest_map.json)
+RX_LOTE = re.compile(r"^(aprovar?|nega[r]?|ratificar?)\s+([a-z](?:[\s,]+[a-z])*)\s*$", re.IGNORECASE)
+RX_DIGEST = re.compile(r"^(digest|bom dia|resumo da manha)\s*$", re.IGNORECASE)
 RX_RELAY = re.compile(
     r"^(?:manda|avisa|fala|diz|ordena|ordem)\s+(?:pr[oa]|para)\s*o?\s*"
     r"(codex|cursor|megatron|todos)\s*[:,;\-]?\s*(.+)$", re.IGNORECASE)
@@ -165,8 +168,62 @@ def contexto_sistema() -> str:
     return "\n".join(L)
 
 
+def rota_digest() -> str:
+    from digest import gerar
+    return gerar(quiet=True)
+
+
+def rota_lote(verbo: str, letras: list[str]) -> str:
+    """Decisões em lote do digest: aprova/nega/ratifica por código curto."""
+    mapa_path = BASE / "state" / "digest_map.json"
+    if not mapa_path.exists():
+        return "Sem digest ativo — digite `digest` primeiro para gerar os códigos."
+    mapa = json.loads(mapa_path.read_text(encoding="utf-8"))
+    aprovando = verbo.lower().startswith(("aprova", "ratifica"))
+    L = []
+    for cod in letras:
+        alvo = mapa.get(cod)
+        if not alvo:
+            L.append(f"({cod}) código desconhecido — gere um `digest` novo.")
+            continue
+        if alvo["tipo"] == "fila":
+            if aprovando and alvo.get("sensivel"):
+                L.append(f"({cod}) ⛔ sensível: não entra em lote — trate individual: aprova {alvo['id']}")
+            elif aprovando:
+                L.append(f"({cod}) {rota_aprovar(alvo['id']).splitlines()[0]}")
+            else:  # negar = arquivar
+                fila = json.loads(QUEUE_PATH.read_text(encoding="utf-8"))
+                for i in fila["fila"]:
+                    if i["id"] == alvo["id"] and i["status"] == "waiting_approval":
+                        i["status"] = "archived"
+                QUEUE_PATH.write_text(json.dumps(fila, ensure_ascii=False, indent=2), encoding="utf-8")
+                L.append(f"({cod}) arquivado (negado por você).")
+        elif alvo["tipo"] == "adr":
+            adr = BASE.parents[2] / alvo["path"]
+            txt = adr.read_text(encoding="utf-8")
+            if aprovando:
+                txt = txt.replace("status: proposto-aguardando-ratificacao",
+                                  "status: aceito\nratificado_por: fabio (via chat/digest)\n"
+                                  f"ratificado_em: {__import__('datetime').datetime.now().date()}", 1)
+                adr.write_text(txt, encoding="utf-8")
+                L.append(f"({cod}) ADR RATIFICADA ✅ {alvo['path'].split('/')[-1]}")
+            else:
+                txt = txt.replace("status: proposto-aguardando-ratificacao", "status: rejeitado", 1)
+                adr.write_text(txt, encoding="utf-8")
+                L.append(f"({cod}) ADR rejeitada — permanece no vault com o motivo a registrar.")
+    return "\n".join(L) or "Nada processado."
+
+
 def rotear(texto: str) -> dict:
     t = _n(texto)
+
+    if RX_DIGEST.match(texto.strip()):
+        return {"handled": True, "tipo": "digest", "reply": rota_digest()}
+
+    m = RX_LOTE.match(texto.strip())
+    if m:
+        letras = [c for c in re.split(r"[\s,]+", m.group(2).lower()) if c]
+        return {"handled": True, "tipo": "lote", "reply": rota_lote(m.group(1), letras)}
 
     m = RX_APROVA.match(texto.strip())
     if m:

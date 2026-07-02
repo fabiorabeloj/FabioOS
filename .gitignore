@@ -93,3 +93,7 @@ logs/
 
 # PDFs brutos: ficam no disco/drop, nunca no Git (binarios pesados; pipeline extrai)
 05_Raw_Sources/PDFs/
+
+# Digest diario: regenerado as 6h30, nao versionar (pode conter resumo de email real)
+10_Dashboard/Digest_Hoje.md
+60_Sistemas/MEGATRON/v1/state/digest_map.json
