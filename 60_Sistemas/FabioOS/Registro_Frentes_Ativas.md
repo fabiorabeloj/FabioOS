@@ -102,6 +102,7 @@ Artefatos compartilhados incluem:
 | INTAKE_ADAPTER_OUTPUT_GUARD | Codex | `60_Sistemas/FabioOS/scripts/universal_intake_adapter.py`, relatorio e changelog | concluida | 2026-07-01 | Adapter escreve por padrao em fila dedicada `state/intake_queue.codex_adapter.json`; `--output` relativo validado; sem tocar fila viva, arquivista, UI, RAG/API/push |
 | INTAKE_COMMAND_EXTRACTOR | Codex | `60_Sistemas/FabioOS/scripts/intake_command_extract.py`, `universal_intake_adapter.py`, relatorio e changelog | concluida | 2026-07-01 | Comando natural agora extrai produto/serie/tema/prazo e anexa `extracao` opcional; sem tocar Agentarium, arquivista, RAG/API/push |
 | MEGATRON_INFRA_DISTRIBUIDA | Codex | `60_Sistemas/MEGATRON/infra/`, `80_Specs/MEGATRON/2026-07-02_infra-distribuida-hardware-megatron.md`, ADR, dashboard e changelog | concluida | 2026-07-02 | Hardware/Core/GPU/NAS modelados como nos configuraveis; nenhum servico real alterado, sem RAG reindex, sem compra, sem push |
+| MEGATRON_COMPUTE_MANAGER_LLM | Codex | `60_Sistemas/MEGATRON/infra/llm_router.py`, `model_registry.example.json`, SPEC, ADR, dashboard e changelog | concluida | 2026-07-02 | LLMs/modelos formalizados por alias e politica de tarefa/custo/privacidade; nenhum modelo chamado, sem API, sem runtime, sem push |
 
 ## Frentes observadas
 
@@ -162,3 +163,4 @@ Ao concluir, alterar `Estado` para `concluida`, registrar resultado e apontar o 
 - 2026-07-01 - `INTAKE_ADAPTER_OUTPUT_GUARD` concluida. `universal_intake_adapter.py` deixou de usar a fila viva como destino padrao e passou a validar `--output` relativo sem crash.
 - 2026-07-01 - `INTAKE_COMMAND_EXTRACTOR` concluida. Comandos como `prova do 8o ano sobre Africa para amanha` passam a gerar `extracao` estruturada no card do Intake Universal.
 - 2026-07-02 - `MEGATRON_INFRA_DISTRIBUIDA` concluida. Core, GPU, NAS e workers foram formalizados como nos por capacidade, com registry JSON, script de validacao/roteamento, SPEC, ADR e roadmap.
+- 2026-07-02 - `MEGATRON_COMPUTE_MANAGER_LLM` concluida. Criado roteador v0 para escolher alias/modelo por tarefa, classe de dado, custo, qualidade e privacidade, sem chamar API.

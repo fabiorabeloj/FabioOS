@@ -20,6 +20,7 @@ Painel da interface/orquestrador unico do FabioOS.
 - [[60_Sistemas/MEGATRON/v0/README_MEGATRON_v0]]
 - [[60_Sistemas/MEGATRON/infra/Arquitetura_Hardware_MEGATRON_FabioOS_v1]]
 - [[60_Sistemas/MEGATRON/infra/Roadmap_Hardware_Software_MEGATRON]]
+- [[60_Sistemas/MEGATRON/infra/Compute_Manager_LLM_Orchestrator]]
 - [[30_Projetos/MEGATRON/README]]
 
 ## Ligar o cockpit (Windows)
@@ -49,6 +50,12 @@ Registro de nos:
 ```powershell
 python 60_Sistemas/MEGATRON/infra/node_registry.py validate
 python 60_Sistemas/MEGATRON/infra/node_registry.py route --capability vector_search
+```
+
+Roteador de LLMs:
+
+```powershell
+python 60_Sistemas/MEGATRON/infra/llm_router.py route --task coding --data-class internal
 ```
 
 ## Regras
