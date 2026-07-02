@@ -3,10 +3,10 @@ tipo: sistema
 area: 60_Sistemas
 projeto: FabioOS
 sistema: OpenClaw
-status: companion-ativo-whatsapp-separado
+status: gateway-borda-opcional
 tags: [openclaw, gateway, whatsapp, evolution-api, n8n, pietra]
 criado_em: 2026-06-26
-atualizado_em: 2026-06-27
+atualizado_em: 2026-07-02
 ---
 
 # Sistema OpenClaw — Gateway Conversacional
@@ -142,3 +142,24 @@ Nunca registrar: nome completo, número de telefone completo, dados de alunos id
 - [[40_Wiki/_compat_wiki/sistemas/n8n]]
 - [[60_Sistemas/n8n/Workflows/FabioOS_WhatsApp_Pietra]]
 - [[60_Sistemas/OpenClaw/setup/EVOLUTION_API_SETUP]]
+
+## Decisao operacional - 2026-07-02
+
+OpenClaw passa a ser tratado como **gateway de borda opcional** do MEGATRON.
+
+Ele pode receber/exibir eventos e encaminhar ao `Universal Intake`, mas nao e
+o nucleo do FabioOS, nao decide sozinho entre agentes e nao envia mensagens
+externas sem aprovacao humana.
+
+Antes de retomar QR Code, mobile ou WhatsApp real, o aceite minimo e:
+
+```text
+OpenClaw -> Universal Intake -> MEGATRON -> Agentarium/Workboard -> aprovacao humana -> log
+```
+
+Referencias:
+
+- [[50_Registros/Auditoria/Diagnostico_OpenClaw_Recuperacao_2026-07-02]]
+- [[50_Registros/Decisoes/ADR_2026-07-02_OpenClaw_Gateway_De_Borda]]
+- [[80_Specs/OpenClaw/2026-07-02_recuperacao-openclaw-gateway-borda]]
+- [[60_Sistemas/OpenClaw/Plano_Recuperacao_OpenClaw_FabioOS_2026-07-02]]

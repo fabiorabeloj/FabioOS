@@ -1,13 +1,28 @@
 
 # OpenClaw
 
+## Decisao operacional - 2026-07-02
+
+OpenClaw fica reposicionado como **gateway de borda opcional** do MEGATRON.
+
+Ele nao e mais tratado como nucleo, memoria, orquestrador soberano ou solucao
+automatica para mobile/WhatsApp. O papel correto e receber ou exibir eventos,
+encaminhar para o MEGATRON/Universal Intake e respeitar aprovacao humana.
+
+Documentos de recuperacao:
+
+- [[50_Registros/Auditoria/Diagnostico_OpenClaw_Recuperacao_2026-07-02]]
+- [[50_Registros/Decisoes/ADR_2026-07-02_OpenClaw_Gateway_De_Borda]]
+- [[80_Specs/OpenClaw/2026-07-02_recuperacao-openclaw-gateway-borda]]
+- [[60_Sistemas/OpenClaw/Plano_Recuperacao_OpenClaw_FabioOS_2026-07-02]]
+
 ## Função
 
-Secretário Executivo Digital do FabioOS.
+Gateway de borda conversacional e operacional do MEGATRON.
 
 ## Objetivo
 
-Coordenar ferramentas, agentes e automações para reduzir a necessidade de supervisão manual.
+Receber ou exibir eventos, encaminhar ao `Universal Intake` e tornar a acao visivel para aprovacao humana.
 
 ## O que ele NÃO é
 
@@ -22,7 +37,7 @@ Coordenar ferramentas, agentes e automações para reduzir a necessidade de supe
 
 ## O que ele É
 
-Um coordenador operacional capaz de utilizar ferramentas e agentes para executar tarefas complexas.
+Uma borda operacional capaz de conversar, encaminhar eventos e acionar fluxos controlados. A decisao continua no MEGATRON.
 
 ## Relação com os outros sistemas
 
