@@ -17,6 +17,8 @@ tags: [fabios, moc, obsidian, grafo, llm-wiki]
 - [[10_Dashboard/Estrutura_Obsidian_FabioOS]]
 - [[10_Dashboard/Mapa_de_Conexoes_FabioOS]]
 - [[40_Wiki/README]]
+- [[40_Wiki/FabioOS/Gargalos_Sistemicos_FabioOS_MEGATRON]]
+- [[60_Sistemas/Obsidian/Protocolo_Revisao_Links_Nos_Obsidian]]
 
 ## Estrutura Canonica
 
@@ -51,3 +53,4 @@ tags: [fabios, moc, obsidian, grafo, llm-wiki]
 - `05_Raw_Sources/_compat_sources/`: compatibilidade temporaria.
 - `40_Wiki/_compat_wiki/`: compatibilidade temporaria.
 - `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/`: legado arquivado.
+- Novos conceitos devem ser conectados por hubs e aliases antes de virar notas independentes.

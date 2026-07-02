@@ -21,6 +21,8 @@ Painel da interface/orquestrador unico do FabioOS.
 - [[60_Sistemas/MEGATRON/infra/Arquitetura_Hardware_MEGATRON_FabioOS_v1]]
 - [[60_Sistemas/MEGATRON/infra/Roadmap_Hardware_Software_MEGATRON]]
 - [[60_Sistemas/MEGATRON/infra/Compute_Manager_LLM_Orchestrator]]
+- [[40_Wiki/FabioOS/Gargalos_Sistemicos_FabioOS_MEGATRON]]
+- [[80_Specs/MEGATRON/2026-07-02_loop-operacional-fechado-megatron]]
 - [[60_Sistemas/OpenClaw/Plano_Recuperacao_OpenClaw_FabioOS_2026-07-02]]
 - [[30_Projetos/MEGATRON/README]]
 
