@@ -28,12 +28,12 @@ Painel para navegar a estrutura fisica LLM Wiki do FabioOS.
 | Sistemas | [[60_Sistemas/FabioOS/Plano_Mestre_Implantacao_FabioOS]] | Mecanismos internos |
 | Skills | [[70_Skills/README]] | Habilidades reutilizaveis |
 | Specs | [[80_Specs/README]] | Planos executaveis |
-| Arquivo | [[90_Arquivo/README]] | Material antigo |
+| Arquivo | `90_Arquivo/` | Material antigo preservado fora do grafo vivo |
 
 ## Legado arquivado
 
-- [[90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/README]]
-- [[90_Arquivo/Descartes_Visuais_Obsidian_2026-06-29/README]]
+- `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/README.md`
+- `90_Arquivo/Descartes_Visuais_Obsidian_2026-06-29/README.md`
 
 As antigas pastas de raiz foram preservadas nesse arquivo para reduzir poluicao visual no Obsidian.
 

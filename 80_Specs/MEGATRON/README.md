@@ -1,3 +1,14 @@
+---
+tipo: indice
+area: 80_Specs
+projeto: MEGATRON
+status: sprout
+classe_dado: interno
+criado_em: 2026-07-02
+atualizado_em: 2026-07-02
+tags: [megatron, specs, spec-driven]
+---
+
 # MEGATRON
 
 SPECs da interface/orquestrador unico do FabioOS.

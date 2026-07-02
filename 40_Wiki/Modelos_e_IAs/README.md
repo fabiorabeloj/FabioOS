@@ -1,7 +1,18 @@
+---
+tipo: indice
+area: 40_Wiki
+projeto: FabioOS
+status: sprout
+classe_dado: interno
+criado_em: 2026-06-29
+atualizado_em: 2026-07-02
+tags: [ia, modelos, matriz-aptidao, megatron]
+---
+
 # Modelos_e_IAs
 
 Matriz, testes e conhecimento processado sobre modelos e ferramentas de IA.
 
-Compatibilidade:
+Notas:
 
-- [[90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/40_Repertorio/IA/Modelos_e_IAs/Matriz_de_Aptidao_das_IAs_FabioOS]]
+- [[40_Wiki/Modelos_e_IAs/Matriz_de_Aptidao_das_IAs_FabioOS]]

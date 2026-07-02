@@ -35,7 +35,7 @@ Criar tarefa ficticia: preparar prova do 8o ano sobre Africa para amanha.
 
 ## Saida esperada
 
-- Card criado no [[60_Sistemas/FabioOS/schemas/universal_intake_schema|Universal Intake]].
+- Card criado no [[50_Registros/Relatorios/Inbox_Universal_v0.1_Codex_2026-07-01|Universal Intake]].
 - Card visivel na [[50_Registros/Relatorios/Bugbot_Mesa_Despacho_Intake_v0.9.0_Cursor|Mesa de Despacho]].
 - Botao ou comando de aprovacao muda estado.
 - [[60_Sistemas/Agentes/Arquivista_FabioOS|Arquivista]] grava nota em `00_Inbox/Triagem/` ou area definida.

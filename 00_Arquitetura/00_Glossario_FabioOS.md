@@ -24,14 +24,14 @@ A partir do [[00_Arquitetura/01_Modelo_Formal_FabioOS_MEGATRON|Modelo Formal]], 
 |---|---|---|---|
 | **MEGATRON** | Interface, Interface única, JARVIS-do-Fabio | [[60_Sistemas/FabioOS/Visao_Interface_FabioOS]] | Interface cognitiva universal — orquestra o ecossistema de inteligências |
 | **FabioOS** | — | [[00_Arquitetura/01_Modelo_Formal_FabioOS_MEGATRON]] | Plataforma cognitiva base + domínio pessoal |
-| **PietraOS** | Sistema Pietra, Atendimento Pietra | [[60_Sistemas/Pietra/Sistema_Pietra]] | Domínio institucional (Colégio Pietra), futuro SaaS escolar |
-| **PrimusOS** | PRIMUS | [[90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/20_Projetos/PRIMUS/INDEX_PRIMUS]] | Domínio narrativo — digestão de mundos persistentes |
+| **PietraOS** | Sistema Pietra, Atendimento Pietra | [[40_Wiki/FabioOS/PietraOS]] | Domínio institucional (Colégio Pietra), futuro SaaS escolar |
+| **PrimusOS** | PRIMUS | [[40_Wiki/PRIMUS/PrimusOS]] | Domínio narrativo — digestão de mundos persistentes |
 
 ## Regra de uso
 
 - Em documentos **novos de arquitetura/domínio**, usar o termo canônico (MEGATRON, PietraOS, PrimusOS).
 - Em documentos **operacionais existentes**, os nomes antigos continuam válidos (são aliases).
-- `[[PietraOS]]`, `[[PrimusOS]]` e `[[MEGATRON]]` resolvem para as notas acima via `aliases:` no frontmatter delas.
+- [[40_Wiki/FabioOS/PietraOS|PietraOS]], [[40_Wiki/PRIMUS/PrimusOS|PrimusOS]] e [[10_Dashboard/MEGATRON|MEGATRON]] sao os hubs canonicos atuais.
 - **Domínios compartilham infraestrutura, não compartilham dados automaticamente** (regra do Modelo Formal).
 
 ## Relações
@@ -39,7 +39,7 @@ A partir do [[00_Arquitetura/01_Modelo_Formal_FabioOS_MEGATRON|Modelo Formal]], 
 - [[00_Arquitetura/01_Modelo_Formal_FabioOS_MEGATRON]]
 - [[60_Sistemas/FabioOS/Visao_Interface_FabioOS]]
 - [[60_Sistemas/Pietra/Sistema_Pietra]]
-- [[90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/20_Projetos/PRIMUS/INDEX_PRIMUS]]
+- [[40_Wiki/PRIMUS/PrimusOS]]
 - [[40_Wiki/_compat_wiki/indices/mapa-fabios]]
 
 ## Próximas ações

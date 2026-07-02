@@ -23,9 +23,9 @@ Enquanto esse loop nao estiver vivo, [[60_Sistemas/OpenClaw/OpenClaw|OpenClaw]],
 
 ## No central
 
-[[60_Sistemas/FabioOS/schemas/universal_intake_schema|Universal Intake]] deve ser o ponto unico de entrada de eventos.
+[[50_Registros/Relatorios/Inbox_Universal_v0.1_Codex_2026-07-01|Universal Intake]] deve ser o ponto unico de entrada de eventos.
 
-Tudo que chegar por [[60_Sistemas/OpenClaw/OpenClaw|OpenClaw]], [[60_Sistemas/n8n/README|n8n]], [[60_Sistemas/FabioOS/scripts/email_intake_dry_run|e-mail]], PDF, comando manual ou mobile precisa virar um item validado, com dono, estado, risco e criterio de aprovacao.
+Tudo que chegar por [[60_Sistemas/OpenClaw/OpenClaw|OpenClaw]], [[60_Sistemas/n8n/README|n8n]], [[60_Sistemas/FabioOS/specs/2026-07-01_email-intake-dry-run|e-mail]], PDF, comando manual ou mobile precisa virar um item validado, com dono, estado, risco e criterio de aprovacao.
 
 ## Mapa de relacoes
 
@@ -56,7 +56,7 @@ flowchart TD
 | P0 | Loop operacional fechado | [[80_Specs/MEGATRON/2026-07-02_loop-operacional-fechado-megatron|Loop Operacional Fechado]] | Muitas pecas existem, mas a tarefa real nao atravessa tudo | Teste unico: intake -> aprovacao -> nota -> log -> painel |
 | P0 | Mesa de Despacho | [[50_Registros/Relatorios/Bugbot_Mesa_Despacho_Intake_v0.9.0_Cursor|Mesa de Despacho]] | Fabio nao sabe onde aprovar/rejeitar tudo | Agentarium exibir fila viva com estados e botoes |
 | P0 | Escrita em memoria | [[60_Sistemas/Agentes/Arquivista_FabioOS|Arquivista]] | Item aprovado nao vira nota util no Obsidian | `aprovado -> nota.md` com link, fonte e log |
-| P0 | Estado persistente | [[60_Sistemas/MEGATRON/v1/maestro_state|Maestro State]] | Estados vivem em logs, JSONs e simulacoes dispersas | Um registro de estado consumido por UI, agentes e logs |
+| P0 | Estado persistente | [[50_Registros/Relatorios/Diagnostico_Operacional_Intake_Universal_2026-07-01_Claude|Estado persistente]] | Estados vivem em logs, JSONs e simulacoes dispersas | Um registro de estado consumido por UI, agentes e logs |
 | P1 | Observabilidade real | [[60_Sistemas/OpenClaw/Agentarium|Agentarium]] | Agentes parecem animacao, nao trabalho real | Eventos reais vindos do intake, n8n e agentes |
 | P1 | Governanca de permissao | [[10_Dashboard/Governanca_FabioOS|Governanca FabioOS]] | Medo correto de auto-envio, vazamento e acoes externas | Matriz de permissao por dominio, dado e agente |
 | P1 | Roteamento de modelos | [[60_Sistemas/MEGATRON/infra/Compute_Manager_LLM_Orchestrator|Compute Manager]] | Pergunta recorrente: Claude, GPT, Gemini, local ou API? | Alias por capacidade, custo, privacidade e qualidade |
@@ -76,7 +76,7 @@ flowchart TD
 
 | Se este no falhar | Entao este outro falha | Motivo |
 |---|---|---|
-| [[60_Sistemas/FabioOS/schemas/universal_intake_schema|Universal Intake]] | [[50_Registros/Relatorios/Bugbot_Mesa_Despacho_Intake_v0.9.0_Cursor|Mesa de Despacho]] | A UI nao tem contrato seguro para renderizar |
+| [[50_Registros/Relatorios/Inbox_Universal_v0.1_Codex_2026-07-01|Universal Intake]] | [[50_Registros/Relatorios/Bugbot_Mesa_Despacho_Intake_v0.9.0_Cursor|Mesa de Despacho]] | A UI nao tem contrato seguro para renderizar |
 | [[50_Registros/Relatorios/Bugbot_Mesa_Despacho_Intake_v0.9.0_Cursor|Mesa de Despacho]] | [[60_Sistemas/Agentes/Arquivista_FabioOS|Arquivista]] | Nada e aprovado para escrita |
 | [[60_Sistemas/Agentes/Arquivista_FabioOS|Arquivista]] | [[10_Dashboard/LLM_Wiki_FabioOS|LLM Wiki]] | A memoria nao recebe conhecimento validado |
 | [[10_Dashboard/Governanca_FabioOS|Governanca]] | [[60_Sistemas/OpenClaw/OpenClaw|OpenClaw]] | Canal externo sem permissao vira risco |

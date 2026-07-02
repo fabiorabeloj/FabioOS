@@ -19,6 +19,7 @@ tags: [fabios, moc, obsidian, grafo, llm-wiki]
 - [[40_Wiki/README]]
 - [[40_Wiki/FabioOS/Gargalos_Sistemicos_FabioOS_MEGATRON]]
 - [[60_Sistemas/Obsidian/Protocolo_Revisao_Links_Nos_Obsidian]]
+- [[50_Registros/Auditoria/Jardinagem_Obsidian_2026-07-02]]
 
 ## Estrutura Canonica
 
@@ -54,3 +55,4 @@ tags: [fabios, moc, obsidian, grafo, llm-wiki]
 - `40_Wiki/_compat_wiki/`: compatibilidade temporaria.
 - `90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/`: legado arquivado.
 - Novos conceitos devem ser conectados por hubs e aliases antes de virar notas independentes.
+- Links para arquivo legado devem virar caminho textual, ou apontar para um hub vivo.

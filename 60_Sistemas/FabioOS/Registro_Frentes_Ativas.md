@@ -105,6 +105,7 @@ Artefatos compartilhados incluem:
 | MEGATRON_COMPUTE_MANAGER_LLM | Codex | `60_Sistemas/MEGATRON/infra/llm_router.py`, `model_registry.example.json`, SPEC, ADR, dashboard e changelog | concluida | 2026-07-02 | LLMs/modelos formalizados por alias e politica de tarefa/custo/privacidade; nenhum modelo chamado, sem API, sem runtime, sem push |
 | OPENCLAW_RECUPERACAO_BORDA | Codex | `60_Sistemas/OpenClaw/`, `80_Specs/OpenClaw/`, ADR, auditoria, dashboard e changelog | concluida | 2026-07-02 | OpenClaw reposicionado como gateway de borda opcional; diagnostico local feito; nenhum runtime/token/firewall/QR alterado, sem envio externo, sem RAG reindex, sem push |
 | GARGALOS_PKM_LOOP_OPERACIONAL | Codex | `40_Wiki/FabioOS/Gargalos_Sistemicos_FabioOS_MEGATRON.md`, `60_Sistemas/Obsidian/`, `80_Specs/MEGATRON/2026-07-02_loop-operacional-fechado-megatron.md`, MOCs, dashboard e changelog | concluida | 2026-07-02 | Gargalos sistemicos formalizados como mapa PKM; links auditados com 0 destinos orfaos; sem runtime, sem API, sem RAG reindex, sem push |
+| JARDINAGEM_OBSIDIAN_V0 | Codex | `60_Sistemas/Obsidian/scripts/auditar_jardim_obsidian.py`, `50_Registros/Auditoria/Jardinagem_Obsidian_2026-07-02.md`, hubs `40_Wiki/`, dashboards e changelog | concluida | 2026-07-02 | Auditor de jardim criado; hubs ponte e frontmatter em READMEs centrais; wikilinks quebrados do recorte caem de 529 para 504; sem runtime, sem API, sem RAG reindex, sem push |
 
 ## Frentes observadas
 
@@ -168,3 +169,4 @@ Ao concluir, alterar `Estado` para `concluida`, registrar resultado e apontar o 
 - 2026-07-02 - `MEGATRON_COMPUTE_MANAGER_LLM` concluida. Criado roteador v0 para escolher alias/modelo por tarefa, classe de dado, custo, qualidade e privacidade, sem chamar API.
 - 2026-07-02 - `OPENCLAW_RECUPERACAO_BORDA` concluida. OpenClaw foi diagnosticado como gateway local vivo, mas ambiguo; a decisao agora e trata-lo como borda opcional com teste minimo antes de mobile/QR/WhatsApp real.
 - 2026-07-02 - `GARGALOS_PKM_LOOP_OPERACIONAL` concluida. Gargalos do FabioOS/MEGATRON foram convertidos em nota evergreen, protocolo PKM de links/nos, template Obsidian e SPEC do loop operacional fechado.
+- 2026-07-02 - `JARDINAGEM_OBSIDIAN_V0` concluida. Auditor de jardim criado e primeiro lote seguro de hubs/frontmatter/links vivos aplicado sem mexer em runtime ou arquivo legado.

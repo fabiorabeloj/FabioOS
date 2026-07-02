@@ -1153,9 +1153,9 @@ Este documento:
 - subordina o [[60_Sistemas/FabioOS/Plano_Mestre_Implantacao_FabioOS]] no nível conceitual, mas não o substitui no roadmap;
 - incorpora a [[60_Sistemas/FabioOS/Visao_Interface_FabioOS]] como especificação inicial da interface MEGATRON;
 - incorpora a [[60_Sistemas/RAG/Arquitetura_RAG_FabioOS]] como implementação inicial da Memória Semântica;
-- incorpora o [[90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/30_Conhecimento/LLM_Wiki_Pattern]] como padrão base expandido;
+- incorpora o [[40_Wiki/LLM_Wiki/LLM_Wiki_Pattern]] como padrão base expandido;
 - incorpora [[60_Sistemas/Pietra/Sistema_Pietra]] como primeira especialização institucional;
-- incorpora [[90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/20_Projetos/PRIMUS/01_SISTEMA_DEFINICOES]] como base formal de PrimusOS.
+- incorpora [[40_Wiki/PRIMUS/PrimusOS]] como base formal de PrimusOS.
 
 Nenhum documento anterior deve ser apagado sem autorização. Documentos históricos permanecem como fonte de evolução.
 
@@ -1168,12 +1168,12 @@ Nenhum documento anterior deve ser apagado sem autorização. Documentos histór
 - [[60_Sistemas/FabioOS/Visao_Interface_FabioOS]]
 - [[60_Sistemas/RAG/Arquitetura_RAG_FabioOS]]
 - [[60_Sistemas/Pietra/Sistema_Pietra]]
-- [[90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/20_Projetos/PRIMUS/01_SISTEMA_DEFINICOES]]
-- [[90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/30_Conhecimento/LLM_Wiki_Pattern]]
+- [[40_Wiki/PRIMUS/PrimusOS]]
+- [[40_Wiki/LLM_Wiki/LLM_Wiki_Pattern]]
 - [[60_Sistemas/Wiki/schema/fluxo-wiki]]
 - [[60_Sistemas/Wiki/schema/qualidade-wiki]]
 - [[40_Wiki/_compat_wiki/indices/mapa-fabios]]
-- [[90_Arquivo/Legado_Pre_LLM_Wiki_2026-06-29/10_Mapas/Painel_Pendencias_FabioOS]]
+- [[60_Sistemas/FabioOS/NEXT_ACTIONS]]
 
 ## Próximas ações
 

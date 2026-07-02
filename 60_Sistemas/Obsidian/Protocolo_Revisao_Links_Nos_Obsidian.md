@@ -61,7 +61,7 @@ O Megatron precisa conectar intake, RAG, n8n, OpenClaw e Agentarium.
 ### Depois
 
 ```md
-O [[10_Dashboard/MEGATRON|MEGATRON]] precisa conectar [[60_Sistemas/FabioOS/schemas/universal_intake_schema|Universal Intake]], [[10_Dashboard/RAG_MCP_Control_Plane|RAG/MCP]], [[60_Sistemas/n8n/README|n8n]], [[60_Sistemas/OpenClaw/OpenClaw|OpenClaw]] e [[60_Sistemas/OpenClaw/Agentarium|Agentarium]].
+O [[10_Dashboard/MEGATRON|MEGATRON]] precisa conectar [[50_Registros/Relatorios/Inbox_Universal_v0.1_Codex_2026-07-01|Universal Intake]], [[10_Dashboard/RAG_MCP_Control_Plane|RAG/MCP]], [[60_Sistemas/n8n/README|n8n]], [[60_Sistemas/OpenClaw/OpenClaw|OpenClaw]] e [[60_Sistemas/OpenClaw/Agentarium|Agentarium]].
 ```
 
 ## Alias obrigatorios
