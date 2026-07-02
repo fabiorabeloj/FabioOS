@@ -42,16 +42,20 @@ remapeado para 30 fases numeradas (v2, 29/06) e mesmo esse ficou obsoleto com o 
 o Intake Universal. A numeração virou ruído; a estrutura real são os **6 blocos acima**.
 O roadmap v2 continua como histórico em `Roadmap_Fases_FabioOS_v2_2026-06-29.md`.
 
-## 3. Onde o Bloco C (foco) está agora
+**Inventário completo feito × não-feito (27 sistemas, pendências por dono, 7 gates do
+Fabio, ordem recomendada):** [[60_Sistemas/FabioOS/Plano_Mestre_FabioOS_2026-07-01|PLANO MESTRE]] ← fonte canônica de "o que falta".
 
-- ✅ **Claude:** Core Spec v0.1 + `megatron_core.py` + `intake_flow.py` (prova mínima §9:
-  5 payloads fake → classifica → **trava de redação** → fila "Aguardando Fabio" → log;
-  token nunca vaza). Contrato congelado: `60_Sistemas/MEGATRON/v1/examples/intake_queue.sample.json`.
-- 🟡 **Codex:** `universal_intake_adapter.py` + `email_intake_dry_run.py` adaptados ao schema
-  (dry-run seguro, bloqueia gravação fora do vault). Taxonomia alinhada ao Core Spec §4
-  (bug "coordenação→pietraos" corrigido em 2026-07-01).
-- 🟡 **Cursor:** Agentarium consome `intake_queue.json`; Bugbot mapeou revisão do projeto
-  em 7 ondas (`50_Registros/Relatorios/Plano_Bugbot_*`).
+## 3. Onde o Bloco C (foco) está agora — LOOP FECHADO (fim de 2026-07-01)
+
+- ✅ **Claude:** Core Spec + classificador + prova §9 nas **3 fontes** (gmail/whatsapp/pdf)
+  + **arquivista** (aprovação humana → nota no Obsidian; trava §3: sensível nunca vira nota)
+  + **chat_bridge** (o chat do Agentarium ganhou olhos/memória: status, fila, aprova <id>,
+  manda pro <agente>, tarefa natural) + `coordenacao.py` (readout multiagente).
+- ✅ **Codex:** Inbox Universal v0.1 (schema+adapter+validator), bridge WhatsApp Pietra
+  dry-run, convergência dos classificadores ao core, extrator de comando natural.
+- ✅ **Cursor:** Agentarium **v0.9.0** — Mesa de Despacho (approve/reject chama o arquivista,
+  E2E validado), chat MEGATRON (profissionalizado: haiku-4.5 + estado real + histórico).
+- **O que resta no C:** o elo sensor real (export Gmail — Codex) e os gates do Fabio.
 
 ## 4. Dívida técnica conhecida (a resolver, não urgente)
 
@@ -62,15 +66,15 @@ O roadmap v2 continua como histórico em `Roadmap_Fases_FabioOS_v2_2026-06-29.md
 3. RAG hardening (MAX_CHARS 6000→~1200) adiado para janela com CPU livre.
 4. STATUS/roadmap/painel tinham deriva documental — este arquivo é agora a fonte única.
 
-## 5. Próxima ação recomendada
+## 5. Próxima ação recomendada (ordem do Plano Mestre §5)
 
-1. **Codex:** convergir taxonomia (adapter delega ao `megatron_core.classificar_intake`);
-   ligar conectores fake→reais mantendo dry-run.
-2. **Cursor:** construir a fila "Aguardando Fabio" + campo de comando natural contra o
-   `intake_queue.sample.json`; autorizar Onda 1 do Bugbot (entradas sensoriais).
-3. **Fabio:** decidir quando ligar o primeiro canal real (WhatsApp Pietra) — só depois do
-   loop provado nas 3 fontes (email/whatsapp/pdf fake).
-4. **Claude:** repetir a prova §9 para WhatsApp e PDF fake (mesmo contrato).
+1. **Fechar elos quebrados do intake:** export Gmail→adapter + unificar ids (Codex);
+   redigir summary no core (Claude).
+2. **Fabio:** sessão de decisão dos **7 gates** (Plano Mestre §4): push+blobs, Gmail real,
+   WhatsApp Pietra, e-mails no wiki, Bugbot 3–7, teto OpenRouter, 1ª prova EscolaOS.
+3. **Piloto real:** EscolaOS 1ª prova OU tenant Pietra (o que os gates liberarem).
+4. **Consolidação:** Bugbot Ondas 3–7, hardening RAG, lint wiki, links quebrados.
+5. **PRIMUS:** as 7 lacunas da Missão 0001 (marco funcional).
 
 ## 6. Regras ativas (invioláveis)
 
