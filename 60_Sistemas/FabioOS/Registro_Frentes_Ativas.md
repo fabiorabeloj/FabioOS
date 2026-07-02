@@ -5,7 +5,7 @@ projeto: FabioOS
 status: ativo
 tags: [fabios, multiagente, locks, coordenacao, frentes-ativas]
 criado_em: 2026-06-27
-atualizado_em: 2026-07-01
+atualizado_em: 2026-07-02
 ---
 
 # Registro de Frentes Ativas
@@ -101,6 +101,7 @@ Artefatos compartilhados incluem:
 | INTAKE_DISPATCH_CONTRACT_GUARD | Codex | `intake_queue.sample.json`, `universal_intake_schema.json`, `universal_intake_validator.py`, relatorio e changelog | concluida | 2026-07-01 | IDs unicos e validador anti-duplicata para a mesa de despacho; sem tocar UI/Agentarium, sem aprovar item real, sem RAG/API/push |
 | INTAKE_ADAPTER_OUTPUT_GUARD | Codex | `60_Sistemas/FabioOS/scripts/universal_intake_adapter.py`, relatorio e changelog | concluida | 2026-07-01 | Adapter escreve por padrao em fila dedicada `state/intake_queue.codex_adapter.json`; `--output` relativo validado; sem tocar fila viva, arquivista, UI, RAG/API/push |
 | INTAKE_COMMAND_EXTRACTOR | Codex | `60_Sistemas/FabioOS/scripts/intake_command_extract.py`, `universal_intake_adapter.py`, relatorio e changelog | concluida | 2026-07-01 | Comando natural agora extrai produto/serie/tema/prazo e anexa `extracao` opcional; sem tocar Agentarium, arquivista, RAG/API/push |
+| MEGATRON_INFRA_DISTRIBUIDA | Codex | `60_Sistemas/MEGATRON/infra/`, `80_Specs/MEGATRON/2026-07-02_infra-distribuida-hardware-megatron.md`, ADR, dashboard e changelog | concluida | 2026-07-02 | Hardware/Core/GPU/NAS modelados como nos configuraveis; nenhum servico real alterado, sem RAG reindex, sem compra, sem push |
 
 ## Frentes observadas
 
@@ -160,3 +161,4 @@ Ao concluir, alterar `Estado` para `concluida`, registrar resultado e apontar o 
 - 2026-07-01 - `INTAKE_DISPATCH_CONTRACT_GUARD` concluida. Sample congelado da fila ganhou IDs unicos e o validador passou a bloquear duplicatas, protegendo os botoes Aprovar/Rejeitar do Agentarium.
 - 2026-07-01 - `INTAKE_ADAPTER_OUTPUT_GUARD` concluida. `universal_intake_adapter.py` deixou de usar a fila viva como destino padrao e passou a validar `--output` relativo sem crash.
 - 2026-07-01 - `INTAKE_COMMAND_EXTRACTOR` concluida. Comandos como `prova do 8o ano sobre Africa para amanha` passam a gerar `extracao` estruturada no card do Intake Universal.
+- 2026-07-02 - `MEGATRON_INFRA_DISTRIBUIDA` concluida. Core, GPU, NAS e workers foram formalizados como nos por capacidade, com registry JSON, script de validacao/roteamento, SPEC, ADR e roadmap.

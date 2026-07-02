@@ -1,0 +1,183 @@
+{
+  "version": "0.1",
+  "updated_at": "2026-07-02",
+  "policy": {
+    "default_data_class": "internal",
+    "external_network": "deny_by_default",
+    "human_approval_for_external_actions": true,
+    "secrets_location": "env_or_secret_store_only"
+  },
+  "nodes": [
+    {
+      "id": "current-workstation",
+      "role": "dev_client",
+      "status": "active",
+      "host": "localhost",
+      "priority": 50,
+      "hardware_profile": {
+        "description": "Maquina atual de desenvolvimento FabioOS",
+        "cpu_class": "legacy_desktop",
+        "ram_gb": 16,
+        "gpu_class": "gtx_1050_ti",
+        "storage": "local_ssd"
+      },
+      "capabilities": [
+        "vault_editing",
+        "git_versioning",
+        "codex_execution",
+        "agent_dev",
+        "light_python_jobs"
+      ],
+      "services": [
+        {
+          "name": "codex",
+          "protocol": "local",
+          "endpoint": "workspace",
+          "health": "manual",
+          "data_classes": ["public", "internal", "private"]
+        }
+      ],
+      "limits": {
+        "gpu_required": false,
+        "twenty_four_seven": false,
+        "notes": "Nao usar como requisito de producao 24/7."
+      }
+    },
+    {
+      "id": "megatron-core",
+      "role": "core",
+      "status": "target",
+      "host": "megatron-core.local",
+      "priority": 100,
+      "hardware_profile": {
+        "description": "Mini PC classe AOOSTAR GEM12+ Pro",
+        "cpu_class": "ryzen_7_pro_8845hs_or_equivalent",
+        "ram_gb": 64,
+        "ram_max_target_gb": 128,
+        "storage": "dual_nvme",
+        "network": "dual_2_5gbe"
+      },
+      "capabilities": [
+        "orchestrate_agents",
+        "intake_universal",
+        "vector_search",
+        "mcp_tools",
+        "n8n_webhooks",
+        "openclaw_gateway",
+        "obsidian_memory",
+        "agentarium_ui",
+        "python_jobs",
+        "safe_logging"
+      ],
+      "services": [
+        {
+          "name": "megatron_v1",
+          "protocol": "local_or_http",
+          "endpoint": "http://megatron-core.local:8765",
+          "health": "/health",
+          "data_classes": ["public", "internal", "private", "restricted"]
+        },
+        {
+          "name": "n8n",
+          "protocol": "http",
+          "endpoint": "http://megatron-core.local:5678",
+          "health": "/healthz",
+          "data_classes": ["public", "internal", "private"]
+        },
+        {
+          "name": "rag_chroma",
+          "protocol": "local",
+          "endpoint": "60_Sistemas/RAG/fabioos_db",
+          "health": "collection_count",
+          "data_classes": ["public", "internal"]
+        },
+        {
+          "name": "mcp_fabioos",
+          "protocol": "stdio_or_http",
+          "endpoint": "60_Sistemas/MCP_FabioOS/server.py",
+          "health": "tool_list",
+          "data_classes": ["public", "internal"]
+        }
+      ],
+      "limits": {
+        "gpu_required": false,
+        "twenty_four_seven": true,
+        "notes": "Core sempre ligado; GPU nao e requisito para operar."
+      }
+    },
+    {
+      "id": "gpu-oculink",
+      "role": "gpu",
+      "status": "future",
+      "host": "gpu-node.local",
+      "priority": 80,
+      "hardware_profile": {
+        "description": "eGPU OCuLink ou worker dedicado com NVIDIA",
+        "gpu_class": "nvidia_24gb_vram_or_better",
+        "connection": "oculink_or_dedicated_lan",
+        "power": "dedicated_atx_psu"
+      },
+      "capabilities": [
+        "local_llm_inference",
+        "gpu_embeddings",
+        "ocr_heavy",
+        "batch_summarization",
+        "model_experimentation"
+      ],
+      "services": [
+        {
+          "name": "ollama",
+          "protocol": "http",
+          "endpoint": "http://gpu-node.local:11434",
+          "health": "/api/tags",
+          "data_classes": ["public", "internal", "private"]
+        },
+        {
+          "name": "open_webui",
+          "protocol": "http",
+          "endpoint": "http://gpu-node.local:3000",
+          "health": "/",
+          "data_classes": ["public", "internal"]
+        }
+      ],
+      "limits": {
+        "gpu_required": true,
+        "twenty_four_seven": false,
+        "notes": "Acelerador sob demanda; nao e cerebro permanente."
+      }
+    },
+    {
+      "id": "nas-storage",
+      "role": "storage",
+      "status": "future",
+      "host": "nas.local",
+      "priority": 70,
+      "hardware_profile": {
+        "description": "NAS ou storage multi-HD",
+        "storage": "raid_or_snapshots",
+        "network": "2_5gbe_now_10gbe_future"
+      },
+      "capabilities": [
+        "backups",
+        "vault_snapshots",
+        "model_storage",
+        "pdf_archive",
+        "dataset_archive"
+      ],
+      "services": [
+        {
+          "name": "vault_snapshots",
+          "protocol": "smb_or_nfs",
+          "endpoint": "\\\\nas.local\\fabioos",
+          "health": "mount_check",
+          "data_classes": ["public", "internal", "private", "restricted"]
+        }
+      ],
+      "limits": {
+        "gpu_required": false,
+        "twenty_four_seven": true,
+        "notes": "Dados persistentes e backups; nao executar agentes diretamente no inicio."
+      }
+    }
+  ]
+}

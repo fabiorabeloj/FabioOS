@@ -5,7 +5,7 @@ projeto: MEGATRON
 status: ativo
 tags: [fabios, megatron, dashboard, agentes]
 criado_em: 2026-06-29
-atualizado_em: 2026-06-29
+atualizado_em: 2026-07-02
 ---
 
 # MEGATRON
@@ -18,6 +18,8 @@ Painel da interface/orquestrador unico do FabioOS.
 - [[60_Sistemas/FabioOS/specs/2026-06-29_megatron-v1-ignorancia-explicita]]
 - [[60_Sistemas/MEGATRON/agentes/README_Agentes]]
 - [[60_Sistemas/MEGATRON/v0/README_MEGATRON_v0]]
+- [[60_Sistemas/MEGATRON/infra/Arquitetura_Hardware_MEGATRON_FabioOS_v1]]
+- [[60_Sistemas/MEGATRON/infra/Roadmap_Hardware_Software_MEGATRON]]
 - [[30_Projetos/MEGATRON/README]]
 
 ## Ligar o cockpit (Windows)
@@ -39,6 +41,15 @@ Estado runtime: `60_Sistemas/MEGATRON/v1/state/megatron_runtime.json`
 Roadmap: `MEGATRON.cmd` -> `MEGATRON.exe` (binario unico).
 
 Spec: [[60_Sistemas/FabioOS/specs/2026-06-29_MEGATRON_Orchestrator_v1.0]]
+
+Infra distribuida: [[80_Specs/MEGATRON/2026-07-02_infra-distribuida-hardware-megatron]]
+
+Registro de nos:
+
+```powershell
+python 60_Sistemas/MEGATRON/infra/node_registry.py validate
+python 60_Sistemas/MEGATRON/infra/node_registry.py route --capability vector_search
+```
 
 ## Regras
 
