@@ -2,7 +2,7 @@
 tipo: adr
 area: 50_Registros
 projeto: MEGATRON
-status: aceito
+status: proposto-aguardando-ratificacao
 tags: [adr, fabios, megatron, hardware, infraestrutura, nos]
 criado_em: 2026-07-02
 ---
@@ -69,3 +69,7 @@ Nenhum hardware caro deve ser comprado sem responder:
 - [[60_Sistemas/MEGATRON/infra/Roadmap_Hardware_Software_MEGATRON]]
 - [[80_Specs/MEGATRON/2026-07-02_infra-distribuida-hardware-megatron]]
 - [[00_Arquitetura/Plano_Orcamento_FabioOS_MEGATRON_2026]]
+
+> [!warning] Ratificação pendente
+> Rebaixada de "aceito" para "proposto" em 2026-07-02 (regra: agente não aceita a própria ADR;
+> ver [[50_Registros/Decisoes/PROTOCOLO_ADR|Protocolo ADR]]). Conteúdo intacto — aguarda assinatura do Fabio.

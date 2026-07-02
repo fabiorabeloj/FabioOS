@@ -76,6 +76,14 @@ Fabio, ordem recomendada):** [[60_Sistemas/FabioOS/Plano_Mestre_FabioOS_2026-07-
 4. **Consolidação:** Bugbot Ondas 3–7, hardening RAG, lint wiki, links quebrados.
 5. **PRIMUS:** as 7 lacunas da Missão 0001 (marco funcional).
 
+## 5.1 Runtime — quem liga o quê (dono: Fabio via script canônico)
+
+- **Start canônico:** `start_fabioos.ps1` (60_Sistemas/Scripts). Agentarium: `start_agentarium.ps1`.
+  Nenhum agente sobe serviço fora desses scripts sem registrar no barramento.
+- Achado 02/07: processos duplicados (2× MCP server por config dupla de cliente; uvicorn 8819
+  zumbi — já morto). Se o MCP aparecer 4× de novo: revisar config de conectores do Claude Desktop
+  (provável entrada duplicada venv × uv).
+
 ## 6. Regras ativas (invioláveis)
 
 - Sem push/canal externo/n8n ativo/WhatsApp/apagar sem **aprovação humana explícita**.

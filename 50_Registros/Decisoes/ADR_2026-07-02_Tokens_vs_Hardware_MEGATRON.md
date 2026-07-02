@@ -2,7 +2,7 @@
 tipo: adr
 area: 50_Registros
 projeto: MEGATRON
-status: aceito
+status: proposto-aguardando-ratificacao
 tags: [adr, fabios, megatron, orcamento, tokens, hardware, gpu, api]
 criado_em: 2026-07-02
 ---
@@ -124,3 +124,7 @@ Comprar Core + teto controlado de tokens: sim.
 - OpenRouter Pricing: `https://openrouter.ai/pricing`
 - Arquitetura distribuida: [[60_Sistemas/MEGATRON/infra/Arquitetura_Hardware_MEGATRON_FabioOS_v1]]
 - Orcamento MEGATRON: [[00_Arquitetura/Plano_Orcamento_FabioOS_MEGATRON_2026]]
+
+> [!warning] Ratificação pendente
+> Rebaixada de "aceito" para "proposto" em 2026-07-02 (regra: agente não aceita a própria ADR;
+> ver [[50_Registros/Decisoes/PROTOCOLO_ADR|Protocolo ADR]]). Conteúdo intacto — aguarda assinatura do Fabio.

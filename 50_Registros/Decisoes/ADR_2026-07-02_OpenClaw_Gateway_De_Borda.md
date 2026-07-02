@@ -3,7 +3,7 @@ tipo: adr
 area: 50_Registros
 projeto: FabioOS
 sistema: OpenClaw
-status: aceita
+status: proposto-aguardando-ratificacao
 tags: [adr, openclaw, gateway, borda, governanca]
 criado_em: 2026-07-02
 atualizado_em: 2026-07-02
@@ -59,3 +59,7 @@ A decisao pode ser revista se OpenClaw provar por 7 dias que recebe comandos pel
 - [[60_Sistemas/OpenClaw/Plano_Recuperacao_OpenClaw_FabioOS_2026-07-02]]
 - [[60_Sistemas/MEGATRON/infra/Arquitetura_Hardware_MEGATRON_FabioOS_v1]]
 - [[50_Registros/Decisoes/ADR_2026-07-02_Tokens_vs_Hardware_MEGATRON]]
+
+> [!warning] Ratificação pendente
+> Rebaixada de "aceito" para "proposto" em 2026-07-02 (regra: agente não aceita a própria ADR;
+> ver [[50_Registros/Decisoes/PROTOCOLO_ADR|Protocolo ADR]]). Conteúdo intacto — aguarda assinatura do Fabio.

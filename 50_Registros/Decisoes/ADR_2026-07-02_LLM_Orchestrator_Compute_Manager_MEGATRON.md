@@ -2,7 +2,7 @@
 tipo: adr
 area: 50_Registros
 projeto: MEGATRON
-status: aceito
+status: proposto-aguardando-ratificacao
 tags: [adr, fabios, megatron, llm-router, compute-manager, modelos]
 criado_em: 2026-07-02
 ---
@@ -80,3 +80,7 @@ ocr_vision_model()
 - [[80_Specs/MEGATRON/2026-07-02_compute-manager-llm-orchestrator]]
 - [[60_Sistemas/MEGATRON/infra/model_registry.example.json]]
 - [[60_Sistemas/MEGATRON/infra/llm_router.py]]
+
+> [!warning] Ratificação pendente
+> Rebaixada de "aceito" para "proposto" em 2026-07-02 (regra: agente não aceita a própria ADR;
+> ver [[50_Registros/Decisoes/PROTOCOLO_ADR|Protocolo ADR]]). Conteúdo intacto — aguarda assinatura do Fabio.
